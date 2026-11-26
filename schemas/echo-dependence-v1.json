@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ECHO 2.0 deterministic matched-dependence result",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "conditions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "echo-dependence-result-v1"
+    },
+    "modelVersion": {
+      "const": "echo-dependence-v2.0"
+    },
+    "evidenceClass": {
+      "const": "synthetic simulation"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "seed",
+        "trials",
+        "agents",
+        "reliability",
+        "correlations"
+      ],
+      "properties": {
+        "phase": {
+          "enum": [
+            "pilot",
+            "confirmatory"
+          ]
+        },
+        "trials": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 50000
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967295
+        },
+        "agents": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 41
+        },
+        "reliability": {
+          "type": "number",
+          "minimum": 0.51,
+          "maximum": 0.99
+        },
+        "correlations": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 21,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/probability"
+          }
+        }
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 21,
+      "items": {
+        "type": "object",
+        "required": [
+          "correlation",
+          "models",
+          "bounds",
+          "betaMinusShared",
+          "monteCarlo"
+        ],
+        "properties": {
+          "correlation": {
+            "$ref": "#/$defs/probability"
+          },
+          "models": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": [
+                "law",
+                "pmf",
+                "exact",
+                "sampledCounts",
+                "sampled",
+                "forecasts",
+                "hub",
+                "verification"
+              ],
+              "properties": {
+                "law": {
+                  "enum": [
+                    "shared",
+                    "beta"
+                  ]
+                },
+                "pmf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/probability"
+                  }
+                },
+                "sampledCounts": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          },
+          "bounds": {
+            "type": "object",
+            "required": [
+              "lower",
+              "upper"
+            ]
+          },
+          "betaMinusShared": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "monteCarlo": {
+            "type": "object",
+            "required": [
+              "trials",
+              "estimate",
+              "sd",
+              "interval"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "id": "echo2-pilot-001", "phase": "pilot", "seed": 2711261, "trials": 500,
+  "agents": 15, "reliability": 0.68, "correlations": [0, 0.25, 0.5, 0.75, 1]
+}
