@@ -1,0 +1,3 @@
+# REFLEX market pilot
+
+Check 40 seeded episodes of six rounds in a deterministic maker market. Each integer order crosses a bid or an ask one unit at a time. Control the fundamental and the agent's contemporaneous signal/noise draws across both price-impact settings. The maker and all participants start with the same assets and cash under both policies. A trade pays one integer cash tick to the fee account. Independently replay the first ledger and quote path. Evaluate implementation and runtime before a new seed and confirmatory design. This is a synthetic market, with no external data or real-time pricing.
