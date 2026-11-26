@@ -1,0 +1,32 @@
+{
+  "id": "mirage-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "590cd127cf1d5cb40c6936cc17c8d9ea9a6a5a4f",
+  "inputs": {
+    "scripts/mirage.mjs": "239bfcdae096148d2eb074e97a76adf7f1ac7f2f1e294a0903b8a65edea51454",
+    "engine/confidence.mjs": "701a3356a93523d32ac9883e33065f436e9d590f04af8b770e726c13be8a24ae",
+    "engine/mirage.mjs": "6e4c3604e3470d3643aa9224bd8032ce6a20ddfe61c01fb8ecaaf0805feb4f0c",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/mirage-pilot.json": "8a5f1a220f5e1485398efa9e498339fdcbc87bf35959313db2dfd2e1e1badf65",
+    "research/mirage-pilot.md": "f4ac61fde0db432dfa92d310b1bfe0b4e77d3333c7972dd202e5057d7bc3c386"
+  },
+  "configSha256": "c0516954e5c8e395438029f018eb05a9037b216a2b49b74843d613da7d7cdb31",
+  "output": {
+    "path": "results/mirage-pilot.json",
+    "sha256": "bfd0b9a598dcb1d4f45a5e666b95ce6538042ce40c9d3a540705e164fd06decf",
+    "bytes": 35379
+  },
+  "startUtc": "2026-11-26T19:18:19.108Z",
+  "endUtc": "2026-11-26T19:18:19.121Z",
+  "runtimeMs": 9,
+  "observedRssBytes": 45432832,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

@@ -1,0 +1,1389 @@
+{
+  "schemaVersion": "mirage-confidence-v1",
+  "modelVersion": "mirage-noisy-cues-v1",
+  "config": {
+    "id": "mirage-pilot-001",
+    "phase": "pilot",
+    "trainSeed": 511101,
+    "evaluationSeed": 511102,
+    "training": 500,
+    "trials": 350
+  },
+  "evidenceClass": "synthetic simulation",
+  "strengths": [
+    {
+      "answer": 0.6,
+      "hint": 0.58
+    },
+    {
+      "answer": 0.7,
+      "hint": 0.7
+    },
+    {
+      "answer": 0.85,
+      "hint": 0.62
+    }
+  ],
+  "calibrator": {
+    "n": 500,
+    "constant": 0.7250996015936255,
+    "cells": [
+      [
+        {
+          "n": 76,
+          "hits": 40,
+          "estimate": 0.5256410256410257
+        },
+        {
+          "n": 85,
+          "hits": 55,
+          "estimate": 0.6436781609195402
+        }
+      ],
+      [
+        {
+          "n": 67,
+          "hits": 34,
+          "estimate": 0.5072463768115942
+        },
+        {
+          "n": 97,
+          "hits": 84,
+          "estimate": 0.8585858585858586
+        }
+      ],
+      [
+        {
+          "n": 72,
+          "hits": 57,
+          "estimate": 0.7837837837837838
+        },
+        {
+          "n": 103,
+          "hits": 93,
+          "estimate": 0.8952380952380953
+        }
+      ]
+    ]
+  },
+  "regions": [
+    {
+      "mode": "normal",
+      "metrics": {
+        "constant": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.20677113968712538,
+          "nll": 0.6041028766633068,
+          "nllStatus": "finite",
+          "errorAUROC": 0.5,
+          "ece": 0.016528173022197896,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 350,
+              "confidence": 0.7250996015936265,
+              "accuracy": 0.7085714285714285
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.29142857142857137
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "style": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.24250000000000033,
+          "nll": 0.7814425010706391,
+          "nllStatus": "finite",
+          "errorAUROC": 0.4824082858950032,
+          "ece": 0.16714285714285554,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 170,
+              "confidence": 0.6500000000000018,
+              "accuracy": 0.7235294117647059
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 180,
+              "confidence": 0.9499999999999986,
+              "accuracy": 0.6944444444444444
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.30555555555555547
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.3055555555555556
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.3055555555555556
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2964145658263305
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "nominal": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.1669475757760176,
+          "nll": 0.5003865221172132,
+          "nllStatus": "finite",
+          "errorAUROC": 0.7785815939278937,
+          "ece": 0.06842847829596965,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 109,
+              "confidence": 0.5117522177572214,
+              "accuracy": 0.44954128440366975
+            },
+            {
+              "n": 57,
+              "confidence": 0.674418604651163,
+              "accuracy": 0.6491228070175439
+            },
+            {
+              "n": 38,
+              "confidence": 0.7764423076923074,
+              "accuracy": 0.631578947368421
+            },
+            {
+              "n": 69,
+              "confidence": 0.8448275862068967,
+              "accuracy": 0.9420289855072463
+            },
+            {
+              "n": 77,
+              "confidence": 0.902397260273972,
+              "accuracy": 0.948051948051948
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.051948051948051965
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.052670807453416124
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.10676691729323307
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2049155145929339
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "calibrated": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.16698688526460972,
+          "nll": 0.5002405824850834,
+          "nllStatus": "finite",
+          "errorAUROC": 0.7785815939278937,
+          "ece": 0.06671055524428865,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 109,
+              "confidence": 0.5177093880723723,
+              "accuracy": 0.44954128440366975
+            },
+            {
+              "n": 57,
+              "confidence": 0.6436781609195398,
+              "accuracy": 0.6491228070175439
+            },
+            {
+              "n": 38,
+              "confidence": 0.7837837837837833,
+              "accuracy": 0.631578947368421
+            },
+            {
+              "n": 146,
+              "confidence": 0.8779161477791614,
+              "accuracy": 0.9452054794520548
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.051948051948051965
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.052670807453416124
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.10676691729323307
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2049155145929339
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "oracle": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.1669475757760176,
+          "nll": 0.5003865221172132,
+          "nllStatus": "finite",
+          "errorAUROC": 0.7785815939278937,
+          "ece": 0.06842847829596965,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 109,
+              "confidence": 0.5117522177572214,
+              "accuracy": 0.44954128440366975
+            },
+            {
+              "n": 57,
+              "confidence": 0.674418604651163,
+              "accuracy": 0.6491228070175439
+            },
+            {
+              "n": 38,
+              "confidence": 0.7764423076923074,
+              "accuracy": 0.631578947368421
+            },
+            {
+              "n": 69,
+              "confidence": 0.8448275862068967,
+              "accuracy": 0.9420289855072463
+            },
+            {
+              "n": 77,
+              "confidence": 0.902397260273972,
+              "accuracy": 0.948051948051948
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.051948051948051965
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.052670807453416124
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.10676691729323307
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2049155145929339
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        }
+      },
+      "styleMinusCalibratedBrier": {
+        "trials": 350,
+        "estimate": 0.07551311473539006,
+        "sd": 0.21925760586392903,
+        "interval": [
+          0.04924429613277265,
+          0.10178193333800747
+        ]
+      },
+      "examples": [
+        {
+          "strength": 0,
+          "truth": 1,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 0,
+          "qAnswer": 0.6,
+          "qHint": 0.58,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5206611570247934,
+            "calibrated": 0.5256410256410257,
+            "oracle": 0.5206611570247934
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.62,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.7,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5,
+            "calibrated": 0.5072463768115942,
+            "oracle": 0.5
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 1,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.62,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 1,
+          "selected": 1,
+          "hint": 0,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.62,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.7764423076923076,
+            "calibrated": 0.7837837837837838,
+            "oracle": 0.7764423076923076
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 1,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.7,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.8448275862068965,
+            "calibrated": 0.8585858585858586,
+            "oracle": 0.8448275862068965
+          }
+        },
+        {
+          "strength": 0,
+          "truth": 0,
+          "selected": 1,
+          "hint": 0,
+          "style": 0,
+          "agreement": false,
+          "correct": 0,
+          "qAnswer": 0.6,
+          "qHint": 0.58,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5206611570247934,
+            "calibrated": 0.5256410256410257,
+            "oracle": 0.5206611570247934
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 1,
+          "selected": 1,
+          "hint": 1,
+          "style": 1,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.62,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.7,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.8448275862068965,
+            "calibrated": 0.8585858585858586,
+            "oracle": 0.8448275862068965
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 1,
+          "hint": 0,
+          "style": 0,
+          "agreement": false,
+          "correct": 0,
+          "qAnswer": 0.7,
+          "qHint": 0.7,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5,
+            "calibrated": 0.5072463768115942,
+            "oracle": 0.5
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.62,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 0,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.6,
+          "qHint": 0.58,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5206611570247934,
+            "calibrated": 0.5256410256410257,
+            "oracle": 0.5206611570247934
+          }
+        }
+      ]
+    },
+    {
+      "mode": "misleading",
+      "metrics": {
+        "constant": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.20677113968712538,
+          "nll": 0.6041028766633068,
+          "nllStatus": "finite",
+          "errorAUROC": 0.5,
+          "ece": 0.016528173022197896,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 350,
+              "confidence": 0.7250996015936265,
+              "accuracy": 0.7085714285714285
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.29142857142857137
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2914285714285715
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "style": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.24250000000000033,
+          "nll": 0.7814425010706391,
+          "nllStatus": "finite",
+          "errorAUROC": 0.4824082858950032,
+          "ece": 0.16714285714285554,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 170,
+              "confidence": 0.6500000000000018,
+              "accuracy": 0.7235294117647059
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 180,
+              "confidence": 0.9499999999999986,
+              "accuracy": 0.6944444444444444
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.30555555555555547
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.3055555555555556
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.3055555555555556
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.2964145658263305
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "nominal": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.23131720115594806,
+          "nll": 0.658607334801563,
+          "nllStatus": "finite",
+          "errorAUROC": 0.4864998418722328,
+          "ece": 0.18567542259309322,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 133,
+              "confidence": 0.5099422108991479,
+              "accuracy": 0.7669172932330827
+            },
+            {
+              "n": 55,
+              "confidence": 0.6744186046511629,
+              "accuracy": 0.43636363636363634
+            },
+            {
+              "n": 63,
+              "confidence": 0.776442307692307,
+              "accuracy": 0.8095238095238095
+            },
+            {
+              "n": 47,
+              "confidence": 0.8448275862068967,
+              "accuracy": 0.5319148936170213
+            },
+            {
+              "n": 52,
+              "confidence": 0.9023972602739719,
+              "accuracy": 0.8846153846153846
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.11538461538461542
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.2584802431610943
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.2704415584415585
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.33276785714285717
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "calibrated": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.22893859281480777,
+          "nll": 0.6555013520223334,
+          "nllStatus": "finite",
+          "errorAUROC": 0.4864998418722328,
+          "ece": 0.17796803182024848,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 133,
+              "confidence": 0.5160979371505692,
+              "accuracy": 0.7669172932330827
+            },
+            {
+              "n": 55,
+              "confidence": 0.6436781609195397,
+              "accuracy": 0.43636363636363634
+            },
+            {
+              "n": 63,
+              "confidence": 0.783783783783783,
+              "accuracy": 0.8095238095238095
+            },
+            {
+              "n": 99,
+              "confidence": 0.8778375384435992,
+              "accuracy": 0.7171717171717171
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.11538461538461542
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.2584802431610943
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.2704415584415585
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.33276785714285717
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        },
+        "oracle": {
+          "trials": 350,
+          "accuracy": 0.7085714285714285,
+          "brier": 0.18236595207555556,
+          "nll": 0.5485042053909638,
+          "nllStatus": "finite",
+          "errorAUROC": 0.6955842820999367,
+          "ece": 0.05566308080863548,
+          "reliability": [
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 0,
+              "confidence": null,
+              "accuracy": null
+            },
+            {
+              "n": 102,
+              "confidence": 0.5111408199643488,
+              "accuracy": 0.4803921568627451
+            },
+            {
+              "n": 64,
+              "confidence": 0.6744186046511633,
+              "accuracy": 0.640625
+            },
+            {
+              "n": 52,
+              "confidence": 0.7764423076923072,
+              "accuracy": 0.8846153846153846
+            },
+            {
+              "n": 69,
+              "confidence": 0.8448275862068967,
+              "accuracy": 0.8840579710144928
+            },
+            {
+              "n": 63,
+              "confidence": 0.9023972602739719,
+              "accuracy": 0.8095238095238095
+            }
+          ],
+          "riskCoverage": [
+            {
+              "coverage": 0.1,
+              "risk": 0.19047619047619047
+            },
+            {
+              "coverage": 0.25,
+              "risk": 0.1696066252587991
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.1426373626373626
+            },
+            {
+              "coverage": 0.75,
+              "risk": 0.21780086580086588
+            },
+            {
+              "coverage": 1,
+              "risk": 0.2914285714285715
+            }
+          ]
+        }
+      },
+      "styleMinusCalibratedBrier": {
+        "trials": 350,
+        "estimate": 0.01356140718519224,
+        "sd": 0.21498603300089236,
+        "interval": [
+          -0.012195642750405205,
+          0.039318457120789685
+        ]
+      },
+      "examples": [
+        {
+          "strength": 0,
+          "truth": 1,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 0,
+          "qAnswer": 0.6,
+          "qHint": 0.42000000000000004,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.6744186046511628,
+            "calibrated": 0.6436781609195402,
+            "oracle": 0.5206611570247934
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.38,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.7764423076923076
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.30000000000000004,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5,
+            "calibrated": 0.5072463768115942,
+            "oracle": 0.8448275862068965
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 1,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.38,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.7764423076923076,
+            "calibrated": 0.7837837837837838,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 1,
+          "selected": 1,
+          "hint": 0,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.38,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.7764423076923076,
+            "calibrated": 0.7837837837837838,
+            "oracle": 0.9023972602739725
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 1,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.30000000000000004,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.5,
+            "calibrated": 0.5072463768115942,
+            "oracle": 0.8448275862068965
+          }
+        },
+        {
+          "strength": 0,
+          "truth": 0,
+          "selected": 1,
+          "hint": 0,
+          "style": 0,
+          "agreement": false,
+          "correct": 0,
+          "qAnswer": 0.6,
+          "qHint": 0.42000000000000004,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5206611570247934,
+            "calibrated": 0.5256410256410257,
+            "oracle": 0.6744186046511628
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 1,
+          "selected": 1,
+          "hint": 1,
+          "style": 1,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.38,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.95,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.7764423076923076
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.7,
+          "qHint": 0.30000000000000004,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5,
+            "calibrated": 0.5072463768115942,
+            "oracle": 0.8448275862068965
+          }
+        },
+        {
+          "strength": 1,
+          "truth": 0,
+          "selected": 1,
+          "hint": 1,
+          "style": 0,
+          "agreement": true,
+          "correct": 0,
+          "qAnswer": 0.7,
+          "qHint": 0.30000000000000004,
+          "nominal": 0.7,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.8448275862068965,
+            "calibrated": 0.8585858585858586,
+            "oracle": 0.5
+          }
+        },
+        {
+          "strength": 2,
+          "truth": 0,
+          "selected": 0,
+          "hint": 0,
+          "style": 0,
+          "agreement": true,
+          "correct": 1,
+          "qAnswer": 0.85,
+          "qHint": 0.38,
+          "nominal": 0.62,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.9023972602739725,
+            "calibrated": 0.8952380952380953,
+            "oracle": 0.7764423076923076
+          }
+        },
+        {
+          "strength": 0,
+          "truth": 0,
+          "selected": 0,
+          "hint": 1,
+          "style": 0,
+          "agreement": false,
+          "correct": 1,
+          "qAnswer": 0.6,
+          "qHint": 0.42000000000000004,
+          "nominal": 0.58,
+          "confidence": {
+            "constant": 0.7250996015936255,
+            "style": 0.65,
+            "nominal": 0.5206611570247934,
+            "calibrated": 0.5256410256410257,
+            "oracle": 0.6744186046511628
+          }
+        }
+      ]
+    }
+  ]
+}
