@@ -1,0 +1,2597 @@
+{
+  "schemaVersion": "echo-dependence-result-v1",
+  "modelVersion": "echo-dependence-v2.0",
+  "evidenceClass": "synthetic simulation",
+  "config": {
+    "id": "echo2-pilot-001",
+    "phase": "pilot",
+    "seed": 2711261,
+    "trials": 500,
+    "agents": 15,
+    "reliability": 0.68,
+    "correlations": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "conditions": [
+    {
+      "correlation": 0,
+      "models": [
+        {
+          "law": "shared",
+          "pmf": [
+            3.7778931862957085e-8,
+            0.0000012042034531317574,
+            0.00001791252636533489,
+            0.0001649445136141255,
+            0.00105152127429005,
+            0.004915861957305985,
+            0.01741034443212537,
+            0.047567548180628264,
+            0.10108103988383507,
+            0.16706449647467192,
+            0.21300723300520671,
+            0.20574562278912017,
+            0.14573648280896015,
+            0.07146692906977856,
+            0.021695317753325633,
+            0.003073503348387799
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0,
+            "majority": 0.9288706251332862,
+            "unanimousError": 3.7778931862957085e-8,
+            "unanimousCorrect": 0.003073503348387799
+          },
+          "sampledCounts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            19,
+            55,
+            96,
+            112,
+            83,
+            80,
+            35,
+            12,
+            0
+          ],
+          "sampled": {
+            "meanReliability": 0.6801333333333334,
+            "correlation": -0.005561533052117678,
+            "majority": 0.9460000000000002,
+            "unanimousError": 0,
+            "unanimousCorrect": 0
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.054460960088685825,
+              "logLoss": 0.18358731361319494,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561788907153998,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.151722129191783,
+                  "confidence": 0.6800198623051689,
+                  "accuracy": 0.6864822144735871
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8482778708082173,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        },
+        {
+          "law": "beta",
+          "pmf": [
+            3.7778931862957085e-8,
+            0.0000012042034531317574,
+            0.00001791252636533489,
+            0.0001649445136141255,
+            0.00105152127429005,
+            0.004915861957305985,
+            0.01741034443212537,
+            0.047567548180628264,
+            0.10108103988383507,
+            0.16706449647467192,
+            0.21300723300520671,
+            0.20574562278912017,
+            0.14573648280896015,
+            0.07146692906977856,
+            0.021695317753325633,
+            0.003073503348387799
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0,
+            "majority": 0.9288706251332862,
+            "unanimousError": 3.7778931862957085e-8,
+            "unanimousCorrect": 0.003073503348387799
+          },
+          "sampledCounts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            19,
+            55,
+            96,
+            112,
+            83,
+            80,
+            35,
+            12,
+            0
+          ],
+          "sampled": {
+            "meanReliability": 0.6801333333333334,
+            "correlation": -0.005561533052117678,
+            "majority": 0.9460000000000002,
+            "unanimousError": 0,
+            "unanimousCorrect": 0
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.05414817929927273,
+              "logLoss": 0.18240682890072146,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.023561826686085863,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.14864858806446335,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8513514119355369,
+                  "confidence": 0.9723242055445489,
+                  "accuracy": 0.9723242055445492
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.9288706251332862,
+              "brier": 0.18572543757271517,
+              "logLoss": 0.5621785119638505,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.7578436679971836,
+                  "confidence": 0.553554028559242,
+                  "accuracy": 0.9063853419375495
+                },
+                {
+                  "mass": 0.21738626891871818,
+                  "confidence": 0.6349980897639397,
+                  "accuracy": 0.999158838132284
+                },
+                {
+                  "mass": 0.021696521956778764,
+                  "confidence": 0.7188194114408197,
+                  "accuracy": 0.9999444978575124
+                },
+                {
+                  "mass": 0.003073541127319662,
+                  "confidence": 0.8477695947088971,
+                  "accuracy": 0.9999877083369644
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        }
+      ],
+      "bounds": {
+        "lower": {
+          "accuracy": 0.7647999999999997,
+          "support": [
+            {
+              "count": 7,
+              "probability": 0.23520000000000035
+            },
+            {
+              "count": 11,
+              "probability": 0.6240000000000006
+            },
+            {
+              "count": 12,
+              "probability": 0.14079999999999912
+            }
+          ]
+        },
+        "upper": {
+          "accuracy": 1.0000000000000002,
+          "support": [
+            {
+              "count": 8,
+              "probability": 0.27039999999999964
+            },
+            {
+              "count": 10,
+              "probability": 0.4826666666666673
+            },
+            {
+              "count": 13,
+              "probability": 0.24693333333333314
+            }
+          ]
+        }
+      },
+      "betaMinusShared": 0,
+      "monteCarlo": {
+        "trials": 500,
+        "estimate": 0,
+        "sd": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "correlation": 0.25,
+      "models": [
+        {
+          "law": "shared",
+          "pmf": [
+            0.08000002833419889,
+            9.03152589848818e-7,
+            0.000013434394774001168,
+            0.00012370838521059412,
+            0.0007886409557175375,
+            0.0036868964679794888,
+            0.013057758324094029,
+            0.0356756611354712,
+            0.0758107799128763,
+            0.12529837235600394,
+            0.15975542475390503,
+            0.15430921709184015,
+            0.10930236210672012,
+            0.05360019680233392,
+            0.016271488314994226,
+            0.17230512751129087
+          ],
+          "exact": {
+            "meanReliability": 0.6800000000000002,
+            "correlation": 0.24999999999999983,
+            "majority": 0.8666529688499648,
+            "unanimousError": 0.08000002833419889,
+            "unanimousCorrect": 0.17230512751129087
+          },
+          "sampledCounts": [
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            13,
+            40,
+            71,
+            88,
+            64,
+            59,
+            28,
+            9,
+            88
+          ],
+          "sampled": {
+            "meanReliability": 0.6933333333333332,
+            "correlation": 0.21936215957955124,
+            "majority": 0.8940000000000001,
+            "unanimousError": 0.064,
+            "unanimousCorrect": 0.176
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.8666529688499648,
+              "brier": 0.0952450078412593,
+              "logLoss": 0.29440620771316417,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0176713416803655,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.3637915968938372,
+                  "confidence": 0.6820275936625692,
+                  "accuracy": 0.6820275936625692
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.636208403106163,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602276
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.8666529688499648,
+              "brier": 0.16445579752389752,
+              "logLoss": 0.5647990714451353,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.08000002833419889,
+              "calibration": [
+                {
+                  "mass": 0.24984257172844548,
+                  "confidence": 0.5668644278790973,
+                  "accuracy": 0.8049434925264309
+                },
+                {
+                  "mass": 0.1634423212218845,
+                  "confidence": 0.6580850888472684,
+                  "accuracy": 0.977442216676706
+                },
+                {
+                  "mass": 0.26452392853948836,
+                  "confidence": 0.7455184522234317,
+                  "accuracy": 0.9965509761405502
+                },
+                {
+                  "mass": 0.06988602266469199,
+                  "confidence": 0.8542042267616226,
+                  "accuracy": 0.9997948438497832
+                },
+                {
+                  "mass": 0.25230515584548974,
+                  "confidence": 0.9526361812866903,
+                  "accuracy": 0.6829235293820534
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.8666529688499648,
+              "brier": 0.12060916784614013,
+              "logLoss": 1.041334357461842,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0976713700145644,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.1114864410483475,
+                  "confidence": 0.6800000000000002,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8885135589516527,
+                  "confidence": 0.9801078523200286,
+                  "accuracy": 0.890073292601403
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.8666529688499648,
+              "brier": 0.09524868175714067,
+              "logLoss": 0.29441472790700185,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0176713416803655,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.3637915968938372,
+                  "confidence": 0.6846741125860394,
+                  "accuracy": 0.6820275936625692
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.636208403106163,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602276
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.8666529688499648,
+              "brier": 0.09524638289829977,
+              "logLoss": 0.29440937450835536,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0176713416803655,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.3637915968938372,
+                  "confidence": 0.6804085045347279,
+                  "accuracy": 0.6820275936625692
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.636208403106163,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602276
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        },
+        {
+          "law": "beta",
+          "pmf": [
+            0.0064306818021472485,
+            0.01315366732257392,
+            0.02005086250890924,
+            0.027085167154524525,
+            0.03424144877729188,
+            0.04151463242268745,
+            0.04890612654881521,
+            0.056422948295157344,
+            0.06407832318947518,
+            0.07189375085817873,
+            0.07990339021553287,
+            0.0881631981483702,
+            0.09677172591369929,
+            0.10592580809472489,
+            0.1161169208268704,
+            0.1293413479210417
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0.24999999999999978,
+            "majority": 0.7521944651678932,
+            "unanimousError": 0.0064306818021472485,
+            "unanimousCorrect": 0.1293413479210417
+          },
+          "sampledCounts": [
+            2,
+            6,
+            9,
+            10,
+            19,
+            25,
+            31,
+            23,
+            33,
+            39,
+            38,
+            44,
+            49,
+            50,
+            60,
+            62
+          ],
+          "sampled": {
+            "meanReliability": 0.6785333333333333,
+            "correlation": 0.239408063052297,
+            "majority": 0.75,
+            "unanimousError": 0.004,
+            "unanimousCorrect": 0.124
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.7521944651678932,
+              "brier": 0.16705600340295107,
+              "logLoss": 0.5040249572198696,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0064306818021472485,
+              "calibration": [
+                {
+                  "mass": 0.24130114889162646,
+                  "confidence": 0.563495344602449,
+                  "accuracy": 0.563495344602449
+                },
+                {
+                  "mass": 0.12141802263822032,
+                  "confidence": 0.6580850888472684,
+                  "accuracy": 0.6580850888472685
+                },
+                {
+                  "mass": 0.2462615399938859,
+                  "confidence": 0.7509695751381275,
+                  "accuracy": 0.7509695751381276
+                },
+                {
+                  "mass": 0.25524725875307847,
+                  "confidence": 0.8699122960470081,
+                  "accuracy": 0.8699122960470081
+                },
+                {
+                  "mass": 0.13577202972318897,
+                  "confidence": 0.95263618128669,
+                  "accuracy": 0.95263618128669
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.7521944651678932,
+              "brier": 0.2232221831366543,
+              "logLoss": 1.0878805316004647,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.18495190473480222,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.25627330120782144,
+                  "confidence": 0.6815488680103859,
+                  "accuracy": 0.7547398429681357
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.7437266987921786,
+                  "confidence": 0.9799107320329232,
+                  "accuracy": 0.7513173790383398
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.7521944651678932,
+              "brier": 0.21364988200976637,
+              "logLoss": 1.1038776206438414,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.19138258653694945,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.12050127148463252,
+                  "confidence": 0.68,
+                  "accuracy": 0.5317647058823529
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.8794987285153675,
+                  "confidence": 0.9830101018615817,
+                  "accuracy": 0.782395834886525
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7521944651678932,
+              "brier": 0.17621774080396893,
+              "logLoss": 0.551016169663919,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.06672037878815493,
+              "calibration": [
+                {
+                  "mass": 0.12050127148463252,
+                  "confidence": 0.56,
+                  "accuracy": 0.5317647058823529
+                },
+                {
+                  "mass": 0.12079987740699394,
+                  "confidence": 0.674368632293918,
+                  "accuracy": 0.5951475481714049
+                },
+                {
+                  "mass": 0.12141802263822032,
+                  "confidence": 0.7736380931290507,
+                  "accuracy": 0.6580850888472685
+                },
+                {
+                  "mass": 0.12240464692566208,
+                  "confidence": 0.8526321503567245,
+                  "accuracy": 0.7202602218354737
+                },
+                {
+                  "mass": 0.5148761815444912,
+                  "confidence": 0.9575118417724723,
+                  "accuracy": 0.8704147109932108
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7521944651678932,
+              "brier": 0.19650623946001855,
+              "logLoss": 0.5797131195013794,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.6089807115237327,
+                  "confidence": 0.5404614044854398,
+                  "accuracy": 0.6581659825027746
+                },
+                {
+                  "mass": 0.25524725875307847,
+                  "confidence": 0.6254548428182057,
+                  "accuracy": 0.8699122960470081
+                },
+                {
+                  "mass": 0.13577202972318897,
+                  "confidence": 0.797848383199413,
+                  "accuracy": 0.95263618128669
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        }
+      ],
+      "bounds": {
+        "lower": {
+          "accuracy": 0.4120000000000015,
+          "support": [
+            {
+              "count": 7,
+              "probability": 0.5879999999999984
+            },
+            {
+              "count": 14,
+              "probability": 0.09600000000000339
+            },
+            {
+              "count": 15,
+              "probability": 0.3159999999999981
+            }
+          ]
+        },
+        "upper": {
+          "accuracy": 0.9656000000000002,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.034399999999999875
+            },
+            {
+              "count": 8,
+              "probability": 0.6120000000000002
+            },
+            {
+              "count": 15,
+              "probability": 0.35359999999999997
+            }
+          ]
+        }
+      },
+      "betaMinusShared": -0.11445850368207156,
+      "monteCarlo": {
+        "trials": 500,
+        "estimate": -0.14399999999999996,
+        "sd": 0.48138077953925396,
+        "interval": [
+          -0.18619411038664818,
+          -0.10180588961335174
+        ]
+      }
+    },
+    {
+      "correlation": 0.5,
+      "models": [
+        {
+          "law": "shared",
+          "pmf": [
+            0.1600000188894659,
+            6.021017265658787e-7,
+            0.000008956263182667446,
+            0.00008247225680706275,
+            0.000525760637145025,
+            0.0024579309786529925,
+            0.008705172216062686,
+            0.023783774090314132,
+            0.050540519941917536,
+            0.08353224823733596,
+            0.10650361650260336,
+            0.10287281139456009,
+            0.07286824140448007,
+            0.03573346453488928,
+            0.010847658876662817,
+            0.34153675167419395
+          ],
+          "exact": {
+            "meanReliability": 0.6800000000000002,
+            "correlation": 0.49999999999999994,
+            "majority": 0.8044353125666431,
+            "unanimousError": 0.1600000188894659,
+            "unanimousCorrect": 0.34153675167419395
+          },
+          "sampledCounts": [
+            64,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            8,
+            28,
+            49,
+            56,
+            45,
+            39,
+            20,
+            9,
+            176
+          ],
+          "sampled": {
+            "meanReliability": 0.7074666666666666,
+            "correlation": 0.45624928487761446,
+            "majority": 0.844,
+            "unanimousError": 0.128,
+            "unanimousCorrect": 0.352
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.8044353125666431,
+              "brier": 0.13603096071665294,
+              "logLoss": 0.40522949127712465,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.011780894453576999,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.5758610645958915,
+                  "confidence": 0.6808539346053033,
+                  "accuracy": 0.6808539346053034
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.42413893540410863,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.8044353125666431,
+              "brier": 0.2157360372407514,
+              "logLoss": 0.6384166397474361,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.3789218339985918,
+                  "confidence": 0.553554028559242,
+                  "accuracy": 0.9063853419375495
+                },
+                {
+                  "mass": 0.10869313445935909,
+                  "confidence": 0.6349980897639397,
+                  "accuracy": 0.999158838132284
+                },
+                {
+                  "mass": 0.010848260978389382,
+                  "confidence": 0.7188194114408197,
+                  "accuracy": 0.9999444978575124
+                },
+                {
+                  "mass": 0.5015367705636599,
+                  "confidence": 0.8477695947088971,
+                  "accuracy": 0.6809804818305796
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.8044353125666431,
+              "brier": 0.18707015639300748,
+              "logLoss": 1.9002618860229628,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.1717809133430429,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.07432429403223167,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.9256757059677685,
+                  "confidence": 0.9872665350310369,
+                  "accuracy": 0.8144264646510835
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.8044353125666431,
+              "brier": 0.1360328542355221,
+              "logLoss": 0.40523385874873863,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.011780894453576999,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.5758610645958915,
+                  "confidence": 0.6825462000733667,
+                  "accuracy": 0.6808539346053034
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.42413893540410863,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.8044353125666431,
+              "brier": 0.13603117456698824,
+              "logLoss": 0.4052299831055125,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.011780894453576999,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.5758610645958915,
+                  "confidence": 0.6802852275166433,
+                  "accuracy": 0.6808539346053034
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.42413893540410863,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        },
+        {
+          "law": "beta",
+          "pmf": [
+            0.05631151592738651,
+            0.04011015799297084,
+            0.03541257192172201,
+            0.03338133132448038,
+            0.032555644683945534,
+            0.032479933882354955,
+            0.032991063027856975,
+            0.03405602179317928,
+            0.03573090811087662,
+            0.03816824853756792,
+            0.041669396147780924,
+            0.04682545779232957,
+            0.05491178182875596,
+            0.06925875930921344,
+            0.10253894235390043,
+            0.3135982653656786
+          ],
+          "exact": {
+            "meanReliability": 0.6799999999999999,
+            "correlation": 0.5,
+            "majority": 0.7027017594461035,
+            "unanimousError": 0.05631151592738651,
+            "unanimousCorrect": 0.3135982653656786
+          },
+          "sampledCounts": [
+            26,
+            20,
+            16,
+            11,
+            18,
+            17,
+            17,
+            16,
+            20,
+            26,
+            21,
+            19,
+            39,
+            39,
+            46,
+            149
+          ],
+          "sampled": {
+            "meanReliability": 0.6830666666666667,
+            "correlation": 0.47120887469998934,
+            "majority": 0.718,
+            "unanimousError": 0.052,
+            "unanimousCorrect": 0.298
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.7027017594461035,
+              "brier": 0.19335254152372897,
+              "logLoss": 0.5701067700503877,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.2944766739758918,
+                  "confidence": 0.5514664655640941,
+                  "accuracy": 0.551466465564094
+                },
+                {
+                  "mass": 0.19296444438417176,
+                  "confidence": 0.6434892269104199,
+                  "accuracy": 0.6434892269104199
+                },
+                {
+                  "mass": 0.14264910034687128,
+                  "confidence": 0.7188194114408196,
+                  "accuracy": 0.7188194114408196
+                },
+                {
+                  "mass": 0.36990978129306507,
+                  "confidence": 0.8477695947088972,
+                  "accuracy": 0.8477695947088972
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.7027017594461035,
+              "brier": 0.2769189935349725,
+              "logLoss": 1.5286098120937133,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.2069307028333307,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.439696711197121,
+                  "confidence": 0.6808248636168418,
+                  "accuracy": 0.7944775673337866
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.5603032888028789,
+                  "confidence": 0.9840691475572414,
+                  "accuracy": 0.630680906272297
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.7027017594461035,
+              "brier": 0.275199558892891,
+              "logLoss": 1.9804775382632218,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.2632422187607172,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.0697869299040559,
+                  "confidence": 0.68,
+                  "accuracy": 0.512
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.9302130700959441,
+                  "confidence": 0.9903993438593857,
+                  "accuracy": 0.7170086862641417
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7027017594461035,
+              "brier": 0.20992327757223436,
+              "logLoss": 0.6381844770965299,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.05631151592738651,
+              "calibration": [
+                {
+                  "mass": 0.1409462414694808,
+                  "confidence": 0.5637647037207164,
+                  "accuracy": 0.524307394634897
+                },
+                {
+                  "mass": 0.07414933003013588,
+                  "confidence": 0.6580850888472685,
+                  "accuracy": 0.5619659156845461
+                },
+                {
+                  "mass": 0.16767421562951146,
+                  "confidence": 0.7524121947173353,
+                  "accuracy": 0.6067554229439871
+                },
+                {
+                  "mass": 0.2473204315778067,
+                  "confidence": 0.8739497380504655,
+                  "accuracy": 0.6946361065566333
+                },
+                {
+                  "mass": 0.36990978129306507,
+                  "confidence": 0.95263618128669,
+                  "accuracy": 0.8477695947088972
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7027017594461035,
+              "brier": 0.20116152066290305,
+              "logLoss": 0.5894984401432717,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.6300902187069348,
+                  "confidence": 0.5444594687374271,
+                  "accuracy": 0.6175361599469666
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.36990978129306507,
+                  "confidence": 0.753252334769161,
+                  "accuracy": 0.8477695947088972
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        }
+      ],
+      "bounds": {
+        "lower": {
+          "accuracy": 0.4896,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.1023999999999998
+            },
+            {
+              "count": 7,
+              "probability": 0.40800000000000014
+            },
+            {
+              "count": 15,
+              "probability": 0.4896
+            }
+          ]
+        },
+        "upper": {
+          "accuracy": 0.8704000000000001,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.1295999999999999
+            },
+            {
+              "count": 8,
+              "probability": 0.40800000000000014
+            },
+            {
+              "count": 15,
+              "probability": 0.4624
+            }
+          ]
+        }
+      },
+      "betaMinusShared": -0.10173355312053967,
+      "monteCarlo": {
+        "trials": 500,
+        "estimate": -0.12600000000000006,
+        "sd": 0.5574455049437245,
+        "interval": [
+          -0.17486135502262692,
+          -0.07713864497737319
+        ]
+      }
+    },
+    {
+      "correlation": 0.75,
+      "models": [
+        {
+          "law": "shared",
+          "pmf": [
+            0.24000000944473293,
+            3.0105086328293936e-7,
+            0.000004478131591333723,
+            0.000041236128403531375,
+            0.0002628803185725125,
+            0.0012289654893264963,
+            0.004352586108031343,
+            0.011891887045157066,
+            0.025270259970958768,
+            0.04176612411866798,
+            0.05325180825130168,
+            0.051436405697280044,
+            0.03643412070224004,
+            0.01786673226744464,
+            0.005423829438331408,
+            0.510768375837097
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0.7500000000000003,
+            "majority": 0.7422176562833216,
+            "unanimousError": 0.24000000944473293,
+            "unanimousCorrect": 0.510768375837097
+          },
+          "sampledCounts": [
+            110,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            7,
+            14,
+            26,
+            29,
+            25,
+            24,
+            8,
+            1,
+            252
+          ],
+          "sampled": {
+            "meanReliability": 0.6893333333333335,
+            "correlation": 0.7139560284478554,
+            "majority": 0.758,
+            "unanimousError": 0.22,
+            "unanimousCorrect": 0.504
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.7422176562833216,
+              "brier": 0.1768156409103974,
+              "logLoss": 0.5160498436071104,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0058904472267884995,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.7879305322979457,
+                  "confidence": 0.6803120501559136,
+                  "accuracy": 0.6803120501559136
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.21206946770205432,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.7422176562833216,
+              "brier": 0.22339357029372647,
+              "logLoss": 0.6409335852796674,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.24923161471817012,
+                  "confidence": 0.5270185333550645,
+                  "accuracy": 0.9286513699634226
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.7507683852818299,
+                  "confidence": 0.7532523347691611,
+                  "accuracy": 0.6803274962695192
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.7422176562833216,
+              "brier": 0.2535311449398748,
+              "logLoss": 2.7591894145840836,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.24589045667152146,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.03716214701611584,
+                  "confidence": 0.6799999999999999,
+                  "accuracy": 0.6799999999999999
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.9628378529838841,
+                  "confidence": 0.9938726179070395,
+                  "accuracy": 0.7446190384917937
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7422176562833216,
+              "brier": 0.17681691617593773,
+              "logLoss": 0.5160527797375664,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0058904472267884995,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.7879305322979457,
+                  "confidence": 0.6815538893730554,
+                  "accuracy": 0.6803120501559136
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.21206946770205432,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.7422176562833216,
+              "brier": 0.1768156671804716,
+              "logLoss": 0.5160499039906032,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.0058904472267884995,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.7879305322979457,
+                  "confidence": 0.6801338140405387,
+                  "accuracy": 0.6803120501559136
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.21206946770205432,
+                  "confidence": 0.9722239731602274,
+                  "accuracy": 0.9722239731602277
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        },
+        {
+          "law": "beta",
+          "pmf": [
+            0.1637269565057072,
+            0.039461601048161946,
+            0.025852768133282092,
+            0.020604390461584222,
+            0.017957728061356718,
+            0.016522057453812897,
+            0.01580440830135348,
+            0.015607595885946585,
+            0.015871138780831236,
+            0.016629657543525016,
+            0.01802776452238012,
+            0.02040628008953004,
+            0.024580955415428173,
+            0.03292220464841427,
+            0.056211406215536955,
+            0.49981308693314885
+          ],
+          "exact": {
+            "meanReliability": 0.6799999999999998,
+            "correlation": 0.7499999999999996,
+            "majority": 0.6844624941487947,
+            "unanimousError": 0.1637269565057072,
+            "unanimousCorrect": 0.49981308693314885
+          },
+          "sampledCounts": [
+            88,
+            14,
+            10,
+            8,
+            10,
+            5,
+            12,
+            6,
+            5,
+            11,
+            11,
+            11,
+            22,
+            21,
+            25,
+            241
+          ],
+          "sampled": {
+            "meanReliability": 0.6812,
+            "correlation": 0.7362568598213719,
+            "majority": 0.694,
+            "unanimousError": 0.176,
+            "unanimousCorrect": 0.482
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.6844624941487947,
+              "brier": 0.20634824713747896,
+              "logLoss": 0.6017607060463264,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.33645995656114375,
+                  "confidence": 0.5488005440614447,
+                  "accuracy": 0.548800544061445
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.6635400434388561,
+                  "confidence": 0.753252334769161,
+                  "accuracy": 0.753252334769161
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.6844624941487947,
+              "brier": 0.2682339586462697,
+              "logLoss": 1.34100013984241,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.13620295345955136,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.6950187781056338,
+                  "confidence": 0.680312663334788,
+                  "accuracy": 0.741971644449012
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.30498122189436594,
+                  "confidence": 0.9865348442698826,
+                  "accuracy": 0.5534054437399856
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.6844624941487947,
+              "brier": 0.30510045081562764,
+              "logLoss": 2.8129574899860095,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.2999299099652586,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.03147873466677782,
+                  "confidence": 0.68,
+                  "accuracy": 0.5041860465116279
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.968521265333222,
+                  "confidence": 0.9957514865130215,
+                  "accuracy": 0.6903218125395864
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.6844624941487947,
+              "brier": 0.2289215736431424,
+              "logLoss": 0.6817366104172831,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.1637269565057072,
+              "calibration": [
+                {
+                  "mass": 0.09846262248784932,
+                  "confidence": 0.5595060158624943,
+                  "accuracy": 0.5131750462260113
+                },
+                {
+                  "mass": 0.08354935402789915,
+                  "confidence": 0.6652143832114769,
+                  "accuracy": 0.5384510272806644
+                },
+                {
+                  "mass": 0.05877497278169636,
+                  "confidence": 0.7394296708331916,
+                  "accuracy": 0.5601398535852128
+                },
+                {
+                  "mass": 0.0956730072636989,
+                  "confidence": 0.804809304484659,
+                  "accuracy": 0.5875367339567802
+                },
+                {
+                  "mass": 0.6635400434388561,
+                  "confidence": 0.9012200770337099,
+                  "accuracy": 0.753252334769161
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.6844624941487947,
+              "brier": 0.2076989852120528,
+              "logLoss": 0.6049996762435539,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0.33645995656114375,
+                  "confidence": 0.5216942952116779,
+                  "accuracy": 0.548800544061445
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0.6635400434388561,
+                  "confidence": 0.7141269119223316,
+                  "accuracy": 0.753252334769161
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        }
+      ],
+      "bounds": {
+        "lower": {
+          "accuracy": 0.5847999999999999,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.2111999999999996
+            },
+            {
+              "count": 7,
+              "probability": 0.20400000000000063
+            },
+            {
+              "count": 15,
+              "probability": 0.5847999999999999
+            }
+          ]
+        },
+        "upper": {
+          "accuracy": 0.7752000000000003,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.2247999999999997
+            },
+            {
+              "count": 8,
+              "probability": 0.20400000000000057
+            },
+            {
+              "count": 15,
+              "probability": 0.5711999999999997
+            }
+          ]
+        }
+      },
+      "betaMinusShared": -0.057755162134526916,
+      "monteCarlo": {
+        "trials": 500,
+        "estimate": -0.06400000000000004,
+        "sd": 0.6038487116265682,
+        "interval": [
+          -0.11692870068388156,
+          -0.011071299316118534
+        ]
+      }
+    },
+    {
+      "correlation": 1,
+      "models": [
+        {
+          "law": "shared",
+          "pmf": [
+            0.31999999999999995,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.68
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0.9999999999999999,
+            "majority": 0.68,
+            "unanimousError": 0.31999999999999995,
+            "unanimousCorrect": 0.68
+          },
+          "sampledCounts": [
+            153,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            347
+          ],
+          "sampled": {
+            "meanReliability": 0.6940000000000001,
+            "correlation": 1.0000000000000002,
+            "majority": 0.694,
+            "unanimousError": 0.306,
+            "unanimousCorrect": 0.694
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.3199921334867422,
+              "logLoss": 3.618116943145204,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.31999999999999995,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.9999877083369646,
+                  "accuracy": 0.68
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.2176009613446201,
+              "logLoss": 0.6268716689410544,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.6809804818305796,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        },
+        {
+          "law": "beta",
+          "pmf": [
+            0.31999999999999995,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.68
+          ],
+          "exact": {
+            "meanReliability": 0.68,
+            "correlation": 0.9999999999999999,
+            "majority": 0.68,
+            "unanimousError": 0.31999999999999995,
+            "unanimousCorrect": 0.68
+          },
+          "sampledCounts": [
+            153,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            347
+          ],
+          "sampled": {
+            "meanReliability": 0.6940000000000001,
+            "correlation": 1.0000000000000002,
+            "majority": 0.694,
+            "unanimousError": 0.306,
+            "unanimousCorrect": 0.694
+          },
+          "forecasts": {
+            "specified": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "wrongFamily": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "independent": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.3199921334867422,
+              "logLoss": 3.618116943145204,
+              "logLossStatus": "finite",
+              "overconfidentError": 0.31999999999999995,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.9999877083369646,
+                  "accuracy": 0.68
+                }
+              ]
+            },
+            "underestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.2457466369087876,
+              "logLoss": 0.7146547675310215,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.8477695947088971,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            },
+            "overestimates": {
+              "impossibleMass": 0,
+              "accuracy": 0.68,
+              "brier": 0.21760000000000002,
+              "logLoss": 0.6268694575724263,
+              "logLossStatus": "finite",
+              "overconfidentError": 0,
+              "calibration": [
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 1,
+                  "confidence": 0.68,
+                  "accuracy": 0.68
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                },
+                {
+                  "mass": 0,
+                  "confidence": null,
+                  "accuracy": null
+                }
+              ]
+            }
+          },
+          "hub": [],
+          "verification": []
+        }
+      ],
+      "bounds": {
+        "lower": {
+          "accuracy": 0.6799999999999994,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.3199999999999995
+            },
+            {
+              "count": 2,
+              "probability": 1.0931426704001532e-15
+            },
+            {
+              "count": 15,
+              "probability": 0.6799999999999994
+            }
+          ]
+        },
+        "upper": {
+          "accuracy": 0.6800000000000004,
+          "support": [
+            {
+              "count": 0,
+              "probability": 0.31999999999999973
+            },
+            {
+              "count": 8,
+              "probability": 5.075305255429286e-16
+            },
+            {
+              "count": 15,
+              "probability": 0.6799999999999998
+            }
+          ]
+        }
+      },
+      "betaMinusShared": 0,
+      "monteCarlo": {
+        "trials": 500,
+        "estimate": 0,
+        "sd": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

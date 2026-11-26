@@ -1,0 +1,4 @@
+{
+  "id": "echo2-confirmatory-001", "phase": "confirmatory", "seed": 2711262, "trials": 16000,
+  "agents": 21, "reliability": 0.65, "correlations": [0, 0.1, 0.3, 0.6, 0.9, 1]
+}

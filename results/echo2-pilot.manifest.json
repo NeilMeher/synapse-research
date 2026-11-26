@@ -1,0 +1,36 @@
+{
+  "id": "echo2-pilot-001",
+  "schemaVersion": "echo-dependence-result-v1",
+  "modelVersion": "echo-dependence-v2.0",
+  "status": "completed",
+  "commit": "b99651c8a00f1e14f4c9e582d009299380fb4d80",
+  "configSha256": "ddddf08bc70f4e2ec738f390f13d009b84d90ff98146b83994d1efdcfc13c893",
+  "inputs": {
+    "engine/dependence.mjs": "b9b5d359a4ef596cc0ac1889d5fb087d733573262717ed931dc3b86c3050cebf",
+    "engine/echo2.mjs": "29f700c0803b63965df33882b511acff871d548585d450bfec0addccbdce8af9",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/echo2.mjs": "92d364e5436e10569ba625a66d885598220f29a8b1bb087cbc62dccd471fb526",
+    "schemas/echo-dependence-v1.json": "daf969160b9f5d11ab3818b06dd70fd647f17822e5b403131b93a7a03a8d14a8",
+    "experiments/echo2-pilot.json": "970bf18e475461b4216e3949469e32858c094f17e6c9f17d3f0aadce199daa2b",
+    "research/echo2-pilot.md": "b07ff7e8498b6fed20dd65bfe8f2d1e1da6cb03be75674bdd3c45475f52feed5"
+  },
+  "evidenceClass": "synthetic simulation",
+  "seed": 2711261,
+  "prng": "Mulberry32",
+  "unit": "independent task",
+  "startUtc": "2026-11-26T19:07:49.060Z",
+  "endUtc": "2026-11-26T19:07:49.082Z",
+  "runtimeMs": 19,
+  "observedRssBytes": 50147328,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/echo2-pilot.json",
+    "sha256": "785d194b36668cb24e28f7f47d0ef62b3be5967417eef882463c2cd07535fffc",
+    "bytes": 77422
+  }
+}
