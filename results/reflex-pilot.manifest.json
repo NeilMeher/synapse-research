@@ -1,0 +1,32 @@
+{
+  "id": "reflex-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "c58a90296c437f01e951f9e871154305612d43e2",
+  "inputs": {
+    "scripts/reflex.mjs": "4f50ce5e903e21268b457aeaa9a71dd406370050ee39d833853302442f129390",
+    "engine/market.mjs": "3cdd04cf92c874585dc3fb9b705a6755058df43b76d847515667bc8e695e328f",
+    "engine/reflex.mjs": "de9ea9126c111e4388585827ff9e1f25716921969449c63ada701e98477d13ee",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/reflex-pilot.json": "abe8c8a2071098df038a84d2e07a086f4b750669540c4d77611f2eeaf7d33fd8",
+    "research/reflex-pilot.md": "5debb8286bd08bdde30361c6012c9687ce6701df4e1ec8b929e96168d2e262a1"
+  },
+  "configSha256": "acb2c6e0f66d54bb1159dc05be937556c13770cbdd37815e7fa7fddb659c9f94",
+  "output": {
+    "path": "results/reflex-pilot.json",
+    "sha256": "8220385c5313edbf7db177918f492b78b402f561f42b6b9532d958fdbb6324a8",
+    "bytes": 182547
+  },
+  "startUtc": "2026-11-26T19:25:47.934Z",
+  "endUtc": "2026-11-26T19:25:48.782Z",
+  "runtimeMs": 483,
+  "observedRssBytes": 22491136,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}
