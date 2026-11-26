@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SYNAPSE is an independent research programme on intelligence and complex systems. Explore the reproducible ECHO experiment.">
+  <title>SYNAPSE — Computational Intelligence and Complex Systems</title>
+  <link rel="stylesheet" href="./site.css">
+  <link rel="stylesheet" href="./site-extra.css">
+  <script type="module" src="./main.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="SYNAPSE home"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+      <nav aria-label="Main navigation">
+        <a href="#map">Research map</a>
+        <a href="#echo">ECHO lab</a>
+        <a href="#evidence">Evidence</a>
+      </nav>
+      <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">Computational intelligence and complex systems</p>
+        <h1 id="title">How does a crowd come to <em>know?</em></h1>
+        <p class="intro">SYNAPSE studies how individual decisions shape collective intelligence, and how collective intelligence shapes complex systems.</p>
+        <div class="actions">
+          <a class="primary" href="#echo">Enter the ECHO lab <span aria-hidden="true">↗</span></a>
+          <a class="quiet" href="#map">Explore the research map</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-labelledby="hero-caption">
+        <div class="panel-head"><span id="hero-caption">ECHO · BROWSER EXAMPLE</span><span>SYNTHETIC</span></div>
+        <canvas class="orbit hero-orbit" id="hero-network" aria-hidden="true"></canvas>
+        <p id="hero-status">Loading the synthetic belief trajectory…</p>
+      </aside>
+    </section>
+
+    <div class="section-band">
+      <section class="wrap section" id="map" aria-labelledby="map-title">
+        <div class="section-intro">
+          <div><p class="eyebrow">SYNAPSE research programme</p><h2 id="map-title">Research map</h2></div>
+          <p>Select a laboratory to see its question, status and research dependencies.</p>
+        </div>
+        <div class="map-toolbar">
+          <label>Search laboratories <input type="search" id="lab-search" placeholder="e.g. metacognition"></label>
+          <label>Division <select id="division"><option value="all">All divisions</option></select></label>
+          <label>Relationships <select id="relationships"><option value="all">All connections</option><option value="focus">Selected lab only</option><option value="none">Hide connections</option></select></label>
+          <div class="actions map-controls"><button id="zoom-out" class="quiet" aria-label="Zoom out" type="button">−</button><button id="zoom-in" class="quiet" aria-label="Zoom in" type="button">+</button><button id="reset-map" class="quiet" type="button">Reset view</button></div>
+        </div>
+        <div class="map-layout">
+          <div id="map-view" tabindex="0" aria-label="Research map viewport. Scroll or use the arrow keys to pan.">
+            <div id="map-space"><canvas id="map-lines" aria-hidden="true"></canvas><div id="map-nodes"></div></div>
+          </div>
+          <article class="map-detail" id="lab-detail" aria-live="polite"></article>
+        </div>
+        <p id="map-empty" role="status" hidden>No laboratories match your filters.</p>
+        <details class="list-view"><summary>Browse the laboratory list</summary><ul id="lab-list"></ul></details>
+      </section>
+    </div>
+
+    <section class="wrap section" id="echo" aria-labelledby="echo-title">
+      <div class="section-intro">
+        <div><p class="eyebrow">Collective intelligence · ECHO</p><h2 id="echo-title">When does communication help?</h2></div>
+        <p>Follow one synthetic task from private evidence to a group decision. Compare two networks on the same truth and random draws.</p>
+      </div>
+      <div class="lab-layout">
+        <form id="lab-form" class="settings">
+          <h3>Scenario</h3>
+          <label>Archived replay <select id="archive"><option value="">Explore a seed</option></select></label>
+          <div class="fields">
+            <label>Agents <input name="agents" type="number" min="3" max="41" step="1" required></label>
+            <label>Signal reliability <input name="reliability" type="number" min="0.5" max="0.99" step="0.01" required></label>
+            <label>Shared-error correlation <input name="correlation" type="number" min="0" max="1" step="0.01" required></label>
+            <label>Rounds <input name="rounds" type="number" min="0" max="50" step="1" required></label>
+            <label>Network <select name="topology"><option value="hub">Hub</option><option value="complete">Complete</option><option value="ring">Ring</option></select></label>
+            <label>Update rule <select name="method"><option value="degroot">DeGroot</option><option value="bounded">Bounded confidence</option></select></label>
+            <label>Hub self-weight <input name="hubWeight" type="number" min="0.25" max="0.95" step="0.01" required></label>
+            <label>Confidence radius <input name="radius" type="number" min="0" max="1" step="0.01" required></label>
+            <label>Independent replacements <input name="verified" type="number" min="0" max="41" step="1" required></label>
+            <label>Random seed <input name="seed" type="number" min="1" max="4294967295" step="1" required></label>
+          </div>
+          <label>Compare with <select id="compare"><option value="">No comparison</option><option value="complete" selected>Complete</option><option value="ring">Ring</option><option value="hub">Hub</option></select></label>
+          <button type="submit" class="primary">Run scenario</button>
+          <p class="field-note">Replacement signals use the same reliability and keep the group size fixed.</p>
+          <p id="scenario-error" role="alert" hidden></p>
+        </form>
+
+        <div class="workspace">
+          <div class="panel-head"><span>OPINION DYNAMICS</span><span id="scenario-tag">BROWSER SIMULATION</span></div>
+          <div class="networks">
+            <div><h3 id="network-title"></h3><canvas id="network" class="orbit" aria-hidden="true"></canvas><p id="network-summary"></p></div>
+            <div id="comparison"><h3 id="comparison-title"></h3><canvas id="compare-network" class="orbit" aria-hidden="true"></canvas><p id="compare-summary"></p></div>
+          </div>
+          <div class="legend"><span><i class="one"></i> Leans to 1</span><span><i class="zero"></i> Leans to 0</span><span>Dashed ring · independent replacement</span></div>
+          <div class="replay-bar">
+            <div class="actions">
+              <button class="quiet" id="play" type="button">Play</button>
+              <button class="quiet" id="previous" type="button">Previous</button>
+              <button class="quiet" id="next" type="button">Next</button>
+              <button class="quiet" id="reset" type="button">Reset</button>
+            </div>
+            <label class="scrub">Round <input id="round" type="range" min="0" max="0" value="0"><output id="round-value" for="round">0</output></label>
+          </div>
+          <div class="inspection">
+            <label>Inspect agent <select id="agent"></select></label>
+            <p id="agent-detail" aria-live="polite"></p>
+          </div>
+          <details><summary>Read the beliefs by agent</summary><div class="table-scroll"><table><caption id="agent-caption">Current round</caption><thead><tr><th>Agent</th><th>Signal</th><th>Source</th><th>Belief in 1</th></tr></thead><tbody id="agent-data"></tbody></table></div></details>
+          <div class="actions export"><button class="quiet" id="export-config" type="button">Download configuration</button><button class="quiet" id="export-replay" type="button">Download replay</button></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-band">
+      <section class="wrap section" id="evidence" aria-labelledby="evidence-title">
+        <div class="section-intro">
+          <div><p class="eyebrow">ECHO · Synthetic results</p><h2 id="evidence-title">What the model found</h2></div>
+          <p id="results-status" role="status">Loading the confirmatory experiment…</p>
+        </div>
+        <div id="findings"></div>
+        <div class="results-layout">
+          <div class="result-panel">
+            <h3>Decision accuracy by shared-error correlation</h3>
+            <p>Points show estimated accuracy. Bars show pointwise 95% Monte Carlo intervals.</p>
+            <canvas id="curve" class="curve" aria-hidden="true"></canvas>
+            <ul id="curve-legend" class="legend"></ul>
+            <details><summary>Read the plotted values</summary><div class="table-scroll"><table><caption class="sr-only">Confirmatory accuracy estimates and 95% intervals</caption><thead><tr><th>Correlation</th><th>Policy</th><th>Accuracy</th><th>95% interval</th></tr></thead><tbody id="curve-data"></tbody></table></div></details>
+          </div>
+          <aside class="evidence-links">
+            <h3>Trace the experiment</h3>
+            <a href="./data/confirmatory.json">Results and trajectory data ↗</a>
+            <a href="./data/confirmatory.manifest.json">Run manifest and hashes ↗</a>
+            <a href="./data/pilot.json">Exploratory pilot ↗</a>
+            <a href="./papers/echo.md">Research manuscript ↗</a>
+            <a href="./research/echo-protocol-confirmatory.md">Frozen protocol ↗</a>
+            <a href="./research/echo-mathematics.md">Mathematical model ↗</a>
+            <a href="./research/echo-literature.md">Primary sources and novelty review ↗</a>
+            <a href="./docs/REPRODUCIBILITY.md">Reproduction steps ↗</a>
+            <a href="./docs/echo-learning.md">Learning and verification exercises ↗</a>
+            <p>Binary truth, one dependence model and known signal reliability. Results apply to this simulator. Human and external review are pending.</p>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a><span>Independent computational research</span><a href="./docs/PORTFOLIO_AUDIT.md">Portfolio audit</a><a href="./docs/CONTRIBUTION_REGISTER.md">Contributions</a></footer>
+</body>
+</html>
