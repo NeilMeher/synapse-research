@@ -1,0 +1,8 @@
+{
+  "id": "noesis-pilot-001",
+  "phase": "pilot",
+  "seed": 2026112701,
+  "trials": 100,
+  "budget": 8,
+  "noiseSigma": 0.2
+}

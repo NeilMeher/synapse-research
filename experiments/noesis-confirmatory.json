@@ -1,0 +1,8 @@
+{
+  "id": "noesis-confirmatory-001",
+  "phase": "confirmatory",
+  "seed": 2026112702,
+  "trials": 300,
+  "budget": 8,
+  "noiseSigma": 0.2
+}
