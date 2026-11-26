@@ -8,3 +8,5 @@
 | Pilot and confirmatory experiments, analysis and writing | Executed by Codex. See results manifests, paper and checks. |
 | Scientific and browser validation | Automated validation and AI-assisted internal review. The Python implementation is independently coded, with common authorship. |
 | Human owner verification and external peer review | Pending. No independent human contributions or approvals recorded. |
+
+Phase II robustness directions were requested by Neil Meher. The new protocol, numerical kernel, rational reference, study execution, audit, manuscript and interactive explorer are AI-assisted work. Human reproduction and review remain pending.

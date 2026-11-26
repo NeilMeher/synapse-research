@@ -7,6 +7,7 @@
   <title>SYNAPSE — Computational Intelligence and Complex Systems</title>
   <link rel="stylesheet" href="./site.css">
   <link rel="stylesheet" href="./site-extra.css">
+  <link rel="stylesheet" href="./robustness.css">
   <script type="module" src="./main.mjs"></script>
 </head>
 <body>
@@ -17,6 +18,7 @@
       <nav aria-label="Main navigation">
         <a href="#map">Research map</a>
         <a href="#echo">ECHO lab</a>
+        <a href="#robustness">Dependence</a>
         <a href="#evidence">Evidence</a>
       </nav>
       <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
@@ -60,6 +62,102 @@
         </div>
         <p id="map-empty" role="status" hidden>No laboratories match your filters.</p>
         <details class="list-view"><summary>Browse the laboratory list</summary><ul id="lab-list"></ul></details>
+      </section>
+    </div>
+
+    <div class="section-band">
+      <section class="wrap section" id="robustness" aria-labelledby="robust-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">ECHO 2.0 · Dependence</p>
+            <h2 id="robust-title">Same correlation, different crowds</h2>
+          </div>
+          <p>Match individual reliability and pairwise error correlation. Compare how often two synthetic joint distributions produce a correct majority or a unanimous error.</p>
+        </div>
+        <div class="robust-layout">
+          <form id="robust-form" class="settings">
+            <h3>Matched population</h3>
+            <div class="fields">
+              <label>Agent count <input name="agents" type="number" min="3" max="41" value="21" required></label>
+              <label>Reliability per report <input name="reliability" type="number" min=".51" max=".99" step=".01" value=".65" required></label>
+              <label>Pairwise correlation <input name="rho" type="number" min="0" max="1" step=".01" value=".30" required></label>
+              <label>Rounds for comparison <input name="rounds" type="number" min="0" max="50" value="4" required></label>
+              <label>Hub self-weight for comparison <input name="hub" type="number" min=".25" max=".95" step=".01" value=".65" required></label>
+              <label>Replay seed <input name="seed" type="number" min="1" max="4294967295" value="2711262" required></label>
+            </div>
+            <label>Replay network <select id="robust-topology"><option value="hub">Hub</option><option value="complete">Complete</option><option value="ring">Ring</option></select></label>
+            <label>Replay update <select id="robust-method"><option value="degroot">DeGroot</option><option value="bounded">Bounded confidence (radius 0.2)</option></select></label>
+            <h3>Independent replacement signals</h3>
+            <label>Replacement count <input name="budget" type="number" min="0" max="21" value="3" required></label>
+            <label>Verifier reliability <input name="verifier" type="number" min=".50" max=".99" step=".01" value=".82" required></label>
+            <label>Cost per replacement <input name="cost" type="number" min="0" max="1" step=".01" value=".02" required></label>
+            <p class="field-note">Each wrong decision costs one utility unit. The budget trades original reports for independent reports at the same group size.</p>
+            <button type="submit" class="primary">Compare dependence laws</button>
+            <p id="robust-error" role="alert" hidden></p>
+          </form>
+
+          <div class="robust-outputs">
+            <div class="robust-statline" aria-live="polite">
+              <p>Beta-binomial minus shared-source majority <strong id="robust-gap"></strong></p>
+              <p>Sharp exchangeable majority range <strong id="robust-bounds"></strong></p>
+            </div>
+            <div class="result-panel">
+              <h3>Distribution of correct reports</h3>
+              <p>One exact probability for each count. Lime represents shared source. Blue represents beta-binomial.</p>
+              <canvas id="robust-counts" aria-hidden="true"></canvas>
+              <div class="table-scroll"><table>
+                <caption>Exact values under the matched scenarios</caption>
+                <thead><tr><th>Dependence law</th><th>Reliability</th><th>Correlation</th><th>Majority</th><th>All wrong</th><th>All correct</th><th>Hub accuracy</th></tr></thead>
+                <tbody id="robust-summary"></tbody>
+              </table></div>
+              <details><summary>Read the count probabilities and bounds</summary>
+                <p id="robust-witness"></p>
+                <div class="table-scroll"><table><caption>Probability of K correct reports</caption><thead><tr><th>K</th><th>Shared source</th><th>Beta-binomial</th></tr></thead><tbody id="robust-probs"></tbody></table></div>
+              </details>
+            </div>
+            <div class="result-panel">
+              <h3>Paired synthetic replay</h3>
+              <p id="robust-truth"></p><p id="robust-hub"></p>
+              <label class="scrub">Replay round <input id="robust-step" type="range" min="0" max="4" value="0"><output id="robust-round" for="robust-step">0</output></label>
+              <div id="robust-replay"></div>
+              <label>Replay agent <select id="robust-agent"></select></label>
+              <p id="robust-influence-row"></p>
+              <div class="table-scroll"><table><caption>Selected agent state</caption><thead><tr><th>Dependence law</th><th>Signal</th><th>Belief in 1</th><th>Initial signal check</th></tr></thead><tbody id="robust-agent-data"></tbody></table></div>
+              <button class="quiet" type="button" id="robust-export">Download exact values and replay</button>
+            </div>
+            <div class="result-panel">
+              <h3>Forecasts under misspecification</h3>
+              <p>Brier and log loss score probability forecasts. Lower values are better. High-confidence errors have confidence of at least 90%.</p>
+              <div class="table-scroll"><table><caption>Exact binary forecast scores</caption><thead><tr><th>True law</th><th>Assumed law</th><th>Accuracy</th><th>Brier</th><th>Log loss</th><th>High-confidence errors</th></tr></thead><tbody id="robust-forecast"></tbody></table></div>
+              <details><summary>Inspect reliability bins</summary><div id="robust-calibration"></div></details>
+            </div>
+            <div class="result-panel">
+              <h3>Accuracy and verification cost</h3>
+              <div class="table-scroll"><table><caption>Exact results with equally sized report budgets</caption><thead><tr><th>Dependence law</th><th>Original accuracy</th><th>Verified accuracy</th><th>Net utility</th><th>Best count at this cost</th></tr></thead><tbody id="robust-verification"></tbody></table></div>
+              <details><summary>Read every replacement budget</summary><div class="table-scroll"><table><caption>Net utility at each budget</caption><thead><tr><th>Count</th><th>Shared source</th><th>Beta-binomial</th></tr></thead><tbody id="robust-frontier"></tbody></table></div></details>
+            </div>
+          </div>
+        </div>
+
+        <article class="result-panel robust-release">
+          <h3>Frozen research run</h3>
+          <p id="robust-study-status" role="status">Loading ECHO 2.0 results…</p>
+          <p>Exact majority by correlation. The shaded range connects the sharp bounds at the sampled grid points. It denotes a range of compatible laws.</p>
+          <canvas id="robust-curve" aria-hidden="true"></canvas>
+          <div class="table-scroll"><table>
+            <caption>Exact majority, finite moment bounds and paired sampling cross-check</caption>
+            <thead><tr><th>Correlation</th><th>Shared source</th><th>Beta-binomial</th><th>Sharp bounds</th><th>Sampled gap</th></tr></thead>
+            <tbody id="robust-grid"></tbody>
+          </table></div>
+          <div class="actions">
+            <a class="quiet" href="./data/echo2-confirmatory.json">Confirmatory results</a>
+            <a class="quiet" href="./data/echo2-confirmatory.manifest.json">Run manifest</a>
+            <a class="quiet" href="./data/echo2-pilot.json">Exploratory pilot</a>
+            <a class="quiet" href="./research/echo2-confirmatory.md">Frozen protocol</a>
+            <a class="quiet" href="./papers/echo2.md">Manuscript</a>
+            <a class="quiet" href="./docs/echo2-learning.md">Learning guide</a>
+          </div>
+        </article>
       </section>
     </div>
 

@@ -1,0 +1,36 @@
+{
+  "id": "echo2-confirmatory-001",
+  "schemaVersion": "echo-dependence-result-v1",
+  "modelVersion": "echo-dependence-v2.0",
+  "status": "completed",
+  "commit": "b39f867b981ce35687af8558ab5f2f4060b6e0d9",
+  "configSha256": "ae38ae0ce1019cbf924608ec253b5ed4de11c2afcd35d8fcf7f32b30bf4da214",
+  "inputs": {
+    "engine/dependence.mjs": "b9b5d359a4ef596cc0ac1889d5fb087d733573262717ed931dc3b86c3050cebf",
+    "engine/echo2.mjs": "29f700c0803b63965df33882b511acff871d548585d450bfec0addccbdce8af9",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/echo2.mjs": "92d364e5436e10569ba625a66d885598220f29a8b1bb087cbc62dccd471fb526",
+    "schemas/echo-dependence-v1.json": "daf969160b9f5d11ab3818b06dd70fd647f17822e5b403131b93a7a03a8d14a8",
+    "experiments/echo2-confirmatory.json": "820a3b7e8bc88782257cfe61dc44b77c2033eba51805a20ad20910bb67f4b33e",
+    "research/echo2-confirmatory.md": "dfd9d9c1421180c3472ac1c219cf95d9ede2b2b0b26460b279d215123a03852f"
+  },
+  "evidenceClass": "synthetic simulation",
+  "seed": 2711262,
+  "prng": "Mulberry32",
+  "unit": "independent task",
+  "startUtc": "2026-11-26T19:09:51.644Z",
+  "endUtc": "2026-11-26T19:09:52.035Z",
+  "runtimeMs": 337,
+  "observedRssBytes": 24965120,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/echo2-confirmatory.json",
+    "sha256": "71061b57ee3e8f47bed8891eec57c21590288afc9d604799010288a227942749",
+    "bytes": 233841
+  }
+}

@@ -30,6 +30,8 @@ jobs:
       - run: npm test
       - run: npm run reference
       - run: npm run verify
+      - run: python scripts/reference_echo2.py
+      - run: node scripts/echo2.mjs verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

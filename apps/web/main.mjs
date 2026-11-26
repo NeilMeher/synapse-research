@@ -1,12 +1,15 @@
 import {validateResults} from "./engine/contracts.mjs";
 import {replay} from "./engine/echo.mjs";
 import {drawHero, example, setupLab} from "./lab.mjs";
+import {setupRobustness} from "./robustness.mjs";
 import {setupMap} from "./map.mjs";
 import {showResults} from "./results.mjs";
 import {byId} from "./view.mjs";
 
 const map = setupMap();
 const lab = setupLab();
+const robustness = setupRobustness();
+document.addEventListener("echo2-ready", () => map.markRobustnessAvailable());
 const hero = replay(example);
 drawHero(hero);
 let chart;
@@ -19,6 +22,7 @@ theme.addEventListener("click", () => {
   theme.textContent = light ? "Dark theme" : "Light theme";
   map.draw();
   lab.draw();
+  robustness.draw();
   if (hero) drawHero(hero);
   if (chart) chart();
 });

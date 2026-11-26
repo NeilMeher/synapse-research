@@ -11,3 +11,5 @@
 | Unresolved | Human relevance, alternative dependence, empirical verification design and claim of novelty. |
 
 The other laboratories and all cross-lab experiments in the roadmap are proposed. No empirical outcome, published reproduction, human experiment or external peer review has been established by ECHO.
+
+ECHO 2.0 contains a separately frozen synthetic result and a rational reference. The exact difference and sharp bounds are original computed examples of established theory. The pilot selected a directional hypothesis before the new grid was computed. [ECHO 2.0 manuscript](papers/echo2.md)

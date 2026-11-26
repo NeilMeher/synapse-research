@@ -91,6 +91,32 @@ try {
       await page.getByRole("link", {name:"ECHO lab", exact:true}).click();
       await page.locator("#replay-bar, .replay-bar").scrollIntoViewIfNeeded();
       await page.screenshot({path:fileURLToPath(new URL("echo-" + width + ".png", screenshots))});
+      await page.getByRole("link", {name:"Dependence", exact:true}).click();
+      await page.getByText(/echo2-confirmatory-001 · 16,000/).waitFor();
+      assert.match(await page.locator("#robust-gap").textContent(), /-13\.75 pp/);
+      assert.match(await page.locator("#robust-bounds").textContent(), /36\.0% to 94\.0%/);
+      assert.equal(await page.locator("#robust-grid tr").count(),6);
+      await page.getByLabel("Pairwise correlation").fill("0");
+      await page.getByRole("button",{name:"Compare dependence laws"}).click();
+      assert.equal(await page.locator("#robust-gap").textContent(),"0.00 pp");
+      assert.equal(await page.locator("#robust-summary tr").count(),2);
+      await page.getByLabel("Replay round").press("End");
+      assert.equal(await page.locator("#robust-round").textContent(),"4");
+      await page.getByLabel("Replay agent").selectOption("2");
+      assert.equal(await page.locator("#robust-agent-data tr").count(),2);
+      const [robustExport]=await Promise.all([
+        page.waitForEvent("download"),
+        page.getByRole("button",{name:"Download exact values and replay"}).click(),
+      ]);
+      const scenario=JSON.parse(readFileSync(await robustExport.path())).scenario;
+      assert.equal(scenario.rho,0);
+      assert.deepEqual(scenario.models[0].correctness,scenario.models[1].correctness);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth),width);
+      await page.locator("#robust-title").scrollIntoViewIfNeeded();
+      await page.screenshot({path:fileURLToPath(new URL("echo2-" + width + ".png",screenshots))});
+      const robustArtifact=await page.request.get(new URL("data/echo2-confirmatory.manifest.json",base).href);
+      assert.equal((await robustArtifact.json()).id,"echo2-confirmatory-001");
+
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);

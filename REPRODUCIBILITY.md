@@ -17,3 +17,6 @@ To create refreshed runtime envelopes and results, first run the verification ab
 The random order is documented in `drawTask`. Each task draws truth, mixture selector, shared correctness, tie decision, original private values, then fresh independent values. All correlation and policy arms reuse that task. To recover the illustrated replay, open the website and choose an archived entry. Its events are in [confirmatory.json](results/confirmatory.json). Exported browser exploration JSON is suitable for inspection and uses the explicit seed and scenario fields.
 
 The first-trial archival choice was specified before execution. The browser's separate seeded example was selected for visible contrast and is labelled a browser simulation.
+
+## ECHO 2.0
+Run `python scripts/reference_echo2.py` and `node scripts/echo2.mjs verify` alongside the v1 gates. To rerun with new runtime metadata, use `node scripts/echo2.mjs pilot` and `node scripts/echo2.mjs confirmatory` in a separate checkout. Preserve original archived files. The confirmatory run targets the commit in its manifest and has 16,000 paired trials per condition. The Python reference rationalizes decimal inputs from the configuration and independently checks the result.

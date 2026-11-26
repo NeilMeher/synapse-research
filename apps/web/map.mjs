@@ -32,6 +32,7 @@ export function setupMap() {
   let filter = () => true;
   let zoom = 1;
   let artifactReady = false;
+  let robustnessReady = false;
   let mapDraw = () => {};
 
   function choose(lab) {
@@ -78,7 +79,7 @@ export function setupMap() {
     listNodes.set(lab.id, row);
   }
 
-  const status = lab => lab.id === "echo" ? (artifactReady ? "Experiments executed" : "Interactive prototype") : "Proposed";
+  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : "Proposed";
   function renderDetail() {
     const {division: id, name, question, links} = selected;
     detail.tabIndex = -1;
@@ -100,7 +101,9 @@ export function setupMap() {
     if (selected.id === "echo") {
       const open = node("a", "Open the ECHO lab ↗", "primary");
       open.href = "#echo";
-      detail.append(open);
+      const follow = node("a", "Compare matched dependence", "map-study");
+      follow.href = "#robustness";
+      detail.append(open, follow);
     }
     detail.append(node("p", "Connected laboratories"), related);
   }
@@ -227,5 +230,5 @@ export function setupMap() {
   filtersChanged();
   showList();
   if (location.hash.startsWith("#lab-")) byId("map").scrollIntoView();
-  return {draw: mapDraw, markAvailable() { artifactReady = true; filtersChanged(); }};
+  return {draw: mapDraw, markAvailable() { artifactReady = true; filtersChanged(); }, markRobustnessAvailable() { robustnessReady = true; filtersChanged(); }};
 }

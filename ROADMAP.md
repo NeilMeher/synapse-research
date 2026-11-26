@@ -14,3 +14,5 @@
 | 9 · Integration | Cross-lab experiments, manuscripts, review, education and public release. |
 
 Release status follows mathematical, experimental, statistical, software, website, documentation and recorded review gates. Later milestones are proposed.
+
+Phase II begins with ECHO 2.0 matched-moment dependence, a rational reference and distributional bounds. The next vertical slices are MIRAGE matched confidence, REFLEX deterministic market accounting, and CONVERGENCE. Each requires its own frozen design and computed evidence.

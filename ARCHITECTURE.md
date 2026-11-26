@@ -15,3 +15,6 @@ Versioned protocol → validated configuration → paired task draws → evidenc
 ## Budget
 
 Zero dollars. One local worker, up to 100,000 task draws, 41 agents and 50 rounds per trajectory, with a 30-second batch runtime limit checked between tasks. Preview interactions use one task at a time and bounded rounds. Record measured runtime and peak process RSS before broadening. Large batch, parallel workers, external models, personal data and paid hosting are outside the first slice.
+
+## ADR 003 · Versioned dependence kernel
+engine/dependence.mjs is a bounded, browser-safe extension. engine/echo2.mjs wraps paired sampling and exact analysis. The distinct echo-dependence-result-v1 schema leaves all v1 semantics intact. The exact rational reference shares the data contract and uses an independent algorithm. The ECHO 2.0 runner caps samples at 50,000 single-threaded tasks within the existing 30-second budget.
