@@ -11,3 +11,5 @@ Use Node 24.12.0 and npm 11.6.2. Run npm test, npm run reference, npm run verify
 Use static, safe DOM rendering, bounded controls and relative links. Record browser and accessibility checks. Track public deployment and independent review with actual evidence.
 
 For Phase II, preserve v1 archival inputs and outputs byte for byte. Run python scripts/reference_echo2.py and node scripts/echo2.mjs verify alongside v1 checks. Distinguish finite exchangeability from latent mixture families and exact bounds from simulation sampling intervals.
+
+For MIRAGE, REFLEX and CONVERGENCE, use their pilot/confirmatory config and protocol files. Run each Python reference and node scripts/<study>.mjs verify. Keep market outcomes synthetic and use episodes, rather than individual orders, for uncertainty.

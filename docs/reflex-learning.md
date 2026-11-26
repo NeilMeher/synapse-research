@@ -1,0 +1,9 @@
+# REFLEX learning and independent checks
+
+The unit of account is one tick and the asset is indivisible. The maker's midpoint is the base quote plus the price-impact parameter times the decline in maker inventory. Bid and ask are two ticks below and above midpoint in the study. Every fill changes both accounts by one asset and an integer cash price. A separate fee account receives one tick from the initiating trader. The fee stays in the system. Cash and assets are conserved. Marked wealth values remaining units at the current midpoint. Realized and unrealized P&L would require tracking cost basis. The first slice exposes cash, holdings, fees and marked wealth.
+
+Hand-check this separate fixture: maker has 200 cash and four assets, Alice has 300 cash and two assets. At midpoint 100 and impact two, she buys two units at 102 and 104, paying two ticks in fees. Maker ends at 406/2 (cash/assets) and Alice 92/4. She sells one unit at bid 102 and pays another tick. Verify 304/3 and 193/3 with total fee cash of three. Mark accounts at midpoint 102. Explain why summed marked wealth changed despite exact balance conservation.
+
+Read engine/market.mjs from quote to submitOrder. Each fill uses a fresh quote and available asset/cash checks. An immediate-or-cancel remainder expires. Compare how a smaller limit changes a three-unit buy. The deterministic maker has no standing customer queue, and order receipt sequence decides priority. Inspect scripts/reference_reflex.py to trace the independent replay.
+
+In the site switch the price impact while holding the episode fixed. Watch the quote trajectory and balances. Explain why greater responsiveness can reduce the gap from the synthetic fundamental while raising the magnitude of returns. This model offers a controlled mechanism demonstration. Real market data, leverage, order book depth and future information are separate questions.

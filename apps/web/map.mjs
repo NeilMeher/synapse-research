@@ -79,7 +79,7 @@ export function setupMap() {
     listNodes.set(lab.id, row);
   }
 
-  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : lab.id === "mirage" ? "MIRAGE v0.1 · Experiments executed" : "Proposed";
+  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : lab.id === "mirage" ? "MIRAGE v0.1 · Experiments executed" : lab.id === "reflex" ? "REFLEX v0.1 · Experiments executed" : "Proposed";
   function renderDetail() {
     const {division: id, name, question, links} = selected;
     detail.tabIndex = -1;
@@ -105,9 +105,9 @@ export function setupMap() {
       follow.href = "#robustness";
       detail.append(open, follow);
     }
-    if (selected.id === "mirage") {
-      const open = node("a", "Open the MIRAGE lab ↗", "primary");
-      open.href = "./mirage.html";
+    if (["mirage", "reflex"].includes(selected.id)) {
+      const open = node("a", "Open the " + selected.name + " lab ↗", "primary");
+      open.href = "./" + selected.id + ".html";
       detail.append(open);
     }
     detail.append(node("p", "Connected laboratories"), related);

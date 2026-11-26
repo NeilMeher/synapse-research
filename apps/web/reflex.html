@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="REFLEX replays a deterministic synthetic market with a reconciled accounting ledger.">
+  <title>REFLEX · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./reflex-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./index.html#map">Research map</a><a href="./mirage.html">MIRAGE</a><a href="./convergence.html">CONVERGENCE</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">REFLEX · Synthetic maker market</p><h1>Follow the price. Verify the ledger.</h1></div>
+      <p>The same order policies receive the same synthetic information under two price-impact settings. Inspect each round, its fills and its reconciled balances.</p>
+    </div>
+    <p id="reflex-status" role="status">Loading the archived market…</p>
+    <div class="result-panel study-controls">
+      <label>Price impact per unit <select id="reflex-impact"><option value="1">One tick</option><option value="4">Four ticks</option></select></label>
+      <label class="scrub">Market round <input id="reflex-round" type="range" min="1" max="6" value="1"><output id="reflex-round-output" for="reflex-round">1</output></label>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Midpoint and fundamental</h2>
+      <p>Lime marks the quoted midpoint. Blue dashes mark the synthetic fundamental. Values use integer ticks.</p>
+      <canvas id="reflex-price" aria-hidden="true" class="study-chart"></canvas>
+      <p id="reflex-quote" aria-live="polite"></p>
+      <div class="table-scroll"><table><caption>Matched episode averages</caption><thead><tr><th>Impact</th><th>Absolute price error (ticks)</th><th>Volume (units)</th><th>Root-mean-square return</th><th>Drawdown</th></tr></thead><tbody id="reflex-results"></tbody></table></div>
+    </article>
+    <div class="study-pair study-block">
+      <article class="result-panel"><h2>Current orders and fills</h2><div class="table-scroll"><table>
+        <caption>Orders received in this round</caption><thead><tr><th>Trader</th><th>Side</th><th>Requested</th><th>Filled</th><th>Prices</th><th>Status</th></tr></thead><tbody id="reflex-trades"></tbody>
+      </table></div></article>
+      <article class="result-panel"><h2>Ledger</h2><p id="reflex-totals"></p><div class="table-scroll"><table>
+        <caption>Balances through this round</caption><thead><tr><th>Account</th><th>Cash</th><th>Assets</th><th>Marked wealth</th></tr></thead><tbody id="reflex-ledger"></tbody>
+      </table></div></article>
+    </div>
+    <article class="result-panel study-block"><h2>Research evidence</h2>
+      <div class="actions">
+        <a class="quiet" href="./data/reflex-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/reflex-confirmatory.manifest.json">Run manifest</a>
+        <a class="quiet" href="./research/reflex-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/reflex.md">Manuscript</a><a class="quiet" href="./docs/reflex-learning.md">Learning guide</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

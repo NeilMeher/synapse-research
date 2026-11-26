@@ -20,3 +20,6 @@ The first-trial archival choice was specified before execution. The browser's se
 
 ## ECHO 2.0
 Run `python scripts/reference_echo2.py` and `node scripts/echo2.mjs verify` alongside the v1 gates. To rerun with new runtime metadata, use `node scripts/echo2.mjs pilot` and `node scripts/echo2.mjs confirmatory` in a separate checkout. Preserve original archived files. The confirmatory run targets the commit in its manifest and has 16,000 paired trials per condition. The Python reference rationalizes decimal inputs from the configuration and independently checks the result.
+
+## Integrated benchmark and market experiments
+For each study named mirage, reflex or convergence, run python scripts/reference_<study>.py and node scripts/<study>.mjs verify. The relevant manifest records code revision, resource use, seed-bearing config, and digests. Use a disposable clone for commands that refresh runtime manifests. The study archives themselves are versioned separately from build-level release provenance.

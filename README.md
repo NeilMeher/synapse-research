@@ -17,6 +17,6 @@ npm run preview
 
 Open [the local preview](http://127.0.0.1:4181). A local server is required for the browser's ES modules and result fetch. The build has no API, credentials, external assets or application dependencies.
 
-The confirmatory ECHO run contains 8,000 independent synthetic tasks across five correlation settings. See [the manuscript](papers/echo.md), [reproduction steps](REPRODUCIBILITY.md), [portfolio audit](PORTFOLIO_AUDIT.md), [project state](PROJECT_STATE.md) and [research roadmap](ROADMAP.md). The other eleven laboratories are proposals.
+The confirmatory ECHO run contains 8,000 independent synthetic tasks across five correlation settings. See [the manuscript](papers/echo.md), [reproduction steps](REPRODUCIBILITY.md), [portfolio audit](PORTFOLIO_AUDIT.md), [project state](PROJECT_STATE.md) and [research roadmap](ROADMAP.md). The original ECHO archive remains accessible. The [research evidence library](https://neilmeher.github.io/synapse-research/library.html) links the implemented MIRAGE and REFLEX labs and the CONVERGENCE study.
 
 Explore ECHO 2.0 at #robustness. Its matched-dependence experiment has a separate protocol and dataset. See the [ECHO 2.0 manuscript](papers/echo2.md) and updated [reproduction guide](REPRODUCIBILITY.md).

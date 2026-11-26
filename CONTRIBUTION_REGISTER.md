@@ -10,3 +10,5 @@
 | Human owner verification and external peer review | Pending. No independent human contributions or approvals recorded. |
 
 Phase II robustness directions were requested by Neil Meher. The new protocol, numerical kernel, rational reference, study execution, audit, manuscript and interactive explorer are AI-assisted work. Human reproduction and review remain pending.
+
+MIRAGE, REFLEX and CONVERGENCE were implemented and analyzed by Codex using the Phase II directions. Their Python references are separately implemented with common authorship. No completed human validation has been recorded.

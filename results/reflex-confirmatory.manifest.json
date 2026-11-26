@@ -1,0 +1,32 @@
+{
+  "id": "reflex-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "1c6c4ba00a1a60dc3addf606652f9deaf8d8dcf6",
+  "inputs": {
+    "scripts/reflex.mjs": "4f50ce5e903e21268b457aeaa9a71dd406370050ee39d833853302442f129390",
+    "engine/market.mjs": "3cdd04cf92c874585dc3fb9b705a6755058df43b76d847515667bc8e695e328f",
+    "engine/reflex.mjs": "de9ea9126c111e4388585827ff9e1f25716921969449c63ada701e98477d13ee",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/reflex-confirmatory.json": "ab47f114b0f89179b1ed55b6df316804e1338bcb8286cd59411504d7dfdbaea4",
+    "research/reflex-confirmatory.md": "2779c0a8e25e324ad113240a7b0f613731ea3fc80d3a6b6376703929fc55cb5b"
+  },
+  "configSha256": "9cd3422c42bc8aa24d13c61e0bdc34b30711d0906f628a1c64fad2cfdaa54111",
+  "output": {
+    "path": "results/reflex-confirmatory.json",
+    "sha256": "92772fd77f83cedcc8efefcb4b2fa916a29bd3e6551af15f518cdff417f4a85d",
+    "bytes": 179863
+  },
+  "startUtc": "2026-11-26T19:27:53.078Z",
+  "endUtc": "2026-11-26T19:27:53.172Z",
+  "runtimeMs": 83,
+  "observedRssBytes": 53608448,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

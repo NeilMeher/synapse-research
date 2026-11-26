@@ -117,6 +117,42 @@ try {
       const robustArtifact=await page.request.get(new URL("data/echo2-confirmatory.manifest.json",base).href);
       assert.equal((await robustArtifact.json()).id,"echo2-confirmatory-001");
 
+      for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
+        ["convergence","convergence-confirmatory-001"]]) {
+        const studyResponse=await page.goto(new URL(route+".html",base).href);
+        assert.equal(studyResponse.status(),200);
+        await page.waitForFunction(({route,status})=>document.getElementById(route+"-status")?.textContent.includes(status),{route,status});
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+        if (route==="mirage"){
+          assert.equal(await page.locator("#mirage-metrics tr").count(),5);
+          await page.getByLabel("Hint regime").selectOption("misleading");
+          assert.match(await page.locator("#mirage-metrics").textContent(),/0\.2202/);
+          await page.getByLabel("Forecast to plot").selectOption("oracle");
+          assert.equal(await page.locator("#mirage-risk-table tr").count(),5);
+        }
+        if (route==="reflex"){
+          await page.getByLabel("Price impact per unit").selectOption("4");
+          await page.getByLabel("Market round").press("End");
+          assert.match(await page.locator("#reflex-quote").textContent(),/Round 6/);
+          assert.equal(await page.locator("#reflex-ledger tr").count(),11);
+          assert.equal(await page.locator("#reflex-trades tr").count(),9);
+        }
+        if (route==="convergence"){
+          assert.equal(await page.locator("#convergence-arm option").count(),22);
+          await page.getByRole("button",{name:"Market outcome"}).click();
+          await page.getByLabel("Order in episode").press("End");
+          assert.match(await page.locator("#convergence-stage").textContent(),/executed units.*Midpoint/);
+          assert.equal(await page.locator("#convergence-trades tr").count(),15);
+          assert.equal(await page.locator("#convergence-contrasts tr").count(),2);
+        }
+        if (width===390 || width===1440) {
+          await page.evaluate(()=>scrollTo(0,0));
+          await page.screenshot({path:fileURLToPath(new URL(route+"-" + width + ".png",screenshots))});
+        }
+      }
+      assert.equal((await page.goto(new URL("library.html",base).href)).status(),200);
+      assert.equal(await page.locator("#studies article").count(),5);
+
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);

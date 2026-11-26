@@ -1,6 +1,6 @@
 # Development state
 
-Milestones 0 and 1 have working deliverables. Milestone 2 ECHO has an executed, computationally validated first slice with human review pending. The other eleven laboratories are proposed.
+Milestones 0 and 1 have working deliverables. Milestone 2 ECHO has an executed, computationally validated first slice with human review pending. Eleven other laboratories were proposed at the v0.1.0 baseline.
 
 | ID | Evidence | Status |
 |---|---|---|
@@ -40,4 +40,17 @@ The v0.1.0 archived release is the baseline. Its CI run 45879539759 passed on co
 
 The first Phase II confirmatory study used 16,000 simulations at each of six correlations and completed its local batch in 337 ms with observed RSS of 24,965,120 bytes. The main results are exact. The paired samples cross-check the calculation and provide sampling error separately.
 
-Resume the Phase II work in order: validate and release the ECHO explorer, implement MIRAGE's matched-confidence benchmark, validate REFLEX accounting and market execution, then freeze and run the cross-lab comparison. The next scientific extension to ECHO is a heterogeneous reliability and information-source model with feasible joint moments. Clustered dependence, adaptive trust and empirical LLM experiments remain open.
+Phase II continued through the integrated slice below. The next scientific extension to ECHO is a heterogeneous reliability and information-source model with feasible joint moments. Clustered dependence, adaptive trust and empirical LLM experiments remain open.
+
+## Phase II · Integrated slice
+
+The Phase II requested sequence reached CONVERGENCE. The reviewed ECHO 2.0 tag is v0.2.0 at 6cfb2ab with successful GitHub Pages deployment 45882798690 and verified live v1/v2 checksums. The next release integrates three additional versioned task families.
+
+| Milestone | Actual output | Reproduction |
+|---|---|---|
+| MIRAGE v0.1 | 350-case pilot and 6,000-task confirmatory evaluation per regime. First-order accuracy was 71.97%; trained error AUROC fell from .7355 to .4894 under misleading cues. | python scripts/reference_mirage.py and node scripts/mirage.mjs verify |
+| REFLEX v0.1 | 40-episode pilot and 400 paired six-round confirmatory markets. Higher impact reduced simulated error by 6.43 ticks. Reference replay checked 207 archived confirmatory fills and all balances. | python scripts/reference_reflex.py and node scripts/reflex.mjs verify |
+| CONVERGENCE | 48-episode pilot and 1,200 paired confirmatory episodes across 22 arms. Both adjusted primary intervals include zero. Independent reconstruction checked 478 confirmatory fills, source moments and archived decision traces. | python scripts/reference_convergence.py and node scripts/convergence.mjs verify |
+| Review | [Phase II audit](research/phase2-audit.md) with corrected pre-release issues. | Confirm no byte differences in v1 artifacts and review one witness, estimate and ledger by hand. |
+
+The integrated pages link to all run manifests, protocols, published metrics, manuscripts and learning guides. The original ECHO controls remain available. Use the current branch's GitHub CI and deployed release.json to identify the latest revision. Human peer review is pending. Future scope includes heterogeneous/confounded cues, clustered dependence, more realistic source provenance, varied communication strength and longer-horizon market outcomes. The nine other labs remain proposed.

@@ -8,3 +8,5 @@
 - Random, small-world, scale-free and community network families, dynamic trust, sequential cascades, AI agent interventions, empirical data and cross-lab experiments remain proposed.
 
 ECHO 2.0 matches full exchangeable pairwise correlation matrices. Its finite moment bounds need not be attainable under a latent independent-report mixture. Heterogeneous marginal reliability, clustered dependence, source uncertainty and empirical evidence are outside this protocol.
+
+The integrated study controls marginal source accuracy, pairwise correlation, allocated capital and expected order size between like-sized mechanisms. Order volume can still differ in individual episodes. Quote impact is one market parameter. Independent human or empirical validation is open. The result does not characterize financial system instability.

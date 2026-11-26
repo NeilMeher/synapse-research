@@ -13,3 +13,5 @@
 The other laboratories and all cross-lab experiments in the roadmap are proposed. No empirical outcome, published reproduction, human experiment or external peer review has been established by ECHO.
 
 ECHO 2.0 contains a separately frozen synthetic result and a rational reference. The exact difference and sharp bounds are original computed examples of established theory. The pilot selected a directional hypothesis before the new grid was computed. [ECHO 2.0 manuscript](papers/echo2.md)
+
+Phase II adds [MIRAGE](papers/mirage.md), [REFLEX](papers/reflex.md) and [CONVERGENCE](papers/convergence.md). Their evidence class is synthetic computational research. Confirmatory claims link to frozen protocols, built results and separate numerical or accounting references.

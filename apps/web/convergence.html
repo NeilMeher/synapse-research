@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Replay the synthetic evidence, confidence, and trades behind the CONVERGENCE experiment.">
+  <title>CONVERGENCE · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./convergence-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./index.html#robustness">ECHO</a><a href="./mirage.html">MIRAGE</a><a href="./reflex.html">REFLEX</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">CONVERGENCE · Cross-lab study</p><h1>From private belief to market price</h1></div>
+      <p>Trace the first matched episode through evidence, confidence, submitted size and executed trades. Compare controls that change dependence, confidence, communication and quote impact.</p>
+    </div>
+    <p id="convergence-status" role="status">Loading the archived synthetic experiment…</p>
+    <div class="result-panel study-controls">
+      <label>Archived scenario <select id="convergence-arm"></select></label>
+      <label class="scrub">Order in episode <input id="convergence-step" type="range" min="1" max="15" value="1"><output id="convergence-step-output" for="convergence-step">1</output></label>
+      <div class="actions"><button class="quiet" type="button" id="convergence-play">Play orders</button></div>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Mechanism in the selected order</h2>
+      <div class="actions mechanism" aria-label="Mechanism stages">
+        <button class="quiet" type="button" data-stage="evidence" aria-pressed="true">ECHO evidence</button>
+        <button class="quiet" type="button" data-stage="confidence" aria-pressed="false">MIRAGE confidence</button>
+        <button class="quiet" type="button" data-stage="order" aria-pressed="false">REFLEX decision</button>
+        <button class="quiet" type="button" data-stage="outcome" aria-pressed="false">Market outcome</button>
+      </div>
+      <p id="convergence-stage" aria-live="polite"></p>
+      <canvas class="study-chart" id="convergence-price" aria-hidden="true"></canvas>
+      <p>The blue dashed line is the synthetic fundamental. Lime shows the midpoint through the selected order.</p>
+      <details><summary>Read the execution tape</summary><div class="table-scroll"><table><caption>Received orders through this point</caption><thead><tr><th>Trader</th><th>Side</th><th>Requested</th><th>Filled</th><th>Prices</th><th>Status</th></tr></thead><tbody id="convergence-trades"></tbody></table></div></details>
+    </article>
+    <article class="result-panel study-block">
+      <h2>Prespecified effects</h2>
+      <p>Differences are in ticks of absolute terminal midpoint pricing error. Intervals are family-adjusted and reflect independent synthetic episodes.</p>
+      <div class="table-scroll"><table><caption>Paired confirmatory contrasts</caption><thead><tr><th>Contrast</th><th>Estimate</th><th>Adjusted interval</th></tr></thead><tbody id="convergence-contrasts"></tbody></table></div>
+      <details><summary>Compare all 22 arms and ablations</summary>
+        <div class="table-scroll"><table><caption>Descriptive results per arm</caption><thead><tr><th>Scenario</th><th>Price error (ticks)</th><th>Private accuracy</th><th>Order accuracy</th><th>Brier</th><th>Submitted units</th><th>Executed units</th></tr></thead><tbody id="convergence-results"></tbody></table></div>
+      </details>
+    </article>
+    <article class="result-panel study-block">
+      <h2>Research evidence</h2>
+      <p>Both dependent laws have the same individual and pairwise reliability parameters. Calibrated and style policies match expected order size. Matching expected size leaves differences in realized volume and direction. All markets are synthetic.</p>
+      <div class="actions"><a class="quiet" href="./data/convergence-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/convergence-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/convergence-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/convergence.md">Manuscript</a><a class="quiet" href="./docs/convergence-learning.md">Learning guide</a></div>
+    </article>
+  </main>
+</body>
+</html>

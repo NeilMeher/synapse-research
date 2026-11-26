@@ -18,3 +18,6 @@ Zero dollars. One local worker, up to 100,000 task draws, 41 agents and 50 round
 
 ## ADR 003 · Versioned dependence kernel
 engine/dependence.mjs is a bounded, browser-safe extension. engine/echo2.mjs wraps paired sampling and exact analysis. The distinct echo-dependence-result-v1 schema leaves all v1 semantics intact. The exact rational reference shares the data contract and uses an independent algorithm. The ECHO 2.0 runner caps samples at 50,000 single-threaded tasks within the existing 30-second budget.
+
+## ADR 004 · Separate confidence, observations and execution
+MIRAGE uses engine/confidence.mjs for binary forecasts and scoring. REFLEX wraps engine/market.mjs under integer quote, balance and order contracts. CONVERGENCE connects the three kernels through reports, probabilities and immediate-or-cancel orders. scripts/run-study.mjs handles seed provenance, immutable source and output digests, bounded execution and deterministic verification. Each study has a distinct schema identifier. Native ES modules serve all pages. The build release.json identifies the deployed Git revision.

@@ -1,0 +1,5676 @@
+{
+  "schemaVersion": "reflex-market-v1",
+  "modelVersion": "reflex-ioc-maker-v1",
+  "evidenceClass": "synthetic simulation",
+  "config": {
+    "id": "reflex-confirmatory-001",
+    "phase": "confirmatory",
+    "seed": 711201,
+    "trials": 400,
+    "rounds": 6
+  },
+  "pairedPriceError": {
+    "trials": 400,
+    "estimate": -6.432500000000001,
+    "sd": 9.08934270415913,
+    "interval": [
+      -7.323239217164691,
+      -5.541760782835311
+    ]
+  },
+  "arms": [
+    {
+      "impact": 1,
+      "replay": {
+        "initial": {
+          "maker": {
+            "cash": 2000000,
+            "assets": 120,
+            "markedWealth": 3200000
+          },
+          "trader-0": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-1": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-2": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-3": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-4": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-5": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-6": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-7": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-8": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "fees": {
+            "cash": 0,
+            "assets": 0,
+            "markedWealth": 0
+          }
+        },
+        "final": {
+          "maker": {
+            "cash": 1990155,
+            "assets": 121,
+            "markedWealth": 3200034
+          },
+          "trader-0": {
+            "cash": 79978,
+            "assets": 8,
+            "markedWealth": 159970
+          },
+          "trader-1": {
+            "cash": 119946,
+            "assets": 4,
+            "markedWealth": 159942
+          },
+          "trader-2": {
+            "cash": 39994,
+            "assets": 12,
+            "markedWealth": 159982
+          },
+          "trader-3": {
+            "cash": 119946,
+            "assets": 4,
+            "markedWealth": 159942
+          },
+          "trader-4": {
+            "cash": 159954,
+            "assets": 0,
+            "markedWealth": 159954
+          },
+          "trader-5": {
+            "cash": 139941,
+            "assets": 2,
+            "markedWealth": 159939
+          },
+          "trader-6": {
+            "cash": 20009,
+            "assets": 14,
+            "markedWealth": 159995
+          },
+          "trader-7": {
+            "cash": 39978,
+            "assets": 12,
+            "markedWealth": 159966
+          },
+          "trader-8": {
+            "cash": 9996,
+            "assets": 15,
+            "markedWealth": 159981
+          },
+          "fees": {
+            "cash": 103,
+            "assets": 0,
+            "markedWealth": 103
+          }
+        },
+        "frames": [
+          {
+            "round": 1,
+            "fundamental": 10120,
+            "midpoint": 9998,
+            "quote": {
+              "midpoint": 9998,
+              "bid": 9996,
+              "ask": 10000,
+              "askUnits": 122,
+              "bidLotsAtQuote": 198
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 1,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 1,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 2,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 2,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 3,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 4,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 3,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 5,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 6,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 4,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 7,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 8,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 5,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 9,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 10,
+                      "price": 9993,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 6,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 128,
+                    "bidLotsAtQuote": 192
+                  },
+                  "fills": [
+                    {
+                      "sequence": 11,
+                      "price": 9992,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 12,
+                      "price": 9991,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 7,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 128,
+                    "bidLotsAtQuote": 192
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 13,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 14,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 8,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 15,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 16,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 9,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 17,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 18,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "fundamental": 9880,
+            "midpoint": 10000,
+            "quote": {
+              "midpoint": 10000,
+              "bid": 9998,
+              "ask": 10002,
+              "askUnits": 120,
+              "bidLotsAtQuote": 200
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 10,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 19,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 20,
+                      "price": 10001,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 11,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 21,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 22,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 12,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 23,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 24,
+                      "price": 10001,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 13,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 25,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 26,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 14,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 27,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 28,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 15,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 29,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 30,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 16,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 31,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 32,
+                      "price": 10001,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 17,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 33,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 34,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 18,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 35,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-8",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 36,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-8",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 3,
+            "fundamental": 9880,
+            "midpoint": 10002,
+            "quote": {
+              "midpoint": 10002,
+              "bid": 10000,
+              "ask": 10004,
+              "askUnits": 118,
+              "bidLotsAtQuote": 202
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 19,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 37,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 38,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 20,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 39,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 40,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 21,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 41,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 42,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 22,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 43,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 44,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 23,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 45,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-4",
+                      "seller": "maker",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 46,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-4",
+                      "seller": "maker",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 24,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 47,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 48,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 25,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 49,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 50,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 26,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 51,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 52,
+                      "price": 10001,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 27,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 53,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 54,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 4,
+            "fundamental": 10120,
+            "midpoint": 9996,
+            "quote": {
+              "midpoint": 9996,
+              "bid": 9994,
+              "ask": 9998,
+              "askUnits": 124,
+              "bidLotsAtQuote": 196
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 28,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 55,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 56,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 29,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 57,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 58,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 30,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 59,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 60,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 31,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 61,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 62,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 32,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 63,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 64,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 33,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 65,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 66,
+                      "price": 9993,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 34,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 67,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 68,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 35,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 69,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 70,
+                      "price": 9993,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 36,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 71,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 72,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 5,
+            "fundamental": 10120,
+            "midpoint": 9998,
+            "quote": {
+              "midpoint": 9998,
+              "bid": 9996,
+              "ask": 10000,
+              "askUnits": 122,
+              "bidLotsAtQuote": 198
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 37,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 73,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 74,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 38,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 75,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 76,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 39,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 77,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 78,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 40,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 79,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 80,
+                      "price": 9995,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 41,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 81,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 82,
+                      "price": 9993,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 42,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [],
+                  "unfilled": 2,
+                  "reason": "inventory"
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 43,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [],
+                  "unfilled": 2,
+                  "reason": "cash"
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 44,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9994,
+                    "bid": 9992,
+                    "ask": 9996,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 83,
+                      "price": 9996,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 84,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 45,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9996,
+                    "bid": 9994,
+                    "ask": 9998,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 85,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 86,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 6,
+            "fundamental": 10120,
+            "midpoint": 9999,
+            "quote": {
+              "midpoint": 9999,
+              "bid": 9997,
+              "ask": 10001,
+              "askUnits": 121,
+              "bidLotsAtQuote": 199
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 46,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 87,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 88,
+                      "price": 10001,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 47,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 89,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 90,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 48,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 91,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 92,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 49,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 93,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 94,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 50,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 95,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 96,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 51,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "fills": [
+                    {
+                      "sequence": 97,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-5",
+                      "seller": "maker",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 98,
+                      "price": 10003,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-5",
+                      "seller": "maker",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 52,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10002,
+                    "bid": 10000,
+                    "ask": 10004,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 202
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 99,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-6",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 100,
+                      "price": 9999,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-6",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 53,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 101,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 102,
+                      "price": 9997,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 54,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9998,
+                    "bid": 9996,
+                    "ask": 10000,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9999,
+                    "bid": 9997,
+                    "ask": 10001,
+                    "askUnits": 121,
+                    "bidLotsAtQuote": 199
+                  },
+                  "fills": [
+                    {
+                      "sequence": 103,
+                      "price": 10000,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 1,
+                  "reason": "cash"
+                }
+              }
+            ]
+          }
+        ],
+        "policy": {
+          "anchor": 10000,
+          "impact": 1,
+          "halfSpread": 2,
+          "fee": 1
+        },
+        "totals": {
+          "cash": 2720000,
+          "assets": 192
+        }
+      },
+      "trials": 400,
+      "summary": {
+        "meanAbsoluteError": 117.85749999999996,
+        "volume": 104.9875,
+        "drawdown": 0.0010237912201882544,
+        "rootMeanSquaredReturn": 0.0004696058649656407,
+        "finalMidpoint": 9999.0075
+      }
+    },
+    {
+      "impact": 4,
+      "replay": {
+        "initial": {
+          "maker": {
+            "cash": 2000000,
+            "assets": 120,
+            "markedWealth": 3200000
+          },
+          "trader-0": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-1": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-2": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-3": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-4": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-5": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-6": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-7": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "trader-8": {
+            "cash": 80000,
+            "assets": 8,
+            "markedWealth": 160000
+          },
+          "fees": {
+            "cash": 0,
+            "assets": 0,
+            "markedWealth": 0
+          }
+        },
+        "final": {
+          "maker": {
+            "cash": 2000000,
+            "assets": 120,
+            "markedWealth": 3200000
+          },
+          "trader-0": {
+            "cash": 80020,
+            "assets": 8,
+            "markedWealth": 160020
+          },
+          "trader-1": {
+            "cash": 119892,
+            "assets": 4,
+            "markedWealth": 159892
+          },
+          "trader-2": {
+            "cash": 40084,
+            "assets": 12,
+            "markedWealth": 160084
+          },
+          "trader-3": {
+            "cash": 119892,
+            "assets": 4,
+            "markedWealth": 159892
+          },
+          "trader-4": {
+            "cash": 159924,
+            "assets": 0,
+            "markedWealth": 159924
+          },
+          "trader-5": {
+            "cash": 139854,
+            "assets": 2,
+            "markedWealth": 159854
+          },
+          "trader-6": {
+            "cash": 20126,
+            "assets": 14,
+            "markedWealth": 160126
+          },
+          "trader-7": {
+            "cash": 40020,
+            "assets": 12,
+            "markedWealth": 160020
+          },
+          "trader-8": {
+            "cash": 84,
+            "assets": 16,
+            "markedWealth": 160084
+          },
+          "fees": {
+            "cash": 104,
+            "assets": 0,
+            "markedWealth": 104
+          }
+        },
+        "frames": [
+          {
+            "round": 1,
+            "fundamental": 10120,
+            "midpoint": 9992,
+            "quote": {
+              "midpoint": 9992,
+              "bid": 9990,
+              "ask": 9994,
+              "askUnits": 122,
+              "bidLotsAtQuote": 198
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 1,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 1,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 2,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 2,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 3,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 4,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 3,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 5,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 6,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 4,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 7,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 8,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 5,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 9,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 10,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 6,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9968,
+                    "bid": 9966,
+                    "ask": 9970,
+                    "askUnits": 128,
+                    "bidLotsAtQuote": 192
+                  },
+                  "fills": [
+                    {
+                      "sequence": 11,
+                      "price": 9974,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 12,
+                      "price": 9970,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 7,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9968,
+                    "bid": 9966,
+                    "ask": 9970,
+                    "askUnits": 128,
+                    "bidLotsAtQuote": 192
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 13,
+                      "price": 9970,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 14,
+                      "price": 9974,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 8,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 15,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 16,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 9,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 17,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 18,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "fundamental": 9880,
+            "midpoint": 10000,
+            "quote": {
+              "midpoint": 10000,
+              "bid": 9998,
+              "ask": 10002,
+              "askUnits": 120,
+              "bidLotsAtQuote": 200
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 10,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 19,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 20,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 11,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 21,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 22,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 12,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 23,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 24,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 13,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 25,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 26,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 14,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 27,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 28,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 15,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 29,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 30,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 16,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 31,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 32,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 17,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 33,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 34,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 18,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 35,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-8",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 36,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-8",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 3,
+            "fundamental": 9880,
+            "midpoint": 10008,
+            "quote": {
+              "midpoint": 10008,
+              "bid": 10006,
+              "ask": 10010,
+              "askUnits": 118,
+              "bidLotsAtQuote": 201
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 19,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 37,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 38,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 20,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 39,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 40,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 21,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 41,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 42,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 22,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 43,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 44,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 23,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 45,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-4",
+                      "seller": "maker",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 46,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-4",
+                      "seller": "maker",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 24,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 47,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 48,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 25,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 49,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 50,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 26,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 51,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 52,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 27,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 53,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 54,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 4,
+            "fundamental": 10120,
+            "midpoint": 9984,
+            "quote": {
+              "midpoint": 9984,
+              "bid": 9982,
+              "ask": 9986,
+              "askUnits": 124,
+              "bidLotsAtQuote": 196
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 28,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 55,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 56,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-0",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 29,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 57,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 58,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 30,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 59,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 60,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 31,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 61,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 62,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 32,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 63,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 64,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 33,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 65,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 66,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-5",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 34,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 67,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 68,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-6",
+                      "seller": "maker",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 35,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 69,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 70,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 36,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 71,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 72,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 5,
+            "fundamental": 10120,
+            "midpoint": 9992,
+            "quote": {
+              "midpoint": 9992,
+              "bid": 9990,
+              "ask": 9994,
+              "askUnits": 122,
+              "bidLotsAtQuote": 198
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 37,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 73,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 74,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 38,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 75,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 76,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-1",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 0,
+                "event": {
+                  "sequence": 39,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 77,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 78,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-2",
+                      "seller": "maker",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 40,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 79,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 80,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-3",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 41,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [
+                    {
+                      "sequence": 81,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 82,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 42,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [],
+                  "unfilled": 2,
+                  "reason": "inventory"
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 43,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "fills": [],
+                  "unfilled": 2,
+                  "reason": "cash"
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 0,
+                "event": {
+                  "sequence": 44,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9976,
+                    "bid": 9974,
+                    "ask": 9978,
+                    "askUnits": 126,
+                    "bidLotsAtQuote": 194
+                  },
+                  "after": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "fills": [
+                    {
+                      "sequence": 83,
+                      "price": 9978,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 84,
+                      "price": 9982,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-7",
+                      "seller": "maker",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 45,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9984,
+                    "bid": 9982,
+                    "ask": 9986,
+                    "askUnits": 124,
+                    "bidLotsAtQuote": 196
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 85,
+                      "price": 9986,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 86,
+                      "price": 9990,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          },
+          {
+            "round": 6,
+            "fundamental": 10120,
+            "midpoint": 10000,
+            "quote": {
+              "midpoint": 10000,
+              "bid": 9998,
+              "ask": 10002,
+              "askUnits": 120,
+              "bidLotsAtQuote": 200
+            },
+            "trades": [
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 46,
+                  "order": {
+                    "actor": "trader-0",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 87,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    },
+                    {
+                      "sequence": 88,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-0",
+                      "seller": "maker",
+                      "payer": "trader-0"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 0,
+                "event": {
+                  "sequence": 47,
+                  "order": {
+                    "actor": "trader-1",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 89,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    },
+                    {
+                      "sequence": 90,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-1",
+                      "seller": "maker",
+                      "payer": "trader-1"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 48,
+                  "order": {
+                    "actor": "trader-2",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 91,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    },
+                    {
+                      "sequence": 92,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-2",
+                      "payer": "trader-2"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 49,
+                  "order": {
+                    "actor": "trader-3",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 93,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    },
+                    {
+                      "sequence": 94,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-3",
+                      "seller": "maker",
+                      "payer": "trader-3"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 0,
+                "event": {
+                  "sequence": 50,
+                  "order": {
+                    "actor": "trader-4",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 95,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    },
+                    {
+                      "sequence": 96,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-4",
+                      "payer": "trader-4"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "momentum",
+                "signal": 1,
+                "event": {
+                  "sequence": 51,
+                  "order": {
+                    "actor": "trader-5",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "fills": [
+                    {
+                      "sequence": 97,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-5",
+                      "seller": "maker",
+                      "payer": "trader-5"
+                    },
+                    {
+                      "sequence": 98,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-5",
+                      "seller": "maker",
+                      "payer": "trader-5"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "contrarian",
+                "signal": 1,
+                "event": {
+                  "sequence": 52,
+                  "order": {
+                    "actor": "trader-6",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10008,
+                    "bid": 10006,
+                    "ask": 10010,
+                    "askUnits": 118,
+                    "bidLotsAtQuote": 201
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 99,
+                      "price": 10006,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-6",
+                      "payer": "trader-6"
+                    },
+                    {
+                      "sequence": 100,
+                      "price": 10002,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-6",
+                      "payer": "trader-6"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "noise",
+                "signal": 1,
+                "event": {
+                  "sequence": 53,
+                  "order": {
+                    "actor": "trader-7",
+                    "side": "sell",
+                    "quantity": 2,
+                    "limit": 9500
+                  },
+                  "before": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "after": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "fills": [
+                    {
+                      "sequence": 101,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    },
+                    {
+                      "sequence": 102,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "maker",
+                      "seller": "trader-7",
+                      "payer": "trader-7"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              },
+              {
+                "rule": "fundamental",
+                "signal": 1,
+                "event": {
+                  "sequence": 54,
+                  "order": {
+                    "actor": "trader-8",
+                    "side": "buy",
+                    "quantity": 2,
+                    "limit": 10500
+                  },
+                  "before": {
+                    "midpoint": 9992,
+                    "bid": 9990,
+                    "ask": 9994,
+                    "askUnits": 122,
+                    "bidLotsAtQuote": 198
+                  },
+                  "after": {
+                    "midpoint": 10000,
+                    "bid": 9998,
+                    "ask": 10002,
+                    "askUnits": 120,
+                    "bidLotsAtQuote": 200
+                  },
+                  "fills": [
+                    {
+                      "sequence": 103,
+                      "price": 9994,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    },
+                    {
+                      "sequence": 104,
+                      "price": 9998,
+                      "quantity": 1,
+                      "fee": 1,
+                      "buyer": "trader-8",
+                      "seller": "maker",
+                      "payer": "trader-8"
+                    }
+                  ],
+                  "unfilled": 0,
+                  "reason": null
+                }
+              }
+            ]
+          }
+        ],
+        "policy": {
+          "anchor": 10000,
+          "impact": 4,
+          "halfSpread": 2,
+          "fee": 1
+        },
+        "totals": {
+          "cash": 2720000,
+          "assets": 192
+        }
+      },
+      "trials": 400,
+      "summary": {
+        "meanAbsoluteError": 111.42499999999997,
+        "volume": 105.0375,
+        "drawdown": 0.004083693148242303,
+        "rootMeanSquaredReturn": 0.0018787942107585985,
+        "finalMidpoint": 9996.23
+      }
+    }
+  ]
+}
