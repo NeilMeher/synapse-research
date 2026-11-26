@@ -1,0 +1,8 @@
+{
+  "id": "morpheus-pilot-001",
+  "phase": "pilot",
+  "seed": 2026112701,
+  "trials": 60,
+  "steps": 16,
+  "budget": 4
+}

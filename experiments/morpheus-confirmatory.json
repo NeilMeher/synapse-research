@@ -1,0 +1,8 @@
+{
+  "id": "morpheus-confirmatory-001",
+  "phase": "confirmatory",
+  "seed": 2026112702,
+  "trials": 400,
+  "steps": 16,
+  "budget": 4
+}
