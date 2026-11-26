@@ -1,0 +1,33 @@
+{
+  "id": "morpheus-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "2b1adbfc1124b97c6cdbc3957b2b9221457c0ae8",
+  "inputs": {
+    "scripts/morpheus.mjs": "63a1a183625a956bbfd9a7f25788c27bf5552bfbdcee1dd1f49ece6aa4ade8b8",
+    "engine/memory.mjs": "8c587a9350a4b1b2823d5649010bb1ec0349ac7a202d1c95d1225b7c1766e4c5",
+    "engine/morpheus.mjs": "ea52ed8e92c556f1c724e61b8087f20bfd5501872fcf27a5c95fd7b1a9174074",
+    "engine/confidence.mjs": "701a3356a93523d32ac9883e33065f436e9d590f04af8b770e726c13be8a24ae",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/morpheus-pilot.json": "883280165179757acf66b8635e59bbcc90a466af924e1feae8a8fac1c3d9cc99",
+    "research/morpheus-pilot.md": "c662fb2bc6fd6e07b65ab4a3b99aec451f0e60fcfccc9ba8e4431626f5f43c44"
+  },
+  "configSha256": "f5405a9073d8b620457a47f24264a3d3a7b34f282d8c57682cb3b15fe865e0a5",
+  "output": {
+    "path": "results/morpheus-pilot.json",
+    "sha256": "ec2d4725eaec25167e4eb83bc479133e4b39cf1fecc1a3c4c2fe19d3185312c4",
+    "bytes": 340264
+  },
+  "startUtc": "2026-11-26T20:00:58.545Z",
+  "endUtc": "2026-11-26T20:00:58.750Z",
+  "runtimeMs": 203,
+  "observedRssBytes": 55910400,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

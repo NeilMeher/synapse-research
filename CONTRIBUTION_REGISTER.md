@@ -12,3 +12,5 @@
 Phase II robustness directions were requested by Neil Meher. The new protocol, numerical kernel, rational reference, study execution, audit, manuscript and interactive explorer are AI-assisted work. Human reproduction and review remain pending.
 
 MIRAGE, REFLEX and CONVERGENCE were implemented and analyzed by Codex using the Phase II directions. Their Python references are separately implemented with common authorship. No completed human validation has been recorded.
+
+Phase II forensic verification (`PHASE2_VERIFICATION.md`), GitHub publication of `v0.3.0`, and Phase III implementation of MORPHEUS and ALPHA DECAY (engines, protocols, Python references, unit tests, manuscripts, and interactive web labs) were executed by Antigravity (`antigravity@local.invalid`). Independent human peer review remains pending.

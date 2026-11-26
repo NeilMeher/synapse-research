@@ -18,14 +18,14 @@ for (const file of readdirSync(from("apps/web/"))) copies.push(["apps/web/" + fi
 for (const file of readdirSync(from("engine/"))) {
   if (["echo.mjs", "contracts.mjs", "dependence.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
 }
-for (const file of ["pilot.json", "pilot.manifest.json", "confirmatory.json", "confirmatory.manifest.json", "echo2-pilot.json", "echo2-pilot.manifest.json", "echo2-confirmatory.json", "echo2-confirmatory.manifest.json", "mirage-pilot.json", "mirage-pilot.manifest.json", "mirage-confirmatory.json", "mirage-confirmatory.manifest.json", "reflex-pilot.json", "reflex-pilot.manifest.json", "reflex-confirmatory.json", "reflex-confirmatory.manifest.json", "convergence-pilot.json", "convergence-pilot.manifest.json", "convergence-confirmatory.json", "convergence-confirmatory.manifest.json"]) {
+for (const file of ["pilot.json", "pilot.manifest.json", "confirmatory.json", "confirmatory.manifest.json", "echo2-pilot.json", "echo2-pilot.manifest.json", "echo2-confirmatory.json", "echo2-confirmatory.manifest.json", "mirage-pilot.json", "mirage-pilot.manifest.json", "mirage-confirmatory.json", "mirage-confirmatory.manifest.json", "reflex-pilot.json", "reflex-pilot.manifest.json", "reflex-confirmatory.json", "reflex-confirmatory.manifest.json", "convergence-pilot.json", "convergence-pilot.manifest.json", "convergence-confirmatory.json", "convergence-confirmatory.manifest.json", "morpheus-pilot.json", "morpheus-pilot.manifest.json", "morpheus-confirmatory.json", "morpheus-confirmatory.manifest.json", "alpha-decay-pilot.json", "alpha-decay-pilot.manifest.json", "alpha-decay-confirmatory.json", "alpha-decay-confirmatory.manifest.json"]) {
   copies.push(["results/" + file, "data/" + file], ["results/" + file, "results/" + file]);
 }
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
-for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md"]) {
+for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
 }
-for (const file of ["docs/echo-learning.md", "docs/echo2-learning.md", "docs/mirage-learning.md", "docs/reflex-learning.md", "docs/convergence-learning.md", "papers/reflex.md", "papers/convergence.md", "papers/mirage.md", "papers/echo.md", "papers/echo2.md", "LICENSE"]) copies.push([file, file]);
+for (const file of ["docs/echo-learning.md", "docs/echo2-learning.md", "docs/mirage-learning.md", "docs/reflex-learning.md", "docs/convergence-learning.md", "docs/morpheus-learning.md", "docs/alpha-decay-learning.md", "papers/reflex.md", "papers/convergence.md", "papers/mirage.md", "papers/echo.md", "papers/echo2.md", "papers/morpheus.md", "papers/alpha-decay.md", "LICENSE"]) copies.push([file, file]);
 for (const [source, target] of copies) {
   const directory = posix.dirname(target);
   mkdirSync(output(directory === "." ? "" : directory + "/"), {recursive:true});

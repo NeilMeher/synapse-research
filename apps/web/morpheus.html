@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MORPHEUS evaluates artificial memory architectures, provenance, contradictions, and behavioural continuity.">
+  <title>MORPHEUS · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./morpheus-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./index.html#map">Research map</a><a href="./mirage.html">MIRAGE</a><a href="./alpha-decay.html">ALPHA DECAY</a><a href="./library.html">Library</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">MORPHEUS · Memory and behavioural continuity</p><h1>Can provenance preserve goals under memory corruption?</h1></div>
+      <p>Compare eight memory architectures and four ablations across 400 paired synthetic histories. Step through the archived corrupted timeline, inspect source provenance, and test agent duplication.</p>
+    </div>
+    <p id="morpheus-status" role="status">Loading the archived MORPHEUS benchmark…</p>
+    <div class="study-controls result-panel">
+      <label>Regime <select id="morpheus-regime"><option value="corrupted">Corrupted</option><option value="clean">Clean</option></select></label>
+      <label>Architecture <select id="morpheus-arch"></select></label>
+      <label class="scrub">Step <input id="morpheus-step" type="range" min="0" max="15" value="0"><output id="morpheus-step-output" for="morpheus-step">0</output></label>
+      <div class="actions"><button class="quiet" type="button" id="morpheus-duplicate">Simulate clone divergence</button></div>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Confirmatory architecture comparison</h2>
+      <p id="morpheus-contrasts"></p>
+      <div class="table-scroll"><table><caption>400 paired 16-step synthetic histories (K = 4)</caption><thead><tr><th>Architecture</th><th>Ablation</th><th>Decision acc.</th><th>Goal pres.</th><th>Adaptation acc.</th><th>Recovery</th><th>Brier</th></tr></thead><tbody id="morpheus-metrics"></tbody></table></div>
+    </article>
+    <div class="study-pair study-block">
+      <article class="result-panel">
+        <h2>Decision accuracy by architecture</h2>
+        <canvas id="morpheus-chart" aria-hidden="true" class="study-chart"></canvas>
+        <p id="morpheus-clone-note" aria-live="polite"></p>
+      </article>
+      <article class="result-panel">
+        <h2>Step trace &amp; source provenance inspector</h2>
+        <p id="morpheus-step-summary" aria-live="polite"></p>
+        <div class="table-scroll"><table><caption>Ingested &amp; retrieved records through this step (click a row to inspect)</caption><thead><tr><th>ID</th><th>Topic / Kind</th><th>Value</th><th>Source</th><th>Class</th><th>t_e / t_i</th></tr></thead><tbody id="morpheus-records"></tbody></table></div>
+        <p id="morpheus-inspector" aria-live="polite"></p>
+      </article>
+    </div>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Research evidence</h2>
+      <div class="actions">
+        <a class="quiet" href="./data/morpheus-confirmatory.json">Confirmatory results</a>
+        <a class="quiet" href="./data/morpheus-confirmatory.manifest.json">Run manifest</a>
+        <a class="quiet" href="./research/morpheus-confirmatory.md">Frozen protocol</a>
+        <a class="quiet" href="./papers/morpheus.md">Manuscript</a>
+        <a class="quiet" href="./docs/morpheus-learning.md">Learning guide</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

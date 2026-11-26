@@ -1,0 +1,32 @@
+{
+  "id": "alpha-decay-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "0236fd0b47f24c735b5d78d319b01149de05948b",
+  "inputs": {
+    "scripts/alpha-decay.mjs": "9a9f881d2ec57608e97cdb13dc75a3f0e175fb4eb5a5fcab61c4b0db4802e5a0",
+    "engine/alpha-decay.mjs": "0e534597ca0ab16f8fa02bec8fde873eb392ed0839fb4a8670d303221a569185",
+    "engine/market.mjs": "3cdd04cf92c874585dc3fb9b705a6755058df43b76d847515667bc8e695e328f",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/alpha-decay-pilot.json": "c263c8a33b36c94d3f03d05b7d0498cbd32324c131c6d7ff2f5227798c275051",
+    "research/alpha-decay-pilot.md": "9019c878c421e962307021290009a695db8f5e57308413955c74bf48a5c59db7"
+  },
+  "configSha256": "3f181858c036fe0c0b2e554c225502d8f837ee52a41e686bd5432d2e1a2a410f",
+  "output": {
+    "path": "results/alpha-decay-pilot.json",
+    "sha256": "38d0d5fa831920a8fc699c8d6a8715175699bbbf106a567ee7f726b5800cc86f",
+    "bytes": 1045724
+  },
+  "startUtc": "2026-11-26T20:03:50.666Z",
+  "endUtc": "2026-11-26T20:03:50.728Z",
+  "runtimeMs": 60,
+  "observedRssBytes": 52543488,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

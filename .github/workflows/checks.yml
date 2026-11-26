@@ -38,6 +38,10 @@ jobs:
       - run: node scripts/reflex.mjs verify
       - run: python scripts/reference_convergence.py
       - run: node scripts/convergence.mjs verify
+      - run: python scripts/reference_morpheus.py
+      - run: node scripts/morpheus.mjs verify
+      - run: python scripts/reference_alpha_decay.py
+      - run: node scripts/alpha-decay.mjs verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ALPHA DECAY investigates endogenous strategy crowding and capacity in the REFLEX maker market.">
+  <title>ALPHA DECAY · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./alpha-decay-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./index.html#map">Research map</a><a href="./reflex.html">REFLEX</a><a href="./morpheus.html">MORPHEUS</a><a href="./library.html">Library</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">ALPHA DECAY · Strategy crowding &amp; capacity</p><h1>When does crowding erase a strategy's edge?</h1></div>
+      <p>Compare adoption levels and capital concentration under matched total market capital and the zero-impact control in the deterministic REFLEX maker market.</p>
+    </div>
+    <p id="alpha-status" role="status">Loading the archived ALPHA DECAY experiment…</p>
+    <div class="study-controls result-panel">
+      <label>Scenario arm <select id="alpha-arm"></select></label>
+      <label class="scrub">Round in episode <input id="alpha-round" type="range" min="1" max="8" value="1"><output id="alpha-round-output" for="alpha-round">1</output></label>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Adoption-versus-alpha comparison</h2>
+      <p id="alpha-contrasts"></p>
+      <canvas id="alpha-chart" aria-hidden="true" class="study-chart"></canvas>
+      <div class="table-scroll"><table><caption>300 paired 8-round synthetic episodes (alpha = adopter net return − non-adopter benchmark)</caption><thead><tr><th>Arm</th><th>Adopters</th><th>Impact</th><th>Gross ret.</th><th>Net ret.</th><th>Alpha</th><th>Price dev.</th><th>Sharpe-like</th></tr></thead><tbody id="alpha-table"></tbody></table></div>
+    </article>
+    <article class="result-panel study-block">
+      <h2>Episode replay &amp; execution</h2>
+      <p id="alpha-round-summary" aria-live="polite"></p>
+      <div class="table-scroll"><table><caption>Orders in selected round</caption><thead><tr><th>Trader</th><th>Strategy</th><th>Side</th><th>Requested</th><th>Filled</th><th>Midpoint after</th></tr></thead><tbody id="alpha-trades"></tbody></table></div>
+    </article>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Research evidence</h2>
+      <div class="actions">
+        <a class="quiet" href="./data/alpha-decay-confirmatory.json">Confirmatory results</a>
+        <a class="quiet" href="./data/alpha-decay-confirmatory.manifest.json">Run manifest</a>
+        <a class="quiet" href="./research/alpha-decay-confirmatory.md">Frozen protocol</a>
+        <a class="quiet" href="./papers/alpha-decay.md">Manuscript</a>
+        <a class="quiet" href="./docs/alpha-decay-learning.md">Learning guide</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
