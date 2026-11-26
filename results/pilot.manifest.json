@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "experimentId": "echo-pilot-001",
+  "laboratoryId": "echo",
+  "researchQuestionId": "echo-communication-01",
+  "hypotheses": [
+    "H1",
+    "H2",
+    "H3"
+  ],
+  "protocol": "echo-pilot-v1",
+  "modelVersion": "echo-mixture-v1",
+  "evidenceClass": "synthetic simulation",
+  "status": "completed",
+  "codeCommit": "801a45985192af239c1db9a3935f3e17b2d12a7b",
+  "configurationSha256": "ee30f70090a6484d23eb509766a711cfa9e9b24c379acdca03f583c07e240865",
+  "inputSha256": {
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "engine/experiment.mjs": "aad911c7cf55135526e7fccf52beb941561b0e12297186aba70931c3cfc34c44",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/experiment.mjs": "b0dd2d1c7a41294e16a9db4dbdca2dc83c750db0e2c744d6440f1d210c116450",
+    "schemas/experiment-v1.json": "61ca0a64ff52d2098a589800c436ff4cc9efd788b68a5121fcb5ef267605e1c2",
+    "experiments/pilot.json": "a1fbd5fce0f0d9102ed5619cae9b5958ec3754d0594335e634e3ce5c4e8668c8",
+    "research/echo-protocol-pilot.md": "4fb4e3c1a76ca983e183e909562df70dd69d1f13596b740f8b7130e751f2615c"
+  },
+  "random": {
+    "algorithm": "Mulberry32",
+    "seed": 20261126,
+    "independentUnit": "one synthetic task"
+  },
+  "externalDatasets": [],
+  "startUtc": "2026-11-26T18:36:01.276Z",
+  "endUtc": "2026-11-26T18:36:01.422Z",
+  "runtimeMilliseconds": 144.12,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.26200"
+  },
+  "observedRssBytes": 52150272,
+  "outputs": [
+    {
+      "path": "results/pilot.json",
+      "sha256": "33bb8fd0e3a2985079c0f94ae325b75fedd28ebe912900c86b6b517599df21e5",
+      "bytes": 78940
+    }
+  ]
+}
