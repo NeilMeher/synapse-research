@@ -1,0 +1,35 @@
+{
+  "id": "convergence-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "da04837a7615a6caad5383555d65e5f3a0888758",
+  "inputs": {
+    "scripts/convergence.mjs": "e181fd2fa032a8124af66a832af7e2f16634c9e067a64d78d8e183805333b1ed",
+    "engine/convergence.mjs": "ed2b7914559fce0d9013cf0f0b364b211f8bec767ddca2ba76bcc533b6f4600f",
+    "engine/confidence.mjs": "701a3356a93523d32ac9883e33065f436e9d590f04af8b770e726c13be8a24ae",
+    "engine/dependence.mjs": "b9b5d359a4ef596cc0ac1889d5fb087d733573262717ed931dc3b86c3050cebf",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/market.mjs": "3cdd04cf92c874585dc3fb9b705a6755058df43b76d847515667bc8e695e328f",
+    "engine/reflex.mjs": "de9ea9126c111e4388585827ff9e1f25716921969449c63ada701e98477d13ee",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/convergence-pilot.json": "0f1e7e50625e5cbb6e65a146e849a763af2ee5230c1c75b9815f22eae244ad10",
+    "research/convergence-pilot.md": "1c4e3aabc2dbca2c3baac3a721bea37da31bee9b6b5e4f35c15e50befff1bd85"
+  },
+  "configSha256": "114c75d004aa1e02aa2c663f972fe867e9115e9321f968e070aad4f9ff2b0403",
+  "output": {
+    "path": "results/convergence-pilot.json",
+    "sha256": "cf4318de9405bc0550dfa86ffec8a3dfade1c8961f90426f47e2ca027f4ca49f",
+    "bytes": 710600
+  },
+  "startUtc": "2026-11-26T19:28:25.480Z",
+  "endUtc": "2026-11-26T19:28:25.544Z",
+  "runtimeMs": 62,
+  "observedRssBytes": 53112832,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}
