@@ -1,0 +1,16 @@
+# ECHO literature and novelty comparison
+
+Preliminary focused search of primary papers covering constant-weight consensus, bounded confidence, informational cascades, correlation and group accuracy, social influence and structured networks. This review supports a controlled computational comparison and an educational replay with shared provenance. Priority or scientific novelty remains unresolved.
+
+| Source | Question, method and data | Evaluation and limitation for ECHO | Relation and potential incremental contribution |
+|---|---|---|---|
+| [DeGroot, 1974](https://doi.org/10.1080/01621459.1974.10480137) | Mathematical pooling of subjective distributions with fixed weights | Convergence and consensus weighting in an abstract model | ECHO adds a binary truth process and compares scoring under a controlled shared source. |
+| [Hegselmann and Krause, 2002](https://www.jasss.org/5/3/2.html) | Bounded-confidence models and numerical opinion trajectories | Fragmentation and consensus depend on cutoff and initial opinions | ECHO implements synchronous confidence filtering for a binary evidence fixture and exposes individual replay. |
+| [Golub and Jackson, 2010](https://pubs.aeaweb.org/doi/10.1257/mic.2.1.112) | Naïve network learning with independent noisy signals | Large-population consistency depends on vanishing maximum influence under their assumptions | ECHO uses finite controlled networks, correlated correctness and an explicit verification intervention. |
+| [Bikhchandani, Hirshleifer and Welch, 1992](https://www.journals.uchicago.edu/doi/10.1086/261849) | Sequential Bayesian observation of choices and private information | Formal informational cascades arise under distinct action-observation assumptions | ECHO's simultaneous averaging differs from the sequential cascade mechanism. |
+| [Ladha, 1992](https://doi.org/10.2307/2111584) | Condorcet voting with dependent votes | Analytical relevance of covariance and joint dependence | ECHO gives one specified joint model and exact finite-size reference. Correlated voting is established prior work. |
+| [Lorenz et al., 2011](https://doi.org/10.1073/pnas.1008636108) | Human estimation experiments under controlled social influence | Accuracy, diversity and confidence on factual estimates | ECHO can isolate correlation mechanistically, with no human evidence. |
+| [Kao et al., 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4043084/) | Binary collective judgments using distinct cue correlations in a theoretical model | Decision accuracy varies with cue dependence and group size | Strong overlap on shared evidence. ECHO compares matched finite trajectories and a verification budget. |
+| [Kao and Couzin, 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6553586/) | Group modularity, information loss and accuracy under structured cues | Topology can improve accuracy under modeled conditions | Useful comparison against equal mean preservation and hub influence in ECHO's particular vote rule. |
+
+Comparable open-source and benchmark search is preliminary. The Hegselmann–Krause article supplies model descriptions and simulation material. The portfolio audit identifies nearby local work. No code or data from the papers or portfolio is incorporated. An independently assessed novelty search remains open.

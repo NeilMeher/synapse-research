@@ -1,0 +1,396 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SYNAPSE ECHO v1 research artifacts",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/config"
+    },
+    {
+      "$ref": "#/$defs/manifest"
+    },
+    {
+      "$ref": "#/$defs/result"
+    }
+  ],
+  "$defs": {
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agents",
+        "reliability",
+        "correlation",
+        "rounds",
+        "radius",
+        "hubWeight",
+        "verified",
+        "seed",
+        "topology",
+        "method"
+      ],
+      "properties": {
+        "agents": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 41
+        },
+        "reliability": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 0.99
+        },
+        "correlation": {
+          "$ref": "#/$defs/probability"
+        },
+        "rounds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50
+        },
+        "radius": {
+          "$ref": "#/$defs/probability"
+        },
+        "hubWeight": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 0.95
+        },
+        "verified": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 41
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967295
+        },
+        "topology": {
+          "enum": [
+            "complete",
+            "ring",
+            "hub"
+          ]
+        },
+        "method": {
+          "enum": [
+            "degroot",
+            "bounded"
+          ]
+        }
+      }
+    },
+    "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "experimentId",
+        "protocol",
+        "mode",
+        "trials",
+        "correlations",
+        "scenario"
+      ],
+      "properties": {
+        "experimentId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{2,60}$"
+        },
+        "protocol": {
+          "type": "string",
+          "pattern": "^echo-(pilot|confirmatory)-v[1-9][0-9]*$"
+        },
+        "mode": {
+          "enum": [
+            "pilot",
+            "confirmatory"
+          ]
+        },
+        "trials": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 100000
+        },
+        "correlations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/probability"
+          },
+          "uniqueItems": true,
+          "minItems": 2,
+          "maxItems": 21
+        },
+        "scenario": {
+          "$ref": "#/$defs/scenario"
+        }
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "experimentId",
+        "laboratoryId",
+        "researchQuestionId",
+        "hypotheses",
+        "protocol",
+        "modelVersion",
+        "codeCommit",
+        "status",
+        "evidenceClass",
+        "configurationSha256",
+        "inputSha256",
+        "random",
+        "externalDatasets",
+        "startUtc",
+        "endUtc",
+        "runtimeMilliseconds",
+        "environment",
+        "outputs"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "status": {
+          "const": "completed"
+        },
+        "codeCommit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "evidenceClass": {
+          "const": "synthetic simulation"
+        },
+        "configurationSha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "inputSha256": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/digest"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "$ref": "#/$defs/digest"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "required": [
+        "metric",
+        "policy",
+        "trials",
+        "estimate",
+        "sd",
+        "interval"
+      ],
+      "properties": {
+        "metric": {
+          "enum": [
+            "accuracy",
+            "brier"
+          ]
+        },
+        "policy": {
+          "type": "string"
+        },
+        "trials": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "estimate": {
+          "$ref": "#/$defs/probability"
+        },
+        "sd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "interval": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "#/$defs/probability"
+          }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "sequence",
+        "simulationTime",
+        "type",
+        "beliefs",
+        "average",
+        "decision",
+        "dispersion"
+      ],
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "simulationTime": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "type": {
+          "enum": [
+            "initial",
+            "update"
+          ]
+        },
+        "beliefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/probability"
+          }
+        },
+        "average": {
+          "$ref": "#/$defs/probability"
+        },
+        "decision": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "dispersion": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "evidenceClass",
+        "config",
+        "conditions",
+        "contrasts",
+        "replays"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "evidenceClass": {
+          "const": "synthetic simulation"
+        },
+        "config": {
+          "$ref": "#/$defs/config"
+        },
+        "conditions": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "correlation",
+              "exactMajorityAccuracy",
+              "metrics"
+            ],
+            "properties": {
+              "correlation": {
+                "$ref": "#/$defs/probability"
+              },
+              "exactMajorityAccuracy": {
+                "$ref": "#/$defs/probability"
+              },
+              "metrics": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/metric"
+                }
+              }
+            }
+          }
+        },
+        "contrasts": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "definition",
+              "trials",
+              "estimate",
+              "sd",
+              "interval",
+              "confidenceLevel"
+            ]
+          }
+        },
+        "replays": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "label",
+              "settings",
+              "task",
+              "weights",
+              "reports",
+              "frames",
+              "posterior"
+            ],
+            "properties": {
+              "settings": {
+                "$ref": "#/$defs/scenario"
+              },
+              "frames": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/event"
+                }
+              },
+              "posterior": {
+                "$ref": "#/$defs/probability"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

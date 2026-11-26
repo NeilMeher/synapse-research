@@ -1,0 +1,16 @@
+{
+  "name": "synapse-research",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.12.0", "npm": "11.6.2" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "reference": "python scripts/reference.py",
+    "pilot": "node scripts/experiment.mjs pilot",
+    "experiment": "node scripts/experiment.mjs confirmatory",
+    "verify": "node scripts/experiment.mjs verify",
+    "build": "node scripts/build.mjs",
+    "preview": "python -m http.server 4181 --bind 127.0.0.1 --directory dist"
+  }
+}
