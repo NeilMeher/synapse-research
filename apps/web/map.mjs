@@ -79,7 +79,7 @@ export function setupMap() {
     listNodes.set(lab.id, row);
   }
 
-  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : "Proposed";
+  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : lab.id === "mirage" ? "MIRAGE v0.1 · Experiments executed" : "Proposed";
   function renderDetail() {
     const {division: id, name, question, links} = selected;
     detail.tabIndex = -1;
@@ -104,6 +104,11 @@ export function setupMap() {
       const follow = node("a", "Compare matched dependence", "map-study");
       follow.href = "#robustness";
       detail.append(open, follow);
+    }
+    if (selected.id === "mirage") {
+      const open = node("a", "Open the MIRAGE lab ↗", "primary");
+      open.href = "./mirage.html";
+      detail.append(open);
     }
     detail.append(node("p", "Connected laboratories"), related);
   }

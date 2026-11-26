@@ -32,6 +32,8 @@ jobs:
       - run: npm run verify
       - run: python scripts/reference_echo2.py
       - run: node scripts/echo2.mjs verify
+      - run: python scripts/reference_mirage.py
+      - run: node scripts/mirage.mjs verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

@@ -1,0 +1,32 @@
+{
+  "id": "mirage-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "8e2789d306666e2f41a98833b3f3617728462bfa",
+  "inputs": {
+    "scripts/mirage.mjs": "239bfcdae096148d2eb074e97a76adf7f1ac7f2f1e294a0903b8a65edea51454",
+    "engine/confidence.mjs": "701a3356a93523d32ac9883e33065f436e9d590f04af8b770e726c13be8a24ae",
+    "engine/mirage.mjs": "6e4c3604e3470d3643aa9224bd8032ce6a20ddfe61c01fb8ecaaf0805feb4f0c",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/mirage-confirmatory.json": "44d8db23ffad6931c1978e3c292927399467775295aaf05d8f1cfae342dd94d3",
+    "research/mirage-confirmatory.md": "62e3fab4a8378b1fdbd6b08fc015a0c402b9e8f5c6be212edbaa5f22b7d26d7e"
+  },
+  "configSha256": "84ae1f258bd543b6eea4463e8990e46d17b66e1607a76adee38219e4875de637",
+  "output": {
+    "path": "results/mirage-confirmatory.json",
+    "sha256": "8de5b73fa59c6cad163bfd28b6b7500564e35cee36d23dda4714cb0ef6f9df01",
+    "bytes": 35571
+  },
+  "startUtc": "2026-11-26T19:19:15.278Z",
+  "endUtc": "2026-11-26T19:19:15.342Z",
+  "runtimeMs": 62,
+  "observedRssBytes": 70483968,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

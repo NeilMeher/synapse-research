@@ -1,0 +1,10 @@
+ .study-page { padding-block:clamp(40px,7vw,94px); }
+.study-page h1 { font-size:clamp(2.8rem,5.8vw,6.2rem); }
+.study-page h2 { font:400 clamp(1.3rem,2.4vw,2.1rem)/1.2 Georgia,serif; letter-spacing:-.02em; }
+.study-controls { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; }
+.study-block { margin-top:1rem; min-width:0; }
+.study-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.study-pair > * { min-width:0; }
+.study-chart { display:block; width:100%; height:250px; }
+#mirage-status,#reflex-status,#convergence-status { color:var(--dim); }
+@media(max-width:650px){ .study-pair { grid-template-columns:minmax(0,1fr); } .study-chart { height:210px; } }

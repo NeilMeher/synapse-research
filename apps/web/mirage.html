@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MIRAGE measures confidence in identical decisions under controlled synthetic cue shifts.">
+  <title>MIRAGE · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./mirage-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./index.html#map">Research map</a><a href="./index.html#robustness">ECHO</a><a href="#evidence">Evidence</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">MIRAGE · Functional metacognition</p><h1>Can confidence tell you when an answer is wrong?</h1></div>
+      <p>Five policies assign confidence to the same answers. Switch to misleading hints to see how calibration and error detection change while decision accuracy stays fixed.</p>
+    </div>
+    <p id="mirage-status" role="status">Loading the archived synthetic benchmark…</p>
+    <div class="study-controls result-panel">
+      <label>Hint regime <select id="mirage-regime"><option value="normal">Normal hints</option><option value="misleading">Misleading hints</option></select></label>
+      <label>Forecast to plot <select id="mirage-policy"></select></label>
+      <label>Archived task <select id="mirage-example"></select></label>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Benchmark scores</h2>
+      <p>Confidence is the probability the selected answer is correct. Lower Brier, log loss and calibration error are better. Error AUROC is the chance that a random error receives lower confidence than a random correct answer, with ties receiving half credit.</p>
+      <div class="table-scroll"><table><caption>Held-out synthetic tasks at the selected regime</caption><thead><tr><th>Policy</th><th>Accuracy</th><th>Brier</th><th>Log loss</th><th>Calibration error</th><th>Error AUROC</th></tr></thead><tbody id="mirage-metrics"></tbody></table></div>
+      <p id="mirage-contrast"></p>
+    </article>
+    <div class="study-pair study-block">
+      <article class="result-panel">
+        <h2>Reliability</h2><p>Observed accuracy versus mean forecast in each occupied confidence bin.</p>
+        <canvas id="mirage-reliability" aria-hidden="true" class="study-chart"></canvas>
+        <details><summary>Read occupied bins</summary><div class="table-scroll"><table><caption>Confidence bins for the selected policy</caption><thead><tr><th>Tasks</th><th>Mean forecast</th><th>Observed accuracy</th></tr></thead><tbody id="mirage-bins"></tbody></table></div></details>
+      </article>
+      <article class="result-panel">
+        <h2>Selective prediction</h2><p>Retain the most confident answers first. Risk is the error rate among the retained answers.</p>
+        <canvas id="mirage-risk" aria-hidden="true" class="study-chart"></canvas>
+        <details><summary>Read risk by coverage</summary><div class="table-scroll"><table><caption>Coverage and expected retained error</caption><thead><tr><th>Coverage</th><th>Risk</th></tr></thead><tbody id="mirage-risk-table"></tbody></table></div></details>
+      </article>
+    </div>
+    <article class="result-panel study-block">
+      <h2>Inspect one task</h2>
+      <p id="mirage-task" aria-live="polite"></p>
+      <div class="table-scroll"><table><caption>Probabilities for the identical first-order answer</caption><thead><tr><th>Policy</th><th>Probability answer is correct</th></tr></thead><tbody id="mirage-probs"></tbody></table></div>
+    </article>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Research evidence</h2>
+      <p>The oracle knows the cue reliabilities. The trained policy has seen normal hints during training. The style baseline generates confidence independently of the observed cues.</p>
+      <div class="actions">
+        <a class="quiet" href="./data/mirage-confirmatory.json">Confirmatory results</a>
+        <a class="quiet" href="./data/mirage-confirmatory.manifest.json">Run manifest</a>
+        <a class="quiet" href="./research/mirage-confirmatory.md">Frozen protocol</a>
+        <a class="quiet" href="./papers/mirage.md">Manuscript</a>
+        <a class="quiet" href="./docs/mirage-learning.md">Learning guide</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
