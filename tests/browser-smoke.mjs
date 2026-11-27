@@ -49,6 +49,7 @@ try {
       const screenshot = fileURLToPath(new URL("home-" + width + ".png", screenshots));
       await page.keyboard.press("Tab");
       await page.locator(".brand").first().blur();
+      if(width===1440)assert.ok((await page.locator("#map-view").boundingBox()).y<600,"The graph should be visible on the first screen.");
       await page.screenshot({path: screenshot});
       let labChoice;
       if (width > 650) {
