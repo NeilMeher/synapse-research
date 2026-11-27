@@ -1,0 +1,6 @@
+{"id":"scientia-pilot-001","phase":"pilot","seed":712202611,"trials":400,"cells":[
+  {"id":"null-n32","hypotheses":20,"n":32,"signals":0,"alpha":0.05,"effect":0.45,"rho":0},
+  {"id":"mixed-n32","hypotheses":20,"n":32,"signals":4,"alpha":0.05,"effect":0.45,"rho":0},
+  {"id":"mixed-n64","hypotheses":20,"n":64,"signals":4,"alpha":0.05,"effect":0.45,"rho":0},
+  {"id":"null-correlated","hypotheses":20,"n":32,"signals":0,"alpha":0.05,"effect":0.45,"rho":0.3}
+]}

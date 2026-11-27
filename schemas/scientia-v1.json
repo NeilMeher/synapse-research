@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCIENTIA v1 experiment",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "cells"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "scientia-v1"
+    },
+    "modelVersion": {
+      "const": "scientia-normal-workflows-v1"
+    },
+    "evidenceClass": {
+      "const": "synthetic simulation"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "seed",
+        "trials",
+        "cells"
+      ]
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "design",
+          "reference",
+          "replay",
+          "contrast",
+          "policies"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# SCIENTIA exploratory pilot
+
+Compare eight deterministic research policies on 400 paired synthetic programmes per cell. New seed 712202611. The per-hypothesis measurement budget n is even. Every procedure receives access to the same two n/2 blocks, so all cells allocate exactly 20n scalar observations per programme. The primary-only procedure ignores all hypotheses except index 0. True effects are assigned by permutation before observations, independently of the fixed primary index.
+
+Our study uses independent all-null, independent four-signal and correlated all-null regimes. Each z-statistic is for a known-variance Gaussian mean. Correlated cases use a shared Gaussian block factor. All comparisons use two-sided tests at .05, including BH for a common nominal threshold. BH guarantees are interpreted under independent true-null p-values. The correlated cell is descriptive. Compare the observed independent all-null FWER to the theoretical binomial complement. Budget-matched split validation takes one best first-block candidate and confirms it at the same alpha and sign in the disjoint block. The independent replication arm applies a Bonferroni requirement in both blocks and requires agreement of signs.
+
+Explore variance of programme-level paired FWER and FDP differences, effect-estimate coverage and power tradeoffs. Coverage and bias condition on reporting within a programme. FDP is zero for empty reports. Use the observed variability only to size the untouched confirmatory stage.
