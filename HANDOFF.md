@@ -48,7 +48,7 @@ Antigravity recovered the local Phase II workspace where `codex/phase2-integrati
 
 ---
 
-## 5. Exact Continuation Instructions for Codex
+## 5. Historical Phase III continuation instructions
 
 1. Verify clean state: `git status`, `npm test`, `npm run verify`, `node scripts/morpheus.mjs verify`, `node scripts/alpha-decay.mjs verify`, `npm run build`.
 2. Trigger GitHub Actions `workflow_dispatch` (`deploy_pages: true`) via GitHub UI or `gh workflow run` to update `https://neilmeher.github.io/synapse-research/`.
@@ -65,3 +65,9 @@ Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://gi
 The recovered input snapshot is archived at 7670acf on [wip/phase4-recovered-archive](https://github.com/NeilMeher/synapse-research/tree/wip/phase4-recovered-archive). Phase III is tagged v0.3.1. NOESIS v0.4.0 is available on Pages from 4dba5a1 through [run 45956303714](https://github.com/NeilMeher/synapse-research/actions/runs/45956303714). Both original NOESIS result hashes were verified against public assets.
 
 The standalone SCIENTIA implementation, frozen studies and lab are on codex/phase4-recovery. Run both commands in REPRODUCIBILITY.md. Its archived approximation changes one audited BH decision relative to erfc. The results and pre-run protocol are immutable. Follow the scientific gates documented for each new study. No independent human review has been completed.
+
+## Phase IV public continuation
+
+SCIENTIA v0.4.1 was built from b232fd3 by [Pages workflow 45958470019](https://github.com/NeilMeher/synapse-research/actions/runs/45958470019). The public release.json showed that exact revision. EPISTEME's independently reconstructed pilot and confirmation are archived in results. Its confirmatory design was frozen at b2a193d before execution. The Phase IV final release adds EPISTEME, the registry-backed atlas and Mathematical Academy.
+
+Use the Pages release metadata and GitHub Actions to confirm deployed revision and verified jobs. For scientific continuation, begin AXIOM with a small game-theoretic consistency benchmark using equivalent payoff structures and explicit utility assumptions. See ROADMAP.md for dependencies. Human review of the protocol and manuscripts remains pending.

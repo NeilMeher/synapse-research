@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: Cite this software and the specific ECHO experiment manifest used.
+message: Cite this software and the manifest for the specific study run used.
 title: "SYNAPSE: Computational Intelligence and Complex Systems"
 type: software
-version: "0.4.1"
+version: "0.5.0"
 authors:
   - name: SYNAPSE contributors
 license: MIT

@@ -14,3 +14,7 @@ Phase II robustness directions were requested by Neil Meher. The new protocol, n
 MIRAGE, REFLEX and CONVERGENCE were implemented and analyzed by Codex using the Phase II directions. Their Python references are separately implemented with common authorship. No completed human validation has been recorded.
 
 Phase II forensic verification (`PHASE2_VERIFICATION.md`), GitHub publication of `v0.3.0`, and Phase III implementation of MORPHEUS and ALPHA DECAY (engines, protocols, Python references, unit tests, manuscripts, and interactive web labs) were executed by Antigravity (`antigravity@local.invalid`). Independent human peer review remains pending.
+
+## Phase IV recovery and implementation
+
+The research programme, requested design and authorization were supplied by Neil Meher. Antigravity implemented the original NOESIS package and drafted SCIENTIA notes. Its exact recovered files remain visible in the snapshot at 7670acf. Codex carried out recovery, the Phase III publishing repair, independent NOESIS reconstruction and scientific corrections, and implemented SCIENTIA, EPISTEME, the atlas and Academy under the supplied brief. Reference implementations and review checks are AI-assisted computational verification. No independent human or peer review is recorded.

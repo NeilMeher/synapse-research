@@ -1,0 +1,26 @@
+"""Check the registered JSON Schema contracts and matching archives."""
+import json
+from pathlib import Path
+
+from jsonschema import Draft202012Validator
+
+ROOT = Path(__file__).resolve().parents[1]
+FAMILIES = {
+    "experiment-v1": tuple(f"{directory}/{phase}{suffix}.json"
+                           for phase in ("pilot", "confirmatory")
+                           for directory, suffix in (("experiments", ""), ("results", ""), ("results", ".manifest"))),
+    "echo-dependence-v1": ("results/echo2-pilot.json", "results/echo2-confirmatory.json"),
+    "scientia-v1": ("results/scientia-pilot.json", "results/scientia-confirmatory.json"),
+    "episteme-v1": ("results/episteme-pilot.json", "results/episteme-confirmatory.json"),
+}
+
+for name, paths in FAMILIES.items():
+    schema = json.loads((ROOT / "schemas" / f"{name}.json").read_bytes())
+    Draft202012Validator.check_schema(schema)
+    validator = Draft202012Validator(schema)
+    for path in paths:
+        validation_error = next(validator.iter_errors(json.loads((ROOT / path).read_bytes())), None)
+        if validation_error:
+            location = "/".join(map(str, validation_error.absolute_path))
+            raise ValueError(f"{path} at /{location}: {validation_error.message}")
+        print(f"{name} verified {path}")

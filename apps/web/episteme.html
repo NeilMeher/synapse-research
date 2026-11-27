@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPISTEME · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./episteme-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Study navigation"><a href="./noesis.html">NOESIS</a><a href="./scientia.html">SCIENTIA</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro"><div><p class="eyebrow">EPISTEME · Discovery and validation</p><h1>Will the leading explanation survive?</h1></div>
+      <p>Follow an archived hidden-law task from adaptive measurement to a frozen prediction and two independent checks.</p></div>
+    <p id="episteme-status" role="status">Loading the archived synthetic study…</p>
+    <article class="result-panel study-block" id="replay">
+      <h2>Inquiry replay</h2>
+      <div class="study-controls">
+        <label>Hidden-law regime <select id="episteme-case"><option value="0">In the candidate library</option><option value="1">Outside the candidate library</option></select></label>
+        <label>Measurement policy <select id="episteme-policy"><option value="random">Random without replacement</option><option value="disagreement">Predictive-mean disagreement</option></select></label>
+        <label>Replay example <select id="episteme-example"><option value="first">First archived task</option><option value="accepted">First accepted claim</option><option value="rejected">First rejected claim</option><option value="unresolved">First unresolved task</option></select></label>
+        <label class="scrub">Inquiry stage <input id="episteme-stage" type="range" min="1" max="8" value="1"><output id="episteme-stage-label" for="episteme-stage"></output></label>
+      </div>
+      <p id="episteme-task"></p>
+      <p id="episteme-decision" aria-live="polite"></p>
+      <div class="study-pair">
+        <div class="table-scroll"><table><caption>Discovery measurements and leading family</caption>
+          <thead><tr><th>Input</th><th>Observation</th><th>Leader</th><th>Weight</th></tr></thead><tbody id="episteme-observations"></tbody></table></div>
+        <div class="table-scroll"><table><caption>Posterior weights at the visible stage</caption>
+          <thead><tr><th>Candidate family</th><th>Weight</th></tr></thead><tbody id="episteme-weights"></tbody></table></div>
+      </div>
+    </article>
+    <article class="result-panel study-block" id="checks">
+      <h2>Independent measurements</h2>
+      <p>Six discovery measurements fix the fitted predictor. Four reserved measurements check validation, and four further points check replication. Each block is measured even if an earlier decision stops the claim.</p>
+      <p id="episteme-gates" aria-live="polite"></p>
+      <div class="table-scroll"><table><caption>Disjoint holdout measurements and frozen mean predictions</caption>
+        <thead><tr><th>Block</th><th>Input</th><th>Observation</th><th>Prediction</th><th>Residual</th></tr></thead><tbody id="episteme-blocks"></tbody></table></div>
+      <div class="actions"><button class="quiet" type="button" id="episteme-reveal" disabled>Reveal simulated truth</button></div>
+      <p id="episteme-truth" aria-live="polite"></p>
+    </article>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Archived outcomes</h2>
+      <p id="episteme-contrast"></p>
+      <div class="table-scroll"><table><caption>Paired synthetic tasks in the selected regime</caption>
+        <thead><tr><th>Policy</th><th>Correct proposal</th><th>False proposal</th><th>Correct final claim</th><th>False final claim</th><th>No accepted claim</th><th>Prediction RMSE</th></tr></thead><tbody id="episteme-results"></tbody></table></div>
+      <p>Candidate probabilities sum to one over the four available families. The residual tests ask whether a fixed predictor matches disjoint observations under known Gaussian noise. Passing both screens leaves the candidate provisionally accepted in this workflow.</p>
+      <div class="actions"><a class="quiet" href="./data/episteme-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/episteme-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/episteme-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/episteme.md">Manuscript</a><a class="quiet" href="./docs/episteme-learning.md">Learning guide</a></div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathematical Academy · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./academy.css">
+  <script type="module" src="./academy.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Academy navigation"><a href="./index.html#map">Research atlas</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><h1>Mathematical Academy</h1></div>
+      <p>Learn the mathematics used in the SYNAPSE experiments through worked derivations, live calculations and practice.</p>
+    </div>
+    <nav class="academy-nav" aria-label="Modules"><ol>
+      <li><a href="#dependence">Probability and dependence</a></li>
+      <li><a href="#calibration">Bayes and calibration</a></li>
+      <li><a href="#accounting">Market accounting</a></li>
+      <li><a href="#discovery">Model selection and information</a></li>
+      <li><a href="#testing">Tests and false discovery</a></li>
+    </ol></nav>
+
+    <article class="result-panel study-block lesson" id="dependence">
+      <h2>Probability, correlation and higher-order dependence</h2>
+      <p><strong>Prerequisites</strong> Fractions, averages and the idea of an event.</p>
+      <h3>Beginner · Individual accuracy and collective accuracy</h3>
+      <p>If a voter is right with probability q, a panel of three independent voters is right by majority when exactly two or all three are correct. For q=0.65, its accuracy is 3(0.65²)(0.35)+0.65³=0.71825. If the three always share the same report the panel accuracy is 0.65.</p>
+      <h3>Intermediate · Moments of the count</h3>
+      <p>Write Xᵢ=1 for a correct report and let K=∑Xᵢ. Under exchangeability, q=E[Xᵢ]=E[K]/n. Expand K(K−1) into a sum over ordered pairs. There are n(n−1) terms, each with expectation E[XᵢXⱼ]. Thus E[XᵢXⱼ]=E[K(K−1)]/[n(n−1)] and ρ=(E[XᵢXⱼ]−q²)/[q(1−q)]. Many count distributions share these two moments. Majority accuracy sums the mass where K&gt;n/2.</p>
+      <div class="lesson-demo">
+        <h3>Compare two joint distributions</h3>
+        <div class="study-controls">
+          <label>Reports <input id="academy-agents" type="range" min="3" max="21" step="2" value="7"></label>
+          <label>Pairwise correlation <input id="academy-rho" type="range" min="0" max="1" step="0.05" value="0.30"></label>
+        </div>
+        <p id="academy-dependence" aria-live="polite"></p>
+        <div class="table-scroll"><table><caption>Exact probability by number of correct reports, with q = 0.65</caption>
+          <thead><tr><th>Correct reports</th><th>Shared shock</th><th>Beta mixture</th></tr></thead><tbody id="academy-counts"></tbody></table></div>
+      </div>
+      <details><summary>Advanced · Triple agreement</summary><p>Three pairwise-independent fair bits can share a parity constraint. Let X₃ be the exclusive-or of independent fair X₁ and X₂. The four equally likely outcomes are 000, 011, 101 and 110. Each pair has the same joint law as independent fair bits. Majority one occurs with probability 3/4, versus 1/2 for three mutually independent fair bits.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Change q in the independent three-voter example to 0.8. What fraction of majorities are right? When all three copy one report, what fraction are right?</p><p>Exactly two correct contributes 3(0.8²)(0.2)=0.384. Three correct contributes 0.8³=0.512. The independent total is 0.896. Under copying all voters are correct together with probability 0.8.</p></details>
+      <p><a href="./index.html#robustness">ECHO 2.0 laboratory</a> · <a href="./docs/echo2-learning.md">ECHO dependence guide</a> · <a href="https://doi.org/10.1080/01621459.1974.10480137">DeGroot, Reaching a Consensus</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="calibration">
+      <h2>Bayesian inference and confidence calibration</h2>
+      <p><strong>Prerequisites</strong> Conditional probability and percentages.</p>
+      <h3>Beginner · An agreement changes confidence</h3>
+      <p>Your answer is right with prior probability a. An independent hint is right with probability h under the symmetric binary evidence model. If the hint agrees, the two mechanisms for agreement are both right or both wrong. Their probabilities are ah and (1−a)(1−h). Dividing the both-right term by their sum gives the probability that your answer is correct.</p>
+      <h3>Intermediate · Update odds and score the forecast</h3>
+      <p>Bayes' rule gives posterior odds = prior odds × likelihood ratio. With a=0.60 and h=0.75, agreement multiplies the prior odds 1.5 by 3, yielding 4.5/(1+4.5)=0.8182. On disagreement the ratio is 1/3, yielding 0.5/(1+0.5)=0.3333. Calibration asks whether events forecast at p occur a fraction p of the time. The binary Brier score averages (p−y)² for outcomes y∈{0,1}.</p>
+      <div class="lesson-demo">
+        <h3>Update and score a probability</h3>
+        <div class="study-controls">
+          <label>Answer reliability <input id="academy-prior" type="range" min="0.05" max="0.95" step="0.05" value="0.60"></label>
+          <label>Hint reliability <input id="academy-hint" type="range" min="0.05" max="0.95" step="0.05" value="0.75"></label>
+          <label>Observation <select id="academy-agreement" aria-label="Observation"><option value="agree">Hint agrees</option><option value="disagree">Hint disagrees</option></select></label>
+        </div>
+        <p id="academy-bayes" aria-live="polite"></p>
+        <p>The score uses a fixed teaching group with outcomes 1, 1, 1, 0. MIRAGE's calibration explorer uses separate archived synthetic tasks.</p>
+      </div>
+      <details><summary>Advanced · Why the Brier score rewards honest probabilities</summary><p>For an event with true probability θ, the expected score is θ(1−p)²+(1−θ)p². Expand it to θ(1−θ)+(p−θ)². The second term reaches zero only at p=θ. A model can produce accurate decisions while assigning unreliable probabilities. Calibration and discrimination measure different properties.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Four claims each have confidence 0.8. Outcomes are 1, 1, 0 and 1. Find their empirical event rate and Brier score.</p><p>Three of four occur, so the rate is 0.75. The mean score is [3(0.2²)+0.8²]/4=0.19. The forecast exceeds the observed rate by 0.05 in this small group.</p></details>
+      <p><a href="./mirage.html#mirage-reliability">MIRAGE calibration explorer</a> · <a href="./docs/mirage-learning.md">MIRAGE guide</a> · <a href="https://www.probabilityandfinance.com/GTP2014/Slides/Abernethy1.pdf">Brier's original 1950 paper, facsimile</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="accounting">
+      <h2>Financial market accounting and price formation</h2>
+      <p><strong>Prerequisites</strong> Signed numbers, multiplication and a basic idea of buying and selling.</p>
+      <h3>Beginner · A trade is a set of transfers</h3>
+      <p>One buyer acquires a share and transfers the execution price to the seller. The fee account receives the fee. For a buy at 102 with a fee of 1, the buyer's cash changes by −103, the market maker's by +102, and the fee account's by +1. Their sum is zero. The buyer's asset change is +1 and the maker's is −1.</p>
+      <h3>Intermediate · Inventory-based quotes</h3>
+      <p>In the REFLEX ledger the midpoint is max(s+fee+1, p₀+λ(I₀−I)). The half-spread s gives bid midpoint−s and ask midpoint+s. Start from p₀=100, s=2 and λ=3. The first buy executes at 102. The inventory falls by one, so the midpoint moves to 103. A second identical buy would execute at 105. The transfer totals still reconcile.</p>
+      <div class="lesson-demo">
+        <h3>Execute a synthetic order</h3>
+        <div class="study-controls">
+          <label>Order side <select id="academy-market-side"><option value="buy">Buy</option><option value="sell">Sell</option></select></label>
+          <label>Requested lots <input id="academy-lots" type="range" min="1" max="8" step="1" value="2"></label>
+          <label>Impact per lot <input id="academy-impact" type="range" min="0" max="6" step="1" value="3"></label>
+        </div>
+        <p id="academy-market" aria-live="polite"></p>
+        <div class="table-scroll"><table><caption>Balances after the order</caption><thead><tr><th>Account</th><th>Cash</th><th>Assets</th><th>Marked wealth</th></tr></thead><tbody id="academy-ledger"></tbody></table></div>
+      </div>
+      <details><summary>Advanced · Wealth at a changing mark</summary><p>Total cash and asset count are conserved. Total marked wealth is C+AP when every account is marked at common midpoint P. A quote change shifts total marked wealth by AΔP even though no cash is created. Realized trade proceeds and marked value answer different accounting questions. Kyle derives price impact from a particular information equilibrium. REFLEX uses a specified inventory-based quote rule.</p></details>
+      <details><summary>Practice and worked solution</summary><p>In the two-lot example, how much cash leaves the buyer and how much reaches the maker and fee account?</p><p>The gross transfer is 102+105=207. Two fees of 1 raise the buyer's debit to 209. Maker cash rises by 207 and fee cash by 2. Two shares change hands. The midpoint after the second buy is 106.</p></details>
+      <p><a href="./reflex.html#reflex-ledger">REFLEX ledger</a> · <a href="./docs/reflex-learning.md">REFLEX guide</a> · <a href="https://doi.org/10.2307/1913210">Kyle, Continuous Auctions and Insider Trading</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="discovery">
+      <h2>Scientific hypotheses, model selection and information gain</h2>
+      <p><strong>Prerequisites</strong> Bayes' rule, logarithms and means.</p>
+      <h3>Beginner · An observation can distinguish candidate laws</h3>
+      <p>If two laws make almost the same predictions where you measure, a precise observation can still provide little information about which law generated them. Choose inputs where the measurement is expected to change the model probabilities.</p>
+      <h3>Intermediate · Prior and expected posterior entropy</h3>
+      <p>Write H(p)=−∑pₘlog₂pₘ. The experimental information is H(M)−∑ᵧP(y)H(M|y). For two equally likely models and a binary test with P(+|A)=0.8 and P(+|B)=0.2, P(+)=0.5. The posterior weight of A becomes 0.8 after a positive or 0.2 after a negative. Both have entropy 0.7219 bits, so expected information is 0.2781 bits.</p>
+      <div class="lesson-demo">
+        <h3>Enumerate an exact two-model experiment</h3>
+        <div class="study-controls">
+          <label>Prior weight of model A <input id="academy-model-prior" type="range" min="0" max="1" step="0.05" value="0.50"></label>
+          <label>Positive outcome under A <input id="academy-positive-a" type="range" min="0" max="1" step="0.05" value="0.80"></label>
+          <label>Positive outcome under B <input id="academy-positive-b" type="range" min="0" max="1" step="0.05" value="0.20"></label>
+        </div>
+        <p id="academy-information" aria-live="polite"></p>
+      </div>
+      <details><summary>Advanced · Integrate over the predictive distribution</summary><p>For continuous observations replace the sum by an integral over the model-weighted predictive density. That density includes measurement noise and parameter uncertainty. NOESIS's archived acquisition rule computes the weighted variance of predictive means. It is a disagreement score with different mathematics. When models share a mean but have different predictive variances, that score can be zero even when a measurement is informative about the model.</p></details>
+      <details><summary>Practice and worked solution</summary><p>If both models predict a positive observation with probability 0.9 and the prior of A is 0.25, what is expected information gain?</p><p>For a positive, P(A|+)=0.25×0.9/0.9=0.25. For a negative the same calculation uses 0.1 and yields 0.25. Neither possible outcome changes the entropy, so information gain is zero.</p></details>
+      <p><a href="./noesis.html#challenge">NOESIS hidden-law challenge</a> · <a href="./docs/noesis-learning.md">NOESIS guide</a> · <a href="./episteme.html#checks">EPISTEME validation</a> · <a href="https://doi.org/10.1214/aoms/1177728069">Lindley on experimental information</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="testing">
+      <h2>Hypothesis testing, multiplicity and false discoveries</h2>
+      <p><strong>Prerequisites</strong> Probability, sorted lists and complements.</p>
+      <h3>Beginner · A family of tests creates more opportunities for error</h3>
+      <p>At level 0.05, a valid continuous null p-value falls below the threshold with probability 0.05. For m independent true nulls the probability that every test avoids rejection is (1−0.05)ᵐ. The complement is the family-wise error probability. At m=20 it is about 0.6415.</p>
+      <h3>Intermediate · Different adjustments target different risks</h3>
+      <p>Bonferroni divides α by m. The union bound gives probability of any false rejection at most m₀α/m≤α, even with dependent tests. Holm compares ordered p-values to α/(m−i+1) and stops at the first failure. At the first true null, m−i+1 is at least the number m₀ of true nulls, giving the same union-bound argument. BH keeps all ranks up to the last satisfying p₍ᵢ₎≤iα/m. Its guarantee under independent tests concerns E[V/max(R,1)], with V false reports and R total reports.</p>
+      <div class="lesson-demo">
+        <h3>Explore exact family risk and report thresholds</h3>
+        <div class="study-controls">
+          <label>Number of independent nulls <input id="academy-tests" type="range" min="1" max="60" step="1" value="20"></label>
+          <label>Nominal level <input id="academy-level" type="range" min="0.01" max="0.10" step="0.01" value="0.05"></label>
+          <label>Multiplicity rule <select id="academy-rule"><option value="unadjusted">Unadjusted</option><option value="bonferroni">Bonferroni</option><option value="holm">Holm</option><option value="bh">Benjamini–Hochberg</option></select></label>
+        </div>
+        <p id="academy-testing" aria-live="polite"></p>
+        <p>The adjustment is applied separately to the fixed vector [0.005, 0.012, 0.028, 0.140].</p>
+      </div>
+      <details><summary>Advanced · Compare error control and power under a common budget</summary><p>If a selection stage devotes half of n to screening and half to independent validation, the second-stage standardized signal is μ√(n/2) for known unit variance. The full test uses μ√n. Independent data protect validation from first-stage selection. This alone does not restore power lost from using a smaller validation sample.</p></details>
+      <details><summary>Practice and worked solution</summary><p>For [0.005, 0.012, 0.028, 0.140] at α=0.05, which tests pass Holm and BH?</p><p>Holm's first two thresholds are 0.0125 and approximately 0.0167. The third is 0.025, so Holm stops with two rejections. BH's third threshold is 0.0375 and its fourth is 0.05. The fourth fails and the third passes, so BH rejects the first three.</p></details>
+      <p><a href="./scientia.html#family-risk">SCIENTIA family risk explorer</a> · <a href="./docs/scientia-learning.md">SCIENTIA guide</a> · <a href="https://www.ime.usp.br/~abe/lista/pdf4R8xPVzCnX.pdf">Holm's original paper</a> · <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.2517-6161.1995.tb02031.x">Benjamini and Hochberg's original paper</a></p>
+    </article>
+  </main>
+</body>
+</html>

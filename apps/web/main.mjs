@@ -5,6 +5,7 @@ import {setupRobustness} from "./robustness.mjs";
 import {setupMap} from "./map.mjs";
 import {showResults} from "./results.mjs";
 import {byId} from "./view.mjs";
+import {setupTheme} from "./theme.mjs";
 
 const map = setupMap();
 const lab = setupLab();
@@ -13,13 +14,7 @@ document.addEventListener("echo2-ready", () => map.markRobustnessAvailable());
 const hero = replay(example);
 drawHero(hero);
 let chart;
-const theme = byId("theme");
-
-theme.addEventListener("click", () => {
-  const light = document.documentElement.dataset.theme !== "light";
-  document.documentElement.dataset.theme = light ? "light" : "dark";
-  theme.setAttribute("aria-pressed", String(light));
-  theme.textContent = light ? "Dark theme" : "Light theme";
+setupTheme(() => {
   map.draw();
   lab.draw();
   robustness.draw();

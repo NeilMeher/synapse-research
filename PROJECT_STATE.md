@@ -76,3 +76,9 @@ Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://gi
 ## Phase IV · SCIENTIA v1
 
 The SCIENTIA pilot used 1,600 synthetic programmes. The frozen confirmation used 20,000. Unadjusted minus Holm all-null FWER was 59.06 pp with adjusted interval 57.50 to 60.62 pp. Unadjusted minus BH FDR in the smaller mixed sample was 15.32 pp with adjusted interval 14.69 to 15.95 pp. Full archive reconstruction passed. Exact normal tails changed one BH decision and reduced the FDR contrast by 0.01 pp. The audit records the failed exact-decision criterion and independently reproduced inferences. The interactive laboratory uses the archived procedure implementation. See the [audit](research/scientia-audit.md).
+
+## Phase IV · EPISTEME, atlas and Mathematical Academy
+
+EPISTEME completed a 200-task exploratory study and a 2,400-task confirmation. NOESIS-style predictive-mean disagreement increased correct final family claims by 4.00 pp in the closed library, adjusted interval 0.41 to 7.59 pp. It increased false proposals by 4.25 pp outside the library, adjusted interval 1.78 to 6.72 pp. Outside-library false final claims were 12.17% random and 11.50% disagreement after two independent blocks. This secondary comparison is descriptive. The full recursive Python reference, deterministic JavaScript archive verification and residual controls were run.
+
+The atlas uses registry v1 to index twelve laboratories and ten study entries. CONVERGENCE and EPISTEME are cross-laboratory studies. The registry drives the static evidence library, asset integrity checks and atlas evidence panels. The five Academy modules have live examples for joint probabilities, calibration, the synthetic market ledger, discrete information gain and multiple testing. The remaining five laboratory proposals are AXIOM, GAME OF CIVILIZATIONS, ARTHA, ENERGIA and CHRONOS.

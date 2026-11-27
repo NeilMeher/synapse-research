@@ -39,3 +39,9 @@
 - Added eight research workflows with shared observation budgets, a family-risk explorer and recorded replay.
 - Published the frozen pilot and confirmatory artifacts and documented the one-decision exact-tail sensitivity.
 - Added independent Python and deterministic JavaScript verification to GitHub Actions.
+
+## 0.5.0 · EPISTEME and research atlas
+
+- Added matched synthetic discovery, disjoint validation and replication, both archived studies and independent reconstruction.
+- Added the registry-backed evidence library, expandable atlas, status and relationship filters, and five guided journeys.
+- Added five Mathematical Academy modules and executable worked examples.

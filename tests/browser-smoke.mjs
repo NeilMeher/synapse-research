@@ -34,6 +34,7 @@ try {
   try {
     for (const width of [360, 390, 768, 1440]) {
       const page = await browser.newPage({viewport: {width, height: 920}, reducedMotion: "reduce"});
+      page.setDefaultTimeout(Number(process.env.SYNAPSE_BROWSER_TIMEOUT??30000));
       const errors = [];
       page.on("pageerror", error => errors.push(error.message));
       page.on("requestfailed", request => errors.push(request.url() + " " + request.failure()?.errorText));
@@ -65,6 +66,28 @@ try {
       await labChoice.click();
       assert.match(page.url(), /#lab-mirage$/);
       assert.equal(await page.locator("#lab-detail h3").textContent(), "MIRAGE");
+      await page.getByText("MIRAGE evidence",{exact:true}).click();
+      assert.equal(await page.locator("#lab-detail").getByRole("link",{name:"Results and dataset"}).getAttribute("href"),"./data/mirage-confirmatory.json");
+      await page.getByRole("searchbox",{name:"Search laboratories"}).fill("");
+      await page.getByLabel("Status",{exact:true}).selectOption("proposed");
+      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),5);
+      await page.getByLabel("Status",{exact:true}).selectOption("all");
+      await labChoice.click();
+      await page.getByLabel("Focus on selected lab").check();
+      assert.deepEqual(await page.locator("#lab-list li:not([hidden]) button").allTextContents(),
+        ["MIRAGE","MORPHEUS","ECHO","NOESIS","REFLEX"]);
+      await page.getByLabel("Focus on selected lab").uncheck();
+      await page.getByText("Scientific discovery",{exact:true}).click();
+      assert.equal(await page.locator("#map-journeys").getByRole("link",{name:"EPISTEME"}).getAttribute("href"),"./episteme.html");
+      if (width>650){
+        await page.getByRole("button",{name:"Fit graph"}).click();
+        assert.ok(await page.locator("#map-view").evaluate(element=>element.scrollWidth<=element.clientWidth));
+        const science=page.getByRole("button",{name:"Scientific intelligence",exact:true});
+        await science.click();
+        assert.equal(await science.getAttribute("aria-expanded"),"false");
+        assert.equal(await page.locator("#map-nodes").getByRole("button",{name:"NOESIS"}).count(),0);
+        await science.click();
+      }
       const summary = page.locator("#network-summary");
       const initialText = await summary.textContent();
       await page.getByRole("button", {name:"Next", exact:true}).click();
@@ -119,7 +142,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
@@ -204,7 +227,21 @@ try {
           assert.match(await page.locator("#scientia-budget").textContent(),/128 observations/);
           assert.match(await page.locator("#scientia-exact").textContent(),/18\.55%/);
         }
-        if (route==="morpheus" || route==="alpha-decay" || route==="noesis" || route==="scientia"){
+        if (route==="episteme"){
+          assert.equal(await page.locator("#episteme-observations tr").count(),1);
+          assert.equal(await page.locator("#episteme-weights tr").count(),4);
+          await page.getByLabel("Inquiry stage").press("End");
+          assert.match(await page.locator("#episteme-decision").textContent(),/Provisionally accepted/);
+          assert.equal(await page.locator("#episteme-blocks tr").count(),8);
+          await page.getByLabel("Hidden-law regime").selectOption("1");
+          assert.match(await page.locator("#episteme-decision").textContent(),/Unresolved/);
+          await page.getByLabel("Measurement policy").selectOption("disagreement");
+          await page.getByLabel("Replay example").selectOption("rejected");
+          assert.match(await page.locator("#episteme-decision").textContent(),/Rejected at/);
+          await page.getByRole("button",{name:"Reveal simulated truth"}).click();
+          assert.match(await page.locator("#episteme-truth").textContent(),/Sine \+ quadratic.*14 disjoint/);
+        }
+        if (["morpheus","alpha-decay","noesis","scientia","episteme"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
           assert.equal(response.status(),200);
@@ -215,6 +252,24 @@ try {
           await page.screenshot({path:fileURLToPath(new URL(route+"-" + width + ".png",screenshots))});
         }
       }
+      assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
+      assert.equal(await page.locator("article.lesson").count(),5);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      await page.getByLabel("Pairwise correlation").press("End");
+      assert.match(await page.locator("#academy-dependence").textContent(),/65\.0% with shared shock and 65\.0%/);
+      await page.getByLabel("Observation",{exact:true}).selectOption("disagree");
+      assert.match(await page.locator("#academy-bayes").textContent(),/33\.33%/);
+      assert.match(await page.locator("#academy-market").textContent(),/at 102, 105/);
+      await page.getByLabel("Requested lots").press("Home");
+      assert.match(await page.locator("#academy-market").textContent(),/1 of 1 lots filled/);
+      assert.match(await page.locator("#academy-information").textContent(),/0\.2781 bits/);
+      await page.getByLabel("Multiplicity rule").selectOption("holm");
+      assert.match(await page.locator("#academy-testing").textContent(),/64\.15%.*H1, H2\./);
+      await page.getByLabel("Multiplicity rule").selectOption("bh");
+      assert.match(await page.locator("#academy-testing").textContent(),/H1, H2, H3\./);
+      assert.equal(await page.locator("html").getAttribute("data-theme"),"light");
+      await page.getByRole("button",{name:"Dark theme"}).click();
+      assert.equal(await page.locator("html").getAttribute("data-theme"),"dark");
       assert.equal((await page.goto(new URL("library.html",base).href)).status(),200);
       const studies=[
         ["ECHO v1","index.html#evidence","confirmatory","echo"],
@@ -226,6 +281,7 @@ try {
         ["ALPHA DECAY","alpha-decay.html","alpha-decay-confirmatory","alpha-decay"],
         ["NOESIS","noesis.html","noesis-confirmatory","noesis"],
         ["SCIENTIA","scientia.html","scientia-confirmatory","scientia"],
+        ["EPISTEME","episteme.html","episteme-confirmatory","episteme"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){

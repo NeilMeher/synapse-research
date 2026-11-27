@@ -1,3 +1,14 @@
+#map-nodes .division-node[aria-expanded="false"] { border-style:dashed; opacity:.74; }
+.atlas-check { display:flex; align-items:center; gap:.4rem; min-height:42px; }
+.atlas-breadcrumb { display:flex; flex-wrap:wrap; column-gap:.3rem; font-size:.75rem; align-items:baseline; }
+.map-detail details { margin-top:.65rem; border-top:1px solid var(--line); }
+.atlas-journeys { margin-top:1.2rem; }
+#map-view { cursor:grab; }
+#map-view.map-dragging { cursor:grabbing; user-select:none; }
+@media (max-width:1020px) { .map-layout { grid-template-columns:minmax(0,1fr); } }
+#map-journeys { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(205px,100%),1fr)); gap:.5rem; }
+#map-journeys details { background:var(--panel); border:1px solid var(--line); padding:.45rem .8rem; border-radius:8px; }
+#map-journeys details ol { padding-left:1.4rem; }
 #map-nodes .division-node {
   position: absolute;
   transform: translate(-50%, -50%);

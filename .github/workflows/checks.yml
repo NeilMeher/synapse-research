@@ -1,4 +1,4 @@
-name: ECHO verification
+name: SYNAPSE verification
 on:
   push:
   pull_request:
@@ -46,6 +46,10 @@ jobs:
       - run: node scripts/noesis.mjs verify
       - run: python -B scripts/reference_scientia.py
       - run: node scripts/scientia.mjs verify
+      - run: python -B scripts/reference_episteme.py
+      - run: node scripts/episteme.mjs verify
+      - run: python -m pip install --disable-pip-version-check jsonschema==4.26.0
+      - run: python -B scripts/check_schemas.py
       - run: npm run build
       - name: Install browser QA tooling
         run: |

@@ -1,8 +1,10 @@
 import {byId,canvasContext,circle,line,node,palette,pct} from "./view.mjs";
 import {row,printed} from "./study-view.mjs";
+import {setupTheme} from "./theme.mjs";
 import {seeded} from "./engine/echo.mjs";
 import {gaussianP,nullFamilyRisk,policies,summarizeProgramme} from "./engine/scientia.mjs";
 
+setupTheme(draw);
 const form=byId("scientia-controls");
 const policyMenu=byId("scientia-policy");
 const menu=byId("scientia-case");

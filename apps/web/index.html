@@ -16,10 +16,10 @@
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="SYNAPSE home"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
       <nav aria-label="Main navigation">
-        <a href="#map">Research map</a>
+        <a href="#map">Research atlas</a>
         <a href="#echo">ECHO lab</a>
         <a href="#robustness">Dependence</a>
-        <a href="./mirage.html">MIRAGE</a>
+        <a href="./academy.html">Mathematical Academy</a>
         <a href="./library.html">Evidence library</a>
       </nav>
       <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
@@ -29,11 +29,11 @@
     <section class="hero wrap" id="top" aria-labelledby="title">
       <div>
         <p class="eyebrow">Computational intelligence and complex systems</p>
-        <h1 id="title">How does a crowd come to <em>know?</em></h1>
-        <p class="intro">SYNAPSE studies how individual decisions shape collective intelligence, and how collective intelligence shapes complex systems.</p>
+        <h1 id="title">How do systems <em>learn, decide and discover?</em></h1>
+        <p class="intro">Explore synthetic experiments in cognition, collective decisions, scientific discovery and market dynamics.</p>
         <div class="actions">
           <a class="primary" href="#echo">Enter the ECHO lab <span aria-hidden="true">↗</span></a>
-          <a class="quiet" href="#map">Explore the research map</a>
+          <a class="quiet" href="#map">Explore the research atlas</a>
         </div>
       </div>
       <aside class="hero-panel" aria-labelledby="hero-caption">
@@ -46,23 +46,25 @@
     <div class="section-band">
       <section class="wrap section" id="map" aria-labelledby="map-title">
         <div class="section-intro">
-          <div><p class="eyebrow">SYNAPSE research programme</p><h2 id="map-title">Research map</h2></div>
+          <div><p class="eyebrow">SYNAPSE research programme</p><h2 id="map-title">Research atlas</h2></div>
           <p>Select a laboratory to see its question, status and research dependencies.</p>
         </div>
         <div class="map-toolbar">
           <label>Search laboratories <input type="search" id="lab-search" placeholder="e.g. metacognition"></label>
           <label>Division <select id="division"><option value="all">All divisions</option></select></label>
-          <label>Relationships <select id="relationships"><option value="all">All connections</option><option value="focus">Selected lab only</option><option value="none">Hide connections</option></select></label>
-          <div class="actions map-controls"><button id="zoom-out" class="quiet" aria-label="Zoom out" type="button">−</button><button id="zoom-in" class="quiet" aria-label="Zoom in" type="button">+</button><button id="reset-map" class="quiet" type="button">Reset view</button></div>
+          <label>Status <select id="lab-status" aria-label="Status"><option value="all">All statuses</option><option value="executed">Experiments executed</option><option value="proposed">Proposed</option></select></label>
+          <label>Relationships <select id="relationships"><option value="all">All connections</option><option value="tested">Joint synthetic studies</option><option value="focus">Selected lab only</option><option value="none">Hide connections</option></select></label>
+          <label class="atlas-check"><input type="checkbox" id="focus-map"> Focus on selected lab</label>
+          <div class="actions map-controls"><button id="zoom-out" class="quiet" aria-label="Zoom out" type="button">−</button><button id="zoom-in" class="quiet" aria-label="Zoom in" type="button">+</button><button id="fit-map" class="quiet" type="button">Fit graph</button><button id="reset-map" class="quiet" type="button">Reset view</button></div>
         </div>
         <div class="map-layout">
-          <div id="map-view" tabindex="0" aria-label="Research map viewport. Scroll or use the arrow keys to pan.">
+          <div id="map-view" tabindex="0" aria-label="Research atlas viewport. Drag the background, scroll or use the arrow keys to pan.">
             <div id="map-space"><canvas id="map-lines" aria-hidden="true"></canvas><div id="map-nodes"></div></div>
           </div>
           <article class="map-detail" id="lab-detail" aria-live="polite"></article>
         </div>
         <p id="map-empty" role="status" hidden>No laboratories match your filters.</p>
-        <p><a href="./convergence.html">Follow ECHO → MIRAGE → REFLEX in the CONVERGENCE study</a></p>
+        <div class="atlas-journeys"><h3>Guided research journeys</h3><div id="map-journeys"></div></div>
         <details class="list-view"><summary>Browse the laboratory list</summary><ul id="lab-list"></ul></details>
       </section>
     </div>

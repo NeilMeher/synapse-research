@@ -1,25 +1,13 @@
 import {byId, canvasContext, line, node, palette} from "./view.mjs";
 
-const divisions = [
-  ["cognition", "Individual cognition"],
-  ["collective", "Collective intelligence"],
-  ["science", "Scientific intelligence"],
-  ["economy", "Economic complexity"],
-];
-const labs = [
-  {id:"mirage", name:"MIRAGE", division:"cognition", question:"Can functional metacognition distinguish self-monitoring from imitation?", links:["echo","reflex"]},
-  {id:"morpheus", name:"MORPHEUS", division:"cognition", question:"How does memory architecture shape behavioural continuity?", links:["mirage","alpha-decay"]},
-  {id:"axiom", name:"AXIOM", division:"cognition", question:"How do incentives and framing change decisions across equivalent games?", links:["echo","civilizations"]},
-  {id:"echo", name:"ECHO", division:"collective", question:"When does communication improve collective accuracy or amplify shared errors?", links:["mirage","civilizations","scientia","reflex"]},
-  {id:"civilizations", name:"GAME OF CIVILIZATIONS", division:"collective", question:"When can cooperation, exchange and institutions emerge under resource constraints?", links:["echo","axiom","chronos"]},
-  {id:"chronos", name:"CHRONOS", division:"collective", question:"How can historical evidence support transparent causal and counterfactual analysis?", links:["civilizations","scientia"]},
-  {id:"noesis", name:"NOESIS", division:"science", question:"Can computational systems recover hidden rules from observations?", links:["scientia","mirage"]},
-  {id:"scientia", name:"SCIENTIA", division:"science", question:"Which research workflows remain reproducible and resist false discovery?", links:["noesis","echo","chronos"]},
-  {id:"reflex", name:"REFLEX", division:"economy", question:"How do information and constraints produce feedback in financial markets?", links:["echo","alpha-decay","mirage"]},
-  {id:"alpha-decay", name:"ALPHA DECAY", division:"economy", question:"How does strategy adoption change the performance of that strategy?", links:["reflex","morpheus"]},
-  {id:"artha", name:"ARTHA", division:"economy", question:"How do sector linkages transmit policy and economic shocks?", links:["energia","reflex"]},
-  {id:"energia", name:"ENERGIA", division:"economy", question:"How do infrastructure and power constraints shape AI investment?", links:["artha","reflex"]},
-];
+import {directStudies, divisions, journeys, laboratories as labs, researchStudies, sharedStudy} from "./research-registry.mjs";
+
+function resource(label, href, className) {
+  const link=node("a",label,className);
+  link.href="./"+href;
+  return link;
+}
+
 
 export function setupMap() {
   const view = byId("map-view");
@@ -27,10 +15,27 @@ export function setupMap() {
   const search = byId("lab-search");
   const division = byId("division");
   const relationships = byId("relationships");
+  const progress = byId("lab-status");
+  const focus = byId("focus-map");
+  const motion = matchMedia("(prefers-reduced-motion: reduce)");
+  const expanded = new Set(divisions.map(([id])=>id));
+  const notes = byId("map-journeys");
+  for (const journey of journeys) {
+    const path=node("details");
+    const steps=node("ol");
+    for (const [name, href] of journey.steps) {
+      const endpoint=node("li");
+      endpoint.append(resource(name,href));
+      steps.append(endpoint);
+    }
+    path.append(node("summary",journey.name),steps);
+    notes.append(path);
+  }
   const narrow = matchMedia("(max-width: 650px)");
   let selected = labs.find(lab => location.hash === "#lab-" + lab.id) ?? labs[3];
   let filter = () => true;
   let zoom = 1;
+  let drag;
   let artifactReady = false;
   let robustnessReady = false;
   let mapDraw = () => {};
@@ -38,9 +43,13 @@ export function setupMap() {
   function choose(lab) {
     selected = lab;
     history.pushState(null, "", "#lab-" + lab.id);
-    renderDetail();
-    syncSelection();
-    mapDraw();
+    if (!filter(lab)) {
+      search.value="";
+      division.value="all";
+      progress.value="all";
+    }
+    expanded.add(lab.division);
+    filtersChanged();
   }
 
   const graphNodes = new Map();
@@ -49,7 +58,15 @@ export function setupMap() {
   const center = node("div", "SYNAPSE", "map-center");
   graph.append(center);
   const divisionLabels = new Map(divisions.map(([id, name]) => {
-    const label = node("span", name, "division-node");
+    const label = node("button", name, "division-node");
+    label.type="button";
+    label.setAttribute("aria-expanded","true");
+    label.addEventListener("click",()=>{
+      if (expanded.has(id)) expanded.delete(id);
+      else expanded.add(id);
+      syncSelection();
+      mapDraw();
+    });
     label.style.setProperty("--node-color", "var(--" + id + ")");
     graph.append(label);
     const option = node("option", name);
@@ -79,7 +96,14 @@ export function setupMap() {
     listNodes.set(lab.id, row);
   }
 
-  const status = lab => lab.id === "echo" ? (robustnessReady ? "ECHO v1 and 2.0 · Experiments executed" : artifactReady ? "ECHO v1 · Experiments executed" : "Interactive prototype") : lab.id === "mirage" ? "MIRAGE v0.1 · Experiments executed" : lab.id === "reflex" ? "REFLEX v0.1 · Experiments executed" : lab.id === "morpheus" ? "MORPHEUS v0.1 · Experiments executed" : lab.id === "alpha-decay" ? "ALPHA DECAY v0.1 · Experiments executed" : lab.id === "noesis" ? "NOESIS v1 · Archive reproduced" : lab.id === "scientia" ? "SCIENTIA v1 · Experiments executed" : "Proposed";
+  const status = lab => {
+    if(lab.id==="echo")return robustnessReady?"ECHO v1 and 2.0 · Experiments executed":
+      artifactReady?"ECHO v1 · Experiments executed":"Archive loading · Interactive lab available";
+    if(lab.id==="noesis")return "Archive independently reconstructed";
+    return directStudies.get(lab.id)?"Experiments executed":"Proposed";
+  };
+  const visible=lab=>filter(lab)&&expanded.has(lab.division)&&
+    (!focus.checked||lab===selected||lab.links.includes(selected.id)||selected.links.includes(lab.id));
   function renderDetail() {
     const {division: id, name, question, links} = selected;
     detail.tabIndex = -1;
@@ -93,39 +117,53 @@ export function setupMap() {
         choose(lab);
         detail.focus({preventScroll:true});
       });
-      row.append(button);
+      const connection=sharedStudy(selected.id,lab.id);
+      row.append(button," · ",node("small",connection?"Joint synthetic study":"Proposed research relationship"));
       related.append(row);
     }
-    detail.replaceChildren(node("p", divisions.find(item => item[0] === id)[1], "eyebrow"),
-      node("h3", name), node("p", question), node("p", status(selected)));
-    if (selected.id === "echo") {
-      const open = node("a", "Open the ECHO lab ↗", "primary");
-      open.href = "#echo";
-      const follow = node("a", "Compare matched dependence", "map-study");
-      follow.href = "#robustness";
-      detail.append(open, follow);
+    const breadcrumb=node("nav",undefined,"atlas-breadcrumb");
+    breadcrumb.setAttribute("aria-label","Atlas breadcrumb");
+    const back=node("button","SYNAPSE","map-link");
+    back.type="button";
+    back.addEventListener("click",()=>byId("reset-map").click());
+    const branch=node("button",divisions.find(item=>item[0]===id)[1],"map-link");
+    branch.type="button";
+    branch.addEventListener("click",()=>{
+      division.value=id;
+      expanded.add(id);
+      filtersChanged();
+    });
+    breadcrumb.append(back," / ",branch," / ",node("span",name));
+    detail.replaceChildren(breadcrumb,node("h3",name),node("p",question),node("p",status(selected)));
+    const direct=directStudies.get(selected.id);
+    if(direct)detail.append(resource("Open the "+name+" lab",selected.id==="echo"?"index.html#echo":direct.route,"primary"));
+    for(const study of researchStudies.filter(study=>study.labs.includes(selected.id))){
+      const disclosure=node("details");
+      disclosure.append(node("summary",study.name+" evidence"),node("p",study.contrast));
+      const evidence=node("ul");
+      for(const [label,href] of [
+        ["Study workspace",study.route],["Protocol and model",study.protocol],["Mathematical specification",study.math],
+        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],
+      ]){
+        if(!href)continue;
+        const item=node("li");
+        item.append(resource(label,href));
+        evidence.append(item);
+      }
+      disclosure.append(evidence,node("small",study.evidence+" · "+study.humanReview));
+      detail.append(disclosure);
     }
-    if (["mirage", "reflex", "morpheus", "alpha-decay", "noesis", "scientia"].includes(selected.id)) {
-      const open = node("a", "Open the " + selected.name + " lab ↗", "primary");
-      open.href = "./" + selected.id + ".html";
-      detail.append(open);
-    }
-    if (["echo", "mirage", "reflex"].includes(selected.id)) {
-      const conv = node("a", "Open CONVERGENCE study ↗", "map-study");
-      conv.href = "./convergence.html";
-      detail.append(conv);
-    }
-    detail.append(node("p", "Connected laboratories"), related);
+    detail.append(node("p","Connected laboratories"),related);
   }
 
   function syncSelection() {
     for (const lab of labs) {
       const matches = filter(lab);
       const isSelected = lab === selected;
-      graphNodes.get(lab.id).hidden = !matches;
+      graphNodes.get(lab.id).hidden = !visible(lab);
       graphNodes.get(lab.id).setAttribute("aria-pressed", String(isSelected));
       const row = listNodes.get(lab.id);
-      row.hidden = !matches;
+      row.hidden = !matches || (focus.checked && !visible(lab));
       row.firstElementChild.setAttribute("aria-pressed", String(isSelected));
       row.lastElementChild.textContent = status(lab);
     }
@@ -135,7 +173,7 @@ export function setupMap() {
   mapDraw = () => {
     if (narrow.matches || !view.clientWidth) return;
     const width = Math.round(Math.max(760, view.clientWidth) * zoom);
-    const height = Math.round(558 * zoom);
+    const height = Math.max(470,Math.round(558 * zoom));
     const mapSpace = byId("map-space");
     mapSpace.style.width = width + "px";
     mapSpace.style.height = height + "px";
@@ -153,6 +191,7 @@ export function setupMap() {
       const sectionLabs = labs.filter(lab => lab.division === id);
       const label = divisionLabels.get(id);
       label.hidden = !sectionLabs.some(filter);
+      label.setAttribute("aria-expanded",String(expanded.has(id)));
       place(label, divisionX, divisionY);
       context.strokeStyle = color;
       context.globalAlpha = 0.3;
@@ -162,21 +201,23 @@ export function setupMap() {
         const y = divisionY + (offset - (sectionLabs.length-1)/2) * height * .09;
         positions.set(lab.id, [x, y]);
         place(graphNodes.get(lab.id), x, y);
-        if (filter(lab)) line(context, divisionX, divisionY, x, y);
+        if (visible(lab)) line(context, divisionX, divisionY, x, y);
       }
     }
-    context.globalAlpha = 0.22;
-    context.strokeStyle = palette("dim");
-    context.setLineDash([3, 5]);
     const seen = new Set();
-    for (const lab of labs.filter(filter)) {
+    for (const lab of labs.filter(visible)) {
       if (relationships.value === "none") break;
       for (const id of lab.links) {
         const peer = labs.find(item => item.id === id);
         const key = [lab.id, id].sort().join("/");
-        if (seen.has(key) || !filter(peer) ||
-            (relationships.value === "focus" && selected !== lab && selected !== peer)) continue;
+        const documented=Boolean(sharedStudy(id,lab.id));
+        if (seen.has(key) || !visible(peer) ||
+            (relationships.value === "focus" && selected !== lab && selected !== peer) ||
+            (relationships.value === "tested" && !documented)) continue;
         seen.add(key);
+        context.globalAlpha=documented ? .63 : .28;
+        context.strokeStyle=palette(documented?"science":"dim");
+        context.setLineDash(documented?[]:[3,5]);
         line(context, ...positions.get(lab.id), ...positions.get(id));
       }
     }
@@ -185,7 +226,9 @@ export function setupMap() {
   function filtersChanged() {
     const phrase = search.value.trim().toLowerCase();
     filter = lab => (division.value === "all" || lab.division === division.value) &&
-      (lab.name + " " + lab.question + " " + status(lab)).toLowerCase().includes(phrase);
+      (progress.value==="all"||(progress.value==="executed")===Boolean(directStudies.get(lab.id))) &&
+      [lab.name,lab.question,status(lab),...researchStudies.filter(study=>study.labs.includes(lab.id))
+        .map(study=>study.name+" "+study.description+" "+study.contrast)].join(" ").toLowerCase().includes(phrase);
     const first = labs.find(filter);
     if (first && !filter(selected)) selected = first;
     renderDetail();
@@ -195,22 +238,46 @@ export function setupMap() {
 
   function adjustZoom(change) {
     const oldZoom = zoom;
-    zoom = Math.min(1.8, Math.max(1, zoom + change));
+    zoom = Math.min(1.8,Math.max(.78,zoom+change));
     const middle = [view.scrollLeft + view.clientWidth / 2, view.scrollTop + view.clientHeight / 2];
     mapDraw();
-    view.scrollTo(middle[0] * zoom / oldZoom - view.clientWidth / 2,
-      middle[1] * zoom / oldZoom - view.clientHeight / 2);
+    view.scrollTo({left:middle[0]*zoom/oldZoom-view.clientWidth/2,
+      top:middle[1]*zoom/oldZoom-view.clientHeight/2,behavior:motion.matches?"instant":"smooth"});
   }
   byId("zoom-in").addEventListener("click", () => adjustZoom(.2));
   byId("zoom-out").addEventListener("click", () => adjustZoom(-.2));
+  byId("fit-map").addEventListener("click",()=>{
+    zoom=Math.max(.78,Math.min(1,(view.clientWidth-2)/760));
+    mapDraw();
+    view.scrollTo(0,0);
+  });
   byId("reset-map").addEventListener("click", () => {
     search.value = "";
     division.value = "all";
-    relationships.value = "all";
-    zoom = 1;
+    relationships.value="all";
+    progress.value="all";
+    focus.checked=false;
+    divisions.forEach(([id])=>expanded.add(id));
+    zoom=1;
     view.scrollTo(0, 0);
     filtersChanged();
   });
+  view.addEventListener("pointerdown",event=>{
+    if(event.pointerType!=="mouse" || event.button!==0 || event.target.closest("button"))return;
+    drag={id:event.pointerId,x:event.clientX,y:event.clientY,left:view.scrollLeft,top:view.scrollTop};
+    view.setPointerCapture(event.pointerId);
+    view.classList.add("map-dragging");
+  });
+  view.addEventListener("pointermove",event=>{
+    if(!drag||drag.id!==event.pointerId)return;
+    view.scrollTo(drag.left+drag.x-event.clientX,drag.top+drag.y-event.clientY);
+  });
+  for(const event of ["pointerup","pointercancel","lostpointercapture"]){
+    view.addEventListener(event,()=>{
+      drag=null;
+      view.classList.remove("map-dragging");
+    });
+  }
   view.addEventListener("keydown", event => {
     if (event.target !== view) return;
     const delta = {ArrowLeft:[-60,0], ArrowRight:[60,0], ArrowUp:[0,-60], ArrowDown:[0,60]}[event.key];
@@ -230,7 +297,7 @@ export function setupMap() {
       }
     });
   }
-  for (const element of [search, division, relationships]) element.addEventListener("input", filtersChanged);
+  for (const element of [search,division,relationships,progress,focus]) element.addEventListener("input",filtersChanged);
   const showList = () => {
     if (narrow.matches) document.querySelector(".list-view").open = true;
     mapDraw();

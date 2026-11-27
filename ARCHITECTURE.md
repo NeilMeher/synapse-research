@@ -21,3 +21,9 @@ engine/dependence.mjs is a bounded, browser-safe extension. engine/echo2.mjs wra
 
 ## ADR 004 · Separate confidence, observations and execution
 MIRAGE uses engine/confidence.mjs for binary forecasts and scoring. REFLEX wraps engine/market.mjs under integer quote, balance and order contracts. CONVERGENCE connects the three kernels through reports, probabilities and immediate-or-cancel orders. scripts/run-study.mjs handles seed provenance, immutable source and output digests, bounded execution and deterministic verification. Each study has a distinct schema identifier. Native ES modules serve all pages. The build release.json identifies the deployed Git revision.
+
+## Discovery, validation and the public atlas
+
+Browser labs load versioned synthetic artifacts and pure JavaScript mathematical engines. EPISTEME composes the Bayesian NOESIS candidate fits with two disjoint residual checks. It freezes the candidate before using either reserved block and reports model-family scoring separately from the absolute residual decisions. SCIENTIA retains its archived eight-rule procedure under a distinct matched allocation design. Python references take separate mathematical routes.
+
+The versioned research registry provides atlas metadata, journeys, the generated static evidence library and build-time checks for study paths and data integrity. Browser acceptance tests keep an independently named list of the expected studies and links. Academy exercises call the dependence, confidence, market, information and multiplicity engines directly.

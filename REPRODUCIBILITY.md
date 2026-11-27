@@ -31,3 +31,7 @@ Run `node scripts/noesis.mjs verify` and `python -B scripts/reference_noesis.py`
 ## SCIENTIA v1
 
 Run `node scripts/scientia.mjs verify` and `python -B scripts/reference_scientia.py`. The first reruns the registered archives deterministically. The Python reference reconstructs all metrics and tests the exact Gaussian tail alongside the archived approximation. The [audit](research/scientia-audit.md) records one near-threshold discrepancy. The fixed-design run identifiers and seed-bearing config are in the [pilot](research/scientia-pilot.md) and [confirmatory protocol](research/scientia-confirmatory.md).
+
+## EPISTEME v1 and the public atlas
+
+Run `node scripts/episteme.mjs verify` and `python -B scripts/reference_episteme.py`. The Python implementation reproduces the Bayesian update recursively, then rechecks the independent residual gates, all aggregate estimates and the archived first replays. The [frozen protocol](research/episteme-confirmatory.md) identifies the two primary comparisons. The build checks the registry's research paths and verifies the bytes of every public pilot and confirmatory data file against its manifest. Rebuilding the atlas does not change the archived results. The release CI installs the pinned QA-only JSON Schema validator and runs `python -B scripts/check_schemas.py`. The website and experiment runners do not require that dependency.

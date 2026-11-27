@@ -1,0 +1,8 @@
+.academy-nav ol { display:flex; flex-wrap:wrap; gap:.5rem 1.45rem; padding-left:1.5rem; }
+.lesson { padding:clamp(1rem,4vw,2.3rem); }
+.lesson > p, .lesson > details, .lesson > h2, .lesson > h3 { max-width:80ch; }
+.lesson h3 { margin-top:1.6em; }
+.lesson-demo { background:var(--surface); border:1px solid var(--line); border-radius:10px; margin-block:1.2rem; padding:1rem; }
+.lesson-demo h3 { margin-top:0; }
+.lesson > details { border-bottom:1px solid var(--line); padding:.4rem 0; }
+.lesson-demo output { font-variant-numeric:tabular-nums; }
