@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCIENTIA · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./scientia-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation"><a href="./noesis.html">NOESIS</a><a href="./library.html">Evidence library</a><a href="#methods">Methods</a></nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div><p class="eyebrow">SCIENTIA · Scientific reliability</p><h1>How many discoveries survive a second test?</h1></div>
+      <p>Compare eight procedures on the same synthetic research programme. Inspect the effect of multiplicity, reporting rules and a fixed validation budget.</p>
+    </div>
+    <p id="scientia-status" role="status">Loading the archived study…</p>
+
+    <article class="result-panel study-block" id="methods">
+      <h2>Research programme</h2>
+      <form class="study-controls" id="scientia-controls">
+        <label>Hypotheses <input name="hypotheses" type="number" min="2" max="60" step="1" required value="20"></label>
+        <label>Planted effects <input name="signals" type="number" min="0" max="20" step="1" required value="4"></label>
+        <label>Observations per hypothesis <input name="n" type="number" min="4" max="256" step="2" required value="32"></label>
+        <label>Nominal threshold <input name="alpha" type="number" min="0.001" max="0.2" step="0.001" required value="0.05"></label>
+        <label>Planted effect size <input name="effect" type="number" min="0.05" max="2" step="0.05" required value="0.45"></label>
+        <label>Within-block correlation <input name="rho" type="number" min="0" max="0.9" step="0.05" required value="0"></label>
+        <label>Research procedure <select id="scientia-policy"></select></label>
+        <div class="actions"><button class="primary" type="submit">Generate programme</button></div>
+      </form>
+      <p id="scientia-budget" aria-live="polite"></p>
+      <details><summary>Inspect the research protocol</summary><p>The fixed primary is hypothesis 1. Truth is randomly assigned before outcomes, and both equal-size Gaussian blocks share the same known variance. Full-data workflows use both blocks. Split and replication workflows reserve the second for same-sign confirmation. The BH guarantee applies to the independent study cells. Selected intervals are nominal.</p><p><a href="./research/scientia-confirmatory.md">Frozen confirmatory design</a> · <a href="./research/scientia-audit.md">Exact-tail audit</a></p></details>
+      <p id="scientia-score" aria-live="polite"></p>
+      <div class="table-scroll"><table><caption>Truth is disclosed after the procedure decides</caption>
+        <thead><tr><th>Hypothesis</th><th>True mean</th><th>Full-sample p</th><th>Discovery p</th><th>Validation p</th><th>Procedure decision</th></tr></thead>
+        <tbody id="scientia-trace"></tbody></table></div>
+    </article>
+
+    <article class="result-panel study-block" id="family-risk">
+      <h2>Independent all-null family risk</h2>
+      <p>The curve is exact for unadjusted independent null tests. The point is the archived simulated frequency at its matching threshold.</p>
+      <canvas class="study-chart" id="scientia-curve" aria-hidden="true"></canvas>
+      <p id="scientia-exact"></p>
+    </article>
+
+    <article class="result-panel study-block" id="archive">
+      <h2>Archived study replay</h2>
+      <div class="study-controls"><label>Archived design <select id="scientia-case"></select></label><div class="actions"><button type="button" class="quiet" id="scientia-replay">Replay first programme</button></div></div>
+      <p id="scientia-contrast"></p>
+      <div class="table-scroll" id="scientia-rates"><table><caption>Visual comparison using the archived rates</caption><thead><tr><th>Workflow</th><th>False discovery rate</th><th>Power</th></tr></thead><tbody id="scientia-bars"></tbody></table></div>
+      <div class="table-scroll"><table><caption>Programme-level means across the archived condition</caption>
+        <thead><tr><th>Workflow</th><th>Any false report</th><th>False discovery rate</th><th>Power</th><th>Reported bias</th><th>Reported coverage</th><th>Pass fraction among screened</th></tr></thead>
+        <tbody id="scientia-study"></tbody></table></div>
+      <div class="actions">
+        <a class="quiet" href="./data/scientia-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/scientia-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/scientia-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/scientia.md">Manuscript</a><a class="quiet" href="./research/scientia-audit.md">Assumptions and audit</a><a class="quiet" href="./docs/scientia-learning.md">Learning guide</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

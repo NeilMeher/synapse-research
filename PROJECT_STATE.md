@@ -72,3 +72,7 @@ Local verification passed 27 unit tests, all seven reference and archive suites,
 All ten recovered files are preserved in the verified bundle and GitHub WIP snapshot at 7670acf. Both NOESIS v1 archives pass deterministic reproduction and independent reconstruction of 400 total worlds. The null primary contrasts stay unchanged. The packaged laboratory offers an archival replay and separate bounded practice challenge. SCIENTIA is the next standalone experiment.
 
 Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://github.com/NeilMeher/synapse-research/actions/runs/45954910522). The public revision, artifact hashes and four browser widths were verified.
+
+## Phase IV · SCIENTIA v1
+
+The SCIENTIA pilot used 1,600 synthetic programmes. The frozen confirmation used 20,000. Unadjusted minus Holm all-null FWER was 59.06 pp with adjusted interval 57.50 to 60.62 pp. Unadjusted minus BH FDR in the smaller mixed sample was 15.32 pp with adjusted interval 14.69 to 15.95 pp. Full archive reconstruction passed. Exact normal tails changed one BH decision and reduced the FDR contrast by 0.01 pp. The audit records the failed exact-decision criterion and independently reproduced inferences. The interactive laboratory uses the archived procedure implementation. See the [audit](research/scientia-audit.md).

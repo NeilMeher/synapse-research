@@ -59,3 +59,9 @@ Antigravity recovered the local Phase II workspace where `codex/phase2-integrati
 Local verification passed 27 unit tests, all seven reference and archive suites, production build and browser smoke checks at 360, 390, 768 and 1440 pixels. Browser tests now verify the seven distinct evidence entries and both new laboratory workflows, including the MORPHEUS intervention and ALPHA DECAY scenario and round controls. The production build contains 134 checked files. The expected Pages target is this reviewed Phase III branch after passing GitHub CI.
 
 Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://github.com/NeilMeher/synapse-research/actions/runs/45954910522). The public revision, artifact hashes and four browser widths were verified.
+
+## Phase IV recovery through SCIENTIA
+
+The recovered input snapshot is archived at 7670acf on [wip/phase4-recovered-archive](https://github.com/NeilMeher/synapse-research/tree/wip/phase4-recovered-archive). Phase III is tagged v0.3.1. NOESIS v0.4.0 is available on Pages from 4dba5a1 through [run 45956303714](https://github.com/NeilMeher/synapse-research/actions/runs/45956303714). Both original NOESIS result hashes were verified against public assets.
+
+The standalone SCIENTIA implementation, frozen studies and lab are on codex/phase4-recovery. Run both commands in REPRODUCIBILITY.md. Its archived approximation changes one audited BH decision relative to erfc. The results and pre-run protocol are immutable. Follow the scientific gates documented for each new study. No independent human review has been completed.

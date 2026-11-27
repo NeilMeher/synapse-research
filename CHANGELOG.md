@@ -33,3 +33,9 @@
 - Preserve the original benchmark archives and independently reconstruct all 400 synthetic worlds, aggregate metrics and contrasts.
 - Correct the working-likelihood, coefficient, evaluation-grid and acquisition-method descriptions.
 - Ship the NOESIS replay and a separate interactive measurement exercise.
+
+## 0.4.1 · SCIENTIA
+
+- Added eight research workflows with shared observation budgets, a family-risk explorer and recorded replay.
+- Published the frozen pilot and confirmatory artifacts and documented the one-decision exact-tail sensitivity.
+- Added independent Python and deterministic JavaScript verification to GitHub Actions.

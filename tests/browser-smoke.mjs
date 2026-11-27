@@ -119,7 +119,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
@@ -190,7 +190,21 @@ try {
           await page.getByRole("button",{name:"Start world"}).click();
           assert.equal(await measure.isEnabled(),true);
         }
-        if (route==="morpheus" || route==="alpha-decay" || route==="noesis"){
+        if (route==="scientia"){
+          await page.getByLabel("Archived design").selectOption("1");
+          assert.equal(await page.locator("#scientia-study tr").count(),8);
+          assert.match(await page.locator("#scientia-contrast").textContent(),/15\.32 pp/);
+          await page.getByRole("button",{name:"Replay first programme"}).click();
+          assert.equal(await page.locator("#scientia-trace tr").count(),20);
+          await page.getByLabel("Research procedure").selectOption("replicate");
+          assert.match(await page.locator("#scientia-score").textContent(),/Independent replication/);
+          await page.getByLabel("Hypotheses",{exact:true}).fill("4");
+          await page.getByRole("button",{name:"Generate programme"}).click();
+          assert.equal(await page.locator("#scientia-trace tr").count(),4);
+          assert.match(await page.locator("#scientia-budget").textContent(),/128 observations/);
+          assert.match(await page.locator("#scientia-exact").textContent(),/18\.55%/);
+        }
+        if (route==="morpheus" || route==="alpha-decay" || route==="noesis" || route==="scientia"){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
           assert.equal(response.status(),200);
@@ -211,6 +225,7 @@ try {
         ["MORPHEUS","morpheus.html","morpheus-confirmatory","morpheus"],
         ["ALPHA DECAY","alpha-decay.html","alpha-decay-confirmatory","alpha-decay"],
         ["NOESIS","noesis.html","noesis-confirmatory","noesis"],
+        ["SCIENTIA","scientia.html","scientia-confirmatory","scientia"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){

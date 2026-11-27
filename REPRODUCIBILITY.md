@@ -27,3 +27,7 @@ For each study named mirage, reflex or convergence, run python scripts/reference
 ## NOESIS v1
 
 Run `node scripts/noesis.mjs verify` and `python -B scripts/reference_noesis.py`. The first command reproduces both untouched JavaScript archives. The second independently recomputes every task and aggregate using observation-space Cholesky. See the [archive audit](research/noesis-audit.md) and [manuscript](papers/noesis.md). Use a future run ID for design changes.
+
+## SCIENTIA v1
+
+Run `node scripts/scientia.mjs verify` and `python -B scripts/reference_scientia.py`. The first reruns the registered archives deterministically. The Python reference reconstructs all metrics and tests the exact Gaussian tail alongside the archived approximation. The [audit](research/scientia-audit.md) records one near-threshold discrepancy. The fixed-design run identifiers and seed-bearing config are in the [pilot](research/scientia-pilot.md) and [confirmatory protocol](research/scientia-confirmatory.md).
