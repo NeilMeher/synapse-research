@@ -123,7 +123,7 @@ try {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
-        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width,route+" viewport overflow at "+width+"px");
         if (route==="mirage"){
           assert.equal(await page.locator("#mirage-metrics tr").count(),5);
           await page.getByLabel("Hint regime").selectOption("misleading");

@@ -27,3 +27,9 @@
 
 - Fix MORPHEUS and ALPHA DECAY canvas rendering. Wire the MORPHEUS clone intervention to the memory engine.
 - Validate all seven evidence-library entries and the new laboratory interactions in browser CI.
+
+## 0.4.0 · NOESIS
+
+- Preserve the original benchmark archives and independently reconstruct all 400 synthetic worlds, aggregate metrics and contrasts.
+- Correct the working-likelihood, coefficient, evaluation-grid and acquisition-method descriptions.
+- Ship the NOESIS replay and a separate interactive measurement exercise.

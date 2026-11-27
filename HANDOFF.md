@@ -57,3 +57,5 @@ Antigravity recovered the local Phase II workspace where `codex/phase2-integrati
 ## Phase III release preparation
 
 Local verification passed 27 unit tests, all seven reference and archive suites, production build and browser smoke checks at 360, 390, 768 and 1440 pixels. Browser tests now verify the seven distinct evidence entries and both new laboratory workflows, including the MORPHEUS intervention and ALPHA DECAY scenario and round controls. The production build contains 134 checked files. The expected Pages target is this reviewed Phase III branch after passing GitHub CI.
+
+Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://github.com/NeilMeher/synapse-research/actions/runs/45954910522). The public revision, artifact hashes and four browser widths were verified.
