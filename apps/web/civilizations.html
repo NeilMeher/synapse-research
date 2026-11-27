@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAME OF CIVILIZATIONS · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./civilizations.css">
+  <script type="module" src="./civilizations-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="World navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html">Academy</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro"><div><p class="eyebrow">GAME OF CIVILIZATIONS · Resource exchange</p><h1>Do reputation records help a village trade?</h1></div>
+      <p>Inspect an eight-agent barter economy. Follow production, funded offers, contingent deliveries and consumption around a fixed ring.</p></div>
+    <p id="civilizations-status" role="status">Loading the registered world experiment…</p>
+    <article class="result-panel study-block" id="village">
+      <h2>World and resource ledger</h2>
+      <form class="study-controls" id="village-controls">
+        <label>Labor scarcity <select id="village-climate"><option value="moderate">Moderate</option><option value="stress">Stress</option></select></label>
+        <label>Information policy <select id="village-policy"><option value="autarky">No exchange</option><option value="unaware">Fixed prior</option><option value="local">Own delivery history</option><option value="pooled">Pooled history</option></select></label>
+        <label>Sandbox seed <input id="village-seed" type="number" min="1" max="4294967295" step="1" value="2800169297" required></label>
+        <div class="actions"><button class="primary" type="submit">Run sandbox</button><button class="quiet" type="button" id="village-archive">Load registered replay</button></div>
+      </form>
+      <p id="village-mode" aria-live="polite"></p>
+      <div class="village-layout">
+        <div>
+          <canvas id="village-map" class="study-chart" aria-hidden="true"></canvas>
+          <ul class="legend village-legend"><li>Stores of A and B appear beside each agent</li><li>Solid arc means both legs occurred</li><li>Dashed amber means only prepayment occurred</li><li>Faint dashed edges mark rejected offers</li></ul>
+          <div class="actions village-clock"><button class="quiet" type="button" id="village-reset">Reset day</button><button class="quiet" type="button" id="village-step">Next day</button><button class="quiet" type="button" id="village-play" aria-pressed="false">Play</button></div>
+          <label>World day <input id="village-day" type="range" min="1" max="24" step="1" value="1"><output id="village-day-label" for="village-day"></output></label>
+        </div>
+        <div class="village-panel">
+          <label>Inspect agent <select id="village-agent"></select></label>
+          <p id="village-detail" aria-live="polite"></p>
+          <div class="table-scroll"><table><caption>Accumulated physical resource balance</caption><thead><tr><th>Resource</th><th>Initial</th><th>Produced</th><th>Consumed</th><th>Loss</th><th>Stored</th></tr></thead><tbody id="village-ledger"></tbody></table></div>
+        </div>
+      </div>
+      <div class="table-scroll"><table><caption>Fundable offers for this day</caption><thead><tr><th>Payer → supplier</th><th>Offer</th><th>Belief</th><th>Outcome</th></tr></thead><tbody id="village-events"></tbody></table></div>
+    </article>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Matched world comparison</h2><p id="village-contrast"></p>
+      <div class="table-scroll"><table><caption>World-level means in the selected scarcity regime</caption><thead><tr><th>Policy</th><th>Need satisfied</th><th>Delivery attempts</th><th>Completed trades</th><th>Worst-served consumption</th><th>Consumption Gini</th><th>Shock-day satisfaction</th></tr></thead><tbody id="village-outcomes"></tbody></table></div>
+      <div class="actions"><a class="quiet" href="./data/civilizations-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/civilizations-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./experiments/civilizations-confirmatory.json">Frozen configuration</a><a class="quiet" href="./research/civilizations-confirmatory.md">Protocol</a><a class="quiet" href="./engine/civilizations.mjs">Engine</a><a class="quiet" href="./papers/civilizations.md">Manuscript</a><a class="quiet" href="./research/civilizations-audit.md">Audit and limitations</a><a class="quiet" href="./docs/civilizations-learning.md">Learning guide</a></div>
+    </article>
+  </main>
+</body>
+</html>

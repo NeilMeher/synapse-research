@@ -39,3 +39,7 @@ Run `node scripts/episteme.mjs verify` and `python -B scripts/reference_episteme
 ## AXIOM finite benchmark
 
 Run `node scripts/axiom.mjs verify` and `python -B scripts/reference_axiom.py`. These check the frozen input hashes, archive bytes, deterministic reconstruction and all 80 cases via independent rational utility calculations. The finite benchmark uses exact enumeration. `node scripts/axiom.mjs pilot` writes a new archive only in a clean reproduction checkout with no result files and frozen inputs. [Protocol](research/axiom-pilot.md) · [Audit](research/axiom-audit.md)
+
+## GAME OF CIVILIZATIONS v1
+
+Run `node scripts/civilizations.mjs verify` and `python -B scripts/reference_civilizations.py`. Compare the per-resource equations after each day in the archived replay. Python models allocations and deliveries separately, uses fractions for beliefs, and checks every trajectory aggregate against the archives. [Protocol](research/civilizations-confirmatory.md) · [Audit](research/civilizations-audit.md)

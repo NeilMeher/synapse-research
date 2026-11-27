@@ -144,7 +144,7 @@ export function setupMap() {
       const evidence=node("ul");
       for(const [label,href] of [
         ["Study workspace",study.route],["Protocol and model",study.protocol],["Mathematical specification",study.math],
-        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],["Configuration",study.config],["Scientific engine",study.engine],["Audit and limitations",study.audit],
+        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],["Configuration",study.config],["Pilot configuration",study.pilotConfig],["Scientific engine",study.engine],["Audit and limitations",study.audit],
       ]){
         if(!href)continue;
         const item=node("li");

@@ -1,0 +1,35 @@
+{
+  "id": "civilizations-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "03b73732aad5589935585ccc18364c6f5bacaa34",
+  "inputs": {
+    "scripts/civilizations.mjs": "56205efb0fd42a315e9ce810f9224a458460d46121134a72d9aad29753517195",
+    "engine/civilizations.mjs": "ea5008effeb597f4536f7e163e33569d930ca5d9c267f5ece789fdedf9916e8d",
+    "engine/resources.mjs": "fb895ffbcd9b03f811bd1cf54511ced5f58d01495b0dbf757ec5c53def280123",
+    "engine/game-theory.mjs": "842db8690b5a148deb23f52c86e8df853ab44758230d4e2c2144f33eeb02500c",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "schemas/civilizations-v1.json": "24342356e94fcbb7d0f193b866261225d728d2bf841af64fd3268bdda1d42903",
+    "scripts/reference_civilizations.py": "37b0ed743cf78094f2cef5d4e054eda2b1e093d191975196699984fa222d13b1",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/civilizations-confirmatory.json": "ca3e0e43724671f59a314f1242565cea899815bb90af68f25e3b17b3a6a57b8c",
+    "research/civilizations-confirmatory.md": "3b759e2357b85269c73d0c43573161bf0ffaeeb24bfaa1506d1ef5d8f30fc3f1"
+  },
+  "configSha256": "b69d030d0d436ceeff42f7fa8e12971598df6e1cdf7a139b5ad6c77d94d92c7a",
+  "output": {
+    "path": "results/civilizations-confirmatory.json",
+    "sha256": "9bfe10e2ad7454bc0e36719a4c10e3c813eba3ca93c8b157d98d58874cda82d0",
+    "bytes": 1267557
+  },
+  "startUtc": "2026-11-27T08:25:08.008Z",
+  "endUtc": "2026-11-27T08:25:10.018Z",
+  "runtimeMs": 1997,
+  "observedRssBytes": 72019968,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

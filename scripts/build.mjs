@@ -18,7 +18,7 @@ if (result.config.experimentId !== manifest.experimentId || manifest.status !== 
 const copies = [];
 for (const file of readdirSync(from("apps/web/"))) copies.push(["apps/web/" + file, file]);
 for (const file of readdirSync(from("engine/"))) {
-  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
+  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs", "civilizations.mjs", "resources.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
 }
 for (const study of researchStudies) {
   for (const [offset,phase] of study.archivePhases.entries()) {
@@ -38,7 +38,7 @@ for (const study of researchStudies) {
     }
   }
   copies.push([study.manuscript,study.manuscript],[study.learning,study.learning]);
-  if(study.config)copies.push([study.config,study.config]);
+  for(const config of [study.config,study.pilotConfig])if(config)copies.push([config,config]);
 }
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md"]) {
@@ -91,7 +91,7 @@ for(const file of packaged){
   }
 }
 for (const study of researchStudies){
-  for(const entry of [study.route,study.result,study.manifest,study.protocol,study.math,study.learning,study.manuscript,study.config,study.engine,study.audit]){
+  for(const entry of [study.route,study.result,study.manifest,study.protocol,study.math,study.learning,study.manuscript,study.config,study.pilotConfig,study.engine,study.audit]){
     if(entry)checkLink("Research registry","./"+entry);
   }
 }

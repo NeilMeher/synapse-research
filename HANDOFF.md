@@ -79,3 +79,9 @@ The deployed release is [v0.5.0](https://github.com/NeilMeher/synapse-research/r
 ## Phase V · AXIOM milestone
 
 Continue on codex/phase5-social-systems. The executable, input configuration, independent reference and finite protocol were committed at f0fce74 before running. The [AXIOM pilot manifest](results/axiom-pilot.manifest.json) records the original run and fixed checksum. Its [audit](research/axiom-audit.md) explains expected positive-control failures. AXIOM's finite benchmark exposes implementation invariance and does not estimate behavioural or moral effects. Next, validate exact resource flows, atomic transfers, contingent delivery and information timing in GAME OF CIVILIZATIONS. Preserve the finite benchmark as a standalone release.
+
+## Phase V · GAME OF CIVILIZATIONS
+
+Validated exact two-good accounting, immutable matched world schedules and contingent delivery under three information regimes plus no exchange. The frozen confirmation shows lower aggregate fulfillment with pooled history in the simulated stress regime. Retain this result and its distributional diagnostics. [Archive](results/civilizations-confirmatory.manifest.json) · [Audit](research/civilizations-audit.md). The next comparison should hold world schedules and the history visible to agents fixed while substituting AXIOM-derived decision rules.
+
+AXIOM v0.6.0 was publicly verified at ab946afc19b03c9e12663b24327ad36d7fe08ae3 with [review CI 45965202160](https://github.com/NeilMeher/synapse-research/actions/runs/45965202160) and [Pages run 45965441266](https://github.com/NeilMeher/synapse-research/actions/runs/45965441266). Public metadata, the downloaded finite archive and four browser widths agreed with the release.

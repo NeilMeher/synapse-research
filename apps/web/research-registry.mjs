@@ -84,6 +84,12 @@ export const researchStudies=[
       protocol:"research/axiom-pilot.md",math:"research/axiom-design.md",audit:"research/axiom-audit.md",
       result:"data/axiom-pilot.json",manifest:"data/axiom-pilot.manifest.json",
       config:"experiments/axiom-pilot.json",engine:"engine/axiom.mjs"}),
+  study("civilizations","GAME OF CIVILIZATIONS","civilizations.html",["civilizations"],
+    "Conserved local barter with matched delivery-history regimes and labor shocks.",
+    "Compare need satisfaction with pooled records against a fixed reliability prior.",
+    {math:"research/civilizations-pilot.md",audit:"research/civilizations-audit.md",
+      config:"experiments/civilizations-confirmatory.json",pilotConfig:"experiments/civilizations-pilot.json",
+      engine:"engine/civilizations.mjs"}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));
@@ -106,4 +112,7 @@ export const journeys=[
     ["Liquidity","convergence.html#convergence-price"],["Strategy crowding","alpha-decay.html#alpha-table"]]},
   {name:"Scientific discovery",steps:[
     ["NOESIS","noesis.html"],["SCIENTIA","scientia.html"],["EPISTEME","episteme.html"]]},
+  {name:"From individual incentives to collective institutions",steps:[
+    ["AXIOM","axiom.html"],["Expected utility","academy.html#strategy"],
+    ["Resource accounting","academy.html#resources"],["GAME OF CIVILIZATIONS","civilizations.html"]]},
 ];

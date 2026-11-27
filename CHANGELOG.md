@@ -51,3 +51,9 @@
 - Published an exact finite payoff- and belief-permutation benchmark with a separately implemented rational reference.
 - Added an editable two-player laboratory, intentional feedback controls, and a game-theory Academy module.
 - Extended the registry to represent a completed finite benchmark with a single archived phase.
+
+## 0.7.0 · GAME OF CIVILIZATIONS
+
+- Added a conserved eight-agent barter economy, a frozen pilot and confirmation, and independent exact ledger checks.
+- Added an animated ring replay, controlled seed sandbox, physical ledger, and comparative advantage Academy lesson.
+- Added the individual-incentives guided journey without changing the original five journeys.

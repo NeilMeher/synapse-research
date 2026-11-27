@@ -24,6 +24,7 @@
       <li><a href="#discovery">Model selection and information</a></li>
       <li><a href="#testing">Tests and false discovery</a></li>
       <li><a href="#strategy">Game theory and expected utility</a></li>
+      <li><a href="#resources">Comparative advantage and resource accounting</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -150,6 +151,22 @@
       <details><summary>Advanced · Relabeling and stochastic responses</summary><p>When a column permutation sends each displayed column j to canonical column σ(j), also replace its weight by qσ(j). The weighted sum stays the same by reindexing. Moving rows permutes utilities. Applying the inverse row map then recovers the canonical response. A logit response gives higher utilities larger probability with sensitivity β. The AXIOM calculation stipulates the opponent distribution. A quantal response equilibrium solves responses jointly.</p></details>
       <details><summary>Practice and worked solution</summary><p>At q = 3/4, find the assurance game's best response. Move the first opponent action to the second displayed column while leaving the 3/4 weight on the first displayed column. What changed?</p><p>The initial utilities are 4×(3/4) = 3 and 3. Both actions are best responses. Failing to carry the weight gives the first canonical opponent action probability 1/4 and changes the first row utility to 1. The second row stays at 3. The inverse-mapped distribution changes from (1/2, 1/2) to (0, 1), a total variation of 1/2.</p></details>
       <p><a href="./axiom.html#axiom-workbench">Edit payoffs and swap actions in AXIOM</a> · <a href="./docs/axiom-learning.md">AXIOM guide</a> · <a href="https://doi.org/10.1006/game.1995.1023">McKelvey and Palfrey, Quantal Response Equilibria</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="resources">
+      <h2>Comparative advantage and resource accounting</h2>
+      <p><strong>Prerequisites</strong> Ratios, inequalities and addition of signed quantities.</p>
+      <h3>Beginner · One constraint, many production plans</h3>
+      <p>With two labor hours, an A specialist can make four units of A or two B each hour. A B specialist can make two units of A or four B. Each feasible bundle comes from allocating both hours across the two activities.</p>
+      <h3>Intermediate · Opportunity cost and barter</h3>
+      <p>Agent A trades off 1/2 B per additional A, while agent B forgoes two B for one A. Opportunity cost, the next best output lost, determines comparative advantage. With one hour per activity, their bundles are [4,2] and [2,4]. Specialization produces [8,0] and [0,8]. Transferring four each gives [4,4] to each. Both fill four units total of previously unmet need if each needed four of both goods.</p>
+      <div class="lesson-demo">
+        <h3>Transfer a bundle on the exact ledger</h3>
+        <label>Units of each resource exchanged <input id="academy-barter" type="range" min="0" max="8" step="1" value="4"></label>
+        <p id="academy-resources-result" aria-live="polite"></p>
+      </div>
+      <details><summary>Advanced · Individual and aggregate accounting</summary><p>For resource r, sum each participant's inventory equation. Each debit −q has a credit +q, so gross transfers cancel. Only initial stock, output, consumption and explicit loss determine the aggregate. Need satisfaction and distribution can nevertheless change without creating resources.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Keep full specialization and exchange two units. Who meets at least as much need as under divided labor?</p><p>A holds [6,2] and B [2,6]. Each consumes six units under the four-per-good cap, exactly their divided-labor outcome. At four transferred units both consume eight. At zero they each consume only four.</p></details>
+      <p><a href="./civilizations.html#village">Inspect the artificial economy</a> · <a href="./docs/civilizations-learning.md">Resource learning guide</a> · <a href="https://www.gutenberg.org/ebooks/33310">Ricardo, Chapter VII</a></p>
     </article>
   </main>
 </body>

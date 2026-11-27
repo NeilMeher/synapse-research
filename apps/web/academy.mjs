@@ -7,6 +7,7 @@ import {initializeMarket,inspectAccounts,reconcile,submitOrder} from "./engine/m
 import {binaryInformationGain} from "./engine/information.mjs";
 import {nullFamilyRisk,rankP} from "./engine/scientia.mjs";
 import {bestResponse,expectedNumerators,logitResponse} from "./engine/game-theory.mjs";
+import {barter,inventoryTotal,production,useAndStore} from "./engine/resources.mjs";
 
 setupTheme();
 
@@ -76,4 +77,13 @@ updateWhen(["academy-opponent"],()=>{
   byId("academy-strategy-result").textContent="Opponent A "+pct(weight/4)+" · utilities "+
     utilities.map(value=>value.toFixed(2)).join(" and ")+" · action A probability "+
     pct(best)+" under uniform best response, "+pct(logit)+" under logit.";
+});
+
+updateWhen(["academy-barter"],()=>{
+  const quantity=number("academy-barter");
+  const first=production([4,2],2,2), second=production([2,4],2,0);
+  if(quantity)barter(first,second,0,quantity,true);
+  const [a,b]=[first,second].map(stock=>useAndStore(stock,[4,4]).consumed.reduce((sum,x)=>sum+x,0));
+  byId("academy-resources-result").textContent="A ["+first.join(", ")+"] consumes "+a+
+    " · B ["+second.join(", ")+"] consumes "+b+" · aggregate stocks "+inventoryTotal([first,second]).join(" / ")+".";
 });

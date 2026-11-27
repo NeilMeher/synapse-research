@@ -13,6 +13,7 @@ FAMILIES = {
     "scientia-v1": ("results/scientia-pilot.json", "results/scientia-confirmatory.json"),
     "episteme-v1": ("results/episteme-pilot.json", "results/episteme-confirmatory.json"),
     "axiom-finite-v1": ("results/axiom-pilot.json",),
+    "civilizations-v1": ("results/civilizations-pilot.json", "results/civilizations-confirmatory.json"),
 }
 
 for name, paths in FAMILIES.items():

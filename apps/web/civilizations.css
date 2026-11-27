@@ -1,0 +1,8 @@
+.village-layout { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:1.2rem; }
+#village-map { height:clamp(240px,38vw,450px); border:1px solid var(--line); border-radius:12px; background:var(--bg); }
+.village-panel { min-width:0; }
+.village-panel label { max-width:17rem; }
+.village-clock { margin-block:.45rem; }
+.village-legend { font-size:.8rem; }
+#village-ledger td { white-space:nowrap; }
+@media(max-width:760px){ .village-layout { grid-template-columns:1fr; } }
