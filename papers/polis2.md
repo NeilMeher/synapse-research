@@ -22,4 +22,4 @@ The interaction is **−9.60 percentage points**, with paired 95% interval **−
 
 The independent rational Python implementation reconstructed all 192 worlds and 24 arms per world, including exact ledgers, individual loss metrics and the paired interaction. The confirmation took 2.951 seconds in the archived environment. Original POLIS runs stay unchanged. The interaction compares the modelled mechanisms; actual contracts, strategic delivery effort and human welfare remain separate questions. Human scientific review is pending.
 
-[Frozen protocol](../research/polis2-confirmatory.md) · [Results](../data/polis2-confirmatory.json) · [Manifest](../data/polis2-confirmatory.manifest.json) · [Audit](../research/polis2-audit.md)
+[Frozen protocol](../research/polis2-confirmatory.md) · [Results](../results/polis2-confirmatory.json) · [Manifest](../results/polis2-confirmatory.manifest.json) · [Audit](../research/polis2-audit.md)
