@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "source-v1",
+  "id": "adb-ind-national-2025",
+  "organization": "Asian Development Bank",
+  "title": "India national input-output tables at current prices, 2000 and 2007–2024",
+  "officialUrl": "https://kidb.adb.org/globalization/current",
+  "retrievalUrl": "https://kidb.adb.org/download/mrio-file/211",
+  "publicationDate": "2025-08",
+  "publicationPrecision": "month, as listed by ADB for this resource",
+  "retrievalDate": "2026-11-27",
+  "referencePeriods": [
+    2023,
+    2024
+  ],
+  "geography": "India, national",
+  "units": "USD million at current prices",
+  "classification": "ADB 35-industry national IOT, c1–c35",
+  "vintage": "August 2025 portal vintage; OOXML modified November 2025",
+  "revisionStatus": "Harmonized ADB workbook pinned by SHA-256; national source revision not separately asserted",
+  "format": "XLSX",
+  "license": "CC BY 3.0 IGO, as listed for the India National Input-Output Tables series in the ADB Data Library",
+  "licenseUrl": "https://data.adb.org/terms-use-data",
+  "redistribution": "Attributed processed observations only. Original workbook remains available from ADB and is not redistributed here.",
+  "originalFilename": "IND IOT 2000, 2007-2024.xlsx",
+  "sha256": "7bb76a14c6afb969e1eb668a71cffdf140d519fcd50a2c58ce1683cb6212e337",
+  "fileBytes": 921068,
+  "extraction": "Read only scoped XLSX cells from sheets named 2023 and 2024. No spreadsheet formulas executed.",
+  "transformation": "Keep domestic industry rows separately from imported inputs; remove all-zero domestic c35 after validation.",
+  "missingValues": "Any blank or nonnumeric required cell fails extraction. Zero domestic output in c35 is explicitly excluded.",
+  "limitations": "ADB harmonized statistical estimates, not MoSPI raw supply-use tables; national, current USD. Nonzero imported c35 is retained in column sums.",
+  "verificationStatus": "Publisher download and workbook digest verified; accounting checked by the extract pipeline.",
+  "evidenceClass": "Verified official observation"
+}

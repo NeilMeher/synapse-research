@@ -1,0 +1,96 @@
+[
+  {
+    "code": "agriculture",
+    "name": "Agriculture, forestry and fishing",
+    "members": [
+      "c1"
+    ]
+  },
+  {
+    "code": "mining",
+    "name": "Mining and quarrying",
+    "members": [
+      "c2"
+    ]
+  },
+  {
+    "code": "manufacturing",
+    "name": "Other manufacturing",
+    "members": [
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c15",
+      "c16"
+    ]
+  },
+  {
+    "code": "equipment",
+    "name": "Electrical and optical equipment",
+    "members": [
+      "c14"
+    ]
+  },
+  {
+    "code": "utilities",
+    "name": "Electricity, gas and water",
+    "members": [
+      "c17"
+    ]
+  },
+  {
+    "code": "construction",
+    "name": "Construction",
+    "members": [
+      "c18"
+    ]
+  },
+  {
+    "code": "trade",
+    "name": "Trade, hospitality and transport",
+    "members": [
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26"
+    ]
+  },
+  {
+    "code": "communications",
+    "name": "Post and telecommunications",
+    "members": [
+      "c27"
+    ]
+  },
+  {
+    "code": "business",
+    "name": "Finance, real estate and business",
+    "members": [
+      "c28",
+      "c29",
+      "c30"
+    ]
+  },
+  {
+    "code": "public",
+    "name": "Public and other services",
+    "members": [
+      "c31",
+      "c32",
+      "c33",
+      "c34"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "artha-scenario-001",
+  "phase": "scenario",
+  "panels": [
+    2024,
+    2023
+  ],
+  "amount": 100,
+  "shocks": [
+    {
+      "id": "construction",
+      "sourceCode": "c18",
+      "groupCode": "construction"
+    },
+    {
+      "id": "equipment",
+      "sourceCode": "c14",
+      "groupCode": "equipment"
+    },
+    {
+      "id": "communications",
+      "sourceCode": "c27",
+      "groupCode": "communications"
+    }
+  ]
+}

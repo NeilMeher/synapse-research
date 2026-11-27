@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "dataset",
+    "config",
+    "panels"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "artha-v1"
+    },
+    "modelVersion": {
+      "const": "adb-domestic-leontief-v1"
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "id",
+        "vintage",
+        "retrievalDate",
+        "sourceSha256",
+        "units"
+      ]
+    },
+    "panels": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "year",
+          "published",
+          "comparisons"
+        ],
+        "properties": {
+          "comparisons": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": [
+                "resolution",
+                "industryCount",
+                "diagnostics",
+                "scenarios"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

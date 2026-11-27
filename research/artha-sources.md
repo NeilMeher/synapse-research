@@ -1,0 +1,14 @@
+# ARTHA source inventory and verification
+
+| Official candidate | Vintage and valuation | Fit and data access |
+| --- | --- | --- |
+| MoSPI / NSO Supply and Use Tables | 2022–23 and 2023–24, published 15 May 2026. Indian national accounts base year 2022–23 and revised product and industry classifications. | Publisher release verified. The new 155-product rectangular system uses linked product and industry valuations and would need separate domestic-use and price/margin transformation, plus exact licensing checks for its relevant files. |
+| OECD harmonized national input-output tables | 2025 edition, 1995–2022, current prices and industry-by-industry orientation. | Metadata workbook retrieved. The domestic/import ZIP request returned HTTP 403. The publisher's Section 3 permits attributed reuse subject to specific restrictions. No unavailable table cells were substituted. |
+| OECD regular ICIO | 2026 edition, latest block 2020–2024, country-industry detail. | Official 2020–2024 bulk ZIP request returned HTTP 403. The international block is unnecessary for a first single-country model once the ADB national domestic and imported blocks are available. |
+| ADB India national input-output tables | Portal update August 2025, workbook sheets through 2024, current USD millions and 35 ADB industry codes. | Selected. The publisher workbook has separate domestic and import matrices, separate final-demand categories, gross output and value added. The older Data Library series identifies CC BY 3.0 IGO and directs users to KIDB for updated figures. The processed figures are attributed. Original OOXML stays on the publisher's server. |
+
+The selected workbook was retrieved from official ADB file 211 and pinned by SHA-256. Its August 2025 portal date has month precision. The workbook's modification metadata is dated November 2025. Extract only India national worksheets for 2023 and 2024. No subdivision or fiscal-period conversion is asserted. ADB's classifications are retained by source code without assuming a concordance to the latest Indian NIC.
+
+ADB publisher values are harmonized national accounting estimates. The data license description attaches to the data series. Neither the model code's MIT license nor the site branding substitutes for ADB attribution. Source text and workbook metadata beyond the accounting cell ranges are excluded from the processed model.
+
+[MoSPI release](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2261377) · [OECD IOTs](https://www.oecd.org/en/data/datasets/input-output-tables.html) · [OECD ICIO](https://www.oecd.org/en/data/datasets/inter-country-input-output-tables.html) · [ADB portal](https://kidb.adb.org/globalization/current) · [ADB Data Library terms](https://data.adb.org/terms-use-data) · [UN transformation handbook](https://unstats.un.org/unsd/nationalaccount/capdev/resources/details?resourceid=36&resourcetype=handbook)
