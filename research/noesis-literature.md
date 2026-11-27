@@ -40,8 +40,8 @@ NOESIS formalizes the automated scientist problem in a controlled, fully auditab
    - **Passive Random**: Queries drawn i.i.d. uniformly from the input domain.
    - **Uniform Grid**: Queries spaced deterministically across the domain.
    - **Active Uncertainty**: Queries targeted at the maximum predictive variance of the current leading model.
-   - **Active Information Gain (Model Disagreement)**: Queries placed at points of maximal theoretical discordance among candidate models.
-4. By maintaining exact conjugate Bayesian linear updates, NOESIS avoids optimization divergences and stochastic sampling noise, enabling clean, reproducible inference of automated discovery dynamics.
+   - **Predictive-Mean Model Disagreement**: Queries placed at points of maximal theoretical discordance among candidate models.
+4. By maintaining exact conjugate Bayesian linear updates, NOESIS avoids optimization divergences and stochastic posterior approximation, enabling clean, reproducible inference of automated discovery dynamics.
 
 ## 5. References
 

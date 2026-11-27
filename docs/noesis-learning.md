@@ -22,14 +22,14 @@ How should you choose your 8 measurements?
 
 ### Strategy B: Uniform Grid
 - You place measurements at evenly spaced intervals across the whole domain.
-- **Strength**: Superb global coverage. Yields the lowest overall test prediction error (RMSE = $0.1219$).
+- **Strength**: Superb global coverage. Mean grid RMSE was 0.1219. Active uncertainty had the lowest mean at 0.1203.
 - **Weakness**: Doesn't focus specifically on resolving ambiguities between rival theories.
 
 ### Strategy C: Active Uncertainty
 - You ask the currently leading theory: *"Where are you least sure about your prediction?"*
 - You measure at the point of maximum predictive variance.
 
-### Strategy D: Active Information Gain (*Experimentum Crucis*)
+### Strategy D: Predictive-Mean Model Disagreement (*Experimentum Crucis*)
 - You ask: *"Where do our rival theories disagree the most?"*
 - If Theory 1 predicts $y = +2.5$ at $x = 1.8$, while Theory 2 predicts $y = -1.2$ at the same altitude, measuring at $x = 1.8$ will decisively falsify one of them in a single shot!
 - This achieved the highest true law identification rate ($91.33\%$).
@@ -59,3 +59,5 @@ node scripts/noesis.mjs verify
 # Run Python reference verification
 python scripts/reference_noesis.py
 ```
+
+See the [archive audit](../research/noesis-audit.md) for the difference between the simulator and its working likelihood, and between the observed and evaluation grids.

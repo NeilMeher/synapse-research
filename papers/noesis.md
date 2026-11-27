@@ -1,8 +1,8 @@
 # Active Scientific Inquiry and the Discovery of Governing Laws: An Exact Bayesian Benchmark
 
-**Authors**: SYNAPSE Consortium (NOESIS Laboratory)  
+**Authors**: SYNAPSE NOESIS Laboratory (AI-assisted)  
 **Date**: November 2026  
-**Status**: Confirmatory Benchmark Complete (Replication Verified)  
+**Status**: Archived synthetic benchmark independently reconstructed. Human review pending.  
 **Evidence Class**: Synthetic Simulation  
 **Repository**: [github.com/NeilMeher/synapse-research](https://github.com/NeilMeher/synapse-research)  
 **Artifact Hash**: `edb29de55e0992f2ffa0c02cf8ba17e6c810799a2c97ff385500709b8253a1ba`
@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Automated scientific discovery requires an agent to deduce governing mathematical laws from scarce, noisy observations while sequentially choosing which experiments to conduct. Here we present NOESIS, an exact Bayesian benchmark evaluating automated hypothesis discovery across four canonical natural law families: Polynomial, Harmonic, Exponential Decay, and Rational/Padé functions. We compare four inquiry policies under an identical budget of eight sequential observations: (1) passive random sampling, (2) deterministic space-filling uniform grid sampling, (3) active predictive uncertainty sampling, and (4) active information gain targeting Bayesian model disagreement (*experimentum crucis*). In a pre-registered confirmatory trial of 300 synthetic physical systems ($N=300$), active information gain achieved the highest true family recovery rate ($91.33\%$, $95\%\text{ CI } [0.881, 0.945]$) and posterior confidence allocated to truth ($87.43\%$). However, within this sample size, the Bonferroni-corrected primary contrasts against passive random ($+2.67\text{ pp}$, $95\%\text{ CI } [-1.68, +7.02]\text{ pp}$) and uniform grid sampling ($+1.00\text{ pp}$, $95\%\text{ CI } [-3.43, +5.43]\text{ pp}$) spanned zero. We formalize the conditions under which model ambiguity drives discovery versus when passive space-filling provides equivalent identification power.
+Automated scientific discovery requires an agent to deduce governing mathematical laws from scarce, noisy observations while sequentially choosing which experiments to conduct. Here we present NOESIS, an exact Bayesian benchmark evaluating automated hypothesis discovery across four canonical natural law families: Polynomial, Harmonic, Exponential Decay, and Rational/Padé functions. We compare four inquiry policies under an identical budget of eight sequential observations: (1) passive random sampling, (2) deterministic space-filling uniform grid sampling, (3) active predictive uncertainty sampling, and (4) model disagreement targeting Bayesian model disagreement (*experimentum crucis*). In a pre-registered confirmatory trial of 300 synthetic physical systems ($N=300$), model disagreement achieved the highest true family recovery rate ($91.33\%$, $95\%\text{ CI } [0.881, 0.945]$) and posterior confidence allocated to truth ($87.43\%$). However, within this sample size, the Bonferroni-corrected primary contrasts against passive random ($+2.67\text{ pp}$, $95\%\text{ CI } [-1.68, +7.02]\text{ pp}$) and uniform grid sampling ($+1.00\text{ pp}$, $95\%\text{ CI } [-3.43, +5.43]\text{ pp}$) spanned zero. The study estimates these contrasts under the archived design; the intervals do not establish equivalence.
 
 ---
 
@@ -30,14 +30,14 @@ We implement an exact conjugate Bayesian framework that avoids optimization inst
 
 ### 2.1 Candidate Law Families
 
-The environment generates one-dimensional continuous relationships $y = f^*(x) + \epsilon$ over domain $\mathcal{X} = [-2.0, +2.0]$ with additive Gaussian noise $\epsilon \sim \mathcal{N}(0, \sigma^2)$ ($\sigma = 0.20$, precision $\beta = 25.0$). Nature draws ground truth from four distinct functional families:
+After a shared noiseless observation at x=0, the environment generates one-dimensional observations $y = f^*(x) + \epsilon$ over domain $\mathcal{X} = [-2.0, +2.0]$ with additive Gaussian noise $\epsilon \sim \mathcal{N}(0, \sigma^2)$ ($\sigma = 0.20$, precision $\beta = 25.0$). Nature draws ground truth from four distinct functional families:
 
 1. **Polynomial ($\text{poly}$)**: $\boldsymbol{\phi}(x) = [1, x, x^2]^T$
 2. **Harmonic ($\text{harm}$)**: $\boldsymbol{\phi}(x) = [1, \sin(\pi x), \cos(\pi x)]^T$
 3. **Exponential Decay ($\text{exp}$)**: $\boldsymbol{\phi}(x) = [1, \exp(-x^2), \exp(-|x|)]^T$
 4. **Rational ($\text{rat}$)**: $\boldsymbol{\phi}(x) = [1, (1+x^2)^{-1}, x(1+x^2)^{-1}]^T$
 
-Parameters $\boldsymbol{\theta}^* \sim \mathcal{N}(\mathbf{0}, \alpha^{-1}\mathbf{I}_3)$ with prior precision $\alpha = 1.0$.
+The generating coefficient standard deviations are 1, 1.2 and 1.2. Inference uses unit standard deviations for every coefficient and the same Gaussian noise likelihood for all measurements, including the noiseless seed observation.
 
 ### 2.2 Inquiry Policies (Arms)
 
@@ -46,7 +46,7 @@ All arms receive an initial calibration observation at $x = 0.0$ and execute $7$
 - **Uniform Grid (`uniform_grid`)**: Queries chosen deterministically to fill the domain equispaced.
 - **Active Uncertainty (`active_uncertainty`)**: Queries the point of maximal predictive variance for the current leading hypothesis:
   $$x_t = \arg\max_{x \in \mathcal{X}_{\text{grid}}} \sigma_{\hat{m}}^2(x)$$
-- **Active Information Gain (`active_ig`)**: Queries the point of maximal theoretical divergence across all candidate models (Bayesian Model Disagreement):
+- **Model Disagreement (`active_ig`)**: Queries the point of maximal theoretical divergence across all candidate models (Bayesian Model Disagreement):
   $$x_t = \arg\max_{x \in \mathcal{X}_{\text{grid}}} \sum_{m} P(m \mid \mathcal{D}_{t-1}) \left(\mu_m(x) - \bar{\mu}(x)\right)^2$$
 
 ---
@@ -57,12 +57,12 @@ The confirmatory experiment (`noesis-confirmatory-001`) evaluated 300 paired syn
 
 ### Table 1: Performance Across Inquiry Architectures
 
-| Policy | Family Recovery | Posterior at Truth | Mean Log Loss | Out-of-Sample Test RMSE |
+| Policy | Family Recovery | Posterior at Truth | Mean Log Loss | In-domain grid RMSE |
 | :--- | :---: | :---: | :---: | :---: |
-| **Active Information Gain** | **91.33%** | **87.43%** | **0.2246** | 0.2799 |
-| **Uniform Grid** | 90.33% | 86.50% | 0.2252 | **0.1219** |
+| **Model Disagreement** | **91.33%** | **87.43%** | **0.2246** | 0.2799 |
+| **Uniform Grid** | 90.33% | 86.50% | 0.2252 | 0.1219 |
 | **Random Sampling** | 88.67% | 83.26% | 0.2827 | 0.1525 |
-| **Active Uncertainty** | 88.00% | 81.08% | 0.3007 | 0.1203 |
+| **Active Uncertainty** | 88.00% | 81.08% | 0.3007 | **0.1203** |
 
 ### Table 2: Primary Confirmatory Contrasts
 
@@ -76,11 +76,11 @@ The confirmatory experiment (`noesis-confirmatory-001`) evaluated 300 paired syn
 ## 4. Discussion and Limitations
 
 ### 4.1 Theoretical Disagreement vs. Space-Filling Efficiency
-While Active Information Gain achieved the highest absolute family recovery ($91.33\%$) and highest posterior probability assigned to the true model ($87.43\%$), the difference compared to a deterministic uniform space-filling grid ($90.33\%$) was modest ($+1.00\text{ pp}$) and not statistically distinguishable from zero at the prespecified Bonferroni $\alpha=0.05$ threshold.
+While Model Disagreement achieved the highest absolute family recovery ($91.33\%$) and highest posterior probability assigned to the true model ($87.43\%$), the difference compared to a deterministic uniform space-filling grid ($90.33\%$) was modest ($+1.00\text{ pp}$) and not statistically distinguishable from zero at the prespecified Bonferroni $\alpha=0.05$ threshold.
 
-Interestingly, Uniform Grid sampling achieved significantly lower out-of-sample Test RMSE ($0.1219$) than Active IG ($0.2799$). This trade-off reflects a deep epistemological distinction:
-- **Active Model Disagreement** concentrates measurements at extreme domain boundaries or inflection zones where competing hypotheses disagree most violently. This maximizes *model identification* power.
-- **Uniform Space-Filling** distributes measurements across the entire support, minimizing *parameter estimation error* and global interpolation error.
+Active uncertainty had the lowest mean grid RMSE (0.1203), followed by uniform grid (0.1219). Model disagreement had mean 0.2799. These are descriptive rankings. The protocol did not specify a paired RMSE contrast. The evaluation grid contains the entire query grid, so the prediction error measures in-domain fit over both queried and unqueried inputs.
+
+The model-disagreement score uses variance of predictive means. Expected information gain would average posterior entropy over the predictive distribution of observations.
 
 ### 4.2 Limitations
 1. **Low Dimensionality**: The current testbed is restricted to one-dimensional scalar domains ($D=1$). In higher dimensions ($D \ge 5$), the curse of dimensionality severely impairs passive grid sampling, where active inquiry typically shows exponential advantages.
@@ -104,3 +104,5 @@ Every result in this paper is fully reproducible:
 - Lindley, D. V. (1956). On a measure of the information provided by an experiment. *Annals of Mathematical Statistics*, 27(4), 986–1005.
 - MacKay, D. J. (1992). Bayesian interpolation. *Neural Computation*, 4(3), 415–447.
 - Schmidt, M., & Lipson, H. (2009). Distilling free-form natural laws from experimental data. *Science*, 324(5923), 81–85.
+
+[Executable-design and reproducibility audit](../research/noesis-audit.md)

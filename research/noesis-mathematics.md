@@ -21,12 +21,8 @@ The agent evaluates $M = 4$ discrete hypothesis families $\mathcal{M} = \{ m_1, 
 
 For each independent synthetic trial $i \in \{1, \dots, N_{\text{trials}}\}$:
 1. Ground truth model family $m^* \in \mathcal{M}$ is chosen uniformly at random: $m^* \sim \mathrm{Categorical}(1/4, 1/4, 1/4, 1/4)$.
-2. Ground truth parameter vector $\boldsymbol{\theta}^* = [\theta_0^*, \theta_1^*, \theta_2^*]^T$ is sampled from a prior distribution:
-   $$\boldsymbol{\theta}^* \sim \mathcal{N}(\mathbf{0}, \alpha^{-1} \mathbf{I}_3)$$
-   with $\alpha = 1.0$.
-3. When queried at $x \in \mathcal{X}$, nature returns an observation with additive Gaussian noise:
-   $$y = \boldsymbol{\phi}_{m^*}(x)^T \boldsymbol{\theta}^* + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2)$$
-   with observation noise $\sigma = 0.20$ (precision $\beta = \sigma^{-2} = 25.0$).
+2. The three coefficients are independent centered Gaussians. Their generating standard deviations are 1, 1.2 and 1.2.
+3. The first measurement is noiseless at x=0 for all arms. Later measurements use independent additive Gaussian noise with standard deviation 0.20. For inference, the candidate prior has unit marginal standard deviations and the working likelihood treats **all** measurements as noisy with standard deviation 0.20. The exact conjugate formulas below refer to that working model.
 
 ## 3. Exact Conjugate Bayesian Inference
 
@@ -68,7 +64,7 @@ All arms receive an identical budget of $B = 8$ queries per trial. In the first 
 3. **Active Predictive Uncertainty (`active_uncertainty`)**:
    Let $\hat{m} = \arg\max_m P(m \mid \mathcal{D}_{t-1})$. The agent queries the point of highest predictive variance for the current best model:
    $$x_t = \arg\max_{x \in \mathcal{X}_{\text{grid}}} \sigma_{\hat{m}}^2(x)$$
-4. **Active Information Gain / Model Disagreement (`active_ig`)**:
+4. **Model Disagreement (`active_ig`)**:
    The agent queries the point maximizing Bayesian Model Disagreement (ambiguity resolution across competing hypotheses):
    $$\bar{\mu}(x) = \sum_{m \in \mathcal{M}} P(m \mid \mathcal{D}_{t-1}) \mu_m(x)$$
    $$\Delta(x) = \sum_{m \in \mathcal{M}} P(m \mid \mathcal{D}_{t-1}) (\mu_m(x) - \bar{\mu}(x))^2$$
@@ -83,8 +79,8 @@ All arms receive an identical budget of $B = 8$ queries per trial. In the first 
    $$P^* = P(m^* \mid \mathcal{D}_B) \in [0, 1]$$
 3. **Log Loss**:
    $$\mathcal{L} = -\ln \max(P(m^* \mid \mathcal{D}_B), 10^{-12})$$
-4. **Out-of-Sample Test RMSE**:
-   Evaluated on a held-out test grid of 41 points $\mathcal{X}_{\text{test}} = \{-2.0 + 0.1 \cdot j\}_{j=0}^{40}$:
+4. **In-domain grid RMSE**:
+   Evaluated against the noiseless function on an in-domain grid of 41 points $\mathcal{X}_{\text{test}} = \{-2.0 + 0.1 \cdot j\}_{j=0}^{40}$:
    $$\mathrm{RMSE}_{\text{test}} = \sqrt{\frac{1}{41} \sum_{x \in \mathcal{X}_{\text{test}}} (y^*(x) - \mu_{\hat{m}}(x))^2}$$
 
 ### 5.2 Prespecified Hypotheses and Contrasts
@@ -98,3 +94,5 @@ Two primary confirmatory contrasts are prespecified with family-wise error rate 
    $$\Delta_{R, \text{uniform}} = \mathbb{E}[R_{\text{active\_ig}}] - \mathbb{E}[R_{\text{uniform\_grid}}]$$
    - H0: $\Delta_{R, \text{uniform}} \le 0$
    - H1: $\Delta_{R, \text{uniform}} > 0$
+
+The 41-point grid includes every point in the 21-point query grid. The RMSE combines prediction at sampled and unsampled locations. The disagreement policy does not compute expected posterior entropy. [Archive audit](noesis-audit.md)
