@@ -30,7 +30,12 @@
       <li><a href="#power-energy">Energy and engineering mathematics</a></li>
       <li><a href="#project-finance">Infrastructure project finance</a></li>
       <li><a href="#optimization">Optimization and uncertainty</a></li>
+      <li><a href="#historical-measurement">Historical statistics and economic measurement</a></li>
+      <li><a href="#causal-inference">Causal inference</a></li>
+      <li><a href="#econometrics">Econometric research designs</a></li>
+      <li><a href="#model-uncertainty">Scientific modelling and uncertainty</a></li>
     </ol></nav>
+    <details class="result-panel study-block"><summary>Mathematical prerequisites and interactive toolkit</summary><ol id="academy-concepts"></ol></details>
 
     <article class="result-panel study-block lesson" id="dependence">
       <h2>Probability, correlation and higher-order dependence</h2>
@@ -46,7 +51,7 @@
           <label>Pairwise correlation <input id="academy-rho" type="range" min="0" max="1" step="0.05" value="0.30"></label>
         </div>
         <p id="academy-dependence" aria-live="polite"></p>
-        <div class="table-scroll"><table><caption>Exact probability by number of correct reports, with q = 0.65</caption>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Exact probabilities for correct reports"><table><caption>Exact probability by number of correct reports, with q = 0.65</caption>
           <thead><tr><th>Correct reports</th><th>Shared shock</th><th>Beta mixture</th></tr></thead><tbody id="academy-counts"></tbody></table></div>
       </div>
       <details><summary>Advanced · Triple agreement</summary><p>Three pairwise-independent fair bits can share a parity constraint. Let X₃ be the exclusive-or of independent fair X₁ and X₂. The four equally likely outcomes are 000, 011, 101 and 110. Each pair has the same joint law as independent fair bits. Majority one occurs with probability 3/4, versus 1/2 for three mutually independent fair bits.</p></details>
@@ -248,6 +253,55 @@
       <details><summary>Advanced · Correlated shocks</summary><p>For a sum X+Y, the variance is Var(X)+Var(Y)+2 Cov(X,Y). Suppose two costs are each 0 or 2 with equal probability. When they are independent, total cost is 4 in one quarter of cases. With perfectly paired high and low costs, total cost is 4 in half the cases. Monte Carlo estimates such frequencies under the sampled joint distribution. The registered ENERGIA scenarios give deterministic comparisons without probabilities.</p></details>
       <details><summary>Practice and worked solution</summary><p>Options A and B cost $1.20 and $1.10 per GPU-hour and use 70 and 90 m³. Option C costs $1.25 and uses 110 m³. A project has a 100 m³ water limit. Can any option dominate every feasible competitor?</p><p>C is infeasible. A uses less water and B costs less, so neither dominates the other. Reducing the water ceiling to 80 m³ leaves only A feasible. This describes these three options under their assumptions.</p></details>
       <p><a href="./energia.html#evidence">Explore the finite ENERGIA comparison</a> · <a href="./nexus.html#bridge">Trace matched NEXUS assumptions</a> · <a href="https://www.itl.nist.gov/div898/handbook/">NIST engineering statistics handbook</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="historical-measurement">
+      <h2>Historical statistics and economic measurement</h2>
+      <p><strong>Prerequisites</strong> Fractions, growth rates, units and the accounting distinction between balances and transactions.</p>
+      <h3>Beginner · A measurement at a date versus activity over a period</h3>
+      <p>Route kilometres refer to the network reported as of March 31. Freight tonnes count activity across a fiscal year, April through March. An observation through November covers a different interval. A count of parallel running tracks describes a different quantity from the length of the underlying route.</p>
+      <h3>Intermediate · Derive an index and an annualized rate</h3>
+      <p>For x₀&gt;0, an index of 100xₜ/x₀ gives 100 at the base. If xₙ=x₀(1+g)ⁿ, taking the nth root gives g=(xₙ/x₀)^(1/n)−1. From 53,596 to 69,439 route km over 74 elapsed years, cumulative change was 29.56% and the equivalent annualized rate was 0.35%. Missing intermediate years supply no annual growth observations.</p>
+      <div class="lesson-demo"><h3>Choose the Railway Board base year</h3><label>Fiscal endpoint <select id="academy-rail-base" disabled></select></label><p id="academy-history-result" aria-live="polite">Loading the historical example…</p></div>
+      <details><summary>Advanced · Measurement revisions and real quantities</summary><p>With a comparable price index P, a nominal value x in base-year prices is x(P₀/Pₜ). Route counts already use physical units. Published estimates may change because of corrections, changing geography or classification. Before comparing vintages, align definition, scope and reference date, then check the size of the apparent difference against source precision.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Can you compare freight through November against a full prior fiscal year to measure annual growth?</p><p>Comparable exposures differ. Either obtain matching year-to-date periods with shared definitions or wait for the full year. A prospective annualization would require a modeled seasonal pattern and should be labelled a scenario.</p></details>
+      <p><a href="./chronos.html#series">Open the observed series</a> · <a href="./research/chronos-source-audit.md">Inspect the reconciliation</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="causal-inference">
+      <h2>Causal inference</h2>
+      <p><strong>Prerequisites</strong> Historical measurement, expectations and conditional comparisons.</p>
+      <h3>Beginner · What would the same unit have experienced?</h3>
+      <p>Potential outcome Y(1) describes a unit under treatment and Y(0) the same unit without it. The individual effect is Y(1)−Y(0). One world is observed for each unit in a usual observational design. To estimate a mean effect on treated units, we need a credible comparison for those units under no treatment.</p>
+      <h3>Intermediate · Derive the selection term</h3>
+      <p>The observed treated–control mean contrast equals E[Y(1)−Y(0)|T=1] plus E[Y(0)|T=1]−E[Y(0)|T=0]. The second term is baseline selection in untreated potential outcomes. A causal diagram can represent a prior factor X with arrows to both T and Y. Adjusting X depends on the assumed graph and a comparable sample.</p>
+      <div class="lesson-demo"><h3>Change baseline selection in a synthetic example</h3><label>Baseline treated–control level difference <input type="range" id="academy-selection" min="-10" max="15" value="8"></label><p id="academy-selection-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Interference and anticipation</summary><p>Potential outcomes may depend on a neighbouring unit's treatment as well as one's own. Traffic diversion is an example. If future treatment also changes pre-period behavior, a measured baseline includes anticipation. Ask whether the design identifies treatment on a unit, membership in a network, or another estimand.</p></details>
+      <details><summary>Practice and worked solution</summary><p>A post-only treated–control difference is 12. The treated units would average 8 higher without the intervention. What is the ATT in this teaching setup?</p><p>Subtract 8 from the observed 12, giving 4. In a real nonrandomized study that counterfactual 8 needs independent justification.</p></details>
+      <p><a href="./chronos.html#causal">Read the historical readiness assessment</a> · <a href="https://doi.org/10.1016/j.jeconom.2020.12.001">Callaway and Sant’Anna</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="econometrics">
+      <h2>Econometric research designs</h2>
+      <p><strong>Prerequisites</strong> Potential outcomes, means, linear equations and sampling uncertainty.</p>
+      <h3>Beginner · Use both group and time comparisons</h3>
+      <p>In a panel, each unit appears at multiple dates. A two-period difference-in-differences compares the treated unit's change to the control's change. Group and time fixed effects capture a fixed level gap and a common post effect in the simple two-by-two design.</p>
+      <h3>Intermediate · Read a regression coefficient from four means</h3>
+      <p>Write Y=a+bT+cP+δTP, where T=1 for treated and P=1 after treatment. The four means are a, a+b, a+c and a+b+c+δ. Subtracting differences gives δ=(treated post−treated pre)−(control post−control pre). Identifying a treatment effect requires parallel untreated trends and compatible exposure.</p>
+      <div class="lesson-demo"><h3>Break the parallel trends assumption</h3><label>Difference in untreated trends <input type="range" id="academy-trend" min="-6" max="6" value="3"></label><p id="academy-trend-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Designs for multiple units and times</summary><p>An event study shows changes by relative event date. Staggered adoption and varying effects can invalidate naïve fixed-effects comparisons. Compare appropriate cohorts and eligible untreated units. Synthetic control forms a documented weighted comparison based on pre-period fit. Placebo tests and clustering choices need a defensible assignment model and enough independent units.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Control moves 20→23 and treated moves 28→38. The treated untreated trend would be three larger than the control's. Compute DiD and its bias if ATT is 4.</p><p>DiD=(38−28)−(23−20)=7. Bias is 7−4=3, the unequal untreated trend. A confidence interval around the same biased formula would not restore identification.</p></details>
+      <p><a href="./chronos.html#scenario">Run the synthetic contrast</a> · <a href="https://doi.org/10.1198/jasa.2009.ap08746">Abadie, Diamond and Hainmueller</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="model-uncertainty">
+      <h2>Scientific modelling and uncertainty</h2>
+      <p><strong>Prerequisites</strong> Statistical tests, historical measurement and sensitivity analysis.</p>
+      <h3>Beginner · Different uncertainty calls for different evidence</h3>
+      <p>Sampling uncertainty varies with repeated data collection. Parameter uncertainty concerns inputs with limited evidence. Measurement uncertainty concerns units, rounding or source provenance. Structural uncertainty concerns whether the equations and boundaries fit the world. External validity concerns transport to another population or setting.</p>
+      <h3>Intermediate · Test whether rounding can explain a discrepancy</h3>
+      <p>A number published to a step h has a half-step rounding interval. A reference differs from its rounded counterpart by at most h/2 on that premise. With a display of 69.44 thousand route km, h=10 km. The precise 69,439 km falls within the implied display interval. The comparison cannot resolve a multi-thousand-kilometre discrepancy.</p>
+      <div class="lesson-demo"><h3>Change the reported comparison value</h3><label>Comparison value in route km <input id="academy-rounding" type="range" min="69420" max="69460" step="1" value="69440"></label><p id="academy-rounding-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Sensitivity and replication</summary><p>Track how different plausible input values change an output. A sensitivity grid is conditional on the chosen grid, while repeated sampling can estimate a sampling distribution under a justified model. Independent code validates a calculation. External replication also checks the population, measurements and research design.</p></details>
+      <details><summary>Practice and worked solution</summary><p>If two models perfectly reproduce their own simulations and diverge on a new case, which forms of uncertainty matter?</p><p>Check numerical reproducibility first, then compare model structure, parameters and target populations. Matching archived numbers can eliminate one computational explanation while measurement or external validity questions remain open.</p></details>
+      <p><a href="./chronos.html#provenance">See the historical discrepancy</a> · <a href="./scientia.html">Inspect SCIENTIA’s validation controls</a></p>
     </article>
   </main>
 </body>

@@ -1,4 +1,4 @@
-export const registryVersion=6;
+export const registryVersion=7;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -13,7 +13,7 @@ export const laboratories=[
   {id:"axiom",name:"AXIOM",division:"cognition",question:"How do incentives and framing change decisions across equivalent games?",links:["echo","civilizations"]},
   {id:"echo",name:"ECHO",division:"collective",question:"When does communication improve collective accuracy or amplify shared errors?",links:["mirage","civilizations","scientia","reflex"]},
   {id:"civilizations",name:"GAME OF CIVILIZATIONS",division:"collective",question:"When can cooperation, exchange and institutions emerge under resource constraints?",links:["echo","axiom","chronos"]},
-  {id:"chronos",name:"CHRONOS",division:"collective",question:"How can historical evidence support transparent causal and counterfactual analysis?",links:["civilizations","scientia"]},
+  {id:"chronos",name:"CHRONOS",division:"collective",question:"How can historical evidence support transparent causal and counterfactual analysis?",links:["civilizations","scientia","artha"]},
   {id:"noesis",name:"NOESIS",division:"science",question:"Can computational systems recover hidden rules from observations?",links:["scientia","mirage"]},
   {id:"scientia",name:"SCIENTIA",division:"science",question:"Which research workflows remain reproducible and resist false discovery?",links:["noesis","echo","chronos"]},
   {id:"reflex",name:"REFLEX",division:"economy",question:"How do information and constraints produce feedback in financial markets?",links:["echo","alpha-decay","mirage"]},
@@ -145,7 +145,7 @@ export const researchStudies=[
       result:"data/chronos-scenario.json",manifest:"data/chronos-scenario.manifest.json",config:"experiments/chronos-scenario.json",
       engine:"engine/chronos.mjs",assets:["sources/chronos-rail.json","data/processed/chronos-rail.json","data/chronos/timeline.json"],
       concepts:[["Railway electrification","chronos.html#series"],["Measurement and source comparison","chronos.html#provenance"],
-        ["Causal identification","chronos.html#causal"],["Historical events","chronos.html#events"]]}),
+        ["Causal identification","academy.html#causal-inference"],["Historical statistics","academy.html#historical-measurement"],["Historical events","chronos.html#events"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));

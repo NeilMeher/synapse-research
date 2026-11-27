@@ -3,19 +3,29 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Evidence library · SYNAPSE</title>
-  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./catalogue.css">
+  <script type="module" src="./library-view.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
   <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
-    <nav aria-label="Library navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html">Mathematical Academy</a><a href="#studies">Studies</a></nav>
+    <nav aria-label="Library navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html">Mathematical Academy</a><a href="./knowledge.html">Search research</a></nav><button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
   </div></header>
   <main class="wrap section study-page" id="main">
     <div class="section-intro"><div><p class="eyebrow">SYNAPSE · Research evidence</p><h1>Evidence library</h1></div>
       <p>Follow each result from its archived data to the protocol, source commit and independent checks. The collection includes exact benchmarks, synthetic experiments and conditional studies grounded in official data.</p></div>
+    <div class="study-controls">
+      <label>Laboratory <select id="catalogue-lab"><option value="all">All laboratories</option></select></label>
+      <label>Research division <select id="catalogue-area"><option value="all">All divisions</option></select></label>
+      <label>Evidence class <select id="catalogue-evidence"><option value="all">All evidence classes</option></select></label>
+      <label>Study scope <select id="catalogue-scope"><option value="all">All studies</option><option value="single">Single laboratory</option><option value="joint">Interdisciplinary</option></select></label>
+      <label>Finding <select id="catalogue-direction"><option value="all">All directions</option></select></label>
+      <label>Sort by <select id="catalogue-sort"><option value="registry">Registry order</option><option value="name">Title</option><option value="evidence">Evidence class</option><option value="date">Recorded run date</option></select></label>
+    </div>
+    <p id="catalogue-status" role="status"></p>
     <div class="study-pair" id="studies"><!-- research-studies --></div>
     <article class="result-panel study-block"><h2>Review the programme</h2><div class="actions">
-      <a class="quiet" href="./docs/REPRODUCIBILITY.md">Reproduction commands</a><a class="quiet" href="./research/phase2-audit.md">Phase II internal audit</a><a class="quiet" href="./docs/PHASE2_VERIFICATION.md">Phase II verification</a><a class="quiet" href="./docs/CONTRIBUTION_REGISTER.md">Contributions</a>
+      <a class="quiet" href="./docs/REPRODUCIBILITY.md">Reproduction commands</a><a class="quiet" href="./research/phase2-audit.md">Phase II internal audit</a><a class="quiet" href="./docs/PHASE2_VERIFICATION.md">Phase II verification</a><a class="quiet" href="./docs/CONTRIBUTION_REGISTER.md">Contributions</a><a class="quiet" href="./research/programme-quality-register.md">Quality and limitations</a><a class="quiet" href="./research/external-review.md">Independent review package</a><a class="quiet" href="./research/bibliography.json">Bibliography</a>
     </div></article>
   </main>
 </body>

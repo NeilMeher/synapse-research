@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge graph · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./catalogue.css">
+<script type="module" src="./knowledge-view.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a><nav aria-label="Research navigation"><a href="./index.html#map">Research atlas</a><a href="./library.html">Evidence library</a><a href="./academy.html">Mathematical Academy</a></nav><button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button></div></header>
+<main class="wrap section study-page" id="main">
+<div class="section-intro"><div><h1>Scientific knowledge graph</h1></div><p>Follow a research question to its study, source, mathematical prerequisites and evidence. Each relationship names the connection it represents.</p></div>
+<div class="study-controls"><label>Search research <input id="knowledge-search" type="search" maxlength="130" placeholder="Railway electrification, confidence, NPV"></label>
+<label>Type <select id="knowledge-type"><option value="all">All types</option></select></label>
+<label>Relationships <select id="knowledge-rel"><option value="all">All relationships</option></select></label></div>
+<p id="knowledge-status" role="status">Loading the release’s evidence index…</p>
+<p class="catalogue-note">Research about consciousness concerns observable behaviour, calibration or memory. Subjective experience remains outside these experiments.</p>
+<div class="knowledge-layout">
+<section class="result-panel" aria-labelledby="knowledge-matches-title"><h2 id="knowledge-matches-title">Matching records</h2><ol id="knowledge-results" class="catalogue-list"></ol></section>
+<section class="result-panel" aria-labelledby="knowledge-selected"><h2 id="knowledge-selected">Select a record</h2><p id="knowledge-description"></p><p id="knowledge-open"></p><h3>Connected evidence</h3><ul id="knowledge-edges"></ul></section>
+</div></main></body></html>

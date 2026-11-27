@@ -84,3 +84,7 @@ Added four executed NEXUS comparisons, explicit accelerator import accounting, i
 ## v0.12.0 · CHRONOS candidate
 
 Added the official Indian railway historical reconstruction, source audit, geographic comparison, document timeline, causal readiness register and exact teaching examples. Verified the registered historical archive independently.
+
+## v1.0.0 candidate · Research platform
+
+Consolidated all initial laboratories into a typed atlas, searchable evidence catalogue and manuscript reader. Added the historical, causal, econometric and uncertainty Academy modules, a programme quality register, review package and empirical roadmap. Updated pinned GitHub Actions to the Node 24 runtime.

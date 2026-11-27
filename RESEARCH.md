@@ -40,3 +40,5 @@ ARTHA is a national, current-price comparator across two ADB reference years and
 ENERGIA tests illustrative infrastructure finance and utility assumptions. The initial evidence is a deterministic sensitivity study rather than project underwriting. See the [ENERGIA manuscript](papers/energia.md).
 
 NEXUS uses a matched factorial design with fixed hardware capacity and prices. It varies hypothetical local procurement shares independently of modeled PUE and WUE. Read the [NEXUS manuscript](papers/nexus.md) and [internal audit](research/nexus-audit.md).
+
+CHRONOS reconstructed official railway evidence, documented divergent reporting scopes, and withheld causal estimation. Statistical interpretation for all studies is collected in the [programme quality register](research/programme-quality-register.md). The original study results and prior caveats remain part of the evidence record.

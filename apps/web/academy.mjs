@@ -1,5 +1,7 @@
 import {discounted,feasibleFrontier,returnRate} from "./engine/energia.mjs";
 import {solveLinear} from "./engine/artha.mjs";
+import {comparePrecision,describeSeries,spanSummary,syntheticDifferences} from "./engine/chronos.mjs";
+import {curriculum} from "./knowledge.mjs";
 import {byId,pct} from "./view.mjs";
 import {row} from "./study-view.mjs";
 import {setupTheme} from "./theme.mjs";
@@ -139,4 +141,55 @@ try{
   });
 }catch{
   byId("academy-opt-result").textContent="The registered design set is unavailable.";
+}
+
+const academyAnchor=(text,href)=>{
+  const link=document.createElement("a");
+  link.href="./"+href;
+  link.textContent=text;
+  return link;
+};
+byId("academy-concepts").replaceChildren(...curriculum.map(lesson=>{
+  const row=document.createElement("li");
+  row.append(academyAnchor(lesson.name,lesson.route));
+  if(lesson.requires.length){
+    row.append(" · Prerequisites ");
+    lesson.requires.forEach((id,index)=>{
+      const required=curriculum.find(x=>x.id===id);
+      if(index)row.append(", ");
+      row.append(academyAnchor(required.name,required.route));
+    });
+  }
+  return row;
+}));
+updateWhen(["academy-selection"],()=>{
+  const comparison=syntheticDifferences({selection:number("academy-selection")});
+  byId("academy-selection-result").textContent="Post-only difference "+comparison.crossSection+
+    " · known treatment effect "+comparison.truth+" · DiD "+comparison.did+".";
+});
+updateWhen(["academy-trend"],()=>{
+  const comparison=syntheticDifferences({trendGap:number("academy-trend")});
+  byId("academy-trend-result").textContent="DiD "+comparison.did+" · known effect "+comparison.truth+" · bias "+comparison.bias+".";
+});
+updateWhen(["academy-rounding"],()=>{
+  const current=number("academy-rounding"),check=comparePrecision(69439,current,2,1000);
+  byId("academy-rounding-result").textContent=current.toLocaleString("en")+" route km · difference "+check.delta+
+    " km · half-step "+check.halfStep+" km · "+check.status+".";
+});
+try{
+  const response=await fetch("./data/processed/chronos-rail.json");
+  if(!response.ok)throw new Error("Archive unavailable.");
+  const data=await response.json();
+  if(data.schemaVersion!=="chronos-rail-v1")throw new Error("Different historical schema.");
+  const control=byId("academy-rail-base");
+  control.replaceChildren(...data.national.slice(0,-1).map(r=>new Option(r.period.label,String(r.period.endYear))));
+  control.disabled=false;
+  updateWhen(["academy-rail-base"],()=>{
+    const year=Number(control.value);
+    const comparison=spanSummary(describeSeries(data.national,"route",year),year,2025);
+    byId("academy-history-result").textContent="2024–25 index "+(100*comparison.end/comparison.start).toFixed(2)+
+      " · annualized growth "+comparison.cagr.toFixed(2)+"% over "+comparison.years+" years.";
+  });
+}catch{
+  byId("academy-history-result").textContent="The registered historical example is unavailable.";
 }

@@ -1,0 +1,32 @@
+# SYNAPSE programme quality and limitations register
+
+This review assesses the existing manuscripts, archived protocols, reference implementations and reported controls. All rows are computational research records. Independent human scientific review and outside replication are pending for each study. Reproduction within SYNAPSE supports numerical fidelity. It leaves empirical validity and research novelty open to review.
+
+| Study | Evidence and contribution | Internal check | Material limit or next verification |
+| --- | --- | --- | --- |
+| [ECHO](../papers/echo.md) | Registered shared-source simulation with independent verification baseline. | Exact probabilities and independent reference on both archived phases. | Verify behavioural validity of fixed accuracy and shared source assumptions. |
+| [ECHO 2.0](../papers/echo2.md) | Matched finite and latent dependence designs. Reproduces established moment and finite-bound mathematics. | Separate exact bounds and matched simulation intervals checked. | Exchangeability and topology limit generalization. |
+| [MIRAGE](../papers/mirage.md) | Functional forecast calibration and misleading evidence control. | Identical first-order decisions, exact Brier and log-loss checks. | Synthetic confidence and task correctness measure functional behaviour. Subjective experience remains outside scope. |
+| [REFLEX](../papers/reflex.md) | Auditable synthetic market with imposed price impact. | Independent execution and order-constraint ledgers. | Short simulated horizon and market impact rules determine observed prices. |
+| [CONVERGENCE](../papers/convergence.md) | Integrates three existing components in matched market design. | Both original primary intervals include zero. Independent fill and matched mechanism checks. | Original result remains inconclusive, with no empirical market effect established. |
+| [MORPHEUS](../papers/morpheus.md) | Clean and corrupted histories compare provenance weighting. | Independent chronology and replay across arms. | Clean changes can be handled worse. Behavioural identity is task-specific. |
+| [ALPHA DECAY](../papers/alpha-decay.md) | Registered synthetic crowding and zero-impact control. | Matched capital and independently reconciled fills. | Result is conditional on price impact. No broad estimate for traded assets. |
+| [NOESIS](../papers/noesis.md) | Finite hidden-law discovery and inquiry benchmarks. | Family recovery moments and paired contrasts recalculated. | Disagreement did not establish superiority. Candidate support and grids affect inference. |
+| [SCIENTIA](../papers/scientia.md) | Power and multiplicity in designed observation streams. | Exact-tail audit records the numerical discrepancy and its sensitivity. | Limited null and dependence families. The discrepancy remains traceable to its historical archive. |
+| [EPISTEME](../papers/episteme.md) | Combines finite inquiry, disjoint validation and replication. | All four archives separate proposals from validated claims. | False proposals rise outside the model library. External truth-seeking performance needs tests. |
+| [AXIOM](../papers/axiom.md) | Exact payoff-equivalence implementation controls. | Independent rational arithmetic and deliberate nonequivalent cases. | Formal decision rule. No human framing claims. |
+| [GAME OF CIVILIZATIONS](../papers/civilizations.md) | Repeated production and exchange with matched history regimes. | Independently replayed ledgers and explicit conservation. | Pooled information reduced fulfillment in the stipulated prepaid economy. |
+| [POLIS](../papers/polis.md) | Joint versus individual gain in repeated conserved resources. | Independent matched worlds and explicit individual-loss metrics. | Aggregate improvements include individual intake losses. |
+| [POLIS 2.0](../papers/polis2.md) | Alternate contract and valuation sensitivities. | Matched ledgers and analytic equality under contingent settlement. | Historical or observed contracting behaviour needs an external design. |
+| [ARTHA](../papers/artha.md) | Reconstruction and fixed-coefficient domestic modeling from two ADB years. | Pinned source totals, source accounting, independent round series. | National gross output differs from GDP. Price, capacity, labor and demand shocks are conditional. |
+| [ENERGIA](../papers/energia.md) | Modular energy and cash-flow model under stated assumptions. | Six independent ledgers, sensitivities and bounded enumeration. | Negative base NPV and replacement shortfall are retained. No site or financing commitment is inferred. |
+| [NEXUS](../papers/nexus.md) | Matched bridge from infrastructure ledger to domestic production. | Import exclusions, reconciled capex and independent response vectors. | Mapping and local shares are assumed, and national coefficients do not establish regional effects. |
+| [CHRONOS](../papers/chronos.md) | New historical data reconstruction and version reconciliation. | Pinned originals, detailed source comparison, and independent descriptive and synthetic checks. | Sparse historical benchmarks, competing official scopes and incompatible causal units. |
+
+## Reuse and scientific attribution
+
+- The ARTHA original workbook stays with ADB. The release includes the existing attributed processed subset used by ARTHA/NEXUS. The publisher's terms distinguish KIDB, Data Library, restricted series and third-party rights. Keep the existing exact hashes and avoid additional workbook-level redistribution while dataset-specific confirmation is sought. See the [data reuse register](data-reuse.md).
+- CHRONOS uses factual observations from the Railway Board primary publication and a limited RBI state subset with source attribution. Restricted Economic Survey copies and transcriptions stay local. Historical boundaries drawn by the software are limited to documented text. The release includes no external cartography or route geometries. [CHRONOS source audit](chronos-source-audit.md)
+- NVIDIA and agency material supplies selected documented device constraints and definitions. Official reports and academic texts are linked. The release includes original interactive charts, software and research manuscripts. [ENERGIA sources](energia-sources.md) · [Bibliography](bibliography.json)
+
+[Reproduction commands](../REPRODUCIBILITY.md) · [Project limitations](../LIMITATIONS.md) · [External review package](external-review.md) · [Contribution register](../CONTRIBUTION_REGISTER.md)

@@ -383,13 +383,18 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),12);
+      assert.equal(await page.locator("article.lesson").count(),16);
       assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       assert.match(await page.locator("#academy-energy-result").textContent(),/720\.0 kWh/);
       assert.match(await page.locator("#academy-finance-result").textContent(),/4\.13.*0\.66.*2\.00/);
       await page.locator("#academy-opt-result").filter({hasText:/frontier full-equity/}).waitFor();
       await page.locator("#academy-water-limit").press("Home");
       assert.match(await page.locator("#academy-opt-result").textContent(),/0 feasible.*frontier empty/);
+      await page.locator("#academy-history-result").filter({hasText:/29\.56|129\.56/}).waitFor();
+      assert.match(await page.locator("#academy-selection-result").textContent(),/Post-only difference 12.*known treatment effect 4/);
+      await page.locator("#academy-trend").press("Home");
+      assert.match(await page.locator("#academy-trend-result").textContent(),/DiD -2.*bias -6/);
+      assert.match(await page.locator("#academy-rounding-result").textContent(),/consistent after rounding/);
       await page.locator("#academy-history").selectOption("pooled");
       assert.match(await page.locator("#academy-cooperation-result").textContent(),/Pooled history.*fulfilled.*Gini/);
       await page.locator("#academy-barter").fill("4");
@@ -435,11 +440,38 @@ try {
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){
-        const links=await page.locator("#studies article").nth(index).getByRole("link").evaluateAll(nodes=>nodes.map(n=>n.getAttribute("href")));
-        assert.deepEqual(links,["./"+route,"./data/"+result+".json","./data/"+result+".manifest.json","./papers/"+paper+".md"]);
+        const links=await page.locator("#studies article").nth(index).locator("a").evaluateAll(nodes=>nodes.map(n=>n.getAttribute("href")));
+        assert.deepEqual(links.slice(0,5),["./"+route,"./data/"+result+".json","./data/"+result+".manifest.json","./papers/"+paper+".md","./reader.html?study="+paper]);
         if(width===1440){
           for(const href of links)assert.equal((await page.request.get(new URL(href,base).href)).status(),200);
         }
+      }
+
+
+      await page.locator("[data-study=chronos]").getByText("Evidence and reproduction",{exact:true}).click();
+      assert.ok(await page.locator("[data-study=chronos]").getByRole("link",{name:"Read manuscript"}).isVisible());
+      await page.locator("#catalogue-evidence").selectOption("Official historical data");
+      assert.deepEqual(await page.locator("#studies article:not([hidden]) h2").allTextContents(),["CHRONOS"]);
+      await page.locator("#catalogue-evidence").selectOption("all");
+      await page.locator("#catalogue-direction").selectOption("Inconclusive");
+      assert.deepEqual(await page.locator("#studies article:not([hidden]) h2").allTextContents(),["CONVERGENCE","NOESIS"]);
+      assert.equal((await page.goto(new URL("knowledge.html?q=electrification",base).href)).status(),200);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      await page.locator("#knowledge-type").selectOption("Study");
+      await page.locator("#knowledge-results").getByRole("button",{name:"CHRONOS",exact:true}).click();
+      assert.match(await page.locator("#knowledge-edges").textContent(),/Manuscript|manuscript/);
+      await page.locator("#knowledge-rel").selectOption("has limitation");
+      assert.match(await page.locator("#knowledge-edges").textContent(),/limitation/i);
+      assert.equal((await page.goto(new URL("reader.html?study=chronos",base).href)).status(),200);
+      await page.locator("#study-paper h1").filter({hasText:/CHRONOS/}).waitFor();
+      assert.equal(await page.locator("#study-paper table").count(),1);
+      assert.equal(await page.getByRole("link",{name:"Original Markdown"}).getAttribute("href"),new URL("papers/chronos.md",base).href);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      await page.keyboard.press("Tab");
+      assert.equal(await page.evaluate(()=>document.activeElement.textContent.trim()),"Skip to main content");
+      if(width===1440){
+        const navigation=await page.evaluate(()=>performance.getEntriesByType("navigation")[0].domContentLoadedEventEnd);
+        console.log("Reader DOMContentLoaded at 1440px · "+Math.round(navigation)+" ms");
       }
 
       assert.deepEqual(errors, []);
@@ -491,6 +523,33 @@ try {
     await missingHistory.locator("#chronos-synthetic").selectOption("spillover");
     assert.match(await missingHistory.locator("#chronos-teaching").textContent(),/bias -2/);
     console.log("503 historical data fallback passed");
+    const missingIndex=await browser.newPage();
+    await missingIndex.route("**/data/research-index.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingIndex.goto(new URL("knowledge.html?q=freight",base).href);
+    await missingIndex.getByText(/Registry search remains available/).waitFor();
+    assert.ok(await missingIndex.locator("#knowledge-results li").count()>0);
+    console.log("503 research index fallback passed");
+    if(process.env.AXE_SCRIPT){
+      const violations=[];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html"];
+      for(const width of [390,1440]){
+        const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
+        for(const path of auditRoutes){
+          await page.goto(new URL(path,base).href);
+          await page.evaluate(()=>document.fonts.ready);
+          await page.addScriptTag({path:process.env.AXE_SCRIPT});
+          for(const theme of ["dark","light"]){
+            await page.locator("html").evaluate((element,value)=>{element.dataset.theme=value;},theme);
+            const results=await page.evaluate(()=>window.axe.run({runOnly:["wcag2a","wcag2aa","wcag21a","wcag21aa"]}));
+            violations.push(...results.violations.map(issue=>({width,path,theme,id:issue.id,
+              targets:issue.nodes.map(details=>details.target).slice(0,12)})));
+          }
+        }
+        await page.close();
+      }
+      assert.deepEqual(violations,[]);
+      console.log("axe accessibility checks passed on six routes at two widths in both themes");
+    }
   } finally {
     await browser.close();
   }

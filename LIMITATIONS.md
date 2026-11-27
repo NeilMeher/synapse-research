@@ -24,3 +24,5 @@ ARTHA assumes fixed input coefficients and prices, nationally unconstrained capa
 ENERGIA has no project-specific tariff, quotes, funding commitment, taxes, refinancing or site feasibility. Negative payment coverage and scheduled equity requirements are modeled indicators. No calibrated probability of default is provided.
 
 NEXUS uses stipulated producer-value prices and domestic procurement shares with no measured margins, labor responses, regional estimates, joint cooling feasibility or causal effects. Additional price, commissioning and supplier evidence is needed before an empirical or site-specific study.
+
+CHRONOS uses sparse historical benchmarks and a recent annual national series. Different publisher totals, ambiguous state boundaries, and missing compatible local exposure and outcomes limit causal use. The narrow educational counterfactual and exact synthetic contrasts are separate from historical evidence. See the [central register](research/programme-quality-register.md).

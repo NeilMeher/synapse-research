@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SYNAPSE is an independent research programme on intelligence and complex systems. Explore the reproducible ECHO experiment.">
+  <meta name="description" content="SYNAPSE is an independent research programme on intelligence and complex systems. Trace the evidence behind computational cognition, science, history and economic research.">
   <title>SYNAPSE — Computational Intelligence and Complex Systems</title>
   <link rel="stylesheet" href="./site.css">
   <link rel="stylesheet" href="./site-extra.css">
   <link rel="stylesheet" href="./robustness.css">
+  <link rel="stylesheet" href="./catalogue.css">
   <script type="module" src="./main.mjs"></script>
 </head>
 <body>
@@ -15,10 +16,9 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="SYNAPSE home"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
-      <nav aria-label="Main navigation">
+      <nav class="homepage-nav" aria-label="Main navigation">
         <a href="#map">Research atlas</a>
-        <a href="#echo">ECHO lab</a>
-        <a href="#robustness">Dependence</a>
+        <a href="./knowledge.html">Research search</a>
         <a href="./academy.html">Mathematical Academy</a>
         <a href="./library.html">Evidence library</a>
       </nav>
@@ -26,34 +26,27 @@
     </div>
   </header>
   <main id="main">
-    <section class="hero wrap" id="top" aria-labelledby="title">
-      <div>
-        <p class="eyebrow">Computational intelligence and complex systems</p>
-        <h1 id="title">How do systems <em>learn, decide and discover?</em></h1>
-        <p class="intro">Explore synthetic experiments in cognition and discovery, official-data models of India’s economy, and interactive infrastructure scenarios.</p>
-        <div class="actions">
-          <a class="primary" href="#echo">Enter the ECHO lab <span aria-hidden="true">↗</span></a>
-          <a class="quiet" href="#map">Explore the research atlas</a>
-        </div>
-      </div>
-      <aside class="hero-panel" aria-labelledby="hero-caption">
-        <div class="panel-head"><span id="hero-caption">ECHO · BROWSER EXAMPLE</span><span>SYNTHETIC</span></div>
-        <canvas class="orbit hero-orbit" id="hero-network" aria-hidden="true"></canvas>
-        <p id="hero-status">Loading the synthetic belief trajectory…</p>
-      </aside>
+    <section class="wrap atlas-header" id="top" aria-labelledby="title">
+      <h1 id="title">SYNAPSE research atlas</h1>
+      <p>How do systems learn, decide and discover? Explore the laboratories, trace their evidence and learn the mathematics behind the results.</p>
+      <form action="./knowledge.html" method="get" class="actions" aria-label="Search the research programme">
+        <label>Search all research <input type="search" name="q" maxlength="130" placeholder="e.g. railway electrification"></label><button class="quiet" type="submit">Search</button>
+      </form>
     </section>
 
     <div class="section-band">
       <section class="wrap section" id="map" aria-labelledby="map-title">
         <div class="section-intro">
-          <div><p class="eyebrow">SYNAPSE research programme</p><h2 id="map-title">Research atlas</h2></div>
+          <div><h2 id="map-title">Explore the laboratories</h2></div>
           <p>Select a laboratory to see its question, status and research dependencies.</p>
         </div>
+        <details class="list-view"><summary>Browse the laboratory list</summary><ul id="lab-list"></ul></details>
         <div class="map-toolbar">
           <label>Search laboratories <input type="search" id="lab-search" placeholder="e.g. metacognition"></label>
           <label>Division <select id="division"><option value="all">All divisions</option></select></label>
           <label>Status <select id="lab-status" aria-label="Status"><option value="all">All statuses</option><option value="executed">Studies executed</option><option value="proposed">Proposed</option></select></label>
-          <label>Relationships <select id="relationships"><option value="all">All connections</option><option value="tested">Executed joint studies</option><option value="focus">Selected lab only</option><option value="none">Hide connections</option></select></label>
+          <label>Evidence class <select id="lab-evidence"><option value="all">All evidence classes</option></select></label>
+          <label>Relationships <select id="relationships"><option value="all">All connections</option><option value="tested">Executed work</option><option value="dependency">Validated dependency</option><option value="method">Shared methods</option><option value="question">Shared questions</option><option value="proposed">Proposed relationships</option><option value="focus">Selected lab only</option><option value="none">Hide connections</option></select></label>
           <label class="atlas-check"><input type="checkbox" id="focus-map"> Focus on selected lab</label>
           <div class="actions map-controls"><button id="zoom-out" class="quiet" aria-label="Zoom out" type="button">−</button><button id="zoom-in" class="quiet" aria-label="Zoom in" type="button">+</button><button id="fit-map" class="quiet" type="button">Fit graph</button><button id="reset-map" class="quiet" type="button">Reset view</button></div>
         </div>
@@ -64,11 +57,14 @@
           <article class="map-detail" id="lab-detail" aria-live="polite"></article>
         </div>
         <p id="map-empty" role="status" hidden>No laboratories match your filters.</p>
+        <ul class="atlas-legend" aria-label="Relationship legend"><li><span class="dependency"></span>Validated dependency</li><li><span></span>Executed joint study</li><li><span class="method"></span>Shared method</li><li><span class="question"></span>Shared question</li><li><span class="proposed"></span>Proposed research</li></ul>
         <div class="atlas-journeys"><h3>Guided research journeys</h3><div id="map-journeys"></div></div>
-        <details class="list-view"><summary>Browse the laboratory list</summary><ul id="lab-list"></ul></details>
       </section>
     </div>
 
+    <section class="hero wrap" aria-labelledby="echo-intro"><div><h2 id="echo-intro">Explore a synthetic network</h2><p class="intro">Follow how independent or shared evidence changes a network’s decisions.</p><div class="actions"><a class="primary" href="#echo">ECHO lab</a><a class="quiet" href="#robustness">Dependence</a></div></div>
+      <aside class="hero-panel" aria-labelledby="hero-caption"><div class="panel-head"><span id="hero-caption">ECHO · BROWSER EXAMPLE</span><span>SYNTHETIC</span></div>
+      <canvas class="orbit hero-orbit" id="hero-network" aria-hidden="true"></canvas><p id="hero-status">Loading the synthetic belief trajectory…</p></aside></section>
     <div class="section-band">
       <section class="wrap section" id="robustness" aria-labelledby="robust-title">
         <div class="section-intro">
@@ -109,7 +105,7 @@
               <h3>Distribution of correct reports</h3>
               <p>One exact probability for each count. Lime represents shared source. Blue represents beta-binomial.</p>
               <canvas id="robust-counts" aria-hidden="true"></canvas>
-              <div class="table-scroll"><table>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="Exact matched scenarios"><table>
                 <caption>Exact values under the matched scenarios</caption>
                 <thead><tr><th>Dependence law</th><th>Reliability</th><th>Correlation</th><th>Majority</th><th>All wrong</th><th>All correct</th><th>Hub accuracy</th></tr></thead>
                 <tbody id="robust-summary"></tbody>
@@ -132,12 +128,12 @@
             <div class="result-panel">
               <h3>Forecasts under misspecification</h3>
               <p>Brier and log loss score probability forecasts. Lower values are better. High-confidence errors have confidence of at least 90%.</p>
-              <div class="table-scroll"><table><caption>Exact binary forecast scores</caption><thead><tr><th>True law</th><th>Assumed law</th><th>Accuracy</th><th>Brier</th><th>Log loss</th><th>High-confidence errors</th></tr></thead><tbody id="robust-forecast"></tbody></table></div>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="Exact binary forecast scores"><table><caption>Exact binary forecast scores</caption><thead><tr><th>True law</th><th>Assumed law</th><th>Accuracy</th><th>Brier</th><th>Log loss</th><th>High-confidence errors</th></tr></thead><tbody id="robust-forecast"></tbody></table></div>
               <details><summary>Inspect reliability bins</summary><div id="robust-calibration"></div></details>
             </div>
             <div class="result-panel">
               <h3>Accuracy and verification cost</h3>
-              <div class="table-scroll"><table><caption>Exact results with equally sized report budgets</caption><thead><tr><th>Dependence law</th><th>Original accuracy</th><th>Verified accuracy</th><th>Net utility</th><th>Best count at this cost</th></tr></thead><tbody id="robust-verification"></tbody></table></div>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="Results by verification budget"><table><caption>Exact results with equally sized report budgets</caption><thead><tr><th>Dependence law</th><th>Original accuracy</th><th>Verified accuracy</th><th>Net utility</th><th>Best count at this cost</th></tr></thead><tbody id="robust-verification"></tbody></table></div>
               <details><summary>Read every replacement budget</summary><div class="table-scroll"><table><caption>Net utility at each budget</caption><thead><tr><th>Count</th><th>Shared source</th><th>Beta-binomial</th></tr></thead><tbody id="robust-frontier"></tbody></table></div></details>
             </div>
           </div>
@@ -148,7 +144,7 @@
           <p id="robust-study-status" role="status">Loading ECHO 2.0 results…</p>
           <p>Exact majority by correlation. The shaded range connects the sharp bounds at the sampled grid points. It denotes a range of compatible laws.</p>
           <canvas id="robust-curve" aria-hidden="true"></canvas>
-          <div class="table-scroll"><table>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Exact bounds and sampling cross-check"><table>
             <caption>Exact majority, finite moment bounds and paired sampling cross-check</caption>
             <thead><tr><th>Correlation</th><th>Shared source</th><th>Beta-binomial</th><th>Sharp bounds</th><th>Sampled gap</th></tr></thead>
             <tbody id="robust-grid"></tbody>

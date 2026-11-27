@@ -3,7 +3,8 @@ import {createHash} from "node:crypto";
 import {cpSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync} from "node:fs";
 import {posix} from "node:path";
 import {validateResults} from "../engine/contracts.mjs";
-import {journeys,researchStudies,registryVersion} from "../apps/web/research-registry.mjs";
+import {journeys,laboratories,researchStudies,registryVersion} from "../apps/web/research-registry.mjs";
+import {buildKnowledge,evidenceClass,findings,keyMeasurements} from "../apps/web/knowledge.mjs";
 
 const root = new URL("../", import.meta.url);
 const from = path => new URL(path, root);
@@ -41,7 +42,7 @@ for (const study of researchStudies) {
   for(const path of [study.config,study.pilotConfig,...(study.assets??[])])if(path)copies.push([path,path]);
 }
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
-for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md"]) {
+for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
 }
 copies.push(["LICENSE","LICENSE"]);
@@ -52,10 +53,35 @@ for (const [source, target] of copies) {
 }
 const escape=value=>value.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
 const link=(label,path)=>'<a href="./'+escape(path)+'">'+escape(label)+'</a>';
-const cards=researchStudies.map(study=>
-  '<article class="result-panel"><h2>'+link(study.name,study.route)+'</h2><p>'+escape(study.description)+'</p><ul>'+
-  [["Study data",study.result],["Manifest",study.manifest],["Manuscript",study.manuscript]]
-    .map(([label,path])=>"<li>"+link(label,path)+"</li>").join("")+"</ul></article>").join("\n");
+
+const archiveDate=study=>{
+  const source=JSON.parse(text(study.manifest.replace(/^data\//,"results/")));
+  const date=source.endUtc??source.completedAt??source.endTime??"";
+  return /^\d{4}-\d\d-\d\d/.test(date)?date.slice(0,10):"";
+};
+const cards=researchStudies.map(study=>{
+  const [direction,finding,limitation]=findings[study.id];
+  const date=archiveDate(study);
+  const evidence=[["Study data",study.result],["Manifest",study.manifest],["Manuscript",study.manuscript],
+    ["Read manuscript","reader.html?study="+study.id],["Protocol",study.protocol],["Learning guide",study.learning],
+    ["Review evidence",study.audit??study.manuscript],["Reproduction commands","REPRODUCIBILITY.md"]];
+  const [value,comparison,interpretation]=keyMeasurements[study.id];
+  return '<article class="result-panel" data-study="'+escape(study.id)+'" data-date="'+date+'"><h2>'+link(study.name,study.route)+
+    '</h2><p>'+escape(study.description)+'</p><p><strong>'+escape(evidenceClass(study))+'</strong> · '+escape(study.studyIds.at(-1))+
+    (date?' · run completed '+date:'')+'</p><p class="study-finding"><strong>'+escape(direction)+'</strong> · '+escape(finding)+
+    '</p><p class="measurement"><strong>'+escape(value)+'</strong> · '+escape(comparison)+'<br><small>'+escape(interpretation)+
+    '</small></p><p>'+escape(limitation)+'</p><details><summary>Evidence and reproduction</summary><ul>'+evidence
+    .map(([label,path])=>"<li>"+link(label,path)+"</li>").join("")+"</ul><p>"+escape(study.humanReview)+"</p></details></article>";
+}).join("\n");
+const graph=buildKnowledge();
+const docsByStudy=new Map(researchStudies.map(study=>[study.id,study]));
+const plain=content=>content.replace(/https?:\/\/[^)\s]+/g,"").replace(/[#*|`]/g," ").replace(/\s+/g," ").trim();
+for(const entry of graph.nodes){
+  const doc=docsByStudy.get(entry.id.split("/")[1]);
+  const path=entry.type==="Manuscript"?doc.manuscript:entry.type==="Protocol"?doc.protocol:entry.type==="Data source"?entry.route:null;
+  if(path)entry.searchText=plain(text(path)).slice(0,6500);
+}
+writeFileSync(output("data/research-index.json"),JSON.stringify(graph)+"\n");
 writeFileSync(output("library.html"),text("apps/web/library.html").replace("<!-- research-studies -->",cards));
 writeFileSync(output(".nojekyll"), "");
 
@@ -71,13 +97,16 @@ for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {
   anchors.set(file,{markup, ids:new Set(Array.from(markup.matchAll(/\bid="([^"]+)"/g),m=>m[1]))});
 }
 const packaged=new Set(copies.map(([,target])=>target));
+packaged.add("data/research-index.json");
 function checkLink(file,url) {
   if (!url.startsWith("./")&&!url.startsWith("#")) return;
-  const [target,anchor]=url.split("#");
+  const [address,anchor]=url.split("#");
+  const target=address.split("?")[0];
   const path=target||file;
   const clean=path.startsWith("./")?path.slice(2):path;
   if (!packaged.has(clean)||!existsSync(output(clean))) throw new Error("Missing static resource from "+file+": "+url);
-  if (anchor&&!anchors.get(clean)?.ids.has(anchor)) throw new Error("Broken anchor from "+file+": "+url);
+  const labHash=clean==="index.html"&&laboratories.some(lab=>anchor==="lab-"+lab.id);
+  if (anchor&&!labHash&&!anchors.get(clean)?.ids.has(anchor)) throw new Error("Broken anchor from "+file+": "+url);
 }
 for (const [file,{markup}] of anchors) {
   for (const [,url] of markup.matchAll(/(?:href|src)="([^"]+)"/g)) checkLink(file,url);
@@ -96,5 +125,6 @@ for (const study of researchStudies){
   }
   for(const [,path] of study.concepts)checkLink("Study concepts","./"+path);
 }
+for(const entry of graph.nodes)checkLink("Knowledge graph","./"+entry.route);
 for(const journey of journeys)for(const [,path] of journey.steps)checkLink("Research journeys","./"+path);
 console.log("Built " + copies.length + " public files with checked local links.");

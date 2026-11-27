@@ -1,0 +1,176 @@
+[
+  {
+    "id": "railboard-summary-2024-25",
+    "author": "Ministry of Railways, Railway Board",
+    "title": "Statistical Summary, Indian Railways 2024–25",
+    "year": 2026,
+    "publisher": "Railway Board",
+    "doi": null,
+    "url": "https://rb.indianrailways.gov.in/public/cms/pdf/reports/Indian_Railways_Annual_Statistical_Statements%2C_2024-25_%28Bilingual%29/Statistical_Summary_Sheet%2C_2024-25_%28English%29/2026/06/1782387175503STATISTICAL_SUMMARY_SHEET%2C_2024-25_ENGLISH.pdf",
+    "studies": [
+      "chronos"
+    ],
+    "support": "March route stocks and fiscal freight flows, PDF page 1.",
+    "verification": "Primary page inspected visually and checked against the detail publications."
+  },
+  {
+    "id": "railboard-statement-8",
+    "author": "Ministry of Railways, Railway Board",
+    "title": "Indian Railways Annual Statistical Statements 2024–25",
+    "year": 2026,
+    "publisher": "Railway Board",
+    "doi": null,
+    "url": "https://rb.indianrailways.gov.in/public/cms/pdf/reports/Indian_Railways_Annual_Statistical_Statements%2C_2024-25_%28Bilingual%29/Indian_Railways_Annual_Statistical_Statements%2C_2024-25_%28Bilingual%29/2026/07/1782900835307ANNUAL_STATISTICAL_STATEMENTS_Bilingual_2024-25_%281%29.pdf",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Statement 8 corroborates the precise 2024–25 national route and electrified stocks.",
+    "verification": "Primary table inspected and extracted."
+  },
+  {
+    "id": "rbi-state-route-145",
+    "author": "Reserve Bank of India",
+    "title": "Handbook of Statistics on Indian States 2024–25, Table 145",
+    "year": 2025,
+    "publisher": "Reserve Bank of India",
+    "doi": null,
+    "url": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23594",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Original state mileage, as of March, and boundary note.",
+    "verification": "Primary HTML table inspected."
+  },
+  {
+    "id": "survey-2025-26",
+    "author": "Ministry of Finance, Government of India",
+    "title": "Economic Survey 2025–26 Statistical Appendix",
+    "year": 2026,
+    "publisher": "Ministry of Finance",
+    "doi": null,
+    "url": "https://www.indiabudget.gov.in/economicsurvey/doc/statistical-appendix-in-english.pdf",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Printed pages 54–56 provide source comparisons and footnotes.",
+    "verification": "Primary table and notes inspected. Restricted comparator."
+  },
+  {
+    "id": "pib-eastern-dedication",
+    "author": "Press Information Bureau",
+    "title": "New Bhaupur–New Khurja inauguration",
+    "year": 2020,
+    "publisher": "Government of India",
+    "doi": null,
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1684342&lang=2&reg=48",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Event date and distinction from recurring operating exposure.",
+    "verification": "Primary announcement inspected."
+  },
+  {
+    "id": "callaway-santanna-2021",
+    "author": "Brantly Callaway and Pedro H. C. Sant’Anna",
+    "title": "Difference-in-Differences with multiple time periods",
+    "year": 2021,
+    "publisher": "Journal of Econometrics",
+    "doi": "10.1016/j.jeconom.2020.12.001",
+    "url": "https://doi.org/10.1016/j.jeconom.2020.12.001",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Supports cohort-aware designs and explicit parallel-trends assumptions.",
+    "verification": "Publisher abstract and author manuscript checked."
+  },
+  {
+    "id": "abadie-diamond-hainmueller-2010",
+    "author": "Alberto Abadie, Alexis Diamond and Jens Hainmueller",
+    "title": "Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California's Tobacco Control Program",
+    "year": 2010,
+    "publisher": "Journal of the American Statistical Association",
+    "doi": "10.1198/jasa.2009.ap08746",
+    "url": "https://doi.org/10.1198/jasa.2009.ap08746",
+    "studies": [
+      "chronos"
+    ],
+    "support": "Reference for a weighted donor comparison, discussed as a method rather than applied to CHRONOS.",
+    "verification": "Article metadata and methodological description checked."
+  },
+  {
+    "id": "adb-ind-national-2025",
+    "author": "Asian Development Bank",
+    "title": "India national input-output tables at current prices",
+    "year": 2025,
+    "publisher": "ADB Key Indicators Database",
+    "doi": null,
+    "url": "https://kidb.adb.org/globalization/current",
+    "studies": [
+      "artha",
+      "nexus"
+    ],
+    "support": "Separate domestic and imported intermediate accounting blocks across 2023 and 2024.",
+    "verification": "Pinned source workbook inspected and extracted."
+  },
+  {
+    "id": "un-sut-handbook",
+    "author": "United Nations Statistics Division",
+    "title": "Handbook on Supply and Use Tables and Input-Output Tables with Extensions and Applications",
+    "year": 2018,
+    "publisher": "United Nations",
+    "doi": null,
+    "url": "https://unstats.un.org/unsd/nationalaccount/capdev/resources/details?resourceid=36&resourcetype=handbook",
+    "studies": [
+      "artha",
+      "nexus"
+    ],
+    "support": "Terminology for transactions, industry output and value added.",
+    "verification": "Official handbook locator and scope verified."
+  },
+  {
+    "id": "nvidia-l40s",
+    "author": "NVIDIA",
+    "title": "NVIDIA L40S GPU specifications",
+    "year": null,
+    "publisher": "NVIDIA",
+    "doi": null,
+    "url": "https://www.nvidia.com/en-us/data-center/l40s/",
+    "studies": [
+      "energia",
+      "nexus"
+    ],
+    "support": "Maximum device power of 350 W.",
+    "verification": "Primary manufacturer specification inspected."
+  },
+  {
+    "id": "doe-data-center-guide",
+    "author": "U.S. Department of Energy",
+    "title": "Best Practices Guide for Energy-Efficient Data Center Design",
+    "year": 2024,
+    "publisher": "U.S. Department of Energy",
+    "doi": null,
+    "url": "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf",
+    "studies": [
+      "energia",
+      "nexus"
+    ],
+    "support": "Infrastructure energy boundaries and cooling practice.",
+    "verification": "Official report and related FEMP guidance checked."
+  },
+  {
+    "id": "axelrod-hamilton-1981",
+    "author": "Robert Axelrod and William D. Hamilton",
+    "title": "The Evolution of Cooperation",
+    "year": 1981,
+    "publisher": "Science",
+    "doi": "10.1126/science.7466396",
+    "url": "https://doi.org/10.1126/science.7466396",
+    "studies": [
+      "civilizations",
+      "polis",
+      "polis2"
+    ],
+    "support": "Primary antecedent for repeated cooperation, distinct from the simulated barter outcomes.",
+    "verification": "Article citation and published scope checked."
+  }
+]

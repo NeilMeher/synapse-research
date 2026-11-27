@@ -122,3 +122,9 @@ CHRONOS begins with the [source and design checkpoint](research/chronos-source-c
 ## Phase VII CHRONOS checkpoint
 
 The current branch is `codex/phase7-8-chronos-v1`. Start from the completed [CHRONOS manuscript](papers/chronos.md) and the [source audit](research/chronos-source-audit.md). Reproduce chronos-scenario-001 with `python -B scripts/extract_chronos.py --check`, `python -B scripts/reference_chronos.py` and `node scripts/chronos.mjs verify`. The archived result digest is `ff16f9990b2fd525dd8eb3f489ae508fe5f55cd3cec365d0d812f6fb54f61435`. The earlier CHRONOS source discovery checkpoint is historical. Do not substitute restricted survey cells or infer intervention effects from the national series.
+
+## Phase VIII consolidation
+
+The release candidate integrates the typed study graph and deterministic search, evidence filters, safe Markdown reader, curriculum graph, 16 worked lessons, and review material. Start future research from [the review package](research/external-review.md) and [the proposed empirical programme](research/future-empirical-programme.md). Earlier roadmap entries describing CHRONOS as a proposal are historical. The live revision and validation status are recorded on the GitHub release. Use the existing default-branch Pages workflow for future reviewed fast-forwards.
+
+[Phase VII and VIII execution register](research/phase7-8-release-report.md)

@@ -65,6 +65,7 @@ jobs:
       - run: python -B scripts/reference_nexus.py
       - run: node scripts/nexus.mjs verify
       - run: python -B scripts/extract_chronos.py --check
+      - run: python -B scripts/test_chronos_sources.py
       - run: python -B scripts/reference_chronos.py
       - run: node scripts/chronos.mjs verify
       - run: python -m pip install --disable-pip-version-check jsonschema==4.26.0

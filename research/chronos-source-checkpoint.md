@@ -1,5 +1,7 @@
 # CHRONOS source discovery and design checkpoint
 
+Historical checkpoint from Phase VI. See the [executed CHRONOS manuscript](../papers/chronos.md) and [source reconciliation](chronos-source-audit.md) for the current evidence.
+
 ## Initial direction
 
 Start with an evidence reconstruction for Indian railway operations and electrification. The national series reports route length and freight with dated coverage footnotes. The state-level route series adds geographic granularity. Neither supplies the date each route was energized or a comparison group with a credible reason for a different exposure trajectory.

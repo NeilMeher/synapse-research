@@ -29,7 +29,7 @@ function formatContrast(contrast) {
 
 function renderTable() {
   const body = byId("noesis-summary-table");
-  body.innerHTML = "";
+  body.replaceChildren();
   for (const arm of dataset.arms) {
     const tr = node("tr");
     const m = arm.metrics;
@@ -47,7 +47,7 @@ function renderTable() {
 
 function renderTrace(replay) {
   const body = byId("noesis-trace-body");
-  body.innerHTML = "";
+  body.replaceChildren();
   for (let i = 0; i <= currentStep && i < replay.trace.length; i++) {
     const t = replay.trace[i];
     const tr = node("tr");

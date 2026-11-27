@@ -132,3 +132,7 @@ NEXUS executed nexus-scenario-001 after independent validation of both input lab
 ## Phase VII · CHRONOS milestone
 
 The Phase VII/VIII branch started from v0.11.0, `a1c02c48708d09e66200a818cfe78a440f374c9d`. CHRONOS executed chronos-scenario-001 after its design freeze at `9cb494d`. The independent reference reproduced 102 values, 18 spans, nine association pairs, four conditional scenarios and five exact synthetic cases. Historical causal estimation is withheld for incompatible geography, missing comparable outcomes and missing comparison units. The v0.12.0 candidate adds the validated historical workbench, and the next development task is typed knowledge graph, search, evidence catalogue and Academy consolidation.
+
+## Phase VIII integrated checkpoint
+
+The registry now drives the 12-laboratory atlas, 18-study catalogue, documented finding classifications, deterministic search and 16 Academy lessons. Historical figures and the teaching data have different scope. Further empirical work and external reviewer verification remain pending. The default release branch is `codex/foundation`, restricted by the existing Pages environment. The stable release metadata and shared release notes record exact validated revisions.

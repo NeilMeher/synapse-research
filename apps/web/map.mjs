@@ -1,6 +1,7 @@
+import {evidenceClass,findings,labConnection} from "./knowledge.mjs";
 import {byId, canvasContext, line, node, palette} from "./view.mjs";
 
-import {directStudies, divisions, journeys, laboratories as labs, researchStudies, sharedStudy} from "./research-registry.mjs";
+import {directStudies, divisions, journeys, laboratories as labs, researchStudies} from "./research-registry.mjs";
 
 function resource(label, href, className) {
   const link=node("a",label,className);
@@ -16,6 +17,8 @@ export function setupMap() {
   const division = byId("division");
   const relationships = byId("relationships");
   const progress = byId("lab-status");
+  const evidenceType=byId("lab-evidence");
+  for(const label of new Set(researchStudies.map(evidenceClass)))evidenceType.append(new Option(label,label));
   const focus = byId("focus-map");
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const expanded = new Set(divisions.map(([id])=>id));
@@ -47,6 +50,7 @@ export function setupMap() {
       search.value="";
       division.value="all";
       progress.value="all";
+      evidenceType.value="all";
     }
     expanded.add(lab.division);
     filtersChanged();
@@ -118,8 +122,9 @@ export function setupMap() {
         choose(lab);
         detail.focus({preventScroll:true});
       });
-      const connection=sharedStudy(selected.id,lab.id);
-      row.append(button," · ",node("small",connection?"Joint synthetic study":"Proposed research relationship"));
+      const connection=labConnection(selected.id,lab.id);
+      row.append(button," · ",node("small",connection.label),node("p",connection.detail));
+      if(connection.route)row.append(resource("Connection evidence",connection.route));
       related.append(row);
     }
     const breadcrumb=node("nav",undefined,"atlas-breadcrumb");
@@ -140,11 +145,12 @@ export function setupMap() {
     if(direct)detail.append(resource("Open the "+name+" lab",selected.id==="echo"?"index.html#echo":direct.route,"primary"));
     for(const study of researchStudies.filter(study=>study.labs.includes(selected.id))){
       const disclosure=node("details");
-      disclosure.append(node("summary",study.name+" evidence"),node("p",study.contrast));
+      disclosure.append(node("summary",study.name+" evidence"),node("p",study.contrast),
+        node("p",findings[study.id][1]),node("small",findings[study.id][2]));
       const evidence=node("ul");
       for(const [label,href] of [
         ["Study workspace",study.route],["Protocol and model",study.protocol],["Mathematical specification",study.math],
-        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],["Configuration",study.config],["Pilot configuration",study.pilotConfig],["Scientific engine",study.engine],["Audit and limitations",study.audit],
+        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript","reader.html?study="+study.id],["Learning guide",study.learning],["Configuration",study.config],["Pilot configuration",study.pilotConfig],["Scientific engine",study.engine],["Audit and limitations",study.audit],
       ]){
         if(!href)continue;
         const item=node("li");
@@ -164,7 +170,7 @@ export function setupMap() {
       disclosure.append(evidence,node("small",study.evidence+" · "+study.humanReview));
       detail.append(disclosure);
     }
-    detail.append(node("p","Connected laboratories"),related);
+    detail.append(resource("Inspect in knowledge graph","knowledge.html#lab/"+selected.id),node("p","Connected laboratories"),related);
   }
 
   function syncSelection() {
@@ -189,6 +195,8 @@ export function setupMap() {
     mapSpace.style.width = width + "px";
     mapSpace.style.height = height + "px";
     const {context} = canvasContext(byId("map-lines"), width, height);
+    context.setLineDash([]);
+    context.lineWidth=1;
     const middle = [width / 2, height / 2];
     const positions = new Map();
     const place = (element, x, y) => { element.style.left = x + "px"; element.style.top = y + "px"; };
@@ -221,14 +229,16 @@ export function setupMap() {
       for (const id of lab.links) {
         const peer = labs.find(item => item.id === id);
         const key = [lab.id, id].sort().join("/");
-        const documented=Boolean(sharedStudy(id,lab.id));
-        if (seen.has(key) || !visible(peer) ||
-            (relationships.value === "focus" && selected !== lab && selected !== peer) ||
-            (relationships.value === "tested" && !documented)) continue;
+        const {type}=labConnection(lab.id,id);
+        const documented=type==="dependency"||type==="joint";
+        const chosen=relationships.value;
+        if(seen.has(key)||!visible(peer)||(chosen==="focus"&&selected!==lab&&selected!==peer)||
+            (chosen==="tested"&&!documented)||(!["focus","tested","all"].includes(chosen)&&chosen!==type))continue;
         seen.add(key);
-        context.globalAlpha=documented ? .63 : .28;
-        context.strokeStyle=palette(documented?"science":"dim");
-        context.setLineDash(documented?[]:[3,5]);
+        context.globalAlpha=type==="proposed"?.35:.72;
+        context.lineWidth=type==="dependency"?2.5:1.2;
+        context.strokeStyle=palette(type==="dependency"?"bright":type==="method"?"economy":type==="question"?"collective":documented?"science":"dim");
+        context.setLineDash(documented?[]:type==="method"?[7,4]:[2,5]);
         line(context, ...positions.get(lab.id), ...positions.get(id));
       }
     }
@@ -238,6 +248,7 @@ export function setupMap() {
     const phrase = search.value.trim().toLowerCase();
     filter = lab => (division.value === "all" || lab.division === division.value) &&
       (progress.value==="all"||(progress.value==="executed")===Boolean(directStudies.get(lab.id))) &&
+      (evidenceType.value==="all"||researchStudies.some(study=>study.labs.includes(lab.id)&&evidenceClass(study)===evidenceType.value)) &&
       [lab.name,lab.question,status(lab),...researchStudies.filter(study=>study.labs.includes(lab.id))
         .map(study=>[study.name,study.description,study.contrast,...study.concepts.map(([name])=>name)].join(" "))].join(" ").toLowerCase().includes(phrase);
     const first = labs.find(filter);
@@ -267,6 +278,7 @@ export function setupMap() {
     division.value = "all";
     relationships.value="all";
     progress.value="all";
+    evidenceType.value="all";
     focus.checked=false;
     divisions.forEach(([id])=>expanded.add(id));
     zoom=1;
@@ -308,7 +320,7 @@ export function setupMap() {
       }
     });
   }
-  for (const element of [search,division,relationships,progress,focus]) element.addEventListener("input",filtersChanged);
+  for (const element of [search,division,relationships,progress,evidenceType,focus]) element.addEventListener("input",filtersChanged);
   const showList = () => {
     if (narrow.matches) document.querySelector(".list-view").open = true;
     mapDraw();

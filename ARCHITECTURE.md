@@ -37,3 +37,5 @@ ARTHA extracts a pinned official symmetric input–output workbook to processed 
 The ENERGIA ESM kernel exposes annual engineering and project cash ledgers, deterministic discounted summaries and bounded finite comparisons. Its runtime archive embeds the frozen schedule and separate source manifest; browser controls reuse the same kernel.
 
 NEXUS connects the ENERGIA capital ledger to a versioned ADB sector bridge. Only disjoint domestic component values enter the ARTHA final-demand vector. Direct foreign procurement, embodied imported inputs, and operating cash remain distinct. The atlas registry points to the matched results, sources and four associated Academy modules.
+
+The knowledge graph, catalogue and curriculum reuse shared ESM registries. Static build indexing extracts bounded manuscript and source text from tracked documents. The reader creates DOM nodes from structured text and restricts link protocols. CHRONOS retains fiscal periods, source-cell locators, gaps and state boundary annotations and reuses one engine across the CLI and browser. No runtime backend or telemetry is required.

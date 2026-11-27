@@ -12,8 +12,11 @@ SYNAPSE is an independent computational research programme on cognition, collect
 | [ARTHA](https://neilmeher.github.io/synapse-research/artha.html) | Source-accounted national scenarios from ADB India industry tables |
 | [ENERGIA](https://neilmeher.github.io/synapse-research/energia.html) | Engineering and discounted cash-flow scenarios under stipulated terms |
 | [NEXUS](https://neilmeher.github.io/synapse-research/nexus.html) | Matched bridge from a capital ledger to domestic production requirements |
+| [CHRONOS](https://neilmeher.github.io/synapse-research/chronos.html) | Indian railway history, source reconciliation and causal readiness |
 
-Earlier research is indexed in the atlas and evidence library. Protocols, deterministic or seeded replays, source hashes, and independent computational checks accompany completed studies. See [scientific limitations](LIMITATIONS.md) and [contribution disclosure](CONTRIBUTION_REGISTER.md). Independent human review is pending.
+The [knowledge graph and search](https://neilmeher.github.io/synapse-research/knowledge.html), [evidence catalogue](https://neilmeher.github.io/synapse-research/library.html), and [quality register](research/programme-quality-register.md) connect the complete registry. Protocols, deterministic or seeded replays, source hashes, and independent computational checks accompany completed studies. See [scientific limitations](LIMITATIONS.md) and [contribution disclosure](CONTRIBUTION_REGISTER.md). Independent human review is pending.
+
+[Five-minute demonstration](research/portfolio-demonstration.md) · [Independent review package](research/external-review.md) · [Upcoming empirical designs](research/future-empirical-programme.md) · [Contribution guide](CONTRIBUTING.md)
 
 ## Start
 

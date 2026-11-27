@@ -61,7 +61,7 @@ function paint(){
   ctx.fillText(String(first),x(first),height-8);
   ctx.fillText(String(last),x(last)-29,height-8);
   ctx.lineWidth=2;
-  ctx.strokeStyle=theme.getPropertyValue("--accent").trim()||"#5eb3bb";
+  ctx.strokeStyle=theme.getPropertyValue("--bright").trim()||"#5eb3bb";
   ctx.fillStyle=ctx.strokeStyle;
   let previous;
   for(const item of active){
