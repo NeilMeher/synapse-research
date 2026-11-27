@@ -11,9 +11,22 @@ ROOT = Path(__file__).resolve().parents[1]
 Z95 = 1.959963984540054
 
 
-def run_workflows(first, second, full, alpha):
-    def p(z):
-        return math.erfc(abs(z) / math.sqrt(2))
+def exact_p(z):
+    return math.erfc(abs(z) / math.sqrt(2))
+
+
+def archived_p(z):
+    if not z:
+        return 1
+    t = 1 / (1 + 0.2316419 * abs(z))
+    coefficients = (0.319381530, -0.356563782, 1.781477937, -1.821255978, 1.330274429)
+    terms = sum(coefficient * t**degree for degree, coefficient in enumerate(coefficients, 1))
+    value = min(1, math.sqrt(2 / math.pi) * math.exp(-z**2 / 2) * terms)
+    assert abs(value - exact_p(z)) < 1.6e-7
+    return value
+
+
+def run_workflows(first, second, full, alpha, p):
 
     combined = list(map(p, full))
     m = len(combined)
@@ -107,9 +120,20 @@ def verify(phase):
         assert cell["design"]==registered
         scores = {policy: {key: [] for key in info} for policy,info in cell["policies"].items()}
         differences=[]
+        exact_differences=[]
+        changed = {}
         for trial in range(config["trials"]):
             truth,a,b,full=world(registered,rng)
-            choices=run_workflows(a,b,full,registered["alpha"])
+            alpha=registered["alpha"]
+            choices=run_workflows(a,b,full,alpha,archived_p)
+            exact=run_workflows(a,b,full,alpha,exact_p)
+            for policy in choices:
+                if choices[policy][0] != exact[policy][0]:
+                    changed[policy] = changed.get(policy, 0) + 1
+            response = "fdp" if registered["signals"] else "fwer"
+            adjusted = "bh" if registered["signals"] else "holm"
+            exact_differences.append(outcomes(truth,registered["n"],*exact["unadjusted"])[response]
+                                     - outcomes(truth,registered["n"],*exact[adjusted])[response])
             if trial==0:
                 for key,actual in zip(("truth","first","second","full"),(truth,a,b,full),strict=True):
                     for x,y in zip(actual,cell["replay"]["data"][key],strict=True):
@@ -135,6 +159,10 @@ def verify(phase):
                 except AssertionError as exc:
                     raise AssertionError((stem,registered["id"],policy,key,len(values),cell["policies"][policy][key])) from exc
         check_summary(differences,cell["contrast"],2.241402727604947)
+        assert sum(changed.values()) <= 2
+        assert abs(mean(exact_differences) - mean(differences)) <= 1 / config["trials"]
+        print(stem, registered["id"], "exact-tail changed programmes:", changed,
+              "exact-tail primary difference:", round(mean(exact_differences), 9))
         if cell["reference"]:
             alpha,m=registered["alpha"],registered["hypotheses"]
             expected=1-(1-alpha)**m
