@@ -35,3 +35,7 @@ Run `node scripts/scientia.mjs verify` and `python -B scripts/reference_scientia
 ## EPISTEME v1 and the public atlas
 
 Run `node scripts/episteme.mjs verify` and `python -B scripts/reference_episteme.py`. The Python implementation reproduces the Bayesian update recursively, then rechecks the independent residual gates, all aggregate estimates and the archived first replays. The [frozen protocol](research/episteme-confirmatory.md) identifies the two primary comparisons. The build checks the registry's research paths and verifies the bytes of every public pilot and confirmatory data file against its manifest. Rebuilding the atlas does not change the archived results. The release CI installs the pinned QA-only JSON Schema validator and runs `python -B scripts/check_schemas.py`. The website and experiment runners do not require that dependency.
+
+## AXIOM finite benchmark
+
+Run `node scripts/axiom.mjs verify` and `python -B scripts/reference_axiom.py`. These check the frozen input hashes, archive bytes, deterministic reconstruction and all 80 cases via independent rational utility calculations. The finite benchmark uses exact enumeration. `node scripts/axiom.mjs pilot` writes a new archive only in a clean reproduction checkout with no result files and frozen inputs. [Protocol](research/axiom-pilot.md) · [Audit](research/axiom-audit.md)

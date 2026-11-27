@@ -45,3 +45,9 @@
 - Added matched synthetic discovery, disjoint validation and replication, both archived studies and independent reconstruction.
 - Added the registry-backed evidence library, expandable atlas, status and relationship filters, and five guided journeys.
 - Added five Mathematical Academy modules and executable worked examples.
+
+## 0.6.0 · AXIOM
+
+- Published an exact finite payoff- and belief-permutation benchmark with a separately implemented rational reference.
+- Added an editable two-player laboratory, intentional feedback controls, and a game-theory Academy module.
+- Extended the registry to represent a completed finite benchmark with a single archived phase.

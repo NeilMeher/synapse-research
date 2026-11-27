@@ -6,6 +6,7 @@ import {answerConfidence,evaluateConfidence} from "./engine/confidence.mjs";
 import {initializeMarket,inspectAccounts,reconcile,submitOrder} from "./engine/market.mjs";
 import {binaryInformationGain} from "./engine/information.mjs";
 import {nullFamilyRisk,rankP} from "./engine/scientia.mjs";
+import {bestResponse,expectedNumerators,logitResponse} from "./engine/game-theory.mjs";
 
 setupTheme();
 
@@ -64,4 +65,15 @@ updateWhen(["academy-tests","academy-level","academy-rule"],()=>{
   byId("academy-testing").textContent=n+" independent nulls at "+pct(alpha)+" · family risk "+
     precise(nullFamilyRisk(n,alpha))+" · adjusted-example reports "+
     (found.length?found.map(i=>"H"+(i+1)).join(", "):"none")+".";
+});
+
+updateWhen(["academy-opponent"],()=>{
+  const weight=number("academy-opponent");
+  const matrix=[[[4,4],[0,3]],[[3,0],[3,3]]];
+  const utilities=expectedNumerators(matrix,[weight,4-weight]).map(value=>value/4);
+  const best=bestResponse(utilities)[0];
+  const logit=logitResponse(utilities)[0];
+  byId("academy-strategy-result").textContent="Opponent A "+pct(weight/4)+" · utilities "+
+    utilities.map(value=>value.toFixed(2)).join(" and ")+" · action A probability "+
+    pct(best)+" under uniform best response, "+pct(logit)+" under logit.";
 });

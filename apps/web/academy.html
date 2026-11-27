@@ -23,6 +23,7 @@
       <li><a href="#accounting">Market accounting</a></li>
       <li><a href="#discovery">Model selection and information</a></li>
       <li><a href="#testing">Tests and false discovery</a></li>
+      <li><a href="#strategy">Game theory and expected utility</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -132,6 +133,23 @@
       <details><summary>Advanced · Compare error control and power under a common budget</summary><p>If a selection stage devotes half of n to screening and half to independent validation, the second-stage standardized signal is μ√(n/2) for known unit variance. The full test uses μ√n. Independent data protect validation from first-stage selection. This alone does not restore power lost from using a smaller validation sample.</p></details>
       <details><summary>Practice and worked solution</summary><p>For [0.005, 0.012, 0.028, 0.140] at α=0.05, which tests pass Holm and BH?</p><p>Holm's first two thresholds are 0.0125 and approximately 0.0167. The third is 0.025, so Holm stops with two rejections. BH's third threshold is 0.0375 and its fourth is 0.05. The fourth fails and the third passes, so BH rejects the first three.</p></details>
       <p><a href="./scientia.html#family-risk">SCIENTIA family risk explorer</a> · <a href="./docs/scientia-learning.md">SCIENTIA guide</a> · <a href="https://www.ime.usp.br/~abe/lista/pdf4R8xPVzCnX.pdf">Holm's original paper</a> · <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.2517-6161.1995.tb02031.x">Benjamini and Hochberg's original paper</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="strategy">
+      <h2>Game theory and expected utility</h2>
+      <p><strong>Prerequisites</strong> Weighted averages, probability distributions and table coordinates.</p>
+      <h3>Beginner · Read a payoff cell</h3>
+      <p>The row and column identify the two players' actions. A cell such as (4, 4) gives the focal player 4 and the opponent 4. A pure strategy selects one action in this game. A mixed strategy assigns probabilities to both actions.</p>
+      <h3>Intermediate · Best responses and domination</h3>
+      <p>If the opponent uses probability q for its first action, the first row's utility is q times the first payoff plus (1−q) times the second. The row with higher utility is a best response. A strictly dominant action beats the other row against each pure opponent action and therefore against every mixture. Mutual best responses give a Nash equilibrium.</p>
+      <div class="lesson-demo">
+        <h3>Find the tie in the assurance game</h3>
+        <div class="table-scroll"><table><caption>Canonical payoff pairs</caption><thead><tr><th>Focal action</th><th>Opponent A</th><th>Opponent B</th></tr></thead><tbody><tr><th>A</th><td>(4, 4)</td><td>(0, 3)</td></tr><tr><th>B</th><td>(3, 0)</td><td>(3, 3)</td></tr></tbody></table></div>
+        <label>Opponent A probability in quarters <input id="academy-opponent" type="range" min="0" max="4" step="1" value="2"></label>
+        <p id="academy-strategy-result" aria-live="polite"></p>
+      </div>
+      <details><summary>Advanced · Relabeling and stochastic responses</summary><p>When a column permutation sends each displayed column j to canonical column σ(j), also replace its weight by qσ(j). The weighted sum stays the same by reindexing. Moving rows permutes utilities. Applying the inverse row map then recovers the canonical response. A logit response gives higher utilities larger probability with sensitivity β. The AXIOM calculation stipulates the opponent distribution. A quantal response equilibrium solves responses jointly.</p></details>
+      <details><summary>Practice and worked solution</summary><p>At q = 3/4, find the assurance game's best response. Move the first opponent action to the second displayed column while leaving the 3/4 weight on the first displayed column. What changed?</p><p>The initial utilities are 4×(3/4) = 3 and 3. Both actions are best responses. Failing to carry the weight gives the first canonical opponent action probability 1/4 and changes the first row utility to 1. The second row stays at 3. The inverse-mapped distribution changes from (1/2, 1/2) to (0, 1), a total variation of 1/2.</p></details>
+      <p><a href="./axiom.html#axiom-workbench">Edit payoffs and swap actions in AXIOM</a> · <a href="./docs/axiom-learning.md">AXIOM guide</a> · <a href="https://doi.org/10.1006/game.1995.1023">McKelvey and Palfrey, Quantal Response Equilibria</a></p>
     </article>
   </main>
 </body>

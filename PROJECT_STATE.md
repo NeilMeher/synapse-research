@@ -63,7 +63,7 @@ The integrated pages link to all run manifests, protocols, published metrics, ma
 | MORPHEUS v0.1 | 60-history pilot and 400 paired 16-step confirmatory histories across 8 architectures & 4 ablations (`K=4`). Under corruption, `provenance` beat `keyword` by `+27.39 pp` (`[25.85, 28.93] pp`, `100%` goal preservation); on clean histories, `provenance` scored `-11.61 pp` (`[-12.46, -10.76] pp`) due to static trust weighting over un-flagged `direct_observation` updates. | `python scripts/reference_morpheus.py` and `node scripts/morpheus.mjs verify` |
 | ALPHA DECAY v0.1 | 40-episode pilot and 300 paired 8-round confirmatory episodes across 7 arms reusing `engine/market.mjs`. At `impact=4`, `9` vs `1` adopters reduced alpha by `-0.4100%` (`[-0.4442%, -0.3757%]`); `impact=0` control showed `-0.0012%` (`[-0.0388%, +0.0364%]`). Python replayed 1,223 confirmatory fills. | `python scripts/reference_alpha_decay.py` and `node scripts/alpha-decay.mjs verify` |
 
-## Phase III release preparation
+## Historical Phase III release preparation
 
 Local verification passed 27 unit tests, all seven reference and archive suites, production build and browser smoke checks at 360, 390, 768 and 1440 pixels. Browser tests now verify the seven distinct evidence entries and both new laboratory workflows, including the MORPHEUS intervention and ALPHA DECAY scenario and round controls. The production build contains 134 checked files. The expected Pages target is this reviewed Phase III branch after passing GitHub CI.
 
@@ -88,3 +88,7 @@ The atlas uses registry v1 to index twelve laboratories and ten study entries. C
 The public site is at v0.5.0 from commit e5e40c307f07851b88721c8938802b49326b38e8. [Candidate CI 45962138534](https://github.com/NeilMeher/synapse-research/actions/runs/45962138534) and [Pages run 45962338932](https://github.com/NeilMeher/synapse-research/actions/runs/45962338932) passed. The public release metadata agreed with that commit, and all six Phase IV result files matched their local SHA-256 hashes. Chrome passed the production and public smoke suites at 360, 390, 768 and 1440 pixels plus the intentional 503 fallback. The final unit suite passed 42 of 42. Twelve documents passed the four versioned JSON schemas. All ten study families ran deterministic and independent reference checks in CI. The workflow currently emits a deprecation notice for pinned actions that target Node 20 and run on Node 24.
 
 AXIOM has a [design checkpoint](research/axiom-design.md). The next implementation is its payoff-permutation and inverse scoring control and finite pilot. Human review is pending.
+
+## Phase V · AXIOM exact benchmark
+
+Phase V starts from be654087d558a79e0df11e2acfb3369cef4d5457 on codex/phase5-social-systems. AXIOM froze its exact benchmark inputs at f0fce74. The executed archive contains 20 tasks, 80 valid presentations and 40 deliberate belief-remapping controls. Zero utility, tie or equivalence failures occurred in valid views. The positional rule changed in all 40 row swaps. Improper belief remapping made 32 views inequivalent, changed 24 utility vectors and changed 16 utility response distributions. The independent Fraction reference checked all traces. The next scientific slice is a small conserved artificial barter economy with matched information treatments and a hand-calculated specialization control.

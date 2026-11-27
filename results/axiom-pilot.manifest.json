@@ -1,0 +1,31 @@
+{
+  "id": "axiom-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "f0fce7436f12252230f8b41118654b360ced0cbc",
+  "inputs": {
+    "experiments/axiom-pilot.json": "9d131990e9454be12cf5f2d61fdd62190d11f7583a20bf35a0b725022f78b3a3",
+    "scripts/axiom.mjs": "3e6f3c405ae0c32046a67bdb3a871aac9c13eb4868b95c3372899c134c606cfa",
+    "scripts/reference_axiom.py": "bb0216772f2a7d898edf50c23575464b17a7be8bfc6234f1c968e1388fa238a9",
+    "engine/axiom.mjs": "c4bf97746a5c856abac9ebdac2119e5183047a3d46cdd7f035014582313aa9ec",
+    "engine/game-theory.mjs": "842db8690b5a148deb23f52c86e8df853ab44758230d4e2c2144f33eeb02500c",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "schemas/axiom-finite-v1.json": "37803939af31afc416b4b5714472b7dbde1bf4ca85287b1d1d7827443b214469",
+    "research/axiom-pilot.md": "593f23f2327874ccbb55627388c034d745d4abd7efe3a9878741b44275dc28f6"
+  },
+  "configSha256": "b5c582650d89061e996dd44c15d43bb888ce42e090ea9b29afc90e3d1cfb4223",
+  "output": {
+    "path": "results/axiom-pilot.json",
+    "sha256": "5a433b6e598bf66f004ea81318feaf6294441e1d08dbda9c725b41fa97eda3fe",
+    "bytes": 135601
+  },
+  "startUtc": "2026-11-27T08:14:42.375Z",
+  "endUtc": "2026-11-27T08:14:42.400Z",
+  "runtimeMs": 19.739199999999983,
+  "observedRssBytes": 45150208,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

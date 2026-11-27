@@ -1,4 +1,4 @@
-export const registryVersion=1;
+export const registryVersion=2;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -29,6 +29,7 @@ function study(id,name,route,labs,description,contrast,options={}){
     evidence:"Synthetic computation",
     humanReview:"Independent human review pending",
     archiveStem:stem,
+    archivePhases:["pilot","confirmatory"],
     studyIds:[stem+"pilot-001",stem+"confirmatory-001"],
     manuscript:"papers/"+id+".md",
     protocol:"research/"+(id==="echo"?"echo-protocol-":stem)+"confirmatory.md",
@@ -76,6 +77,13 @@ export const researchStudies=[
     "Matched hidden-law inquiries through independent validation and replication.",
     "Compare correct final claims in library and false proposals outside the library.",
     {math:"research/episteme-confirmatory.md"}),
+  study("axiom","AXIOM","axiom.html",["axiom"],
+    "Exact utility and decision controls for payoff-preserving game presentations.",
+    "Compare canonical action responses and deliberate belief- and position-dependent controls.",
+    {evidence:"Exact finite benchmark",archivePhases:["pilot"],studyIds:["axiom-pilot-001"],
+      protocol:"research/axiom-pilot.md",math:"research/axiom-design.md",audit:"research/axiom-audit.md",
+      result:"data/axiom-pilot.json",manifest:"data/axiom-pilot.manifest.json",
+      config:"experiments/axiom-pilot.json",engine:"engine/axiom.mjs"}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));

@@ -70,7 +70,7 @@ try {
       assert.equal(await page.locator("#lab-detail").getByRole("link",{name:"Results and dataset"}).getAttribute("href"),"./data/mirage-confirmatory.json");
       await page.getByRole("searchbox",{name:"Search laboratories"}).fill("");
       await page.getByLabel("Status",{exact:true}).selectOption("proposed");
-      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),5);
+      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),4);
       await page.getByLabel("Status",{exact:true}).selectOption("all");
       await labChoice.click();
       await page.getByLabel("Focus on selected lab").check();
@@ -142,7 +142,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
@@ -241,6 +241,24 @@ try {
           await page.getByRole("button",{name:"Reveal simulated truth"}).click();
           assert.match(await page.locator("#episteme-truth").textContent(),/Sine \+ quadratic.*14 disjoint/);
         }
+        if (route==="axiom"){
+          assert.match(await page.locator("#axiom-response").textContent(),/2\.25.*4/);
+          await page.locator("#axiom-presentation").selectOption("both");
+          assert.match(await page.locator("#axiom-columns").textContent(),/Opponent B.*25\.0%.*Opponent A.*75\.0%/);
+          assert.match(await page.locator("#axiom-distance").textContent(),/0\.0000/);
+          await page.locator("#axiom-policy").selectOption("position");
+          assert.match(await page.locator("#axiom-distance").textContent(),/1\.0000/);
+          await page.locator("#axiom-game").selectOption("1");
+          await page.locator("#axiom-policy").selectOption("utility");
+          await page.locator("#axiom-defect").check();
+          assert.match(await page.locator("#axiom-equivalence").textContent(),/fault/);
+          assert.match(await page.locator("#axiom-distance").textContent(),/0\.5000/);
+          await page.getByRole("spinbutton",{name:"Row A, column A, player 1 payoff"}).fill("10");
+          await page.getByRole("button",{name:"Restore registered payoffs"}).click();
+          assert.equal(await page.getByRole("spinbutton",{name:"Row A, column A, player 1 payoff"}).inputValue(),"4");
+          const evidence=await page.request.get(new URL("data/axiom-pilot.json",base).href);
+          assert.equal((await evidence.json()).summary.presentations,80);
+        }
         if (["morpheus","alpha-decay","noesis","scientia","episteme"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
@@ -253,7 +271,9 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),5);
+      assert.equal(await page.locator("article.lesson").count(),6);
+      await page.locator("#academy-opponent").fill("3");
+      assert.match(await page.locator("#academy-strategy-result").textContent(),/3\.00.*3\.00.*50\.0%/);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
       await page.getByLabel("Pairwise correlation").press("End");
       assert.match(await page.locator("#academy-dependence").textContent(),/65\.0% with shared shock and 65\.0%/);
@@ -282,6 +302,7 @@ try {
         ["NOESIS","noesis.html","noesis-confirmatory","noesis"],
         ["SCIENTIA","scientia.html","scientia-confirmatory","scientia"],
         ["EPISTEME","episteme.html","episteme-confirmatory","episteme"],
+        ["AXIOM","axiom.html","axiom-pilot","axiom"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){

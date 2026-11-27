@@ -1,0 +1,7 @@
+.axiom-fault { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.7rem; margin:.85rem 0; }
+.axiom-fault label { display:flex; flex-direction:row; align-items:center; }
+#axiom-inputs input { width:4.5rem; }
+#axiom-matrix td { min-width:5.2rem; background:var(--surface); font-variant-numeric:tabular-nums; }
+#axiom-response meter { width:min(100%,7rem); display:block; accent-color:var(--cognition); }
+#axiom-equivalence { border-inline-start:.2rem solid var(--cognition); padding-inline-start:.7rem; }
+@media(max-width:500px){ #axiom-inputs input { width:3.3rem; padding-inline:.25rem; } }

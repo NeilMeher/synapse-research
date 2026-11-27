@@ -72,6 +72,10 @@ SCIENTIA v0.4.1 was built from b232fd3 by [Pages workflow 45958470019](https://g
 
 Use the Pages release metadata and GitHub Actions to confirm deployed revision and verified jobs. For scientific continuation, begin AXIOM with a small game-theoretic consistency benchmark using equivalent payoff structures and explicit utility assumptions. See ROADMAP.md for dependencies. Human review of the protocol and manuscripts remains pending.
 
-## Exact continuation checkpoint
+## Phase IV continuation checkpoint · superseded by Phase V below
 
 The deployed release is [v0.5.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.5.0) at e5e40c3. The [release metadata](https://neilmeher.github.io/synapse-research/release.json) and [Pages run 45962338932](https://github.com/NeilMeher/synapse-research/actions/runs/45962338932) identify the shipped revision. All four live browser widths and six public Phase IV JSON downloads passed. For a future scientific slice start from [the AXIOM design](research/axiom-design.md) and build its independent payoff-permutation controls. This documentation checkpoint is on the recovery branch. The public deployment remains at the verified release commit.
+
+## Phase V · AXIOM milestone
+
+Continue on codex/phase5-social-systems. The executable, input configuration, independent reference and finite protocol were committed at f0fce74 before running. The [AXIOM pilot manifest](results/axiom-pilot.manifest.json) records the original run and fixed checksum. Its [audit](research/axiom-audit.md) explains expected positive-control failures. AXIOM's finite benchmark exposes implementation invariance and does not estimate behavioural or moral effects. Next, validate exact resource flows, atomic transfers, contingent delivery and information timing in GAME OF CIVILIZATIONS. Preserve the finite benchmark as a standalone release.

@@ -12,6 +12,7 @@ FAMILIES = {
     "echo-dependence-v1": ("results/echo2-pilot.json", "results/echo2-confirmatory.json"),
     "scientia-v1": ("results/scientia-pilot.json", "results/scientia-confirmatory.json"),
     "episteme-v1": ("results/episteme-pilot.json", "results/episteme-confirmatory.json"),
+    "axiom-finite-v1": ("results/axiom-pilot.json",),
 }
 
 for name, paths in FAMILIES.items():

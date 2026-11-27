@@ -100,6 +100,7 @@ export function setupMap() {
     if(lab.id==="echo")return robustnessReady?"ECHO v1 and 2.0 · Experiments executed":
       artifactReady?"ECHO v1 · Experiments executed":"Archive loading · Interactive lab available";
     if(lab.id==="noesis")return "Archive independently reconstructed";
+    if(lab.id==="axiom")return "Exact finite benchmark verified";
     return directStudies.get(lab.id)?"Experiments executed":"Proposed";
   };
   const visible=lab=>filter(lab)&&expanded.has(lab.division)&&
@@ -143,7 +144,7 @@ export function setupMap() {
       const evidence=node("ul");
       for(const [label,href] of [
         ["Study workspace",study.route],["Protocol and model",study.protocol],["Mathematical specification",study.math],
-        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],
+        ["Results and dataset",study.result],["Run manifest",study.manifest],["Manuscript",study.manuscript],["Learning guide",study.learning],["Configuration",study.config],["Scientific engine",study.engine],["Audit and limitations",study.audit],
       ]){
         if(!href)continue;
         const item=node("li");
