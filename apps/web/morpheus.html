@@ -22,8 +22,8 @@
     <div class="study-controls result-panel">
       <label>Regime <select id="morpheus-regime"><option value="corrupted">Corrupted</option><option value="clean">Clean</option></select></label>
       <label>Architecture <select id="morpheus-arch"></select></label>
-      <label class="scrub">Step <input id="morpheus-step" type="range" min="0" max="15" value="0"><output id="morpheus-step-output" for="morpheus-step">0</output></label>
-      <div class="actions"><button class="quiet" type="button" id="morpheus-duplicate">Simulate clone divergence</button></div>
+      <label class="scrub">Step <input id="morpheus-step" aria-label="Memory timeline step" type="range" min="0" max="15" value="0"><output id="morpheus-step-output" for="morpheus-step">0</output></label>
+      <div class="actions"><button class="quiet" type="button" id="morpheus-duplicate" aria-pressed="false">Simulate clone divergence</button></div>
     </div>
     <article class="result-panel study-block">
       <h2>Confirmatory architecture comparison</h2>

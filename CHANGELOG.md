@@ -22,3 +22,8 @@
 - Add MORPHEUS bitemporal memory engine (`engine/memory.mjs`, `engine/morpheus.mjs`), 8 architectures, 4 ablations, Python reference, interactive lab (`morpheus.html`), and manuscript (`papers/morpheus.md`).
 - Add ALPHA DECAY endogenous crowding engine (`engine/alpha-decay.mjs`) reusing `engine/market.mjs`, Python fill replay, interactive lab (`alpha-decay.html`), and manuscript (`papers/alpha-decay.md`).
 - Integrate MORPHEUS and ALPHA DECAY into the research map, evidence library, static build, and GitHub Actions CI.
+
+## 0.3.1 · Phase III deployment
+
+- Fix MORPHEUS and ALPHA DECAY canvas rendering. Wire the MORPHEUS clone intervention to the memory engine.
+- Validate all seven evidence-library entries and the new laboratory interactions in browser CI.

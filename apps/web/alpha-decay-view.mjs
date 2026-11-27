@@ -53,22 +53,24 @@ async function boot() {
 
       // Draw alpha comparison bar chart
       const canvas = byId("alpha-chart");
-      const { ctx, width, height } = canvasContext(canvas, 560, 240);
-      const colors = palette();
+      const { context: ctx, width, height } = canvasContext(canvas);
       ctx.clearRect(0, 0, width, height);
       const pad = { l: 42, r: 16, t: 18, b: 48 };
       const plotW = width - pad.l - pad.r;
       const plotH = height - pad.t - pad.b;
-      const maxA = Math.max(0.005, ...data.arms.map(a => a.metrics.alpha.estimate));
+      const values = data.arms.map(a => a.metrics.alpha.estimate);
+      const low = Math.min(0, ...values);
+      const high = Math.max(0.005, ...values);
+      const yAt = value => pad.t + (high - value) * plotH / (high - low);
       const bw = plotW / data.arms.length;
       data.arms.forEach((a, idx) => {
-        const val = Math.max(0, a.metrics.alpha.estimate);
-        const bh = (val / maxA) * plotH;
+        const val = a.metrics.alpha.estimate;
+        const bh = Math.abs(yAt(val) - yAt(0));
         const x = pad.l + idx * bw + 6;
-        const y = pad.t + plotH - bh;
-        ctx.fillStyle = a.id === selectedId ? colors.accent : (a.impact === 0 ? colors.blue ?? colors.muted : colors.muted);
+        const y = Math.min(yAt(0), yAt(val));
+        ctx.fillStyle = a.id === selectedId ? palette("positive") : (a.impact === 0 ? palette("science") : palette("dim"));
         ctx.fillRect(x, y, Math.max(8, bw - 12), bh);
-        ctx.fillStyle = colors.ink;
+        ctx.fillStyle = palette("text");
         ctx.font = "10px sans-serif";
         ctx.textAlign = "center";
         ctx.fillText(a.id.replace("impact4-", "i4-").replace("control0-", "c0-"), x + Math.max(8, bw - 12) / 2, height - 18);

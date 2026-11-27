@@ -42,6 +42,8 @@ jobs:
       - run: node scripts/morpheus.mjs verify
       - run: python scripts/reference_alpha_decay.py
       - run: node scripts/alpha-decay.mjs verify
+      - run: python -B scripts/reference_noesis.py
+      - run: node scripts/noesis.mjs verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

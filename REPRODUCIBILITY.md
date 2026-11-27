@@ -23,3 +23,7 @@ Run `python scripts/reference_echo2.py` and `node scripts/echo2.mjs verify` alon
 
 ## Integrated benchmark and market experiments
 For each study named mirage, reflex or convergence, run python scripts/reference_<study>.py and node scripts/<study>.mjs verify. The relevant manifest records code revision, resource use, seed-bearing config, and digests. Use a disposable clone for commands that refresh runtime manifests. The study archives themselves are versioned separately from build-level release provenance.
+
+## NOESIS v1
+
+Run `node scripts/noesis.mjs verify` and `python -B scripts/reference_noesis.py`. The first command reproduces both untouched JavaScript archives. The second independently recomputes every task and aggregate using observation-space Cholesky. See the [archive audit](research/noesis-audit.md) and [manuscript](papers/noesis.md). Use a future run ID for design changes.

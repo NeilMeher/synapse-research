@@ -1,3 +1,6 @@
+import { seeded } from "./engine/echo.mjs";
+import { createRecord } from "./engine/memory.mjs";
+import { duplicateAndDiverge, evaluateHistory, generateHistory } from "./engine/morpheus.mjs";
 import { byId, canvasContext, node, palette } from "./view.mjs";
 
 const pct = x => (x * 100).toFixed(2) + "%";
@@ -31,12 +34,15 @@ async function boot() {
       `Corrupted (provenance − keyword): ${(c0.estimate * 100).toFixed(2)} pp [${(c0.interval[0] * 100).toFixed(2)}, ${(c0.interval[1] * 100).toFixed(2)}]. ` +
       `Clean (provenance − keyword): ${(c1.estimate * 100).toFixed(2)} pp [${(c1.interval[0] * 100).toFixed(2)}, ${(c1.interval[1] * 100).toFixed(2)}].`;
 
+    const histories = {
+      corrupted: data.sampleHistory,
+      clean: generateHistory(seeded(data.config.seed), data.config.steps, "clean"),
+    };
     let cloneActive = false;
     dupBtn.addEventListener("click", () => {
       cloneActive = !cloneActive;
-      byId("morpheus-clone-note").textContent = cloneActive
-        ? "Simulated clone divergence at step 4: original retains verified safety_floor; clone receives unverified injection (provenance filters injection; keyword adopts it)."
-        : "";
+      dupBtn.setAttribute("aria-pressed", String(cloneActive));
+      render();
     });
 
     function render() {
@@ -68,8 +74,7 @@ async function boot() {
       // Draw bar chart of main architectures
       const mainArms = rows.filter(a => !a.ablation);
       const canvas = byId("morpheus-chart");
-      const { ctx, width, height } = canvasContext(canvas, 560, 260);
-      const colors = palette();
+      const { context: ctx, width, height } = canvasContext(canvas);
       ctx.clearRect(0, 0, width, height);
       const pad = { l: 42, r: 16, t: 18, b: 48 };
       const plotW = width - pad.l - pad.r;
@@ -80,9 +85,9 @@ async function boot() {
         const bh = v * plotH;
         const x = pad.l + idx * bw + 6;
         const y = pad.t + plotH - bh;
-        ctx.fillStyle = arm.architecture === arch ? colors.accent : colors.muted;
+        ctx.fillStyle = arm.architecture === arch ? palette("positive") : palette("dim");
         ctx.fillRect(x, y, Math.max(8, bw - 12), bh);
-        ctx.fillStyle = colors.ink;
+        ctx.fillStyle = palette("text");
         ctx.font = "11px sans-serif";
         ctx.textAlign = "center";
         ctx.fillText(arm.architecture.slice(0, 7), x + Math.max(8, bw - 12) / 2, height - 18);
@@ -92,7 +97,25 @@ async function boot() {
       // Step trace & provenance inspector
       const selectedArm = rows.find(a => a.architecture === arch && !a.ablation) ?? rows[0];
       const trace = selectedArm.replay[step];
-      const q = data.sampleHistory.queries[step];
+      const history = histories[regime];
+      const q = history.queries[step];
+      let cloneRecord;
+      let compared = trace;
+      if (cloneActive) {
+        const falseValue = q.groundTruth === "alpha" ? "beta" : "alpha";
+        cloneRecord = createRecord({
+          recordId: "demo-injection", agentId: history.agentId + "-clone",
+          eventTime: step, ingestionTime: step, sourceId: "untrusted-rumor",
+          topic: q.topic, kind: q.kind, value: falseValue, evidenceClass: "unverified_claim",
+          confidence: 0.85, corrupted: true,
+        });
+        const fork = duplicateAndDiverge(history, step, cloneRecord);
+        compared = evaluateHistory(fork, arch, data.config.budget, null, true).trace[step];
+      }
+      byId("morpheus-clone-note").textContent = cloneRecord
+        ? `Browser intervention at step ${step}: injected ${cloneRecord.content.value}. Original prediction ${trace.prediction}; clone prediction ${compared.prediction}.`
+        : "";
+      byId("morpheus-inspector").textContent = "";
       byId("morpheus-step-summary").textContent =
         `Step ${step}: Query (${q.topic}, ${q.kind}) · Truth=${q.groundTruth} · ` +
         `${arch} predicted=${trace.prediction} (${trace.correct ? "correct" : "wrong"}, conf=${trace.confidence.toFixed(2)}, contradiction=${trace.contradictionFlagged}).`;
@@ -100,8 +123,9 @@ async function boot() {
       const recBody = byId("morpheus-records");
       recBody.replaceChildren();
       const visible = [];
-      for (let s = 0; s <= step; s++) visible.push(...data.sampleHistory.ingestedByStep[s]);
-      const retrievedSet = new Set(trace.retrievedIds);
+      for (let s = 0; s <= step; s++) visible.push(...history.ingestedByStep[s]);
+      if (cloneRecord) visible.push(cloneRecord);
+      const retrievedSet = new Set(compared.retrievedIds);
       for (const r of visible.slice(-14)) {
         const tr = node("tr");
         if (retrievedSet.has(r.recordId)) tr.style.fontWeight = "600";

@@ -214,7 +214,7 @@ async function init() {
     if (!response.ok) throw new Error("Archive HTTP " + response.status);
     dataset = await response.json();
     if (dataset.schemaVersion !== "noesis-v1" || dataset.config.id !== "noesis-confirmatory-001") throw new Error("Invalid archive");
-    statusEl.textContent = `Loaded confirmatory dataset: ${dataset.config.trials} trials, budget ${dataset.config.budget}.`;
+    statusEl.textContent = `Loaded noesis-confirmatory-001: ${dataset.config.trials} trials, budget ${dataset.config.budget}.`;
 
     renderTable();
 

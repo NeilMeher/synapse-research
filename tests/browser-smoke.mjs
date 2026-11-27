@@ -118,10 +118,11 @@ try {
       assert.equal((await robustArtifact.json()).id,"echo2-confirmatory-001");
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
-        ["convergence","convergence-confirmatory-001"]]) {
+        ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
-        await page.waitForFunction(({route,status})=>document.getElementById(route+"-status")?.textContent.includes(status),{route,status});
+        await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
         if (route==="mirage"){
           assert.equal(await page.locator("#mirage-metrics tr").count(),5);
@@ -145,13 +146,80 @@ try {
           assert.equal(await page.locator("#convergence-trades tr").count(),15);
           assert.equal(await page.locator("#convergence-contrasts tr").count(),2);
         }
+        if (route==="morpheus"){
+          await page.getByLabel("Memory timeline step").press("End");
+          assert.match(await page.locator("#morpheus-step-summary").textContent(),/Step 15/);
+          await page.getByLabel("Architecture").selectOption("keyword");
+          assert.match(await page.locator("#morpheus-step-summary").textContent(),/keyword predicted/);
+          await page.getByLabel("Regime").selectOption("clean");
+          const inject=page.getByRole("button",{name:"Simulate clone divergence"});
+          await inject.click();
+          assert.equal(await inject.getAttribute("aria-pressed"),"true");
+          assert.match(await page.locator("#morpheus-clone-note").textContent(),/Original prediction.*clone prediction/);
+          await page.getByRole("row",{name:/demo-injection/}).click();
+          assert.match(await page.locator("#morpheus-inspector").textContent(),/verified=false/);
+          await inject.click();
+          assert.equal(await page.getByRole("row",{name:/demo-injection/}).count(),0);
+        }
+        if (route==="alpha-decay"){
+          await page.getByLabel("Scenario arm").selectOption("impact4-adopters-9");
+          await page.getByLabel("Episode round").press("End");
+          const impacted=await page.locator("#alpha-round-summary").textContent();
+          assert.match(impacted,/Round 8.*End midpoint/);
+          await page.getByLabel("Scenario arm").selectOption("control0-adopters-9");
+          assert.notEqual(await page.locator("#alpha-round-summary").textContent(),impacted);
+          assert.equal(await page.locator("#alpha-trades tr").count(),12);
+          assert.ok(await page.locator("#alpha-chart").evaluate(canvas =>
+            canvas.getContext("2d").getImageData(0,0,canvas.width,canvas.height).data.some((v,i)=>i%4===3&&v>0)));
+        }
+        if (route==="noesis"){
+          await page.locator("#noesis-arm").selectOption("uniform_grid");
+          await page.getByLabel("Archived measurement step").press("End");
+          assert.match(await page.locator("#noesis-step-output").textContent(),/7 \/ 7/);
+          await page.locator("#noesis-toggle-truth").click();
+          assert.match(await page.locator("#noesis-truth-display").textContent(),/Ground Truth Law/);
+          const measure=page.getByRole("button",{name:"Measure",exact:true});
+          await page.getByLabel("Measurement location").selectOption("-1.8");
+          await measure.click();
+          assert.match(await page.locator("#noesis-challenge-status").textContent(),/1 of 8/);
+          assert.match(await page.locator("#noesis-challenge-observations").textContent(),/-1.8/);
+          for(let i=1;i<8;i++)await measure.click();
+          assert.equal(await measure.isDisabled(),true);
+          await page.getByRole("button",{name:"Reveal practice law"}).click();
+          assert.match(await page.locator("#noesis-challenge-outcome").textContent(),/RMSE on 20 never-selectable midpoints/);
+          await page.getByRole("button",{name:"Start world"}).click();
+          assert.equal(await measure.isEnabled(),true);
+        }
+        if (route==="morpheus" || route==="alpha-decay" || route==="noesis"){
+          const evidence=page.getByRole("link",{name:/Confirmatory results/i});
+          const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
+          assert.equal(response.status(),200);
+          assert.equal((await response.json()).config.id,status);
+        }
         if (width===390 || width===1440) {
           await page.evaluate(()=>scrollTo(0,0));
           await page.screenshot({path:fileURLToPath(new URL(route+"-" + width + ".png",screenshots))});
         }
       }
       assert.equal((await page.goto(new URL("library.html",base).href)).status(),200);
-      assert.equal(await page.locator("#studies article").count(),5);
+      const studies=[
+        ["ECHO v1","index.html#evidence","confirmatory","echo"],
+        ["ECHO 2.0","index.html#robustness","echo2-confirmatory","echo2"],
+        ["MIRAGE","mirage.html","mirage-confirmatory","mirage"],
+        ["REFLEX","reflex.html","reflex-confirmatory","reflex"],
+        ["CONVERGENCE","convergence.html","convergence-confirmatory","convergence"],
+        ["MORPHEUS","morpheus.html","morpheus-confirmatory","morpheus"],
+        ["ALPHA DECAY","alpha-decay.html","alpha-decay-confirmatory","alpha-decay"],
+        ["NOESIS","noesis.html","noesis-confirmatory","noesis"],
+      ];
+      assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
+      for (const [index,[,route,result,paper]] of studies.entries()){
+        const links=await page.locator("#studies article").nth(index).getByRole("link").evaluateAll(nodes=>nodes.map(n=>n.getAttribute("href")));
+        assert.deepEqual(links,["./"+route,"./data/"+result+".json","./data/"+result+".manifest.json","./papers/"+paper+".md"]);
+        if(width===1440){
+          for(const href of links)assert.equal((await page.request.get(new URL(href,base).href)).status(),200);
+        }
+      }
 
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
