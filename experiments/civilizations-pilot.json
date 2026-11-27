@@ -1,0 +1,11 @@
+{
+  "id": "civilizations-pilot-001",
+  "phase": "pilot",
+  "seed": 340220659,
+  "steps": 24,
+  "trials": 60,
+  "climates": [
+    "moderate",
+    "stress"
+  ]
+}

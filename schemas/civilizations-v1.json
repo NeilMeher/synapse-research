@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "cells"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "civilizations-v1"
+    },
+    "modelVersion": {
+      "const": "conserved-local-barter-v1"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "seed",
+        "steps",
+        "trials",
+        "climates"
+      ],
+      "properties": {
+        "steps": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 80
+        },
+        "trials": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 2000
+        },
+        "climates": {
+          "const": [
+            "moderate",
+            "stress"
+          ]
+        }
+      }
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "climate",
+          "first",
+          "summaries",
+          "contrast"
+        ],
+        "properties": {
+          "first": {
+            "type": "object",
+            "required": [
+              "world",
+              "arms"
+            ]
+          },
+          "summaries": {
+            "type": "object",
+            "required": [
+              "autarky",
+              "unaware",
+              "local",
+              "pooled"
+            ]
+          },
+          "contrast": {
+            "type": "object",
+            "required": [
+              "estimate",
+              "sd",
+              "interval",
+              "trials"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
