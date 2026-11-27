@@ -1,0 +1,11 @@
+{
+  "id": "civilizations-confirmatory-001",
+  "phase": "confirmatory",
+  "seed": 2800169297,
+  "steps": 24,
+  "trials": 400,
+  "climates": [
+    "moderate",
+    "stress"
+  ]
+}
