@@ -63,3 +63,7 @@ Run `node --test tests/energia.test.mjs`, `node scripts/energia.mjs verify` and 
 ## NEXUS and Phase VI releases
 
 Run `node --test tests/nexus.test.mjs`, `python -B scripts/reference_nexus.py` and `node scripts/nexus.mjs verify`. The Python reference recomputes procurement, engineering, cash flow and the full national response after checking both matched invariants. `scripts/check_schemas.py` validates the completed result contracts, source records and the three deterministic run manifests. The default branch is the stable Pages source. Review the Pages workflow, release metadata, archive SHA-256 and exact browser suite at 360, 390, 768 and 1440 pixels after publication.
+
+## CHRONOS
+
+Run `python -B scripts/extract_chronos.py --check` to reproduce public normalized observations from the preserved reviewed transcriptions. Then run `python -B scripts/reference_chronos.py` and `node scripts/chronos.mjs verify`. For full local publisher checks, obtain the exact original bytes and filenames from [the source manifest](sources/chronos-rail.json). Install the optional `pypdf==7.2.0` from PyPI (wheel SHA-256 `5edb9b033dd55cecead9303370e6854c1a3b979669bde1c46024cde0228405b1`) in an isolated environment, then run `python -B scripts/extract_chronos.py --check --source-dir <directory>`. The parser runs without the dependency for the normal deterministic data check. The richer local audit verifies both primary PDF tables and the RBI snapshot, and reports restricted comparative source differences locally. Do not include local publisher files in the release.

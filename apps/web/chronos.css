@@ -1,0 +1,11 @@
+.chronos-figure { margin:1.25rem 0; border-top:1px solid var(--line); padding-top:1rem; }
+.chronos-chart { display:block; width:100%; height:255px; }
+#chronos-series-controls { min-width:0; border:1px solid var(--line); margin:0; }
+.chronos-events { border-inline-start:2px solid var(--accent); padding-inline-start:1.25rem; }
+.chronos-events li { margin:0 0 1rem; padding-inline-start:.3rem; }
+.chronos-events time { display:block; font-variant-numeric:tabular-nums; }
+.chronos-causal { margin:1rem 0; }
+.chronos-causal div { display:grid; grid-template-columns:minmax(0,1fr) 1.5rem minmax(0,1fr); gap:.6rem; margin-top:.5rem; align-items:center; }
+.chronos-causal span { padding:.45rem; border-bottom:1px solid var(--line); }
+.chronos-events small { display:block; }
+@media(max-width:540px){.chronos-chart{height:210px;} .chronos-causal div { grid-template-columns:minmax(0,1fr); }}

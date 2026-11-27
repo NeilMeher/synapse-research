@@ -1,0 +1,47 @@
+{
+  "id": "chronos-scenario-001",
+  "phase": "scenario",
+  "status": "completed",
+  "commit": "9cb494ddee40d509e2e0380d2269f258d8002e98",
+  "inputs": {
+    "experiments/chronos-scenario.json": "3ba8e3c11ae633adba76a770a6eeec54b2c64763f3f20e6b0f1fc28ffcb6d090",
+    "research/chronos-scenario.md": "ff72877522265f070ad35c70004105cff2a03a4c04c81a701a0cb3eb0526b512",
+    "scripts/run-scenario.mjs": "e5e7e3e5fc70050cee689423943ecf39e98e0746943c37deadcaa6a46fc2f542",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "engine/chronos.mjs": "e0cf79dae64a39eda8100fd75a134b42a6a65a5d8b3cfa400657c44cf01ed440",
+    "scripts/chronos.mjs": "8f428002cf8e8b25b42a57e0732332299b6682e34c05b3e398f582d46822b75a",
+    "scripts/extract_chronos.py": "827d38a5060f49a8fbadeabcc5933561520888fe54bc0700d5a04265844f59c6",
+    "scripts/reference_chronos.py": "c939df19cfc2978f467a797789e1fdffdcbc47ac50afe0fd01875fecbb6ecfe8",
+    "data/chronos/railboard-summary-transcription.csv": "329b43fe39de8c3ab9e5fe83e2ca4490e1ce190705df26fd82466911b0f6013e",
+    "data/chronos/selected-state-routes.csv": "599d84af760a40ddc4d9d9c2f78653c176fc55b5feae0ed46b09319966070a79",
+    "data/chronos/timeline.json": "eceb4c60342c349db9b6f2b8026c8e3e1d0b6525b389f829008fbcb1679aa84d",
+    "data/processed/chronos-rail.json": "1fd3116476bb310088fdd397e0126bf6eaed774fdbf4e415bd04fb16fb8226f9",
+    "sources/chronos-rail.json": "15002e59e212f1b209d93bc84fa4b0c37c9824cbd10830f62810e4e7a5bdb532",
+    "schemas/chronos-v1.json": "b7c924888af4c9635e70009342319e070c39e9c73b1ee4685530d0e5221d0f35",
+    "research/chronos-causal-readiness.md": "f43474c323a94a443fcd2354fa8ddf1009dc90d13c0791795a64a0a4204838fe"
+  },
+  "configSha256": "56705cf3e429e2d359da04cc68c43c117e55aed9b0ed704c5430673df3392cbc",
+  "modelVersion": "railway-reconstruction-v1",
+  "dataset": {
+    "id": "indian-railway-history-2026",
+    "vintage": "Railway Board statistical summary 2024–25, RBI state handbook 2024–25",
+    "retrievalDate": "2026-11-28",
+    "units": "route km, million tonnes, billion net tonne-km",
+    "nationalPeriods": 17,
+    "regionalRecords": 147
+  },
+  "startUtc": "2026-11-27T18:44:56.943Z",
+  "endUtc": "2026-11-27T18:44:56.953Z",
+  "runtimeMs": 3.0027000000000044,
+  "observedRssBytes": 44867584,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/chronos-scenario.json",
+    "bytes": 37696,
+    "sha256": "ff16f9990b2fd525dd8eb3f489ae508fe5f55cd3cec365d0d812f6fb54f61435"
+  }
+}

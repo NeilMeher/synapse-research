@@ -1,4 +1,4 @@
-export const registryVersion=5;
+export const registryVersion=6;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -137,6 +137,15 @@ export const researchStudies=[
       config:"experiments/nexus-scenario.json",engine:"engine/nexus.mjs",assets:["data/processed/nexus-capital-map.json"],
       concepts:[["Infrastructure spending","nexus.html#procurement"],["Domestic supplier links","nexus.html#supply"],
         ["Capital and operating costs","nexus.html#operation"]]}),
+  study("chronos","CHRONOS","chronos.html",["chronos"],
+    "Official Indian railway measurements, source reconciliation and causal feasibility.",
+    "Describe route stocks and freight through 2024–25 and test what the historical data can support.",
+    {evidence:"Verified official statistics · descriptive reconstruction",archivePhases:["scenario"],studyIds:["chronos-scenario-001"],
+      protocol:"research/chronos-scenario.md",math:"research/chronos-scenario.md",audit:"research/chronos-source-audit.md",
+      result:"data/chronos-scenario.json",manifest:"data/chronos-scenario.manifest.json",config:"experiments/chronos-scenario.json",
+      engine:"engine/chronos.mjs",assets:["sources/chronos-rail.json","data/processed/chronos-rail.json","data/chronos/timeline.json"],
+      concepts:[["Railway electrification","chronos.html#series"],["Measurement and source comparison","chronos.html#provenance"],
+        ["Causal identification","chronos.html#causal"],["Historical events","chronos.html#events"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));
@@ -167,4 +176,5 @@ export const journeys=[
   {name:"From computing infrastructure to national economic systems",steps:[
     ["ENERGIA engineering","energia.html#workbench"],["Energy demand","academy.html#power-energy"],
     ["Capital procurement","nexus.html#procurement"],["ARTHA sector dependencies","artha.html#flows"],["NEXUS scenarios","nexus.html#evidence"]]},
+  {name:"History and economic development",steps:[["CHRONOS history","chronos.html#events"],["Historical measurement","chronos.html#series"],["Causal readiness","chronos.html#causal"],["Synthetic causal reasoning","chronos.html#scenario"]]},
 ];

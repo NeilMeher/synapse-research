@@ -118,3 +118,7 @@ Run `python -B scripts/reference_nexus.py` and `node scripts/nexus.mjs verify`. 
 CHRONOS begins with the [source and design checkpoint](research/chronos-source-checkpoint.md). Pin the published Indian rail series and seek verified route commissioning dates. No treatment or outcome panel has been built. Human reviewers can independently assess the ADB vintage and workbook reuse terms, the ENERGIA physical and underwriting assumptions, and each procurement share and native ADB sector mapping in NEXUS.
 
 [Phase VI research and verification register](research/phase6-release-report.md)
+
+## Phase VII CHRONOS checkpoint
+
+The current branch is `codex/phase7-8-chronos-v1`. Start from the completed [CHRONOS manuscript](papers/chronos.md) and the [source audit](research/chronos-source-audit.md). Reproduce chronos-scenario-001 with `python -B scripts/extract_chronos.py --check`, `python -B scripts/reference_chronos.py` and `node scripts/chronos.mjs verify`. The archived result digest is `ff16f9990b2fd525dd8eb3f489ae508fe5f55cd3cec365d0d812f6fb54f61435`. The earlier CHRONOS source discovery checkpoint is historical. Do not substitute restricted survey cells or infer intervention effects from the national series.

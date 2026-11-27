@@ -70,7 +70,7 @@ try {
       assert.equal(await page.locator("#lab-detail").getByRole("link",{name:"Results and dataset"}).getAttribute("href"),"./data/mirage-confirmatory.json");
       await page.getByRole("searchbox",{name:"Search laboratories"}).fill("");
       await page.getByLabel("Status",{exact:true}).selectOption("proposed");
-      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),1);
+      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),0);
       await page.getByLabel("Status",{exact:true}).selectOption("all");
       await labChoice.click();
       await page.getByLabel("Focus on selected lab").check();
@@ -149,7 +149,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"],["artha","artha-scenario-001"],["energia","energia-scenario-001"],["nexus","nexus-scenario-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"],["artha","artha-scenario-001"],["energia","energia-scenario-001"],["nexus","nexus-scenario-001"],["chronos","chronos-scenario-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route==="artha"?"artha-archive":route)+"-status")?.textContent.includes(status),{route,status});
@@ -356,6 +356,21 @@ try {
           assert.equal(await page.locator("#nexus-links tr").count(),8);
           assert.equal(await page.locator("#nexus-archive tr").count(),4);
         }
+
+        if(route==="chronos"){
+          assert.equal(await page.locator("#chronos-national tr").count(),17);
+          await page.locator("#chronos-mode").selectOption("growth");
+          await page.locator("#chronos-window").selectOption("modern");
+          assert.equal(await page.locator("#chronos-national tr").count(),10);
+          await page.locator("#chronos-region-year").selectOption("2014");
+          assert.match(await page.locator("#chronos-region-rows").textContent(),/Telangana.*1,753.*scope as ambiguous/);
+          await page.locator("#chronos-synthetic").selectOption("different-trends");
+          assert.match(await page.locator("#chronos-teaching").textContent(),/ATT 4.*differences-in-differences 7/);
+          await page.locator("#chronos-event-window").selectOption("early");
+          assert.equal(await page.locator("#chronos-events li").count(),1);
+          assert.match(await page.locator("#chronos-conditional").textContent(),/64\.95%/);
+          assert.match(await page.locator("#chronos-locators").textContent(),/65,510/);
+        }
         if (["morpheus","alpha-decay","noesis","scientia","episteme","civilizations","polis","polis2"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
@@ -416,6 +431,7 @@ try {
         ["ARTHA","artha.html","artha-scenario","artha"],
         ["ENERGIA","energia.html","energia-scenario","energia"],
         ["NEXUS","nexus.html","nexus-scenario","nexus"],
+        ["CHRONOS","chronos.html","chronos-scenario","chronos"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){
@@ -467,6 +483,14 @@ try {
     assert.equal(await missingBridge.locator("#nexus-local").isDisabled(),true);
     await missingBridge.getByText(/four matched deterministic scenarios/).waitFor();
     console.log("503 procurement concordance fallback passed");
+    const missingHistory=await browser.newPage();
+    await missingHistory.route("**/data/processed/chronos-rail.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingHistory.goto(new URL("chronos.html",base).href);
+    await missingHistory.getByText(/Historical source files are unavailable/).waitFor();
+    assert.equal(await missingHistory.locator("#chronos-metric").isDisabled(),true);
+    await missingHistory.locator("#chronos-synthetic").selectOption("spillover");
+    assert.match(await missingHistory.locator("#chronos-teaching").textContent(),/bias -2/);
+    console.log("503 historical data fallback passed");
   } finally {
     await browser.close();
   }

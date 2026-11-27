@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHRONOS · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./chronos.css">
+<script type="module" src="./chronos-view.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+<nav aria-label="CHRONOS navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html">Mathematical Academy</a><a href="./library.html">Evidence library</a></nav>
+<button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button></div></header>
+<main class="wrap section study-page" id="main">
+<div class="section-intro"><div><p class="eyebrow">CHRONOS · Indian railway history</p><h1>How did India’s railway network change?</h1></div><p>Examine official route and freight statistics, inspect how sources disagree, and test what the available evidence can say about cause and effect.</p></div>
+<p id="chronos-status" role="status">Loading the registered historical study…</p>
+<nav aria-label="Explore this study" class="actions">
+<a class="quiet" href="#series">National series</a><a class="quiet" href="#events">Timeline</a><a class="quiet" href="#regions">States</a>
+<a class="quiet" href="#causal">Causal evidence</a><a class="quiet" href="#scenario">Teaching models</a><a class="quiet" href="#provenance">Sources</a></nav>
+
+<article class="result-panel study-block" id="series"><h2>National route and freight series</h2>
+<p id="chronos-data-status" aria-live="polite">Loading the Railway Board’s complete-year observations…</p>
+<fieldset id="chronos-series-controls" disabled><legend>Compare historical measures</legend>
+<div class="study-controls"><label>Measure <select id="chronos-metric"></select></label>
+<label>Display <select id="chronos-mode"><option value="value">Observed level</option><option value="growth">Annual change</option><option value="index">Index, 2015–16 = 100</option></select></label>
+<label>Years shown <select id="chronos-window"><option value="all">All observations</option><option value="modern">Annual series since 2015–16</option><option value="recent">Since 2020–21</option></select></label></div></fieldset>
+<figure class="chronos-figure"><figcaption id="chronos-caption"></figcaption><canvas class="chronos-chart" id="chronos-chart" aria-hidden="true"></canvas><p id="chronos-span"></p></figure>
+<div class="table-scroll" tabindex="0" aria-label="National historical observations"><table><caption>Series values. Missing years remain gaps.</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col" id="chronos-unit">Observed level</th><th scope="col">Annual change</th><th scope="col">Index</th></tr></thead><tbody id="chronos-national"></tbody></table></div>
+</article>
+
+<div class="study-pair">
+<article class="result-panel study-block" id="events"><h2>Documented events</h2>
+<label>Timeline period <select id="chronos-event-window" disabled><option value="all">All verified events</option><option value="early">Before 2000</option><option value="corridor">Corridor events, 2019–21</option></select></label>
+<ol id="chronos-events" class="chronos-events" aria-live="polite"></ol>
+</article>
+<article class="result-panel study-block" id="regions"><h2>Selected states</h2>
+<label>Route stock as of March <select id="chronos-region-year" disabled></select></label>
+<div class="table-scroll"><table><caption>RBI Handbook, Table 145. Route kilometres.</caption><thead><tr><th scope="col">Published geography</th><th scope="col">Route km</th><th scope="col">Coverage</th></tr></thead><tbody id="chronos-region-rows"></tbody></table></div>
+<p>State totals are route stocks. They carry no segment treatment dates, state electrification figures or freight flows. The Andhra Pradesh and Telangana reporting transition is flagged.</p></article>
+</div>
+
+<article class="result-panel study-block" id="causal"><h2>Can the history identify a causal effect?</h2>
+<p id="chronos-causal-status">The corridor sections and dedication dates are documented. Estimation requires recurring commercial opening dates, matched local freight outcomes and credible comparison units.</p>
+<figure class="chronos-causal"><figcaption>Proposed causal relationships to investigate</figcaption>
+<div><span>Prior freight demand, network links, regional policy</span><span aria-hidden="true">↓</span><span>Corridor timing and later freight</span></div>
+<div><span>Corridor opening and traffic diversion</span><span aria-hidden="true">↓</span><span>Freight on treated and neighbouring routes</span></div>
+</figure>
+<p id="chronos-association"></p>
+<p><a href="./research/chronos-causal-readiness.md">Inspect the 16-condition identification register</a></p>
+</article>
+
+<div class="study-pair" id="scenario">
+<article class="result-panel study-block"><h2>Assumption-based electrification exercise</h2>
+<p>Use the reported 2015–16 share as an anchor. Scale subsequent share changes while holding each reported total route length fixed. This exercise supplies no forecast of freight.</p>
+<label>Share of each observed change <input id="chronos-factor" type="range" min="0" max="100" value="50" disabled></label>
+<p id="chronos-conditional" aria-live="polite"></p>
+</article>
+<article class="result-panel study-block"><h2>Synthetic causal reasoning</h2>
+<p>Three invented units have a known treatment effect. Compare before–after change, post-only difference, and differences-in-differences when an assumption fails.</p>
+<label>Synthetic condition <select id="chronos-synthetic">
+<option value="parallel">Comparable trends</option><option value="different-trends">Different trends</option><option value="anticipation">Anticipation</option><option value="spillover">Spillover into control</option><option value="heterogeneous">Unequal treatment effects</option></select></label>
+<p id="chronos-teaching" aria-live="polite"></p>
+</article></div>
+
+<article class="result-panel study-block" id="provenance"><h2>Inspect the evidence</h2>
+<label>Primary fiscal observation <select id="chronos-source-year" disabled></select></label>
+<ul id="chronos-locators"></ul>
+<p>The Railway Board’s detailed Statement 8 corroborates its summary’s 2024–25 route figures. The Economic Survey’s number is about 3,200 route km higher. The published scopes have not been reconciled. Provisional Survey periods are kept outside the annual chart.</p>
+<div class="actions"><a class="quiet" href="./data/chronos-scenario.json">Registered results</a><a class="quiet" href="./data/chronos-scenario.manifest.json">Run manifest</a>
+<a class="quiet" href="./data/processed/chronos-rail.json">Historical dataset</a><a class="quiet" href="./sources/chronos-rail.json">Pinned source records</a><a class="quiet" href="./research/chronos-scenario.md">Protocol</a><a class="quiet" href="./papers/chronos.md">Manuscript</a><a class="quiet" href="./research/chronos-source-audit.md">Source reconciliation</a><a class="quiet" href="./docs/chronos-learning.md">Learning guide</a></div>
+</article></main></body></html>

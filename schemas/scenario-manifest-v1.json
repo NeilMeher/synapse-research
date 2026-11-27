@@ -19,7 +19,7 @@
   ],
   "properties": {
     "id": {
-      "pattern": "^(artha|energia|nexus)-scenario-001$",
+      "pattern": "^(artha|energia|nexus|chronos)-scenario-001$",
       "type": "string"
     },
     "phase": {
@@ -90,7 +90,7 @@
       "properties": {
         "path": {
           "type": "string",
-          "pattern": "^results/(artha|energia|nexus)-scenario\\.json$"
+          "pattern": "^results/(artha|energia|nexus|chronos)-scenario\\.json$"
         },
         "bytes": {
           "type": "integer",

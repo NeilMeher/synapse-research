@@ -1,0 +1,1509 @@
+{
+  "schemaVersion": "chronos-v1",
+  "modelVersion": "railway-reconstruction-v1",
+  "evidenceClass": "Official statistical description with separate teaching scenarios",
+  "config": {
+    "id": "chronos-scenario-001",
+    "phase": "scenario",
+    "sourceId": "indian-railway-history-2026",
+    "windows": [
+      {
+        "id": "long",
+        "start": 1951,
+        "end": 2025
+      },
+      {
+        "id": "recent",
+        "start": 2016,
+        "end": 2025
+      },
+      {
+        "id": "latest",
+        "start": 2024,
+        "end": 2025
+      }
+    ],
+    "metrics": [
+      "route",
+      "electric",
+      "tonnes",
+      "ntkm",
+      "lead",
+      "share"
+    ],
+    "indexYear": 2016,
+    "association": {
+      "left": "electric",
+      "right": "ntkm",
+      "start": 2017,
+      "end": 2025
+    },
+    "conditionalScenario": {
+      "start": 2016,
+      "end": 2025,
+      "factors": [
+        0,
+        0.5,
+        0.75,
+        1
+      ]
+    },
+    "synthetic": [
+      {
+        "id": "parallel",
+        "inputs": {
+          "effect": 4,
+          "selection": 8,
+          "trendGap": 0,
+          "anticipation": 0,
+          "spillover": 0,
+          "heterogeneity": 0
+        }
+      },
+      {
+        "id": "different-trends",
+        "inputs": {
+          "effect": 4,
+          "selection": 8,
+          "trendGap": 3,
+          "anticipation": 0,
+          "spillover": 0,
+          "heterogeneity": 0
+        }
+      },
+      {
+        "id": "anticipation",
+        "inputs": {
+          "effect": 4,
+          "selection": 8,
+          "trendGap": 0,
+          "anticipation": 2,
+          "spillover": 0,
+          "heterogeneity": 0
+        }
+      },
+      {
+        "id": "spillover",
+        "inputs": {
+          "effect": 4,
+          "selection": 8,
+          "trendGap": 0,
+          "anticipation": 0,
+          "spillover": 2,
+          "heterogeneity": 0
+        }
+      },
+      {
+        "id": "heterogeneous",
+        "inputs": {
+          "effect": 4,
+          "selection": 8,
+          "trendGap": 0,
+          "anticipation": 0,
+          "spillover": 0,
+          "heterogeneity": 3
+        }
+      }
+    ]
+  },
+  "dataset": {
+    "id": "indian-railway-history-2026",
+    "vintage": "Railway Board statistical summary 2024–25, RBI state handbook 2024–25",
+    "retrievalDate": "2026-11-28",
+    "units": "route km, million tonnes, billion net tonne-km",
+    "nationalPeriods": 17,
+    "regionalRecords": 147
+  },
+  "metrics": {
+    "route": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 53596,
+          "growth": null,
+          "index": 80.8971804624766
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 56247,
+          "growth": null,
+          "index": 84.89856909980077
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 59790,
+          "growth": null,
+          "index": 90.24633218619815
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 61240,
+          "growth": null,
+          "index": 92.43494536014008
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 62367,
+          "growth": null,
+          "index": 94.13602608223148
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 63028,
+          "growth": null,
+          "index": 95.13373181186984
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 64173,
+          "growth": null,
+          "index": 96.86198152508604
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 66252,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 66918,
+          "growth": 1.0052526716174626,
+          "index": 101.00525267161746
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 66935,
+          "growth": 0.02540422606771564,
+          "index": 101.03091227434643
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 67415,
+          "growth": 0.7171136176888027,
+          "index": 101.755418704341
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 67956,
+          "growth": 0.8024920269969593,
+          "index": 102.57199782648071
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 68103,
+          "growth": 0.2163164400494466,
+          "index": 102.79387792066655
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 68043,
+          "growth": -0.08810184573366797,
+          "index": 102.70331461691723
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 68584,
+          "growth": 0.7950854606645796,
+          "index": 103.51989373905694
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 69181,
+          "growth": 0.870465414673971,
+          "index": 104.42099861136268
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 69439,
+          "growth": 0.37293476532573866,
+          "index": 104.81042081748475
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 53596,
+          "end": 69439,
+          "change": 15843,
+          "growth": 29.560041794163737,
+          "cagr": 0.35057827001310216
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 66252,
+          "end": 69439,
+          "change": 3187,
+          "growth": 4.810420817484751,
+          "cagr": 0.5233984828550531
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 69181,
+          "end": 69439,
+          "change": 258,
+          "growth": 0.37293476532573866,
+          "cagr": 0.37293476532573866
+        }
+      }
+    },
+    "electric": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 388,
+          "growth": null,
+          "index": 1.6472086605816174
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 748,
+          "growth": null,
+          "index": 3.1755465930800253
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 3706,
+          "growth": null,
+          "index": 15.733389938441944
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 5345,
+          "growth": null,
+          "index": 22.69157291445553
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 9968,
+          "growth": null,
+          "index": 42.317979197622584
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 14856,
+          "growth": null,
+          "index": 63.069412014434306
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 19008,
+          "growth": null,
+          "index": 80.69624283591594
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 23555,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 25367,
+          "growth": 7.692634260241982,
+          "index": 107.69263426024199
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 29228,
+          "growth": 15.22056214767218,
+          "index": 124.08405858628741
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 34319,
+          "growth": 17.418229095387993,
+          "index": 145.6973041817024
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 39866,
+          "growth": 16.163058364171444,
+          "index": 169.24644449161536
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 45772,
+          "growth": 14.81462900717403,
+          "index": 194.3196773508809
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 51804,
+          "growth": 13.178362317574056,
+          "index": 219.9278284865209
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 58074,
+          "growth": 12.103312485522345,
+          "index": 246.5463808108682
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 62253,
+          "growth": 7.195991321417505,
+          "index": 264.2878369772872
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 65510,
+          "growth": 5.231876375435718,
+          "index": 278.11504988325197
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 388,
+          "end": 65510,
+          "change": 65122,
+          "growth": 16784.0206185567,
+          "cagr": 7.176859040944761
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 23555,
+          "end": 65510,
+          "change": 41955,
+          "growth": 178.11504988325194,
+          "cagr": 12.036175903003832
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 62253,
+          "end": 65510,
+          "change": 3257,
+          "growth": 5.231876375435718,
+          "cagr": 5.231876375435718
+        }
+      }
+    },
+    "tonnes": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 73.2,
+          "growth": null,
+          "index": 6.645423101015878
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 119.8,
+          "growth": null,
+          "index": 10.875979337454948
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 167.9,
+          "growth": null,
+          "index": 15.242712276783688
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 195.9,
+          "growth": null,
+          "index": 17.784677397390855
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 318.4,
+          "growth": null,
+          "index": 28.905774800047205
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 473.5,
+          "growth": null,
+          "index": 42.98644587883905
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 921.73,
+          "growth": null,
+          "index": 83.67876823633013
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 1101.51,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 1106.15,
+          "growth": 0.4212399342720552,
+          "index": 100.42123993427207
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 1159.55,
+          "growth": 4.827555033223319,
+          "index": 105.26913055714428
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 1221.48,
+          "growth": 5.340864990729166,
+          "index": 110.89141269711578
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 1208.41,
+          "growth": -1.070013426335259,
+          "index": 109.7048596926038
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 1230.94,
+          "growth": 1.8644334290514042,
+          "index": 111.75023377000663
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 1415.87,
+          "growth": 15.023477992428536,
+          "index": 128.53900554693104
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 1509.1,
+          "growth": 6.584644070430201,
+          "index": 137.00284155386697
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 1588.06,
+          "growth": 5.232257637002191,
+          "index": 144.17118319397918
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 1614.91,
+          "growth": 1.690742163394332,
+          "index": 146.60874617570425
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 73.2,
+          "end": 1614.91,
+          "change": 1541.71,
+          "growth": 2106.1612021857927,
+          "cagr": 4.2694925690112795
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 1101.51,
+          "end": 1614.91,
+          "change": 513.4000000000001,
+          "growth": 46.608746175704276,
+          "cagr": 4.342733249504138
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 1588.06,
+          "end": 1614.91,
+          "change": 26.850000000000136,
+          "growth": 1.690742163394332,
+          "cagr": 1.690742163394332
+        }
+      }
+    },
+    "ntkm": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 37.565,
+          "growth": null,
+          "index": 5.739662419535479
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 72.333,
+          "growth": null,
+          "index": 11.05196331138719
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 110.696,
+          "growth": null,
+          "index": 16.913554404176747
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 147.652,
+          "growth": null,
+          "index": 22.560165994123587
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 235.785,
+          "growth": null,
+          "index": 36.026255918812005
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 312.371,
+          "growth": null,
+          "index": 47.72804710908338
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 625.723,
+          "growth": null,
+          "index": 95.60598397814451
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 654.481,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 620.175,
+          "growth": -5.241710607336203,
+          "index": 94.7582893926638
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 692.916,
+          "growth": 11.72910871931312,
+          "index": 105.87259217609068
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 738.523,
+          "growth": 6.581894486488982,
+          "index": 112.84101448323176
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 707.665,
+          "growth": -4.17833974026538,
+          "index": 108.12613353176027
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 719.762,
+          "growth": 1.7094246571470961,
+          "index": 109.97446831917198
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 871.816,
+          "growth": 21.125594293669316,
+          "index": 133.20722832290014
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 959.566,
+          "growth": 10.06519724345505,
+          "index": 146.61479859613954
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 973.968,
+          "growth": 1.500886859267614,
+          "index": 148.8153208420107
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 971.085,
+          "growth": -0.2960056182543913,
+          "index": 148.37481913149503
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 37.565,
+          "end": 971.085,
+          "change": 933.52,
+          "growth": 2485.0791960601628,
+          "cagr": 4.493068937508604
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 654.481,
+          "end": 971.085,
+          "change": 316.60400000000004,
+          "growth": 48.37481913149504,
+          "cagr": 4.481650008610072
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 973.968,
+          "end": 971.085,
+          "change": -2.8829999999999245,
+          "growth": -0.2960056182543913,
+          "cagr": -0.2960056182543913
+        }
+      }
+    },
+    "lead": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 513.1830601092896,
+          "growth": null,
+          "index": 86.37015781069024
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 603.7813021702838,
+          "growth": null,
+          "index": 101.61809772225462
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 659.2972007147112,
+          "growth": null,
+          "index": 110.96158017715742
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 753.7110770801429,
+          "growth": null,
+          "index": 126.85170211427805
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 740.5307788944724,
+          "growth": null,
+          "index": 124.63342071963135
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 659.7064413938754,
+          "growth": null,
+          "index": 111.0304565388098
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 678.8571490566652,
+          "growth": null,
+          "index": 114.25357470383516
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 594.1670978928925,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 560.6608506983681,
+          "growth": -5.63919599610081,
+          "index": 94.36080400389919
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 597.5731964986418,
+          "growth": 6.583720934731763,
+          "index": 100.57325601128511
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 604.6132560500376,
+          "growth": 1.1781083208961984,
+          "index": 101.7581179089503
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 585.616636737531,
+          "growth": -3.141945553197467,
+          "index": 98.5609332482926
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 584.7254943376605,
+          "growth": -0.15217163310713433,
+          "index": 98.41095146656303
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 615.7457958710899,
+          "growth": 5.305105016597089,
+          "index": 103.6317557896966
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 635.8531575110994,
+          "growth": 3.2655296674115153,
+          "index": 107.01588151986859
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 613.3068020099996,
+          "growth": -3.5458431297805126,
+          "index": 103.22126623722227
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 601.3245320172641,
+          "growth": -1.953715490104757,
+          "index": 101.20461636966338
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 513.1830601092896,
+          "end": 601.3245320172641,
+          "change": 88.1414719079745,
+          "growth": 17.175444545890418,
+          "cagr": 0.21442165199887508
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 594.1670978928925,
+          "end": 601.3245320172641,
+          "change": 7.157434124371662,
+          "growth": 1.2046163696633805,
+          "cagr": 0.13313505864731567
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 613.3068020099996,
+          "end": 601.3245320172641,
+          "change": -11.982269992735496,
+          "growth": -1.953715490104757,
+          "cagr": -1.953715490104757
+        }
+      }
+    },
+    "share": {
+      "series": [
+        {
+          "fiscal": "1950-51",
+          "endYear": 1951,
+          "value": 0.7239346219867154,
+          "growth": null,
+          "index": 2.0361756134945392
+        },
+        {
+          "fiscal": "1960-61",
+          "endYear": 1961,
+          "value": 1.3298487030419401,
+          "growth": null,
+          "index": 3.740400605983214
+        },
+        {
+          "fiscal": "1970-71",
+          "endYear": 1971,
+          "value": 6.1983609299213915,
+          "growth": null,
+          "index": 17.43382756651038
+        },
+        {
+          "fiscal": "1980-81",
+          "endYear": 1981,
+          "value": 8.727955584585239,
+          "growth": null,
+          "index": 24.548695113136965
+        },
+        {
+          "fiscal": "1990-91",
+          "endYear": 1991,
+          "value": 15.98281142270752,
+          "growth": null,
+          "index": 44.954074395127094
+        },
+        {
+          "fiscal": "2000-01",
+          "endYear": 2001,
+          "value": 23.570476613568573,
+          "growth": null,
+          "index": 66.29553031637211
+        },
+        {
+          "fiscal": "2010-11",
+          "endYear": 2011,
+          "value": 29.619933616941708,
+          "growth": null,
+          "index": 83.31054306897143
+        },
+        {
+          "fiscal": "2015-16",
+          "endYear": 2016,
+          "value": 35.553643663587515,
+          "growth": null,
+          "index": 100
+        },
+        {
+          "fiscal": "2016-17",
+          "endYear": 2017,
+          "value": 37.907588391763056,
+          "growth": 6.620825562771637,
+          "index": 106.62082556277164
+        },
+        {
+          "fiscal": "2017-18",
+          "endYear": 2018,
+          "value": 43.666243370434,
+          "growth": 15.191298689742672,
+          "index": 122.81791363948179
+        },
+        {
+          "fiscal": "2018-19",
+          "endYear": 2019,
+          "value": 50.907068159905066,
+          "growth": 16.582202247271294,
+          "index": 143.18382847505967
+        },
+        {
+          "fiscal": "2019-20",
+          "endYear": 2020,
+          "value": 58.66442992524574,
+          "growth": 15.238280352295863,
+          "index": 165.00258167723968
+        },
+        {
+          "fiscal": "2020-21",
+          "endYear": 2021,
+          "value": 67.20996138202429,
+          "growth": 14.566802179221462,
+          "index": 189.0381813407715
+        },
+        {
+          "fiscal": "2021-22",
+          "endYear": 2022,
+          "value": 76.13420925003307,
+          "growth": 13.278162469522892,
+          "index": 214.13897818863046
+        },
+        {
+          "fiscal": "2022-23",
+          "endYear": 2023,
+          "value": 84.67572611687856,
+          "growth": 11.21902617888133,
+          "index": 238.16328621080189
+        },
+        {
+          "fiscal": "2023-24",
+          "endYear": 2024,
+          "value": 89.98568971249331,
+          "growth": 6.270939546813414,
+          "index": 253.09836191178547
+        },
+        {
+          "fiscal": "2024-25",
+          "endYear": 2025,
+          "value": 94.34179639683751,
+          "growth": 4.840888254857045,
+          "index": 265.3505707868087
+        }
+      ],
+      "spans": {
+        "long": {
+          "from": 1951,
+          "to": 2025,
+          "years": 74,
+          "start": 0.7239346219867154,
+          "end": 94.34179639683751,
+          "change": 93.6178617748508,
+          "growth": 12931.81164867243,
+          "cagr": 6.80243291928444
+        },
+        "recent": {
+          "from": 2016,
+          "to": 2025,
+          "years": 9,
+          "start": 35.553643663587515,
+          "end": 94.34179639683751,
+          "change": 58.788152733249994,
+          "growth": 165.35057078680867,
+          "cagr": 11.452833463556612
+        },
+        "latest": {
+          "from": 2024,
+          "to": 2025,
+          "years": 1,
+          "start": 89.98568971249331,
+          "end": 94.34179639683751,
+          "change": 4.356106684344198,
+          "growth": 4.840888254857045,
+          "cagr": 4.840888254857045
+        }
+      }
+    }
+  },
+  "association": {
+    "n": 9,
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "pearson": 0.33448931875211935
+  },
+  "alternatives": [
+    {
+      "factor": 0,
+      "rows": [
+        {
+          "year": 2016,
+          "observed": 35.553643663587515,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66252,
+          "scenarioElectricKM": 23555
+        },
+        {
+          "year": 2017,
+          "observed": 37.907588391763056,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66918,
+          "scenarioElectricKM": 23791.787266799492
+        },
+        {
+          "year": 2018,
+          "observed": 43.666243370434,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66935,
+          "scenarioElectricKM": 23797.831386222304
+        },
+        {
+          "year": 2019,
+          "observed": 50.907068159905066,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 67415,
+          "scenarioElectricKM": 23968.488875807525
+        },
+        {
+          "year": 2020,
+          "observed": 58.66442992524574,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 67956,
+          "scenarioElectricKM": 24160.834088027532
+        },
+        {
+          "year": 2021,
+          "observed": 67.20996138202429,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 68103,
+          "scenarioElectricKM": 24213.097944213005
+        },
+        {
+          "year": 2022,
+          "observed": 76.13420925003307,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 68043,
+          "scenarioElectricKM": 24191.76575801485
+        },
+        {
+          "year": 2023,
+          "observed": 84.67572611687856,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 68584,
+          "scenarioElectricKM": 24384.110970234862
+        },
+        {
+          "year": 2024,
+          "observed": 89.98568971249331,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 69181,
+          "scenarioElectricKM": 24596.36622290648
+        },
+        {
+          "year": 2025,
+          "observed": 94.34179639683751,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 69439,
+          "scenarioElectricKM": 24688.094623558536
+        }
+      ]
+    },
+    {
+      "factor": 0.5,
+      "rows": [
+        {
+          "year": 2016,
+          "observed": 35.553643663587515,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66252,
+          "scenarioElectricKM": 23555
+        },
+        {
+          "year": 2017,
+          "observed": 37.907588391763056,
+          "scenario": 36.73061602767528,
+          "assumedRouteKM": 66918,
+          "scenarioElectricKM": 24579.393633399744
+        },
+        {
+          "year": 2018,
+          "observed": 43.666243370434,
+          "scenario": 39.60994351701076,
+          "assumedRouteKM": 66935,
+          "scenarioElectricKM": 26512.915693111154
+        },
+        {
+          "year": 2019,
+          "observed": 50.907068159905066,
+          "scenario": 43.23035591174629,
+          "assumedRouteKM": 67415,
+          "scenarioElectricKM": 29143.74443790376
+        },
+        {
+          "year": 2020,
+          "observed": 58.66442992524574,
+          "scenario": 47.109036794416625,
+          "assumedRouteKM": 67956,
+          "scenarioElectricKM": 32013.41704401376
+        },
+        {
+          "year": 2021,
+          "observed": 67.20996138202429,
+          "scenario": 51.3818025228059,
+          "assumedRouteKM": 68103,
+          "scenarioElectricKM": 34992.5489721065
+        },
+        {
+          "year": 2022,
+          "observed": 76.13420925003307,
+          "scenario": 55.843926456810294,
+          "assumedRouteKM": 68043,
+          "scenarioElectricKM": 37997.88287900743
+        },
+        {
+          "year": 2023,
+          "observed": 84.67572611687856,
+          "scenario": 60.114684890233036,
+          "assumedRouteKM": 68584,
+          "scenarioElectricKM": 41229.055485117424
+        },
+        {
+          "year": 2024,
+          "observed": 89.98568971249331,
+          "scenario": 62.76966668804042,
+          "assumedRouteKM": 69181,
+          "scenarioElectricKM": 43424.68311145324
+        },
+        {
+          "year": 2025,
+          "observed": 94.34179639683751,
+          "scenario": 64.94772003021251,
+          "assumedRouteKM": 69439,
+          "scenarioElectricKM": 45099.04731177926
+        }
+      ]
+    },
+    {
+      "factor": 0.75,
+      "rows": [
+        {
+          "year": 2016,
+          "observed": 35.553643663587515,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66252,
+          "scenarioElectricKM": 23555
+        },
+        {
+          "year": 2017,
+          "observed": 37.907588391763056,
+          "scenario": 37.31910220971917,
+          "assumedRouteKM": 66918,
+          "scenarioElectricKM": 24973.196816699874
+        },
+        {
+          "year": 2018,
+          "observed": 43.666243370434,
+          "scenario": 41.63809344372238,
+          "assumedRouteKM": 66935,
+          "scenarioElectricKM": 27870.457846555575
+        },
+        {
+          "year": 2019,
+          "observed": 50.907068159905066,
+          "scenario": 47.068712035825676,
+          "assumedRouteKM": 67415,
+          "scenarioElectricKM": 31731.37221895188
+        },
+        {
+          "year": 2020,
+          "observed": 58.66442992524574,
+          "scenario": 52.88673335983118,
+          "assumedRouteKM": 67956,
+          "scenarioElectricKM": 35939.70852200688
+        },
+        {
+          "year": 2021,
+          "observed": 67.20996138202429,
+          "scenario": 59.295881952415094,
+          "assumedRouteKM": 68103,
+          "scenarioElectricKM": 40382.27448605325
+        },
+        {
+          "year": 2022,
+          "observed": 76.13420925003307,
+          "scenario": 65.98906785342169,
+          "assumedRouteKM": 68043,
+          "scenarioElectricKM": 44900.94143950372
+        },
+        {
+          "year": 2023,
+          "observed": 84.67572611687856,
+          "scenario": 72.3952055035558,
+          "assumedRouteKM": 68584,
+          "scenarioElectricKM": 49651.52774255871
+        },
+        {
+          "year": 2024,
+          "observed": 89.98568971249331,
+          "scenario": 76.37767820026687,
+          "assumedRouteKM": 69181,
+          "scenarioElectricKM": 52838.84155572662
+        },
+        {
+          "year": 2025,
+          "observed": 94.34179639683751,
+          "scenario": 79.64475821352501,
+          "assumedRouteKM": 69439,
+          "scenarioElectricKM": 55304.52365588963
+        }
+      ]
+    },
+    {
+      "factor": 1,
+      "rows": [
+        {
+          "year": 2016,
+          "observed": 35.553643663587515,
+          "scenario": 35.553643663587515,
+          "assumedRouteKM": 66252,
+          "scenarioElectricKM": 23555
+        },
+        {
+          "year": 2017,
+          "observed": 37.907588391763056,
+          "scenario": 37.907588391763056,
+          "assumedRouteKM": 66918,
+          "scenarioElectricKM": 25367
+        },
+        {
+          "year": 2018,
+          "observed": 43.666243370434,
+          "scenario": 43.666243370434,
+          "assumedRouteKM": 66935,
+          "scenarioElectricKM": 29228
+        },
+        {
+          "year": 2019,
+          "observed": 50.907068159905066,
+          "scenario": 50.907068159905066,
+          "assumedRouteKM": 67415,
+          "scenarioElectricKM": 34319
+        },
+        {
+          "year": 2020,
+          "observed": 58.66442992524574,
+          "scenario": 58.66442992524574,
+          "assumedRouteKM": 67956,
+          "scenarioElectricKM": 39865.99999999999
+        },
+        {
+          "year": 2021,
+          "observed": 67.20996138202429,
+          "scenario": 67.20996138202429,
+          "assumedRouteKM": 68103,
+          "scenarioElectricKM": 45772
+        },
+        {
+          "year": 2022,
+          "observed": 76.13420925003307,
+          "scenario": 76.13420925003307,
+          "assumedRouteKM": 68043,
+          "scenarioElectricKM": 51804
+        },
+        {
+          "year": 2023,
+          "observed": 84.67572611687856,
+          "scenario": 84.67572611687856,
+          "assumedRouteKM": 68584,
+          "scenarioElectricKM": 58073.99999999999
+        },
+        {
+          "year": 2024,
+          "observed": 89.98568971249331,
+          "scenario": 89.98568971249331,
+          "assumedRouteKM": 69181,
+          "scenarioElectricKM": 62253
+        },
+        {
+          "year": 2025,
+          "observed": 94.34179639683751,
+          "scenario": 94.34179639683751,
+          "assumedRouteKM": 69439,
+          "scenarioElectricKM": 65510
+        }
+      ]
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "parallel",
+      "units": [
+        {
+          "group": "control",
+          "pre": 20,
+          "untreatedPost": 23,
+          "post": 23
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 35
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 35
+        }
+      ],
+      "beforeAfter": 7,
+      "crossSection": 12,
+      "did": 4,
+      "truth": 4,
+      "bias": 0
+    },
+    {
+      "id": "different-trends",
+      "units": [
+        {
+          "group": "control",
+          "pre": 20,
+          "untreatedPost": 23,
+          "post": 23
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 34,
+          "post": 38
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 34,
+          "post": 38
+        }
+      ],
+      "beforeAfter": 10,
+      "crossSection": 15,
+      "did": 7,
+      "truth": 4,
+      "bias": 3
+    },
+    {
+      "id": "anticipation",
+      "units": [
+        {
+          "group": "control",
+          "pre": 20,
+          "untreatedPost": 23,
+          "post": 23
+        },
+        {
+          "group": "treated",
+          "pre": 30,
+          "untreatedPost": 31,
+          "post": 35
+        },
+        {
+          "group": "treated",
+          "pre": 30,
+          "untreatedPost": 31,
+          "post": 35
+        }
+      ],
+      "beforeAfter": 5,
+      "crossSection": 12,
+      "did": 2,
+      "truth": 4,
+      "bias": -2
+    },
+    {
+      "id": "spillover",
+      "units": [
+        {
+          "group": "control",
+          "pre": 20,
+          "untreatedPost": 23,
+          "post": 25
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 35
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 35
+        }
+      ],
+      "beforeAfter": 7,
+      "crossSection": 10,
+      "did": 2,
+      "truth": 4,
+      "bias": -2
+    },
+    {
+      "id": "heterogeneous",
+      "units": [
+        {
+          "group": "control",
+          "pre": 20,
+          "untreatedPost": 23,
+          "post": 23
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 32
+        },
+        {
+          "group": "treated",
+          "pre": 28,
+          "untreatedPost": 31,
+          "post": 38
+        }
+      ],
+      "beforeAfter": 7,
+      "crossSection": 12,
+      "did": 4,
+      "truth": 4,
+      "bias": 0
+    }
+  ],
+  "historicalCausalStatus": "withheld: comparison units and matched local outcomes unavailable"
+}

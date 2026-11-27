@@ -128,3 +128,7 @@ ENERGIA ran energia-scenario-001. The independent reference matched six complete
 ## Phase VI integrated checkpoint
 
 NEXUS executed nexus-scenario-001 after independent validation of both input labs. All four engineering–finance–production bridges, supplier links, and accounting vectors were reproduced independently. The frozen capital bill is $1.936m, including $896,000 of explicit accelerator imports. Higher stipulated domestic equipment sourcing raises domestic gross output from $1.209m to $1.565m. Changing the cooling assumptions reduces modeled annual facility energy by 50.22 MWh without changing the capital demand vector. The initial Phase VI scope now adds 12 Academy modules and 17 evidence entries in the v0.11.0 candidate. The next scientific milestone is the [CHRONOS source checkpoint](research/chronos-source-checkpoint.md).
+
+## Phase VII · CHRONOS milestone
+
+The Phase VII/VIII branch started from v0.11.0, `a1c02c48708d09e66200a818cfe78a440f374c9d`. CHRONOS executed chronos-scenario-001 after its design freeze at `9cb494d`. The independent reference reproduced 102 values, 18 spans, nine association pairs, four conditional scenarios and five exact synthetic cases. Historical causal estimation is withheld for incompatible geography, missing comparable outcomes and missing comparison units. The v0.12.0 candidate adds the validated historical workbench, and the next development task is typed knowledge graph, search, evidence catalogue and Academy consolidation.
