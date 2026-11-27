@@ -149,7 +149,7 @@ td, th { border-bottom: 1px solid var(--line); padding: .45rem .55rem; }
 @media (max-width: 650px) {
   .wrap { width: calc(100% - 30px); }
   .nav { flex-wrap: wrap; padding-block: .65rem; gap: .55rem; }
-  .nav nav { order: 3; width: 100%; }
+  .nav nav { order: 3; width: 100%; min-width: 0; flex-wrap: wrap; }
   .nav nav a { display: flex; min-height: 36px; align-items: center; }
   .hero, .lab-layout, .section-intro { grid-template-columns: 1fr; gap: 1.2rem; }
   .hero { padding-block: 2.7rem; }

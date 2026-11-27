@@ -70,3 +70,5 @@ Local verification passed 27 unit tests, all seven reference and archive suites,
 ## Phase IV · Recovered NOESIS
 
 All ten recovered files are preserved in the verified bundle and GitHub WIP snapshot at 7670acf. Both NOESIS v1 archives pass deterministic reproduction and independent reconstruction of 400 total worlds. The null primary contrasts stay unchanged. The packaged laboratory offers an archival replay and separate bounded practice challenge. SCIENTIA is the next standalone experiment.
+
+Phase III v0.3.1 was deployed from a9f1cb0 by [Pages run 45954910522](https://github.com/NeilMeher/synapse-research/actions/runs/45954910522). The public revision, artifact hashes and four browser widths were verified.
