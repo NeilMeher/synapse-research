@@ -335,7 +335,7 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),8);
+      assert.equal(await page.locator("article.lesson").count(),9);
       assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       await page.locator("#academy-history").selectOption("pooled");
       assert.match(await page.locator("#academy-cooperation-result").textContent(),/Pooled history.*fulfilled.*Gini/);
