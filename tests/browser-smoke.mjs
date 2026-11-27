@@ -456,7 +456,11 @@ try {
       await page.locator("#catalogue-evidence").selectOption("all");
       await page.locator("#catalogue-direction").selectOption("Inconclusive");
       assert.deepEqual(await page.locator("#studies article:not([hidden]) h2").allTextContents(),["CONVERGENCE","NOESIS"]);
+      const indexResponse=page.waitForResponse(new URL("data/research-index.json",base).href);
       assert.equal((await page.goto(new URL("knowledge.html?q=electrification",base).href)).status(),200);
+      const searchIndex=await indexResponse;
+      assert.ok(searchIndex.ok());
+      assert.equal(await searchIndex.finished(),null);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
       await page.locator("#knowledge-type").selectOption("Study");
       await page.locator("#knowledge-results").getByRole("button",{name:"CHRONOS",exact:true}).click();
