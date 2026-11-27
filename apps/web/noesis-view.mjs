@@ -1,5 +1,5 @@
 import { byId, node, canvasContext, line, circle, pct } from "./view.mjs";
-import { evaluateBasis, fitBayesianModel, predict, FAMILIES } from "../../engine/discovery.mjs";
+import { evaluateBasis, fitBayesianModel, predict, FAMILIES } from "./engine/discovery.mjs";
 
 let dataset = null;
 let currentArmId = "active_ig";
@@ -24,7 +24,7 @@ function formatContrast(contrast) {
   const est = (contrast.estimate * 100).toFixed(2);
   const lo = (contrast.interval[0] * 100).toFixed(2);
   const hi = (contrast.interval[1] * 100).toFixed(2);
-  return `${contrast.id}: ${est > 0 ? "+" : ""}${est} pp (95% Bonferroni CI [${lo}, ${hi}] pp)`;
+  return `${contrast.id.endsWith("random_recovery") ? "Disagreement minus random" : "Disagreement minus uniform grid"}: ${est > 0 ? "+" : ""}${est} pp (95% Bonferroni CI [${lo}, ${hi}] pp)`;
 }
 
 function renderTable() {
@@ -33,7 +33,7 @@ function renderTable() {
   for (const arm of dataset.arms) {
     const tr = node("tr");
     const m = arm.metrics;
-    tr.appendChild(node("td", arm.id));
+    tr.appendChild(node("td", {active_ig:"Model disagreement", active_uncertainty:"Active uncertainty", uniform_grid:"Uniform grid", random:"Random"}[arm.id]));
     tr.appendChild(node("td", pct(m.family_recovery.estimate)));
     tr.appendChild(node("td", pct(m.posterior_at_truth.estimate)));
     tr.appendChild(node("td", m.log_loss.estimate.toFixed(4)));
@@ -210,9 +210,10 @@ function updateView() {
 async function init() {
   const statusEl = byId("noesis-status");
   try {
-    let response = await fetch("./data/noesis-confirmatory.json");
-    if (!response.ok) response = await fetch("../../results/noesis-confirmatory.json");
+    const response = await fetch("./data/noesis-confirmatory.json");
+    if (!response.ok) throw new Error("Archive HTTP " + response.status);
     dataset = await response.json();
+    if (dataset.schemaVersion !== "noesis-v1" || dataset.config.id !== "noesis-confirmatory-001") throw new Error("Invalid archive");
     statusEl.textContent = `Loaded confirmatory dataset: ${dataset.config.trials} trials, budget ${dataset.config.budget}.`;
 
     renderTable();

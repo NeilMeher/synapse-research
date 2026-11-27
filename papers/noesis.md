@@ -1,17 +1,17 @@
 # Active Scientific Inquiry and the Discovery of Governing Laws: An Exact Bayesian Benchmark
 
-**Authors**: SYNAPSE NOESIS Laboratory (AI-assisted)  
-**Date**: November 2026  
-**Status**: Archived synthetic benchmark independently reconstructed. Human review pending.  
-**Evidence Class**: Synthetic Simulation  
-**Repository**: [github.com/NeilMeher/synapse-research](https://github.com/NeilMeher/synapse-research)  
+**Authors**: SYNAPSE NOESIS Laboratory (AI-assisted)
+**Date**: November 2026
+**Status**: Archived synthetic benchmark independently reconstructed. Human review pending.
+**Evidence Class**: Synthetic Simulation
+**Repository**: [github.com/NeilMeher/synapse-research](https://github.com/NeilMeher/synapse-research)
 **Artifact Hash**: `edb29de55e0992f2ffa0c02cf8ba17e6c810799a2c97ff385500709b8253a1ba`
 
 ---
 
 ## Abstract
 
-Automated scientific discovery requires an agent to deduce governing mathematical laws from scarce, noisy observations while sequentially choosing which experiments to conduct. Here we present NOESIS, an exact Bayesian benchmark evaluating automated hypothesis discovery across four canonical natural law families: Polynomial, Harmonic, Exponential Decay, and Rational/Padé functions. We compare four inquiry policies under an identical budget of eight sequential observations: (1) passive random sampling, (2) deterministic space-filling uniform grid sampling, (3) active predictive uncertainty sampling, and (4) model disagreement targeting Bayesian model disagreement (*experimentum crucis*). In a pre-registered confirmatory trial of 300 synthetic physical systems ($N=300$), model disagreement achieved the highest true family recovery rate ($91.33\%$, $95\%\text{ CI } [0.881, 0.945]$) and posterior confidence allocated to truth ($87.43\%$). However, within this sample size, the Bonferroni-corrected primary contrasts against passive random ($+2.67\text{ pp}$, $95\%\text{ CI } [-1.68, +7.02]\text{ pp}$) and uniform grid sampling ($+1.00\text{ pp}$, $95\%\text{ CI } [-3.43, +5.43]\text{ pp}$) spanned zero. The study estimates these contrasts under the archived design; the intervals do not establish equivalence.
+Automated scientific discovery requires an agent to deduce governing mathematical laws from scarce, noisy observations while sequentially choosing which experiments to conduct. Here we present NOESIS, an exact Bayesian benchmark evaluating automated hypothesis discovery across four canonical natural law families: Polynomial, Harmonic, Exponential Decay, and Rational/Padé functions. We compare four inquiry policies under an identical budget of eight sequential observations: (1) passive random sampling, (2) deterministic space-filling uniform grid sampling, (3) active predictive uncertainty sampling, and (4) predictive-mean model disagreement (*experimentum crucis*). In a pre-registered confirmatory trial of 300 synthetic physical systems ($N=300$), model disagreement achieved the highest true family recovery rate ($91.33\%$, $95\%\text{ CI } [0.881, 0.945]$) and posterior confidence allocated to truth ($87.43\%$). However, within this sample size, the Bonferroni-corrected primary contrasts against passive random ($+2.67\text{ pp}$, $95\%\text{ CI } [-1.68, +7.02]\text{ pp}$) and uniform grid sampling ($+1.00\text{ pp}$, $95\%\text{ CI } [-3.43, +5.43]\text{ pp}$) spanned zero. The study estimates these contrasts under the archived design; the intervals do not establish equivalence.
 
 ---
 

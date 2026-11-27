@@ -6,6 +6,7 @@
   <title>NOESIS · SYNAPSE</title>
   <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
   <script type="module" src="./noesis-view.mjs"></script>
+  <script type="module" src="./noesis-challenge.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -31,14 +32,14 @@
     <div class="study-controls result-panel">
       <label>Inquiry Policy
         <select id="noesis-arm">
-          <option value="active_ig">Active Information Gain (Model Disagreement)</option>
+          <option value="active_ig">Model disagreement</option>
           <option value="uniform_grid">Uniform Space-Filling Grid</option>
           <option value="random">Passive Random Sampling</option>
           <option value="active_uncertainty">Active Predictive Uncertainty</option>
         </select>
       </label>
       <label class="scrub">Observation Step
-        <input id="noesis-step" type="range" min="0" max="7" value="0">
+        <input id="noesis-step" aria-label="Archived measurement step" type="range" min="0" max="7" value="0">
         <output id="noesis-step-output" for="noesis-step">0 / 7</output>
       </label>
       <div class="actions">
@@ -79,6 +80,19 @@
       </div>
     </article>
 
+    <article class="result-panel study-block" id="challenge">
+      <h2>Choose your own measurements</h2>
+      <p>In this practice world every measurement has Gaussian noise with standard deviation 0.20, and all generating coefficients have unit standard deviation. You have eight observations. Revealing the hidden law ends the round.</p>
+      <div class="study-controls">
+        <label>Practice seed <input type="number" id="noesis-seed" min="1" max="4294967295" step="1" required value="281026"></label>
+        <label>Measurement location <select id="noesis-location"></select></label>
+        <div class="actions"><button class="quiet" type="button" id="noesis-new-world">Start world</button><button class="primary" type="button" id="noesis-measure">Measure</button><button class="quiet" type="button" id="noesis-challenge-reveal">Reveal practice law</button></div>
+      </div>
+      <p id="noesis-challenge-status" role="status"></p><p id="noesis-challenge-outcome" aria-live="polite"></p>
+      <ul class="legend" id="noesis-challenge-posterior" aria-label="Candidate family probabilities"></ul>
+      <canvas id="noesis-challenge-curve" class="study-chart" aria-hidden="true"></canvas>
+      <div class="table-scroll"><table><caption>Practice observations</caption><thead><tr><th>Measurement</th><th>Input x</th><th>Observed y</th></tr></thead><tbody id="noesis-challenge-observations"></tbody></table></div>
+    </article>
     <article class="result-panel study-block" id="evidence">
       <h2>Research Evidence &amp; Artifacts</h2>
       <div class="actions">
@@ -86,7 +100,9 @@
         <a class="quiet" href="./data/noesis-confirmatory.manifest.json">Run Manifest</a>
         <a class="quiet" href="./papers/noesis.md">Scientific Manuscript</a>
         <a class="quiet" href="./research/noesis-confirmatory.md">Frozen Protocol</a>
-        <a class="quiet" href="./research/noesis-mathematics.md">Mathematical Specification</a>
+        <a class="quiet" href="./research/noesis-mathematics.md">Mathematical specification</a>
+        <a class="quiet" href="./research/noesis-audit.md">Limitations and verification</a>
+        <a class="quiet" href="./docs/noesis-learning.md">Learning guide</a>
       </div>
     </article>
   </main>
