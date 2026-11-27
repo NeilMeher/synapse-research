@@ -71,3 +71,7 @@ The standalone SCIENTIA implementation, frozen studies and lab are on codex/phas
 SCIENTIA v0.4.1 was built from b232fd3 by [Pages workflow 45958470019](https://github.com/NeilMeher/synapse-research/actions/runs/45958470019). The public release.json showed that exact revision. EPISTEME's independently reconstructed pilot and confirmation are archived in results. Its confirmatory design was frozen at b2a193d before execution. The Phase IV final release adds EPISTEME, the registry-backed atlas and Mathematical Academy.
 
 Use the Pages release metadata and GitHub Actions to confirm deployed revision and verified jobs. For scientific continuation, begin AXIOM with a small game-theoretic consistency benchmark using equivalent payoff structures and explicit utility assumptions. See ROADMAP.md for dependencies. Human review of the protocol and manuscripts remains pending.
+
+## Exact continuation checkpoint
+
+The deployed release is [v0.5.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.5.0) at e5e40c3. The [release metadata](https://neilmeher.github.io/synapse-research/release.json) and [Pages run 45962338932](https://github.com/NeilMeher/synapse-research/actions/runs/45962338932) identify the shipped revision. All four live browser widths and six public Phase IV JSON downloads passed. For a future scientific slice start from [the AXIOM design](research/axiom-design.md) and build its independent payoff-permutation controls. This documentation checkpoint is on the recovery branch. The public deployment remains at the verified release commit.

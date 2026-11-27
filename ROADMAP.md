@@ -22,3 +22,5 @@ The first scoped MIRAGE, REFLEX and CONVERGENCE milestones now have deterministi
 Phase IV delivered NOESIS and SCIENTIA, with EPISTEME as their cross-laboratory validation experiment. The atlas, registry and five Academy modules are application-level integration. Human scientific review remains pending. A new NOESIS acquisition benchmark could compare actual expected information gain with the archived heuristic under a distinct protocol and held-out grid.
 
 The next proposed new laboratory is AXIOM. Start with payoff-preserving equivalence or relabeling tests on small two-player games, explicit deterministic and stochastic decision policies, and independently calculable reference controls. Define utility, framing, equilibrium and cross-game consistency before running a pilot. Design any empirical or language-model arm as a separate study.
+
+The first AXIOM work is scoped in [the payoff-preserving design](research/axiom-design.md). Implement canonical payoff and belief permutations and validate response mapping on the exact 20 task and 80 presentation fixtures before freezing the pilot.
