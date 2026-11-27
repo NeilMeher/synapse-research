@@ -27,6 +27,8 @@
       <li><a href="#resources">Comparative advantage and resource accounting</a></li>
       <li><a href="#cooperation">Cooperation and complex systems</a></li>
       <li><a href="#input-output">Input–output economics</a></li>
+      <li><a href="#power-energy">Energy and engineering mathematics</a></li>
+      <li><a href="#project-finance">Infrastructure project finance</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -201,6 +203,35 @@
       <details><summary>Advanced · Check convergence and aggregation</summary><p>For a nonnegative A and a positive vector v, the largest ratio (Av)ᵢ/vᵢ bounds the rate of production rounds in the associated weighted norm. A bound below one proves convergence. Grouping sums the underlying transaction block and gross output before division. Averaging coefficients arbitrarily changes the model.</p></details>
       <details><summary>Practice and worked solution</summary><p>What if equipment buys $0.10 of construction per dollar and the order is $100 million for construction?</p><p>Construction output C=100+0.10E and equipment output E=0.20C. Substitution yields 0.98C=100, so C≈102.04 and E≈20.41. Gross output is approximately 122.45 million. The extra output above direct demand is 22.45 million. Value added requires separate information about intermediate purchases, and gross output includes those purchases.</p></details>
       <p><a href="./artha.html#shock">Open the official-data workbench</a> · <a href="./docs/artha-learning.md">ARTHA guide</a> · <a href="https://unstats.un.org/unsd/nationalaccount/capdev/resources/details?resourceid=36&amp;resourcetype=handbook">UN input–output handbook</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="power-energy">
+      <h2>Energy and engineering mathematics</h2>
+      <p><strong>Prerequisites</strong> Rates, fractions and multiplying quantities with units.</p>
+      <h3>Beginner · Watts describe a rate</h3>
+      <p>Power is the rate of using energy. One kilowatt for one hour uses one kilowatt-hour. One megawatt equals 1,000 kW and one megawatt-hour equals 1,000 kWh. Compare peak kW when sizing an electrical connection and total kWh when estimating energy charges.</p>
+      <h3>Intermediate · Separate utilization from load factor</h3>
+      <p>For an IT baseline of 10 kW, an additional 20 kW at full load, and workload utilization u, average IT power is 10+20u. At u=0.5 it is 20 kW. Load factor is average divided by peak, so it is 20/30=2/3. With constant PUE of 1.5, average facility power becomes 30 kW, or 720 kWh in 24 hours.</p>
+      <div class="lesson-demo"><h3>Vary the load in a 24-hour engineering model</h3>
+      <label>Workload utilization (%) <input id="academy-energy-load" type="range" min="0" max="100" value="50"></label>
+      <p id="academy-energy-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Different energy and water boundaries</summary><p>PUE uses total facility energy divided by IT energy over the same interval. When an example assumes constant PUE, multiply IT kWh by PUE once. For site WUE of 0.5 L/kWh IT, the 480 IT kWh at half load gives 240 liters of site water, or 0.24 m³. Regional water effects need different inputs.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Set workload utilization to 0%. Does the facility still use energy? At full load, how much energy does the building use in a day?</p><p>Idle IT still draws 10 kW. At PUE 1.5 the facility uses 15×24=360 kWh. At full load it draws 45 kW and uses 1,080 kWh. Both calculations hold cooling efficiency fixed.</p></details>
+      <p><a href="./energia.html#workbench">Trace the ENERGIA ledger</a> · <a href="https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers">DOE cooling and water guidance</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="project-finance">
+      <h2>Infrastructure project finance</h2>
+      <p><strong>Prerequisites</strong> Compound interest, cash flow and percentages.</p>
+      <h3>Beginner · Compare money across years</h3>
+      <p>At 10%, receiving $110 next year has a present value of $100 today. The project discounts unlevered cash flows. Equity discounts the flows after borrowing and servicing debt, with its own required rate. IRR is a rate at which the present value sums to zero.</p>
+      <h3>Intermediate · Work through principal and cash flow</h3>
+      <p>Build a $100 facility, fund $50 with debt at 10%, and repay $25 of principal in each of two years. The first interest bill is $5 and the second $2.50. Scheduled payments are $30 and $27.50. With CFADS of $60 per year, DSCR is 2.00× followed by 2.18×. Project cash flows are [−100, 60, 60]. Equity flows are [−50, 30, 32.50]. At 10% project NPV is $4.13. At a 15% equity rate, equity NPV is $0.66.</p>
+      <div class="lesson-demo"><h3>Change the annual cash available for debt service</h3>
+      <label>Annual CFADS in dollars <input id="academy-finance-cash" type="range" min="10" max="100" value="60"></label>
+      <p id="academy-finance-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Coverage, break even and ambiguous returns</summary><p>NPV=ΣCFₜ/(1+r)ᵗ. Break-even cash flow here is $100 divided by the present value of two $1 payments, or $57.62. Separately, year one needs $30 to pay debt before any reserve. Cash-flow series with several changes of sign may have several IRRs. At 10% and 20% the series [−100,230,−132] has zero NPV, so consult the NPV profile.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Set annual CFADS to $25. Can the project pay each year without reserves?</p><p>With no reserve, $25 leaves $5 uncovered in year one and $2.50 in year two. Coverage is 0.83× and 0.91×. These arithmetic results do not determine legal insolvency.</p></details>
+      <p><a href="./energia.html#evidence">Inspect ENERGIA's amortization and sensitivities</a> · <a href="./docs/energia-learning.md">ENERGIA guide</a> · <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60678">RBI project finance context</a></p>
     </article>
   </main>
 </body>

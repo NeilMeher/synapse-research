@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENERGIA · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./infrastructure.css">
+<script type="module" src="./energia-view.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+<nav aria-label="ENERGIA navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html#power-energy">Mathematical Academy</a><a href="./library.html">Evidence library</a></nav>
+<button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button></div></header>
+<main class="wrap section study-page" id="main">
+<div class="section-intro"><div><p class="eyebrow">ENERGIA · Infrastructure and project finance</p><h1>What keeps a compute facility viable?</h1></div><p>Follow a hypothetical L40S facility from workload and cooling to its utility bill, project cash flow and debt service.</p></div>
+<p id="energia-status" role="status">Loading registered engineering and finance evidence…</p>
+<article class="result-panel study-block" id="workbench">
+<h2>Engineering and finance workbench</h2>
+<form id="energia-form"><fieldset id="energia-controls" disabled><legend>Scenario assumptions</legend>
+<div class="study-controls">
+<label>Preset <select id="energia-case"></select></label>
+<label>Workload utilization (%) <input id="energia-work" type="number" min="0" max="100" step="1" required></label>
+<label>Spot billing utilization (%) <input id="energia-billing" type="number" min="0" max="100" step="1" required></label>
+<label>Electricity (scenario USD/kWh) <input id="energia-tariff" type="number" min="0" max="1" step=".001" required></label>
+<label>Spot price (scenario USD/GPU-hour) <input id="energia-price" type="number" min="0" max="10" step=".01" required></label>
+<label>PUE <input id="energia-pue" type="number" min="1" max="3" step=".01" required></label>
+<label>Senior debt share (%) <input id="energia-debt" type="number" min="0" max="95" step="1" required></label>
+<label>Debt interest (%) <input id="energia-rate" type="number" min="0" max="50" step=".1" required></label>
+</div></fieldset></form>
+<p id="energia-input-status" aria-live="polite">All commercial values are hypothetical. The site uses no verified Maharashtra tariff or vendor quotation.</p>
+<dl class="scenario-metrics" aria-live="polite">
+<div><dt>Annual facility energy</dt><dd id="energia-energy">—</dd></div>
+<div><dt>Design demand</dt><dd id="energia-peak">—</dd></div>
+<div><dt>Annual site water use</dt><dd id="energia-water">—</dd></div>
+<div><dt>Annual billed GPU-hours</dt><dd id="energia-hours">—</dd></div>
+<div><dt>Project NPV</dt><dd id="energia-npv">—</dd></div>
+<div><dt>Scheduled equity NPV</dt><dd id="energia-equity">—</dd></div>
+<div><dt>Minimum DSCR</dt><dd id="energia-dscr">—</dd></div>
+<div><dt>First uncovered debt payment</dt><dd id="energia-gap">—</dd></div>
+</dl>
+<p id="energia-credit"></p>
+<div class="study-pair"><div class="table-scroll"><table><caption>Engineering and operating-year energy ledger</caption><tbody id="energia-physical"></tbody></table></div>
+<div class="table-scroll"><table><caption>Capital, uses and funding in scenario USD</caption><tbody id="energia-capital"></tbody></table></div></div>
+<div class="table-scroll" tabindex="0" aria-label="Cash flow table"><table><caption>Scheduled cash flow in scenario USD</caption><thead><tr>
+<th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">OpEx</th><th scope="col">CapEx</th><th scope="col">Working capital</th><th scope="col">Replacement</th><th scope="col">CFADS</th><th scope="col">Project cash</th><th scope="col">Interest</th><th scope="col">Principal</th><th scope="col">Debt balance</th><th scope="col">Reserve</th><th scope="col">Uncovered payment</th><th scope="col">Equity cash</th><th scope="col">DSCR</th></tr></thead><tbody id="energia-timeline"></tbody></table></div>
+</article>
+<article class="result-panel study-block" id="evidence">
+<h2>Registered scenarios and sensitivity</h2>
+<p>The archived scenarios use the frozen base case. The workbench above can differ from this evidence.</p>
+<div class="table-scroll"><table><caption>Six registered cases</caption><thead><tr><th scope="col">Case</th><th scope="col">Project NPV</th><th scope="col">Equity NPV</th><th scope="col">Minimum DSCR</th><th scope="col">First uncovered debt payment</th></tr></thead><tbody id="energia-archive"></tbody></table></div>
+<div class="study-controls"><label>Sensitivity grid <select id="energia-grid-choice"><option value="utilizationEnergy">Spot billing × energy price</option><option value="utilizationRevenue">Spot billing × revenue price</option><option value="debtHardware">Debt rate × cost per GPU</option></select></label></div>
+<p id="energia-grid-caption"></p>
+<div class="table-scroll" tabindex="0" aria-label="Sensitivity grid results"><table><caption>Equity NPV in scenario USD</caption><thead id="energia-grid-head"></thead><tbody id="energia-grid"></tbody></table></div>
+<div class="study-pair"><section><h3>Project NPV break evens</h3><ul id="energia-roots"></ul></section>
+<div class="table-scroll"><table><caption>Baseline NPV profile</caption><thead><tr><th scope="col">Discount rate</th><th scope="col">Project NPV</th><th scope="col">Equity NPV</th></tr></thead><tbody id="energia-profile"></tbody></table></div></div>
+<div class="table-scroll"><table><caption>Finite design comparison under registered constraints</caption><thead><tr><th scope="col">Candidate</th><th scope="col">Capital</th><th scope="col">Peak kVA</th><th scope="col">Site m³</th><th scope="col">USD per billed hour</th><th scope="col">Disposition</th></tr></thead><tbody id="energia-frontier"></tbody></table></div>
+<p>Cash flows are scheduled pre-tax projections. A modeled gap is unpaid scheduled debt after available project cash and reserve use. Taxes, refinancing and legal recovery are outside the model.</p>
+<div class="actions"><a class="quiet" href="./data/energia-scenario.json">Results JSON</a><a class="quiet" href="./data/energia-scenario.manifest.json">Run manifest</a><a class="quiet" href="./experiments/energia-scenario.json">Frozen configuration</a><a class="quiet" href="./research/energia-scenario.md">Protocol</a><a class="quiet" href="./papers/energia.md">Manuscript</a><a class="quiet" href="./research/energia-audit.md">Audit and limitations</a><a class="quiet" href="./docs/energia-learning.md">Learning guide</a></div>
+</article>
+<article class="result-panel study-block" id="sources"><h2>What is sourced</h2>
+<p>NVIDIA specifies a 350 W maximum device power. Workload watts, PUE, WUE, utility prices, customer contracts and financing terms are scenario inputs. Site WUE uses litres per kWh of IT energy.</p>
+<div class="actions"><a class="quiet" href="https://www.nvidia.com/en-us/data-center/l40s/">NVIDIA L40S specification</a><a class="quiet" href="https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers">DOE energy and water guidance</a><a class="quiet" href="./sources/energia-l40s-design.json">Input provenance</a><a class="quiet" href="./research/energia-sources.md">Official Maharashtra and lending sources</a></div>
+</article>
+</main></body></html>

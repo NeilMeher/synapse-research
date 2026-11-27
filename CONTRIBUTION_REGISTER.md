@@ -24,3 +24,5 @@ The research programme, requested design and authorization were supplied by Neil
 Neil Meher supplied the scientific programme, exact benchmark requirements and approval to publish verified milestones. Codex implemented the pure JavaScript models, independent Python mathematical implementations, frozen experiments, publications and laboratory interfaces. Automated and AI-assisted checks are recorded in the build and science logs. Independent human review remains pending.
 
 The Phase VI Codex-assisted ARTHA implementation, source extraction, verification and research materials were added at the user's direction. The Asian Development Bank produced the underlying national accounting estimates. Independent human assessment remains pending.
+
+Codex assisted with the Phase VI ENERGIA model, audit, source review, and independent computational check at the user's direction. Manufacturer and official agency sources supply only their identified specifications and context. Engineering and financing assumptions are project-created.

@@ -72,3 +72,7 @@
 ## v0.9.0 · ARTHA candidate
 
 Added the sourced India national accounts, deterministic domestic-demand scenarios, flow and outcome inspectors, and the Academy's input–output economics module. Verified extraction, accounting, scenario replay and independent series evaluation.
+
+## v0.10.0 · ENERGIA candidate
+
+Added modular compute power and cooling, hypothetical project finance, sensitivity tables, a bounded feasibility and Pareto comparison, source provenance, and two Academy lessons.

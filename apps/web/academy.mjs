@@ -1,3 +1,4 @@
+import {discounted,returnRate} from "./engine/energia.mjs";
 import {solveLinear} from "./engine/artha.mjs";
 import {byId,pct} from "./view.mjs";
 import {row} from "./study-view.mjs";
@@ -104,4 +105,20 @@ updateWhen(["academy-io-demand"],()=>{
   const [construction,equipment]=solveLinear([[1,-.1],[-.2,1]],[demand,0]);
   byId("academy-io-result").textContent="Construction "+construction.toFixed(2)+"m · equipment "+
     equipment.toFixed(2)+"m · gross output "+(construction+equipment).toFixed(2)+"m.";
+});
+
+updateWhen(["academy-energy-load"],()=>{
+  const load=number("academy-energy-load")/100,avg=10+20*load;
+  const site=avg*1.5*24;
+  byId("academy-energy-result").textContent=avg.toFixed(1)+" kW average IT · "+site.toFixed(1)+
+    " kWh facility · "+(avg/30*100).toFixed(1)+"% IT load factor.";
+});
+
+updateWhen(["academy-finance-cash"],()=>{
+  const cash=number("academy-finance-cash");
+  const project=[-100,cash,cash], equity=[-50,cash-30,cash-27.5];
+  const irr=returnRate(project);
+  byId("academy-finance-result").textContent="Project NPV $"+discounted(project,.10).toFixed(2)+
+    " · Equity NPV $"+discounted(equity,.15).toFixed(2)+" · DSCR "+(cash/30).toFixed(2)+"× and "+
+    (cash/27.5).toFixed(2)+"× · Project IRR "+(irr.value===null?irr.status:(irr.value*100).toFixed(2)+"%")+".";
 });

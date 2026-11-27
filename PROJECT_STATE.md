@@ -120,3 +120,7 @@ The robustness pilot and confirmation were frozen at cf82618 and 645462b. Settle
 ARTHA executed 12 conditional comparative statics under artha-scenario-001. The ADB India's 2023 and 2024 source totals reconcile within 2.71×10⁻⁹ million USD. The official-data workbench and nine Academy modules are included in the v0.9.0 candidate. The next scientific task is to validate ENERGIA's engineering and finance accounting under explicitly hypothetical prices.
 
 POLIS 2.0 v0.8.1 served commit `118bbb3a76a2003e5d731377de28c36c55975c7a` from Pages run [46000269749](https://github.com/NeilMeher/synapse-research/actions/runs/46000269749). The public archive digest and browser suite at 360, 390, 768 and 1440 pixels matched.
+
+## Phase VI · ENERGIA checkpoint
+
+ENERGIA ran energia-scenario-001. The independent reference matched six complete annual schedules, 59 sensitivity points, project NPV break evens and both bounded decision sets. The baseline shows project NPV −$648,033 and a year-five uncovered payment of $60,064 after the reserve. A single all-equity option satisfied the registered design constraints despite negative NPV. The v0.10.0 candidate adds the public terminal and Academy energy and finance modules. Next, verify the independent NEXUS procurement-to-final-demand bridge.

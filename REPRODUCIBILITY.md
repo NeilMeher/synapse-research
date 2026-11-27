@@ -55,3 +55,7 @@ Run `node scripts/polis2.mjs verify` and `python -B scripts/reference_polis2.py`
 ## ARTHA
 
 Download the original ADB workbook using the URL in [the source manifest](sources/artha-adb-india.json) and run `python -B scripts/extract_artha.py <workbook> --check`. The extractor verifies the original hash, exact unit labels, classification, accounting and byte-identical processed data. Run `python -B scripts/test_extract_artha.py`, `python -B scripts/check_artha_reference.py` and `node scripts/artha.mjs verify`. The reference recomputes the four accounting panels and twelve scenario vectors as series of production rounds. The registered result hash is `291d4a118aa50273beb0b05692bac98361abb1a90549d267e4fc16ae183df28d`. The frozen initial reference's exact equality assertion is documented in the audit.
+
+## ENERGIA
+
+Run `node --test tests/energia.test.mjs`, `node scripts/energia.mjs verify` and `python -B scripts/check_energia_reference.py`. The last command runs independent closed-form balances plus a scale-aware near-root numerical check. The deterministic archive covers six ledgers, 59 grid cells, bounded break-even calculations, NPV profiles and a constrained finite comparison. Use the preregistered inputs and manifest to reproduce exact settings.

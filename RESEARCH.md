@@ -36,3 +36,5 @@ Phase II adds [MIRAGE](papers/mirage.md), [REFLEX](papers/reflex.md) and [CONVER
 - SCIENTIA and POLIS could measure selective reporting across candidate institutions under a known simulated ground truth.
 
 ARTHA is a national, current-price comparator across two ADB reference years and two resolutions. Its official input data and hypothetical domestic demand are identified separately. See [ARTHA](papers/artha.md) for the executed results.
+
+ENERGIA tests illustrative infrastructure finance and utility assumptions. The initial evidence is a deterministic sensitivity study rather than project underwriting. See the [ENERGIA manuscript](papers/energia.md).

@@ -106,3 +106,7 @@ Phase VI began on the clean checkpoint 214bb251ddb98b181f682ea433e2c66c0a24964f 
 ## ARTHA checkpoint
 
 The domestic ADB India industry-by-industry source and processed data are pinned. Run the source extraction check against the original workbook, the independent production-series check and the replay before revising ARTHA. The completed archive hash is 291d4a118aa50273beb0b05692bac98361abb1a90549d267e4fc16ae183df28d. Continue with ENERGIA before integrating the national coefficients into NEXUS.
+
+## ENERGIA checkpoint
+
+ENERGIA's inputs, model and sources are frozen. Run `python -B scripts/check_energia_reference.py` and `node scripts/energia.mjs verify`. The verified archive digest is `a46ba764f10dcdcef9c9bef2df58d8f4be6dd2cfeb3d7c26361810c009d82c37`. Maharashtra connection, site availability, tariffs, commercial offers and institutional eligibility remain unverified. NEXUS can use the already checked, hypothetical 2024-denominated capital ledger as its scenario basis.

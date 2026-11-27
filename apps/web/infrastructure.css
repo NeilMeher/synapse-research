@@ -10,3 +10,8 @@
 .study-controls select { max-width:100%; }
 .study-controls label { min-width:0; max-width:100%; }
 .scenario-heat { min-width:3.5rem; width:7rem; accent-color:var(--accent); }
+
+#energia-controls { min-width:0; margin:0; border:1px solid var(--line); }
+#energia-controls legend { padding-inline:.5rem; }
+#energia-grid td[data-positive="true"] { background:color-mix(in srgb,var(--accent) 13%,transparent); }
+#energia-grid td[data-positive="false"] { background:color-mix(in srgb,#d76043 13%,transparent); }

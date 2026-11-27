@@ -15,7 +15,8 @@ FAMILIES = {
     "axiom-finite-v1": ("results/axiom-pilot.json",),
     "civilizations-v1": ("results/civilizations-pilot.json", "results/civilizations-confirmatory.json"),
     "polis-v1": ("results/polis-pilot.json", "results/polis-confirmatory.json"),
-    "source-v1": ("sources/artha-adb-india.json",),
+    "source-v1": ("sources/artha-adb-india.json", "sources/energia-l40s-design.json"),
+    "energia-v1": ("results/energia-scenario.json",),
     "artha-v1": ("results/artha-scenario.json",),
     "polis2-v1": ("results/polis2-pilot.json", "results/polis2-confirmatory.json"),
 }

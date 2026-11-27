@@ -28,3 +28,5 @@ The first AXIOM work is scoped in [the payoff-preserving design](research/axiom-
 The Phase V AXIOM, barter and POLIS benchmarks are complete within their registered synthetic scope. A narrow follow-up should vary payment enforcement and surplus valuation before extrapolating from the current policy equivalence. ARTHA, ENERGIA and CHRONOS remain separate proposed milestones. ARTHA's first future task is to identify official versioned Indian supply-use or input-output tables and their units and licensing before implementing a model.
 
 Phase VI ARTHA national modelling is implemented. State and district modelling requires consistent regional purchase and trade data. Next validate ENERGIA, then use its explicit procurement ledger to test a narrow NEXUS integration.
+
+ENERGIA's initial engineering and finance study is validated on hypothetical inputs. A later site-specific extension needs approved tariffs, power capacity, water permits, independently verified quotations, regulated lending review and workload data.

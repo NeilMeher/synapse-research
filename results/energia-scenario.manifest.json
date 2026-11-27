@@ -1,0 +1,41 @@
+{
+  "id": "energia-scenario-001",
+  "phase": "scenario",
+  "status": "completed",
+  "commit": "60f077da8e3374100b3bea6118ca249b2bc44ef8",
+  "inputs": {
+    "experiments/energia-scenario.json": "1f8561f6e164eaa387066e108e5ba4df51464bd97a9745508cb786e2adfecd9a",
+    "research/energia-scenario.md": "5c5ae7ad4456c3a2c2bddf7a922e44ca3dddac636673573c24b217d2dfa0908e",
+    "scripts/run-scenario.mjs": "e5e7e3e5fc70050cee689423943ecf39e98e0746943c37deadcaa6a46fc2f542",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "scripts/energia.mjs": "21ba2c864f021e8213ecadaad819ec43d0d3b9bce3dd9df0ab4764d43035de1a",
+    "scripts/reference_energia.py": "3795f04e5955e0f97b4437565d074e9d0584c9e9a080591af945bc7d399b398e",
+    "engine/energia.mjs": "cc19bbc509a819496c470f06ae807f19c029f050a90245d038824a382037be24",
+    "sources/energia-l40s-design.json": "92261b8007a71e21a7275e8c92d4bb9d362d0874f72563f6bf093e2c73c51d08",
+    "research/energia-sources.md": "0c593046359841407c932cf252c41f440accbf9f57cfbc839d8a68a843dd265c",
+    "schemas/energia-v1.json": "a2f8f8882ea4d2f980796299adbe78eb8f11af4001d0a8fe5e8cab8b531cb66d",
+    "schemas/source-v1.json": "0cc3075591de2f3ec99f325cad20bf55a69f665d98654d68f924e9910d523361"
+  },
+  "configSha256": "bebe07545636ba50dd5c1e8447c50bcc80fe1f772822d569e54605d9a4ecf499",
+  "modelVersion": "modular-l40s-project-finance-v1",
+  "dataset": {
+    "id": "energia-l40s-design-inputs",
+    "vintage": "NVIDIA public product specification checked 2026-11-27; U.S. DOE design guide July 2024",
+    "retrievalDate": "2026-11-27",
+    "units": "W/device, IT kWh, facility kWh, site L/kWh IT, illustrative scenario USD"
+  },
+  "startUtc": "2026-11-27T12:46:50.203Z",
+  "endUtc": "2026-11-27T12:46:50.941Z",
+  "runtimeMs": 705.8592000000008,
+  "observedRssBytes": 52101120,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/energia-scenario.json",
+    "bytes": 83908,
+    "sha256": "a46ba764f10dcdcef9c9bef2df58d8f4be6dd2cfeb3d7c26361810c009d82c37"
+  }
+}

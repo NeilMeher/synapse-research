@@ -1,4 +1,4 @@
-export const registryVersion=3;
+export const registryVersion=4;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -118,6 +118,15 @@ export const researchStudies=[
       assets:["sources/artha-adb-india.json","data/processed/artha-india.json","data/processed/artha-groups.json"],
       concepts:[["Input–output mathematics","academy.html#input-output"],["Coefficient inspector","artha.html#flows"],
         ["Source inventory","research/artha-sources.md"]]}),
+  study("energia","ENERGIA","energia.html",["energia"],
+    "Modular compute engineering, project cash flow, debt service and constrained comparison.",
+    "Compare six hypothetical scenarios and 59 sensitivity cells with separate billed and active GPU-hours.",
+    {evidence:"Illustrative engineering and finance",archivePhases:["scenario"],studyIds:["energia-scenario-001"],
+      protocol:"research/energia-scenario.md",math:"research/energia-scenario.md",audit:"research/energia-audit.md",
+      result:"data/energia-scenario.json",manifest:"data/energia-scenario.manifest.json",
+      config:"experiments/energia-scenario.json",engine:"engine/energia.mjs",assets:["sources/energia-l40s-design.json"],
+      concepts:[["GPU power and cooling","energia.html#workbench"],["Energy and engineering","academy.html#power-energy"],
+        ["Cash flow and financing risk","academy.html#project-finance"],["Water and tariff sources","energia.html#sources"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));

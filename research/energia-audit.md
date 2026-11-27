@@ -1,0 +1,13 @@
+# ENERGIA internal audit
+
+| Severity | Evidence and consequence | Resolution or limit |
+| --- | --- | --- |
+| High | Device watts, rack kW, design kVA and annual kWh can be confused. | Preserve the explicit load ledger, conversion tests, and independent capacity and power validation. The peak model assumes all devices at active load. |
+| High | Working utilization can differ from customer billing, and reservations can double count paid device hours. | Use separate operating utilization and a reserved block partitioned from available spot hours. On expiry the block returns to spot capacity. |
+| High | Cooling electricity is part of PUE. Electricity energy and demand bills need different quantities. | Apply PUE once. Demand uses max(contract kVA, design kVA) per operating month. Site WUE multiplies IT energy only. |
+| High | Supplier prices, Maharashtra tariff classes and financing terms are unknown. | The scenario tariff is explicitly hypothetical. Its design omits ToD, actual load profile, penalties, grid charges and identifiable connection details. No site, regulatory, securities or capital commitment is claimed. |
+| High | Debt-service coverage and actual modeled liquidity are different. Operating losses can require equity even when debt is serviced. | Separate DSCR, restricted reserve, uncovered scheduled obligations and additional equity need. The scheduled projection keeps the original debt plan after a modeled gap and assumes no legal recovery or confirmed commitment. |
+| Medium | With an IRR near −88%, large positive and negative discounted components almost cancel. The frozen reference's fixed absolute root residual rejected a difference of $0.00057. | Check an IRR residual against the sum of absolute discounted terms using a machine-precision bound and a 48-digit decimal recomputation. Preserve independently checked ledger tolerances and the unchanged archive. |
+| Medium | Finite design comparison can be mistaken for a site or universal ranking. | Publish all candidate constraints, failure reasons, and the infeasible control. No site-specific screening was attempted. |
+| Medium | Flat nominal expenses and a revenue decay assumption simplify real operations. | Keep operating values explicit. Before a site study obtain measured workloads, tariffs, periodic bills, water evidence, vendor quotations, coupled outage and contract information. |
+| Residual | Legal capital structure, tax and regulated credit risk need qualified review. | Project cash is explicitly pre-tax. Keep taxes, refinancing, insolvency, credit loss distributions and actual investment eligibility outside the current model. |
