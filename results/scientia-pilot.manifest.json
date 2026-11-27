@@ -1,0 +1,34 @@
+{
+  "id": "scientia-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "da0ada1493978194dc64c5253ede527be235ba09",
+  "inputs": {
+    "scripts/scientia.mjs": "0a8c2aba5afbd82e5c434941c0d036189ffca6feb1572cf48a6861e501aecf1d",
+    "engine/scientia.mjs": "4213021866c0b48d3f7be3704290c1f1537ff19ddbe87d33c0a49d1daeca5ef5",
+    "engine/noesis.mjs": "bdbbc3687a699aa00a8e91135ce6dce5a6d4791e200016d61f4892385b4d8b34",
+    "engine/discovery.mjs": "dcbb361b061d2346c522ddb4d772eac70e0f31fcdc5e5aebe08bf8e956f760d1",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "schemas/scientia-v1.json": "ab89d000a3a8e61e32b133960bcad741eba78ac2a764cbdf1586c34a26299c91",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/scientia-pilot.json": "a1370f1122316da6ff9041836f66176aa17b04a46201bc755ac553134b4e82e2",
+    "research/scientia-pilot.md": "018b4f80aa0327b8bb46c835a17292cd08c18a183ac5d820db8f84ae47867de3"
+  },
+  "configSha256": "df93fd9895f7d1fe3542603388b86709d03ba3577de10050c0866c2a58f9f867",
+  "output": {
+    "path": "results/scientia-pilot.json",
+    "sha256": "8e968c6055992541100d281cf9be63411f7b62c3130bb26d91cfa5f70d10d603",
+    "bytes": 117185
+  },
+  "startUtc": "2026-11-27T06:59:49.142Z",
+  "endUtc": "2026-11-27T06:59:49.388Z",
+  "runtimeMs": 236,
+  "observedRssBytes": 48885760,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}
