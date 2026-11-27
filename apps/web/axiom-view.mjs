@@ -37,7 +37,8 @@ for (let i = 0; i < 2; i++) {
 
 function render(animate) {
   const target = byId("axiom-matrix");
-  const before = new Map([...target.querySelectorAll("td")].map(cell => [cell.dataset.coordinate,cell.getBoundingClientRect()]));
+  const board=target.closest("table");
+  const before=new Map([...board.querySelectorAll("[data-coordinate]")].map(item=>[item.dataset.coordinate,item.getBoundingClientRect()]));
   const weight = controls.belief.valueAsNumber;
   const report = comparePresentation(matrix, [weight,4-weight], controls.view.value, controls.defect.checked);
   const policy = controls.policy.value;
@@ -45,15 +46,20 @@ function render(animate) {
   byId("axiom-equivalence").textContent = report.equivalent ?
     "Equivalent game. Payoffs and opponent probabilities retain their canonical identities." :
     "Belief remapping fault. The displayed columns now carry different probabilities for the canonical actions.";
-  byId("axiom-columns").replaceChildren(node("th","Focal action"),...report.columns.map((k,j) =>
-    node("th","Opponent "+label[k]+" · "+pct(report.view.weights[j]/4))));
+  byId("axiom-columns").replaceChildren(node("th","Focal action"),...report.columns.map((k,j)=>{
+    const header=node("th","Opponent "+label[k]+" · ");
+    const token=node("span",pct(report.view.weights[j]/4),"axiom-weight-token");
+    token.dataset.coordinate="weight-"+(controls.defect.checked?j:k);
+    header.append(token);
+    return header;
+  }));
   target.replaceChildren(...report.rows.map((i, displayed) => {
     const tr=row("Action "+label[i], ...report.view.payoffs[displayed].map(cell=>"("+cell.join(", ")+")"));
     report.columns.forEach((j, index) => {tr.cells[index+1].dataset.coordinate=i+"-"+j;});
     return tr;
   }));
   if (animate && !reducedMotion.matches) {
-    for (const cell of target.querySelectorAll("td")) {
+    for (const cell of board.querySelectorAll("[data-coordinate]")) {
       const prior=before.get(cell.dataset.coordinate);
       if (!prior) continue;
       const after=cell.getBoundingClientRect();
