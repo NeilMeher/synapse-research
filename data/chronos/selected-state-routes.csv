@@ -1,0 +1,148 @@
+state,year,route_km,status
+Andhra Pradesh,2004,5196,as published
+Andhra Pradesh,2005,5205,as published
+Andhra Pradesh,2006,5185,as published
+Andhra Pradesh,2007,5172,as published
+Andhra Pradesh,2008,5170,as published
+Andhra Pradesh,2009,5185,as published
+Andhra Pradesh,2010,5241,as published
+Andhra Pradesh,2011,5264,as published
+Andhra Pradesh,2012,5264,as published
+Andhra Pradesh,2013,5322,as published
+Andhra Pradesh,2014,3593,as published
+Andhra Pradesh,2015,3657,as published
+Andhra Pradesh,2016,3703,as published
+Andhra Pradesh,2017,3817,as published
+Andhra Pradesh,2018,3817,as published
+Andhra Pradesh,2019,3822,as published
+Andhra Pradesh,2020,3965,as published
+Andhra Pradesh,2021,3965,as published
+Andhra Pradesh,2022,3969,as published
+Andhra Pradesh,2023,3983,as published
+Andhra Pradesh,2024,4016,as published
+Bihar,2004,3377,as published
+Bihar,2005,3380,as published
+Bihar,2006,3330,as published
+Bihar,2007,3411,as published
+Bihar,2008,3407,as published
+Bihar,2009,3515,as published
+Bihar,2010,3568,as published
+Bihar,2011,3612,as published
+Bihar,2012,3598,as published
+Bihar,2013,3656,as published
+Bihar,2014,3639,as published
+Bihar,2015,3652,as published
+Bihar,2016,3731,as published
+Bihar,2017,3714,as published
+Bihar,2018,3653,as published
+Bihar,2019,3720,as published
+Bihar,2020,3794,as published
+Bihar,2021,3803,as published
+Bihar,2022,3825,as published
+Bihar,2023,3888,as published
+Bihar,2024,3959,as published
+Gujarat,2004,5283,as published
+Gujarat,2005,5284,as published
+Gujarat,2006,5283,as published
+Gujarat,2007,5309,as published
+Gujarat,2008,5328,as published
+Gujarat,2009,5328,as published
+Gujarat,2010,4999,as published
+Gujarat,2011,5271,as published
+Gujarat,2012,5257,as published
+Gujarat,2013,5257,as published
+Gujarat,2014,5259,as published
+Gujarat,2015,5259,as published
+Gujarat,2016,5259,as published
+Gujarat,2017,5259,as published
+Gujarat,2018,5285,as published
+Gujarat,2019,5320,as published
+Gujarat,2020,5301,as published
+Gujarat,2021,5327,as published
+Gujarat,2022,4960,as published
+Gujarat,2023,4939,as published
+Gujarat,2024,5051,as published
+Karnataka,2004,2980,as published
+Karnataka,2005,2982,as published
+Karnataka,2006,3002,as published
+Karnataka,2007,3006,as published
+Karnataka,2008,3005,as published
+Karnataka,2009,3007,as published
+Karnataka,2010,3073,as published
+Karnataka,2011,3073,as published
+Karnataka,2012,3090,as published
+Karnataka,2013,3228,as published
+Karnataka,2014,3281,as published
+Karnataka,2015,3281,as published
+Karnataka,2016,3281,as published
+Karnataka,2017,3424,as published
+Karnataka,2018,3499,as published
+Karnataka,2019,3540,as published
+Karnataka,2020,3542,as published
+Karnataka,2021,3572,as published
+Karnataka,2022,3596,as published
+Karnataka,2023,3617,as published
+Karnataka,2024,3647,as published
+Maharashtra,2004,5497,as published
+Maharashtra,2005,5527,as published
+Maharashtra,2006,5528,as published
+Maharashtra,2007,5519,as published
+Maharashtra,2008,5536,as published
+Maharashtra,2009,5602,as published
+Maharashtra,2010,5602,as published
+Maharashtra,2011,5602,as published
+Maharashtra,2012,5602,as published
+Maharashtra,2013,5725,as published
+Maharashtra,2014,5725,as published
+Maharashtra,2015,5725,as published
+Maharashtra,2016,5745,as published
+Maharashtra,2017,5784,as published
+Maharashtra,2018,5733,as published
+Maharashtra,2019,5819,as published
+Maharashtra,2020,5829,as published
+Maharashtra,2021,5823,as published
+Maharashtra,2022,5861,as published
+Maharashtra,2023,5875,as published
+Maharashtra,2024,5930,as published
+Telangana,2004,,not applicable
+Telangana,2005,,not applicable
+Telangana,2006,,not applicable
+Telangana,2007,,not applicable
+Telangana,2008,,not applicable
+Telangana,2009,,not applicable
+Telangana,2010,,not applicable
+Telangana,2011,,not applicable
+Telangana,2012,,not applicable
+Telangana,2013,,not applicable
+Telangana,2014,1753,as published
+Telangana,2015,1676,as published
+Telangana,2016,1737,as published
+Telangana,2017,1823,as published
+Telangana,2018,1823,as published
+Telangana,2019,1823,as published
+Telangana,2020,1828,as published
+Telangana,2021,1871,as published
+Telangana,2022,1913,as published
+Telangana,2023,1999,as published
+Telangana,2024,2015,as published
+West Bengal,2004,3706,as published
+West Bengal,2005,3856,as published
+West Bengal,2006,3911,as published
+West Bengal,2007,3911,as published
+West Bengal,2008,3951,as published
+West Bengal,2009,3890,as published
+West Bengal,2010,3890,as published
+West Bengal,2011,3937,as published
+West Bengal,2012,4000,as published
+West Bengal,2013,4037,as published
+West Bengal,2014,4070,as published
+West Bengal,2015,4070,as published
+West Bengal,2016,4135,as published
+West Bengal,2017,4139,as published
+West Bengal,2018,4139,as published
+West Bengal,2019,4230,as published
+West Bengal,2020,4217,as published
+West Bengal,2021,4212,as published
+West Bengal,2022,4203,as published
+West Bengal,2023,4135,as published
+West Bengal,2024,4161,as published

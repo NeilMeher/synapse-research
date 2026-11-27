@@ -1,0 +1,104 @@
+{
+  "id": "chronos-scenario-001",
+  "phase": "scenario",
+  "sourceId": "indian-railway-history-2026",
+  "windows": [
+    {
+      "id": "long",
+      "start": 1951,
+      "end": 2025
+    },
+    {
+      "id": "recent",
+      "start": 2016,
+      "end": 2025
+    },
+    {
+      "id": "latest",
+      "start": 2024,
+      "end": 2025
+    }
+  ],
+  "metrics": [
+    "route",
+    "electric",
+    "tonnes",
+    "ntkm",
+    "lead",
+    "share"
+  ],
+  "indexYear": 2016,
+  "association": {
+    "left": "electric",
+    "right": "ntkm",
+    "start": 2017,
+    "end": 2025
+  },
+  "conditionalScenario": {
+    "start": 2016,
+    "end": 2025,
+    "factors": [
+      0,
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "synthetic": [
+    {
+      "id": "parallel",
+      "inputs": {
+        "effect": 4,
+        "selection": 8,
+        "trendGap": 0,
+        "anticipation": 0,
+        "spillover": 0,
+        "heterogeneity": 0
+      }
+    },
+    {
+      "id": "different-trends",
+      "inputs": {
+        "effect": 4,
+        "selection": 8,
+        "trendGap": 3,
+        "anticipation": 0,
+        "spillover": 0,
+        "heterogeneity": 0
+      }
+    },
+    {
+      "id": "anticipation",
+      "inputs": {
+        "effect": 4,
+        "selection": 8,
+        "trendGap": 0,
+        "anticipation": 2,
+        "spillover": 0,
+        "heterogeneity": 0
+      }
+    },
+    {
+      "id": "spillover",
+      "inputs": {
+        "effect": 4,
+        "selection": 8,
+        "trendGap": 0,
+        "anticipation": 0,
+        "spillover": 2,
+        "heterogeneity": 0
+      }
+    },
+    {
+      "id": "heterogeneous",
+      "inputs": {
+        "effect": 4,
+        "selection": 8,
+        "trendGap": 0,
+        "anticipation": 0,
+        "spillover": 0,
+        "heterogeneity": 3
+      }
+    }
+  ]
+}

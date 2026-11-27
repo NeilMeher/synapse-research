@@ -1,0 +1,2356 @@
+{
+  "schemaVersion": "chronos-rail-v1",
+  "sourceId": "indian-railway-history-2026",
+  "national": [
+    {
+      "period": {
+        "label": "1950-51",
+        "start": "1950-04-01",
+        "end": "1951-03-31",
+        "endYear": 1951,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:1950-51:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 1950-51",
+          "value": 53596,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:1950-51:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 1950-51",
+          "value": 388,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:1950-51:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 1950-51",
+          "value": 73.2,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:1950-51:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 1950-51",
+          "value": 37.565,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "1960-61",
+        "start": "1960-04-01",
+        "end": "1961-03-31",
+        "endYear": 1961,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:1960-61:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 1960-61",
+          "value": 56247,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:1960-61:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 1960-61",
+          "value": 748,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:1960-61:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 1960-61",
+          "value": 119.8,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:1960-61:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 1960-61",
+          "value": 72.333,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "1970-71",
+        "start": "1970-04-01",
+        "end": "1971-03-31",
+        "endYear": 1971,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:1970-71:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 1970-71",
+          "value": 59790,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:1970-71:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 1970-71",
+          "value": 3706,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:1970-71:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 1970-71",
+          "value": 167.9,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:1970-71:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 1970-71",
+          "value": 110.696,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "1980-81",
+        "start": "1980-04-01",
+        "end": "1981-03-31",
+        "endYear": 1981,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:1980-81:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 1980-81",
+          "value": 61240,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:1980-81:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 1980-81",
+          "value": 5345,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:1980-81:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 1980-81",
+          "value": 195.9,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:1980-81:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 1980-81",
+          "value": 147.652,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "1990-91",
+        "start": "1990-04-01",
+        "end": "1991-03-31",
+        "endYear": 1991,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:1990-91:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 1990-91",
+          "value": 62367,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:1990-91:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 1990-91",
+          "value": 9968,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:1990-91:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 1990-91",
+          "value": 318.4,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:1990-91:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 1990-91",
+          "value": 235.785,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2000-01",
+        "start": "2000-04-01",
+        "end": "2001-03-31",
+        "endYear": 2001,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2000-01:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2000-01",
+          "value": 63028,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2000-01:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2000-01",
+          "value": 14856,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2000-01:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2000-01",
+          "value": 473.5,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2000-01:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2000-01",
+          "value": 312.371,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2010-11",
+        "start": "2010-04-01",
+        "end": "2011-03-31",
+        "endYear": 2011,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2010-11:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2010-11",
+          "value": 64173,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2010-11:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2010-11",
+          "value": 19008,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2010-11:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2010-11",
+          "value": 921.73,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2010-11:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2010-11",
+          "value": 625.723,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2015-16",
+        "start": "2015-04-01",
+        "end": "2016-03-31",
+        "endYear": 2016,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2015-16:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2015-16",
+          "value": 66252,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2015-16:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2015-16",
+          "value": 23555,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2015-16:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2015-16",
+          "value": 1101.51,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2015-16:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2015-16",
+          "value": 654.481,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2016-17",
+        "start": "2016-04-01",
+        "end": "2017-03-31",
+        "endYear": 2017,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2016-17:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2016-17",
+          "value": 66918,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2016-17:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2016-17",
+          "value": 25367,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2016-17:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2016-17",
+          "value": 1106.15,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2016-17:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2016-17",
+          "value": 620.175,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2017-18",
+        "start": "2017-04-01",
+        "end": "2018-03-31",
+        "endYear": 2018,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2017-18:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2017-18",
+          "value": 66935,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2017-18:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2017-18",
+          "value": 29228,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2017-18:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2017-18",
+          "value": 1159.55,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2017-18:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2017-18",
+          "value": 692.916,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2018-19",
+        "start": "2018-04-01",
+        "end": "2019-03-31",
+        "endYear": 2019,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2018-19:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2018-19",
+          "value": 67415,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2018-19:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2018-19",
+          "value": 34319,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2018-19:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2018-19",
+          "value": 1221.48,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2018-19:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2018-19",
+          "value": 738.523,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2019-20",
+        "start": "2019-04-01",
+        "end": "2020-03-31",
+        "endYear": 2020,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2019-20:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2019-20",
+          "value": 67956,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2019-20:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2019-20",
+          "value": 39866,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2019-20:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2019-20",
+          "value": 1208.41,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2019-20:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2019-20",
+          "value": 707.665,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2020-21",
+        "start": "2020-04-01",
+        "end": "2021-03-31",
+        "endYear": 2021,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2020-21:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2020-21",
+          "value": 68103,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2020-21:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2020-21",
+          "value": 45772,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2020-21:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2020-21",
+          "value": 1230.94,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2020-21:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2020-21",
+          "value": 719.762,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2021-22",
+        "start": "2021-04-01",
+        "end": "2022-03-31",
+        "endYear": 2022,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2021-22:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2021-22",
+          "value": 68043,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2021-22:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2021-22",
+          "value": 51804,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2021-22:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2021-22",
+          "value": 1415.87,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2021-22:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2021-22",
+          "value": 871.816,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2022-23",
+        "start": "2022-04-01",
+        "end": "2023-03-31",
+        "endYear": 2023,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2022-23:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2022-23",
+          "value": 68584,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2022-23:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2022-23",
+          "value": 58074,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2022-23:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2022-23",
+          "value": 1509.1,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2022-23:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2022-23",
+          "value": 959.566,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2023-24",
+        "start": "2023-04-01",
+        "end": "2024-03-31",
+        "endYear": 2024,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2023-24:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2023-24",
+          "value": 69181,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2023-24:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2023-24",
+          "value": 62253,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2023-24:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2023-24",
+          "value": 1588.06,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2023-24:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2023-24",
+          "value": 973.968,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    },
+    {
+      "period": {
+        "label": "2024-25",
+        "start": "2024-04-01",
+        "end": "2025-03-31",
+        "endYear": 2025,
+        "complete": true
+      },
+      "cells": {
+        "route": {
+          "id": "railway-board-summary-2024-25:2024-25:route",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Total · 2024-25",
+          "value": 69439,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "electric": {
+          "id": "railway-board-summary-2024-25:2024-25:electric",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Route kilometres / Electrified · 2024-25",
+          "value": 65510,
+          "coverage": "board-route-stock-as-published",
+          "status": "as published"
+        },
+        "tonnes": {
+          "id": "railway-board-summary-2024-25:2024-25:tonnes",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Tonnes originating / Revenue earning · 2024-25",
+          "value": 1614.91,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        },
+        "ntkm": {
+          "id": "railway-board-summary-2024-25:2024-25:ntkm",
+          "source": "railway-board-summary-2024-25",
+          "locator": "PDF page 1 · Freight Traffic / Net tonne kms / Revenue earning · 2024-25",
+          "value": 971.085,
+          "coverage": "board-revenue-freight-as-published",
+          "status": "as published"
+        }
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 5196,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 5205,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 5185,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 5172,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 5170,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 5185,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 5241,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 5264,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 5264,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 5322,
+      "status": "as published",
+      "boundary": "Undivided Andhra Pradesh includes Telangana",
+      "locator": "Table 145 · Andhra Pradesh · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 3593,
+      "status": "as published",
+      "boundary": "RBI prints both rows for March 2014 while noting inclusion through 2013–14. Treat scope as ambiguous.",
+      "locator": "Table 145 · Andhra Pradesh · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 3657,
+      "status": "as published",
+      "boundary": "First full reporting year after state division. Skip change from undivided geography.",
+      "locator": "Table 145 · Andhra Pradesh · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 3703,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 3817,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 3817,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 3822,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 3965,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 3965,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 3969,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 3983,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Andhra Pradesh:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Andhra Pradesh",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 4016,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Andhra Pradesh · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 3377,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 3380,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 3330,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 3411,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 3407,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 3515,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 3568,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 3612,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 3598,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 3656,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 3639,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 3652,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 3731,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 3714,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 3653,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 3720,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 3794,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 3803,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 3825,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 3888,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Bihar:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Bihar",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 3959,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Bihar · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 5283,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 5284,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 5283,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 5309,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 5328,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 5328,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 4999,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 5271,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 5257,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 5257,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 5259,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 5259,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 5259,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 5259,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 5285,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 5320,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 5301,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 5327,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 4960,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 4939,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Gujarat:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Gujarat",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 5051,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Gujarat · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 2980,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 2982,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 3002,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 3006,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 3005,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 3007,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 3073,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 3073,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 3090,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 3228,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 3281,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 3281,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 3281,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 3424,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 3499,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 3540,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 3542,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 3572,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 3596,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 3617,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Karnataka:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Karnataka",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 3647,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Karnataka · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 5497,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 5527,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 5528,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 5519,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 5536,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 5602,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 5602,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 5602,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 5602,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 5725,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 5725,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 5725,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 5745,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 5784,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 5733,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 5819,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 5829,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 5823,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 5861,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 5875,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Maharashtra:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Maharashtra",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 5930,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Maharashtra · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": null,
+      "status": "not applicable",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 1753,
+      "status": "as published",
+      "boundary": "RBI prints both rows for March 2014 while noting inclusion through 2013–14. Treat scope as ambiguous.",
+      "locator": "Table 145 · Telangana · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 1676,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 1737,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 1823,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 1823,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 1823,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 1828,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 1871,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 1913,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 1999,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:Telangana:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "Telangana",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 2015,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · Telangana · March 2024"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2004",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2004,
+      "date": "2004-03-31",
+      "value": 3706,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2004"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2005",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2005,
+      "date": "2005-03-31",
+      "value": 3856,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2005"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2006",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2006,
+      "date": "2006-03-31",
+      "value": 3911,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2006"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2007",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2007,
+      "date": "2007-03-31",
+      "value": 3911,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2007"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2008",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2008,
+      "date": "2008-03-31",
+      "value": 3951,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2008"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2009",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2009,
+      "date": "2009-03-31",
+      "value": 3890,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2009"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2010",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2010,
+      "date": "2010-03-31",
+      "value": 3890,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2010"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2011",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2011,
+      "date": "2011-03-31",
+      "value": 3937,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2011"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2012",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2012,
+      "date": "2012-03-31",
+      "value": 4000,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2012"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2013",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2013,
+      "date": "2013-03-31",
+      "value": 4037,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2013"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2014",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2014,
+      "date": "2014-03-31",
+      "value": 4070,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2014"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2015",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2015,
+      "date": "2015-03-31",
+      "value": 4070,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2015"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2016",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2016,
+      "date": "2016-03-31",
+      "value": 4135,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2016"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2017",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2017,
+      "date": "2017-03-31",
+      "value": 4139,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2017"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2018",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2018,
+      "date": "2018-03-31",
+      "value": 4139,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2018"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2019",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2019,
+      "date": "2019-03-31",
+      "value": 4230,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2019"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2020",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2020,
+      "date": "2020-03-31",
+      "value": 4217,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2020"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2021",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2021,
+      "date": "2021-03-31",
+      "value": 4212,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2021"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2022",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2022,
+      "date": "2022-03-31",
+      "value": 4203,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2022"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2023",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2023,
+      "date": "2023-03-31",
+      "value": 4135,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2023"
+    },
+    {
+      "id": "rbi-rail-route-2024-25:West Bengal:2024",
+      "source": "rbi-rail-route-2024-25",
+      "name": "West Bengal",
+      "year": 2024,
+      "date": "2024-03-31",
+      "value": 4161,
+      "status": "as published",
+      "boundary": "As published",
+      "locator": "Table 145 · West Bengal · March 2024"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "dataset",
+    "metrics",
+    "association",
+    "alternatives",
+    "synthetic",
+    "historicalCausalStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "chronos-v1"
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "chronos-scenario-001"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "route",
+        "electric",
+        "tonnes",
+        "ntkm",
+        "lead",
+        "share"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "series",
+          "spans"
+        ],
+        "properties": {
+          "series": {
+            "type": "array",
+            "minItems": 17,
+            "maxItems": 17
+          },
+          "spans": {
+            "type": "object",
+            "required": [
+              "long",
+              "recent",
+              "latest"
+            ]
+          }
+        }
+      }
+    },
+    "association": {
+      "type": "object",
+      "required": [
+        "n",
+        "pearson",
+        "years"
+      ]
+    },
+    "alternatives": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "synthetic": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5
+    }
+  }
+}
