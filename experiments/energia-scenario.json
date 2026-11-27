@@ -1,0 +1,257 @@
+{
+  "id": "energia-scenario-001",
+  "phase": "scenario",
+  "sourceId": "energia-l40s-design-inputs",
+  "base": {
+    "referenceYear": 2024,
+    "currency": "scenario USD",
+    "gpu": "NVIDIA L40S",
+    "capacity": {
+      "gpus": 128,
+      "gpusPerServer": 4,
+      "serversPerRack": 8,
+      "availability": 0.96,
+      "workFraction": 0.64,
+      "billFraction": 0.66,
+      "gpuIdleW": 65,
+      "gpuLoadedW": 320,
+      "serverOtherKW": 0.45,
+      "sharedITKW": 5,
+      "rackLimitKW": 20,
+      "pue": 1.42,
+      "siteWue": 0.55,
+      "powerFactor": 0.95,
+      "contractKVA": 100
+    },
+    "tariff": {
+      "energyPerKWh": 0.095,
+      "demandPerKVAmonth": 10,
+      "fixedPerMonth": 400,
+      "waterPerM3": 2
+    },
+    "costs": {
+      "civil": 250000,
+      "electrical": 260000,
+      "cooling": 225000,
+      "gpuPerDevice": 7000,
+      "network": 185000,
+      "professional": 120000,
+      "workingCapital": 85000,
+      "annualFixed": 250000,
+      "variablePerActiveHour": 0.05,
+      "replacementPerGPU": 6000,
+      "decommission": 35000,
+      "residual": 95000
+    },
+    "operations": {
+      "years": 8,
+      "constructionDelay": 0,
+      "initialShare": 0.45,
+      "yearOneRamp": 0.72,
+      "spotPerHour": 1.17,
+      "reserveShare": 0.2,
+      "reservedPerHour": 0.93,
+      "annualPriceFactor": 0.94,
+      "replacementYear": 5,
+      "contractYears": 4
+    },
+    "finance": {
+      "debtShare": 0.4,
+      "debtRate": 0.085,
+      "tenor": 6,
+      "reserveUSD": 110000,
+      "minimumDSCR": 1.25,
+      "projectRate": 0.105,
+      "equityRate": 0.15
+    }
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "settings": {}
+    },
+    {
+      "id": "no-debt",
+      "settings": {
+        "finance": {
+          "debtShare": 0,
+          "tenor": 0,
+          "reserveUSD": 0
+        }
+      }
+    },
+    {
+      "id": "stress",
+      "settings": {
+        "capacity": {
+          "billFraction": 0.4,
+          "workFraction": 0.4
+        },
+        "tariff": {
+          "energyPerKWh": 0.15
+        },
+        "costs": {
+          "gpuPerDevice": 8400
+        },
+        "operations": {
+          "spotPerHour": 0.85,
+          "constructionDelay": 1
+        }
+      }
+    },
+    {
+      "id": "deferred-replacement",
+      "settings": {
+        "operations": {
+          "replacementYear": 8
+        }
+      }
+    },
+    {
+      "id": "delay-only",
+      "settings": {
+        "operations": {
+          "constructionDelay": 1
+        }
+      }
+    },
+    {
+      "id": "short-contract",
+      "settings": {
+        "operations": {
+          "contractYears": 2
+        }
+      }
+    }
+  ],
+  "sensitivity": {
+    "billFraction": [
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      0.95
+    ],
+    "energyPerKWh": [
+      0.07,
+      0.095,
+      0.12,
+      0.15,
+      0.18
+    ],
+    "spotPerHour": [
+      0.85,
+      1,
+      1.17,
+      1.3,
+      1.45
+    ],
+    "debtRate": [
+      0.05,
+      0.085,
+      0.12
+    ],
+    "gpuPerDevice": [
+      5600,
+      7000,
+      8400
+    ]
+  },
+  "profile": [
+    -0.15,
+    0,
+    0.05,
+    0.105,
+    0.15,
+    0.25,
+    0.4
+  ],
+  "breakEven": {
+    "billFraction": [
+      0,
+      1
+    ],
+    "energyPerKWh": [
+      0,
+      0.4
+    ],
+    "spotPerHour": [
+      0,
+      3
+    ]
+  },
+  "optimization": {
+    "options": [
+      {
+        "id": "baseline",
+        "settings": {}
+      },
+      {
+        "id": "dry-lean",
+        "settings": {
+          "capacity": {
+            "pue": 1.56,
+            "siteWue": 0.1
+          },
+          "costs": {
+            "cooling": 265000
+          }
+        }
+      },
+      {
+        "id": "hybrid",
+        "settings": {
+          "capacity": {
+            "pue": 1.47,
+            "siteWue": 0.3
+          },
+          "costs": {
+            "cooling": 240000
+          }
+        }
+      },
+      {
+        "id": "evaporative",
+        "settings": {
+          "capacity": {
+            "pue": 1.32,
+            "siteWue": 0.9
+          },
+          "costs": {
+            "cooling": 200000
+          }
+        }
+      },
+      {
+        "id": "higher-density",
+        "settings": {
+          "capacity": {
+            "serversPerRack": 12
+          }
+        }
+      },
+      {
+        "id": "full-equity",
+        "settings": {
+          "finance": {
+            "debtShare": 0,
+            "tenor": 0,
+            "reserveUSD": 0
+          }
+        }
+      }
+    ],
+    "limits": {
+      "capital": 2100000,
+      "peakKVA": 120,
+      "siteWaterM3": 250,
+      "minimumDSCR": 1
+    },
+    "controlLimits": {
+      "capital": 100,
+      "peakKVA": 10,
+      "siteWaterM3": 0,
+      "minimumDSCR": 1.25
+    }
+  }
+}

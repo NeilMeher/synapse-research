@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "source-v1",
+  "id": "energia-l40s-design-inputs",
+  "organization": "NVIDIA and U.S. Department of Energy",
+  "title": "L40S specification and data-center accounting conventions",
+  "officialUrl": "https://www.nvidia.com/en-us/data-center/l40s/",
+  "retrievalDate": "2026-11-27",
+  "geography": "Hypothetical Indian deployment; specifications are not site observations",
+  "units": "W/device, IT kWh, facility kWh, site L/kWh IT, illustrative scenario USD",
+  "classification": "Device maximum, published definitions, hypothetical engineering settings and economic inputs",
+  "vintage": "NVIDIA public product specification checked 2026-11-27; U.S. DOE design guide July 2024",
+  "revisionStatus": "Public documentation snapshot. Numerical commercial inputs are stipulated for the model.",
+  "format": "Official product webpage and agency guidance",
+  "license": "Publisher terms apply; includes attributed facts and summarized definitions only.",
+  "redistribution": "Original publications remain on their publishers' sites.",
+  "extraction": "Manufacturer 350 W device power limit and agency PUE/WUE system boundaries read from public primary sources.",
+  "transformation": "Device W divided by 1000 to obtain kW; integrate IT kW-hours then multiply by scenario PUE; site liters divided by 1000 for cubic meters.",
+  "missingValues": "Site electricity, water allocation, quotations and finance commitments remain unknown.",
+  "limitations": "Nominal cash inputs are hypothetical. Device maxima constrain the assumption; actual load and measured facility performance require instruments.",
+  "verificationStatus": "Primary sources checked. Numerical scenario quantities are documented assumptions.",
+  "evidenceClass": "Verified manufacturer specification",
+  "items": [
+    {
+      "id": "l40s-cap",
+      "status": "Verified manufacturer specification",
+      "value": 350,
+      "units": "W/device",
+      "url": "https://www.nvidia.com/en-us/data-center/l40s/"
+    },
+    {
+      "id": "efficiency-boundaries",
+      "status": "Published engineering convention",
+      "url": "https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers"
+    },
+    {
+      "id": "engineering-parameters",
+      "status": "Illustrative assumption",
+      "sections": [
+        "capacity",
+        "operations.yearOneRamp"
+      ]
+    },
+    {
+      "id": "tariff-capex-revenue-debt",
+      "status": "Illustrative assumption",
+      "sections": [
+        "tariff",
+        "costs",
+        "operations",
+        "finance"
+      ]
+    },
+    {
+      "id": "site-connection-terms",
+      "status": "Unknown or unavailable input",
+      "sections": [
+        "utility category",
+        "real demand profile",
+        "fiber",
+        "water permit",
+        "land",
+        "debt commitments"
+      ]
+    }
+  ]
+}

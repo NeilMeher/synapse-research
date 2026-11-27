@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "dataset",
+    "config",
+    "cases",
+    "grids",
+    "roots",
+    "profile",
+    "optimization",
+    "infeasibleControl"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "energia-v1"
+    },
+    "modelVersion": {
+      "const": "modular-l40s-project-finance-v1"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "base"
+      ]
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "settings",
+          "physical",
+          "capital",
+          "funding",
+          "timeline",
+          "metrics"
+        ],
+        "properties": {
+          "timeline": {
+            "type": "array",
+            "minItems": 9,
+            "items": {
+              "type": "object",
+              "required": [
+                "year",
+                "projectCash",
+                "equityCash",
+                "debtService",
+                "reserveBalance",
+                "paymentGap",
+                "dscr"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "grids": {
+      "type": "object",
+      "required": [
+        "utilizationEnergy",
+        "utilizationRevenue",
+        "debtHardware"
+      ]
+    },
+    "roots": {
+      "type": "object",
+      "required": [
+        "billFraction",
+        "energyPerKWh",
+        "spotPerHour"
+      ]
+    },
+    "optimization": {
+      "type": "object",
+      "required": [
+        "candidates",
+        "frontier"
+      ]
+    },
+    "infeasibleControl": {
+      "type": "object",
+      "required": [
+        "candidates",
+        "frontier"
+      ]
+    }
+  }
+}
