@@ -1,0 +1,8 @@
+{
+  "id": "polis2-confirmatory-001",
+  "phase": "confirmatory",
+  "seed": 1582096237,
+  "trials": 160,
+  "steps": 24,
+  "climate": "stress"
+}

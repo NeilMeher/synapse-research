@@ -1,0 +1,3912 @@
+{
+  "schemaVersion": "polis2-v1",
+  "modelVersion": "polis-atomic-contract-v2",
+  "evidenceClass": "synthetic simulation",
+  "config": {
+    "id": "polis2-pilot-001",
+    "phase": "pilot",
+    "seed": 427965817,
+    "trials": 32,
+    "steps": 24,
+    "climate": "stress"
+  },
+  "first": {
+    "seed": 4149191165,
+    "climate": "stress"
+  },
+  "interaction": {
+    "trials": 32,
+    "estimate": -0.09684244791666669,
+    "sd": 0.022472238520539985,
+    "interval": [
+      -0.10462853824349531,
+      -0.08905635758983806
+    ]
+  },
+  "cells": [
+    {
+      "payment": "prepay",
+      "surplus": 1,
+      "sameJointFixed": 32,
+      "example": {
+        "material": {
+          "intake": [
+            105,
+            108,
+            120,
+            103,
+            119,
+            103,
+            108,
+            108
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              422,
+              452
+            ],
+            "losses": [
+              80,
+              49
+            ],
+            "terminal": [
+              40,
+              38
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7586805555555556,
+            "lowestConsumption": 103,
+            "gini": 0.029748283752860413,
+            "attempts": 89,
+            "completed": 58,
+            "rejected": 5,
+            "transfer": 286,
+            "ties": 1,
+            "completionRate": 0.651685393258427
+          }
+        },
+        "joint": {
+          "intake": [
+            105,
+            108,
+            120,
+            103,
+            119,
+            103,
+            112,
+            118
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              432,
+              456
+            ],
+            "losses": [
+              72,
+              45
+            ],
+            "terminal": [
+              38,
+              38
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7708333333333334,
+            "lowestConsumption": 103,
+            "gini": 0.034065315315315314,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 300,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            105,
+            108,
+            120,
+            103,
+            119,
+            103,
+            112,
+            118
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              432,
+              456
+            ],
+            "losses": [
+              72,
+              45
+            ],
+            "terminal": [
+              38,
+              38
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7708333333333334,
+            "lowestConsumption": 103,
+            "gini": 0.034065315315315314,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 300,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "cautious": {
+          "intake": [
+            103,
+            106,
+            100,
+            94,
+            102,
+            101,
+            84,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              391,
+              389
+            ],
+            "losses": [
+              111,
+              110
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6770833333333334,
+            "lowestConsumption": 84,
+            "gini": 0.0391025641025641,
+            "attempts": 52,
+            "completed": 47,
+            "rejected": 42,
+            "transfer": 192,
+            "ties": 0,
+            "completionRate": 0.9038461538461539
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0.014567057291666671,
+        "sd": 0.010548224588509217,
+        "interval": [
+          0.010912351092338114,
+          0.01822176349099523
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7530924479166666,
+            "sd": 0.01781297255808879,
+            "interval": [
+              0.7469206812188438,
+              0.7592642146144895
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 97.75,
+            "sd": 4.885792437459404,
+            "interval": [
+              96.05719039398657,
+              99.44280960601343
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.033362215777231065,
+            "sd": 0.009764324714392926,
+            "interval": [
+              0.029979112036263758,
+              0.03674531951819837
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 87.8125,
+            "sd": 4.693423676427645,
+            "interval": [
+              86.1863415443864,
+              89.4386584556136
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 55.18749999999999,
+            "sd": 4.617201358734182,
+            "interval": [
+              53.58775074478444,
+              56.78724925521555
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 6.59375,
+            "sd": 4.778036950126505,
+            "interval": [
+              4.938275079483901,
+              8.249224920516099
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 279.90624999999994,
+            "sd": 19.53055401985772,
+            "interval": [
+              273.13938262305277,
+              286.6731173769471
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 3.4374999999999996,
+            "sd": 2.313181024393228,
+            "interval": [
+              2.6360383929700797,
+              4.238961607029919
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6278045527245962,
+            "sd": 0.028787867380153688,
+            "interval": [
+              0.6178302488503397,
+              0.6377788565988528
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7676595052083331,
+            "sd": 0.010110228475235227,
+            "interval": [
+              0.7641565541311137,
+              0.7711624562855526
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 101.06249999999999,
+            "sd": 3.86829544856896,
+            "interval": [
+              99.72222863602845,
+              102.40277136397152
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.029304412428553545,
+            "sd": 0.007578828973847997,
+            "interval": [
+              0.026678530413816525,
+              0.03193029444329057
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 296.6875,
+            "sd": 11.061229879702024,
+            "interval": [
+              292.8550498019275,
+              300.5199501980725
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7676595052083331,
+            "sd": 0.010110228475235227,
+            "interval": [
+              0.7641565541311137,
+              0.7711624562855526
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 101.06249999999999,
+            "sd": 3.86829544856896,
+            "interval": [
+              99.72222863602845,
+              102.40277136397152
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.029304412428553545,
+            "sd": 0.007578828973847997,
+            "interval": [
+              0.026678530413816525,
+              0.03193029444329057
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 296.6875,
+            "sd": 11.061229879702024,
+            "interval": [
+              292.8550498019275,
+              300.5199501980725
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6387803819444444,
+            "sd": 0.029686951421811165,
+            "interval": [
+              0.6284945670672516,
+              0.6490661968216372
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 78.84374999999999,
+            "sd": 3.8946561817692635,
+            "interval": [
+              77.4943452757897,
+              80.19315472421027
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.05571754051831588,
+            "sd": 0.015392520690425422,
+            "interval": [
+              0.05038440219550534,
+              0.061050678841126416
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 41.15625000000001,
+            "sd": 8.37087645235821,
+            "interval": [
+              38.25594257787953,
+              44.056557422120484
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 35.21874999999999,
+            "sd": 9.086446393641252,
+            "interval": [
+              32.07051479832606,
+              38.36698520167393
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 53.25,
+            "sd": 8.389701828682206,
+            "interval": [
+              50.34317003761896,
+              56.15682996238104
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 148.21875,
+            "sd": 33.67466203101712,
+            "interval": [
+              136.5512892768826,
+              159.8862107231174
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.8456700817940571,
+            "sd": 0.05527133104427926,
+            "interval": [
+              0.8265198945262662,
+              0.8648202690618481
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 7.46875,
+            "sd": 0.9498514315067824,
+            "interval": [
+              7.139649317127684,
+              7.797850682872316
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.93359375,
+            "sd": 0.1187314289383478,
+            "interval": [
+              0.8924561646409604,
+              0.9747313353590396
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 29.343749999999996,
+            "sd": 5.36782153806515,
+            "interval": [
+              27.48392890049223,
+              31.203571099507762
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 32,
+            "estimate": 17.58389136904762,
+            "sd": 3.801224843220524,
+            "interval": [
+              16.266858357189538,
+              18.900924380905703
+            ]
+          }
+        }
+      }
+    },
+    {
+      "payment": "prepay",
+      "surplus": 2,
+      "sameJointFixed": 32,
+      "example": {
+        "material": {
+          "intake": [
+            105,
+            108,
+            102,
+            94,
+            102,
+            101,
+            84,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              393,
+              393
+            ],
+            "losses": [
+              109,
+              106
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6822916666666666,
+            "lowestConsumption": 84,
+            "gini": 0.04262086513994911,
+            "attempts": 54,
+            "completed": 48,
+            "rejected": 40,
+            "transfer": 198,
+            "ties": 0,
+            "completionRate": 0.8888888888888888
+          }
+        },
+        "joint": {
+          "intake": [
+            105,
+            108,
+            120,
+            103,
+            119,
+            103,
+            112,
+            118
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              432,
+              456
+            ],
+            "losses": [
+              72,
+              45
+            ],
+            "terminal": [
+              38,
+              38
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7708333333333334,
+            "lowestConsumption": 103,
+            "gini": 0.034065315315315314,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 300,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            105,
+            108,
+            120,
+            103,
+            119,
+            103,
+            112,
+            118
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              432,
+              456
+            ],
+            "losses": [
+              72,
+              45
+            ],
+            "terminal": [
+              38,
+              38
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7708333333333334,
+            "lowestConsumption": 103,
+            "gini": 0.034065315315315314,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 300,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "cautious": {
+          "intake": [
+            103,
+            106,
+            100,
+            94,
+            102,
+            101,
+            84,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              391,
+              389
+            ],
+            "losses": [
+              111,
+              110
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6770833333333334,
+            "lowestConsumption": 84,
+            "gini": 0.0391025641025641,
+            "attempts": 52,
+            "completed": 47,
+            "rejected": 42,
+            "transfer": 192,
+            "ties": 0,
+            "completionRate": 0.9038461538461539
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0.09684244791666669,
+        "sd": 0.022472238520539985,
+        "interval": [
+          0.08905635758983806,
+          0.10462853824349531
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6708170572916666,
+            "sd": 0.02332546814507427,
+            "interval": [
+              0.6627353434149154,
+              0.6788987711684179
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 81.12500000000001,
+            "sd": 4.668010559183125,
+            "interval": [
+              79.50764657848087,
+              82.74235342151916
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.06146496951975118,
+            "sd": 0.01489626424249412,
+            "interval": [
+              0.05630377212420219,
+              0.06662616691530017
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 51,
+            "sd": 6.983852342968535,
+            "interval": [
+              48.58026308229661,
+              53.41973691770339
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 43.875,
+            "sd": 7.02415188314001,
+            "interval": [
+              41.44130026058582,
+              46.30869973941418
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 43.40624999999999,
+            "sd": 7.02465416437224,
+            "interval": [
+              40.97237623221565,
+              45.840123767784334
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 185.12500000000003,
+            "sd": 26.709609240991373,
+            "interval": [
+              175.87076260150616,
+              194.3792373984939
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 1.4687499999999998,
+            "sd": 1.9173970090522674,
+            "interval": [
+              0.804418038089457,
+              2.1330819619105426
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.8573196293231244,
+            "sd": 0.04132086594780478,
+            "interval": [
+              0.8430029427874987,
+              0.8716363158587502
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7676595052083331,
+            "sd": 0.010110228475235227,
+            "interval": [
+              0.7641565541311137,
+              0.7711624562855526
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 101.06249999999999,
+            "sd": 3.86829544856896,
+            "interval": [
+              99.72222863602845,
+              102.40277136397152
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.029304412428553545,
+            "sd": 0.007578828973847997,
+            "interval": [
+              0.026678530413816525,
+              0.03193029444329057
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 296.6875,
+            "sd": 11.061229879702024,
+            "interval": [
+              292.8550498019275,
+              300.5199501980725
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0.09375000000000001,
+            "sd": 0.39015092199748014,
+            "interval": [
+              -0.04142791371746511,
+              0.22892791371746513
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.011718750000000002,
+            "sd": 0.04876886524968502,
+            "interval": [
+              -0.005178489214683139,
+              0.02861598921468314
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0.0625,
+            "sd": 0.2459346884189824,
+            "interval": [
+              -0.02271045630502852,
+              0.14771045630502852
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 2,
+            "estimate": 1,
+            "sd": 0,
+            "interval": [
+              1,
+              1
+            ]
+          }
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7676595052083331,
+            "sd": 0.010110228475235227,
+            "interval": [
+              0.7641565541311137,
+              0.7711624562855526
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 101.06249999999999,
+            "sd": 3.86829544856896,
+            "interval": [
+              99.72222863602845,
+              102.40277136397152
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.029304412428553545,
+            "sd": 0.007578828973847997,
+            "interval": [
+              0.026678530413816525,
+              0.03193029444329057
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 296.6875,
+            "sd": 11.061229879702024,
+            "interval": [
+              292.8550498019275,
+              300.5199501980725
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0.09375000000000001,
+            "sd": 0.39015092199748014,
+            "interval": [
+              -0.04142791371746511,
+              0.22892791371746513
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.011718750000000002,
+            "sd": 0.04876886524968502,
+            "interval": [
+              -0.005178489214683139,
+              0.02861598921468314
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0.0625,
+            "sd": 0.2459346884189824,
+            "interval": [
+              -0.02271045630502852,
+              0.14771045630502852
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 2,
+            "estimate": 1,
+            "sd": 0,
+            "interval": [
+              1,
+              1
+            ]
+          }
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6387803819444444,
+            "sd": 0.029686951421811165,
+            "interval": [
+              0.6284945670672516,
+              0.6490661968216372
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 78.84374999999999,
+            "sd": 3.8946561817692635,
+            "interval": [
+              77.4943452757897,
+              80.19315472421027
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.05571754051831588,
+            "sd": 0.015392520690425422,
+            "interval": [
+              0.05038440219550534,
+              0.061050678841126416
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 41.15625000000001,
+            "sd": 8.37087645235821,
+            "interval": [
+              38.25594257787953,
+              44.056557422120484
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 35.21874999999999,
+            "sd": 9.086446393641252,
+            "interval": [
+              32.07051479832606,
+              38.36698520167393
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 53.25,
+            "sd": 8.389701828682206,
+            "interval": [
+              50.34317003761896,
+              56.15682996238104
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 148.21875,
+            "sd": 33.67466203101712,
+            "interval": [
+              136.5512892768826,
+              159.8862107231174
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 5.249999999999999,
+            "sd": 6.3702939619212495,
+            "interval": [
+              3.042846308985419,
+              7.457153691014579
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.8456700817940571,
+            "sd": 0.05527133104427926,
+            "interval": [
+              0.8265198945262662,
+              0.8648202690618481
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 3.9375000000000004,
+            "sd": 1.9499793216438759,
+            "interval": [
+              3.261879050182741,
+              4.61312094981726
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.49218750000000006,
+            "sd": 0.24374741520548449,
+            "interval": [
+              0.40773488127284263,
+              0.5766401187271575
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 13.781250000000005,
+            "sd": 8.605078676703549,
+            "interval": [
+              10.799797138281678,
+              16.76270286171833
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 29,
+            "estimate": 8.80706075533662,
+            "sd": 4.111662527615069,
+            "interval": [
+              7.310595789207463,
+              10.303525721465776
+            ]
+          }
+        }
+      }
+    },
+    {
+      "payment": "prepay",
+      "surplus": 3,
+      "sameJointFixed": 0,
+      "example": {
+        "material": {
+          "intake": [
+            72,
+            75,
+            75,
+            74,
+            73,
+            75,
+            72,
+            72
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              296,
+              292
+            ],
+            "losses": [
+              206,
+              207
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.5104166666666666,
+            "lowestConsumption": 72,
+            "gini": 0.00977891156462585,
+            "attempts": 0,
+            "completed": 0,
+            "rejected": 94,
+            "transfer": 0,
+            "ties": 0,
+            "completionRate": null
+          }
+        },
+        "joint": {
+          "intake": [
+            98,
+            98,
+            102,
+            88,
+            96,
+            87,
+            92,
+            104
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              377,
+              388
+            ],
+            "losses": [
+              125,
+              111
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6640625,
+            "lowestConsumption": 87,
+            "gini": 0.03415032679738562,
+            "attempts": 57,
+            "completed": 33,
+            "rejected": 37,
+            "transfer": 177,
+            "ties": 94,
+            "completionRate": 0.5789473684210527
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            72,
+            75,
+            75,
+            74,
+            73,
+            75,
+            72,
+            72
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              296,
+              292
+            ],
+            "losses": [
+              206,
+              207
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.5104166666666666,
+            "lowestConsumption": 72,
+            "gini": 0.00977891156462585,
+            "attempts": 0,
+            "completed": 0,
+            "rejected": 94,
+            "transfer": 0,
+            "ties": 0,
+            "completionRate": null
+          }
+        },
+        "cautious": {
+          "intake": [
+            72,
+            75,
+            75,
+            74,
+            73,
+            75,
+            72,
+            72
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              296,
+              292
+            ],
+            "losses": [
+              206,
+              207
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.5104166666666666,
+            "lowestConsumption": 72,
+            "gini": 0.00977891156462585,
+            "attempts": 0,
+            "completed": 0,
+            "rejected": 94,
+            "transfer": 0,
+            "ties": 0,
+            "completionRate": null
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0.13351779513888887,
+        "sd": 0.017789076492692103,
+        "interval": [
+          0.12735430785317114,
+          0.1396812824246066
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.5101182725694444,
+            "sd": 0.0028288437158826593,
+            "interval": [
+              0.5091381462383621,
+              0.5110983989005268
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 72.0625,
+            "sd": 0.24593468841898286,
+            "interval": [
+              71.97728954369497,
+              72.14771045630503
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.00750409541678967,
+            "sd": 0.0014884685630573212,
+            "interval": [
+              0.006988376848298317,
+              0.008019813985281022
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": null,
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6436360677083335,
+            "sd": 0.018613779938521573,
+            "interval": [
+              0.6371868405077334,
+              0.6500852949089335
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 85.15625000000001,
+            "sd": 3.492936420650922,
+            "interval": [
+              83.94603151410242,
+              86.36646848589761
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.02788459966241496,
+            "sd": 0.007800674828269415,
+            "interval": [
+              0.025181853393163246,
+              0.030587345931666673
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 48.34375000000001,
+            "sd": 6.193698019865864,
+            "interval": [
+              46.19778255685023,
+              50.489717443149786
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 29.562500000000007,
+            "sd": 4.924838297656535,
+            "interval": [
+              27.85616194224352,
+              31.268838057756493
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 46.0625,
+            "sd": 6.45549278496802,
+            "interval": [
+              43.825826965312764,
+              48.299173034687236
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 153.8125,
+            "sd": 20.49301611958131,
+            "interval": [
+              146.71216264685316,
+              160.91283735314684
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6107248424365125,
+            "sd": 0.05926637503082338,
+            "interval": [
+              0.5901904684838724,
+              0.6312592163891526
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.5101182725694444,
+            "sd": 0.0028288437158826593,
+            "interval": [
+              0.5091381462383621,
+              0.5110983989005268
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 72.0625,
+            "sd": 0.24593468841898286,
+            "interval": [
+              71.97728954369497,
+              72.14771045630503
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.00750409541678967,
+            "sd": 0.0014884685630573212,
+            "interval": [
+              0.006988376848298317,
+              0.008019813985281022
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": null,
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.5101182725694444,
+            "sd": 0.0028288437158826593,
+            "interval": [
+              0.5091381462383621,
+              0.5110983989005268
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 72.0625,
+            "sd": 0.24593468841898286,
+            "interval": [
+              71.97728954369497,
+              72.14771045630503
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.00750409541678967,
+            "sd": 0.0014884685630573212,
+            "interval": [
+              0.006988376848298317,
+              0.008019813985281022
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": null,
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        }
+      }
+    },
+    {
+      "payment": "delivery",
+      "surplus": 1,
+      "sameJointFixed": 32,
+      "example": {
+        "material": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "joint": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "cautious": {
+          "intake": [
+            104,
+            104,
+            98,
+            94,
+            101,
+            101,
+            82,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              389,
+              385
+            ],
+            "losses": [
+              113,
+              114
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.671875,
+            "lowestConsumption": 82,
+            "gini": 0.040051679586563305,
+            "attempts": 52,
+            "completed": 47,
+            "rejected": 42,
+            "transfer": 186,
+            "ties": 0,
+            "completionRate": 0.9038461538461539
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0,
+        "sd": 0,
+        "interval": [
+          0,
+          0
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6296929253472222,
+            "sd": 0.03124755703983446,
+            "interval": [
+              0.6188663981464494,
+              0.640519452547995
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 77.21875,
+            "sd": 3.7565802482164967,
+            "interval": [
+              75.91718526688007,
+              78.52031473311993
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.058964415362065224,
+            "sd": 0.01592713201294227,
+            "interval": [
+              0.05344604707015051,
+              0.06448278365397994
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 41.15625000000001,
+            "sd": 8.37087645235821,
+            "interval": [
+              38.25594257787953,
+              44.056557422120484
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 35.21874999999999,
+            "sd": 9.086446393641252,
+            "interval": [
+              32.07051479832606,
+              38.36698520167393
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 53.25,
+            "sd": 8.389701828682206,
+            "interval": [
+              50.34317003761896,
+              56.15682996238104
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 137.74999999999997,
+            "sd": 35.51919063303394,
+            "interval": [
+              125.44345446596822,
+              150.05654553403173
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.8456700817940571,
+            "sd": 0.05527133104427926,
+            "interval": [
+              0.8265198945262662,
+              0.8648202690618481
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 7.625,
+            "sd": 0.7513428837969107,
+            "interval": [
+              7.364677755986986,
+              7.885322244013014
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.953125,
+            "sd": 0.09391786047461384,
+            "interval": [
+              0.9205847194983733,
+              0.9856652805016267
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 21.374999999999996,
+            "sd": 8.007053342260587,
+            "interval": [
+              18.600748537797294,
+              24.1492514622027
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 32,
+            "estimate": 11.217187500000001,
+            "sd": 4.16122254539862,
+            "interval": [
+              9.775423940090489,
+              12.658951059909514
+            ]
+          }
+        }
+      }
+    },
+    {
+      "payment": "delivery",
+      "surplus": 2,
+      "sameJointFixed": 32,
+      "example": {
+        "material": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "joint": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            106,
+            106,
+            104,
+            104,
+            105,
+            103,
+            96,
+            102
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              415,
+              411
+            ],
+            "losses": [
+              87,
+              88
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.7170138888888888,
+            "lowestConsumption": 96,
+            "gini": 0.014527845036319613,
+            "attempts": 94,
+            "completed": 60,
+            "rejected": 0,
+            "transfer": 238,
+            "ties": 0,
+            "completionRate": 0.6382978723404256
+          }
+        },
+        "cautious": {
+          "intake": [
+            104,
+            104,
+            98,
+            94,
+            101,
+            101,
+            82,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              389,
+              385
+            ],
+            "losses": [
+              113,
+              114
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.671875,
+            "lowestConsumption": 82,
+            "gini": 0.040051679586563305,
+            "attempts": 52,
+            "completed": 47,
+            "rejected": 42,
+            "transfer": 186,
+            "ties": 0,
+            "completionRate": 0.9038461538461539
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0,
+        "sd": 0,
+        "interval": [
+          0,
+          0
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.7052137586805555,
+            "sd": 0.012969131551604748,
+            "interval": [
+              0.7007202664265897,
+              0.7097072509345212
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 88.56250000000001,
+            "sd": 4.838938166648256,
+            "interval": [
+              86.88592427226266,
+              90.23907572773737
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.048072074939521675,
+            "sd": 0.015746849979417332,
+            "interval": [
+              0.04261617003753789,
+              0.05352797984150546
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 57.03125,
+            "sd": 3.5784694421480108,
+            "interval": [
+              55.79139637870215,
+              58.27110362129785
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 224.75,
+            "sd": 14.011516000960112,
+            "interval": [
+              219.89534659733317,
+              229.60465340266683
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6041764352211594,
+            "sd": 0.038744355283510355,
+            "interval": [
+              0.5907524476813145,
+              0.6176004227610042
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6296929253472222,
+            "sd": 0.03124755703983446,
+            "interval": [
+              0.6188663981464494,
+              0.640519452547995
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 77.21875,
+            "sd": 3.7565802482164967,
+            "interval": [
+              75.91718526688007,
+              78.52031473311993
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.058964415362065224,
+            "sd": 0.01592713201294227,
+            "interval": [
+              0.05344604707015051,
+              0.06448278365397994
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 41.15625000000001,
+            "sd": 8.37087645235821,
+            "interval": [
+              38.25594257787953,
+              44.056557422120484
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 35.21874999999999,
+            "sd": 9.086446393641252,
+            "interval": [
+              32.07051479832606,
+              38.36698520167393
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 53.25,
+            "sd": 8.389701828682206,
+            "interval": [
+              50.34317003761896,
+              56.15682996238104
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 137.74999999999997,
+            "sd": 35.51919063303394,
+            "interval": [
+              125.44345446596822,
+              150.05654553403173
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.8456700817940571,
+            "sd": 0.05527133104427926,
+            "interval": [
+              0.8265198945262662,
+              0.8648202690618481
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 7.625,
+            "sd": 0.7513428837969107,
+            "interval": [
+              7.364677755986986,
+              7.885322244013014
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.953125,
+            "sd": 0.09391786047461384,
+            "interval": [
+              0.9205847194983733,
+              0.9856652805016267
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 21.374999999999996,
+            "sd": 8.007053342260587,
+            "interval": [
+              18.600748537797294,
+              24.1492514622027
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 32,
+            "estimate": 11.217187500000001,
+            "sd": 4.16122254539862,
+            "interval": [
+              9.775423940090489,
+              12.658951059909514
+            ]
+          }
+        }
+      }
+    },
+    {
+      "payment": "delivery",
+      "surplus": 3,
+      "sameJointFixed": 32,
+      "example": {
+        "material": {
+          "intake": [
+            98,
+            96,
+            92,
+            88,
+            87,
+            87,
+            80,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              361,
+              357
+            ],
+            "losses": [
+              141,
+              142
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6232638888888888,
+            "lowestConsumption": 80,
+            "gini": 0.032729805013927575,
+            "attempts": 57,
+            "completed": 33,
+            "rejected": 37,
+            "transfer": 130,
+            "ties": 94,
+            "completionRate": 0.5789473684210527
+          }
+        },
+        "joint": {
+          "intake": [
+            98,
+            96,
+            92,
+            88,
+            87,
+            87,
+            80,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              361,
+              357
+            ],
+            "losses": [
+              141,
+              142
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6232638888888888,
+            "lowestConsumption": 80,
+            "gini": 0.032729805013927575,
+            "attempts": 57,
+            "completed": 33,
+            "rejected": 37,
+            "transfer": 130,
+            "ties": 94,
+            "completionRate": 0.5789473684210527
+          }
+        },
+        "fixedPrior": {
+          "intake": [
+            98,
+            96,
+            92,
+            88,
+            87,
+            87,
+            80,
+            90
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              361,
+              357
+            ],
+            "losses": [
+              141,
+              142
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6232638888888888,
+            "lowestConsumption": 80,
+            "gini": 0.032729805013927575,
+            "attempts": 57,
+            "completed": 33,
+            "rejected": 37,
+            "transfer": 130,
+            "ties": 94,
+            "completionRate": 0.5789473684210527
+          }
+        },
+        "cautious": {
+          "intake": [
+            98,
+            96,
+            90,
+            84,
+            85,
+            85,
+            74,
+            86
+          ],
+          "accounting": {
+            "initial": [
+              14,
+              11
+            ],
+            "produced": [
+              528,
+              528
+            ],
+            "consumed": [
+              351,
+              347
+            ],
+            "losses": [
+              151,
+              152
+            ],
+            "terminal": [
+              40,
+              40
+            ]
+          },
+          "metric": {
+            "needsSatisfied": 0.6059027777777778,
+            "lowestConsumption": 74,
+            "gini": 0.04369627507163324,
+            "attempts": 33,
+            "completed": 28,
+            "rejected": 61,
+            "transfer": 110,
+            "ties": 94,
+            "completionRate": 0.8484848484848485
+          }
+        }
+      },
+      "contrast": {
+        "trials": 32,
+        "estimate": 0,
+        "sd": 0,
+        "interval": [
+          0,
+          0
+        ]
+      },
+      "policies": {
+        "material": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6117350260416664,
+            "sd": 0.017355838097915043,
+            "interval": [
+              0.6057216454429928,
+              0.61774840664034
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 79.59375,
+            "sd": 3.2810243778036656,
+            "interval": [
+              78.45695394175435,
+              80.73054605824565
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.03511671425661721,
+            "sd": 0.009861021137454396,
+            "interval": [
+              0.03170010753001944,
+              0.03853332098321497
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 48.34375000000001,
+            "sd": 6.193698019865864,
+            "interval": [
+              46.19778255685023,
+              50.489717443149786
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 29.562500000000007,
+            "sd": 4.924838297656535,
+            "interval": [
+              27.85616194224352,
+              31.268838057756493
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 46.0625,
+            "sd": 6.45549278496802,
+            "interval": [
+              43.825826965312764,
+              48.299173034687236
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 117.06249999999999,
+            "sd": 19.027887004892783,
+            "interval": [
+              110.46979465765638,
+              123.65520534234359
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6107248424365125,
+            "sd": 0.05926637503082338,
+            "interval": [
+              0.5901904684838724,
+              0.6312592163891526
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "joint": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6117350260416664,
+            "sd": 0.017355838097915043,
+            "interval": [
+              0.6057216454429928,
+              0.61774840664034
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 79.59375,
+            "sd": 3.2810243778036656,
+            "interval": [
+              78.45695394175435,
+              80.73054605824565
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.03511671425661721,
+            "sd": 0.009861021137454396,
+            "interval": [
+              0.03170010753001944,
+              0.03853332098321497
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 48.34375000000001,
+            "sd": 6.193698019865864,
+            "interval": [
+              46.19778255685023,
+              50.489717443149786
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 29.562500000000007,
+            "sd": 4.924838297656535,
+            "interval": [
+              27.85616194224352,
+              31.268838057756493
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 46.0625,
+            "sd": 6.45549278496802,
+            "interval": [
+              43.825826965312764,
+              48.299173034687236
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 117.06249999999999,
+            "sd": 19.027887004892783,
+            "interval": [
+              110.46979465765638,
+              123.65520534234359
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6107248424365125,
+            "sd": 0.05926637503082338,
+            "interval": [
+              0.5901904684838724,
+              0.6312592163891526
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "fixedPrior": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.6117350260416664,
+            "sd": 0.017355838097915043,
+            "interval": [
+              0.6057216454429928,
+              0.61774840664034
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 79.59375,
+            "sd": 3.2810243778036656,
+            "interval": [
+              78.45695394175435,
+              80.73054605824565
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.03511671425661721,
+            "sd": 0.009861021137454396,
+            "interval": [
+              0.03170010753001944,
+              0.03853332098321497
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 48.34375000000001,
+            "sd": 6.193698019865864,
+            "interval": [
+              46.19778255685023,
+              50.489717443149786
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 29.562500000000007,
+            "sd": 4.924838297656535,
+            "interval": [
+              27.85616194224352,
+              31.268838057756493
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 46.0625,
+            "sd": 6.45549278496802,
+            "interval": [
+              43.825826965312764,
+              48.299173034687236
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 117.06249999999999,
+            "sd": 19.027887004892783,
+            "interval": [
+              110.46979465765638,
+              123.65520534234359
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.6107248424365125,
+            "sd": 0.05926637503082338,
+            "interval": [
+              0.5901904684838724,
+              0.6312592163891526
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 0,
+            "sd": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "meanLossAmongLosers": null
+        },
+        "cautious": {
+          "needsSatisfied": {
+            "trials": 32,
+            "estimate": 0.5826551649305555,
+            "sd": 0.017336920836133262,
+            "interval": [
+              0.5766483387082443,
+              0.5886619911528667
+            ]
+          },
+          "lowestConsumption": {
+            "trials": 32,
+            "estimate": 75.59375,
+            "sd": 2.460781085018961,
+            "interval": [
+              74.74114852084622,
+              76.44635147915378
+            ]
+          },
+          "gini": {
+            "trials": 32,
+            "estimate": 0.03941085352645141,
+            "sd": 0.010180820267839062,
+            "interval": [
+              0.0358834440903977,
+              0.04293826296250513
+            ]
+          },
+          "attempts": {
+            "trials": 32,
+            "estimate": 26.312500000000004,
+            "sd": 4.71399768705378,
+            "interval": [
+              24.67921314438416,
+              27.945786855615847
+            ]
+          },
+          "completed": {
+            "trials": 32,
+            "estimate": 21.187499999999996,
+            "sd": 4.895274218817509,
+            "interval": [
+              19.491405184725103,
+              22.88359481527489
+            ]
+          },
+          "rejected": {
+            "trials": 32,
+            "estimate": 68.09374999999999,
+            "sd": 4.888164607069453,
+            "interval": [
+              66.40011849425291,
+              69.78738150574706
+            ]
+          },
+          "transfer": {
+            "trials": 32,
+            "estimate": 83.56249999999999,
+            "sd": 19.174811266262157,
+            "interval": [
+              76.91888893372598,
+              90.20611106627399
+            ]
+          },
+          "ties": {
+            "trials": 32,
+            "estimate": 94.40625,
+            "sd": 0.9108441671187195,
+            "interval": [
+              94.09066439635089,
+              94.72183560364911
+            ]
+          },
+          "completionRate": {
+            "trials": 32,
+            "estimate": 0.7976135503110673,
+            "sd": 0.05686107156452754,
+            "interval": [
+              0.7779125561765924,
+              0.8173145444455422
+            ]
+          },
+          "losingAgents": {
+            "trials": 32,
+            "estimate": 6.3125,
+            "sd": 1.9909067475447852,
+            "interval": [
+              5.622698681163526,
+              7.002301318836474
+            ]
+          },
+          "lossFraction": {
+            "trials": 32,
+            "estimate": 0.7890625,
+            "sd": 0.24886334344309816,
+            "interval": [
+              0.7028373351454408,
+              0.8752876648545592
+            ]
+          },
+          "largestLoss": {
+            "trials": 32,
+            "estimate": 8.875000000000002,
+            "sd": 4.484741154827829,
+            "interval": [
+              7.321145020576432,
+              10.428854979423571
+            ]
+          },
+          "meanLossAmongLosers": {
+            "trials": 31,
+            "estimate": 5.215360983102918,
+            "sd": 2.0807194340131487,
+            "interval": [
+              4.482906287314486,
+              5.94781567889135
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
