@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EPISTEME synthetic discovery and validation results",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "design",
+    "cells"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "episteme-v1"
+    },
+    "modelVersion": {
+      "const": "sequential-conditional-gaussian-v1"
+    },
+    "evidenceClass": {
+      "const": "synthetic simulation"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "trials",
+        "seed"
+      ]
+    },
+    "design": {
+      "type": "object",
+      "required": [
+        "discoveryBudget",
+        "noise",
+        "confidence",
+        "alpha",
+        "validationGrid",
+        "replicationGrid",
+        "evaluationGrid"
+      ]
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "regime",
+          "firstTask",
+          "replay",
+          "policies",
+          "contrast"
+        ],
+        "properties": {
+          "regime": {
+            "enum": [
+              "inLibrary",
+              "outsideLibrary"
+            ]
+          },
+          "policies": {
+            "type": "object",
+            "required": [
+              "random",
+              "disagreement"
+            ]
+          },
+          "replay": {
+            "type": "object",
+            "required": [
+              "random",
+              "disagreement"
+            ]
+          },
+          "contrast": {
+            "type": "object",
+            "required": [
+              "outcome",
+              "trials",
+              "estimate",
+              "sd",
+              "interval"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
