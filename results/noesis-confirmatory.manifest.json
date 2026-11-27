@@ -1,0 +1,32 @@
+{
+  "id": "noesis-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "3f2843f80e16d1e045abd6ced45f9f33a3b3e9dc",
+  "inputs": {
+    "scripts/noesis.mjs": "3da305d7d0bb55bab5e1f54294dfd4f4822c89bb2ef4d067af88d27faceffbf2",
+    "engine/noesis.mjs": "bdbbc3687a699aa00a8e91135ce6dce5a6d4791e200016d61f4892385b4d8b34",
+    "engine/discovery.mjs": "dcbb361b061d2346c522ddb4d772eac70e0f31fcdc5e5aebe08bf8e956f760d1",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/noesis-confirmatory.json": "89160706aad8d29f496c9f4df2f2adf50f20e48331b669ab85cfd4ee274c9b80",
+    "research/noesis-confirmatory.md": "96d6c09906f48da00706a837e6a3788d91f9950469aa9ece900a93c398bf717e"
+  },
+  "configSha256": "fc3fedb7c0eaf4e33520c81ff693ee69e3c5f6c2b589dee697b988550f2bd61d",
+  "output": {
+    "path": "results/noesis-confirmatory.json",
+    "sha256": "edb29de55e0992f2ffa0c02cf8ba17e6c810799a2c97ff385500709b8253a1ba",
+    "bytes": 23844
+  },
+  "startUtc": "2026-11-26T20:30:11.061Z",
+  "endUtc": "2026-11-26T20:30:11.176Z",
+  "runtimeMs": 113,
+  "observedRssBytes": 52117504,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

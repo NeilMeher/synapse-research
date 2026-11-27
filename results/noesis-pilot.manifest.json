@@ -1,0 +1,32 @@
+{
+  "id": "noesis-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "3f2843f80e16d1e045abd6ced45f9f33a3b3e9dc",
+  "inputs": {
+    "scripts/noesis.mjs": "3da305d7d0bb55bab5e1f54294dfd4f4822c89bb2ef4d067af88d27faceffbf2",
+    "engine/noesis.mjs": "bdbbc3687a699aa00a8e91135ce6dce5a6d4791e200016d61f4892385b4d8b34",
+    "engine/discovery.mjs": "dcbb361b061d2346c522ddb4d772eac70e0f31fcdc5e5aebe08bf8e956f760d1",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/noesis-pilot.json": "d215d52ab47dcdf8690fd22d0dab80022a681ba69ff0aded7f9d603d21a94c69",
+    "research/noesis-pilot.md": "7e0e9ab8e8a82bf6c45733575a09a2d07999620fd9390d0e2d8430bfcd30e094"
+  },
+  "configSha256": "208a018c9957a364ee75af55ce643c9d8abd2018b44956c027c4627e56ac01d7",
+  "output": {
+    "path": "results/noesis-pilot.json",
+    "sha256": "b3d2981a1e4e2fd2356f2d33a041372b506d87bf0b36cff3137ada492c7b9792",
+    "bytes": 23909
+  },
+  "startUtc": "2026-11-26T20:30:10.195Z",
+  "endUtc": "2026-11-26T20:30:10.252Z",
+  "runtimeMs": 47,
+  "observedRssBytes": 49152000,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

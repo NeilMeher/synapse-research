@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NOESIS evaluates artificial scientific discovery: active inquiry vs passive observation in recovering hidden mathematical laws.">
+  <title>NOESIS · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <script type="module" src="./noesis-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Lab navigation">
+      <a href="./index.html#map">Research map</a>
+      <a href="./mirage.html">MIRAGE</a>
+      <a href="./alpha-decay.html">ALPHA DECAY</a>
+      <a href="./morpheus.html">MORPHEUS</a>
+      <a href="./library.html">Library</a>
+    </nav>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro">
+      <div>
+        <p class="eyebrow">NOESIS · Artificial Scientific Discovery</p>
+        <h1>Can active inquiry accelerate the discovery of hidden governing laws?</h1>
+      </div>
+      <p>Compare four experimental inquiry policies across 300 synthetic physical systems under a strict measurement budget (B = 8). Step through the discovery timeline, inspect Bayesian model posteriors, and reveal the underlying physical truth.</p>
+    </div>
+    <p id="noesis-status" role="status">Loading the archived NOESIS benchmark…</p>
+    <div class="study-controls result-panel">
+      <label>Inquiry Policy
+        <select id="noesis-arm">
+          <option value="active_ig">Active Information Gain (Model Disagreement)</option>
+          <option value="uniform_grid">Uniform Space-Filling Grid</option>
+          <option value="random">Passive Random Sampling</option>
+          <option value="active_uncertainty">Active Predictive Uncertainty</option>
+        </select>
+      </label>
+      <label class="scrub">Observation Step
+        <input id="noesis-step" type="range" min="0" max="7" value="0">
+        <output id="noesis-step-output" for="noesis-step">0 / 7</output>
+      </label>
+      <div class="actions">
+        <button class="quiet" type="button" id="noesis-toggle-truth">Reveal Ground Truth Law</button>
+      </div>
+    </div>
+
+    <div class="study-pair study-block">
+      <article class="result-panel">
+        <h2>Discovery Workspace &amp; Function Space</h2>
+        <canvas id="noesis-curve-canvas" aria-hidden="true" class="study-chart" style="height: 320px;"></canvas>
+        <p id="noesis-truth-display" class="muted" style="margin-top: 0.5rem; font-family: monospace;"></p>
+      </article>
+      <article class="result-panel">
+        <h2>Candidate Theory Posteriors P(Model | Data)</h2>
+        <canvas id="noesis-prob-canvas" aria-hidden="true" class="study-chart" style="height: 180px;"></canvas>
+        <div class="table-scroll" style="margin-top: 0.75rem;">
+          <table>
+            <caption>Sequential Measurements in Replay Episode</caption>
+            <thead><tr><th>Step</th><th>Query x</th><th>Observed y</th><th>Leading Theory</th><th>P(Best)</th></tr></thead>
+            <tbody id="noesis-trace-body"></tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <article class="result-panel study-block">
+      <h2>Confirmatory Policy Comparison (300 Synthetic Systems)</h2>
+      <p id="noesis-contrasts" class="contrasts-summary"></p>
+      <div class="table-scroll">
+        <table>
+          <caption>300 paired synthetic physical worlds (B = 8 observations, sigma = 0.20)</caption>
+          <thead>
+            <tr><th>Inquiry Policy</th><th>Family Recovery</th><th>Posterior at Truth</th><th>Log Loss</th><th>Held-out Test RMSE</th></tr>
+          </thead>
+          <tbody id="noesis-summary-table"></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="result-panel study-block" id="evidence">
+      <h2>Research Evidence &amp; Artifacts</h2>
+      <div class="actions">
+        <a class="quiet" href="./data/noesis-confirmatory.json">Confirmatory Results JSON</a>
+        <a class="quiet" href="./data/noesis-confirmatory.manifest.json">Run Manifest</a>
+        <a class="quiet" href="./papers/noesis.md">Scientific Manuscript</a>
+        <a class="quiet" href="./research/noesis-confirmatory.md">Frozen Protocol</a>
+        <a class="quiet" href="./research/noesis-mathematics.md">Mathematical Specification</a>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p>SYNAPSE Research Ecosystem · Artificial Scientific Intelligence</p></div></footer>
+</body>
+</html>
