@@ -1,0 +1,35 @@
+{
+  "id": "episteme-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "b2a193d2c9a31cfcdb2f186a5fe46daf7fe06ce0",
+  "inputs": {
+    "scripts/episteme.mjs": "b4614ad34db5a8d8d17a6fea086c135034c6daa1027944ca2350b7496ea7378b",
+    "engine/episteme.mjs": "c86c156a50246e52c14d649d949476ee702ace3a486de1d79ccba8d8edc07684",
+    "engine/validation.mjs": "01e56a79f2b0f39f64b77e7a33a9b2a833d910b8937625bb30716def9764483d",
+    "engine/noesis.mjs": "bdbbc3687a699aa00a8e91135ce6dce5a6d4791e200016d61f4892385b4d8b34",
+    "engine/discovery.mjs": "dcbb361b061d2346c522ddb4d772eac70e0f31fcdc5e5aebe08bf8e956f760d1",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "schemas/episteme-v1.json": "440e70a642e50ab2a47ee3c732c45d469a41e5a9e76c17183dce53c94a42a244",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/episteme-confirmatory.json": "6610a34aea86a8f973dba40ba6129ff74c2381b360d23c3f3274deef7928b01d",
+    "research/episteme-confirmatory.md": "3e0b26cc1a1a7b866ce5515378b771d5bbad75ce58aa22f70c1badfddd118266"
+  },
+  "configSha256": "dd40703f2feccb1cc3768296891b0980ac87949ff9e33080e3e2f659ebb9d490",
+  "output": {
+    "path": "results/episteme-confirmatory.json",
+    "sha256": "6490c43061c42fa418a8804a0dd7dd90d962a39d030cc81c1711984425709720",
+    "bytes": 42939
+  },
+  "startUtc": "2026-11-27T07:23:36.043Z",
+  "endUtc": "2026-11-27T07:23:37.240Z",
+  "runtimeMs": 1189,
+  "observedRssBytes": 53628928,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}
