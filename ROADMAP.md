@@ -30,3 +30,5 @@ The Phase V AXIOM, barter and POLIS benchmarks are complete within their registe
 Phase VI ARTHA national modelling is implemented. State and district modelling requires consistent regional purchase and trade data. Next validate ENERGIA, then use its explicit procurement ledger to test a narrow NEXUS integration.
 
 ENERGIA's initial engineering and finance study is validated on hypothetical inputs. A later site-specific extension needs approved tariffs, power capacity, water permits, independently verified quotations, regulated lending review and workload data.
+
+After validated Phase VI publication, CHRONOS is the next research milestone. Pin the source editions for Indian rail operations, electrification, and state route length. Reconcile observations and coverage before testing whether local outcomes can support a design with credible comparison groups. [Initial design](research/chronos-source-checkpoint.md)

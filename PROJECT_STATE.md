@@ -124,3 +124,7 @@ POLIS 2.0 v0.8.1 served commit `118bbb3a76a2003e5d731377de28c36c55975c7a` from P
 ## Phase VI · ENERGIA checkpoint
 
 ENERGIA ran energia-scenario-001. The independent reference matched six complete annual schedules, 59 sensitivity points, project NPV break evens and both bounded decision sets. The baseline shows project NPV −$648,033 and a year-five uncovered payment of $60,064 after the reserve. A single all-equity option satisfied the registered design constraints despite negative NPV. The v0.10.0 candidate adds the public terminal and Academy energy and finance modules. Next, verify the independent NEXUS procurement-to-final-demand bridge.
+
+## Phase VI integrated checkpoint
+
+NEXUS executed nexus-scenario-001 after independent validation of both input labs. All four engineering–finance–production bridges, supplier links, and accounting vectors were reproduced independently. The frozen capital bill is $1.936m, including $896,000 of explicit accelerator imports. Higher stipulated domestic equipment sourcing raises domestic gross output from $1.209m to $1.565m. Changing the cooling assumptions reduces modeled annual facility energy by 50.22 MWh without changing the capital demand vector. The initial Phase VI scope now adds 12 Academy modules and 17 evidence entries in the v0.11.0 candidate. The next scientific milestone is the [CHRONOS source checkpoint](research/chronos-source-checkpoint.md).

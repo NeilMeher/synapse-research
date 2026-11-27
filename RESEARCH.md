@@ -38,3 +38,5 @@ Phase II adds [MIRAGE](papers/mirage.md), [REFLEX](papers/reflex.md) and [CONVER
 ARTHA is a national, current-price comparator across two ADB reference years and two resolutions. Its official input data and hypothetical domestic demand are identified separately. See [ARTHA](papers/artha.md) for the executed results.
 
 ENERGIA tests illustrative infrastructure finance and utility assumptions. The initial evidence is a deterministic sensitivity study rather than project underwriting. See the [ENERGIA manuscript](papers/energia.md).
+
+NEXUS uses a matched factorial design with fixed hardware capacity and prices. It varies hypothetical local procurement shares independently of modeled PUE and WUE. Read the [NEXUS manuscript](papers/nexus.md) and [internal audit](research/nexus-audit.md).

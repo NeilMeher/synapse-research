@@ -26,3 +26,5 @@ Neil Meher supplied the scientific programme, exact benchmark requirements and a
 The Phase VI Codex-assisted ARTHA implementation, source extraction, verification and research materials were added at the user's direction. The Asian Development Bank produced the underlying national accounting estimates. Independent human assessment remains pending.
 
 Codex assisted with the Phase VI ENERGIA model, audit, source review, and independent computational check at the user's direction. Manufacturer and official agency sources supply only their identified specifications and context. Engineering and financing assumptions are project-created.
+
+At the user's direction, Codex assisted with the NEXUS bridge, deterministic experiments, independent computational verification, interactive views and Academy extension. Explicit procurement shares are scenario choices. No human peer review or third-party endorsement is claimed.

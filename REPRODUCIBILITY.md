@@ -59,3 +59,7 @@ Download the original ADB workbook using the URL in [the source manifest](source
 ## ENERGIA
 
 Run `node --test tests/energia.test.mjs`, `node scripts/energia.mjs verify` and `python -B scripts/check_energia_reference.py`. The last command runs independent closed-form balances plus a scale-aware near-root numerical check. The deterministic archive covers six ledgers, 59 grid cells, bounded break-even calculations, NPV profiles and a constrained finite comparison. Use the preregistered inputs and manifest to reproduce exact settings.
+
+## NEXUS and Phase VI releases
+
+Run `node --test tests/nexus.test.mjs`, `python -B scripts/reference_nexus.py` and `node scripts/nexus.mjs verify`. The Python reference recomputes procurement, engineering, cash flow and the full national response after checking both matched invariants. `scripts/check_schemas.py` validates the completed result contracts, source records and the three deterministic run manifests. The default branch is the stable Pages source. Review the Pages workflow, release metadata, archive SHA-256 and exact browser suite at 360, 390, 768 and 1440 pixels after publication.

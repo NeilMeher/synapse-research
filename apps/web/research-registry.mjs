@@ -1,4 +1,4 @@
-export const registryVersion=4;
+export const registryVersion=5;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -126,7 +126,17 @@ export const researchStudies=[
       result:"data/energia-scenario.json",manifest:"data/energia-scenario.manifest.json",
       config:"experiments/energia-scenario.json",engine:"engine/energia.mjs",assets:["sources/energia-l40s-design.json"],
       concepts:[["GPU power and cooling","energia.html#workbench"],["Energy and engineering","academy.html#power-energy"],
-        ["Cash flow and financing risk","academy.html#project-finance"],["Water and tariff sources","energia.html#sources"]]}),
+        ["Cash flow and financing risk","academy.html#project-finance"],["Water and tariff sources","energia.html#sources"],
+        ["Optimization and uncertainty","academy.html#optimization"]]}),
+  study("nexus","NEXUS","nexus.html",["artha","energia"],
+    "A reconciled bridge from hypothetical compute construction to domestic demand and operating cash flow.",
+    "Compare paired procurement and efficiency changes with unchanged capacity, capex and billing.",
+    {evidence:"Official data · conditional infrastructure scenarios",archivePhases:["scenario"],studyIds:["nexus-scenario-001"],
+      protocol:"research/nexus-scenario.md",math:"research/nexus-scenario.md",audit:"research/nexus-audit.md",
+      result:"data/nexus-scenario.json",manifest:"data/nexus-scenario.manifest.json",
+      config:"experiments/nexus-scenario.json",engine:"engine/nexus.mjs",assets:["data/processed/nexus-capital-map.json"],
+      concepts:[["Infrastructure spending","nexus.html#procurement"],["Domestic supplier links","nexus.html#supply"],
+        ["Capital and operating costs","nexus.html#operation"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));
@@ -154,4 +164,7 @@ export const journeys=[
     ["Resource accounting","academy.html#resources"],["GAME OF CIVILIZATIONS","civilizations.html"],
     ["Repeated cooperation","academy.html#cooperation"],["POLIS","polis.html"],["POLIS 2.0","polis2.html"]]},
   {name:"From domestic demand to supplier activity",steps:[["ARTHA","artha.html"],["Domestic coefficients","artha.html#flows"],["Input–output mathematics","academy.html#input-output"]]},
+  {name:"From computing infrastructure to national economic systems",steps:[
+    ["ENERGIA engineering","energia.html#workbench"],["Energy demand","academy.html#power-energy"],
+    ["Capital procurement","nexus.html#procurement"],["ARTHA sector dependencies","artha.html#flows"],["NEXUS scenarios","nexus.html#evidence"]]},
 ];

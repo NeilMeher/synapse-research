@@ -22,3 +22,5 @@ AXIOM's v1 certainty comes from a finite mathematical scope. Empirical framing, 
 ARTHA assumes fixed input coefficients and prices, nationally unconstrained capacity, and no change to direct imports. It reports value added separately from gross output and estimates no employment or causal policy impact.
 
 ENERGIA has no project-specific tariff, quotes, funding commitment, taxes, refinancing or site feasibility. Negative payment coverage and scheduled equity requirements are modeled indicators. No calibrated probability of default is provided.
+
+NEXUS uses stipulated producer-value prices and domestic procurement shares with no measured margins, labor responses, regional estimates, joint cooling feasibility or causal effects. Additional price, commissioning and supplier evidence is needed before an empirical or site-specific study.

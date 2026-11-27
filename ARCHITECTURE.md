@@ -35,3 +35,5 @@ AXIOM keeps display permutations separate from canonical payoff and belief indic
 ARTHA extracts a pinned official symmetric input–output workbook to processed JSON. Its shared ESM kernel validates budgets, forms the domestic coefficient matrix and solves demand changes. Dimensions and source IDs are retained across the optional grouping. Static build assets are declared by study in the registry.
 
 The ENERGIA ESM kernel exposes annual engineering and project cash ledgers, deterministic discounted summaries and bounded finite comparisons. Its runtime archive embeds the frozen schedule and separate source manifest; browser controls reuse the same kernel.
+
+NEXUS connects the ENERGIA capital ledger to a versioned ADB sector bridge. Only disjoint domestic component values enter the ARTHA final-demand vector. Direct foreign procurement, embodied imported inputs, and operating cash remain distinct. The atlas registry points to the matched results, sources and four associated Academy modules.

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "phase",
+    "status",
+    "commit",
+    "inputs",
+    "configSha256",
+    "modelVersion",
+    "dataset",
+    "startUtc",
+    "endUtc",
+    "runtimeMs",
+    "observedRssBytes",
+    "environment",
+    "output"
+  ],
+  "properties": {
+    "id": {
+      "pattern": "^(artha|energia|nexus)-scenario-001$",
+      "type": "string"
+    },
+    "phase": {
+      "const": "scenario"
+    },
+    "status": {
+      "const": "completed"
+    },
+    "commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object",
+      "minProperties": 6,
+      "additionalProperties": {
+        "$ref": "#/$defs/sha256"
+      }
+    },
+    "configSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "modelVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "id",
+        "vintage",
+        "retrievalDate",
+        "units"
+      ]
+    },
+    "startUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "runtimeMs": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 30000
+    },
+    "observedRssBytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "environment": {
+      "type": "object",
+      "required": [
+        "node",
+        "platform",
+        "arch"
+      ]
+    },
+    "output": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^results/(artha|energia|nexus)-scenario\\.json$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

@@ -2,6 +2,19 @@
 
 SYNAPSE is an independent computational research programme on cognition, collective intelligence, scientific reliability and economic systems. The public website links interactive laboratories to their source data, protocols, results and reproduction instructions.
 
+[Live research atlas](https://neilmeher.github.io/synapse-research/#map) · [Latest GitHub release](https://github.com/NeilMeher/synapse-research/releases/latest) · [Evidence library](https://neilmeher.github.io/synapse-research/library.html) · [Mathematical Academy](https://neilmeher.github.io/synapse-research/academy.html)
+
+## Research
+
+| Study | Method and evidence |
+| --- | --- |
+| [POLIS 2.0](https://neilmeher.github.io/synapse-research/polis2.html) | Matched synthetic settlement and valuation study |
+| [ARTHA](https://neilmeher.github.io/synapse-research/artha.html) | Source-accounted national scenarios from ADB India industry tables |
+| [ENERGIA](https://neilmeher.github.io/synapse-research/energia.html) | Engineering and discounted cash-flow scenarios under stipulated terms |
+| [NEXUS](https://neilmeher.github.io/synapse-research/nexus.html) | Matched bridge from a capital ledger to domestic production requirements |
+
+Earlier research is indexed in the atlas and evidence library. Protocols, deterministic or seeded replays, source hashes, and independent computational checks accompany completed studies. See [scientific limitations](LIMITATIONS.md) and [contribution disclosure](CONTRIBUTION_REGISTER.md). Independent human review is pending.
+
 ## Start
 
 Use Node 24.12.0, npm 11.6.2 and Python 3.14.0.

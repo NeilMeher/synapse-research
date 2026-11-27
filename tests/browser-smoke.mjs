@@ -84,6 +84,8 @@ try {
       await page.getByRole("searchbox",{name:"Search laboratories"}).fill("");
       await page.getByText("Scientific discovery",{exact:true}).click();
       assert.equal(await page.locator("#map-journeys").getByRole("link",{name:"EPISTEME"}).getAttribute("href"),"./episteme.html");
+      await page.getByText("From computing infrastructure to national economic systems",{exact:true}).click();
+      assert.equal(await page.locator("#map-journeys").getByRole("link",{name:"NEXUS scenarios"}).getAttribute("href"),"./nexus.html#evidence");
       if (width>650){
         await page.getByRole("button",{name:"Fit graph"}).click();
         assert.ok(await page.locator("#map-view").evaluate(element=>element.scrollWidth<=element.clientWidth));
@@ -147,7 +149,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"],["artha","artha-scenario-001"],["energia","energia-scenario-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"],["artha","artha-scenario-001"],["energia","energia-scenario-001"],["nexus","nexus-scenario-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route==="artha"?"artha-archive":route)+"-status")?.textContent.includes(status),{route,status});
@@ -339,6 +341,21 @@ try {
           assert.equal(await page.locator("#energia-grid tr").count(),3);
           assert.equal(await page.locator("#energia-frontier").getByText("Pareto frontier",{exact:true}).count(),1);
         }
+
+        if(route==="nexus"){
+          assert.equal(await page.locator("#nexus-output").textContent(),"$1,208,727");
+          assert.equal(await page.locator("#nexus-domestic").textContent(),"$649,000");
+          await page.locator("#nexus-local").press("End");
+          assert.equal(await page.locator("#nexus-domestic").textContent(),"$825,750");
+          assert.equal(await page.locator("#nexus-output").textContent(),"$1,564,563");
+          await page.locator("#nexus-design").selectOption("efficient");
+          assert.match(await page.locator("#nexus-operating").textContent(),/544\.05 MWh.*-\$622,256/);
+          assert.equal(await page.locator("#nexus-output").textContent(),"$1,564,563");
+          assert.match(await page.locator("#nexus-procurement tr").filter({hasText:"Accelerator package"}).textContent(),/0%.*\$0.*\$896,000/);
+          await page.locator("#nexus-buyer").selectOption("c18");
+          assert.equal(await page.locator("#nexus-links tr").count(),8);
+          assert.equal(await page.locator("#nexus-archive tr").count(),4);
+        }
         if (["morpheus","alpha-decay","noesis","scientia","episteme","civilizations","polis","polis2"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
@@ -351,10 +368,13 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),11);
+      assert.equal(await page.locator("article.lesson").count(),12);
       assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       assert.match(await page.locator("#academy-energy-result").textContent(),/720\.0 kWh/);
       assert.match(await page.locator("#academy-finance-result").textContent(),/4\.13.*0\.66.*2\.00/);
+      await page.locator("#academy-opt-result").filter({hasText:/frontier full-equity/}).waitFor();
+      await page.locator("#academy-water-limit").press("Home");
+      assert.match(await page.locator("#academy-opt-result").textContent(),/0 feasible.*frontier empty/);
       await page.locator("#academy-history").selectOption("pooled");
       assert.match(await page.locator("#academy-cooperation-result").textContent(),/Pooled history.*fulfilled.*Gini/);
       await page.locator("#academy-barter").fill("4");
@@ -395,6 +415,7 @@ try {
         ["POLIS 2.0","polis2.html","polis2-confirmatory","polis2"],
         ["ARTHA","artha.html","artha-scenario","artha"],
         ["ENERGIA","energia.html","energia-scenario","energia"],
+        ["NEXUS","nexus.html","nexus-scenario","nexus"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){
@@ -439,6 +460,13 @@ try {
     assert.equal(await missingFinance.locator("#energia-case").isDisabled(),true);
     await missingFinance.getByText(/six deterministic ledgers/).waitFor();
     console.log("503 finance configuration fallback passed");
+    const missingBridge=await browser.newPage();
+    await missingBridge.route("**/data/processed/nexus-capital-map.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingBridge.goto(new URL("nexus.html",base).href);
+    await missingBridge.getByText(/The linked source data are unavailable/).waitFor();
+    assert.equal(await missingBridge.locator("#nexus-local").isDisabled(),true);
+    await missingBridge.getByText(/four matched deterministic scenarios/).waitFor();
+    console.log("503 procurement concordance fallback passed");
   } finally {
     await browser.close();
   }

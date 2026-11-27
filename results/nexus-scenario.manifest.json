@@ -1,0 +1,50 @@
+{
+  "id": "nexus-scenario-001",
+  "phase": "scenario",
+  "status": "completed",
+  "commit": "180d4a48006baec0878a5399ea2fba4d3b38a850",
+  "inputs": {
+    "experiments/nexus-scenario.json": "ce3a1e12d9736e15ba1cf8c2d60236185755bba0896923e9088e16ef18e9471e",
+    "research/nexus-scenario.md": "c9fe3ef7eef7a2302fa032fded394386b7a394ed9908c589c4c2c0bf5a90bcee",
+    "scripts/run-scenario.mjs": "e5e7e3e5fc70050cee689423943ecf39e98e0746943c37deadcaa6a46fc2f542",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "scripts/nexus.mjs": "732972c5864292cc8461fe901d7ae5505e1178bf48e45038ce0f2541444db63b",
+    "scripts/reference_nexus.py": "64efaa78879aada8fa6c16a4c62e0c3edefb2ffcc6fa18adf9418d74a875ba3f",
+    "engine/nexus.mjs": "f6c3b1bc8ded944e5261b5fd4ef5779080559aa288e2a752f87c4c1cfef4f99b",
+    "engine/artha.mjs": "67d5fdc3f766c1e86902947d7d0a476c59c380dd46dcc73c231005013bdb750e",
+    "engine/energia.mjs": "cc19bbc509a819496c470f06ae807f19c029f050a90245d038824a382037be24",
+    "scripts/reference_artha.py": "a448cad7e21e12aca9b50402b56fbff6aa5a3cce983e26ec5ed2a12cab24b9c9",
+    "scripts/reference_energia.py": "3795f04e5955e0f97b4437565d074e9d0584c9e9a080591af945bc7d399b398e",
+    "data/processed/artha-india.json": "c7d1e8d423ad71776854b49b740d37ac422a3521a2aa32a9585e4156731098cd",
+    "data/processed/nexus-capital-map.json": "3d35c0db789fd3cfd92c3f86067f71785e3f5213458609992d556ef350de5a47",
+    "experiments/energia-scenario.json": "1f8561f6e164eaa387066e108e5ba4df51464bd97a9745508cb786e2adfecd9a",
+    "schemas/nexus-v1.json": "9a38ae412eca68c57b2b3174512dfda62b5dfab59cd28650f0c6c72b25d742c8",
+    "results/artha-scenario.manifest.json": "c474d2245e3388d51bc0ec4e8cd597620a32bdd87300e3c118e405387ce7d16e",
+    "results/energia-scenario.manifest.json": "1667784647749ba35083485c393abc6b25d8ca564fb91e91c6461e36c474cc5e"
+  },
+  "configSha256": "12b84b84c616821115fa42ad39a34209a9cd7fb64d61617b19bae4f408f2768a",
+  "modelVersion": "capital-bridge-2024-v1",
+  "dataset": {
+    "id": "adb-ind-national-2025",
+    "vintage": "August 2025 portal vintage; OOXML modified November 2025",
+    "retrievalDate": "2026-11-27",
+    "sourceSha256": "7bb76a14c6afb969e1eb668a71cffdf140d519fcd50a2c58ce1683cb6212e337",
+    "units": "USD million at current prices",
+    "mappingId": "nexus-capital-2024-v1",
+    "energyInputId": "energia-scenario-001"
+  },
+  "startUtc": "2026-11-27T12:56:39.896Z",
+  "endUtc": "2026-11-27T12:56:39.972Z",
+  "runtimeMs": 71.0069999999996,
+  "observedRssBytes": 48480256,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/nexus-scenario.json",
+    "bytes": 100987,
+    "sha256": "e10fceb2ba869154a33a64b6c35620a1407f8d4f3698929431fa9325c137dd31"
+  }
+}

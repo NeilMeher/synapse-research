@@ -61,6 +61,8 @@ jobs:
       - run: node scripts/artha.mjs verify
       - run: python -B scripts/check_energia_reference.py
       - run: node scripts/energia.mjs verify
+      - run: python -B scripts/reference_nexus.py
+      - run: node scripts/nexus.mjs verify
       - run: python -m pip install --disable-pip-version-check jsonschema==4.26.0
       - run: python -B scripts/check_schemas.py
       - run: npm run build

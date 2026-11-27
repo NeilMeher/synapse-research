@@ -1,4 +1,4 @@
-import {discounted,returnRate} from "./engine/energia.mjs";
+import {discounted,feasibleFrontier,returnRate} from "./engine/energia.mjs";
 import {solveLinear} from "./engine/artha.mjs";
 import {byId,pct} from "./view.mjs";
 import {row} from "./study-view.mjs";
@@ -122,3 +122,21 @@ updateWhen(["academy-finance-cash"],()=>{
     " · Equity NPV $"+discounted(equity,.15).toFixed(2)+" · DSCR "+(cash/30).toFixed(2)+"× and "+
     (cash/27.5).toFixed(2)+"× · Project IRR "+(irr.value===null?irr.status:(irr.value*100).toFixed(2)+"%")+".";
 });
+
+try{
+  const response=await fetch("./experiments/energia-scenario.json");
+  if(!response.ok)throw new Error("ENERGIA configuration unavailable.");
+  const {id,base,optimization}=await response.json();
+  if(id!=="energia-scenario-001")throw new Error("Unregistered decision set.");
+  const control=byId("academy-water-limit");
+  control.disabled=false;
+  updateWhen(["academy-water-limit"],()=>{
+    const ceiling=control.valueAsNumber;
+    const result=feasibleFrontier(base,optimization.options,{...optimization.limits,siteWaterM3:ceiling});
+    const count=result.candidates.filter(item=>!item.failures.length).length;
+    byId("academy-opt-result").textContent=ceiling+" m³ ceiling · "+count+" feasible candidate"+(count===1?"":"s")+
+      " · frontier "+(result.frontier.join(", ")||"empty");
+  });
+}catch{
+  byId("academy-opt-result").textContent="The registered design set is unavailable.";
+}

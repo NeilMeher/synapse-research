@@ -76,3 +76,7 @@ Added the sourced India national accounts, deterministic domestic-demand scenari
 ## v0.10.0 · ENERGIA candidate
 
 Added modular compute power and cooling, hypothetical project finance, sensitivity tables, a bounded feasibility and Pareto comparison, source provenance, and two Academy lessons.
+
+## v0.11.0 · Integrated Phase VI candidate
+
+Added four executed NEXUS comparisons, explicit accelerator import accounting, interactive procurement and supplier views, a cross-laboratory atlas journey, and the Academy's optimization and uncertainty lesson. Existing archives are retained. Added a CHRONOS design checkpoint with verified research source locators.

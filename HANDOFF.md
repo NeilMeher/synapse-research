@@ -110,3 +110,11 @@ The domestic ADB India industry-by-industry source and processed data are pinned
 ## ENERGIA checkpoint
 
 ENERGIA's inputs, model and sources are frozen. Run `python -B scripts/check_energia_reference.py` and `node scripts/energia.mjs verify`. The verified archive digest is `a46ba764f10dcdcef9c9bef2df58d8f4be6dd2cfeb3d7c26361810c009d82c37`. Maharashtra connection, site availability, tariffs, commercial offers and institutional eligibility remain unverified. NEXUS can use the already checked, hypothetical 2024-denominated capital ledger as its scenario basis.
+
+## Integrated NEXUS and next milestone
+
+Run `python -B scripts/reference_nexus.py` and `node scripts/nexus.mjs verify`. The archive digest is `e10fceb2ba869154a33a64b6c35620a1407f8d4f3698929431fa9325c137dd31`. The project website and repository use the existing GitHub Pages workflow. The default branch is `codex/foundation`, fast-forwarded only after validation. GitHub Pages has a custom allowlist for that branch, so preserve the existing configuration unless a separate migration is authorized and verified.
+
+CHRONOS begins with the [source and design checkpoint](research/chronos-source-checkpoint.md). Pin the published Indian rail series and seek verified route commissioning dates. No treatment or outcome panel has been built. Human reviewers can independently assess the ADB vintage and workbook reuse terms, the ENERGIA physical and underwriting assumptions, and each procurement share and native ADB sector mapping in NEXUS.
+
+[Phase VI research and verification register](research/phase6-release-report.md)

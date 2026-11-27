@@ -15,3 +15,13 @@
 #energia-controls legend { padding-inline:.5rem; }
 #energia-grid td[data-positive="true"] { background:color-mix(in srgb,var(--accent) 13%,transparent); }
 #energia-grid td[data-positive="false"] { background:color-mix(in srgb,#d76043 13%,transparent); }
+
+.nexus-chain {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));
+  padding:0;
+  list-style:none;
+  gap:.6rem;
+}
+.nexus-chain li { padding:1rem; border-left:3px solid var(--accent); background:color-mix(in srgb,var(--accent) 8%,transparent); }
+.nexus-chain output { display:block; font-size:1.35rem; margin-top:.4rem; }

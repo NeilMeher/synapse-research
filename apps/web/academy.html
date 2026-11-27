@@ -29,6 +29,7 @@
       <li><a href="#input-output">Input–output economics</a></li>
       <li><a href="#power-energy">Energy and engineering mathematics</a></li>
       <li><a href="#project-finance">Infrastructure project finance</a></li>
+      <li><a href="#optimization">Optimization and uncertainty</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -232,6 +233,21 @@
       <details><summary>Advanced · Coverage, break even and ambiguous returns</summary><p>NPV=ΣCFₜ/(1+r)ᵗ. Break-even cash flow here is $100 divided by the present value of two $1 payments, or $57.62. Separately, year one needs $30 to pay debt before any reserve. Cash-flow series with several changes of sign may have several IRRs. At 10% and 20% the series [−100,230,−132] has zero NPV, so consult the NPV profile.</p></details>
       <details><summary>Practice and worked solution</summary><p>Set annual CFADS to $25. Can the project pay each year without reserves?</p><p>With no reserve, $25 leaves $5 uncovered in year one and $2.50 in year two. Coverage is 0.83× and 0.91×. These arithmetic results do not determine legal insolvency.</p></details>
       <p><a href="./energia.html#evidence">Inspect ENERGIA's amortization and sensitivities</a> · <a href="./docs/energia-learning.md">ENERGIA guide</a> · <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60678">RBI project finance context</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="optimization">
+      <h2>Optimization and uncertainty</h2>
+      <p><strong>Prerequisites</strong> Inequalities, comparative costs and basic probability.</p>
+      <h3>Beginner · Test feasibility before ranking</h3>
+      <p>The objective describes what to minimize. A constraint describes what is allowed. If a site has a 100 m³ water limit and a design uses 120 m³, it is infeasible regardless of cost. An option dominates another when it is no worse on every objective and better on at least one.</p>
+      <h3>Intermediate · Continuous and discrete choices</h3>
+      <p>For a linear example, let x and y be nonnegative, x+y≤1, and x≤0.6. Maximizing 2x+y means using all the budget, because both coefficients are positive. Along x+y=1 it yields 1+x, so the solution is x=0.6, y=0.4. Discrete facility options use explicit enumeration because a choice between complete cooling designs cannot be treated as divisible without a separate engineering model.</p>
+      <div class="lesson-demo"><h3>Filter the registered ENERGIA designs by water</h3>
+      <label>Modeled annual water ceiling (m³) <input id="academy-water-limit" type="range" min="0" max="450" value="250" disabled></label>
+      <p id="academy-opt-result" aria-live="polite">Loading the finite design set…</p></div>
+      <details><summary>Advanced · Correlated shocks</summary><p>For a sum X+Y, the variance is Var(X)+Var(Y)+2 Cov(X,Y). Suppose two costs are each 0 or 2 with equal probability. When they are independent, total cost is 4 in one quarter of cases. With perfectly paired high and low costs, total cost is 4 in half the cases. Monte Carlo estimates such frequencies under the sampled joint distribution. The registered ENERGIA scenarios give deterministic comparisons without probabilities.</p></details>
+      <details><summary>Practice and worked solution</summary><p>Options A and B cost $1.20 and $1.10 per GPU-hour and use 70 and 90 m³. Option C costs $1.25 and uses 110 m³. A project has a 100 m³ water limit. Can any option dominate every feasible competitor?</p><p>C is infeasible. A uses less water and B costs less, so neither dominates the other. Reducing the water ceiling to 80 m³ leaves only A feasible. This describes these three options under their assumptions.</p></details>
+      <p><a href="./energia.html#evidence">Explore the finite ENERGIA comparison</a> · <a href="./nexus.html#bridge">Trace matched NEXUS assumptions</a> · <a href="https://www.itl.nist.gov/div898/handbook/">NIST engineering statistics handbook</a></p>
     </article>
   </main>
 </body>

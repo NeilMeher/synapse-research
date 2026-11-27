@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./infrastructure.css">
+<script type="module" src="./nexus-view.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+<nav aria-label="NEXUS navigation"><a href="./energia.html">ENERGIA</a><a href="./artha.html">ARTHA</a><a href="./library.html">Evidence library</a></nav>
+<button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button></div></header>
+<main class="wrap section study-page" id="main">
+<div class="section-intro"><div><p class="eyebrow">NEXUS · Infrastructure spending and the economy</p><h1>What does building compute set in motion?</h1></div><p>Trace a hypothetical 128-GPU facility through engineering, finance and domestic production requirements using India’s 2024 national accounts.</p></div>
+<p id="nexus-status" role="status">Loading the four registered scenarios…</p>
+<article class="result-panel study-block" id="bridge">
+<h2>Explore the matched design</h2>
+<div class="study-controls"><label>Efficiency assumptions <select id="nexus-design" disabled><option value="baseline">Baseline PUE and water</option><option value="efficient">Lower PUE and water</option></select></label>
+<label>Non-GPU sourcing between lower and higher domestic shares <input type="range" id="nexus-local" min="0" max="100" value="0" disabled><output for="nexus-local" id="nexus-local-label"></output></label></div>
+<p id="nexus-live-status" aria-live="polite">Both cases have the same installed capacity, capital cost and billing conditions. The GPU package stays a direct import.</p>
+<ol class="nexus-chain" aria-label="From installed compute to production requirements">
+<li><a href="#operation">Facility design</a><output id="nexus-capacity">—</output></li>
+<li><a href="#procurement">Capital outlay</a><output id="nexus-capex">—</output></li>
+<li><a href="#procurement">Direct domestic purchases</a><output id="nexus-domestic">—</output></li>
+<li><a href="#supply">Domestic gross output</a><output id="nexus-output">—</output></li>
+</ol>
+</article>
+<div class="study-pair">
+<article class="result-panel study-block" id="operation"><h2>Operating pathway</h2>
+<p>Compute workload affects facility energy and operating cash. Operating costs are excluded from the construction final-demand shock.</p>
+<div class="table-scroll"><table><caption>Physical and financial indicators</caption><tbody id="nexus-operating"></tbody></table></div></article>
+<article class="result-panel study-block" id="effects"><h2>National production pathway</h2>
+<p>Imported intermediates are purchases required by domestic sectors as they respond. Direct project imports bypass the domestic shock.</p>
+<div class="table-scroll"><table><caption>2024 dollars under the fixed-coefficient model</caption><tbody id="nexus-effects"></tbody></table></div></article>
+</div>
+<article class="result-panel study-block" id="procurement"><h2>Inspect the procurement map</h2>
+<p>Amounts use stipulated 2024 producer-value scenario dollars. Taxes, freight and separately billed margins are outside the bridge.</p>
+<div class="table-scroll" tabindex="0" aria-label="Procurement-to-sector mapping"><table><caption>Non-overlapping capital categories mapped to ADB industries</caption><thead><tr><th scope="col">Cost item</th><th scope="col">ADB industry</th><th scope="col">Domestic share</th><th scope="col">Domestic</th><th scope="col">Direct import</th><th scope="col">Mapping rationale</th></tr></thead><tbody id="nexus-procurement"></tbody></table></div>
+</article>
+<article class="result-panel study-block" id="supply"><h2>First-round supplier links</h2>
+<p>Choose a directly purchased industry to trace how it purchases intermediate inputs from domestic suppliers. Bars share the scale of the largest link in this view.</p>
+<div class="study-controls"><label>Directly purchased industry <select id="nexus-buyer" disabled></select></label></div>
+<div class="table-scroll"><table><caption>Largest eight domestic first-round links</caption><thead><tr><th scope="col">Supplying industry</th><th scope="col">Purchasing industry</th><th scope="col">Dollars of first-round inputs</th></tr></thead><tbody id="nexus-links"></tbody></table></div>
+</article>
+<article class="result-panel study-block" id="evidence"><h2>Registered scenario comparison</h2>
+<div class="table-scroll" tabindex="0" aria-label="Matched scenarios"><table><caption>Fixed capex and capacity across engineering and procurement cases</caption><thead><tr><th scope="col">Case</th><th scope="col">Energy (MWh)</th><th scope="col">Site water (m³)</th><th scope="col">Project NPV</th><th scope="col">Direct foreign procurement</th><th scope="col">Domestic gross output</th><th scope="col">Domestic value added</th></tr></thead><tbody id="nexus-archive"></tbody></table></div>
+<p>These comparisons are conditional on both the fixed-coefficient national model and the hypothetical facility and local-content assumptions.</p>
+<div class="actions"><a class="quiet" href="./data/nexus-scenario.json">Results JSON</a><a class="quiet" href="./data/nexus-scenario.manifest.json">Run manifest</a><a class="quiet" href="./data/processed/nexus-capital-map.json">Procurement concordance</a><a class="quiet" href="./experiments/nexus-scenario.json">Frozen configuration</a><a class="quiet" href="./research/nexus-scenario.md">Protocol</a><a class="quiet" href="./papers/nexus.md">Manuscript</a><a class="quiet" href="./research/nexus-audit.md">Audit and limitations</a><a class="quiet" href="./docs/nexus-learning.md">Learning guide</a><a class="quiet" href="./academy.html#optimization">Optimize under constraints</a></div>
+</article>
+</main></body></html>
