@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "nexus-map-v1",
+  "id": "nexus-capital-2024-v1",
+  "sourceId": "adb-ind-national-2025",
+  "year": 2024,
+  "currency": "scenario USD",
+  "arthaUnits": "USD million at current prices",
+  "valueBoundary": "Hypothetical net producer values excluding taxes, freight and trade margins. No foreign-exchange conversion or inflation applied.",
+  "profiles": [
+    {
+      "id": "lower-domestic",
+      "description": "Lower assumed domestic sourcing of conventional plant and network equipment."
+    },
+    {
+      "id": "higher-domestic",
+      "description": "Higher assumed domestic sourcing of conventional plant and network equipment."
+    }
+  ],
+  "categories": [
+    {
+      "capitalKey": "civil",
+      "industry": "c18",
+      "justification": "Civil structure and local installation at domestic basic prices.",
+      "lower": 0.95,
+      "higher": 0.95
+    },
+    {
+      "capitalKey": "electrical",
+      "industry": "c14",
+      "justification": "Electrical distribution and power conditioning equipment. Construction labor is included in civil only.",
+      "lower": 0.6,
+      "higher": 0.85
+    },
+    {
+      "capitalKey": "cooling",
+      "industry": "c13",
+      "justification": "Dedicated cooling plant represented by the broad machinery category.",
+      "lower": 0.45,
+      "higher": 0.7
+    },
+    {
+      "capitalKey": "gpu",
+      "industry": null,
+      "justification": "Whole accelerator package modeled as a direct import, with no domestic price margin or delivery service attributed here.",
+      "lower": 0,
+      "higher": 0
+    },
+    {
+      "capitalKey": "network",
+      "industry": "c14",
+      "justification": "Network hardware is a separate bill-of-materials category in the same broad domestic equipment sector.",
+      "lower": 0.25,
+      "higher": 0.55
+    },
+    {
+      "capitalKey": "professional",
+      "industry": "c30",
+      "justification": "Purchased design and engineering services mapped to other business activities.",
+      "lower": 0.9,
+      "higher": 0.9
+    }
+  ],
+  "exclusions": [
+    "Working capital and reserves are balances",
+    "Interest, principal and equity are financing flows",
+    "Operating energy, water, labor and maintenance may be intermediate purchases",
+    "Replacement occurs after the construction final-demand boundary",
+    "No local trade or freight margin is imputed"
+  ]
+}

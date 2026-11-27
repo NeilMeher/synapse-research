@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "dataset",
+    "config",
+    "cases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "nexus-v1"
+    },
+    "modelVersion": {
+      "const": "capital-bridge-2024-v1"
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "id",
+        "sourceSha256",
+        "mappingId",
+        "energyInputId",
+        "units"
+      ]
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "design",
+          "profile",
+          "procurement",
+          "economic",
+          "supplierLinks",
+          "physical",
+          "finance"
+        ],
+        "properties": {
+          "procurement": {
+            "type": "object",
+            "required": [
+              "lines",
+              "domestic",
+              "directImports",
+              "demand"
+            ],
+            "properties": {
+              "lines": {
+                "type": "array",
+                "minItems": 6,
+                "maxItems": 6
+              },
+              "demand": {
+                "type": "array",
+                "minItems": 34,
+                "maxItems": 34
+              }
+            }
+          },
+          "physical": {
+            "type": "object",
+            "required": [
+              "energyKWh",
+              "waterM3",
+              "contractBillableHours",
+              "electricity"
+            ]
+          },
+          "economic": {
+            "type": "object",
+            "required": [
+              "output",
+              "valueAdded",
+              "importedInputs",
+              "totals"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
