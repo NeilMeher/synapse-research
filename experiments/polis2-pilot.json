@@ -1,0 +1,8 @@
+{
+  "id": "polis2-pilot-001",
+  "phase": "pilot",
+  "seed": 427965817,
+  "trials": 32,
+  "steps": 24,
+  "climate": "stress"
+}

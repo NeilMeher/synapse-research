@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "interaction",
+    "cells"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "polis2-v1"
+    },
+    "modelVersion": {
+      "const": "polis-atomic-contract-v2"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "seed",
+        "trials",
+        "steps",
+        "climate"
+      ]
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "payment",
+          "surplus",
+          "contrast",
+          "policies",
+          "sameJointFixed",
+          "example"
+        ],
+        "properties": {
+          "payment": {
+            "enum": [
+              "prepay",
+              "delivery"
+            ]
+          },
+          "surplus": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          }
+        }
+      }
+    }
+  }
+}
