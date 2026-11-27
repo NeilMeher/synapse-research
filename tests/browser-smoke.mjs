@@ -70,7 +70,7 @@ try {
       assert.equal(await page.locator("#lab-detail").getByRole("link",{name:"Results and dataset"}).getAttribute("href"),"./data/mirage-confirmatory.json");
       await page.getByRole("searchbox",{name:"Search laboratories"}).fill("");
       await page.getByLabel("Status",{exact:true}).selectOption("proposed");
-      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),3);
+      assert.equal(await page.locator("#lab-list li:not([hidden])").count(),2);
       await page.getByLabel("Status",{exact:true}).selectOption("all");
       await labChoice.click();
       await page.getByLabel("Focus on selected lab").check();
@@ -147,10 +147,10 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"],["artha","artha-scenario-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
-        await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
+        await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route==="artha"?"artha-archive":route)+"-status")?.textContent.includes(status),{route,status});
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width,route+" viewport overflow at "+width+"px");
         if (route==="mirage"){
           assert.equal(await page.locator("#mirage-metrics tr").count(),5);
@@ -309,6 +309,20 @@ try {
           assert.match(await page.locator("#polis2-payer").textContent(),/0\.00/);
           assert.equal(await page.locator("#polis2-results tr").count(),4);
         }
+
+        if(route==="artha"){
+          await page.locator("#artha-status").filter({hasText:/34 industries/}).waitFor();
+          assert.equal(await page.locator("#artha-output").textContent(),"$185.09m");
+          await page.locator("#artha-detail").selectOption("aggregated");
+          assert.equal(await page.locator("#artha-output").textContent(),"$188.41m");
+          await page.locator("#artha-year").selectOption("2023");
+          assert.equal(await page.locator("#artha-output").textContent(),"$191.9m");
+          await page.locator("#artha-amount").fill("-1");
+          assert.match(await page.locator("#artha-status").textContent(),/Enter a whole amount/);
+          await page.locator("#artha-amount").fill("0");
+          assert.equal(await page.locator("#artha-output").textContent(),"$0m");
+          assert.equal(await page.locator("#artha-flows tr").count(),10);
+        }
         if (["morpheus","alpha-decay","noesis","scientia","episteme","civilizations","polis","polis2"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
@@ -322,6 +336,7 @@ try {
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
       assert.equal(await page.locator("article.lesson").count(),8);
+      assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       await page.locator("#academy-history").selectOption("pooled");
       assert.match(await page.locator("#academy-cooperation-result").textContent(),/Pooled history.*fulfilled.*Gini/);
       await page.locator("#academy-barter").fill("4");
@@ -360,6 +375,7 @@ try {
         ["GAME OF CIVILIZATIONS","civilizations.html","civilizations-confirmatory","civilizations"],
         ["POLIS","polis.html","polis-confirmatory","polis"],
         ["POLIS 2.0","polis2.html","polis2-confirmatory","polis2"],
+        ["ARTHA","artha.html","artha-scenario","artha"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){
@@ -390,6 +406,13 @@ try {
     await villageFallback.getByRole("button",{name:"Run sandbox"}).click();
     assert.match(await villageFallback.locator("#village-mode").textContent(),/Live sandbox/);
     console.log("503 economy archive fallback passed");
+    const missingIndia=await browser.newPage();
+    await missingIndia.route("**/data/processed/artha-india.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingIndia.goto(new URL("artha.html",base).href);
+    await missingIndia.getByText(/The national source tables are unavailable/).waitFor();
+    assert.equal(await missingIndia.locator("#artha-amount").isDisabled(),true);
+    await missingIndia.getByText(/12 deterministic comparisons/).waitFor();
+    console.log("503 official dataset fallback passed");
   } finally {
     await browser.close();
   }

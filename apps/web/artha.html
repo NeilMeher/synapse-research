@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARTHA · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./infrastructure.css">
+<script type="module" src="./artha-view.mjs"></script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+<nav aria-label="ARTHA navigation"><a href="./index.html#map">Research atlas</a><a href="./academy.html#input-output">Mathematical Academy</a><a href="./library.html">Evidence library</a></nav>
+<button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button></div></header>
+<main class="wrap section study-page" id="main">
+<div class="section-intro"><div><p class="eyebrow">ARTHA · India input–output laboratory</p><h1>Where does domestic demand travel?</h1></div><p>Trace a hypothetical purchase through supplier industries using national input–output estimates from the Asian Development Bank.</p></div>
+<p id="artha-status" role="status">Loading the national tables and registered scenarios…</p>
+<article class="result-panel study-block" id="shock"><h2>Final-demand workbench</h2>
+<div class="study-controls"><label>Reference year <select id="artha-year" disabled><option>2024</option><option>2023</option></select></label>
+<label>Industry detail <select id="artha-detail" disabled><option value="source">34 ADB industries</option><option value="aggregated">10 broad groups</option></select></label>
+<label>Domestic purchasing sector <select id="artha-sector" disabled></select></label>
+<label>Purchase in USD millions <input id="artha-amount" type="number" min="0" max="10000" step="1" value="100" disabled></label></div>
+<dl class="scenario-metrics" aria-live="polite">
+<div><dt>Gross domestic output</dt><dd id="artha-output">—</dd></div><div><dt>Domestic value added</dt><dd id="artha-value">—</dd></div>
+<div><dt>Imported intermediate inputs</dt><dd id="artha-imports">—</dd></div><div><dt>Domestic supplier rounds</dt><dd id="artha-rounds">—</dd></div></dl>
+<p id="artha-method">Amounts use the selected panel’s current U.S. dollars. Gross output includes purchases between industries. Add output across rounds only to measure activity. Use value added to avoid counting the same inputs repeatedly.</p>
+<div class="table-scroll"><table><caption>Industry contributions, ranked by additional gross output</caption><thead><tr><th scope="col">Industry</th><th scope="col">Direct</th><th scope="col">First round</th><th scope="col">Higher rounds</th><th scope="col">Gross output</th><th scope="col">Value added</th><th scope="col">Imported inputs</th></tr></thead><tbody id="artha-rows"></tbody></table></div>
+</article>
+<article class="result-panel study-block" id="flows"><h2>Inspect the domestic coefficients</h2>
+<div class="study-controls"><label>Purchasing industry <select id="artha-buyer" disabled></select></label></div>
+<p id="artha-flow-summary">Each coefficient measures domestic inputs per dollar of the buying industry’s output.</p>
+<div class="table-scroll"><table><caption>Domestic supplier shares in the selected purchasing industry</caption><thead><tr><th scope="col">Supplying industry</th><th scope="col">Published flow (USD millions)</th><th scope="col">Dollars per dollar of output</th></tr></thead><tbody id="artha-flows"></tbody></table></div>
+</article>
+<article class="result-panel study-block" id="evidence"><h2>Registered scenario evidence</h2>
+<p id="artha-archive-status">Loading the deterministic archive…</p>
+<div class="table-scroll"><table><caption>All registered USD 100 million domestic demand scenarios</caption><thead><tr><th scope="col">Panel</th><th scope="col">Industry</th><th scope="col">Gross output</th><th scope="col">Value added</th><th scope="col">Imported inputs</th></tr></thead><tbody id="artha-archive"></tbody></table></div>
+<p>Fixed coefficients imply unchanged prices and unrestricted supply. Direct final-goods imports, substitution, labor estimates and regional effects are outside this model.</p>
+<div class="actions"><a class="quiet" href="./data/artha-scenario.json">Results JSON</a><a class="quiet" href="./data/artha-scenario.manifest.json">Run manifest</a><a class="quiet" href="./experiments/artha-scenario.json">Frozen configuration</a><a class="quiet" href="./research/artha-scenario.md">Protocol</a><a class="quiet" href="./papers/artha.md">Manuscript</a><a class="quiet" href="./docs/artha-learning.md">Learning guide</a><a class="quiet" href="./research/artha-audit.md">Audit and limitations</a></div>
+</article>
+<article class="result-panel study-block" id="source"><h2>Data and accounting</h2><p id="artha-source-summary"></p>
+<p>The ADB national table is already industry by industry. The workbook records domestic and imported transactions in separate blocks. The ten-group comparison sums accounting flows before recomputing coefficients.</p>
+<div class="actions"><a class="quiet" href="https://kidb.adb.org/download/mrio-file/211">ADB India source workbook</a><a class="quiet" href="./sources/artha-adb-india.json">Source provenance</a><a class="quiet" href="./data/processed/artha-india.json">Processed tables</a><a class="quiet" href="./data/processed/artha-groups.json">Industry concordance</a><a class="quiet" href="./research/artha-sources.md">Source inventory</a></div>
+</article>
+</main></body></html>

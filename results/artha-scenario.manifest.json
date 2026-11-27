@@ -1,0 +1,44 @@
+{
+  "id": "artha-scenario-001",
+  "phase": "scenario",
+  "status": "completed",
+  "commit": "1752e9d99622b7c6467bafb845b23c2d52ceda48",
+  "inputs": {
+    "experiments/artha-scenario.json": "1b773fd563ad125fbb305dbc2573de115cd89f0567b44c98097c995390c1c1f2",
+    "research/artha-scenario.md": "bf785e0e272cc27639163b818c4d3d65359ab29302e0f3b95e7c467bea9db5c2",
+    "scripts/run-scenario.mjs": "e5e7e3e5fc70050cee689423943ecf39e98e0746943c37deadcaa6a46fc2f542",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "scripts/artha.mjs": "2245b0f20383a5238450caad8eb35c7cb7103e9efcdf8c0b79ab93f67eaf8754",
+    "engine/artha.mjs": "67d5fdc3f766c1e86902947d7d0a476c59c380dd46dcc73c231005013bdb750e",
+    "scripts/extract_artha.py": "319fdb7e7c6f8d819290fcd27772b154c5c4531fa0cb7d5a88ae66bd6a567603",
+    "scripts/reference_artha.py": "a448cad7e21e12aca9b50402b56fbff6aa5a3cce983e26ec5ed2a12cab24b9c9",
+    "sources/artha-adb-india.json": "2217a5cf23367b46f179a90558e0700bcb53056620cb4a498c42bd06ab2792f2",
+    "data/processed/artha-india.json": "c7d1e8d423ad71776854b49b740d37ac422a3521a2aa32a9585e4156731098cd",
+    "data/processed/artha-groups.json": "fcfe8a8b8c2b3eca9ab29e456a8b2599a6ea52a3cfdcc706335512fa74dd835a",
+    "schemas/artha-v1.json": "f6d58349b9e839ff04b34a7d4d70182b715f36ac900d9defb5c7eee2b76b8bf7",
+    "schemas/source-v1.json": "0cc3075591de2f3ec99f325cad20bf55a69f665d98654d68f924e9910d523361"
+  },
+  "configSha256": "4fd16cd88807638127442220657c72209e10b7c3231173c183428a57057cbc8d",
+  "modelVersion": "adb-domestic-leontief-v1",
+  "dataset": {
+    "id": "adb-ind-national-2025",
+    "vintage": "August 2025 portal vintage; OOXML modified November 2025",
+    "retrievalDate": "2026-11-27",
+    "sourceSha256": "7bb76a14c6afb969e1eb668a71cffdf140d519fcd50a2c58ce1683cb6212e337",
+    "units": "USD million at current prices"
+  },
+  "startUtc": "2026-11-27T12:35:40.715Z",
+  "endUtc": "2026-11-27T12:35:40.774Z",
+  "runtimeMs": 38.18990000000031,
+  "observedRssBytes": 48197632,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "output": {
+    "path": "results/artha-scenario.json",
+    "bytes": 86707,
+    "sha256": "291d4a118aa50273beb0b05692bac98361abb1a90549d267e4fc16ae183df28d"
+  }
+}

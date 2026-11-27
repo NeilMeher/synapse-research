@@ -1,3 +1,4 @@
+import {solveLinear} from "./engine/artha.mjs";
 import {byId,pct} from "./view.mjs";
 import {row} from "./study-view.mjs";
 import {setupTheme} from "./theme.mjs";
@@ -96,4 +97,11 @@ updateWhen(["academy-history"],()=>{
   byId("academy-cooperation-result").textContent=method.selectedOptions[0].textContent+" · "+
     metric.deliveries+" deliveries in "+metric.attempts+" attempts · "+pct(metric.needsSatisfied)+
     " of need fulfilled · consumption Gini "+metric.giniConsumed.toFixed(3)+".";
+});
+
+updateWhen(["academy-io-demand"],()=>{
+  const demand=number("academy-io-demand");
+  const [construction,equipment]=solveLinear([[1,-.1],[-.2,1]],[demand,0]);
+  byId("academy-io-result").textContent="Construction "+construction.toFixed(2)+"m · equipment "+
+    equipment.toFixed(2)+"m · gross output "+(construction+equipment).toFixed(2)+"m.";
 });

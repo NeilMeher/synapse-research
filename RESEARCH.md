@@ -34,3 +34,5 @@ Phase II adds [MIRAGE](papers/mirage.md), [REFLEX](papers/reflex.md) and [CONVER
 - MORPHEUS and Civilizations could test provenance-aware revision after legitimate changes in supplier reliability.
 - MIRAGE and AXIOM could test miscalibrated judgments about opponent actions in an independently frozen design.
 - SCIENTIA and POLIS could measure selective reporting across candidate institutions under a known simulated ground truth.
+
+ARTHA is a national, current-price comparator across two ADB reference years and two resolutions. Its official input data and hypothetical domestic demand are identified separately. See [ARTHA](papers/artha.md) for the executed results.

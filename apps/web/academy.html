@@ -26,6 +26,7 @@
       <li><a href="#strategy">Game theory and expected utility</a></li>
       <li><a href="#resources">Comparative advantage and resource accounting</a></li>
       <li><a href="#cooperation">Cooperation and complex systems</a></li>
+      <li><a href="#input-output">Input–output economics</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -185,6 +186,21 @@
       <details><summary>Advanced · From decisions to an aggregate distribution</summary><p>Compute Gini for nonnegative total individual consumption as ΣᵢΣⱼ|cᵢ−cⱼ| divided by 2nΣᵢcᵢ. With [2,4], the numerator is 4 and the denominator is 24, giving 1/6. Equal aggregate intake can hide different distributions. In POLIS the prescribed accept objective changes which exchanges occur and which holdings are available on later days. The rule is imposed. The later distribution follows from its interaction with the economy.</p></details>
       <details><summary>Practice and worked solution</summary><p>After one failed delivery, does the modeled payer with pooled records accept another ordinary offer from the same supplier? Does a payer with no record accept?</p><p>The first payer's belief of 3/5 gives a gain of 3×0.6−2 = −0.2 per unit, so it rejects. The other uses 3/4 and receives 0.25 expected utility per unit, so it accepts. Both calculations use the same physical offer terms.</p></details>
       <p><a href="./polis.html#mechanism">Trace how the decision changes aggregate outcomes</a> · <a href="./docs/polis-learning.md">POLIS guide</a> · <a href="https://doi.org/10.1126/science.7466396">Axelrod and Hamilton, The Evolution of Cooperation</a></p>
+    </article>
+
+    <article class="result-panel study-block lesson" id="input-output">
+      <h2>Input–output economics</h2>
+      <p><strong>Prerequisites</strong> Fractions, matrices and keeping track of units.</p>
+      <h3>Beginner · Follow one purchase</h3>
+      <p>Suppose a construction firm purchases $0.20 of domestic equipment for each dollar of output. A $100 million order for construction then requires $20 million of equipment in the first production round.</p>
+      <h3>Intermediate · Read the accounts as a system</h3>
+      <p>Let rows be suppliers and columns be buyers. Then Aᵢⱼ=Zᵢⱼ/xⱼ. With final demand d, production satisfies x=Ax+d. When the domestic rounds converge, x=d+Ad+A²d+⋯=(I−A)⁻¹d. Imported intermediate and value-added coefficients are multiplied by x separately.</p>
+      <div class="lesson-demo"><h3>Vary the construction order</h3>
+      <label>Domestic demand in millions <input type="range" id="academy-io-demand" min="0" max="200" value="100"></label>
+      <p id="academy-io-result" aria-live="polite"></p></div>
+      <details><summary>Advanced · Check convergence and aggregation</summary><p>For a nonnegative A and a positive vector v, the largest ratio (Av)ᵢ/vᵢ bounds the rate of production rounds in the associated weighted norm. A bound below one proves convergence. Grouping sums the underlying transaction block and gross output before division. Averaging coefficients arbitrarily changes the model.</p></details>
+      <details><summary>Practice and worked solution</summary><p>What if equipment buys $0.10 of construction per dollar and the order is $100 million for construction?</p><p>Construction output C=100+0.10E and equipment output E=0.20C. Substitution yields 0.98C=100, so C≈102.04 and E≈20.41. Gross output is approximately 122.45 million. The extra output above direct demand is 22.45 million. Value added requires separate information about intermediate purchases, and gross output includes those purchases.</p></details>
+      <p><a href="./artha.html#shock">Open the official-data workbench</a> · <a href="./docs/artha-learning.md">ARTHA guide</a> · <a href="https://unstats.un.org/unsd/nationalaccount/capdev/resources/details?resourceid=36&amp;resourcetype=handbook">UN input–output handbook</a></p>
     </article>
   </main>
 </body>

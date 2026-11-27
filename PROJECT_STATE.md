@@ -114,3 +114,9 @@ GitHub's hosted runners now run JavaScript Actions on Node 24. The existing immu
 ## Phase VI · POLIS 2.0
 
 The robustness pilot and confirmation were frozen at cf82618 and 645462b. Settlement after successful delivery makes joint and payer-gain decisions exactly equivalent under matched choice draws. At surplus value 2 the prepayment benefit was 9.60 pp, and the registered delivery-minus-prepayment interaction was −9.60 pp. The new archives and both references passed. Prior archives remain immutable.
+
+## Phase VI · ARTHA checkpoint
+
+ARTHA executed 12 conditional comparative statics under artha-scenario-001. The ADB India's 2023 and 2024 source totals reconcile within 2.71×10⁻⁹ million USD. The official-data workbench and nine Academy modules are included in the v0.9.0 candidate. The next scientific task is to validate ENERGIA's engineering and finance accounting under explicitly hypothetical prices.
+
+POLIS 2.0 v0.8.1 served commit `118bbb3a76a2003e5d731377de28c36c55975c7a` from Pages run [46000269749](https://github.com/NeilMeher/synapse-research/actions/runs/46000269749). The public archive digest and browser suite at 360, 390, 768 and 1440 pixels matched.

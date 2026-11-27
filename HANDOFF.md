@@ -102,3 +102,7 @@ The next research task is to define the registered POLIS sensitivity arms for pr
 ## Phase VI · POLIS contract sensitivity
 
 Phase VI began on the clean checkpoint 214bb251ddb98b181f682ea433e2c66c0a24964f and uses codex/phase6-economic-infrastructure. The 32-world pilot and 160-world confirmation independently reproduced all 24 arms. The primary interaction at the original surplus value was −9.60 pp, 95% paired interval −9.89 to −9.31. This is the versioned POLIS 2.0 study. The original POLIS archives remain unchanged. The next slice is to freeze an ARTHA domestic demand scenario after independently checking the ADB input-output workbook and its industry map.
+
+## ARTHA checkpoint
+
+The domestic ADB India industry-by-industry source and processed data are pinned. Run the source extraction check against the original workbook, the independent production-series check and the replay before revising ARTHA. The completed archive hash is 291d4a118aa50273beb0b05692bac98361abb1a90549d267e4fc16ae183df28d. Continue with ENERGIA before integrating the national coefficients into NEXUS.

@@ -68,3 +68,7 @@
 
 - Added matched settlement and valuation study arms, physical reconciliation and independent references.
 - Added an interactive payoff calculator and world-level robustness archive.
+
+## v0.9.0 · ARTHA candidate
+
+Added the sourced India national accounts, deterministic domestic-demand scenarios, flow and outcome inspectors, and the Academy's input–output economics module. Verified extraction, accounting, scenario replay and independent series evaluation.

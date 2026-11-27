@@ -51,3 +51,7 @@ Run `node scripts/polis.mjs verify` and `python -B scripts/check_polis_reference
 ## POLIS 2.0
 
 Run `node scripts/polis2.mjs verify` and `python -B scripts/reference_polis2.py`. The new archives reuse the independent world generator but implement separate exact payment logic. [Frozen protocol](research/polis2-confirmatory.md)
+
+## ARTHA
+
+Download the original ADB workbook using the URL in [the source manifest](sources/artha-adb-india.json) and run `python -B scripts/extract_artha.py <workbook> --check`. The extractor verifies the original hash, exact unit labels, classification, accounting and byte-identical processed data. Run `python -B scripts/test_extract_artha.py`, `python -B scripts/check_artha_reference.py` and `node scripts/artha.mjs verify`. The reference recomputes the four accounting panels and twelve scenario vectors as series of production rounds. The registered result hash is `291d4a118aa50273beb0b05692bac98361abb1a90549d267e4fc16ae183df28d`. The frozen initial reference's exact equality assertion is documented in the audit.

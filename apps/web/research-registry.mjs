@@ -1,4 +1,4 @@
-export const registryVersion=2;
+export const registryVersion=3;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -108,6 +108,16 @@ export const researchStudies=[
     {math:"research/polis2-pilot.md",audit:"research/polis2-audit.md",config:"experiments/polis2-confirmatory.json",
       pilotConfig:"experiments/polis2-pilot.json",engine:"engine/polis2.mjs",
       concepts:[["Payment on delivery","polis2.html#contracts"]]}),
+  study("artha","ARTHA","artha.html",["artha"],
+    "India national input–output scenarios with separate domestic and imported flows.",
+    "Compare identical domestic demand across three industries, two workbook years and two resolutions.",
+    {evidence:"Official data · conditional scenarios",archivePhases:["scenario"],studyIds:["artha-scenario-001"],
+      protocol:"research/artha-scenario.md",math:"research/artha-scenario.md",audit:"research/artha-audit.md",
+      result:"data/artha-scenario.json",manifest:"data/artha-scenario.manifest.json",
+      config:"experiments/artha-scenario.json",engine:"engine/artha.mjs",
+      assets:["sources/artha-adb-india.json","data/processed/artha-india.json","data/processed/artha-groups.json"],
+      concepts:[["Input–output mathematics","academy.html#input-output"],["Coefficient inspector","artha.html#flows"],
+        ["Source inventory","research/artha-sources.md"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));
@@ -133,5 +143,6 @@ export const journeys=[
   {name:"From individual incentives to collective institutions",steps:[
     ["AXIOM","axiom.html"],["Expected utility","academy.html#strategy"],
     ["Resource accounting","academy.html#resources"],["GAME OF CIVILIZATIONS","civilizations.html"],
-    ["Repeated cooperation","academy.html#cooperation"],["POLIS","polis.html"]]},
+    ["Repeated cooperation","academy.html#cooperation"],["POLIS","polis.html"],["POLIS 2.0","polis2.html"]]},
+  {name:"From domestic demand to supplier activity",steps:[["ARTHA","artha.html"],["Domestic coefficients","artha.html#flows"],["Input–output mathematics","academy.html#input-output"]]},
 ];

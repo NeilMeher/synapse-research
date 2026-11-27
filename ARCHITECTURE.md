@@ -31,3 +31,5 @@ The versioned research registry provides atlas metadata, journeys, the generated
 ## Phase V · Decisions and resource accounting
 
 AXIOM keeps display permutations separate from canonical payoff and belief indices. The exact quarter-weight implementation calls a shared two-option decision kernel. GAME OF CIVILIZATIONS separates physical ledger operations, seeded world generation and the decision interface. POLIS supplies alternative expected-utility comparisons to that interface, using the same world schedules and accounting. The finite AXIOM archive registers a single phase. World studies register separate pilot and confirmatory phases. The build checks archived hashes and registered links before serving either kind of study.
+
+ARTHA extracts a pinned official symmetric input–output workbook to processed JSON. Its shared ESM kernel validates budgets, forms the domestic coefficient matrix and solves demand changes. Dimensions and source IDs are retained across the optional grouping. Static build assets are declared by study in the registry.

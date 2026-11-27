@@ -1,0 +1,12 @@
+.scenario-metrics {
+  display:grid;
+  gap:1px;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));
+  margin:1.5rem 0;
+}
+.scenario-metrics div { padding:1rem; border:1px solid var(--line); border-radius:.5rem; }
+.scenario-metrics dt { font-size:.86rem; }
+.scenario-metrics dd { margin:.35rem 0 0; font-size:clamp(1.15rem,3vw,1.7rem); font-variant-numeric:tabular-nums; }
+.study-controls select { max-width:100%; }
+.study-controls label { min-width:0; max-width:100%; }
+.scenario-heat { min-width:3.5rem; width:7rem; accent-color:var(--accent); }

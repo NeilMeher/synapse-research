@@ -26,3 +26,5 @@ The next proposed new laboratory is AXIOM. Start with payoff-preserving equivale
 The first AXIOM work is scoped in [the payoff-preserving design](research/axiom-design.md). Implement canonical payoff and belief permutations and validate response mapping on the exact 20 task and 80 presentation fixtures before freezing the pilot.
 
 The Phase V AXIOM, barter and POLIS benchmarks are complete within their registered synthetic scope. A narrow follow-up should vary payment enforcement and surplus valuation before extrapolating from the current policy equivalence. ARTHA, ENERGIA and CHRONOS remain separate proposed milestones. ARTHA's first future task is to identify official versioned Indian supply-use or input-output tables and their units and licensing before implementing a model.
+
+Phase VI ARTHA national modelling is implemented. State and district modelling requires consistent regional purchase and trade data. Next validate ENERGIA, then use its explicit procurement ledger to test a narrow NEXUS integration.
