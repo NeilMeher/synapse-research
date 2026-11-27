@@ -1,0 +1,37 @@
+{
+  "id": "polis-pilot-001",
+  "phase": "pilot",
+  "status": "completed",
+  "commit": "ca3fa00e7999c060c8b73bfdd375a063f81e74c1",
+  "inputs": {
+    "scripts/polis.mjs": "b3666580ee31d30850f762d6640744e4e4ce795a8544eff0de173a9ce52d6fa8",
+    "engine/polis.mjs": "bbeb4055245615ba2daa7cd5a2a7736189fca9c0ddd572068103b53fc136d248",
+    "engine/civilizations.mjs": "ea5008effeb597f4536f7e163e33569d930ca5d9c267f5ece789fdedf9916e8d",
+    "engine/resources.mjs": "fb895ffbcd9b03f811bd1cf54511ced5f58d01495b0dbf757ec5c53def280123",
+    "engine/game-theory.mjs": "842db8690b5a148deb23f52c86e8df853ab44758230d4e2c2144f33eeb02500c",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "schemas/polis-v1.json": "eca88c86b546b5543053571b34976c29f9c280872b8f40e1c2a60c8d508eb8c5",
+    "scripts/reference_polis.py": "f331660819380becb6090dc52d8ee0f907aeeb7ea95fcc86f932908d5b4c5743",
+    "scripts/reference_civilizations.py": "37b0ed743cf78094f2cef5d4e054eda2b1e093d191975196699984fa222d13b1",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/polis-pilot.json": "46e44e26b48e09e23c13205cf30d1bb88ecfeb240c3bd8435d06b36bbdbc0b56",
+    "research/polis-pilot.md": "dbe50440c230cded457137defc2581196aa0f48a24777dfc8d70c61240849937"
+  },
+  "configSha256": "3735eed9d43554f9e47fef2ebe6ffdaf3683dcc56fca12ed191c292c9111db0e",
+  "output": {
+    "path": "results/polis-pilot.json",
+    "sha256": "1f3e83a1ab407794eec50fd978f1d1a64da0a3845628aef5b8b16cf3f973ceea",
+    "bytes": 1322386
+  },
+  "startUtc": "2026-11-27T08:32:03.420Z",
+  "endUtc": "2026-11-27T08:32:04.224Z",
+  "runtimeMs": 786,
+  "observedRssBytes": 61255680,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}
