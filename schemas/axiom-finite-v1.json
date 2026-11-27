@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "evidenceClass",
+    "config",
+    "summary",
+    "cases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "axiom-finite-v1"
+    },
+    "evidenceClass": {
+      "const": "exact finite implementation benchmark"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "phase",
+        "beta",
+        "firstWeights",
+        "games"
+      ],
+      "properties": {
+        "id": {
+          "const": "axiom-pilot-001"
+        },
+        "phase": {
+          "const": "pilot"
+        },
+        "beta": {
+          "const": 1
+        },
+        "firstWeights": {
+          "const": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "games": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "tasks",
+        "presentations",
+        "equivalenceFailures",
+        "maxUtilityTV",
+        "maxLogitTV",
+        "positionChanges",
+        "defectTrials",
+        "inequivalentDefects"
+      ],
+      "properties": {
+        "tasks": {
+          "const": 20
+        },
+        "presentations": {
+          "const": 80
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 80,
+      "maxItems": 80,
+      "items": {
+        "type": "object",
+        "required": [
+          "game",
+          "weights",
+          "presentation",
+          "rows",
+          "columns",
+          "view",
+          "equivalent",
+          "original",
+          "displayed",
+          "canonicalUtilities",
+          "baseline",
+          "shown",
+          "mapped",
+          "distances",
+          "defect"
+        ]
+      }
+    }
+  }
+}

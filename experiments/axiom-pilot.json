@@ -1,0 +1,118 @@
+{
+  "id": "axiom-pilot-001",
+  "phase": "pilot",
+  "beta": 1,
+  "firstWeights": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "games": [
+    {
+      "id": "dilemma",
+      "name": "Prisoner's dilemma",
+      "payoffs": [
+        [
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "assurance",
+      "name": "Assurance",
+      "payoffs": [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pennies",
+      "name": "Matching pennies",
+      "payoffs": [
+        [
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "tie",
+      "name": "Complete payoff tie",
+      "payoffs": [
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ]
+    }
+  ]
+}
