@@ -16,7 +16,7 @@ if (result.config.experimentId !== manifest.experimentId || manifest.status !== 
 const copies = [];
 for (const file of readdirSync(from("apps/web/"))) copies.push(["apps/web/" + file, file]);
 for (const file of readdirSync(from("engine/"))) {
-  if (["echo.mjs", "contracts.mjs", "dependence.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
+  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
 }
 for (const file of ["pilot.json", "pilot.manifest.json", "confirmatory.json", "confirmatory.manifest.json", "echo2-pilot.json", "echo2-pilot.manifest.json", "echo2-confirmatory.json", "echo2-confirmatory.manifest.json", "mirage-pilot.json", "mirage-pilot.manifest.json", "mirage-confirmatory.json", "mirage-confirmatory.manifest.json", "reflex-pilot.json", "reflex-pilot.manifest.json", "reflex-confirmatory.json", "reflex-confirmatory.manifest.json", "convergence-pilot.json", "convergence-pilot.manifest.json", "convergence-confirmatory.json", "convergence-confirmatory.manifest.json", "morpheus-pilot.json", "morpheus-pilot.manifest.json", "morpheus-confirmatory.json", "morpheus-confirmatory.manifest.json", "alpha-decay-pilot.json", "alpha-decay-pilot.manifest.json", "alpha-decay-confirmatory.json", "alpha-decay-confirmatory.manifest.json"]) {
   copies.push(["results/" + file, "data/" + file], ["results/" + file, "results/" + file]);

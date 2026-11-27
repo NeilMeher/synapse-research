@@ -53,3 +53,7 @@ Antigravity recovered the local Phase II workspace where `codex/phase2-integrati
 1. Verify clean state: `git status`, `npm test`, `npm run verify`, `node scripts/morpheus.mjs verify`, `node scripts/alpha-decay.mjs verify`, `npm run build`.
 2. Trigger GitHub Actions `workflow_dispatch` (`deploy_pages: true`) via GitHub UI or `gh workflow run` to update `https://neilmeher.github.io/synapse-research/`.
 3. Next scientific milestone: Implement **NOESIS** (controlled hidden-law discovery) or **SCIENTIA** (workflow reliability & preregistration), or expand **MORPHEUS** (adaptive provenance + ECHO/MIRAGE cross-lab study) under a new frozen protocol.
+
+## Phase III release preparation
+
+Local verification passed 27 unit tests, all seven reference and archive suites, production build and browser smoke checks at 360, 390, 768 and 1440 pixels. Browser tests now verify the seven distinct evidence entries and both new laboratory workflows, including the MORPHEUS intervention and ALPHA DECAY scenario and round controls. The production build contains 134 checked files. The expected Pages target is this reviewed Phase III branch after passing GitHub CI.
