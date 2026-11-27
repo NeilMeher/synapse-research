@@ -47,3 +47,7 @@ Run `node scripts/civilizations.mjs verify` and `python -B scripts/reference_civ
 ## POLIS v1
 
 Run `node scripts/polis.mjs verify` and `python -B scripts/check_polis_reference.py`. Run the adapter as documented. It compares summary means at floating precision without changing independent exact replay and ledger checks. The stress primary contrast and fixed-prior equivalence control are in the [confirmatory protocol](research/polis-confirmatory.md).
+
+## POLIS 2.0
+
+Run `node scripts/polis2.mjs verify` and `python -B scripts/reference_polis2.py`. The new archives reuse the independent world generator but implement separate exact payment logic. [Frozen protocol](research/polis2-confirmatory.md)

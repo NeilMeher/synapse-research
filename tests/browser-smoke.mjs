@@ -147,7 +147,7 @@ try {
 
       for (const [route,status] of [["mirage","mirage-confirmatory-001"],["reflex","reflex-confirmatory-001"],
         ["convergence","convergence-confirmatory-001"],["morpheus","morpheus-confirmatory-001"],
-        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"]]) {
+        ["alpha-decay","alpha-decay-confirmatory-001"],["noesis","noesis-confirmatory-001"],["scientia","scientia-confirmatory-001"],["episteme","episteme-confirmatory-001"],["axiom","axiom-pilot-001"],["civilizations","civilizations-confirmatory-001"],["polis","polis-confirmatory-001"],["polis2","polis2-confirmatory-001"]]) {
         const studyResponse=await page.goto(new URL(route+".html",base).href);
         assert.equal(studyResponse.status(),200);
         await page.waitForFunction(({route,status})=>document.getElementById((route==="alpha-decay"?"alpha":route)+"-status")?.textContent.includes(status),{route,status});
@@ -299,7 +299,17 @@ try {
           await page.locator("#polis-climate").selectOption("moderate");
           assert.match(await page.locator("#polis-intake").textContent(),/units consumed this day/);
         }
-        if (["morpheus","alpha-decay","noesis","scientia","episteme","civilizations","polis"].includes(route)){
+        if (route==="polis2"){
+          assert.match(await page.locator("#polis2-interaction").textContent(),/-9\.60 pp/);
+          assert.match(await page.locator("#polis2-payer").textContent(),/-0\.20/);
+          await page.locator("#polis2-payment").selectOption("delivery");
+          assert.match(await page.locator("#polis2-payer").textContent(),/0\.60/);
+          assert.match(await page.locator("#polis2-contrast").textContent(),/0\.00 pp/);
+          await page.locator("#polis2-surplus").selectOption("3");
+          assert.match(await page.locator("#polis2-payer").textContent(),/0\.00/);
+          assert.equal(await page.locator("#polis2-results tr").count(),4);
+        }
+        if (["morpheus","alpha-decay","noesis","scientia","episteme","civilizations","polis","polis2"].includes(route)){
           const evidence=page.getByRole("link",{name:/Confirmatory results/i});
           const response=await page.request.get(new URL(await evidence.getAttribute("href"),base).href);
           assert.equal(response.status(),200);
@@ -349,6 +359,7 @@ try {
         ["AXIOM","axiom.html","axiom-pilot","axiom"],
         ["GAME OF CIVILIZATIONS","civilizations.html","civilizations-confirmatory","civilizations"],
         ["POLIS","polis.html","polis-confirmatory","polis"],
+        ["POLIS 2.0","polis2.html","polis2-confirmatory","polis2"],
       ];
       assert.deepEqual(await page.locator("#studies article h2").allTextContents(),studies.map(([name])=>name));
       for (const [index,[,route,result,paper]] of studies.entries()){

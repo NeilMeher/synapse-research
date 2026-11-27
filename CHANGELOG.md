@@ -63,3 +63,8 @@
 - Added matched policy-population pilot and confirmation with exact reference checks and carried-over AXIOM decision logic.
 - Added the POLIS decision chain and the cooperation module, expanding the Academy to eight modules.
 - Added evidence for all three Phase V studies and preserved the prior research archives.
+
+## 0.8.1 · POLIS contract sensitivity
+
+- Added matched settlement and valuation study arms, physical reconciliation and independent references.
+- Added an interactive payoff calculator and world-level robustness archive.

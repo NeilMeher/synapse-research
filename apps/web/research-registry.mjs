@@ -102,6 +102,12 @@ export const researchStudies=[
       config:"experiments/polis-confirmatory.json",pilotConfig:"experiments/polis-pilot.json",
       engine:"engine/polis.mjs",concepts:[["Cooperation","academy.html#cooperation"],
         ["Decisions and aggregate outcomes","polis.html#mechanism"],["Institutional rules","research/polis-audit.md"]]}),
+  study("polis2","POLIS 2.0","polis2.html",["axiom","civilizations"],
+    "Paired settlement and surplus-value sensitivity across 24 synthetic policy arms.",
+    "Compare the joint-minus-payer effect under atomic delivery and prepayment.",
+    {math:"research/polis2-pilot.md",audit:"research/polis2-audit.md",config:"experiments/polis2-confirmatory.json",
+      pilotConfig:"experiments/polis2-pilot.json",engine:"engine/polis2.mjs",
+      concepts:[["Payment on delivery","polis2.html#contracts"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));

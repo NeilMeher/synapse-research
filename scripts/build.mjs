@@ -18,7 +18,7 @@ if (result.config.experimentId !== manifest.experimentId || manifest.status !== 
 const copies = [];
 for (const file of readdirSync(from("apps/web/"))) copies.push(["apps/web/" + file, file]);
 for (const file of readdirSync(from("engine/"))) {
-  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs", "civilizations.mjs", "resources.mjs", "polis.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
+  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs", "civilizations.mjs", "resources.mjs", "polis.mjs", "polis2.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
 }
 for (const study of researchStudies) {
   for (const [offset,phase] of study.archivePhases.entries()) {

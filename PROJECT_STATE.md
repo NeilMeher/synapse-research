@@ -110,3 +110,7 @@ GitHub's hosted runners now run JavaScript Actions on Node 24. The existing immu
 ## Verified Phase V release
 
 [AXIOM v0.6.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.6.0), [GAME OF CIVILIZATIONS v0.7.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.7.0) and [the integrated v0.8.0 release](https://github.com/NeilMeher/synapse-research/releases/tag/v0.8.0) were deployed incrementally. The current public revision is f0c9d3af0380afa957d7e87d295e3c7e5c7a160b. GitHub's exact-commit candidate run 45995010007 and Pages dispatch 45995327237 both passed. The live site serves the 13-study registry and eight Academy modules. All five new study data files and five manifests matched their local bytes. Local and live browser suites passed 360, 390, 768 and 1440 pixels. The exact AXIOM weight animation was also verified with browser reduced motion both enabled and disabled. The tracked Phase IV result files are unchanged. The continuation branch adds this deployment record as a documentation commit.
+
+## Phase VI · POLIS 2.0
+
+The robustness pilot and confirmation were frozen at cf82618 and 645462b. Settlement after successful delivery makes joint and payer-gain decisions exactly equivalent under matched choice draws. At surplus value 2 the prepayment benefit was 9.60 pp, and the registered delivery-minus-prepayment interaction was −9.60 pp. The new archives and both references passed. Prior archives remain immutable.

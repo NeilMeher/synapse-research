@@ -15,6 +15,7 @@ FAMILIES = {
     "axiom-finite-v1": ("results/axiom-pilot.json",),
     "civilizations-v1": ("results/civilizations-pilot.json", "results/civilizations-confirmatory.json"),
     "polis-v1": ("results/polis-pilot.json", "results/polis-confirmatory.json"),
+    "polis2-v1": ("results/polis2-pilot.json", "results/polis2-confirmatory.json"),
 }
 
 for name, paths in FAMILIES.items():
