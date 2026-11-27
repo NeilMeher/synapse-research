@@ -1,0 +1,37 @@
+{
+  "id": "polis-confirmatory-001",
+  "phase": "confirmatory",
+  "status": "completed",
+  "commit": "02055775197c882bff75ab14f4157c866f1b13e4",
+  "inputs": {
+    "scripts/polis.mjs": "b3666580ee31d30850f762d6640744e4e4ce795a8544eff0de173a9ce52d6fa8",
+    "engine/polis.mjs": "bbeb4055245615ba2daa7cd5a2a7736189fca9c0ddd572068103b53fc136d248",
+    "engine/civilizations.mjs": "ea5008effeb597f4536f7e163e33569d930ca5d9c267f5ece789fdedf9916e8d",
+    "engine/resources.mjs": "fb895ffbcd9b03f811bd1cf54511ced5f58d01495b0dbf757ec5c53def280123",
+    "engine/game-theory.mjs": "842db8690b5a148deb23f52c86e8df853ab44758230d4e2c2144f33eeb02500c",
+    "engine/echo.mjs": "bed9c9c8c3de2816d7509826ad94deb728976cf3cc853d860b11b2126cf451cd",
+    "engine/statistics.mjs": "e0b5f5cf1585d24a975645101a7810ea67d74766bef14de74ec33eb2b79cf444",
+    "schemas/polis-v1.json": "eca88c86b546b5543053571b34976c29f9c280872b8f40e1c2a60c8d508eb8c5",
+    "scripts/reference_polis.py": "f331660819380becb6090dc52d8ee0f907aeeb7ea95fcc86f932908d5b4c5743",
+    "scripts/reference_civilizations.py": "37b0ed743cf78094f2cef5d4e054eda2b1e093d191975196699984fa222d13b1",
+    "scripts/run-study.mjs": "d6d640f8ec9d6b44f930468de7ec5893fa65a48548c760dda1c1acf472fb0783",
+    "engine/contracts.mjs": "a6a062e78385ca7ba869c98beec27238d0621c6e4d4d3456079eaa85466f1c56",
+    "experiments/polis-confirmatory.json": "08ceace4d67fdfd642a9b54ce6aa87ea56a515bbc7464be3894eca491b4d47ff",
+    "research/polis-confirmatory.md": "99f2c354b59bfbe044b52146776c2b30c40cd8eb29adaf0f8411d3e5312c3c66"
+  },
+  "configSha256": "88e985e3a709ae374a4884f3adadb2f8d48fcb8045113b0a7afaed7826395b50",
+  "output": {
+    "path": "results/polis-confirmatory.json",
+    "sha256": "bfe11fd3925dee085673e6843fe232e230f4309be6cbd7dbbecc0d8f45c0ebf4",
+    "bytes": 1329062
+  },
+  "startUtc": "2026-11-27T08:34:46.189Z",
+  "endUtc": "2026-11-27T08:34:51.409Z",
+  "runtimeMs": 5195,
+  "observedRssBytes": 94937088,
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

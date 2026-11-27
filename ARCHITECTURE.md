@@ -27,3 +27,7 @@ MIRAGE uses engine/confidence.mjs for binary forecasts and scoring. REFLEX wraps
 Browser labs load versioned synthetic artifacts and pure JavaScript mathematical engines. EPISTEME composes the Bayesian NOESIS candidate fits with two disjoint residual checks. It freezes the candidate before using either reserved block and reports model-family scoring separately from the absolute residual decisions. SCIENTIA retains its archived eight-rule procedure under a distinct matched allocation design. Python references take separate mathematical routes.
 
 The versioned research registry provides atlas metadata, journeys, the generated static evidence library and build-time checks for study paths and data integrity. Browser acceptance tests keep an independently named list of the expected studies and links. Academy exercises call the dependence, confidence, market, information and multiplicity engines directly.
+
+## Phase V · Decisions and resource accounting
+
+AXIOM keeps display permutations separate from canonical payoff and belief indices. The exact quarter-weight implementation calls a shared two-option decision kernel. GAME OF CIVILIZATIONS separates physical ledger operations, seeded world generation and the decision interface. POLIS supplies alternative expected-utility comparisons to that interface, using the same world schedules and accounting. The finite AXIOM archive registers a single phase. World studies register separate pilot and confirmatory phases. The build checks archived hashes and registered links before serving either kind of study.

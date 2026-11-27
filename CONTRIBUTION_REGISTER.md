@@ -18,3 +18,7 @@ Phase II forensic verification (`PHASE2_VERIFICATION.md`), GitHub publication of
 ## Phase IV recovery and implementation
 
 The research programme, requested design and authorization were supplied by Neil Meher. Antigravity implemented the original NOESIS package and drafted SCIENTIA notes. Its exact recovered files remain visible in the snapshot at 7670acf. Codex carried out recovery, the Phase III publishing repair, independent NOESIS reconstruction and scientific corrections, and implemented SCIENTIA, EPISTEME, the atlas and Academy under the supplied brief. Reference implementations and review checks are AI-assisted computational verification. No independent human or peer review is recorded.
+
+## Phase V
+
+Neil Meher supplied the scientific programme, exact benchmark requirements and approval to publish verified milestones. Codex implemented the pure JavaScript models, independent Python mathematical implementations, frozen experiments, publications and laboratory interfaces. Automated and AI-assisted checks are recorded in the build and science logs. Independent human review remains pending.

@@ -21,3 +21,16 @@ Phase II adds [MIRAGE](papers/mirage.md), [REFLEX](papers/reflex.md) and [CONVER
 - [NOESIS](papers/noesis.md) preserves the two null primary family-recovery comparisons and documents the first-measurement noise, generating-prior and evaluation-grid limitations.
 - [SCIENTIA](papers/scientia.md) measures false reports and missed effects under shared synthetic programmes and bounded observations. The [audit](research/scientia-audit.md) records its exact-tail sensitivity.
 - [EPISTEME](papers/episteme.md) compares adaptive and random evidence acquisition and tracks when a family claim survives validation and replication. The independently supported confirmatory statements concern correct final claims in library and incorrect proposals outside it.
+
+## Phase V · Strategic decisions and societies
+
+- [AXIOM](papers/axiom.md) exhausts the exact 80 game presentations. The mathematical control detects display order and belief-remapping faults.
+- [GAME OF CIVILIZATIONS](papers/civilizations.md) tests matched barter worlds with delivery history under scarce labor. Pooled information reduced fulfillment in the primary regime.
+- [POLIS](papers/polis.md) connects expected-utility decisions to those worlds. The archive preserves the positive primary contrast, individual losses and a zero physical contrast between two distinct policies.
+
+### Proposed cross-lab questions
+
+- ECHO and Civilizations could compare correlated delivery beliefs under matched endowments and encounters.
+- MORPHEUS and Civilizations could test provenance-aware revision after legitimate changes in supplier reliability.
+- MIRAGE and AXIOM could test miscalibrated judgments about opponent actions in an independently frozen design.
+- SCIENTIA and POLIS could measure selective reporting across candidate institutions under a known simulated ground truth.

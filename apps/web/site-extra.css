@@ -2,6 +2,8 @@
 .atlas-check { display:flex; align-items:center; gap:.4rem; min-height:42px; }
 .atlas-breadcrumb { display:flex; flex-wrap:wrap; column-gap:.3rem; font-size:.75rem; align-items:baseline; }
 .map-detail details { margin-top:.65rem; border-top:1px solid var(--line); }
+.map-detail .atlas-topics { display:flex; flex-wrap:wrap; gap:.4rem; list-style:none; padding:0; }
+.atlas-topics a { display:block; padding:.18rem .4rem; border:1px solid var(--line); border-radius:5px; font-size:.77rem; }
 .atlas-journeys { margin-top:1.2rem; }
 #map-view { cursor:grab; }
 #map-view.map-dragging { cursor:grabbing; user-select:none; }

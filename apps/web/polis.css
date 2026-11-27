@@ -1,0 +1,11 @@
+.polis-chain { list-style:none; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.8rem; margin:1.35rem 0; }
+.polis-chain li { position:relative; padding:1rem; min-width:0; border:1px solid var(--line); border-top:3px solid var(--chain-color); border-radius:9px; background:var(--surface); }
+.polis-chain li:nth-child(1) { --chain-color:var(--science); }
+.polis-chain li:nth-child(2) { --chain-color:var(--cognition); }
+.polis-chain li:nth-child(3) { --chain-color:var(--economy); }
+.polis-chain li:nth-child(4) { --chain-color:var(--collective); }
+.polis-chain strong,.polis-chain span { display:block; }
+.polis-chain span { margin-top:.35rem; color:var(--dim); }
+.polis-chain li:not(:last-child)::after { position:absolute; content:"→"; top:1rem; right:-.8rem; color:var(--chain-color); }
+@media(max-width:800px){ .polis-chain { grid-template-columns:repeat(2,minmax(0,1fr)); }.polis-chain li::after { display:none; } }
+@media(max-width:430px){ .polis-chain { grid-template-columns:1fr; } }

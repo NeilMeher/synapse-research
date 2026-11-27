@@ -52,6 +52,8 @@ jobs:
       - run: node scripts/axiom.mjs verify
       - run: python -B scripts/reference_civilizations.py
       - run: node scripts/civilizations.mjs verify
+      - run: python -B scripts/check_polis_reference.py
+      - run: node scripts/polis.mjs verify
       - run: python -m pip install --disable-pip-version-check jsonschema==4.26.0
       - run: python -B scripts/check_schemas.py
       - run: npm run build

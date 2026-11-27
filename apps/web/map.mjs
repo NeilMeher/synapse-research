@@ -151,6 +151,16 @@ export function setupMap() {
         item.append(resource(label,href));
         evidence.append(item);
       }
+      if(study.concepts.length){
+        const topics=node("ul",undefined,"atlas-topics");
+        topics.setAttribute("aria-label","Topics in "+study.name);
+        for(const [label,href] of study.concepts){
+          const topic=node("li");
+          topic.append(resource(label,href));
+          topics.append(topic);
+        }
+        disclosure.append(topics);
+      }
       disclosure.append(evidence,node("small",study.evidence+" · "+study.humanReview));
       detail.append(disclosure);
     }
@@ -229,7 +239,7 @@ export function setupMap() {
     filter = lab => (division.value === "all" || lab.division === division.value) &&
       (progress.value==="all"||(progress.value==="executed")===Boolean(directStudies.get(lab.id))) &&
       [lab.name,lab.question,status(lab),...researchStudies.filter(study=>study.labs.includes(lab.id))
-        .map(study=>study.name+" "+study.description+" "+study.contrast)].join(" ").toLowerCase().includes(phrase);
+        .map(study=>[study.name,study.description,study.contrast,...study.concepts.map(([name])=>name)].join(" "))].join(" ").toLowerCase().includes(phrase);
     const first = labs.find(filter);
     if (first && !filter(selected)) selected = first;
     renderDetail();

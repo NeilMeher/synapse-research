@@ -43,3 +43,7 @@ Run `node scripts/axiom.mjs verify` and `python -B scripts/reference_axiom.py`. 
 ## GAME OF CIVILIZATIONS v1
 
 Run `node scripts/civilizations.mjs verify` and `python -B scripts/reference_civilizations.py`. Compare the per-resource equations after each day in the archived replay. Python models allocations and deliveries separately, uses fractions for beliefs, and checks every trajectory aggregate against the archives. [Protocol](research/civilizations-confirmatory.md) · [Audit](research/civilizations-audit.md)
+
+## POLIS v1
+
+Run `node scripts/polis.mjs verify` and `python -B scripts/check_polis_reference.py`. Run the adapter as documented. It compares summary means at floating precision without changing independent exact replay and ledger checks. The stress primary contrast and fixed-prior equivalence control are in the [confirmatory protocol](research/polis-confirmatory.md).

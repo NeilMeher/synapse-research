@@ -8,6 +8,7 @@ import {binaryInformationGain} from "./engine/information.mjs";
 import {nullFamilyRisk,rankP} from "./engine/scientia.mjs";
 import {bestResponse,expectedNumerators,logitResponse} from "./engine/game-theory.mjs";
 import {barter,inventoryTotal,production,useAndStore} from "./engine/resources.mjs";
+import {createWorld,runWorld} from "./engine/civilizations.mjs";
 
 setupTheme();
 
@@ -86,4 +87,13 @@ updateWhen(["academy-barter"],()=>{
   const [a,b]=[first,second].map(stock=>useAndStore(stock,[4,4]).consumed.reduce((sum,x)=>sum+x,0));
   byId("academy-resources-result").textContent="A ["+first.join(", ")+"] consumes "+a+
     " · B ["+second.join(", ")+"] consumes "+b+" · aggregate stocks "+inventoryTotal([first,second]).join(" / ")+".";
+});
+
+const teachingWorld=createWorld(299538405,"stress",24);
+updateWhen(["academy-history"],()=>{
+  const method=byId("academy-history");
+  const metric=runWorld(teachingWorld,method.value).metric;
+  byId("academy-cooperation-result").textContent=method.selectedOptions[0].textContent+" · "+
+    metric.deliveries+" deliveries in "+metric.attempts+" attempts · "+pct(metric.needsSatisfied)+
+    " of need fulfilled · consumption Gini "+metric.giniConsumed.toFixed(3)+".";
 });

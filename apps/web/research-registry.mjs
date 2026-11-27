@@ -27,6 +27,7 @@ function study(id,name,route,labs,description,contrast,options={}){
   return {
     id,name,route,labs,description,contrast,
     evidence:"Synthetic computation",
+    concepts:[],
     humanReview:"Independent human review pending",
     archiveStem:stem,
     archivePhases:["pilot","confirmatory"],
@@ -83,13 +84,24 @@ export const researchStudies=[
     {evidence:"Exact finite benchmark",archivePhases:["pilot"],studyIds:["axiom-pilot-001"],
       protocol:"research/axiom-pilot.md",math:"research/axiom-design.md",audit:"research/axiom-audit.md",
       result:"data/axiom-pilot.json",manifest:"data/axiom-pilot.manifest.json",
-      config:"experiments/axiom-pilot.json",engine:"engine/axiom.mjs"}),
+      config:"experiments/axiom-pilot.json",engine:"engine/axiom.mjs",concepts:[
+        ["Payoff matrices","axiom.html#axiom-workbench"],["Expected utility","academy.html#strategy"],
+        ["Strategic consistency","research/axiom-audit.md"],["Game theory","docs/axiom-learning.md"]]}),
   study("civilizations","GAME OF CIVILIZATIONS","civilizations.html",["civilizations"],
     "Conserved local barter with matched delivery-history regimes and labor shocks.",
     "Compare need satisfaction with pooled records against a fixed reliability prior.",
     {math:"research/civilizations-pilot.md",audit:"research/civilizations-audit.md",
       config:"experiments/civilizations-confirmatory.json",pilotConfig:"experiments/civilizations-pilot.json",
-      engine:"engine/civilizations.mjs"}),
+      engine:"engine/civilizations.mjs",concepts:[["Resource accounting","civilizations.html#village"],
+        ["Comparative advantage","academy.html#resources"],["Economic exchange","research/civilizations-pilot.md"],
+        ["Reputation","docs/civilizations-learning.md"]]}),
+  study("polis","POLIS","polis.html",["axiom","civilizations"],
+    "Matched artificial economies with alternative strategic decision objectives.",
+    "Compare joint-gain and payer-gain acceptance under pooled delivery records.",
+    {math:"research/polis-pilot.md",audit:"research/polis-audit.md",
+      config:"experiments/polis-confirmatory.json",pilotConfig:"experiments/polis-pilot.json",
+      engine:"engine/polis.mjs",concepts:[["Cooperation","academy.html#cooperation"],
+        ["Decisions and aggregate outcomes","polis.html#mechanism"],["Institutional rules","research/polis-audit.md"]]}),
 ];
 
 export const directStudies=new Map(laboratories.map(lab=>[lab.id,researchStudies.find(study=>study.id===lab.id)]));
@@ -114,5 +126,6 @@ export const journeys=[
     ["NOESIS","noesis.html"],["SCIENTIA","scientia.html"],["EPISTEME","episteme.html"]]},
   {name:"From individual incentives to collective institutions",steps:[
     ["AXIOM","axiom.html"],["Expected utility","academy.html#strategy"],
-    ["Resource accounting","academy.html#resources"],["GAME OF CIVILIZATIONS","civilizations.html"]]},
+    ["Resource accounting","academy.html#resources"],["GAME OF CIVILIZATIONS","civilizations.html"],
+    ["Repeated cooperation","academy.html#cooperation"],["POLIS","polis.html"]]},
 ];

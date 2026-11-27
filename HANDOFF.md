@@ -1,12 +1,13 @@
 # Cross-Agent Handoff (`HANDOFF.md`)
 
 **Updated:** 2026-11-27  
-**Active Agent:** Antigravity (`antigravity@local.invalid`)  
-**Next Agent:** OpenAI Codex (or human researcher)
+**Current continuation** · codex/phase5-social-systems
+
+Use the Phase V checkpoints at the end for current execution and deployment. The Phase III handoff below records the state Antigravity left for Codex.
 
 ---
 
-## 1. Repository & Branch State
+## 1. Historical repository and branch state
 
 - **Authoritative Workspace:** `c:\Users\neilm\Documents\Codex\2026-11-25\i-want-to-build-which-can\itihasa\.tools\synapse-phase2`
 - **Origin URL:** `https://github.com/NeilMeher/synapse-research.git`
@@ -85,3 +86,9 @@ Continue on codex/phase5-social-systems. The executable, input configuration, in
 Validated exact two-good accounting, immutable matched world schedules and contingent delivery under three information regimes plus no exchange. The frozen confirmation shows lower aggregate fulfillment with pooled history in the simulated stress regime. Retain this result and its distributional diagnostics. [Archive](results/civilizations-confirmatory.manifest.json) · [Audit](research/civilizations-audit.md). The next comparison should hold world schedules and the history visible to agents fixed while substituting AXIOM-derived decision rules.
 
 AXIOM v0.6.0 was publicly verified at ab946afc19b03c9e12663b24327ad36d7fe08ae3 with [review CI 45965202160](https://github.com/NeilMeher/synapse-research/actions/runs/45965202160) and [Pages run 45965441266](https://github.com/NeilMeher/synapse-research/actions/runs/45965441266). Public metadata, the downloaded finite archive and four browser widths agreed with the release.
+
+## Phase V · Integrated release candidate
+
+The POLIS pilot froze at ca3fa00 and the confirmatory protocol at 0205577. The validated world states, population distribution results, execution hashes and numerical reference correction are recorded in [the audit](research/polis-audit.md). The three new studies, registry relationships, guided journey and eight total Academy modules are bundled for the Phase V release. The exact public release commit is reported by release.json. The next research task is to freeze a payment-enforcement and surplus-value sensitivity protocol. ARTHA, ENERGIA and CHRONOS remain proposed.
+
+GAME OF CIVILIZATIONS v0.7.0 was publicly verified at 7eb6415d2f1c8be62aa8c8b5ab03cb81ab01e92c. The public pilot and confirmation matched their manifest hashes, and the live browser suite passed at four widths. [Review CI 45966426532](https://github.com/NeilMeher/synapse-research/actions/runs/45966426532) · [Pages deployment 45966706836](https://github.com/NeilMeher/synapse-research/actions/runs/45966706836) · [v0.7.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.7.0)

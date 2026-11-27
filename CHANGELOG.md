@@ -57,3 +57,9 @@
 - Added a conserved eight-agent barter economy, a frozen pilot and confirmation, and independent exact ledger checks.
 - Added an animated ring replay, controlled seed sandbox, physical ledger, and comparative advantage Academy lesson.
 - Added the individual-incentives guided journey without changing the original five journeys.
+
+## 0.8.0 · POLIS and Phase V integration
+
+- Added matched policy-population pilot and confirmation with exact reference checks and carried-over AXIOM decision logic.
+- Added the POLIS decision chain and the cooperation module, expanding the Academy to eight modules.
+- Added evidence for all three Phase V studies and preserved the prior research archives.

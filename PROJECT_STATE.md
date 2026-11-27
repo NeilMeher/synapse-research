@@ -1,5 +1,7 @@
 # Development state
 
+Use the latest Phase V checkpoint for the current branch, results and release. Earlier sections preserve the state recorded at each milestone.
+
 Milestones 0 and 1 have working deliverables. Milestone 2 ECHO has an executed, computationally validated first slice with human review pending. Eleven other laboratories were proposed at the v0.1.0 baseline.
 
 | ID | Evidence | Status |
@@ -98,3 +100,9 @@ Phase V starts from be654087d558a79e0df11e2acfb3369cef4d5457 on codex/phase5-soc
 The pilot froze at 74e334d. The confirmation was frozen at 03b7373 before execution. The two runs used 120 and 800 matched worlds, respectively. The primary stress contrast for pooled minus fixed-prior delivery information was −9.61 pp in need satisfaction, 95% paired interval −9.80 to −9.41 pp. Pooled history reduced attempts and completed trades despite higher completion conditional on attempting. The exact physical balances and all aggregate estimates were independently reconstructed. The world laboratory replays the registered run and supports a separate seeded sandbox. Next validate POLIS using the same world schedule and a decision function from the AXIOM kernel.
 
 The finite AXIOM workbench shipped in [v0.6.0](https://github.com/NeilMeher/synapse-research/releases/tag/v0.6.0). The economy candidate passed 50 unit tests and four browser widths locally, with its resource and archive checks recorded in the reproducibility guide.
+
+## Phase V · POLIS
+
+The two matched-policy studies used 90 exploratory worlds and 800 confirmatory worlds. The confirmation was frozen at 0205577. In the primary stress condition joint gain increased fulfillment by 9.49 pp against pooled payer gain, with paired 95% interval 9.29 to 9.70 pp. The joint and fixed-prior controls produced the same physical outcomes in every world. Fourteen agent-world observations still had lower intake under joint gain. Python independently reconstructed all results after fixing an integral-mean assertion that was accidentally exact at summary level. The original research archives were preserved. The next model comparison would vary both surplus valuation and whether payment clears only on delivery.
+
+GitHub's hosted runners now run JavaScript Actions on Node 24. The existing immutable action pins still declare Node 20 and produce a runner notice. No operational failure was observed. A separate maintenance change can verify updated official action releases, runner requirements and commit SHAs before replacing pins. [GitHub runtime notice](https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/)

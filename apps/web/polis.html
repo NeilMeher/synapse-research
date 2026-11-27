@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POLIS · SYNAPSE</title><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./polis.css">
+  <script type="module" src="./polis-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="POLIS navigation"><a href="./axiom.html">AXIOM</a><a href="./civilizations.html">Game of Civilizations</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main class="wrap section study-page" id="main">
+    <div class="section-intro"><div><p class="eyebrow">POLIS · Decisions and social outcomes</p><h1>When does a different objective change who eats?</h1></div>
+      <p>Change the rule for accepting a funded offer while holding the simulated world's initial conditions, meetings and shocks fixed.</p></div>
+    <p id="polis-status" role="status">Loading the matched world experiment…</p>
+    <article class="result-panel study-block" id="mechanism">
+      <h2>Trace a decision through the world</h2>
+      <div class="study-controls">
+        <label>Scarcity regime <select id="polis-climate"><option value="stress">Stress</option><option value="moderate">Moderate</option></select></label>
+        <label>Decision policy <select id="polis-policy"><option value="joint">Joint gain with pooled history</option><option value="material">Payer gain with pooled history</option><option value="cautious">Failure-sensitive pooled policy</option><option value="fixedPrior">Payer gain with fixed prior</option></select></label>
+        <label>Replay day <input id="polis-day" type="range" min="1" max="24" step="1" value="1"><output id="polis-day-label" for="polis-day"></output></label>
+      </div>
+      <ol class="polis-chain" aria-label="Decision and outcome mechanism">
+        <li><strong>Belief and inputs</strong><span id="polis-belief"></span></li>
+        <li><strong>Decision objective</strong><span id="polis-decision"></span></li>
+        <li><strong>Exchange</strong><span id="polis-flows"></span></li>
+        <li><strong>Consumption</strong><span id="polis-intake"></span></li>
+      </ol>
+      <div class="table-scroll"><table><caption>Recorded offers for the selected day</caption><thead><tr><th>Offer</th><th>Estimated delivery</th><th>Outcome</th></tr></thead><tbody id="polis-events"></tbody></table></div>
+      <div class="table-scroll"><table><caption>Consumption across the full example world relative to pooled payer gain</caption><thead><tr><th>Agent</th><th>Reference intake</th><th>Selected intake</th><th>Difference</th></tr></thead><tbody id="polis-agents"></tbody></table></div>
+    </article>
+    <article class="result-panel study-block" id="evidence">
+      <h2>Matched confirmatory estimates</h2><p id="polis-contrast"></p>
+      <div class="table-scroll"><table><caption>Means per world in the selected scarcity regime</caption><thead><tr><th>Policy</th><th>Need satisfied</th><th>Completed trades</th><th>Consumption Gini</th><th>Better off</th><th>Worse off</th><th>Largest individual loss</th><th>Shock satisfaction</th></tr></thead><tbody id="polis-outcomes"></tbody></table></div>
+      <p>The payoff objectives and delivery rules are inputs to the simulation. The comparisons measure consequences of those inputs within this economy.</p>
+      <div class="actions"><a class="quiet" href="./data/polis-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/polis-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./experiments/polis-confirmatory.json">Frozen configuration</a><a class="quiet" href="./research/polis-confirmatory.md">Protocol</a><a class="quiet" href="./engine/polis.mjs">Engine</a><a class="quiet" href="./papers/polis.md">Manuscript</a><a class="quiet" href="./research/polis-audit.md">Audit and limitations</a><a class="quiet" href="./docs/polis-learning.md">Learning guide</a></div>
+    </article>
+  </main>
+</body>
+</html>

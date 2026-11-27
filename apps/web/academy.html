@@ -25,6 +25,7 @@
       <li><a href="#testing">Tests and false discovery</a></li>
       <li><a href="#strategy">Game theory and expected utility</a></li>
       <li><a href="#resources">Comparative advantage and resource accounting</a></li>
+      <li><a href="#cooperation">Cooperation and complex systems</a></li>
     </ol></nav>
 
     <article class="result-panel study-block lesson" id="dependence">
@@ -167,6 +168,23 @@
       <details><summary>Advanced · Individual and aggregate accounting</summary><p>For resource r, sum each participant's inventory equation. Each debit −q has a credit +q, so gross transfers cancel. Only initial stock, output, consumption and explicit loss determine the aggregate. Need satisfaction and distribution can nevertheless change without creating resources.</p></details>
       <details><summary>Practice and worked solution</summary><p>Keep full specialization and exchange two units. Who meets at least as much need as under divided labor?</p><p>A holds [6,2] and B [2,6]. Each consumes six units under the four-per-good cap, exactly their divided-labor outcome. At four transferred units both consume eight. At zero they each consume only four.</p></details>
       <p><a href="./civilizations.html#village">Inspect the artificial economy</a> · <a href="./docs/civilizations-learning.md">Resource learning guide</a> · <a href="https://www.gutenberg.org/ebooks/33310">Ricardo, Chapter VII</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="cooperation">
+      <h2>Cooperation and complex systems</h2>
+      <p><strong>Prerequisites</strong> Expected utility, probability, and the resource ledger.</p>
+      <h3>Beginner · What changes when interactions repeat?</h3>
+      <p>A funded exchange can complete or default. Past delivery gives subsequent buyers one way to revise a belief about a supplier. Reciprocity uses observations from prior interactions to condition the next action. A reputation system determines whose records are visible. Placement on the ring determines which agents can interact.</p>
+      <h3>Intermediate · Derive a decision threshold</h3>
+      <p>Paying two utility units for one exchange unit yields an anticipated gain of 3p−2 if delivery has probability p. The payoff is positive above p=2/3. Start with three prior successes and four prior observations. A failure changes belief from 3/4 to 3/5. A later successful record changes it to 4/6. A fixed-prior rule never uses these records.</p>
+      <div class="lesson-demo">
+        <h3>Change access to past records in a matched model world</h3>
+        <label>Delivery history <select id="academy-history"><option value="unaware">Fixed prior</option><option value="local">Own history</option><option value="pooled">Pooled history</option></select></label>
+        <p id="academy-cooperation-result" aria-live="polite"></p>
+        <p>The display reruns an educational stress world with the same seed for each policy.</p>
+      </div>
+      <details><summary>Advanced · From decisions to an aggregate distribution</summary><p>Compute Gini for nonnegative total individual consumption as ΣᵢΣⱼ|cᵢ−cⱼ| divided by 2nΣᵢcᵢ. With [2,4], the numerator is 4 and the denominator is 24, giving 1/6. Equal aggregate intake can hide different distributions. In POLIS the prescribed accept objective changes which exchanges occur and which holdings are available on later days. The rule is imposed. The later distribution follows from its interaction with the economy.</p></details>
+      <details><summary>Practice and worked solution</summary><p>After one failed delivery, does the modeled payer with pooled records accept another ordinary offer from the same supplier? Does a payer with no record accept?</p><p>The first payer's belief of 3/5 gives a gain of 3×0.6−2 = −0.2 per unit, so it rejects. The other uses 3/4 and receives 0.25 expected utility per unit, so it accepts. Both calculations use the same physical offer terms.</p></details>
+      <p><a href="./polis.html#mechanism">Trace how the decision changes aggregate outcomes</a> · <a href="./docs/polis-learning.md">POLIS guide</a> · <a href="https://doi.org/10.1126/science.7466396">Axelrod and Hamilton, The Evolution of Cooperation</a></p>
     </article>
   </main>
 </body>
