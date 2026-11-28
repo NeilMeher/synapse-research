@@ -109,7 +109,7 @@ class LocalChat:
 
 
 @contextmanager
-def serve(runtime_dir, weights, protocol, log_path):
+def serve(runtime_dir, weights, protocol, log_path, *, on_launch=None):
     exe = Path(runtime_dir).resolve() / ("llama-server.exe" if os.name == "nt" else "llama-server")
     weights = Path(weights).resolve()
     model = protocol["model"]
@@ -123,11 +123,15 @@ def serve(runtime_dir, weights, protocol, log_path):
                "--alias", model["servedId"], "-c", str(settings["context"]), "-t", str(settings["threads"]),
                "-np", str(settings["slots"]), "-ngl", str(settings["gpuLayers"]),
                "--no-webui", "--no-context-shift", "--no-cache-prompt"]
+    if settings.get("device"):
+        command.extend(["--device", settings["device"], "--log-verbosity", "4"])
     env = {key: value for key, value in os.environ.items() if not key.upper().startswith("LLAMA_")}
     with log_path.open("ab") as log:
         process = subprocess.Popen(command, cwd=runtime_dir, env=env, stdin=subprocess.DEVNULL,
                                    stdout=log, stderr=log)
         try:
+            if on_launch is not None:
+                on_launch(process)
             adapter = LocalChat(port, protocol)
             adapter.pid = process.pid
             deadline = time.monotonic() + 45
