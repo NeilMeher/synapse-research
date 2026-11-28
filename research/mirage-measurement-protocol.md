@@ -1,0 +1,5 @@
+# MIRAGE M1 replay protocol
+
+Replay the six immutable MIRAGE evidence envelopes from v1.5.0, following original task maps and scoring conventions. Read endpoint estimates without pooling tasks or arms across studies. Preserve the separate SmolLM2 device feasibility probe and Qwen gate. Compare literal output fields, decoded choices, correct option content and response eligibility. A percentage next to an abstention does not specify confidence in any selected answer. Recover historical task-family bootstrap runs with their original seeds and implementation order. Derive full-plan missing-loss bounds without imputing scores. The archive will classify controlled packages, incomplete identification, retrospective diagnostics and unexecuted comparisons.
+
+This is a retrospective measurement synthesis. The locked recipe specifies the estimates to regenerate without rewriting earlier archives. The newly calculated quantities include literal confidence-field counts and worst-case pilot and format sensitivity. [Protocol configuration](mirage-measurement/protocol.json)

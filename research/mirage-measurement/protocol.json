@@ -1,0 +1,180 @@
+{
+  "id": "mirage-measurement-synthesis-001",
+  "evidence": "E",
+  "design": "retrospective replay of previously opened actual-model archives, no new inference and no pooling",
+  "sourceRelease": "523bd906341e5d1b4b1c85ce735fed1f634f1118",
+  "uncertainty": "recover archived task-family bootstrap seeds, sample sizes and interpolation for compatible paired contrasts. Worst-case [0,1] missing-loss bounds are identification sensitivity ranges.",
+  "archives": [
+    {
+      "key": "pilot",
+      "dir": "mirage-empirical-pilot-001",
+      "n": 128,
+      "stage": "exploratory",
+      "prompt": "empirical/prompt-v2.json",
+      "input": "empirical/datasets/pilot.tasks.json",
+      "truth": "empirical/datasets/pilot.key.json",
+      "config": "empirical/mirage-pilot-v1.json"
+    },
+    {
+      "key": "robustness",
+      "dir": "mirage-empirical-robustness-002",
+      "n": 512,
+      "stage": "registered",
+      "prompt": "empirical/robustness/prompt.json",
+      "input": "empirical/robustness/inputs/heldout.schedule.json",
+      "truth": "empirical/robustness/inputs/heldout.keys.json",
+      "config": "empirical/robustness/protocol.json"
+    },
+    {
+      "key": "decoding",
+      "dir": "mirage-empirical-decoding-004",
+      "n": 192,
+      "stage": "registered",
+      "prompt": "empirical/robustness/prompt.json",
+      "input": "schedule.json",
+      "truth": "empirical/robustness/inputs/heldout.keys.json",
+      "config": "empirical/phase3/protocol.json"
+    },
+    {
+      "key": "robustnessDevelopment",
+      "dir": "mirage-empirical-robustness-002-development",
+      "n": 36,
+      "stage": "development",
+      "prompt": "empirical/robustness/prompt.json",
+      "input": "empirical/robustness/inputs/development.schedule.json",
+      "truth": "empirical/robustness/inputs/development.keys.json"
+    },
+    {
+      "key": "decodingDevelopment",
+      "dir": "mirage-empirical-decoding-004-development",
+      "n": 16,
+      "stage": "development",
+      "prompt": "empirical/robustness/prompt.json",
+      "input": "schedule.json",
+      "truth": "literal capability controls"
+    },
+    {
+      "key": "qwen",
+      "dir": "mirage-empirical-cross-model-003-development",
+      "n": 12,
+      "stage": "development",
+      "prompt": "empirical/robustness/prompt.json",
+      "input": "schedule.json",
+      "truth": "literal capability controls"
+    }
+  ],
+  "estimands": [
+    [
+      "pilotAdvice",
+      "pilot",
+      "incorrectCue",
+      "neutral",
+      "partially confounded",
+      "Advice content and added text against the shorter prompt"
+    ],
+    [
+      "wrongAdvice",
+      "robustness",
+      "incorrect",
+      "matched",
+      "controlled package",
+      "Length-matched wrong advice vs a particular nonadvisory text"
+    ],
+    [
+      "rightAdvice",
+      "robustness",
+      "correct",
+      "matched",
+      "controlled package",
+      "Length-matched correct advice vs the same nonadvisory text"
+    ],
+    [
+      "addedText",
+      "robustness",
+      "matched",
+      "none",
+      "partially confounded",
+      "Extra wording and length changed together"
+    ],
+    [
+      "letter",
+      "robustness",
+      "labels",
+      "reference",
+      "controlled",
+      "Change displayed letters with content order preserved"
+    ],
+    [
+      "physical",
+      "robustness",
+      "physical",
+      "reference",
+      "controlled",
+      "Move displayed options with letter assignment preserved"
+    ],
+    [
+      "grammar",
+      "robustness",
+      "grammar",
+      "reference",
+      "controlled",
+      "Reorder equivalent grammar alternatives"
+    ],
+    [
+      "sampling",
+      "decoding",
+      "moderate",
+      "low",
+      "controlled distributional",
+      "Change temperature across matched tasks with distinct registered seeds"
+    ],
+    [
+      "format",
+      "decoding",
+      "format",
+      "greedy",
+      "partially confounded",
+      "Bundled field order and changes to the explicit ordering instruction"
+    ],
+    [
+      "missingness",
+      "pilot/decoding",
+      "missing scored forecast",
+      "valid scored forecast",
+      "descriptive",
+      "Literal confidence is counted separately when the answer was ABSTAIN"
+    ],
+    [
+      "checkpoint",
+      "qwen",
+      "Qwen Vulkan",
+      "SmolLM2 CPU",
+      "unidentified",
+      "Four matching development controls, changed quantized checkpoint and backend"
+    ],
+    [
+      "backend",
+      "deviceProbe",
+      "Vulkan",
+      "CPU",
+      "descriptive",
+      "Four paired SmolLM2 capability probes, different device, load history and configurations"
+    ],
+    [
+      "promptLengthOnly",
+      "robustness",
+      "longer",
+      "shorter",
+      "unidentified",
+      "Need a crossed content-by-token-count intervention or controlled length filler"
+    ],
+    [
+      "pureFieldOrder",
+      "decoding",
+      "confidence first",
+      "answer first",
+      "unidentified",
+      "Need independent instruction-order and grammar-order factors"
+    ]
+  ]
+}
