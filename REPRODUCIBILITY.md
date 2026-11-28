@@ -197,3 +197,13 @@ npm run build
 ```
 
 MIRAGE reads six local original archives, uses the historical score projections and per-task resampling orders and checks the independent synthesis artifact byte for byte. The trust reference uses Python rational arithmetic and independently enumerates outcome, hidden-state and decision paths to check the shared browser implementation. Declared numerical tolerance is absolute \(10^{-12}\). Both checks run without new data or inference. Recompute in verify mode to preserve archived files. [MIRAGE protocol](research/mirage-measurement-protocol.md) · [Frozen trust fixtures](research/adaptive-trust/fixtures.json)
+
+On the follow-on branch, run:
+
+```sh
+node research/adaptive-trust/development.mjs verify
+python -B research/adaptive-trust/development-reference.py
+python -B research/axiom-trust-fixture.py verify
+```
+
+The two development checks regenerate every stress history and decision in memory. The trade fixture compares two exact solution methods and verifies the archive byte for byte.

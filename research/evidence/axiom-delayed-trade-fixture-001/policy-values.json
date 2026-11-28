@@ -1,0 +1,142 @@
+{
+  "evidence": "A",
+  "id": "axiom-delayed-trade-fixture-001",
+  "results": [
+    {
+      "delay": 1,
+      "expectedUtility": "214593/640000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "7/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "6637/20000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "7/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 1,
+      "expectedUtility": "6637/20000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "7/20",
+      "verificationCost": "1/10"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "6637/20000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "7/20",
+      "verificationCost": "1/10"
+    },
+    {
+      "delay": 1,
+      "expectedUtility": "368427/640000",
+      "optimalPlans": [
+        [
+          "escrow",
+          "trade"
+        ]
+      ],
+      "prior": "13/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "182973/320000",
+      "optimalPlans": [
+        [
+          "escrow",
+          "trade"
+        ]
+      ],
+      "prior": "13/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 1,
+      "expectedUtility": "10333/20000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "13/20",
+      "verificationCost": "1/10"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "10333/20000",
+      "optimalPlans": [
+        [
+          "escrow"
+        ]
+      ],
+      "prior": "13/20",
+      "verificationCost": "1/10"
+    },
+    {
+      "delay": 1,
+      "expectedUtility": "2048771/2560000",
+      "optimalPlans": [
+        [
+          "escrow",
+          "trade"
+        ]
+      ],
+      "prior": "17/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "31739/40000",
+      "optimalPlans": [
+        [
+          "escrow",
+          "trade"
+        ]
+      ],
+      "prior": "17/20",
+      "verificationCost": "1/40"
+    },
+    {
+      "delay": 1,
+      "expectedUtility": "605737/800000",
+      "optimalPlans": [
+        [
+          "trade"
+        ]
+      ],
+      "prior": "17/20",
+      "verificationCost": "1/10"
+    },
+    {
+      "delay": 2,
+      "expectedUtility": "14427/20000",
+      "optimalPlans": [
+        [
+          "trade"
+        ]
+      ],
+      "prior": "17/20",
+      "verificationCost": "1/10"
+    }
+  ]
+}

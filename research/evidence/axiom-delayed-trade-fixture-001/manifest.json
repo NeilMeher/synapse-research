@@ -1,0 +1,16 @@
+{
+  "evidence": "A",
+  "id": "axiom-delayed-trade-fixture-001",
+  "outputs": {
+    "policy-values.json": {
+      "bytes": 2563,
+      "sha256": "f0e1977ca217d85445383fdec35b878f21a001809c5f24a50a1051bd57d1164c"
+    }
+  },
+  "protocol": {
+    "bytes": 722,
+    "sha256": "d883409be8158c1833a968c01eb75e38a9c6cefe9b79678b175238d982a7830a"
+  },
+  "protocolCommit": "8046feab6bec1fe4f4d77ceb8f2c9cde19e4d19f",
+  "status": "completed"
+}
