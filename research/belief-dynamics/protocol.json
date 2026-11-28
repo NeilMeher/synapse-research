@@ -1,0 +1,35 @@
+{
+  "id": "belief-dynamics-001",
+  "evidence": "A",
+  "design": "Exact finite registered mechanism calculation. No sampled histories.",
+  "horizon": 3,
+  "longLag": 3,
+  "shortLag": 1,
+  "rates": {
+    "prior": "3/4",
+    "fail": "1/6",
+    "restore": "1/4",
+    "healthyRate": "17/20",
+    "faultyRate": "3/10",
+    "auditAccuracy": "4/5"
+  },
+  "alternative": "18/25",
+  "falseAccept": "2",
+  "falseReject": "1",
+  "cost": "2/25",
+  "verifyAccuracy": "4/5",
+  "abstain": "21/50",
+  "laws": [
+    "duplicate",
+    "independentGivenRegime"
+  ],
+  "policies": [
+    "fixed-naive",
+    "fixed-aware",
+    "adaptive-naive",
+    "adaptive-aware"
+  ],
+  "timing": "Decide once at t=3. Historical audit for each earlier event is visible exactly when event+lag <=3. Current choices see the two primary reports and one alternative report. Verification is optional, costs the same for every arm and emits a current truth signal. After verification choose accept or reject.",
+  "primary": "Under the duplicate law, compare the long-minus-short change in exact expected loss for adaptive naive versus adaptive dependence-aware policies. Other environments and metrics are diagnostic.",
+  "confidence": "P(Y=1) is the internal decision probability before verification. The separate simulated report doubles its log odds and is never used for the action. Score both, plus action coverage and verification use."
+}
