@@ -70,3 +70,7 @@ The tested Vulkan route meets the hardware checks, and the Qwen 0.5B configurati
 ## After the English public-archive ECHO results
 
 ECHO 001 and 002 executed on 2,142 matched English MMLU-ProX questions. Preserve the prespecified retrospective comparison and the null or negative committee findings. The next checkpoint is a blind metadata and canonical-alignment audit for shared English, Hindi and Marathi source questions and option contents. Freeze an eligible paired multilingual subset before inspecting any new language performance. A larger panel or external archive is needed to isolate useful higher-order effects. [ECHO audit](research/echo-public-audit.md)
+
+## After ECHO consolidation and MORPHEUS dynamic trust
+
+The one-subject Hindi study, selective accuracy and coverage comparisons, and heterogeneous moment certificates close the bounded ECHO cycle. Reserve new optimizer confirmation for fresh language, subject or benchmark data. The remaining public-data allowance is 59,334,795 bytes, below the listed 93,244,603-byte Marathi economics slice for the same model panel. The next task is MIRAGE M1's cross-archive estimand reconciliation without new inference, followed by an AXIOM exact invariance extension. Test MORPHEUS under imperfect verification before transferring it into an institutional or ECHO model. The programme-wide research freeze and academic submissions remain subsequent stages. [Laboratory register](research/second-generation-register.md)

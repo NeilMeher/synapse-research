@@ -169,7 +169,51 @@ for(const file of [echoPublicDir+"manifest.json","empirical/echo-public/referenc
   "empirical/echo-public/split.py","papers/echo-public.md","schemas/echo-public-predictions-v1.json"]){
   copies.push([file,file]);
 }
-for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
+const hindiId="echo-hindi-economics-001";
+const trustId="morpheus-dynamic-trust-001";
+const momentsId="echo-heterogeneous-moments-001";
+for(const [id,evidence,directory] of [
+  [hindiId,"F","empirical/archives/"+hindiId+"/"],
+  [momentsId,"A","research/evidence/"+momentsId+"/"],
+  [trustId,"B","research/evidence/"+trustId+"/"],
+]){
+  const manifest=JSON.parse(text(directory+"manifest.json"));
+  if(manifest.id!==id||manifest.evidence!==evidence||manifest.status!=="completed"){
+    throw new Error("Unexpected second-generation evidence "+id);
+  }
+  for(const [name,entry] of Object.entries(manifest.outputs)){
+    const file=directory+name, data=readFileSync(from(file));
+    if(entry.bytes!==data.length||entry.sha256!==createHash("sha256").update(data).digest("hex")){
+      throw new Error("Unverified second-generation output "+file);
+    }
+    copies.push([file,file]);
+  }
+  if(id===hindiId){
+    for(const [name,entry] of Object.entries(manifest.inputs)){
+      const file="empirical/echo-hindi/"+name, data=readFileSync(from(file));
+      if(entry.bytes!==data.length||entry.sha256!==createHash("sha256").update(data).digest("hex")){
+        throw new Error("Unverified cross-language input "+file);
+      }
+    }
+  }
+  copies.push([directory+"manifest.json",directory+"manifest.json"]);
+}
+for(const file of ["sources.json","cohort.json","alignment.json","protocol.json","align.py","reference.py","run.mjs"]){
+  const path="empirical/echo-hindi/"+file;
+  copies.push([path,path]);
+}
+for(const [dir,files] of [["echo-moments",["protocol.json","compute.py","reference.py"]],
+  ["morpheus-trust",["protocol.json","run.mjs","reference.py"]]]){
+  for(const name of files){
+    const path="research/"+dir+"/"+name;
+    copies.push([path,path]);
+  }
+}
+copies.push(["engine/morpheus-trust.mjs","engine/morpheus-trust.mjs"]);
+copies.push(["schemas/echo-hindi-paired-v1.json","schemas/echo-hindi-paired-v1.json"]);
+for (const file of readdirSync(from("research/"),{withFileTypes:true})){
+  if(file.isFile())copies.push(["research/"+file.name,"research/"+file.name]);
+}
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
 }
@@ -218,8 +262,9 @@ writeFileSync(output("release.json"), JSON.stringify({
   version:JSON.parse(text("package.json")).version,
   registryVersion,
   studies:researchStudies.map(study=>study.id),
-  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId,echoPublicId,echoPublicManifest.companionStudy],
+  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId,echoPublicId,echoPublicManifest.companionStudy,hindiId],
   empiricalDevelopment:[qwenDevId],
+  secondGenerationStudies:[{id:hindiId,evidence:"F"},{id:momentsId,evidence:"A"},{id:trustId,evidence:"B"}],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {

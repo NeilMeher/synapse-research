@@ -46,3 +46,7 @@ Neil Meher authorized the exact Qwen artifact and directed the guarded continuat
 ## ECHO public-archive studies 001 and 002
 
 The bounded analysis adapts existing correlation and committee-selection methods to genuine MMLU-ProX predictions under a frozen grouped holdout. The new measurements are for this exact panel and two domains. Contributions include verified canonical alignment, vote and abstention reporting, heterogeneous and categorical independence comparisons, and calibration-based equal-sized subset evaluation. Model-error correlation and diversity selection already have a literature. Computationally independent Python verification occurred. Independent human scientific review and external replication remain pending. [Manuscript and citations](papers/echo-public.md)
+
+## Second-generation programme checkpoint
+
+The owner directed the scientific sequence, resource limit and publication quality gates. Codex assisted with the programme audit, bilingual spot and structural screening, frozen retrospective ECHO analysis, exact mathematical certificate construction, synthetic MORPHEUS experiment, reproducibility and platform evidence. The original prediction and benchmark publishers supplied the archive data. All comparative results received separate computational checking. Independent bilingual and human scientific review and research-paper submission remain pending. [Literature and novelty](research/second-generation-literature.md)

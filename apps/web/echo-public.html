@@ -84,6 +84,22 @@
       <div id="echo-replay" class="obs-response" aria-live="polite"></div>
     </section>
   </div>
+  <section class="result-panel study-block" id="echo-language" aria-labelledby="echo-language-title">
+    <h2 id="echo-language-title">English and Hindi economics</h2>
+    <p>Archived model evidence · 402 aligned held-out items · six compatible model configurations</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="English and Hindi held-out results">
+      <table><caption>Matched strict-majority outcomes by archive language</caption>
+        <thead><tr><th scope="col">Metric</th><th scope="col">English</th><th scope="col">Hindi</th></tr></thead>
+        <tbody><tr><th scope="row">Full-plan accuracy</th><td>54.48%</td><td>24.63%</td></tr>
+          <tr><th scope="row">Vote coverage</th><td>65.17%</td><td>31.59%</td></tr>
+          <tr><th scope="row">Accuracy when voting</th><td>83.59%</td><td>77.95%</td></tr></tbody></table>
+    </div>
+    <p>The paired accuracy difference was −29.85 percentage points, with a 95% group-bootstrap interval of −34.75 to −25.00. The archive comparison combines language, translation and response-extraction differences.</p>
+    <p><a href="./research/echo-hindi-results.md">Selective voting and agreement results</a> · <a href="./research/echo-hindi-alignment.md">Bilingual alignment audit</a> · <a href="./empirical/archives/echo-hindi-economics-001/manifest.json">Archive manifest</a></p>
+    <h3>What higher-order moments identify</h3>
+    <p>Exact mathematical bound · given the seven-member calibration marginals and pair moments, strict majority can range from 27.26% to 63.94%. Three fixed triple moments narrow the range to 29.28–62.62%.</p>
+    <p><a href="./research/echo-moments-results.md">Derivation and witnesses</a> · <a href="./academy.html#academy-triple-control">Work through a three-member case</a></p>
+  </section>
   <section class="result-panel study-block" id="echo-provenance" aria-labelledby="echo-sources">
     <h2 id="echo-sources">Provenance and limits</h2>
     <p>These are existing public predictions. Full prompts, question text and generated prose are omitted. The source manifest links to the original files and gives their exact hashes. The generation token cap, extraction filter, finite model panel and unknown training-data overlap limit interpretation. Independent human review remains pending.</p>

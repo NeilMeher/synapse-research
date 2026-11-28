@@ -209,3 +209,17 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Next | Verify English, Hindi and Marathi source-aligned option maps before opening multilingual results. Independent human review is pending. |
 
 [Manuscript](papers/echo-public.md) · [Protocol](research/echo-public-protocol.md) · [Audit](research/echo-public-audit.md)
+
+## Second-generation ECHO and MORPHEUS checkpoint
+
+| Work | Validated evidence |
+| --- | --- |
+| Baseline audit | Twelve laboratories, 18 foundational study entries, 31 historical computational and 20 empirical output hashes verified. |
+| ECHO Hindi | 806 aligned pairs, 402 withheld Hindi outcomes in 399 groups, six compatible model configurations. Hindi minus English strict-majority accuracy −29.85 pp [−34.75, −25.00]. |
+| Selective consensus | Fixed quorum, fallback and reliability policies, matched question support, agreement-only Brier and utility comparisons independently verified. The comparison combines language, translation and extraction. |
+| Heterogeneous bounds | All 128 states used. Three fixed triples tightened calibration majority bounds to 29.28–62.62%. Thirty-six exact endpoint certificates checked. |
+| MORPHEUS trust | In 480 histories per arm, rolling versus fixed age-adjusted trust gave +29.43 pp during the source failure and −13.75 pp after restoration. |
+| Scope | ECHO consolidation complete at this checkpoint. MORPHEUS dynamic trust is the first completed second-generation cognition investigation. Independent human review and bilingual review are pending. |
+| Access | 190,665,205 of 250,000,000 authorized public research bytes used. No new model downloads or inference. |
+
+[Register](research/second-generation-register.md) · [Hindi](research/echo-hindi-results.md) · [Bounds](research/echo-moments-results.md) · [MORPHEUS](research/morpheus-trust-results.md)

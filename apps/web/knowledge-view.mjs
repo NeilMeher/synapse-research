@@ -4,7 +4,7 @@ import {setupTheme} from "./theme.mjs";
 
 setupTheme();
 const search=byId("knowledge-search"),type=byId("knowledge-type"),relationship=byId("knowledge-rel");
-let {nodes,edges}=buildKnowledge();
+let {nodes,edges,evidenceTaxonomy}=buildKnowledge();
 let selected;
 function anchor(text,href){
   const a=node("a",text);
@@ -16,6 +16,9 @@ function inspect(id){
   if(!selected)return;
   byId("knowledge-selected").textContent=selected.name;
   byId("knowledge-description").textContent=selected.description;
+  const classification=byId("knowledge-classification");
+  classification.hidden=!selected.evidence?.length;
+  classification.textContent=(selected.evidence??[]).map(code=>evidenceTaxonomy[code]).join(" · ");
   byId("knowledge-open").replaceChildren(anchor("Open "+selected.type.toLowerCase(),selected.route));
   const links=edges.filter(e=>(relationship.value==="all"||e.type===relationship.value)&&(e.from===id||e.to===id));
   byId("knowledge-edges").replaceChildren(...links.map(e=>{

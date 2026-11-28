@@ -30,3 +30,13 @@ This review assesses the existing manuscripts, archived protocols, reference imp
 - NVIDIA and agency material supplies selected documented device constraints and definitions. Official reports and academic texts are linked. The release includes original interactive charts, software and research manuscripts. [ENERGIA sources](energia-sources.md) · [Bibliography](bibliography.json)
 
 [Reproduction commands](../REPRODUCIBILITY.md) · [Project limitations](../LIMITATIONS.md) · [External review package](external-review.md) · [Contribution register](../CONTRIBUTION_REGISTER.md)
+
+## Second-generation checks
+
+| Study | Evidence | Independent check | Scientific limitation |
+| --- | --- | --- | --- |
+| ECHO English–Hindi | F · Aligned archived predictions | Raw re-extraction, canonical mapping, paired source groups, selective policies | Translation and language-dependent extractor co-vary. Independent bilingual review is pending. |
+| Heterogeneous moments | A · Sharp mathematical bounds, F calibration inputs | Exact primal/dual inequalities on all states | Fixed empirical moments do not impose population calibration. |
+| MORPHEUS dynamic trust | B · Matched synthetic histories | Independent seed, reports, audits, votes and paired contrasts | Temporary corruption resistance coexists with a recovery penalty. Audit feedback is idealized. |
+
+[Lab register](second-generation-register.md) · [Literature comparison](second-generation-literature.md)

@@ -73,10 +73,24 @@ export function evidenceClass(study){
   if(study.id==="axiom")return "Exact finite benchmark";
   return "Confirmatory synthetic research";
 }
+export const evidenceTaxonomy=Object.freeze({
+  A:"Mathematical result", B:"Synthetic computation", C:"Hypothetical scenario",
+  D:"Observational evidence", E:"Newly executed AI-model inference",
+  F:"Archived AI-model evidence", G:"Human experimental evidence", H:"Proposed research",
+});
+
+function evidenceCodes(study){
+  if(study.id==="chronos")return ["D","C","B"];
+  if(["artha","nexus"].includes(study.id))return ["C","D"];
+  if(study.id==="energia")return ["C"];
+  if(["echo","echo2","axiom","scientia"].includes(study.id))return ["A","B"];
+  return ["B"];
+}
+
 export function buildKnowledge(){
   const nodes=[],edges=[];
-  const add=(id,type,name,route,description="")=>nodes.push({id,type,name,route,description});
-  const connect=(from,to,type)=>edges.push({from,to,type});
+  const add=(id,type,name,route,description="",evidence=[])=>nodes.push({id,type,name,route,description,evidence});
+  const connect=(from,to,type,evidence=[])=>edges.push({from,to,type,evidence});
   for(const [id,name] of divisions)add("division/"+id,"Division",name,"index.html#map");
   for(const lab of laboratories){
     add("lab/"+lab.id,"Laboratory",lab.name,"index.html#lab-"+lab.id,lab.question);
@@ -84,16 +98,21 @@ export function buildKnowledge(){
   }
   for(const lab of laboratories)for(const link of lab.links){
     if(lab.id>link&&laboratories.find(d=>d.id===link).links.includes(lab.id))continue;
-    connect("lab/"+lab.id,"lab/"+link,labConnection(lab.id,link).label);
+    const relation=labConnection(lab.id,link);
+    const executed=sharedStudy(lab.id,link);
+    const evidence=relation.type==="proposed"||relation.type==="question"?["H"]:
+      executed?evidenceCodes(executed):[];
+    connect("lab/"+lab.id,"lab/"+link,relation.label,evidence);
   }
   for(const study of researchStudies){
     const base="study/"+study.id;
-    add(base,study.labs.length===1?"Study":"Interdisciplinary study",study.name,study.route,study.contrast);
+    const evidence=evidenceCodes(study);
+    add(base,study.labs.length===1?"Study":"Interdisciplinary study",study.name,study.route,study.contrast,evidence);
     for(const lab of study.labs)connect("lab/"+lab,base,"investigates");
     for(const [suffix,type,route,detail] of [["result","Result",study.result,findings[study.id][1]],["paper","Manuscript","reader.html?study="+study.id,study.description],
       ["protocol","Protocol",study.protocol,study.contrast],["limit","Limitation",study.audit??study.manuscript,findings[study.id][2]]]){
-      add(base+"/"+suffix,type,study.name+" "+type.toLowerCase(),route,detail);
-      connect(base,base+"/"+suffix,suffix==="limit"?"has limitation":"has evidence");
+      add(base+"/"+suffix,type,study.name+" "+type.toLowerCase(),route,detail,evidence);
+      connect(base,base+"/"+suffix,suffix==="limit"?"has limitation":"has evidence",evidence);
     }
     for(const [i,[name,route]] of study.concepts.entries()){
       add(base+"/concept/"+i,"Concept",name,route,study.name+" research concept");
@@ -166,9 +185,26 @@ export function buildKnowledge(){
   connect(echoPublic,echoPublic+"/archive","produces response archive");
   connect(echoPublic,echoPublic+"/limits","has limitation");
   connect("future/public-responses",echoPublic,"motivates archive analysis");
+  add("empirical/echo-hindi","Empirical study","ECHO English–Hindi economics","echo-public.html#echo-language",
+    "Aligned source questions, paired coverage, and selective voting on genuine archived predictions.",["F"]);
+  add("method/echo-heterogeneous","Mathematical result","Heterogeneous majority bounds","research/echo-moments-results.md",
+    "Primal and dual exact witnesses on 128 binary correctness states.",["A","F"]);
+  add("method/morpheus-trust","Study","MORPHEUS dynamic source trust","morpheus.html#dynamic-trust",
+    "Matched delayed-audit histories distinguish corruption resistance from recovery.",["B"]);
+  connect("empirical/echo-hindi",echoPublic,"extends archived evidence",["F"]);
+  connect("empirical/echo-hindi","study/mirage","tests whether agreement predicts correctness",["F"]);
+  connect("method/echo-heterogeneous","study/echo2","extends to heterogeneous members",["A"]);
+  connect("method/morpheus-trust","study/morpheus","extends provenance policy",["B"]);
+  connect("method/echo-heterogeneous","lesson/committee-optimization","has worked example",["A"]);
+  connect("method/morpheus-trust","lesson/committee-optimization","has worked example",["B"]);
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
-  return {nodes,edges};
+  for(const node of nodes){
+    if(node.type==="Proposed research"||node.type==="Prepared study")node.evidence=["H"];
+    if(node.id.startsWith("empirical/mirage")||node.id.startsWith("development/mirage-qwen"))node.evidence=["E"];
+    if(node.id===echoPublic||node.id.startsWith(echoPublic+"/"))node.evidence=["F"];
+  }
+  return {nodes,edges,evidenceTaxonomy};
 }
 
 const synonymGroups=[

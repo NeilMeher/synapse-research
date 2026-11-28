@@ -166,3 +166,9 @@ The archive at `9ddd112402822d0d689ddbcb31119898ebd29cbb` is immutable. Accuracy
 ## Empirical Phase IV · ECHO public predictions
 
 Continue on `codex/echo-public-empirical` from v1.3.1 `88f5011d22c8b2fa13c58a4f7ce9929b6aa69ea7`. The retrospective cohort and split froze at `fb0c976`, the calibration-selected single and committees at `eefce10`, and the executed archive at `032cd14`. The new build integrates ECHO 001 and 002. Read the [manuscript](papers/echo-public.md) and [audit](research/echo-public-audit.md). Verify the live commit and workflow before reporting publication. Review and multilingual alignment remain separate milestones.
+
+## Second-generation checkpoint
+
+Started from `codex/echo-public-empirical` at v1.4.0 `e4b7c2d9d01fea45733655aa64f16a5bb2019722`. Continue on `codex/synapse-second-generation`. The [register](research/second-generation-register.md) records all twelve laboratories. Hindi freeze `21ffd68` and archive `15add16` preserved 806 bilingual pairs and the alignment exclusions. ECHO moment protocol `82b23b2` and evidence `0669956` hold exact certificates. MORPHEUS trust protocol froze at `ca71901`. Its independent verifier rebuilt the burst, clean and recovery findings. Check the public release metadata for the final revision.
+
+Next, reconcile the MIRAGE 001, 002 and 004 measurements using archived scores only. Make an estimand ledger for letter collapse, advice, grammar reordering, stochastic decoding and abstention with their original denominators. Use the completed ECHO agreement analysis as a separate reliability instrument. Keep the 512-request MIRAGE 003 gate closed.

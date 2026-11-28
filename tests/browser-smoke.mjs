@@ -178,6 +178,7 @@ try {
           assert.equal(await page.locator("#convergence-contrasts tr").count(),2);
         }
         if (route==="morpheus"){
+          assert.match(await page.locator("#dynamic-trust").textContent(),/29\.43.*13\.75/s);
           await page.getByLabel("Memory timeline step").press("End");
           assert.match(await page.locator("#morpheus-step-summary").textContent(),/Step 15/);
           await page.getByLabel("Architecture").selectOption("keyword");
@@ -414,6 +415,10 @@ try {
       assert.match(await page.locator("#academy-shared-result").textContent(),/65\.00%.*20\.00%/);
       await page.getByLabel("Voting rule",{exact:true}).selectOption("plurality");
       assert.match(await page.locator("#academy-vote-result").textContent(),/chooses A/);
+      await page.locator("#academy-triple").fill("36");
+      assert.match(await page.locator("#academy-triple-result").textContent(),/74\.00%.*0\.00%/);
+      await page.locator("#academy-trust").fill("2");
+      assert.match(await page.locator("#academy-trust-result").textContent(),/46\.67%.*zero weight/);
       await page.getByLabel("Printed label of the correct answer").selectOption("D");
       assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");
@@ -559,6 +564,7 @@ try {
       }
       assert.equal((await page.goto(new URL("echo-public.html",base).href)).status(),200);
       await page.locator("#echo-data").waitFor();
+      assert.match(await page.locator("#echo-language").textContent(),/54\.48%.*24\.63%.*29\.28/s);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
       assert.match(await page.locator("#echo-headline").textContent(),/44\.23%.*71\.88%.*27\.65 pp/);
       assert.equal(await page.locator("#echo-optimization-rows tr").count(),10);

@@ -44,6 +44,9 @@ test("MIRAGE 002 exposes verified evidence separately from proposed ensembles",(
   assert.ok(graph.edges.some(e=>e.from==="future/echo-empirical"&&e.type==="depends on readiness"));
   assert.equal(searchEvidence(graph.nodes,"ECHO public-archive","Empirical study")[0].id,"empirical/echo-public");
   assert.ok(graph.edges.some(e=>e.from==="empirical/echo-public"&&e.to==="lesson/committee-optimization"));
+  assert.deepEqual(graph.nodes.find(n=>n.id==="empirical/echo-hindi").evidence,["F"]);
+  assert.deepEqual(graph.nodes.find(n=>n.id==="method/echo-heterogeneous").evidence,["A","F"]);
+  assert.deepEqual(graph.nodes.find(n=>n.id==="method/morpheus-trust").evidence,["B"]);
 });
 
 test("MIRAGE 004 is searchable and Qwen preparation remains a distinct evidence class",()=>{

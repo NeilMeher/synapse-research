@@ -342,6 +342,18 @@
         <label for="academy-vote-rule">Voting rule</label><select id="academy-vote-rule"><option value="majority">Strict majority</option><option value="plurality">Plurality</option><option value="unanimity">Unanimity</option></select>
         <p id="academy-vote-result" aria-live="polite"></p>
       </div>
+      <div class="lesson-demo" id="academy-triple-control"><h3>Change the triple while holding all pairs fixed</h3>
+        <p>In this exact exercise the three correctness probabilities are 0.60, 0.70 and 0.80. Pair probabilities are 0.42, 0.48 and 0.56. Every triple probability from 0.30 to 0.36 gives a feasible joint law.</p>
+        <label for="academy-triple">Triple correctness probability (%)</label><input type="range" id="academy-triple" min="30" max="36" step="1" value="33">
+        <p id="academy-triple-result" aria-live="polite"></p>
+        <p><a href="./research/echo-moments-results.md">Derive the sharp bounds</a></p>
+      </div>
+      <div class="lesson-demo" id="academy-trust-control"><h3>Update trust after a source changes</h3>
+        <p>A prior of strength four has mean 0.90. Update it with eight verified outcomes. A source receives positive log-odds weight only when the new mean exceeds 0.50.</p>
+        <label for="academy-trust">Correct reports among eight audited reports</label><input type="range" id="academy-trust" min="0" max="8" step="1" value="3">
+        <p id="academy-trust-result" aria-live="polite"></p>
+        <p><a href="./morpheus.html#dynamic-trust">Compare simulated recovery</a></p>
+      </div>
       <h3>Choose the committee before testing it</h3>
       <p>There are C(7,3)=35 ways to choose three members from seven. One objective is mean calibration accuracy minus a penalty for excess pairwise failure. Comparing all candidates on the same calibration questions can overfit. Freeze the selected subset, then compare it with an equal-sized baseline on new question groups using a paired interval.</p>
       <details><summary>Practice and worked solution</summary><p>Consider two models with error rates 0.20 and 0.35. What joint failure rate would independence predict? If the observed rate is 0.13, what is the excess?</p><p>Independence gives 0.20×0.35=0.07. The excess is 0.06, so phi is 0.06 / √(0.20×0.80×0.35×0.65) ≈ 0.315. The pair alone leaves the chance of three simultaneous failures undetermined.</p></details>

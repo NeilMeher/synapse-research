@@ -87,6 +87,11 @@ jobs:
       - run: python -B -m empirical.qwen.reference
       - run: node empirical/echo-public/run.mjs verify
       - run: python -B empirical/echo-public/reference.py
+      - run: node empirical/echo-hindi/run.mjs verify
+      - run: python -B empirical/echo-hindi/reference.py
+      - run: python -B research/echo-moments/reference.py
+      - run: node research/morpheus-trust/run.mjs verify
+      - run: python -B research/morpheus-trust/reference.py
       - run: npm run build
       - name: Install browser QA tooling
         run: |

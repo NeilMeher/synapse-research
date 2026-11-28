@@ -118,3 +118,7 @@ Consolidated all initial laboratories into a typed atlas, searchable evidence ca
 - Archived 14,994 canonical predictions from seven model configurations on 2,142 aligned English MMLU-ProX questions. Recorded one duplicate-option exclusion, pinned file provenance, and frozen group assignments.
 - ECHO 001 found seven-member strict majority −27.65 pp versus the calibration-selected individual on held-out questions. ECHO 002 found no gain for the registered complementarity selection and an inconclusive distinct-family quintet contrast.
 - Added the ECHO Observatory workbench, committee builder, optimization and uncertainty tables, and Mathematical Academy module. The build verifies compact evidence hashes and preserves prior empirical and computational archives.
+
+## v1.5.0 · ECHO consolidation and MORPHEUS dynamic trust
+
+Added a blind English–Hindi alignment audit, empirical coverage and reliability analysis, exact heterogeneous moment bounds, and a matched MORPHEUS source-recovery experiment. Updated the twelve-laboratory register, primary-literature comparison, existing Observatory, knowledge graph and worked Academy examples. The historical archives and readiness boundaries remain available.

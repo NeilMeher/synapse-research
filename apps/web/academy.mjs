@@ -51,6 +51,18 @@ updateWhen(["academy-vote-rule"],()=>{
   byId("academy-vote-result").textContent=vote.answer===null?"The committee abstains.":"The committee chooses "+"ABCD"[vote.answer]+".";
 });
 
+updateWhen(["academy-triple"],()=>{
+  const triple=number("academy-triple")/100;
+  byId("academy-triple-result").textContent="Strict majority "+precise(1.46-2*triple)+
+    " · all three incorrect "+precise(.36-triple)+".";
+});
+
+updateWhen(["academy-trust"],()=>{
+  const posterior=(3.6+number("academy-trust"))/12;
+  byId("academy-trust-result").textContent="Estimated reliability "+precise(posterior)+
+    (posterior>.5?" · reports get positive weight.":" · reports get zero weight.");
+});
+
 updateWhen(["academy-agents","academy-rho"],()=>{
   const n=number("academy-agents"), rho=number("academy-rho");
   const shared=countDistribution(n,.65,rho,"shared");

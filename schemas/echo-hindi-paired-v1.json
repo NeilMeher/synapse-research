@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical paired English and Hindi ECHO records",
+  "type": "array",
+  "minItems": 750,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "group",
+      "source",
+      "sourceId",
+      "split",
+      "options",
+      "enHash",
+      "hiHash",
+      "gold",
+      "en",
+      "hi",
+      "sourceRowsHi"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "group": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1
+      },
+      "sourceId": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "split": {
+        "enum": [
+          "development",
+          "calibration",
+          "heldout"
+        ]
+      },
+      "options": {
+        "type": "integer",
+        "minimum": 2,
+        "maximum": 10
+      },
+      "enHash": {
+        "$ref": "#/$defs/digest"
+      },
+      "hiHash": {
+        "$ref": "#/$defs/digest"
+      },
+      "gold": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9
+      },
+      "en": {
+        "$ref": "#/$defs/sevenChoices"
+      },
+      "hi": {
+        "$ref": "#/$defs/sevenChoices"
+      },
+      "sourceRowsHi": {
+        "type": "array",
+        "minItems": 7,
+        "maxItems": 7,
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sevenChoices": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "integer",
+        "minimum": -2,
+        "maximum": 9
+      }
+    }
+  }
+}

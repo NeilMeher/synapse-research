@@ -13,3 +13,9 @@ Railway Board permits accurate attributed reproduction under its copyright polic
 ## Other materials
 
 The release does not include proprietary NVIDIA imagery, academic paper reproductions, government map artwork or externally sourced route geometries. ENERGIA cites source-backed facts and public definitions. Browser research code and project documentation are distributed under the repository's license. Markdown and attributed source entries retain individual scope. Browser automation and the PDF parser are verification dependencies outside the runtime bundle. [Repository license](../LICENSE)
+
+## MMLU-ProX archive-derived evidence
+
+The Hindi extension uses 15 targeted files from the pinned CC-BY-4.0 archived prediction dataset and the declared MIT benchmark publisher. The release gives credit, linked source, digests and a change description. Compact choices and source locators are reproduced from the openly distributed artifacts. Original question text, prompts and generated explanations stay outside the repository and the deployed site. [Publisher attribution and use limits](echo-hindi-alignment.md)
+
+The prediction publisher is gililior and the benchmark publisher is li-lab. SYNAPSE filtered the cohort, independently extracted ordinal choices and published paired summaries. The original artifacts retain their respective licensing and attribution. [Prediction archive](https://huggingface.co/datasets/gililior/mmlu-prox-eval-predictions) · [Benchmark files](https://huggingface.co/datasets/li-lab/MMLU-ProX/tree/8e6106a6c6ce1c5027e66cc338143cf997b2aa09) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

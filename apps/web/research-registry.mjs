@@ -1,4 +1,4 @@
-export const registryVersion=8;
+export const registryVersion=9;
 
 export const divisions=[
   ["cognition","Individual cognition"],

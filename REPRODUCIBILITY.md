@@ -171,3 +171,17 @@ python -B empirical/echo-public/reference.py --sources SOURCE_DIR
 ```
 
 The simulation and scoring replay compares publisher output on known canonical questions. Original model inference is outside reproduction scope. [Pinned sources](empirical/echo-public/sources.json) · [Frozen protocol](research/echo-public-protocol.md) · [Run manifest](empirical/archives/echo-public-empirical-001/manifest.json)
+
+## Second-generation ECHO and MORPHEUS
+
+Replay the compact bilingual choices and verify policies, paired confidence intervals and Brier using separate implementations. The exact moment reference checks archived rational primal and dual witnesses using the standard library. The MORPHEUS reference regenerates every frozen history–arm evaluation independently.
+
+```text
+node empirical/echo-hindi/run.mjs verify
+python -B empirical/echo-hindi/reference.py
+python -B research/echo-moments/reference.py
+node research/morpheus-trust/run.mjs verify
+python -B research/morpheus-trust/reference.py
+```
+
+For raw archive verification, retrieve only the size-bounded files in the Hindi source receipt using each repository, revision and path. Reuse the already retrieved English benchmark. The blind alignment and post-freeze extraction use DuckDB 1.4.4, as in the English study. Run `align.py extract HINDI_DIR ENGLISH_DIR COMPACT_FILE` to reproduce choices while checking the frozen cohort. Run `reference.py HINDI_DIR` to reproduce from raw Hindi completions. For numerical witness discovery, `compute.py` can run in a fresh copy with SciPy 1.17.0 and the original protocol commit. Archived witness verification never needs SciPy and accepts no numerical tolerance on exact constraints. [Hindi receipt](empirical/echo-hindi/sources.json) · [Moment protocol](research/echo-moments-protocol.md)

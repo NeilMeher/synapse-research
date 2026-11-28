@@ -62,3 +62,7 @@ Temperature 0.7 reduced choosing A by 26.25 points compared with 0.3 and increas
 ## MIRAGE 003 · Capability evidence
 
 The Qwen non-mapped Vulkan route passed the checks for this machine. The genuine development run returned 12 scorable replies and five correct answers. The prespecified scientific gate failed. No matched 512-response Qwen dataset or new empirical ensemble was collected. [Actual results](research/mirage-qwen-capability-results.md)
+
+## Second-generation ECHO and MORPHEUS
+
+The [laboratory register](research/second-generation-register.md) records checked baseline evidence, distinct limitations and completion conditions. The [literature map](research/second-generation-literature.md) pairs each lab with a primary source and contribution boundary. Current executed work includes [English–Hindi ECHO](research/echo-hindi-results.md), [heterogeneous exact bounds](research/echo-moments-results.md) and [MORPHEUS delayed feedback](research/morpheus-trust-results.md).

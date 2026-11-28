@@ -23,6 +23,7 @@ FAMILIES = {
     "artha-v1": ("results/artha-scenario.json",),
     "polis2-v1": ("results/polis2-pilot.json", "results/polis2-confirmatory.json"),
     "echo-public-predictions-v1": ("empirical/archives/echo-public-empirical-001/predictions.json",),
+    "echo-hindi-paired-v1": ("empirical/archives/echo-hindi-economics-001/predictions.json",),
 }
 
 for name, paths in FAMILIES.items():
