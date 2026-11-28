@@ -1,0 +1,716 @@
+{
+  "calibrationSha256": "7eff6771fd5122c3c3d351eff58b1fc4e11b2d7f8dc542e5f9b13fab5001d7c5",
+  "n": 642,
+  "baseline": 0,
+  "individual": [
+    0.7180685358255452,
+    0.3660436137071651,
+    0.5700934579439252,
+    0.3878504672897196,
+    0.42990654205607476,
+    0.32554517133956384,
+    0.48909657320872274
+  ],
+  "selections": {
+    "3": {
+      "evaluated": 35,
+      "familyEligible": 25,
+      "topAccuracy": [
+        0,
+        2,
+        6
+      ],
+      "seededRandom": [
+        4,
+        5,
+        6
+      ],
+      "distinctFamilies": [
+        0,
+        2,
+        6
+      ],
+      "complementarity": [
+        0,
+        2,
+        6
+      ],
+      "directVote": [
+        0,
+        2,
+        6
+      ],
+      "calibration": [
+        {
+          "members": [
+            0,
+            1,
+            2
+          ],
+          "meanAccuracy": 0.5514018691588786,
+          "excess": 0.09214374213500774,
+          "calibrationCorrect": 377
+        },
+        {
+          "members": [
+            0,
+            1,
+            3
+          ],
+          "meanAccuracy": 0.4906542056074767,
+          "excess": 0.08686914270371342,
+          "calibrationCorrect": 296
+        },
+        {
+          "members": [
+            0,
+            1,
+            4
+          ],
+          "meanAccuracy": 0.5046728971962617,
+          "excess": 0.08257473562303679,
+          "calibrationCorrect": 319
+        },
+        {
+          "members": [
+            0,
+            1,
+            5
+          ],
+          "meanAccuracy": 0.4698857736240914,
+          "excess": 0.0699244313752131,
+          "calibrationCorrect": 290
+        },
+        {
+          "members": [
+            0,
+            1,
+            6
+          ],
+          "meanAccuracy": 0.5244029075804777,
+          "excess": 0.07883835884097916,
+          "calibrationCorrect": 341
+        },
+        {
+          "members": [
+            0,
+            2,
+            3
+          ],
+          "meanAccuracy": 0.5586708203530634,
+          "excess": 0.10147174425714035,
+          "calibrationCorrect": 363
+        },
+        {
+          "members": [
+            0,
+            2,
+            4
+          ],
+          "meanAccuracy": 0.5726895119418484,
+          "excess": 0.09898972253763065,
+          "calibrationCorrect": 381
+        },
+        {
+          "members": [
+            0,
+            2,
+            5
+          ],
+          "meanAccuracy": 0.5379023883696781,
+          "excess": 0.08461114184321451,
+          "calibrationCorrect": 357
+        },
+        {
+          "members": [
+            0,
+            2,
+            6
+          ],
+          "meanAccuracy": 0.5924195223260643,
+          "excess": 0.09330428340822261,
+          "calibrationCorrect": 395
+        },
+        {
+          "members": [
+            0,
+            3,
+            4
+          ],
+          "meanAccuracy": 0.5119418483904465,
+          "excess": 0.0866912199998059,
+          "calibrationCorrect": 319
+        },
+        {
+          "members": [
+            0,
+            3,
+            5
+          ],
+          "meanAccuracy": 0.4771547248182762,
+          "excess": 0.07272267026394023,
+          "calibrationCorrect": 282
+        },
+        {
+          "members": [
+            0,
+            3,
+            6
+          ],
+          "meanAccuracy": 0.5316718587746625,
+          "excess": 0.08615906936720981,
+          "calibrationCorrect": 328
+        },
+        {
+          "members": [
+            0,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.4911734164070613,
+          "excess": 0.0788610035487492,
+          "calibrationCorrect": 302
+        },
+        {
+          "members": [
+            0,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.5456905503634476,
+          "excess": 0.08585093959362455,
+          "calibrationCorrect": 348
+        },
+        {
+          "members": [
+            0,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.5109034267912772,
+          "excess": 0.0707315534593026,
+          "calibrationCorrect": 326
+        },
+        {
+          "members": [
+            1,
+            2,
+            3
+          ],
+          "meanAccuracy": 0.4413291796469367,
+          "excess": 0.10744024223367397,
+          "calibrationCorrect": 274
+        },
+        {
+          "members": [
+            1,
+            2,
+            4
+          ],
+          "meanAccuracy": 0.4553478712357217,
+          "excess": 0.09275919294261509,
+          "calibrationCorrect": 289
+        },
+        {
+          "members": [
+            1,
+            2,
+            5
+          ],
+          "meanAccuracy": 0.4205607476635514,
+          "excess": 0.08534547736661459,
+          "calibrationCorrect": 258
+        },
+        {
+          "members": [
+            1,
+            2,
+            6
+          ],
+          "meanAccuracy": 0.4750778816199377,
+          "excess": 0.08986552278542846,
+          "calibrationCorrect": 297
+        },
+        {
+          "members": [
+            1,
+            3,
+            4
+          ],
+          "meanAccuracy": 0.3946002076843198,
+          "excess": 0.10113207364058968,
+          "calibrationCorrect": 244
+        },
+        {
+          "members": [
+            1,
+            3,
+            5
+          ],
+          "meanAccuracy": 0.35981308411214946,
+          "excess": 0.09412838902313965,
+          "calibrationCorrect": 218
+        },
+        {
+          "members": [
+            1,
+            3,
+            6
+          ],
+          "meanAccuracy": 0.4143302180685358,
+          "excess": 0.10339169198021499,
+          "calibrationCorrect": 249
+        },
+        {
+          "members": [
+            1,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.37383177570093457,
+          "excess": 0.08806769473639943,
+          "calibrationCorrect": 227
+        },
+        {
+          "members": [
+            1,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.4283489096573208,
+          "excess": 0.09088453463508055,
+          "calibrationCorrect": 268
+        },
+        {
+          "members": [
+            1,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.3935617860851506,
+          "excess": 0.08273001361917424,
+          "calibrationCorrect": 245
+        },
+        {
+          "members": [
+            2,
+            3,
+            4
+          ],
+          "meanAccuracy": 0.46261682242990654,
+          "excess": 0.10625867373181548,
+          "calibrationCorrect": 285
+        },
+        {
+          "members": [
+            2,
+            3,
+            5
+          ],
+          "meanAccuracy": 0.4278296988577362,
+          "excess": 0.09752671266777302,
+          "calibrationCorrect": 270
+        },
+        {
+          "members": [
+            2,
+            3,
+            6
+          ],
+          "meanAccuracy": 0.4823468328141225,
+          "excess": 0.1065692297240904,
+          "calibrationCorrect": 294
+        },
+        {
+          "members": [
+            2,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.4418483904465213,
+          "excess": 0.0932784037421997,
+          "calibrationCorrect": 274
+        },
+        {
+          "members": [
+            2,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.49636552440290754,
+          "excess": 0.09587445774012286,
+          "calibrationCorrect": 312
+        },
+        {
+          "members": [
+            2,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.46157840083073726,
+          "excess": 0.08599166027762412,
+          "calibrationCorrect": 290
+        },
+        {
+          "members": [
+            3,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.3811007268951194,
+          "excess": 0.09503741229219437,
+          "calibrationCorrect": 227
+        },
+        {
+          "members": [
+            3,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.4356178608515057,
+          "excess": 0.102376723828379,
+          "calibrationCorrect": 261
+        },
+        {
+          "members": [
+            3,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4008307372793354,
+          "excess": 0.09290395732443073,
+          "calibrationCorrect": 248
+        },
+        {
+          "members": [
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.41484942886812043,
+          "excess": 0.09082954034478184,
+          "calibrationCorrect": 252
+        }
+      ]
+    },
+    "5": {
+      "evaluated": 21,
+      "familyEligible": 4,
+      "topAccuracy": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "seededRandom": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "distinctFamilies": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "complementarity": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "directVote": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "calibration": [
+        {
+          "members": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "meanAccuracy": 0.494392523364486,
+          "excess": 0.0956330489805029,
+          "calibrationCorrect": 318
+        },
+        {
+          "members": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "meanAccuracy": 0.47352024922118385,
+          "excess": 0.08921836938694305,
+          "calibrationCorrect": 297
+        },
+        {
+          "members": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "meanAccuracy": 0.5062305295950156,
+          "excess": 0.09460530274356808,
+          "calibrationCorrect": 319
+        },
+        {
+          "members": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.48193146417445487,
+          "excess": 0.08665555458506809,
+          "calibrationCorrect": 311
+        },
+        {
+          "members": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.5146417445482866,
+          "excess": 0.09010854902417484,
+          "calibrationCorrect": 330
+        },
+        {
+          "members": [
+            0,
+            1,
+            2,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4937694704049845,
+          "excess": 0.08334861851107811,
+          "calibrationCorrect": 314
+        },
+        {
+          "members": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.4454828660436137,
+          "excess": 0.08560087732067817,
+          "calibrationCorrect": 264
+        },
+        {
+          "members": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.47819314641744554,
+          "excess": 0.09047684902126336,
+          "calibrationCorrect": 288
+        },
+        {
+          "members": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4573208722741433,
+          "excess": 0.0838399277957318,
+          "calibrationCorrect": 279
+        },
+        {
+          "members": [
+            0,
+            1,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4657320872274144,
+          "excess": 0.08192928057763414,
+          "calibrationCorrect": 281
+        },
+        {
+          "members": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.4862928348909657,
+          "excess": 0.09154487048844634,
+          "calibrationCorrect": 303
+        },
+        {
+          "members": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.5190031152647975,
+          "excess": 0.09635460641880415,
+          "calibrationCorrect": 331
+        },
+        {
+          "members": [
+            0,
+            2,
+            3,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4981308411214953,
+          "excess": 0.08919920225929484,
+          "calibrationCorrect": 312
+        },
+        {
+          "members": [
+            0,
+            2,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.5065420560747664,
+          "excess": 0.08783227064954727,
+          "calibrationCorrect": 321
+        },
+        {
+          "members": [
+            0,
+            3,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4700934579439252,
+          "excess": 0.08621640900224183,
+          "calibrationCorrect": 286
+        },
+        {
+          "members": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "meanAccuracy": 0.4158878504672897,
+          "excess": 0.0960974272377015,
+          "calibrationCorrect": 247
+        },
+        {
+          "members": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "meanAccuracy": 0.44859813084112155,
+          "excess": 0.09965523432420104,
+          "calibrationCorrect": 268
+        },
+        {
+          "members": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4277258566978193,
+          "excess": 0.09458928970021642,
+          "calibrationCorrect": 258
+        },
+        {
+          "members": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4361370716510903,
+          "excess": 0.0895626498190041,
+          "calibrationCorrect": 267
+        },
+        {
+          "members": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.39968847352024917,
+          "excess": 0.09414820314243845,
+          "calibrationCorrect": 243
+        },
+        {
+          "members": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "meanAccuracy": 0.4404984423676012,
+          "excess": 0.09666467716734115,
+          "calibrationCorrect": 268
+        }
+      ]
+    }
+  },
+  "higherOrder": {
+    "eligiblePairs": 4,
+    "matched": {
+      "left": [
+        0,
+        1,
+        5
+      ],
+      "right": [
+        0,
+        3,
+        5
+      ],
+      "distance": 0.05913255282271612,
+      "accuracyDistance": [
+        0,
+        0.02180685358255452,
+        0
+      ],
+      "phiDistance": [
+        0,
+        0.004236290984049651,
+        0.03308940825611195
+      ]
+    }
+  }
+}
