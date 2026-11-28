@@ -1,0 +1,99 @@
+{
+  "id": "noesis-acquisition-fixtures-001",
+  "evidence": "A",
+  "prior": [
+    "1/4",
+    "1/4",
+    "1/4",
+    "1/4"
+  ],
+  "families": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "target": [
+    "0",
+    "0",
+    "1",
+    "1"
+  ],
+  "groups": [
+    {
+      "id": "information-vs-decision",
+      "costs": [
+        "1",
+        "1"
+      ],
+      "channels": {
+        "irrelevant": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "relevant": [
+          "1/4",
+          "1/4",
+          "3/4",
+          "3/4"
+        ]
+      }
+    },
+    {
+      "id": "variance-vs-information",
+      "costs": [
+        "1",
+        "1"
+      ],
+      "channels": {
+        "coin": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "biased": [
+          "1/10",
+          "1/10",
+          "1/2",
+          "1/2"
+        ]
+      }
+    },
+    {
+      "id": "prediction-vs-decision",
+      "costs": [
+        "4",
+        "1"
+      ],
+      "channels": {
+        "symmetric": [
+          "1/4",
+          "1/4",
+          "3/4",
+          "3/4"
+        ],
+        "targeted": [
+          "1/20",
+          "1/20",
+          "1/4",
+          "1/4"
+        ]
+      }
+    }
+  ],
+  "garbling": {
+    "before": [
+      "1/4",
+      "3/4"
+    ],
+    "after": [
+      "7/20",
+      "13/20"
+    ],
+    "flip": "1/5"
+  },
+  "tests": "Expected entropy and weighted utility comparisons are computed from both outcome branches. The independent check uses the joint mutual-information formula and exact rational risks."
+}
