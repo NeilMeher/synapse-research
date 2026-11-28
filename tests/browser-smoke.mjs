@@ -384,7 +384,7 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),18);
+      assert.equal(await page.locator("article.lesson").count(),19);
       assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       assert.match(await page.locator("#academy-energy-result").textContent(),/720\.0 kWh/);
       assert.match(await page.locator("#academy-finance-result").textContent(),/4\.13.*0\.66.*2\.00/);
@@ -410,6 +410,10 @@ try {
       assert.match(await page.locator("#academy-market").textContent(),/at 102, 105/);
       await page.getByLabel("Probability of choosing A").press("End");
       assert.match(await page.locator("#academy-sampling-result").textContent(),/Choice A 100.0%.*entropy 0.000.*answer 0.0%/);
+      await page.locator("#academy-shared-draw").fill("100");
+      assert.match(await page.locator("#academy-shared-result").textContent(),/65\.00%.*20\.00%/);
+      await page.getByLabel("Voting rule",{exact:true}).selectOption("plurality");
+      assert.match(await page.locator("#academy-vote-result").textContent(),/chooses A/);
       await page.getByLabel("Printed label of the correct answer").selectOption("D");
       assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");
@@ -553,6 +557,26 @@ try {
         await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
         await page.screenshot({path:fileURLToPath(new URL("mirage-qwen-"+width+".png",screenshots))});
       }
+      assert.equal((await page.goto(new URL("echo-public.html",base).href)).status(),200);
+      await page.locator("#echo-data").waitFor();
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      assert.match(await page.locator("#echo-headline").textContent(),/44\.23%.*71\.88%.*27\.65 pp/);
+      assert.equal(await page.locator("#echo-optimization-rows tr").count(),10);
+      assert.equal(await page.locator("#echo-question option").count(),1074);
+      assert.match(await page.locator("#echo-unanimous").textContent(),/144 of 1074/);
+      await page.getByLabel("Matrix measure",{exact:true}).selectOption("wrongAgreement");
+      assert.match(await page.locator("#echo-matrix").textContent(),/53\.59%/);
+      await page.getByLabel("Voting policy",{exact:true}).selectOption("plurality");
+      assert.match(await page.locator("#echo-explore").textContent(),/63\.41%/);
+      await page.getByLabel("Question",{exact:true}).selectOption({index:5});
+      const question=await page.locator("#echo-question").inputValue();
+      assert.match(await page.locator("#echo-replay h3").textContent(),new RegExp(question));
+      for(const checkbox of await page.locator("#echo-members input").all())await checkbox.uncheck();
+      assert.match(await page.locator("#echo-explore").textContent(),/Select at least one model/);
+      if(width===390||width===1440){
+        await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+        await page.screenshot({path:fileURLToPath(new URL("echo-public-"+width+".png",screenshots))});
+      }
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);
@@ -632,9 +656,15 @@ try {
     await missingQwen.getByText(/Qwen capability archive is unavailable/).waitFor();
     assert.equal(await missingQwen.locator("#qwen-results").isVisible(),false);
     console.log("503 Qwen capability archive fallback passed");
+    const missingEchoPublic=await browser.newPage();
+    await missingEchoPublic.route("**/echo-public-empirical-001/results.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingEchoPublic.goto(new URL("echo-public.html",base).href);
+    await missingEchoPublic.getByText(/ECHO public archive is unavailable/).waitFor();
+    assert.equal(await missingEchoPublic.locator("#echo-data").isVisible(),false);
+    console.log("503 ECHO public archive fallback passed");
     if(process.env.AXE_SCRIPT){
       const violations=[];
-      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html","mirage-qwen.html"];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html","mirage-qwen.html","echo-public.html"];
       for(const width of [390,1440]){
         const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
         for(const path of auditRoutes){
@@ -643,6 +673,7 @@ try {
           if(path==="mirage-robustness.html")await page.locator("#robust-outcomes").waitFor();
           if(path==="mirage-decoding.html")await page.locator("#decode-outcomes").waitFor();
           if(path==="mirage-qwen.html")await page.locator("#qwen-results").waitFor();
+          if(path==="echo-public.html")await page.locator("#echo-data").waitFor();
           await page.evaluate(()=>document.fonts.ready);
           await page.addScriptTag({path:process.env.AXE_SCRIPT});
           for(const theme of ["dark","light"]){
@@ -655,7 +686,7 @@ try {
         await page.close();
       }
       assert.deepEqual(violations,[]);
-      console.log("axe accessibility checks passed on ten routes at two widths in both themes");
+      console.log("axe accessibility checks passed on "+auditRoutes.length+" routes at two widths in both themes");
     }
   } finally {
     await browser.close();

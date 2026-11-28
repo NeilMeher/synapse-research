@@ -38,3 +38,7 @@ MIRAGE 004 sampled one quantized model on 16 public canonical tasks with fixed m
 
 
 The Qwen study reports a fixed 12-control development instrument. Its observed confidence scores and failure to qualify leave the full matched estimand undefined. Four overlapping archived SmolLM2 controls allow a descriptive comparison only, with distinct backends and greedy sampler settings. GPU telemetry samples free memory and cannot establish continuous device peaks. [Qwen scope](research/mirage-qwen-capability-results.md)
+
+## ECHO public-archive studies
+
+This retrospective analysis uses seven checkpoint configurations, two English subjects and a fixed answer extractor. Model and original benchmark snapshot hashes were unavailable. The pinned canonical benchmark contents match archived item documents. Context limits and Transformers versions differed and the generation cap can couple format failure with measured accuracy. Trained data overlap and contamination are unknown. Error correlations do not identify model mechanisms. Multiple secondary results are descriptive. The higher-order pair shares two members, so it can neither isolate a higher-order effect nor support a model-population claim. There are no comparable expressed-confidence measurements. Human peer review and external replication remain open. [Audit](research/echo-public-audit.md)

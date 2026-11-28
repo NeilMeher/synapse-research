@@ -66,3 +66,7 @@ CHRONOS descriptive work and teaching examples are implemented. Earlier CHRONOS 
 ## After the Qwen instrument check
 
 The tested Vulkan route meets the hardware checks, and the Qwen 0.5B configuration failed the capability gate. The matched replication remains closed. Investigate a bounded, same-split paired DataDecide slice, starting with exact task hashes and declared choice normalization. Treat MT-Bench as a separate open-ended judgment archive. Any new inference requires a distinct registered capability justification. [Public archive feasibility](research/public-response-feasibility.md)
+
+## After the English public-archive ECHO results
+
+ECHO 001 and 002 executed on 2,142 matched English MMLU-ProX questions. Preserve the prespecified retrospective comparison and the null or negative committee findings. The next checkpoint is a blind metadata and canonical-alignment audit for shared English, Hindi and Marathi source questions and option contents. Freeze an eligible paired multilingual subset before inspecting any new language performance. A larger panel or external archive is needed to isolate useful higher-order effects. [ECHO audit](research/echo-public-audit.md)

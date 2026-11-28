@@ -19,6 +19,7 @@ export const curriculum=[
   ["model-uncertainty","Scientific modelling and uncertainty",["econometrics","optimization"],"scientia"],
   ["measurement-bias","Experimental design and measurement bias",["calibration","testing"],"mirage"],
   ["response-distributions","Sampling and response distributions",["dependence","measurement-bias"],"mirage"],
+  ["committee-optimization","Committee optimization and correlated errors",["dependence","testing"],"echo"],
 ].map(([id,name,requires,study])=>({id,name,requires,study,route:"academy.html#"+id}));
 
 export const findings={
@@ -152,8 +153,19 @@ export function buildKnowledge(){
   connect(decoding,decoding+"/limits","has limitation");
   connect(decoding,"lesson/response-distributions","has educational explanation");
   connect("future/mirage-003",robust,"uses canonical benchmark");
-  add("future/echo-empirical","Proposed research","ECHO empirical ensembles","research/mirage-robustness-results.md","Prospective model-error dependence and aggregation after the measurement gate.");
+  add("future/echo-empirical","Proposed research","MIRAGE-based confidence-weighted ECHO","research/mirage-qwen-capability-results.md","The proposed confidence-weighted ensemble still depends on qualified comparable model responses.");
   connect("future/echo-empirical",robust,"depends on readiness");
+  const echoPublic="empirical/echo-public";
+  add(echoPublic,"Empirical study","ECHO public-archive ensembles","echo-public.html","Retrospective held-out voting, shared failures and committee optimization on genuine MMLU-ProX predictions.");
+  add(echoPublic+"/protocol","Protocol","ECHO public-archive protocol","research/echo-public-protocol.md","Frozen matched cohort, grouped partitions, voting policies and uncertainty.");
+  add(echoPublic+"/archive","Model response archive","ECHO compact prediction archive","empirical/archives/echo-public-empirical-001/manifest.json","2,142 aligned questions and 14,994 canonical archived predictions.");
+  add(echoPublic+"/limits","Limitation","ECHO public archive audit","research/echo-public-audit.md","Alignment, licensing, unknown inference revisions and external validity.");
+  connect(echoPublic,"study/echo","extends synthetic research");
+  connect(echoPublic,"lesson/committee-optimization","uses mathematics or method");
+  connect(echoPublic,echoPublic+"/protocol","tested under protocol");
+  connect(echoPublic,echoPublic+"/archive","produces response archive");
+  connect(echoPublic,echoPublic+"/limits","has limitation");
+  connect("future/public-responses",echoPublic,"motivates archive analysis");
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   return {nodes,edges};

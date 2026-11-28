@@ -151,3 +151,23 @@ python -B -m empirical.qwen.reference
 ```
 
 The resulting archive identifies the exact official model, GPU backend, guarded resource measurements, frozen original prompts, and stopping rules. To reproduce fresh development legally and safely, use a separate clean checkout at `aa0b0215b8d843d0b7783b03e3f2ebfd82642975` with its original resource envelope. The current gate outcome leaves the matched run unopened. [Frozen configuration](research/mirage-qwen-vulkan-streamed.md) · [Reference and outcomes](research/mirage-qwen-capability-results.md)
+
+## ECHO public empirical studies 001 and 002
+
+Use Node 24.12.0 and Python 3.14. The following commands replay the versioned compact predictions, audit their hashes, and independently check the split, exact votes, committee search, error counts and paired bootstrap. They require no network or model weights.
+
+```text
+node empirical/echo-public/run.mjs verify
+python -B empirical/echo-public/reference.py
+```
+
+Raw alignment optionally needs the DuckDB 1.4.4 Parquet reader in an isolated Python environment. Set a local `SOURCE_DIR` and a separate empty `PARTITION_DIR` outside Git. The fetch stage retrieves only the 22 files in the pinned manifest, with total size 101,539,044 bytes. Existing corrupt files fail verification. A rerun of extraction compares the exact structural audit with the frozen one before writing the three compact partitions.
+
+```text
+python -m pip install --only-binary=:all: --no-deps duckdb==1.4.4
+python -B empirical/echo-public/extract.py fetch SOURCE_DIR
+python -B empirical/echo-public/extract.py extract SOURCE_DIR PARTITION_DIR
+python -B empirical/echo-public/reference.py --sources SOURCE_DIR
+```
+
+The simulation and scoring replay compares publisher output on known canonical questions. Original model inference is outside reproduction scope. [Pinned sources](empirical/echo-public/sources.json) · [Frozen protocol](research/echo-public-protocol.md) · [Run manifest](empirical/archives/echo-public-empirical-001/manifest.json)

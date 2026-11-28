@@ -112,3 +112,9 @@ Added the official Indian railway historical reconstruction, source audit, geogr
 ## v1.0.0 candidate · Research platform
 
 Consolidated all initial laboratories into a typed atlas, searchable evidence catalogue and manuscript reader. Added the historical, causal, econometric and uncertainty Academy modules, a programme quality register, review package and empirical roadmap. Updated pinned GitHub Actions to the Node 24 runtime.
+
+## v1.4.0 · Public-archive ECHO
+
+- Archived 14,994 canonical predictions from seven model configurations on 2,142 aligned English MMLU-ProX questions. Recorded one duplicate-option exclusion, pinned file provenance, and frozen group assignments.
+- ECHO 001 found seven-member strict majority −27.65 pp versus the calibration-selected individual on held-out questions. ECHO 002 found no gain for the registered complementarity selection and an inconclusive distinct-family quintet contrast.
+- Added the ECHO Observatory workbench, committee builder, optimization and uncertainty tables, and Mathematical Academy module. The build verifies compact evidence hashes and preserves prior empirical and computational archives.

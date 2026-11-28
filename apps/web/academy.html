@@ -34,6 +34,7 @@
       <li><a href="#causal-inference">Causal inference</a></li>
       <li><a href="#econometrics">Econometric research designs</a></li>
       <li><a href="#model-uncertainty">Scientific modelling and uncertainty</a></li>
+      <li><a href="#committee-optimization">Committee optimization and correlated errors</a></li>
     </ol></nav>
     <details class="result-panel study-block"><summary>Mathematical prerequisites and interactive toolkit</summary><ol id="academy-concepts"></ol></details>
 
@@ -325,6 +326,26 @@
       <h3>Measure at the task level</h3><p>Five samples from one question give five draws within a task. A treatment interval across questions should resample the whole group of draws for each question. A plug-in entropy estimate from five draws can miss rare answers and is generally low on average. MIRAGE 004 reports the number of observed draws beside its entropy estimates.</p>
       <details><summary>Practice and worked solution</summary><p>Two samples choose C and three choose D. What is the estimated probability of agreement between two distinct draws from those five?</p><p>There are 20 ordered pairs. C contributes 2×1 agreements and D contributes 3×2, for 8/20=0.4. Sampling the same draw twice changes the denominator and gives a different agreement estimate.</p></details>
       <p><a href="./mirage-decoding.html#sample-explorer">Inspect actual MIRAGE samples</a> · <a href="./research/mirage-decoding-protocol.md">Read the research sampling protocol</a></p>
+    </article>
+    <article class="result-panel study-block lesson" id="committee-optimization">
+      <h2>Committee optimization and correlated errors</h2>
+      <p>For each question, let Eᵢ equal 1 if member i fails and 0 otherwise. Joint failure P(Eᵢ=1,Eⱼ=1) can exceed P(Eᵢ=1)P(Eⱼ=1). The excess, divided by the product of the indicators’ standard deviations, gives Pearson phi. If either member never varies, phi is undefined.</p>
+      <h3>Count correct votes</h3>
+      <p>With independent correctness probabilities pᵢ, the coefficient of zᵏ in ∏ᵢ[(1−pᵢ)+pᵢz] gives the probability of exactly k correct members. This is the Poisson-binomial distribution. For p = (0.80, 0.65, 0.55), the probability of a correct strict majority is 0.7455. Pairwise moments alone generally leave the count distribution undetermined.</p>
+      <div class="lesson-demo"><h3>Keep reliability fixed and share errors</h3>
+        <p>This synthetic example mixes two reporting laws. Under the shared law, each member is correct when the same uniform draw is below its own pᵢ. Each marginal stays fixed.</p>
+        <label for="academy-shared-draw">Share of questions with a common draw (%)</label><input type="range" id="academy-shared-draw" min="0" max="100" value="30">
+        <p id="academy-shared-result" aria-live="polite"></p>
+      </div>
+      <div class="lesson-demo"><h3>Apply different rules to the same votes</h3>
+        <p>Synthetic votes are A, A, B, C and D. Strict majority needs three votes. Plurality needs the largest vote count.</p>
+        <label for="academy-vote-rule">Voting rule</label><select id="academy-vote-rule"><option value="majority">Strict majority</option><option value="plurality">Plurality</option><option value="unanimity">Unanimity</option></select>
+        <p id="academy-vote-result" aria-live="polite"></p>
+      </div>
+      <h3>Choose the committee before testing it</h3>
+      <p>There are C(7,3)=35 ways to choose three members from seven. One objective is mean calibration accuracy minus a penalty for excess pairwise failure. Comparing all candidates on the same calibration questions can overfit. Freeze the selected subset, then compare it with an equal-sized baseline on new question groups using a paired interval.</p>
+      <details><summary>Practice and worked solution</summary><p>Consider two models with error rates 0.20 and 0.35. What joint failure rate would independence predict? If the observed rate is 0.13, what is the excess?</p><p>Independence gives 0.20×0.35=0.07. The excess is 0.06, so phi is 0.06 / √(0.20×0.80×0.35×0.65) ≈ 0.315. The pair alone leaves the chance of three simultaneous failures undetermined.</p></details>
+      <p><a href="./echo-public.html#echo-builder">Replay the empirical committees</a> · <a href="./research/echo-public-protocol.md">Read the held-out protocol</a></p>
     </article>
   </main>
 </body>

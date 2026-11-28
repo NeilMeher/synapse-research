@@ -42,3 +42,7 @@ Neil Meher directed the Phase III research questions, access constraints and rel
 
 
 Neil Meher authorized the exact Qwen artifact and directed the guarded continuation. Codex prepared and executed the capability instrument, recorded the resource stop and non-mapped route, implemented the separate independent scoring reference, investigated public archives, and integrated the evidence into the Observatory. Independent human review remains pending. [Qwen results](research/mirage-qwen-capability-results.md)
+
+## ECHO public-archive studies 001 and 002
+
+The bounded analysis adapts existing correlation and committee-selection methods to genuine MMLU-ProX predictions under a frozen grouped holdout. The new measurements are for this exact panel and two domains. Contributions include verified canonical alignment, vote and abstention reporting, heterogeneous and categorical independence comparisons, and calibration-based equal-sized subset evaluation. Model-error correlation and diversity selection already have a literature. Computationally independent Python verification occurred. Independent human scientific review and external replication remain pending. [Manuscript and citations](papers/echo-public.md)

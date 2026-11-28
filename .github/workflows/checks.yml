@@ -85,6 +85,8 @@ jobs:
       - run: python -B -m empirical.phase3.device_probe --verify
       - run: python -B -m empirical.qwen.core verify qwen-development
       - run: python -B -m empirical.qwen.reference
+      - run: node empirical/echo-public/run.mjs verify
+      - run: python -B empirical/echo-public/reference.py
       - run: npm run build
       - name: Install browser QA tooling
         run: |

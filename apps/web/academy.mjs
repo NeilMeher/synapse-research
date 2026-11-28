@@ -13,6 +13,7 @@ import {nullFamilyRisk,rankP} from "./engine/scientia.mjs";
 import {bestResponse,expectedNumerators,logitResponse} from "./engine/game-theory.mjs";
 import {barter,inventoryTotal,production,useAndStore} from "./engine/resources.mjs";
 import {createWorld,runWorld} from "./engine/civilizations.mjs";
+import {poissonBinomial,tally} from "./engine/echo-public.mjs";
 
 setupTheme();
 
@@ -34,6 +35,20 @@ updateWhen(["academy-sampling-a"],()=>{
   const entropy=-[p,other,other,other].filter(v=>v>0).reduce((sum,v)=>sum+v*Math.log2(v),0);
   byId("academy-sampling-result").textContent="Choice A "+pct(p)+" · entropy "+entropy.toFixed(3)+
     " bits · probability of a correct answer "+pct(other)+".";
+});
+
+updateWhen(["academy-shared-draw"],()=>{
+  const share=number("academy-shared-draw")/100;
+  const independent=poissonBinomial([.8,.65,.55]).slice(2).reduce((a,b)=>a+b,0);
+  const majority=(1-share)*independent+share*.65;
+  const joint=(1-share)*.2*.35+share*.2;
+  byId("academy-shared-result").textContent="Correct majority "+precise(majority)+
+    " · joint failure of the first two members "+precise(joint)+".";
+});
+
+updateWhen(["academy-vote-rule"],()=>{
+  const vote=tally([0,0,1,2,3],[0,1,2,3,4],4,byId("academy-vote-rule").value,1,487291);
+  byId("academy-vote-result").textContent=vote.answer===null?"The committee abstains.":"The committee chooses "+"ABCD"[vote.answer]+".";
 });
 
 updateWhen(["academy-agents","academy-rho"],()=>{

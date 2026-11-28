@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Replay genuine archived model votes, compare held-out accuracy and see where model errors overlap.">
+  <title>The limits of AI consensus · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <link rel="stylesheet" href="./observatory.css"><link rel="stylesheet" href="./echo-public.css">
+  <script type="module" src="./echo-public-view.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+  <nav aria-label="ECHO navigation"><a href="./observatory.html">Empirical Observatory</a><a href="./academy.html#committee-optimization">Mathematical Academy</a></nav>
+  <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+</div></header>
+<main id="main" class="wrap section study-page observatory echo-public">
+  <header class="observatory-hero">
+    <div><p class="eyebrow">Empirical Observatory · ECHO 001 &amp; 002</p><h1>The limits of AI consensus</h1>
+      <p>Seven language-model configurations answered the same English economics and physics questions. See when their votes agreed, when they failed together, and whether selecting a committee helped.</p></div>
+    <aside class="result-panel obs-run"><h2>Archived MMLU-ProX predictions</h2>
+      <p>7 configurations · 5 families · 2,142 matched questions</p>
+      <a href="#echo-provenance">Check the sources</a></aside>
+  </header>
+  <p id="echo-status" role="status">Loading the ECHO public archive…</p>
+  <div id="echo-data" hidden>
+    <section class="result-panel study-block obs-primary" aria-labelledby="echo-primary">
+      <h2 id="echo-primary">Held-out strict majority</h2>
+      <div id="echo-headline" class="obs-measures"></div><p id="echo-interval"></p>
+      <p>Full-plan accuracy counts an abstention as incorrect. Question groups were assigned before analysis. The single-model baseline was selected on calibration questions.</p>
+    </section>
+    <div class="study-pair study-block">
+      <section class="result-panel" aria-labelledby="echo-individual">
+        <h2 id="echo-individual">Individual model accuracy</h2>
+        <ul id="echo-models" class="echo-bars" aria-label="Individual held-out accuracy and coverage"></ul>
+      </section>
+      <section class="result-panel" aria-labelledby="echo-policies">
+        <h2 id="echo-policies">Voting policies</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Voting outcomes">
+          <table><caption>Same seven members and 1,074 questions</caption><thead><tr><th scope="col">Policy</th><th scope="col">Accuracy</th><th scope="col">Coverage</th><th scope="col">Accuracy when voting</th></tr></thead><tbody id="echo-policy-rows"></tbody></table>
+        </div><p>Strict majority needs four identical valid votes. Plurality uses the largest valid vote count. Unanimity requires every member to agree.</p>
+      </section>
+    </div>
+    <section class="result-panel study-block" aria-labelledby="echo-dependence-heading">
+      <div class="obs-title-row"><h2 id="echo-dependence-heading">When models fail together</h2>
+        <label for="echo-metric">Matrix measure</label><select id="echo-metric">
+          <option value="phi">Error correlation</option><option value="wrongAgreement">Same wrong answer</option>
+          <option value="jointErrorRate">Joint failure frequency</option><option value="residualPhi">Source-adjusted error correlation</option>
+        </select></div>
+      <p id="echo-matrix-note"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Pairwise matrix">
+        <table class="echo-matrix"><caption id="echo-matrix-caption"></caption><thead id="echo-matrix-head"></thead><tbody id="echo-matrix"></tbody></table>
+      </div>
+      <h3>Incorrect members per question</h3>
+      <ul id="echo-failures" class="echo-failures" aria-label="Distribution of incorrect-member counts"></ul>
+      <p id="echo-unanimous"></p>
+    </section>
+    <section class="result-panel study-block" aria-labelledby="echo-optimization">
+      <h2 id="echo-optimization">Committees selected on calibration data</h2>
+      <p id="echo-searched"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Held-out committee optimization">
+        <table><caption>Differences are paired against the same-size accuracy-selected committee. Secondary intervals are descriptive.</caption><thead><tr><th scope="col">Size and method</th><th scope="col">Members</th><th scope="col">Calibration accuracy</th><th scope="col">Held-out accuracy</th><th scope="col">Held-out coverage</th><th scope="col">Difference and interval</th></tr></thead><tbody id="echo-optimization-rows"></tbody></table>
+      </div>
+      <p id="echo-higher"></p>
+    </section>
+    <section class="result-panel study-block" aria-labelledby="echo-references">
+      <h2 id="echo-references">Independence references</h2>
+      <p>These mathematical comparisons use calibration data to estimate how the same panel would behave with independent answers.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Observed and reference voting accuracy">
+        <table><caption>Full-plan accuracy by policy</caption><thead><tr><th scope="col">Policy</th><th scope="col">Observed</th><th scope="col">Homogeneous binomial</th><th scope="col">Heterogeneous Poisson-binomial</th><th scope="col">Independent categorical</th><th scope="col">Stratified re-pairing</th></tr></thead><tbody id="echo-reference-rows"></tbody></table>
+      </div>
+      <p id="echo-support"></p>
+    </section>
+    <section class="result-panel study-block" aria-labelledby="echo-builder">
+      <h2 id="echo-builder">Build and replay a committee</h2>
+      <p>Explore deterministic votes from recorded predictions. Choosing a committee here uses publicly visible held-out outcomes and is exploratory.</p>
+      <fieldset><legend>Committee members</legend><div id="echo-members" class="echo-members"></div></fieldset>
+      <div class="study-controls echo-controls">
+        <div><label for="echo-policy">Voting policy</label><select id="echo-policy"></select></div>
+        <div><label for="echo-question">Question</label><select id="echo-question"></select></div>
+      </div>
+      <p id="echo-explore" role="status"></p>
+      <div id="echo-replay" class="obs-response" aria-live="polite"></div>
+    </section>
+  </div>
+  <section class="result-panel study-block" id="echo-provenance" aria-labelledby="echo-sources">
+    <h2 id="echo-sources">Provenance and limits</h2>
+    <p>These are existing public predictions. Full prompts, question text and generated prose are omitted. The source manifest links to the original files and gives their exact hashes. The generation token cap, extraction filter, finite model panel and unknown training-data overlap limit interpretation. Independent human review remains pending.</p>
+    <ul class="echo-evidence">
+      <li><a href="./papers/echo-public.md">Manuscript and results</a></li>
+      <li><a href="./research/echo-public-protocol.md">Frozen protocol</a></li>
+      <li><a href="./research/echo-public-audit.md">Scientific audit</a></li>
+      <li><a href="./empirical/echo-public/sources.json">Source manifest and licensing</a></li>
+      <li><a href="./empirical/echo-public/alignment.json">Alignment audit</a></li>
+      <li><a href="./empirical/archives/echo-public-empirical-001/manifest.json">Archive manifest</a></li>
+      <li><a href="./empirical/archives/echo-public-empirical-001/results.json" download>Download analysis</a></li>
+      <li><a href="./empirical/archives/echo-public-empirical-001/predictions.json" download>Download compact predictions</a></li>
+      <li><a href="./REPRODUCIBILITY.md">Reproduction commands</a></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

@@ -195,3 +195,17 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Next | Obtain bounded same-split predictions from two DataDecide checkpoints before a separately registered objective-correctness analysis. |
 
 [Actual development evidence](research/mirage-qwen-capability-results.md)
+
+## Empirical Phase IV · ECHO public-archive studies 001 and 002 · 2026-11-28
+
+| Work | Evidence |
+| --- | --- |
+| Baseline | v1.3.1 tag, production branch, Pages and local HEAD agreed at `88f5011`. |
+| Data | 22 pinned files, 101,539,044 bytes, 7 configurations from 5 families. One physics item and its 7 predictions were excluded for duplicate option text. |
+| Aligned evidence | 2,142 questions, 2,132 source groups, 14,994 genuine archived predictions. No new inference or paid resources. |
+| Freeze | Protocol at `fb0c976`, calibration selections at `eefce10`, held-out archive at `032cd14`. |
+| ECHO 001 | Strict majority 44.23% versus 71.88% for calibration-selected Qwen3.5-9B. Difference −27.65 pp with 95% paired interval [−30.45, −24.91]. All seven failed on 144 of 1,074 held-out items. |
+| ECHO 002 | Enumerated 35 trios and 21 quintets. Complementarity and direct methods repeated the accuracy-selected subsets. Distinct-family quintet +0.56 pp with a descriptive interval [−1.02, +2.15]. |
+| Next | Verify English, Hindi and Marathi source-aligned option maps before opening multilingual results. Independent human review is pending. |
+
+[Manuscript](papers/echo-public.md) · [Protocol](research/echo-public-protocol.md) · [Audit](research/echo-public-audit.md)

@@ -19,7 +19,7 @@ if (result.config.experimentId !== manifest.experimentId || manifest.status !== 
 const copies = [];
 for (const file of readdirSync(from("apps/web/"))) copies.push(["apps/web/" + file, file]);
 for (const file of readdirSync(from("engine/"))) {
-  if (["echo.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs", "civilizations.mjs", "resources.mjs", "polis.mjs", "polis2.mjs", "artha.mjs", "energia.mjs", "nexus.mjs", "chronos.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
+  if (["echo.mjs", "echo-public.mjs", "contracts.mjs", "dependence.mjs", "confidence.mjs", "statistics.mjs", "memory.mjs", "morpheus.mjs", "discovery.mjs", "noesis.mjs", "scientia.mjs", "market.mjs", "information.mjs", "episteme.mjs", "validation.mjs", "axiom.mjs", "game-theory.mjs", "civilizations.mjs", "resources.mjs", "polis.mjs", "polis2.mjs", "artha.mjs", "energia.mjs", "nexus.mjs", "chronos.mjs"].includes(file)) copies.push(["engine/" + file, "engine/" + file]);
 }
 for (const study of researchStudies) {
   for (const [offset,phase] of study.archivePhases.entries()) {
@@ -149,6 +149,26 @@ for(const file of [qwenDir+"manifest.json","empirical/qwen/vulkan.json","empiric
   "empirical/qwen/mmap-startup-stop.json","empirical/qwen/capability-review.json","empirical/qwen/reference.py"]){
   copies.push([file,file]);
 }
+const echoPublicId="echo-public-empirical-001";
+const echoPublicDir="empirical/archives/"+echoPublicId+"/";
+const echoPublicManifest=JSON.parse(text(echoPublicDir+"manifest.json"));
+if(echoPublicManifest.id!==echoPublicId||echoPublicManifest.companionStudy!=="echo-public-empirical-002"||
+  echoPublicManifest.originalModelInferenceRequests!==0){
+  throw new Error("Unexpected ECHO public empirical archive");
+}
+for(const [dir,entries] of [[echoPublicDir,echoPublicManifest.outputs],["empirical/echo-public/",echoPublicManifest.inputs]]){
+  for(const [name,entry] of Object.entries(entries)){
+    const file=posix.normalize(dir+name), data=readFileSync(from(file));
+    if(entry.bytes!==data.length||entry.sha256!==createHash("sha256").update(data).digest("hex")){
+      throw new Error("Unverified ECHO public empirical file "+file);
+    }
+    if(!name.startsWith("../"))copies.push([file,file]);
+  }
+}
+for(const file of [echoPublicDir+"manifest.json","empirical/echo-public/reference.py",
+  "empirical/echo-public/split.py","papers/echo-public.md","schemas/echo-public-predictions-v1.json"]){
+  copies.push([file,file]);
+}
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
@@ -198,7 +218,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   version:JSON.parse(text("package.json")).version,
   registryVersion,
   studies:researchStudies.map(study=>study.id),
-  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId],
+  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId,echoPublicId,echoPublicManifest.companionStudy],
   empiricalDevelopment:[qwenDevId],
 })+"\n");
 const anchors = new Map();

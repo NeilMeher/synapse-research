@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compact ECHO public prediction evidence",
+  "type": "object",
+  "required": [
+    "development",
+    "calibration",
+    "heldout"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "development": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "calibration": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "heldout": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "$defs": {
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "group",
+        "subject",
+        "source",
+        "sourceId",
+        "options",
+        "gold",
+        "contentHash",
+        "predictions",
+        "sourceRows"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "group": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "subject": {
+          "enum": [
+            "economics",
+            "physics"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "options": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 10
+        },
+        "gold": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "predictions": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "integer",
+            "minimum": -2,
+            "maximum": 9
+          }
+        },
+        "sourceRows": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

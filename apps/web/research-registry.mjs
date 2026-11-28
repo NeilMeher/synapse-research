@@ -1,4 +1,4 @@
-export const registryVersion=7;
+export const registryVersion=8;
 
 export const divisions=[
   ["cognition","Individual cognition"],
@@ -157,7 +157,8 @@ export function sharedStudy(left,right){
 export const journeys=[
   {name:"Collective intelligence",steps:[
     ["ECHO","index.html#echo"],["Correlated errors","index.html#robustness"],
-    ["Opinion dynamics","research/echo2-mathematics.md"],["Collective decision accuracy","index.html#evidence"]]},
+    ["Opinion dynamics","research/echo2-mathematics.md"],["Collective decision accuracy","index.html#evidence"],
+    ["Empirical committees","echo-public.html"],["Committee optimization","academy.html#committee-optimization"]]},
   {name:"Cognition and markets",steps:[
     ["MIRAGE","mirage.html"],["ECHO","index.html#echo"],["REFLEX","reflex.html"],["CONVERGENCE","convergence.html"]]},
   {name:"Memory and behaviour",steps:[
