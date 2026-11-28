@@ -1,0 +1,16 @@
+{
+  "evidence": "A",
+  "id": "axiom-strategic-settlement-001",
+  "outputs": {
+    "commitment.json": {
+      "bytes": 39256,
+      "sha256": "37449dbb1d2bc343e1f67f575a742cab9abaead834fe24c40a7d5842bd59ebbb"
+    }
+  },
+  "protocol": {
+    "bytes": 1377,
+    "sha256": "425113caae6ec2baa46be1c4b44c217e069e290e163cbe240d5038cded7d6e53"
+  },
+  "protocolCommit": "ec96843ebbc113d59fe5b126b1a2abed430995a1",
+  "status": "completed"
+}

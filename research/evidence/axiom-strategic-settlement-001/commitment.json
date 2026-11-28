@@ -1,0 +1,1606 @@
+{
+  "cases": [
+    {
+      "audit": {
+        "delay": 1,
+        "eta": "3/5"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "1/20",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "2083/1000",
+            "2083/1000"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1/20",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-1/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-1/20",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "1397/500",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1027/1000"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "-51/100",
+            "-51/100"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-33/100",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "63/50"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    },
+    {
+      "audit": {
+        "delay": 1,
+        "eta": "3/5"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "2/5",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "1733/1000",
+            "1733/1000"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-2/5",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-2/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-2/5",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "611/250",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1027/1000"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "-43/50",
+            "-43/50"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-17/25",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "63/50"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    },
+    {
+      "audit": {
+        "delay": 1,
+        "eta": "9/10"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "1/20",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "2407/1000",
+            "2407/1000"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1/20",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-1/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-1/20",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "1613/500",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1183/1000"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "1041/500",
+            "1041/500"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "1563/500",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1283/1000"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    },
+    {
+      "audit": {
+        "delay": 1,
+        "eta": "9/10"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "2/5",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "2057/1000",
+            "2057/1000"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-2/5",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-2/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-2/5",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "719/250",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1183/1000"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "433/250",
+            "433/250"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "347/125",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "1283/1000"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    },
+    {
+      "audit": {
+        "delay": 2,
+        "eta": "9/10"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "1/20",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "13/10",
+            "13/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1/20",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-1/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "7/4",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "-21/20",
+            "-21/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-21/20",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    },
+    {
+      "audit": {
+        "delay": 2,
+        "eta": "9/10"
+      },
+      "buyerMaximin": "27/10",
+      "cost": "2/5",
+      "menu": {
+        "delivery/always": {
+          "buyerRange": [
+            "27/10",
+            "27/10"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "18/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/10"
+              }
+            ]
+          }
+        },
+        "delivery/never": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "delivery/positive": {
+          "buyerRange": [
+            "19/20",
+            "19/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-2/5",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "-2/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "7/5",
+                "first": "effort",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "prepay/always": {
+          "buyerRange": [
+            "7/20",
+            "7/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              },
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "shirk",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "4/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "33/20"
+              }
+            ]
+          }
+        },
+        "prepay/never": {
+          "buyerRange": [
+            "-1",
+            "-1"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-1",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "prepay/positive": {
+          "buyerRange": [
+            "-7/5",
+            "-7/5"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "decline",
+                "seller": "1"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "-7/5",
+                "first": "shirk",
+                "secondIfOffered": "effort",
+                "seller": "1"
+              }
+            ]
+          }
+        },
+        "reject/always": {
+          "buyerRange": [
+            "27/20",
+            "27/20"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              },
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "shirk",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "9/5",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "13/20"
+              }
+            ]
+          }
+        },
+        "reject/never": {
+          "buyerRange": [
+            "0",
+            "0"
+          ],
+          "responses": {
+            "high-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "decline",
+                "seller": "0"
+              }
+            ],
+            "low-cost": [
+              {
+                "buyer": "0",
+                "first": "decline",
+                "secondIfOffered": "effort",
+                "seller": "0"
+              }
+            ]
+          }
+        }
+      },
+      "optimalPlans": [
+        "delivery/always"
+      ]
+    }
+  ],
+  "evidence": "A",
+  "id": "axiom-strategic-settlement-001",
+  "transferLedger": [
+    {
+      "buyer": [
+        1,
+        0
+      ],
+      "conserved": [
+        2,
+        2
+      ],
+      "contract": "prepay",
+      "moved": 1,
+      "seller": [
+        1,
+        2
+      ],
+      "success": false
+    },
+    {
+      "buyer": [
+        1,
+        1
+      ],
+      "conserved": [
+        2,
+        2
+      ],
+      "contract": "prepay",
+      "moved": 2,
+      "seller": [
+        1,
+        1
+      ],
+      "success": true
+    },
+    {
+      "buyer": [
+        2,
+        0
+      ],
+      "conserved": [
+        2,
+        2
+      ],
+      "contract": "delivery",
+      "moved": 0,
+      "seller": [
+        0,
+        2
+      ],
+      "success": false
+    },
+    {
+      "buyer": [
+        1,
+        1
+      ],
+      "conserved": [
+        2,
+        2
+      ],
+      "contract": "delivery",
+      "moved": 2,
+      "seller": [
+        1,
+        1
+      ],
+      "success": true
+    }
+  ]
+}
