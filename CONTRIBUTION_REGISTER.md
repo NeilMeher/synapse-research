@@ -36,3 +36,6 @@ Neil Meher directed the SYNAPSE 2.0 question, resource limits and staged researc
 
 
 Neil Meher directed the empirical Phase II continuation, its scientific questions, zero-cost restriction and publication gates. Codex assisted with the retrospective audit, balanced design, protocol, software implementation, execution, separate computational reference, interpretation and Observatory/Academy integration. The actual responses came from the pinned SmolLM2-135M-Instruct Q4_K_M artifact through the local b12823 CPU runtime. Independent human review remains pending. [MIRAGE 002](research/mirage-robustness-results.md)
+
+
+Neil Meher directed the Phase III research questions, access constraints and release gates. Codex assisted with the registered design, matched plan preparation, actual SmolLM2 execution, device measurements, archive reproduction, independent computational scoring and public analysis/replay. Independent human review and external replication remain pending. [MIRAGE 004](research/mirage-decoding-results.md)

@@ -100,6 +100,31 @@ for(const name of ["responses.ndjson","scores.json","manifest.json"]){
   }
   copies.push([file,file]);
 }
+const decodingId="mirage-empirical-decoding-004";
+for(const [id,classification,count] of [[decodingId,"registered-actual-model",192],
+  [decodingId+"-development","development-actual-model",16]]){
+  const dir="empirical/archives/"+id+"/", manifest=JSON.parse(text(dir+"manifest.json"));
+  if(manifest.classification!==classification||manifest.execution.studyId!==decodingId||
+    manifest.planned!==count||manifest.status!=="completed")throw new Error("Unverified MIRAGE decoding evidence "+id);
+  const outputs=["responses.ndjson","scores.json","schedule.json"];
+  if(classification==="registered-actual-model")outputs.push("analysis.json");
+  for(const name of outputs){
+    const source=dir+name, data=readFileSync(from(source)), expected=manifest.outputs[name];
+    if(expected?.bytes!==data.length||expected.sha256!==createHash("sha256").update(data).digest("hex")){
+      throw new Error("Unverified decoding artifact "+source);
+    }
+    copies.push([source,source]);
+  }
+  for(const [name,sha] of Object.entries(manifest.execution.files)){
+    const sources={"protocol.json":"empirical/phase3/protocol.json","prompt.json":"empirical/robustness/prompt.json",
+      "mirage-pilot-v1.json":"empirical/mirage-pilot-v1.json","mirage-decoding-protocol.md":"research/mirage-decoding-protocol.md"};
+    const file=sources[name]??(name.startsWith("heldout.")?"empirical/robustness/inputs/"+name:"empirical/phase3/inputs/"+name);
+    if(createHash("sha256").update(readFileSync(from(file))).digest("hex")!==sha)throw new Error("Unverified decoding input "+name);
+  }
+  copies.push([dir+"manifest.json",dir+"manifest.json"]);
+}
+for(const file of ["empirical/phase3/reference.py","empirical/phase3/protocol.json","empirical/phase3/inputs/decoding.json",
+  "empirical/phase3/inputs/cross-model.json","empirical/phase3/vulkan-development.json"])copies.push([file,file]);
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
@@ -149,7 +174,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   version:JSON.parse(text("package.json")).version,
   registryVersion,
   studies:researchStudies.map(study=>study.id),
-  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId],
+  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {

@@ -44,6 +44,12 @@ test("MIRAGE 002 exposes verified evidence separately from proposed ensembles",(
   assert.ok(graph.edges.some(e=>e.from==="future/echo-empirical"&&e.type==="depends on readiness"));
 });
 
+test("MIRAGE 004 is searchable and Qwen preparation remains a distinct evidence class",()=>{
+  assert.equal(searchEvidence(graph.nodes,"decoding","Empirical study")[0].id,"empirical/mirage-004");
+  assert.equal(graph.nodes.find(record=>record.id==="future/mirage-003").type,"Prepared study");
+  assert.ok(graph.edges.some(edge=>edge.from==="empirical/mirage-004"&&edge.to==="empirical/mirage-002"));
+});
+
 test("mathematical prerequisites precede the lessons that rely on them",()=>{
   const preceding=new Set();
   for(const lesson of curriculum){

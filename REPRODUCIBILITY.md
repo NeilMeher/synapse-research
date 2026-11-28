@@ -117,3 +117,25 @@ python -B -m empirical.robustness.archive build --split heldout
 ```
 
 The fixed seed, settings and files preserve the design. Hardware, runtime or tokenizer changes can change observed outputs. [Protocol](research/mirage-robustness-protocol.md) · [Study results](research/mirage-robustness-results.md)
+
+
+## MIRAGE 004 · Decode, sample and reorder
+
+From a clean checkout, the frozen request plan and evidence replay need no model server, GPU or network access.
+
+```sh
+python -B -m unittest empirical.phase3.test_phase3
+python -B -m empirical.phase3.archive verify development
+python -B -m empirical.phase3.archive verify decoding
+python -B -m empirical.phase3.reference
+python -B -m empirical.phase3.device_probe --verify
+```
+
+A fresh CPU run uses a separate clean checkout at the freeze, a verified original b12823 Windows runtime, the exact SmolLM2 GGUF, and an empty journal. Reusing the exact source commit and journal allows restart with no regenerated responses.
+
+```sh
+python -B -m empirical.phase3.collect decoding --runtime PATH_TO_RUNTIME --weights PATH_TO_GGUF --freeze-commit 35e2a14c57fe76d7218fbff11a953199c719a0c1
+python -B -m empirical.phase3.archive build decoding
+```
+
+The archived analyzer references 16 canonical tasks. Repeated samples per task are a group for uncertainty. The fresh-run output may differ across runtime or machine configurations. Qwen has a separate prepared protocol and needs authorization and runtime preflight before development. [Decoding design](research/mirage-decoding-protocol.md) · [Backend model access](research/mirage-phase3-access.md)

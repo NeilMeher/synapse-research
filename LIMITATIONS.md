@@ -32,3 +32,6 @@ The first empirical MIRAGE pilot used one 135M model, Q4_K_M weights, one greedy
 
 
 MIRAGE 002 used one quantized checkpoint, four fixed task families, a fractional range of presentation permutations, exact grammar constraints and greedy decoding. It identifies isolated factor changes relative to reference arrangements. Interactions among perturbations, instruction-order effects outside development, stochastic sampling and transfer to other models remain open. The no-cue contrast changes length and content together. The primary comparison uses tokenizer-length-matched statements with residual semantic differences. Near-constant labels and accuracy around chance limit ensemble interpretation. [MIRAGE 002 limitations](research/mirage-robustness-results.md)
+
+
+MIRAGE 004 sampled one quantized model on 16 public canonical tasks with fixed matched text and reference presentations. Five draws give a coarse within-task entropy estimate. The confidence-first comparison changes grammar and the instruction together, and substantial abstention changes the analyzed sample. The four-call device probe gives a feasibility observation with a large cold first-request effect. Qwen transfer and ensemble reliability remain unresolved. [Decoding findings](research/mirage-decoding-results.md)

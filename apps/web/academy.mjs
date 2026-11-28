@@ -29,6 +29,13 @@ updateWhen(["academy-correct-position","academy-correct-label"],()=>{
     ". Always-A is "+(label==="A"?"correct":"incorrect")+". Always-first-position is "+(location===1?"correct":"incorrect")+".";
 });
 
+updateWhen(["academy-sampling-a"],()=>{
+  const p=number("academy-sampling-a")/100, other=(1-p)/3;
+  const entropy=-[p,other,other,other].filter(v=>v>0).reduce((sum,v)=>sum+v*Math.log2(v),0);
+  byId("academy-sampling-result").textContent="Choice A "+pct(p)+" · entropy "+entropy.toFixed(3)+
+    " bits · probability of a correct answer "+pct(other)+".";
+});
+
 updateWhen(["academy-agents","academy-rho"],()=>{
   const n=number("academy-agents"), rho=number("academy-rho");
   const shared=countDistribution(n,.65,rho,"shared");

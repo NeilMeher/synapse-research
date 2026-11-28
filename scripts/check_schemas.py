@@ -53,3 +53,14 @@ for suffix in ("", "-development"):
     for line in lines:
         validator.validate(json.loads(line))
     print(f"empirical-robustness-v1 verified {len(lines)} request records from {path.parent.name}.")
+
+for suffix in ("", "-development"):
+    path = ROOT / "empirical/archives" / ("mirage-empirical-decoding-004" + suffix) / "responses.ndjson"
+    lines = path.read_bytes().splitlines()
+    for line in lines:
+        validator.validate(json.loads(line))
+    print(f"empirical-robustness-v1 verified {len(lines)} request records from {path.parent.name}.")
+gpu = json.loads((ROOT / "empirical/phase3/vulkan-development.json").read_bytes())
+for record in gpu["records"]:
+    validator.validate(record["response"])
+print(f"empirical-robustness-v1 verified {len(gpu['records'])} Vulkan development records.")

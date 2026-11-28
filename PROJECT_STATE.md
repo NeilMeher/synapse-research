@@ -166,3 +166,18 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Blocker | Qwen candidate not yet evaluated. Obtain authorization for 491 MB and recheck host memory. ECHO prerequisites remain open. |
 
 [Execution results](research/mirage-robustness-results.md)
+
+
+## Empirical Phase III · 2026-11-28
+
+| Work | Evidence |
+| --- | --- |
+| Baseline | v1.2.0 tag, Pages, review branch and local HEAD agreed at `230e46a`. Prior archives are intact. |
+| MIRAGE 003 | 512 exact matched requests and 12 disjoint capability controls prepared. Qwen download authorization and a safe runtime configuration are pending. |
+| MIRAGE 004 | Protocol `35e2a14`. Archive `36733d1`. 192 genuine outputs, 183 scorable, nine abstentions, no infrastructure failures. |
+| Result | A selection fell 26.25 pp comparing T=0.7 with T=0.3. Accuracy stayed 23.75%. The registered ECHO reasoning gate failed both accuracy criteria. |
+| Backend | Portable Vulkan detected the GTX 1650. Four SmolLM2 development probes with mixed startup and latency results are preserved separately. |
+| Site | Actual decoding replay, comparison tables, distribution explorer, prepared Qwen record and a response-distributions Academy lesson. |
+| Next | Obtain authorization, freeze Qwen capability route, measure 12 controls and check memory before the matched run. |
+
+[Full results](research/mirage-decoding-results.md)

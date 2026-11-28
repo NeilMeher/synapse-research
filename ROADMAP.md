@@ -53,3 +53,11 @@ CHRONOS descriptive work and teaching examples are implemented. Earlier CHRONOS 
 2. After authorization and resource preflight, freeze a matched Qwen replication and measure real task competence and presentation effects.
 3. Reassess ECHO readiness using the resulting model diversity, canonical response variation and confidence diagnostics. An actual ensemble study remains conditional on that evidence.
 4. Investigate social update with matched exposure and predeclared switching once individual response measurement transfers. [MIRAGE 002](research/mirage-robustness-results.md)
+
+
+## Phase III continuation
+
+1. Complete authorized Qwen capability checks and measure CPU or explicitly registered Vulkan feasibility.
+2. If feasible, execute MIRAGE 003 on the exact 512-request matched design. Treat any fresh-item verification as a separate study.
+3. Reassess response competence, canonical diversity and availability of suitable genuinely independent member sources. Freeze ECHO only after its gate is met.
+4. Confidence-weighted aggregation and social-intervention studies remain conditional. [Decoding readiness](research/mirage-decoding-results.md)

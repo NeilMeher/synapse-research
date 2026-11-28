@@ -10,6 +10,8 @@ The first exploratory model study compares expressed confidence under neutral an
 
 The second MIRAGE study separates displayed position, answer letters, grammar order and cue content in a registered 32-task design. The original archive remains available for comparison. [MIRAGE 002 workbench](https://neilmeher.github.io/synapse-research/mirage-robustness.html) · [Research report](research/mirage-robustness-results.md)
 
+The registered decoding investigation measures genuine repeated choice and confidence outputs. The cross-model protocol is prepared separately and awaits Qwen access. [Decoding laboratory](https://neilmeher.github.io/synapse-research/mirage-decoding.html) · [Study results](research/mirage-decoding-results.md)
+
 ## Research
 
 | Study | Method and evidence |

@@ -317,6 +317,15 @@
       <details><summary>Practice and worked solution</summary><p>Give the correct answer label D in the first position. Which rule is correct? What happens if you keep label D and display the correct answer second?</p><p>The first-position rule succeeds in the original arrangement while always-A fails. Moving the answer to position two makes both rules fail. Changing just the label to A would instead make always-A succeed while leaving the position rule unchanged.</p></details>
       <p><a href="./mirage-robustness.html#permutation-replay">Replay an actual MIRAGE presentation</a> · <a href="./research/mirage-robustness-protocol.md">Inspect the design and missingness estimands</a></p>
     </article>
+    <article class="result-panel study-block lesson" id="response-distributions">
+      <h2>Sampling and response distributions</h2>
+      <p>A decoder turns token scores into output choices. Greedy decoding takes the best-ranked token. Sampling draws a token from a probability distribution. Temperature rescales score differences before sampling and changes the probabilities of competing strings.</p>
+      <p>For a categorical distribution with probabilities pᵢ, Shannon entropy is H=−Σ pᵢ log₂(pᵢ). A fixed response has entropy zero. Four equally probable outputs have entropy 2 bits because each probability is 1/4. Entropy measures uncertainty about the next response category. Correctness needs a separate answer key.</p>
+      <div class="lesson-demo"><h3>Vary the probability of one label</h3><p>This mathematical demonstration divides the remaining probability equally between B, C and D. The correct answer is fixed at B.</p><label>Probability of choosing A <input id="academy-sampling-a" type="range" min="0" max="100" value="25"></label><p id="academy-sampling-result" aria-live="polite"></p></div>
+      <h3>Measure at the task level</h3><p>Five samples from one question give five draws within a task. A treatment interval across questions should resample the whole group of draws for each question. A plug-in entropy estimate from five draws can miss rare answers and is generally low on average. MIRAGE 004 reports the number of observed draws beside its entropy estimates.</p>
+      <details><summary>Practice and worked solution</summary><p>Two samples choose C and three choose D. What is the estimated probability of agreement between two distinct draws from those five?</p><p>There are 20 ordered pairs. C contributes 2×1 agreements and D contributes 3×2, for 8/20=0.4. Sampling the same draw twice changes the denominator and gives a different agreement estimate.</p></details>
+      <p><a href="./mirage-decoding.html#sample-explorer">Inspect actual MIRAGE samples</a> · <a href="./research/mirage-decoding-protocol.md">Read the research sampling protocol</a></p>
+    </article>
   </main>
 </body>
 </html>

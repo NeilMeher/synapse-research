@@ -18,6 +18,7 @@ export const curriculum=[
   ["econometrics","Econometric research designs",["causal-inference","testing"],"chronos"],
   ["model-uncertainty","Scientific modelling and uncertainty",["econometrics","optimization"],"scientia"],
   ["measurement-bias","Experimental design and measurement bias",["calibration","testing"],"mirage"],
+  ["response-distributions","Sampling and response distributions",["dependence","measurement-bias"],"mirage"],
 ].map(([id,name,requires,study])=>({id,name,requires,study,route:"academy.html#"+id}));
 
 export const findings={
@@ -135,6 +136,18 @@ export function buildKnowledge(){
   connect(robust,"study/axiom","shares permutation mathematics");
   connect(robust,"study/scientia","shares experimental design");
   connect(robust,"lesson/measurement-bias","has educational explanation");
+  const decoding="empirical/mirage-004";
+  add(decoding,"Empirical study","MIRAGE 004 decoding sensitivity","mirage-decoding.html","Actual repeated SmolLM2 responses test sampling, entropy, confidence and answer-label diversity.");
+  add(decoding+"/protocol","Protocol","MIRAGE 004 decoding protocol","research/mirage-decoding-protocol.md","A matched 16-task subset, disjoint development controls and a prospective ensemble decision.");
+  add(decoding+"/archive","Model response archive","MIRAGE 004 genuine sampled outputs","empirical/archives/mirage-empirical-decoding-004/manifest.json","Immutable raw model outputs, fresh greedy controls, settings and derived analyses.");
+  add(decoding+"/limits","Limitation","MIRAGE 004 generalization and ECHO readiness","research/mirage-decoding-results.md","Repeated observations from one model under two temperatures and a response-format comparison.");
+  add("future/mirage-003","Prepared study","MIRAGE 003 matched cross-model comparison","research/mirage-cross-model-protocol.md","Qwen access and preflight are pending. The 512 matched requests have a verified plan.");
+  connect(decoding,robust,"uses frozen task subset");
+  connect(decoding,decoding+"/protocol","tested under protocol");
+  connect(decoding,decoding+"/archive","produces response archive");
+  connect(decoding,decoding+"/limits","has limitation");
+  connect(decoding,"lesson/response-distributions","has educational explanation");
+  connect("future/mirage-003",robust,"uses canonical benchmark");
   add("future/echo-empirical","Proposed research","ECHO empirical ensembles","research/mirage-robustness-results.md","Prospective model-error dependence and aggregation after the measurement gate.");
   connect("future/echo-empirical",robust,"depends on readiness");
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");

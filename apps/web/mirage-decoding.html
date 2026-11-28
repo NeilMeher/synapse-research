@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore real repeated model responses, answer diversity, confidence and format sensitivity in MIRAGE 004.">
+  <title>MIRAGE 004 · Decoding Laboratory</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <link rel="stylesheet" href="./observatory.css"><link rel="stylesheet" href="./mirage-decoding.css">
+  <script type="module" src="./mirage-decoding-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Decoding laboratory navigation"><a href="./observatory.html">Empirical Observatory</a><a href="./mirage-robustness.html">MIRAGE 002</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main id="main" class="wrap section study-page observatory">
+    <div class="observatory-hero">
+      <div><p class="eyebrow">Empirical Observatory · MIRAGE 004</p>
+        <h1>Does sampling change the answer?</h1>
+        <p>Compare repeated choices, reported confidence and accuracy on the same problems. Replay actual outputs from four registered decoding and format settings.</p></div>
+      <div class="result-panel obs-run"><p class="eyebrow">Registered actual-model study</p><h2>SmolLM2-135M-Instruct</h2><p>Q4_K_M · pinned llama.cpp b12823 CPU · 16 fixed tasks</p>
+        <a href="./research/mirage-decoding-protocol.md">Read the frozen protocol</a></div>
+    </div>
+    <p id="decode-status" role="status">Checking the decoding archive…</p>
+    <div id="decode-outcomes" hidden>
+      <section class="result-panel study-block obs-primary" aria-labelledby="decode-primary">
+        <h2 id="decode-primary">How often did the model choose A?</h2>
+        <div id="decode-headline" class="obs-measures"></div>
+        <p id="decode-denominator"></p>
+        <p>Differences compare temperature 0.7 against 0.3. Each underlying question contributes once to the estimate. The response distributions use five draws per stochastic setting.</p>
+      </section>
+      <section class="result-panel study-block" aria-labelledby="decode-comparison">
+        <h2 id="decode-comparison">Accuracy and calibration</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Decoder performance">
+          <table><caption>Recorded performance by setup</caption><thead><tr><th scope="col">Outcome</th><th scope="col">Greedy</th><th scope="col">T = 0.3</th><th scope="col">T = 0.7</th><th scope="col">Confidence first</th></tr></thead><tbody id="decode-metrics"></tbody></table>
+        </div>
+        <p id="decode-format-auth"></p>
+        <p id="decode-gate"></p>
+      </section>
+      <section class="result-panel study-block" id="sample-explorer" aria-labelledby="decode-explore">
+        <h2 id="decode-explore">Explore the recorded samples</h2>
+        <p>Choose a task and an executed configuration. The controls replay archived responses.</p>
+        <button id="decode-load" type="button" class="quiet">Load recorded samples</button>
+        <p id="decode-replay-status" role="status"></p>
+        <div id="decode-replay" hidden>
+          <div class="study-controls">
+            <div><label for="decode-task">Canonical task</label><select id="decode-task"></select></div>
+            <div><label for="decode-arm">Recorded configuration</label><select id="decode-arm">
+              <option value="greedy">Greedy answer first</option><option value="low">Sampling at 0.3</option><option value="moderate">Sampling at 0.7</option><option value="format">Greedy confidence first</option>
+            </select></div>
+          </div>
+          <div id="decode-detail" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+    <section class="result-panel study-block" aria-labelledby="decode-evidence-title">
+      <h2 id="decode-evidence-title">Evidence and reproduction</h2>
+      <p>The comparison applies to one checkpoint and a fixed subset of public tasks. Independent scientific review and external replication are pending.</p>
+      <ul class="decode-links">
+        <li><a href="./research/mirage-decoding-results.md">Study results and ECHO readiness</a></li>
+        <li><a href="./research/mirage-phase3-access.md">Model access and runtime evidence</a></li>
+        <li><a href="./research/mirage-cross-model-protocol.md">Prepared cross-model protocol</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-decoding-004/manifest.json">Run manifest</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-decoding-004/responses.ndjson" download>Raw genuine responses</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-decoding-004/scores.json" download>Scored canonical answers</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-decoding-004/analysis.json" download>Derived statistical results</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-decoding-004/schedule.json" download>Frozen request schedule</a></li>
+        <li><a href="./empirical/phase3/reference.py" download>Independent reference</a></li>
+        <li><a href="./REPRODUCIBILITY.md">Reproduction instructions</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

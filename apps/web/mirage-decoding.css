@@ -1,0 +1,8 @@
+.decode-links { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr)); gap:0 .9rem; }
+.decode-links a { display:flex; align-items:center; min-height:44px; }
+.decode-distribution { list-style:none; margin:.4rem 0 1rem; padding:0; display:grid; gap:.45rem; }
+.decode-distribution li { display:grid; grid-template-columns:5rem minmax(0,1fr) 2rem; align-items:center; gap:.6rem; }
+.decode-distribution .decode-track { height:.55rem; border-radius:8px; background:var(--band); border:1px solid var(--line); overflow:hidden; }
+.decode-distribution .decode-bar { display:block; height:100%; background:var(--bright); }
+.decode-actual { background:var(--band); padding:.7rem; overflow-wrap:anywhere; white-space:pre-wrap; }
+#decode-detail { margin-top:1rem; }

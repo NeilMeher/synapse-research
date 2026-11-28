@@ -52,3 +52,8 @@ MIRAGE empirically evaluated one local quantized language model on 64 paired tas
 ## MIRAGE 002 · Registered response sensitivity
 
 MIRAGE 002 separated physical order, displayed letters and grammar order in 512 genuine SmolLM2 responses. The advice-versus-matched-text Brier comparison was inconclusive. Label assignment changed canonical content in 126 of 128 pairs. Reordering the equivalent grammar produced identical 128 paired outputs. The single-model result is bounded by its fixed templates and decoding. [Protocol](research/mirage-robustness-protocol.md) · [Report](research/mirage-robustness-results.md)
+
+
+## MIRAGE 004 · Registered decoding and format study
+
+Temperature 0.7 reduced choosing A by 26.25 points compared with 0.3 and increased within-task canonical entropy. Both sampled settings achieved 23.75% full-plan accuracy. The confidence-first format abstained in nine of 16 responses. This evidence concerns one fixed checkpoint and task population. MIRAGE 003 is prepared, and no ECHO ensemble inference or confidence-weighted results exist in this milestone. [Study](research/mirage-decoding-results.md)

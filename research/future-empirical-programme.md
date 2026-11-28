@@ -24,3 +24,6 @@ The first narrow MIRAGE pilot is now archived as exploratory evidence. The next 
 ## Candidate future peer-influence design
 
 After the model/measurement gate, obtain an initial independent canonical response before any peer message. On a fresh task set, randomly assign a matched neutral statement or one inaccurate peer response with confidence wording varied in a second independent factor. Prespecify switching from a correct canonical answer as the main conditional outcome and report the denominator, full-plan correctness and abstention separately. Counterbalance answer labels and use correct-peer and length controls if resources permit. The advice can be an explicit scripted treatment. It should never be presented in reporting as a genuine independent model vote. [MIRAGE protocol](mirage-robustness-protocol.md)
+
+
+MIRAGE 004 separates response diversity from reasoning accuracy. The moderate temperature arm showed more canonical variation and failed the prospective ECHO accuracy gate. Confirm the official Qwen artifact, backend, resource and authorization state before the prepared matched replication. A future peer-opinion protocol should retain untouched initial responses, registered cue assignment and canonical transitions as described above. [Current evidence](mirage-decoding-results.md)

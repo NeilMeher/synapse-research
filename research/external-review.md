@@ -31,3 +31,8 @@ Check the registered 64 paired items against the printed-answer reference, repla
 ## MIRAGE 002 review route
 
 Check the pinned [protocol](mirage-robustness-protocol.md) against the task, key and realized balance files. Reproduce the printed-question solver and the 24-permutation fixture checks with the documented commands. The source audit locates the grammar mask and greedy sampler in b12823. Inspect the paired/full-plan denominators and recover the available-pair loss with the public integer-percentage output and canonical score record. A fresh inference replication should use its own result archives and distinguish runtime effects from task-generalization claims. [MIRAGE 002 results](mirage-robustness-results.md)
+
+
+## MIRAGE 004 review
+
+Reproduce the exact 192-request fingerprints, task-level bootstrap and rational Brier checks. Review coverage and full-plan accuracy before interpreting the change in response diversity. Compare the four measured CPU and Vulkan development requests separately from the registered study, including startup timing. The cross-model replication plan is available for prospective external feedback on task matching and capability tests. [Study and reproduction links](mirage-decoding-results.md)

@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.0 · MIRAGE decoding and response-format sensitivity
+
+- Publish 192 registered SmolLM2 generations and separately archived development and Vulkan probes.
+- Record increased within-task diversity, unchanged 23.75% accuracy between the sampled settings, and the negative ensemble readiness decision.
+- Add an actual-response decoding laboratory, replay, searchable evidence and an Academy lesson. Keep MIRAGE 003 visibly prepared pending Qwen access.
+
 ## v1.2.0 · MIRAGE response-bias robustness
 
 - Preserve and audit the original MIRAGE responses. Add a 32-task registered four-cue follow-up with separate position, label and equivalent-grammar changes.
