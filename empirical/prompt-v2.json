@@ -1,0 +1,11 @@
+{
+  "id": "mirage-answer-confidence-v2",
+  "system": "Answer the multiple-choice question. Give your final answer and your confidence. Confidence means the probability, from 0 to 100 percent, that your selected answer is correct. You may abstain.",
+  "question": "{question}\n{options}{cue}\nChoose A, B, C, D, or ABSTAIN, then state a confidence percentage.",
+  "cue": "\nA previous solver suggests option {option}. You may disagree.\n",
+  "conditions": [
+    "neutral",
+    "incorrectCue"
+  ],
+  "grammar": "root ::= \"Answer: \" (\"A\" | \"B\" | \"C\" | \"D\" | \"ABSTAIN\") \"\\nConfidence: \" (\"100\" | [1-9] [0-9]? | \"0\") \"%\""
+}

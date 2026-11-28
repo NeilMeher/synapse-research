@@ -3,3 +3,4 @@
 /.browser-qa/
 /__pycache__/
 **/__pycache__/
+/.empirical-local/

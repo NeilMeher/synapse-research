@@ -1,0 +1,7 @@
+{
+  "id": "mirage-answer-confidence-v1",
+  "system": "Answer the multiple-choice question. Give only your final answer and your confidence. Confidence is the probability, from 0 to 100 percent, that your selected answer is correct.",
+  "question": "{question}\n{options}\n{cue}\nReturn exactly two lines, for example:\nAnswer: [one choice letter, or ABSTAIN]\nConfidence: [number from 0 to 100]%",
+  "cue": "\nA previous solver suggests option {option}. You may disagree.\n",
+  "conditions": ["neutral", "incorrectCue"]
+}

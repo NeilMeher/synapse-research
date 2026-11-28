@@ -1,0 +1,22 @@
+{
+  "studyId": "mirage-empirical-pilot-001",
+  "version": "1.0.0",
+  "classification": "exploratory-actual-model",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "servedId": "smollm2-135m-instruct-q4_k_m",
+    "quantization": "Q4_K_M",
+    "weightsRepository": "bartowski/SmolLM2-135M-Instruct-GGUF",
+    "weightsRevision": "09816acd5d99df7be770d85ea30822623dab342c",
+    "weightsSha256": "2e8040ceae7815abe0dcb3540b9995eaa1fa0d2ca9e797d0a635ae4433c68c2d",
+    "runtime": "llama.cpp b12823",
+    "runtimeExecutableSha256": "55daaa65305c1f8b363b9ddb982110c9fa077483d745803489fd9dbd8f8dabf5",
+    "runtimeArchiveSha256": "1988ce5b0945f404b19c7dd7778ce64a489983f7ee0f9b0957c016496d380a91",
+    "license": "Apache-2.0",
+    "access": "local-open-weights"
+  },
+  "generation": {"temperature": 0, "top_p": 1, "seed": 71321, "max_tokens": 32},
+  "runtime": {"context": 512, "threads": 2, "slots": 1, "gpuLayers": 0, "tools": false, "timeoutSeconds": 12},
+  "analysis": {"bootstrapReplicates": 4000, "bootstrapSeed": 61031, "confidenceBins": 5, "minimumPairedCoverage": 0.75},
+  "budget": {"maximumDevelopmentRequests": 16, "previousUnconstrainedDevelopmentRequests": 16, "maximumPilotRequests": 128, "retryCount": 0, "costUsd": 0}
+}
