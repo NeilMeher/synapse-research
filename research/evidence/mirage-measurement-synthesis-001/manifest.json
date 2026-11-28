@@ -1,0 +1,17 @@
+{
+  "analysis": "retrospective",
+  "evidence": "E",
+  "id": "mirage-measurement-synthesis-001",
+  "outputs": {
+    "estimand-register.json": {
+      "bytes": 49311,
+      "sha256": "468f47393ec412129604e21300b046e6c95efd36cf34bc649249146b9416d221"
+    }
+  },
+  "protocol": {
+    "bytes": 5001,
+    "sha256": "72c908064c1dce8f4e6a97e9c4047e74285469af96e0f292e158a6bd1b452f2b"
+  },
+  "protocolCommit": "6343fba09a4a188bee1aef3328e2711b057c8f23",
+  "status": "completed"
+}

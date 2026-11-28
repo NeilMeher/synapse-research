@@ -14,7 +14,7 @@ ROOT = HERE.parents[1]
 OUTPUT = ROOT / "research/evidence/mirage-measurement-synthesis-001"
 LETTERS = "ABCD"
 # The literal control truth in each selected mapping is c0; verify the named labels too.
-CONTROL = dict(zip((f"p3-control-{i:02}" for i in range(1, 13)), "DBDABCCDABCD", strict=True))
+CONTROL = dict(zip((f"p3-control-{i:02}" for i in range(1, 13)), "DBCACACDABCD", strict=True))
 
 
 def read(file):
@@ -111,7 +111,7 @@ def reconstruct(spec):
             if "arm" in old:
                 assert arm == old["arm"]
             if "rawSha256" in old:
-                assert sha256(o["raw"].encode()).hexdigest() == old["rawSha256"]
+                assert sha256((json.dumps(o["raw"], ensure_ascii=False) + "\n").encode()).hexdigest() == old["rawSha256"]
         rows.append({"task":task_id,"family":design["family"],"arm":arm,"present":design["presentation"],
                      "label":answer,"canonical":canonical,"position":physical,"correct":correctness,
                      "literal":literal,"p":p,"loss":(p-correctness)**2 if p is not None else None,

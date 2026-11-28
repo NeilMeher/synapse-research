@@ -1,0 +1,1856 @@
+{
+  "archivedRequests": 896,
+  "deviceProbe": {
+    "n": 4,
+    "rows": [
+      {
+        "cpuLiteral": 0.71,
+        "gpuLiteral": 0.71,
+        "sameLabel": true,
+        "sameRaw": true,
+        "taskId": "p3-control-02"
+      },
+      {
+        "cpuLiteral": 0.0,
+        "gpuLiteral": 0.0,
+        "sameLabel": true,
+        "sameRaw": true,
+        "taskId": "p3-control-01"
+      },
+      {
+        "cpuLiteral": 0.6,
+        "gpuLiteral": 0.6,
+        "sameLabel": true,
+        "sameRaw": true,
+        "taskId": "p3-control-03"
+      },
+      {
+        "cpuLiteral": 0.0,
+        "gpuLiteral": 0.6,
+        "sameLabel": false,
+        "sameRaw": false,
+        "taskId": "p3-control-04"
+      }
+    ],
+    "source": {
+      "bytes": 3587,
+      "sha256": "bf06ab4f08f642c50e6c28c70b1a9f22564f5b72a18a4be9b893ca8b038c26d7"
+    }
+  },
+  "estimandDefinitions": [
+    [
+      "pilotAdvice",
+      "pilot",
+      "incorrectCue",
+      "neutral",
+      "partially confounded",
+      "Advice content and added text against the shorter prompt"
+    ],
+    [
+      "wrongAdvice",
+      "robustness",
+      "incorrect",
+      "matched",
+      "controlled package",
+      "Length-matched wrong advice vs a particular nonadvisory text"
+    ],
+    [
+      "rightAdvice",
+      "robustness",
+      "correct",
+      "matched",
+      "controlled package",
+      "Length-matched correct advice vs the same nonadvisory text"
+    ],
+    [
+      "addedText",
+      "robustness",
+      "matched",
+      "none",
+      "partially confounded",
+      "Extra wording and length changed together"
+    ],
+    [
+      "letter",
+      "robustness",
+      "labels",
+      "reference",
+      "controlled",
+      "Change displayed letters with content order preserved"
+    ],
+    [
+      "physical",
+      "robustness",
+      "physical",
+      "reference",
+      "controlled",
+      "Move displayed options with letter assignment preserved"
+    ],
+    [
+      "grammar",
+      "robustness",
+      "grammar",
+      "reference",
+      "controlled",
+      "Reorder equivalent grammar alternatives"
+    ],
+    [
+      "sampling",
+      "decoding",
+      "moderate",
+      "low",
+      "controlled distributional",
+      "Change temperature across matched tasks with distinct registered seeds"
+    ],
+    [
+      "format",
+      "decoding",
+      "format",
+      "greedy",
+      "partially confounded",
+      "Bundled field order and changes to the explicit ordering instruction"
+    ],
+    [
+      "missingness",
+      "pilot/decoding",
+      "missing scored forecast",
+      "valid scored forecast",
+      "descriptive",
+      "Literal confidence is counted separately when the answer was ABSTAIN"
+    ],
+    [
+      "checkpoint",
+      "qwen",
+      "Qwen Vulkan",
+      "SmolLM2 CPU",
+      "unidentified",
+      "Four matching development controls, changed quantized checkpoint and backend"
+    ],
+    [
+      "backend",
+      "deviceProbe",
+      "Vulkan",
+      "CPU",
+      "descriptive",
+      "Four paired SmolLM2 capability probes, different device, load history and configurations"
+    ],
+    [
+      "promptLengthOnly",
+      "robustness",
+      "longer",
+      "shorter",
+      "unidentified",
+      "Need a crossed content-by-token-count intervention or controlled length filler"
+    ],
+    [
+      "pureFieldOrder",
+      "decoding",
+      "confidence first",
+      "answer first",
+      "unidentified",
+      "Need independent instruction-order and grammar-order factors"
+    ]
+  ],
+  "evidence": "E",
+  "matchedMIRAGE003": {
+    "executed": 0,
+    "planned": 512
+  },
+  "newInferenceRequests": 0,
+  "sameFourDevelopmentControls": [
+    {
+      "qwenCorrect": 1,
+      "qwenLabel": "D",
+      "smolCorrect": 1,
+      "smolLabel": "D",
+      "taskId": "p3-control-01"
+    },
+    {
+      "qwenCorrect": 0,
+      "qwenLabel": "C",
+      "smolCorrect": 1,
+      "smolLabel": "B",
+      "taskId": "p3-control-02"
+    },
+    {
+      "qwenCorrect": 1,
+      "qwenLabel": "C",
+      "smolCorrect": 0,
+      "smolLabel": "B",
+      "taskId": "p3-control-03"
+    },
+    {
+      "qwenCorrect": 0,
+      "qwenLabel": "B",
+      "smolCorrect": 0,
+      "smolLabel": "C",
+      "taskId": "p3-control-04"
+    }
+  ],
+  "sourceResults": {
+    "decoding": {
+      "conditions": {
+        "format": {
+          "answerCoverage": 0.4375,
+          "answered": 7,
+          "answeredAccuracy": 0.14285714285714285,
+          "brier": 0.21285714285714286,
+          "calibrationGap": -0.04285714285714286,
+          "choices": {
+            "canonical": {
+              "c0": 1,
+              "c1": 2,
+              "c2": 2,
+              "c3": 2
+            },
+            "label": {
+              "A": 3,
+              "B": 2,
+              "C": 2
+            },
+            "position": {
+              "1": 4,
+              "2": 2,
+              "4": 1
+            }
+          },
+          "confidenceCoverage": 0.4375,
+          "errorAUROC": 0.4166666666666667,
+          "fullPlanAccuracy": 0.0625,
+          "fullPlanCorrect": 1,
+          "meanConfidence": 0.1,
+          "missingBrierBounds": [
+            0.093125,
+            0.655625
+          ],
+          "numericFields": 16,
+          "planned": 16,
+          "scorable": 7,
+          "unscoredLiteralHistogram": {
+            "0": 1,
+            "14": 1,
+            "20": 2,
+            "21": 1,
+            "28": 1,
+            "29": 1,
+            "40": 1,
+            "50": 1
+          },
+          "unscoredNumericFields": 9
+        },
+        "greedy": {
+          "answerCoverage": 1.0,
+          "answered": 16,
+          "answeredAccuracy": 0.25,
+          "brier": 0.46606875,
+          "calibrationGap": 0.343125,
+          "choices": {
+            "canonical": {
+              "c0": 4,
+              "c1": 4,
+              "c2": 4,
+              "c3": 4
+            },
+            "label": {
+              "A": 16
+            },
+            "position": {
+              "1": 4,
+              "2": 4,
+              "3": 4,
+              "4": 4
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.3541666666666667,
+          "fullPlanAccuracy": 0.25,
+          "fullPlanCorrect": 4,
+          "meanConfidence": 0.593125,
+          "missingBrierBounds": [
+            0.46606875,
+            0.46606875
+          ],
+          "numericFields": 16,
+          "planned": 16,
+          "scorable": 16,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "low": {
+          "answerCoverage": 1.0,
+          "answered": 80,
+          "answeredAccuracy": 0.2375,
+          "brier": 0.42477875,
+          "calibrationGap": 0.378625,
+          "choices": {
+            "canonical": {
+              "c0": 19,
+              "c1": 20,
+              "c2": 23,
+              "c3": 18
+            },
+            "label": {
+              "A": 74,
+              "B": 5,
+              "D": 1
+            },
+            "position": {
+              "1": 23,
+              "2": 18,
+              "3": 21,
+              "4": 18
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.5526315789473685,
+          "fullPlanAccuracy": 0.2375,
+          "fullPlanCorrect": 19,
+          "meanCanonicalEntropyBits": 0.24116643587525738,
+          "meanConfidence": 0.616125,
+          "missingBrierBounds": [
+            0.42477875,
+            0.42477875
+          ],
+          "numericFields": 80,
+          "planned": 80,
+          "scorable": 80,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "moderate": {
+          "answerCoverage": 1.0,
+          "answered": 80,
+          "answeredAccuracy": 0.2375,
+          "brier": 0.38144125,
+          "calibrationGap": 0.324125,
+          "choices": {
+            "canonical": {
+              "c0": 19,
+              "c1": 23,
+              "c2": 22,
+              "c3": 16
+            },
+            "label": {
+              "A": 53,
+              "B": 13,
+              "C": 10,
+              "D": 4
+            },
+            "position": {
+              "1": 18,
+              "2": 28,
+              "3": 19,
+              "4": 15
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.5276100086281277,
+          "fullPlanAccuracy": 0.2375,
+          "fullPlanCorrect": 19,
+          "meanCanonicalEntropyBits": 0.9439427079182686,
+          "meanConfidence": 0.561625,
+          "missingBrierBounds": [
+            0.38144125,
+            0.38144125
+          ],
+          "numericFields": 80,
+          "planned": 80,
+          "scorable": 80,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        }
+      },
+      "contrasts": {
+        "format": {
+          "correct": {
+            "eligiblePairs": 7,
+            "eligibleTasks": 7,
+            "estimate": 0.0,
+            "interval95": [
+              -0.2857142857142857,
+              0.2857142857142857
+            ],
+            "tasksByFamily": {
+              "lookup": 3,
+              "ordering": 4
+            }
+          },
+          "correctnessTransitions": {
+            "correct->absent": 3,
+            "correct->wrong": 1,
+            "wrong->absent": 6,
+            "wrong->correct": 1,
+            "wrong->wrong": 5
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 0,
+            "switches": 0,
+            "targetHitsJoint": 0
+          },
+          "fullPlanBrierDifferenceBounds": [
+            -0.37294375,
+            0.18955625
+          ],
+          "labelA": {
+            "eligiblePairs": 7,
+            "eligibleTasks": 7,
+            "estimate": -0.5714285714285714,
+            "interval95": [
+              -0.8571428571428571,
+              -0.42857142857142855
+            ],
+            "tasksByFamily": {
+              "lookup": 3,
+              "ordering": 4
+            }
+          },
+          "loss": {
+            "eligiblePairs": 7,
+            "eligibleTasks": 7,
+            "estimate": -0.5057142857142857,
+            "interval95": [
+              -0.6971428571428572,
+              -0.3142857142857143
+            ],
+            "tasksByFamily": {
+              "lookup": 3,
+              "ordering": 4
+            }
+          },
+          "p": {
+            "eligiblePairs": 7,
+            "eligibleTasks": 7,
+            "estimate": -0.6,
+            "interval95": [
+              -0.8142857142857143,
+              -0.35714285714285715
+            ],
+            "tasksByFamily": {
+              "lookup": 3,
+              "ordering": 4
+            }
+          },
+          "plannedPairs": 16,
+          "plannedTasks": 16,
+          "sameFields": {
+            "canonical": 3,
+            "label": 3,
+            "position": 3,
+            "raw": 0
+          }
+        },
+        "sampling": {
+          "correct": {
+            "eligiblePairs": 16,
+            "eligibleTasks": 16,
+            "estimate": 0.0,
+            "interval95": [
+              -0.1375,
+              0.1375
+            ],
+            "tasksByFamily": {
+              "change": 4,
+              "lookup": 4,
+              "ordering": 4,
+              "wood": 4
+            }
+          },
+          "fullPlanBrierDifferenceBounds": [
+            -0.0433375,
+            -0.0433375
+          ],
+          "labelA": {
+            "eligiblePairs": 16,
+            "eligibleTasks": 16,
+            "estimate": -0.2625,
+            "interval95": [
+              -0.3875,
+              -0.15
+            ],
+            "tasksByFamily": {
+              "change": 4,
+              "lookup": 4,
+              "ordering": 4,
+              "wood": 4
+            }
+          },
+          "loss": {
+            "eligiblePairs": 16,
+            "eligibleTasks": 16,
+            "estimate": -0.0433375,
+            "interval95": [
+              -0.15522221875,
+              0.07297115625
+            ],
+            "tasksByFamily": {
+              "change": 4,
+              "lookup": 4,
+              "ordering": 4,
+              "wood": 4
+            }
+          },
+          "p": {
+            "eligiblePairs": 16,
+            "eligibleTasks": 16,
+            "estimate": -0.0545,
+            "interval95": [
+              -0.1450125,
+              0.030125
+            ],
+            "tasksByFamily": {
+              "change": 4,
+              "lookup": 4,
+              "ordering": 4,
+              "wood": 4
+            }
+          },
+          "plannedPairs": 16,
+          "plannedTasks": 16
+        }
+      },
+      "metadata": {
+        "answerKey": "empirical/robustness/inputs/heldout.keys.json",
+        "archive": "mirage-empirical-decoding-004",
+        "archivedOutputs": {
+          "analysis.json": {
+            "bytes": 16815,
+            "sha256": "986b84e1c93a900637b790d80a2b43f6f8deeceebff48c0d90787c06995f0977"
+          },
+          "responses.ndjson": {
+            "bytes": 88709,
+            "sha256": "41342620aeaf2122265e179622faf41d6cab678bfc05a25963db452c9b5ec277"
+          },
+          "schedule.json": {
+            "bytes": 84806,
+            "sha256": "01830ead6b02990600dfc017b71ec32e88184c4ff61b7e69104e214394853223"
+          },
+          "scores.json": {
+            "bytes": 52788,
+            "sha256": "bc52e34f09677c97a29b3a7d6487eb951f45fbfc817184cd263d6a60c07c1a42"
+          }
+        },
+        "evidence": "E",
+        "execution": "registered-actual-model",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "prompt": "empirical/robustness/prompt.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823",
+        "stage": "registered",
+        "taskInput": "schedule.json"
+      },
+      "tasks": 16,
+      "total": {
+        "answerCoverage": 0.953125,
+        "answered": 183,
+        "answeredAccuracy": 0.23497267759562843,
+        "brier": 0.40133715846994533,
+        "calibrationGap": 0.33557377049180326,
+        "choices": {
+          "canonical": {
+            "c0": 43,
+            "c1": 49,
+            "c2": 51,
+            "c3": 40
+          },
+          "label": {
+            "A": 146,
+            "B": 20,
+            "C": 12,
+            "D": 5
+          },
+          "position": {
+            "1": 49,
+            "2": 52,
+            "3": 44,
+            "4": 38
+          }
+        },
+        "confidenceCoverage": 0.953125,
+        "errorAUROC": 0.5214285714285715,
+        "fullPlanAccuracy": 0.22395833333333334,
+        "fullPlanCorrect": 43,
+        "meanConfidence": 0.5705464480874317,
+        "missingBrierBounds": [
+          0.38252447916666665,
+          0.42939947916666665
+        ],
+        "numericFields": 192,
+        "planned": 192,
+        "scorable": 183,
+        "unscoredLiteralHistogram": {
+          "0": 1,
+          "14": 1,
+          "20": 2,
+          "21": 1,
+          "28": 1,
+          "29": 1,
+          "40": 1,
+          "50": 1
+        },
+        "unscoredNumericFields": 9
+      }
+    },
+    "decodingDevelopment": {
+      "conditions": {
+        "format": {
+          "answerCoverage": 0.75,
+          "answered": 3,
+          "answeredAccuracy": 0.6666666666666666,
+          "brier": 0.36136666666666667,
+          "calibrationGap": -0.43,
+          "choices": {
+            "canonical": {
+              "c0": 2,
+              "c3": 1
+            },
+            "label": {
+              "B": 1,
+              "C": 1,
+              "D": 1
+            },
+            "position": {
+              "2": 1,
+              "3": 2
+            }
+          },
+          "confidenceCoverage": 0.75,
+          "errorAUROC": 0.75,
+          "fullPlanAccuracy": 0.5,
+          "fullPlanCorrect": 2,
+          "meanConfidence": 0.23666666666666666,
+          "missingBrierBounds": [
+            0.271025,
+            0.521025
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 3,
+          "unscoredLiteralHistogram": {
+            "60": 1
+          },
+          "unscoredNumericFields": 1
+        },
+        "greedy": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 0.5,
+          "brier": 0.361025,
+          "calibrationGap": -0.1725,
+          "choices": {
+            "canonical": {
+              "c0": 2,
+              "c3": 2
+            },
+            "label": {
+              "B": 2,
+              "C": 1,
+              "D": 1
+            },
+            "position": {
+              "2": 2,
+              "3": 2
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.625,
+          "fullPlanAccuracy": 0.5,
+          "fullPlanCorrect": 2,
+          "meanConfidence": 0.3275,
+          "missingBrierBounds": [
+            0.361025,
+            0.361025
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "low": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 0.75,
+          "brier": 0.37665,
+          "calibrationGap": -0.235,
+          "choices": {
+            "canonical": {
+              "c0": 3,
+              "c3": 1
+            },
+            "label": {
+              "A": 1,
+              "B": 2,
+              "D": 1
+            },
+            "position": {
+              "2": 1,
+              "3": 3
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.6666666666666666,
+          "fullPlanAccuracy": 0.75,
+          "fullPlanCorrect": 3,
+          "meanConfidence": 0.515,
+          "missingBrierBounds": [
+            0.37665,
+            0.37665
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "moderate": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 0.0,
+          "brier": 0.707525,
+          "calibrationGap": 0.8225,
+          "choices": {
+            "canonical": {
+              "c2": 3,
+              "c3": 1
+            },
+            "label": {
+              "A": 1,
+              "B": 2,
+              "D": 1
+            },
+            "position": {
+              "1": 3,
+              "2": 1
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": null,
+          "fullPlanAccuracy": 0.0,
+          "fullPlanCorrect": 0,
+          "meanConfidence": 0.8225,
+          "missingBrierBounds": [
+            0.707525,
+            0.707525
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        }
+      },
+      "metadata": {
+        "answerKey": "literal capability controls",
+        "archive": "mirage-empirical-decoding-004-development",
+        "archivedOutputs": {
+          "responses.ndjson": {
+            "bytes": 7373,
+            "sha256": "d846baeffc053560b4858ed5211e2fc25e970e17fc876b30b2623977f0841eda"
+          },
+          "schedule.json": {
+            "bytes": 7037,
+            "sha256": "31be36490cb1a6e1f46da7ba65d6fe71e28cc59f6f5d8667990985be250db225"
+          },
+          "scores.json": {
+            "bytes": 4344,
+            "sha256": "e554569bc8345ab6d08d943d8066e113203b5a82a4f2332789fb33168a190d81"
+          }
+        },
+        "evidence": "E",
+        "execution": "development-actual-model",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "prompt": "empirical/robustness/prompt.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823",
+        "stage": "development",
+        "taskInput": "schedule.json"
+      },
+      "tasks": 4,
+      "total": {
+        "answerCoverage": 0.9375,
+        "answered": 15,
+        "answeredAccuracy": 0.4666666666666667,
+        "brier": 0.45766,
+        "calibrationGap": 0.024666666666666667,
+        "choices": {
+          "canonical": {
+            "c0": 7,
+            "c2": 3,
+            "c3": 5
+          },
+          "label": {
+            "A": 2,
+            "B": 7,
+            "C": 2,
+            "D": 4
+          },
+          "position": {
+            "1": 3,
+            "2": 5,
+            "3": 7
+          }
+        },
+        "confidenceCoverage": 0.9375,
+        "errorAUROC": 0.48214285714285715,
+        "fullPlanAccuracy": 0.4375,
+        "fullPlanCorrect": 7,
+        "meanConfidence": 0.49133333333333334,
+        "missingBrierBounds": [
+          0.42905625,
+          0.49155625
+        ],
+        "numericFields": 16,
+        "planned": 16,
+        "scorable": 15,
+        "unscoredLiteralHistogram": {
+          "60": 1
+        },
+        "unscoredNumericFields": 1
+      }
+    },
+    "pilot": {
+      "conditions": {
+        "incorrectCue": {
+          "answerCoverage": 1.0,
+          "answered": 64,
+          "answeredAccuracy": 0.25,
+          "brier": 0.4543296875,
+          "calibrationGap": 0.19953125,
+          "choices": {
+            "canonical": {
+              "c0": 64
+            },
+            "label": {
+              "A": 64
+            },
+            "position": {
+              "1": 64
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.4192708333333333,
+          "fullPlanAccuracy": 0.25,
+          "fullPlanCorrect": 16,
+          "meanConfidence": 0.44953125,
+          "missingBrierBounds": [
+            0.4543296875,
+            0.4543296875
+          ],
+          "numericFields": 64,
+          "planned": 64,
+          "scorable": 64,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "neutral": {
+          "answerCoverage": 0.8125,
+          "answered": 52,
+          "answeredAccuracy": 0.23076923076923078,
+          "brier": 0.2539403846153846,
+          "calibrationGap": -0.03711538461538461,
+          "choices": {
+            "canonical": {
+              "c0": 45,
+              "c1": 2,
+              "c2": 5
+            },
+            "label": {
+              "A": 45,
+              "B": 2,
+              "C": 5
+            },
+            "position": {
+              "1": 45,
+              "2": 2,
+              "3": 5
+            }
+          },
+          "confidenceCoverage": 0.8125,
+          "errorAUROC": 0.5708333333333333,
+          "fullPlanAccuracy": 0.1875,
+          "fullPlanCorrect": 12,
+          "meanConfidence": 0.19365384615384615,
+          "missingBrierBounds": [
+            0.2063265625,
+            0.3938265625
+          ],
+          "numericFields": 64,
+          "planned": 64,
+          "scorable": 52,
+          "unscoredLiteralHistogram": {
+            "0": 1,
+            "100": 8,
+            "60": 1,
+            "80": 1,
+            "90": 1
+          },
+          "unscoredNumericFields": 12
+        }
+      },
+      "contrasts": {
+        "incorrectCue": {
+          "correct": {
+            "eligiblePairs": 52,
+            "eligibleTasks": 52,
+            "estimate": 0.0,
+            "interval95": [
+              -0.07692307692307693,
+              0.07692307692307693
+            ],
+            "tasksByFamily": {
+              "change": 16,
+              "conditional": 4,
+              "mean": 16,
+              "ordering": 16
+            }
+          },
+          "correctnessTransitions": {
+            "absent->correct": 4,
+            "absent->wrong": 8,
+            "correct->correct": 10,
+            "correct->wrong": 2,
+            "wrong->correct": 2,
+            "wrong->wrong": 38
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 38,
+            "switches": 1,
+            "targetHitsJoint": 13
+          },
+          "fullPlanBrierDifferenceBounds": [
+            0.060503125,
+            0.248003125
+          ],
+          "loss": {
+            "eligiblePairs": 52,
+            "eligibleTasks": 52,
+            "estimate": 0.17830192307692308,
+            "interval95": [
+              0.06170740384615385,
+              0.2961508173076923
+            ],
+            "tasksByFamily": {
+              "change": 16,
+              "conditional": 4,
+              "mean": 16,
+              "ordering": 16
+            }
+          },
+          "p": {
+            "eligiblePairs": 52,
+            "eligibleTasks": 52,
+            "estimate": 0.23403846153846153,
+            "interval95": [
+              0.1346153846153846,
+              0.3417451923076923
+            ],
+            "tasksByFamily": {
+              "change": 16,
+              "conditional": 4,
+              "mean": 16,
+              "ordering": 16
+            }
+          },
+          "plannedPairs": 64,
+          "plannedTasks": 64,
+          "sameFields": {
+            "canonical": 45,
+            "label": 45,
+            "position": 45,
+            "raw": 30
+          }
+        }
+      },
+      "metadata": {
+        "answerKey": "empirical/datasets/pilot.key.json",
+        "archive": "mirage-empirical-pilot-001",
+        "archivedOutputs": {
+          "analysis.json": {
+            "bytes": 11142,
+            "sha256": "28ce9da3eb939e7d030ced4e0fa4c820b7138cfcf9fb3b5b05f50bcab11d36a0"
+          },
+          "responses.ndjson": {
+            "bytes": 72344,
+            "sha256": "129b4e400b0671fb44f2f9dfe93a35439010d821f21a037d0f93dc2d9f0e720e"
+          },
+          "scores.json": {
+            "bytes": 18665,
+            "sha256": "a38ccc34a99638b5b16e78412118063f7c415c590562a7fd4f6e29b2a5ed67de"
+          }
+        },
+        "evidence": "E",
+        "execution": "exploratory-actual-model",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "prompt": "empirical/prompt-v2.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823",
+        "stage": "exploratory",
+        "taskInput": "empirical/datasets/pilot.tasks.json"
+      },
+      "tasks": 64,
+      "total": {
+        "answerCoverage": 0.90625,
+        "answered": 116,
+        "answeredAccuracy": 0.2413793103448276,
+        "brier": 0.3645,
+        "calibrationGap": 0.09344827586206897,
+        "choices": {
+          "canonical": {
+            "c0": 109,
+            "c1": 2,
+            "c2": 5
+          },
+          "label": {
+            "A": 109,
+            "B": 2,
+            "C": 5
+          },
+          "position": {
+            "1": 109,
+            "2": 2,
+            "3": 5
+          }
+        },
+        "confidenceCoverage": 0.90625,
+        "errorAUROC": 0.4916801948051948,
+        "fullPlanAccuracy": 0.21875,
+        "fullPlanCorrect": 28,
+        "meanConfidence": 0.33482758620689657,
+        "missingBrierBounds": [
+          0.330328125,
+          0.424078125
+        ],
+        "numericFields": 128,
+        "planned": 128,
+        "scorable": 116,
+        "unscoredLiteralHistogram": {
+          "0": 1,
+          "100": 8,
+          "60": 1,
+          "80": 1,
+          "90": 1
+        },
+        "unscoredNumericFields": 12
+      }
+    },
+    "qwen": {
+      "conditions": {
+        "greedy": {
+          "answerCoverage": 1.0,
+          "answered": 12,
+          "answeredAccuracy": 0.4166666666666667,
+          "brier": 0.5239583333333333,
+          "calibrationGap": 0.5041666666666667,
+          "choices": {
+            "canonical": {
+              "c0": 5,
+              "c1": 3,
+              "c2": 3,
+              "c3": 1
+            },
+            "label": {
+              "B": 5,
+              "C": 4,
+              "D": 3
+            },
+            "position": {
+              "1": 3,
+              "2": 1,
+              "3": 5,
+              "4": 3
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.3142857142857143,
+          "fullPlanAccuracy": 0.4166666666666667,
+          "fullPlanCorrect": 5,
+          "meanConfidence": 0.9208333333333333,
+          "missingBrierBounds": [
+            0.5239583333333333,
+            0.5239583333333333
+          ],
+          "numericFields": 12,
+          "planned": 12,
+          "scorable": 12,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        }
+      },
+      "metadata": {
+        "answerKey": "literal capability controls",
+        "archive": "mirage-empirical-cross-model-003-development",
+        "archivedOutputs": {
+          "responses.ndjson": {
+            "bytes": 5523,
+            "sha256": "81c77534595e1de5bec730405e006f02a63ee94db40e6d0eed54f25d7ca36b1f"
+          },
+          "schedule.json": {
+            "bytes": 4843,
+            "sha256": "c0871919d87bd093511561cd83ef43a06728ba5d4a24f41470fa0f82548c55cf"
+          },
+          "scores.json": {
+            "bytes": 3247,
+            "sha256": "8f63add707182b4d186a1c344b6b0b3a1e8f0f87aa8af00c8eb11b45bf1ffd60"
+          }
+        },
+        "evidence": "E",
+        "execution": "development-actual-model",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "prompt": "empirical/robustness/prompt.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823 Windows x64 Vulkan",
+        "stage": "development",
+        "taskInput": "schedule.json"
+      },
+      "tasks": 12,
+      "total": {
+        "answerCoverage": 1.0,
+        "answered": 12,
+        "answeredAccuracy": 0.4166666666666667,
+        "brier": 0.5239583333333333,
+        "calibrationGap": 0.5041666666666667,
+        "choices": {
+          "canonical": {
+            "c0": 5,
+            "c1": 3,
+            "c2": 3,
+            "c3": 1
+          },
+          "label": {
+            "B": 5,
+            "C": 4,
+            "D": 3
+          },
+          "position": {
+            "1": 3,
+            "2": 1,
+            "3": 5,
+            "4": 3
+          }
+        },
+        "confidenceCoverage": 1.0,
+        "errorAUROC": 0.3142857142857143,
+        "fullPlanAccuracy": 0.4166666666666667,
+        "fullPlanCorrect": 5,
+        "meanConfidence": 0.9208333333333333,
+        "missingBrierBounds": [
+          0.5239583333333333,
+          0.5239583333333333
+        ],
+        "numericFields": 12,
+        "planned": 12,
+        "scorable": 12,
+        "unscoredLiteralHistogram": {},
+        "unscoredNumericFields": 0
+      }
+    },
+    "robustness": {
+      "conditions": {
+        "correct": {
+          "answerCoverage": 1.0,
+          "answered": 128,
+          "answeredAccuracy": 0.25,
+          "brier": 0.4863796875,
+          "calibrationGap": 0.353125,
+          "choices": {
+            "canonical": {
+              "c0": 32,
+              "c1": 32,
+              "c2": 30,
+              "c3": 34
+            },
+            "label": {
+              "A": 126,
+              "B": 2
+            },
+            "position": {
+              "1": 32,
+              "2": 32,
+              "3": 30,
+              "4": 34
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.3966471354166667,
+          "fullPlanAccuracy": 0.25,
+          "fullPlanCorrect": 32,
+          "meanConfidence": 0.603125,
+          "missingBrierBounds": [
+            0.4863796875,
+            0.4863796875
+          ],
+          "numericFields": 128,
+          "planned": 128,
+          "scorable": 128,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "incorrect": {
+          "answerCoverage": 1.0,
+          "answered": 128,
+          "answeredAccuracy": 0.2421875,
+          "brier": 0.43268515625,
+          "calibrationGap": 0.366953125,
+          "choices": {
+            "canonical": {
+              "c0": 31,
+              "c1": 33,
+              "c2": 30,
+              "c3": 34
+            },
+            "label": {
+              "A": 125,
+              "B": 3
+            },
+            "position": {
+              "1": 31,
+              "2": 33,
+              "3": 30,
+              "4": 34
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.4817093448619887,
+          "fullPlanAccuracy": 0.2421875,
+          "fullPlanCorrect": 31,
+          "meanConfidence": 0.609140625,
+          "missingBrierBounds": [
+            0.43268515625,
+            0.43268515625
+          ],
+          "numericFields": 128,
+          "planned": 128,
+          "scorable": 128,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "matched": {
+          "answerCoverage": 1.0,
+          "answered": 128,
+          "answeredAccuracy": 0.2421875,
+          "brier": 0.45485234375,
+          "calibrationGap": 0.432109375,
+          "choices": {
+            "canonical": {
+              "c0": 31,
+              "c1": 33,
+              "c2": 30,
+              "c3": 34
+            },
+            "label": {
+              "A": 125,
+              "B": 3
+            },
+            "position": {
+              "1": 31,
+              "2": 33,
+              "3": 30,
+              "4": 34
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.47372796807449286,
+          "fullPlanAccuracy": 0.2421875,
+          "fullPlanCorrect": 31,
+          "meanConfidence": 0.674296875,
+          "missingBrierBounds": [
+            0.45485234375,
+            0.45485234375
+          ],
+          "numericFields": 128,
+          "planned": 128,
+          "scorable": 128,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "none": {
+          "answerCoverage": 1.0,
+          "answered": 128,
+          "answeredAccuracy": 0.2421875,
+          "brier": 0.34749375,
+          "calibrationGap": 0.0746875,
+          "choices": {
+            "canonical": {
+              "c0": 31,
+              "c1": 37,
+              "c2": 33,
+              "c3": 27
+            },
+            "label": {
+              "A": 114,
+              "B": 10,
+              "C": 4
+            },
+            "position": {
+              "1": 30,
+              "2": 34,
+              "3": 38,
+              "4": 26
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.476554705686731,
+          "fullPlanAccuracy": 0.2421875,
+          "fullPlanCorrect": 31,
+          "meanConfidence": 0.316875,
+          "missingBrierBounds": [
+            0.34749375,
+            0.34749375
+          ],
+          "numericFields": 128,
+          "planned": 128,
+          "scorable": 128,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        }
+      },
+      "contrasts": {
+        "addedText": {
+          "correct": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.0,
+            "interval95": [
+              -0.0390625,
+              0.03125
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "correctnessTransitions": {
+            "correct->correct": 29,
+            "correct->wrong": 2,
+            "wrong->correct": 2,
+            "wrong->wrong": 95
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 0,
+            "switches": 0,
+            "targetHitsJoint": 0
+          },
+          "fullPlanBrierDifferenceBounds": [
+            0.10735859375,
+            0.10735859375
+          ],
+          "loss": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.10735859375,
+            "interval95": [
+              0.01356318359375,
+              0.1982038671875
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "p": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.357421875,
+            "interval95": [
+              0.294296875,
+              0.421259765625
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 115,
+            "label": 115,
+            "position": 115,
+            "raw": 40
+          }
+        },
+        "correct": {
+          "correct": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.0078125,
+            "interval95": [
+              0.0,
+              0.0234375
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "correctnessTransitions": {
+            "correct->correct": 31,
+            "wrong->correct": 1,
+            "wrong->wrong": 96
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 97,
+            "switches": 1,
+            "targetHitsJoint": 32
+          },
+          "fullPlanBrierDifferenceBounds": [
+            0.03152734375,
+            0.03152734375
+          ],
+          "loss": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.03152734375,
+            "interval95": [
+              -0.044316953125,
+              0.11080416015625
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "matchedTokenCounts": 128,
+          "p": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": -0.071171875,
+            "interval95": [
+              -0.136720703125,
+              -0.008822265625
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 127,
+            "label": 127,
+            "position": 127,
+            "raw": 65
+          }
+        },
+        "incorrect": {
+          "correct": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "correctnessTransitions": {
+            "correct->correct": 31,
+            "wrong->wrong": 97
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 95,
+            "switches": 0,
+            "targetHitsJoint": 33
+          },
+          "fullPlanBrierDifferenceBounds": [
+            -0.0221671875,
+            -0.0221671875
+          ],
+          "loss": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": -0.0221671875,
+            "interval95": [
+              -0.08850546875,
+              0.04095939453125
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "matchedTokenCounts": 128,
+          "p": {
+            "eligiblePairs": 128,
+            "eligibleTasks": 32,
+            "estimate": -0.06515625,
+            "interval95": [
+              -0.136408203125,
+              0.001251953125
+            ],
+            "tasksByFamily": {
+              "change": 8,
+              "lookup": 8,
+              "ordering": 8,
+              "wood": 8
+            }
+          },
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 128,
+            "label": 128,
+            "position": 128,
+            "raw": 63
+          }
+        }
+      },
+      "metadata": {
+        "answerKey": "empirical/robustness/inputs/heldout.keys.json",
+        "archive": "mirage-empirical-robustness-002",
+        "archivedOutputs": {
+          "analysis.json": {
+            "bytes": 37945,
+            "sha256": "715e00aa6fdf879ab8c4a59f2c3e6b6702a4909af5b27f0bc52ad6451f558b56"
+          },
+          "responses.ndjson": {
+            "bytes": 236497,
+            "sha256": "92307ab0ad0ea3e9e5d854298e444eacd687ce871c4062b45c2defb054c8ef30"
+          },
+          "scores.json": {
+            "bytes": 184312,
+            "sha256": "3ca167460a119f20a22d3c310e7601ffd62838f23353b5919aebb37c8aa63fff"
+          }
+        },
+        "evidence": "E",
+        "execution": "registered-actual-model",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "prompt": "empirical/robustness/prompt.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823",
+        "stage": "registered",
+        "taskInput": "empirical/robustness/inputs/heldout.schedule.json"
+      },
+      "presentation": {
+        "grammar": {
+          "correctnessTransitions": {
+            "correct->correct": 33,
+            "wrong->wrong": 95
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 48,
+            "switches": 0,
+            "targetHitsJoint": 16
+          },
+          "fullPlanBrierDifferenceBounds": [
+            0.0,
+            0.0
+          ],
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 128,
+            "label": 128,
+            "position": 128,
+            "raw": 128
+          }
+        },
+        "labels": {
+          "correctnessTransitions": {
+            "correct->wrong": 33,
+            "wrong->correct": 28,
+            "wrong->wrong": 67
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 48,
+            "switches": 17,
+            "targetHitsJoint": 17
+          },
+          "fullPlanBrierDifferenceBounds": [
+            -0.0260984375,
+            -0.0260984375
+          ],
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 2,
+            "label": 122,
+            "position": 2,
+            "raw": 46
+          }
+        },
+        "physical": {
+          "correctnessTransitions": {
+            "correct->correct": 31,
+            "correct->wrong": 2,
+            "wrong->wrong": 95
+          },
+          "cueAdoption": {
+            "initiallyDifferent": 48,
+            "switches": 0,
+            "targetHitsJoint": 16
+          },
+          "fullPlanBrierDifferenceBounds": [
+            0.0274125,
+            0.0274125
+          ],
+          "plannedPairs": 128,
+          "plannedTasks": 32,
+          "sameFields": {
+            "canonical": 120,
+            "label": 120,
+            "position": 2,
+            "raw": 46
+          }
+        }
+      },
+      "tasks": 32,
+      "total": {
+        "answerCoverage": 1.0,
+        "answered": 512,
+        "answeredAccuracy": 0.244140625,
+        "brier": 0.430352734375,
+        "calibrationGap": 0.30671875,
+        "choices": {
+          "canonical": {
+            "c0": 125,
+            "c1": 135,
+            "c2": 123,
+            "c3": 129
+          },
+          "label": {
+            "A": 490,
+            "B": 18,
+            "C": 4
+          },
+          "position": {
+            "1": 124,
+            "2": 132,
+            "3": 128,
+            "4": 128
+          }
+        },
+        "confidenceCoverage": 1.0,
+        "errorAUROC": 0.45032558139534884,
+        "fullPlanAccuracy": 0.244140625,
+        "fullPlanCorrect": 125,
+        "meanConfidence": 0.550859375,
+        "missingBrierBounds": [
+          0.430352734375,
+          0.430352734375
+        ],
+        "numericFields": 512,
+        "planned": 512,
+        "scorable": 512,
+        "unscoredLiteralHistogram": {},
+        "unscoredNumericFields": 0
+      }
+    },
+    "robustnessDevelopment": {
+      "conditions": {
+        "correct": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 1.0,
+          "brier": 0.03375,
+          "calibrationGap": -0.15,
+          "choices": {
+            "canonical": {
+              "c0": 4
+            },
+            "label": {
+              "A": 4
+            },
+            "position": {
+              "1": 4
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": null,
+          "fullPlanAccuracy": 1.0,
+          "fullPlanCorrect": 4,
+          "meanConfidence": 0.85,
+          "missingBrierBounds": [
+            0.03375,
+            0.03375
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "incorrect": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 1.0,
+          "brier": 0.03375,
+          "calibrationGap": -0.15,
+          "choices": {
+            "canonical": {
+              "c0": 4
+            },
+            "label": {
+              "A": 4
+            },
+            "position": {
+              "1": 4
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": null,
+          "fullPlanAccuracy": 1.0,
+          "fullPlanCorrect": 4,
+          "meanConfidence": 0.85,
+          "missingBrierBounds": [
+            0.03375,
+            0.03375
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "matched": {
+          "answerCoverage": 1.0,
+          "answered": 24,
+          "answeredAccuracy": 0.8333333333333334,
+          "brier": 0.15833333333333333,
+          "calibrationGap": -0.0375,
+          "choices": {
+            "canonical": {
+              "c0": 20,
+              "c1": 4
+            },
+            "label": {
+              "A": 24
+            },
+            "position": {
+              "1": 16,
+              "2": 8
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.60625,
+          "fullPlanAccuracy": 0.8333333333333334,
+          "fullPlanCorrect": 20,
+          "meanConfidence": 0.7958333333333333,
+          "missingBrierBounds": [
+            0.15833333333333333,
+            0.15833333333333333
+          ],
+          "numericFields": 24,
+          "planned": 24,
+          "scorable": 24,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        },
+        "none": {
+          "answerCoverage": 1.0,
+          "answered": 4,
+          "answeredAccuracy": 0.75,
+          "brier": 0.390625,
+          "calibrationGap": -0.0625,
+          "choices": {
+            "canonical": {
+              "c0": 3,
+              "c1": 1
+            },
+            "label": {
+              "A": 3,
+              "B": 1
+            },
+            "position": {
+              "1": 3,
+              "2": 1
+            }
+          },
+          "confidenceCoverage": 1.0,
+          "errorAUROC": 0.6666666666666666,
+          "fullPlanAccuracy": 0.75,
+          "fullPlanCorrect": 3,
+          "meanConfidence": 0.6875,
+          "missingBrierBounds": [
+            0.390625,
+            0.390625
+          ],
+          "numericFields": 4,
+          "planned": 4,
+          "scorable": 4,
+          "unscoredLiteralHistogram": {},
+          "unscoredNumericFields": 0
+        }
+      },
+      "metadata": {
+        "answerKey": "empirical/robustness/inputs/development.keys.json",
+        "archive": "mirage-empirical-robustness-002-development",
+        "archivedOutputs": {
+          "responses.ndjson": {
+            "bytes": 16601,
+            "sha256": "d3b8055b55ecf15d1a4d0911c49fb9fe5a78c8d5e0b159e229477a10ded21e1d"
+          },
+          "scores.json": {
+            "bytes": 13155,
+            "sha256": "9a0c8d34760314dfd0533ee6af9659ed0816ed99d5135c14b04b06660d630859"
+          }
+        },
+        "evidence": "E",
+        "execution": "development-actual-model",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "prompt": "empirical/robustness/prompt.json",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp b12823",
+        "stage": "development",
+        "taskInput": "empirical/robustness/inputs/development.schedule.json"
+      },
+      "tasks": 4,
+      "total": {
+        "answerCoverage": 1.0,
+        "answered": 36,
+        "answeredAccuracy": 0.8611111111111112,
+        "brier": 0.15645833333333334,
+        "calibrationGap": -0.06527777777777778,
+        "choices": {
+          "canonical": {
+            "c0": 31,
+            "c1": 5
+          },
+          "label": {
+            "A": 35,
+            "B": 1
+          },
+          "position": {
+            "1": 27,
+            "2": 9
+          }
+        },
+        "confidenceCoverage": 1.0,
+        "errorAUROC": 0.6516129032258065,
+        "fullPlanAccuracy": 0.8611111111111112,
+        "fullPlanCorrect": 31,
+        "meanConfidence": 0.7958333333333333,
+        "missingBrierBounds": [
+          0.15645833333333334,
+          0.15645833333333334
+        ],
+        "numericFields": 36,
+        "planned": 36,
+        "scorable": 36,
+        "unscoredLiteralHistogram": {},
+        "unscoredNumericFields": 0
+      }
+    }
+  },
+  "study": "mirage-measurement-synthesis-001"
+}
