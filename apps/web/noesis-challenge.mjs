@@ -54,7 +54,10 @@ function render() {
   const posterior=byId("noesis-challenge-posterior");
   posterior.replaceChildren(...FAMILIES.map((key,i)=>{
     const item=node("li",labels[key]+" "+pct(state.posteriors[i]));
-    item.style.color=palette(colors[i]);
+    const swatch=node("i");
+    swatch.setAttribute("aria-hidden","true");
+    swatch.style.backgroundColor="var(--"+colors[i]+")";
+    item.prepend(swatch);
     return item;
   }));
   const rows=byId("noesis-challenge-observations");

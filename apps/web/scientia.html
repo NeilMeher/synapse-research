@@ -35,7 +35,7 @@
       <p id="scientia-budget" aria-live="polite"></p>
       <details><summary>Inspect the research protocol</summary><p>The fixed primary is hypothesis 1. Truth is randomly assigned before outcomes, and both equal-size Gaussian blocks share the same known variance. Full-data workflows use both blocks. Split and replication workflows reserve the second for same-sign confirmation. The BH guarantee applies to the independent study cells. Selected intervals are nominal.</p><p><a href="./research/scientia-confirmatory.md">Frozen confirmatory design</a> · <a href="./research/scientia-audit.md">Exact-tail audit</a></p></details>
       <p id="scientia-score" aria-live="polite"></p>
-      <div class="table-scroll"><table><caption>Truth is disclosed after the procedure decides</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Individual hypothesis results"><table><caption>Truth is disclosed after the procedure decides</caption>
         <thead><tr><th>Hypothesis</th><th>True mean</th><th>Full-sample p</th><th>Discovery p</th><th>Validation p</th><th>Procedure decision</th></tr></thead>
         <tbody id="scientia-trace"></tbody></table></div>
     </article>
@@ -51,8 +51,8 @@
       <h2>Archived study replay</h2>
       <div class="study-controls"><label>Archived design <select id="scientia-case"></select></label><div class="actions"><button type="button" class="quiet" id="scientia-replay">Replay first programme</button></div></div>
       <p id="scientia-contrast"></p>
-      <div class="table-scroll" id="scientia-rates"><table><caption>Visual comparison using the archived rates</caption><thead><tr><th>Workflow</th><th>False discovery rate</th><th>Power</th></tr></thead><tbody id="scientia-bars"></tbody></table></div>
-      <div class="table-scroll"><table><caption>Programme-level means across the archived condition</caption>
+      <div class="table-scroll" id="scientia-rates" tabindex="0" role="region" aria-label="Archived rates"><table><caption>Visual comparison using the archived rates</caption><thead><tr><th>Workflow</th><th>False discovery rate</th><th>Power</th></tr></thead><tbody id="scientia-bars"></tbody></table></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Archived programme averages"><table><caption>Programme-level means across the archived condition</caption>
         <thead><tr><th>Workflow</th><th>Any false report</th><th>False discovery rate</th><th>Power</th><th>Reported bias</th><th>Reported coverage</th><th>Pass fraction among screened</th></tr></thead>
         <tbody id="scientia-study"></tbody></table></div>
       <div class="actions">
@@ -67,7 +67,7 @@
       <label for="sequential-horizon">Observation cap</label>
       <select id="sequential-horizon"><option value="12">12</option><option value="8">8</option></select>
       <p id="sequential-counts-status" role="status">Loading exact stopping outcomes…</p>
-      <div class="table-scroll"><table><caption>Exact probability of reporting and mean observations</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Sequential verification outcomes"><table><caption>Exact probability of reporting and mean observations</caption>
         <thead><tr><th scope="col">Procedure</th><th scope="col">Probability of reporting</th><th scope="col">Mean observations used</th></tr></thead>
         <tbody id="sequential-counts"></tbody>
       </table></div>

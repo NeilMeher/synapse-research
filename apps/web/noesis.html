@@ -57,7 +57,7 @@
       <article class="result-panel">
         <h2>Candidate Theory Posteriors P(Model | Data)</h2>
         <canvas id="noesis-prob-canvas" aria-hidden="true" class="study-chart" style="height: 180px;"></canvas>
-        <div class="table-scroll" style="margin-top: 0.75rem;">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Replay measurements" style="margin-top: 0.75rem;">
           <table>
             <caption>Sequential Measurements in Replay Episode</caption>
             <thead><tr><th>Step</th><th>Query x</th><th>Observed y</th><th>Leading Theory</th><th>P(Best)</th></tr></thead>
@@ -70,7 +70,7 @@
     <article class="result-panel study-block">
       <h2>Confirmatory Policy Comparison (300 Synthetic Systems)</h2>
       <p id="noesis-contrasts" class="contrasts-summary"></p>
-      <div class="table-scroll">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Historical acquisition policies">
         <table>
           <caption>300 paired synthetic physical worlds (B = 8 observations, later noise SD = 0.20)</caption>
           <thead>
@@ -92,7 +92,7 @@
       <p id="noesis-challenge-status" role="status"></p><p id="noesis-challenge-outcome" aria-live="polite"></p>
       <ul class="legend" id="noesis-challenge-posterior" aria-label="Candidate family probabilities"></ul>
       <canvas id="noesis-challenge-curve" class="study-chart" aria-hidden="true"></canvas>
-      <div class="table-scroll"><table><caption>Practice observations</caption><thead><tr><th>Measurement</th><th>Input x</th><th>Observed y</th></tr></thead><tbody id="noesis-challenge-observations"></tbody></table></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Practice observations"><table><caption>Practice observations</caption><thead><tr><th>Measurement</th><th>Input x</th><th>Observed y</th></tr></thead><tbody id="noesis-challenge-observations"></tbody></table></div>
     </article>
     <article class="result-panel study-block" id="evidence">
       <h2>Research Evidence &amp; Artifacts</h2>
@@ -112,7 +112,7 @@
       <label for="finite-discovery-world">Generating law</label>
       <select id="finite-discovery-world"><option value="specified">Law in the library</option><option value="outOfLibrary">Cubic law outside the library</option></select>
       <p id="finite-discovery-counts-status" role="status">Loading finite discovery outcomes…</p>
-      <div class="table-scroll"><table><caption>Exact policy outcomes under the selected law</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Finite acquisition outcomes"><table><caption>Exact policy outcomes under the selected law</caption>
         <thead><tr><th scope="col">Acquisition policy</th><th scope="col">Family recovery</th><th scope="col">Posterior at least 75%</th><th scope="col">Interpolation Brier</th><th scope="col">Extrapolation Brier</th><th scope="col">Decision loss</th></tr></thead>
         <tbody id="finite-discovery-counts"></tbody>
       </table></div>

@@ -28,9 +28,9 @@
       <p id="episteme-task"></p>
       <p id="episteme-decision" aria-live="polite"></p>
       <div class="study-pair">
-        <div class="table-scroll"><table><caption>Discovery measurements and leading family</caption>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Discovery measurements"><table><caption>Discovery measurements and leading family</caption>
           <thead><tr><th>Input</th><th>Observation</th><th>Leader</th><th>Weight</th></tr></thead><tbody id="episteme-observations"></tbody></table></div>
-        <div class="table-scroll"><table><caption>Posterior weights at the visible stage</caption>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Candidate family probabilities"><table><caption>Posterior weights at the visible stage</caption>
           <thead><tr><th>Candidate family</th><th>Weight</th></tr></thead><tbody id="episteme-weights"></tbody></table></div>
       </div>
     </article>
@@ -38,7 +38,7 @@
       <h2>Independent measurements</h2>
       <p>Six discovery measurements fix the fitted predictor. Four reserved measurements check validation, and four further points check replication. Each block is measured even if an earlier decision stops the claim.</p>
       <p id="episteme-gates" aria-live="polite"></p>
-      <div class="table-scroll"><table><caption>Disjoint holdout measurements and frozen mean predictions</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Validation measurements"><table><caption>Disjoint holdout measurements and frozen mean predictions</caption>
         <thead><tr><th>Block</th><th>Input</th><th>Observation</th><th>Prediction</th><th>Residual</th></tr></thead><tbody id="episteme-blocks"></tbody></table></div>
       <div class="actions"><button class="quiet" type="button" id="episteme-reveal" disabled>Reveal simulated truth</button></div>
       <p id="episteme-truth" aria-live="polite"></p>
@@ -46,7 +46,7 @@
     <article class="result-panel study-block" id="evidence">
       <h2>Archived outcomes</h2>
       <p id="episteme-contrast"></p>
-      <div class="table-scroll"><table><caption>Paired synthetic tasks in the selected regime</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Archived paired task outcomes"><table><caption>Paired synthetic tasks in the selected regime</caption>
         <thead><tr><th>Policy</th><th>Correct proposal</th><th>False proposal</th><th>Correct final claim</th><th>False final claim</th><th>No accepted claim</th><th>Prediction RMSE</th></tr></thead><tbody id="episteme-results"></tbody></table></div>
       <p>Candidate probabilities sum to one over the four available families. The residual tests ask whether a fixed predictor matches disjoint observations under known Gaussian noise. Passing both screens leaves the candidate provisionally accepted in this workflow.</p>
       <div class="actions"><a class="quiet" href="./data/episteme-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/episteme-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/episteme-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/episteme.md">Manuscript</a><a class="quiet" href="./docs/episteme-learning.md">Learning guide</a></div>
@@ -59,7 +59,7 @@
       <label for="selection-budget">Observations reserved for discovery</label>
       <select id="selection-budget"><option value="3">3 for discovery, up to 9 for verification</option><option value="5">5 for discovery, up to 7 for verification</option></select>
       <p id="selection-counts-status" role="status">Loading exact programme outcomes…</p>
-      <div class="table-scroll"><table><caption>Probability of true and false report with declared costs</caption>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Selected claim outcomes"><table><caption>Probability of true and false report with declared costs</caption>
         <thead><tr><th scope="col">Verification procedure</th><th scope="col">True report</th><th scope="col">False report</th><th scope="col">Observations used</th><th scope="col">Decision loss</th><th scope="col">Total loss</th></tr></thead>
         <tbody id="selection-counts"></tbody>
       </table></div>
