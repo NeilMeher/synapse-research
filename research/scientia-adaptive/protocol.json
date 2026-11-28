@@ -1,0 +1,40 @@
+{
+  "id": "scientia-adaptive-verification-002",
+  "linkedStudy": "episteme-split-discovery-001",
+  "evidence": "A",
+  "alpha": "1/20",
+  "null": "1/2",
+  "alternative": "3/4",
+  "fixtureHorizon": 8,
+  "horizon": 12,
+  "verification": [
+    "fixed",
+    "peek",
+    "spend",
+    "evidence"
+  ],
+  "testRates": [
+    "1/2",
+    "3/5",
+    "3/4"
+  ],
+  "allocations": [
+    3,
+    5
+  ],
+  "validateAt": "-7/8",
+  "falseClaimCost": "2",
+  "measurementCost": "1/100",
+  "claimReward": "1",
+  "selector": "hypothesisInformation",
+  "scientificClaim": "Directional change in Bernoulli success probability at -7/8 compared with .5. Linear selects the decrease claim and quadratic selects increase.",
+  "environments": [
+    "boundary",
+    "specified",
+    "outOfLibrary",
+    "duplicateBoundary"
+  ],
+  "budget": "12 observations maximum. Discovery uses the registered NOESIS selector and model. Fresh verification receives the remaining capacity. Unused verification observations after early stopping are discarded. Duplicate boundary repeats a single draw at each verification look, a deliberate dependence violation.",
+  "primary": "For the stand-alone horizon-12 fixture: unadjusted repeated fixed-horizon threshold minus one-look fixed-horizon false report probability under the IID boundary null. For the integrated programme: cautious evidence process versus repeated unadjusted testing on total declared loss at discovery allocation 3 under the IID boundary.",
+  "loss": "Nonnegative expected selected focal decision loss plus observation cost plus false-claim penalty minus reward for a true claim. A claim gates the NOESIS action forecast. Withheld claim defaults to reject. No test is interpreted as identifying a whole family."
+}
