@@ -1,0 +1,72 @@
+{
+  "evidence": "A",
+  "garbling": {
+    "after": [
+      "7/20",
+      "13/20"
+    ],
+    "before": [
+      "1/4",
+      "3/4"
+    ],
+    "flip": "1/5",
+    "rankingPairIncomparable": true
+  },
+  "id": "noesis-acquisition-fixtures-001",
+  "objectives": {
+    "information-vs-decision": {
+      "irrelevant": {
+        "decisionValue": "0",
+        "disagreement": "1/4",
+        "hypothesisInformation": 1.0,
+        "jointInformation": 1.0,
+        "predictionValue": "0",
+        "predictiveVariance": "1/4"
+      },
+      "relevant": {
+        "decisionValue": "1/4",
+        "disagreement": "1/16",
+        "hypothesisInformation": 0.188721875541,
+        "jointInformation": 0.188721875541,
+        "predictionValue": "1/16",
+        "predictiveVariance": "1/4"
+      }
+    },
+    "prediction-vs-decision": {
+      "symmetric": {
+        "decisionValue": "0",
+        "disagreement": "1/16",
+        "hypothesisInformation": 0.188721875541,
+        "jointInformation": 0.188721875541,
+        "predictionValue": "1/16",
+        "predictiveVariance": "1/4"
+      },
+      "targeted": {
+        "decisionValue": "1/40",
+        "disagreement": "1/100",
+        "hypothesisInformation": 0.061002763929,
+        "jointInformation": 0.061002763929,
+        "predictionValue": "1/51",
+        "predictiveVariance": "51/400"
+      }
+    },
+    "variance-vs-information": {
+      "biased": {
+        "decisionValue": "1/5",
+        "disagreement": "1/25",
+        "hypothesisInformation": 0.146793102436,
+        "jointInformation": 0.146793102436,
+        "predictionValue": "1/21",
+        "predictiveVariance": "21/100"
+      },
+      "coin": {
+        "decisionValue": "0",
+        "disagreement": "0",
+        "hypothesisInformation": 0.0,
+        "jointInformation": 0.0,
+        "predictionValue": "0",
+        "predictiveVariance": "1/4"
+      }
+    }
+  }
+}

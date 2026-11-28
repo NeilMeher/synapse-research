@@ -1,0 +1,30 @@
+{
+  "evidence": "A",
+  "id": "noesis-corrected-discovery-002",
+  "inputs": {
+    "fixtures.json": {
+      "bytes": 1572,
+      "sha256": "b83964b5c17d4c87b093a019694fa1153ec73640b5624607451163200861ca0a"
+    },
+    "protocol.json": {
+      "bytes": 1948,
+      "sha256": "f56f66cfee1886a857da4e33538b64f5b4d3880ba4904f4bd560397417924fbd"
+    }
+  },
+  "outputs": {
+    "acquisition-fixtures.json": {
+      "bytes": 1864,
+      "sha256": "f0b3cda86f62301b03aec9053f7a93729c97c0253a1e7befc2682667898e6daf"
+    },
+    "evaluation.json": {
+      "bytes": 22628,
+      "sha256": "f625b76ed07b6e91886d41b5f0655fabc95752274b0043a13638342d62ed1d65"
+    }
+  },
+  "protocol": {
+    "bytes": 1948,
+    "sha256": "f56f66cfee1886a857da4e33538b64f5b4d3880ba4904f4bd560397417924fbd"
+  },
+  "protocolCommit": "fcc08a78526bb44241b95941013c40488c9b386a",
+  "status": "completed"
+}
