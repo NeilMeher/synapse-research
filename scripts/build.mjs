@@ -178,7 +178,7 @@ for(const [id,evidence,directory] of [
   [hindiId,"F","empirical/archives/"+hindiId+"/"],
   [momentsId,"A","research/evidence/"+momentsId+"/"],
   [trustId,"B","research/evidence/"+trustId+"/"],
-  [measurementId,"E","research/evidence/"+measurementId+"/"],
+  [measurementId,"F","research/evidence/"+measurementId+"/"],
   [adaptiveId,"A","research/evidence/"+adaptiveId+"/"],
 ]){
   const manifest=JSON.parse(text(directory+"manifest.json"));
@@ -283,7 +283,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   empiricalStudies:[empiricalManifest.execution.studyId,robustnessId,decodingId,echoPublicId,echoPublicManifest.companionStudy,hindiId],
   empiricalDevelopment:[qwenDevId],
   secondGenerationStudies:[{id:hindiId,evidence:"F"},{id:momentsId,evidence:"A"},{id:trustId,evidence:"B"}],
-  beliefArchitectureStudies:[{id:measurementId,evidence:"E"},{id:adaptiveId,evidence:"A"}],
+  beliefArchitectureStudies:[{id:measurementId,evidence:"F"},{id:adaptiveId,evidence:"A"}],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {

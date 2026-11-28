@@ -305,7 +305,7 @@ def synthesis(protocol):
         choice,p=fields(gpu["raw"],False)
         probe.append({"taskId":row["taskId"],"sameRaw":gpu["raw"]==cpu["raw"],
                       "sameLabel":choice==cpu["label"],"gpuLiteral":p,"cpuLiteral":cpu["literal"]})
-    return {"study":protocol["id"],"evidence":"E","newInferenceRequests":0,
+    return {"study":protocol["id"],"evidence":protocol["evidence"],"newInferenceRequests":0,
             "archivedRequests":sum(len(r) for r in by.values()),"sourceResults":results,
             "sameFourDevelopmentControls":matched,
             "deviceProbe":{"n":len(probe),"rows":probe,"source":digest(ROOT/"empirical/phase3/vulkan-development.json")},

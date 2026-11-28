@@ -1,6 +1,6 @@
 # Confidence Without Competence? Measurement Validity in Constrained Language-Model Evaluation
 
-MIRAGE M1 · `mirage-measurement-synthesis-001` · evidence E, retrospective actual-model archive analysis
+MIRAGE M1 · `mirage-measurement-synthesis-001` · evidence F, retrospective actual-model archive analysis
 
 ## Instrument and population
 

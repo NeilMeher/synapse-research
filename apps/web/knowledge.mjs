@@ -20,6 +20,7 @@ export const curriculum=[
   ["measurement-bias","Experimental design and measurement bias",["calibration","testing"],"mirage"],
   ["response-distributions","Sampling and response distributions",["dependence","measurement-bias"],"mirage"],
   ["committee-optimization","Committee optimization and correlated errors",["dependence","testing"],"echo"],
+  ["adaptive-trust","Audits and adaptive trust",["calibration","strategy"],"morpheus"],
 ].map(([id,name,requires,study])=>({id,name,requires,study,route:"academy.html#"+id}));
 
 export const findings={
@@ -198,13 +199,11 @@ export function buildKnowledge(){
   connect("method/echo-heterogeneous","lesson/committee-optimization","has worked example",["A"]);
   connect("method/morpheus-trust","lesson/committee-optimization","has worked example",["B"]);
   add("empirical/mirage-measurement","Empirical study","MIRAGE measurement validity","observatory.html#measurement-synthesis",
-    "Replays confidence coverage, cue adoption and scoring sensitivity in 896 original requests.",["E"]);
+    "Replays confidence coverage, cue adoption and scoring sensitivity in 896 original requests.",["F"]);
   add("method/adaptive-trust","Mathematical result","Adaptive trust with delayed feedback","research/morpheus-adaptive-mathematics.md",
     "Exact exponential memory, first-passage alarms, latent regimes and costly verification.",["A"]);
-  add("lesson/adaptive-trust","Lesson","Audits and adaptive trust","academy.html#academy-adaptive-trust",
-    "Compare the risk of verifying a claim and calculate detection and false alarm probabilities.",["A"]);
-  connect("empirical/mirage-measurement",robust,"replays matched comparisons",["E"]);
-  connect("empirical/mirage-measurement",decoding,"estimates sensitivity to missing forecasts",["E"]);
+  connect("empirical/mirage-measurement",robust,"replays matched comparisons",["F"]);
+  connect("empirical/mirage-measurement",decoding,"estimates sensitivity to missing forecasts",["F"]);
   connect("method/adaptive-trust","method/morpheus-trust","extends trust mathematics",["A"]);
   connect("method/adaptive-trust","study/axiom","connects trust to decision costs",["A"]);
   connect("method/adaptive-trust","method/echo-heterogeneous","checks duplicated evidence",["A"]);
@@ -213,7 +212,8 @@ export function buildKnowledge(){
   connect("lab/echo","future/empirical","proposed follow-up");
   for(const node of nodes){
     if(node.type==="Proposed research"||node.type==="Prepared study")node.evidence=["H"];
-    if(node.id.startsWith("empirical/mirage")||node.id.startsWith("development/mirage-qwen"))node.evidence=["E"];
+    if(node.id!=="empirical/mirage-measurement"&&
+      (node.id.startsWith("empirical/mirage")||node.id.startsWith("development/mirage-qwen")))node.evidence=["E"];
     if(node.id===echoPublic||node.id.startsWith(echoPublic+"/"))node.evidence=["F"];
   }
   return {nodes,edges,evidenceTaxonomy};

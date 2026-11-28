@@ -1,6 +1,6 @@
 {
   "id": "mirage-measurement-synthesis-001",
-  "evidence": "E",
+  "evidence": "F",
   "design": "retrospective replay of previously opened actual-model archives, no new inference and no pooling",
   "sourceRelease": "523bd906341e5d1b4b1c85ce735fed1f634f1118",
   "uncertainty": "recover archived task-family bootstrap seeds, sample sizes and interpolation for compatible paired contrasts. Worst-case [0,1] missing-loss bounds are identification sensitivity ranges.",
