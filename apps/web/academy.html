@@ -374,6 +374,13 @@
         <p id="academy-audit-result" aria-live="polite"></p>
       </div>
       <p><a href="./research/morpheus-adaptive-mathematics.md">Read the derivations and delayed-audit example</a></p>
+      <div class="lesson-demo">
+        <h3>Correct a noisy audit</h3>
+        <p>The source is correct 20% of the time. Lower audit accuracy pushes the observed rate toward 50% and makes a corrected estimate more variable.</p>
+        <label for="academy-audit-accuracy">Audit accuracy (%)</label><input id="academy-audit-accuracy" type="range" min="50" max="100" step="1" value="60">
+        <p id="academy-audit-accuracy-result" aria-live="polite"></p>
+        <p><a href="./morpheus.html#audit-correction">Compare archived decisions</a></p>
+      </div>
     </article>
   </main>
 </body>

@@ -54,3 +54,7 @@ The owner directed the scientific sequence, resource limit and publication quali
 ## Phase B · Measurement and dynamic trust
 
 MIRAGE M1 reconstructs six existing response archives under a common record vocabulary while retaining study-specific targets and experimental units. The concrete contribution is a reproducible identification and coverage analysis, including new range calculations for missing forecast losses. The mathematical study relates established exponential weighting, Beta–Bernoulli and hidden Markov methods to delayed audit contracts and asymmetric decision loss. Its exact finite examples demonstrate selection, false alarms and duplicate evidence under explicit assumptions. These applied checks are distinct from claims of a new general theorem or validated research model. [Measurement synthesis](research/mirage-measurement-synthesis.md) · [Trust mathematics](research/morpheus-adaptive-mathematics.md)
+
+## MO2 confirmatory cognition
+
+The owner specified separation of audit correction, memory and verification timing. Codex assisted the registered synthetic design, independent reimplementation and documentation. The applied contribution is the matched audit-correction factorial with stationary, recovery, timing and chance-audit controls. The audit algebra and filter derive from established misclassification and hidden-state models. Human review and external replication remain pending. [Evidence and precedent](research/morpheus-audit-confirmatory-results.md)

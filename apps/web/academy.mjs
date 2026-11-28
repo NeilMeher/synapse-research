@@ -15,6 +15,7 @@ import {barter,inventoryTotal,production,useAndStore} from "./engine/resources.m
 import {createWorld,runWorld} from "./engine/civilizations.mjs";
 import {poissonBinomial,tally} from "./engine/echo-public.mjs";
 import {decisionRisks,ewmaMoments,firstPassage} from "./engine/adaptive-trust.mjs";
+import {auditMoments} from "./engine/morpheus-audit.mjs";
 
 setupTheme();
 
@@ -80,6 +81,14 @@ updateWhen(["academy-audit-cost"],()=>{
   const action=risks.verify<immediate?"Verification has lower risk.":
     risks.verify===immediate?"All three actions tie.":"An immediate decision has lower risk.";
   byId("academy-audit-result").textContent="Verification risk "+risks.verify.toFixed(2)+" · "+action;
+});
+
+updateWhen(["academy-audit-accuracy"],()=>{
+  const accuracy=number("academy-audit-accuracy")/100;
+  const {observed,correctedVariance}=auditMoments(.2,accuracy);
+  byId("academy-audit-accuracy-result").textContent="Positive audits "+precise(observed)+" · "+
+    (correctedVariance===null?"Chance audits carry no reliability information.":
+      "corrected observation variance "+correctedVariance.toFixed(3)+".");
 });
 
 updateWhen(["academy-agents","academy-rho"],()=>{

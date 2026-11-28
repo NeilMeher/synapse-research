@@ -24,6 +24,7 @@ FAMILIES = {
     "polis2-v1": ("results/polis2-pilot.json", "results/polis2-confirmatory.json"),
     "echo-public-predictions-v1": ("empirical/archives/echo-public-empirical-001/predictions.json",),
     "echo-hindi-paired-v1": ("empirical/archives/echo-hindi-economics-001/predictions.json",),
+    "morpheus-audit-summary-v1": ("research/evidence/morpheus-adaptive-reliability-confirmatory-002/summary.json",),
 }
 
 for name, paths in FAMILIES.items():

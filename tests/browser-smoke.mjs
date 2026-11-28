@@ -179,6 +179,10 @@ try {
         }
         if (route==="morpheus"){
           assert.match(await page.locator("#dynamic-trust").textContent(),/29\.43.*13\.75/s);
+          await page.locator("#morpheus-audit-counts tr").first().waitFor();
+          assert.match(await page.locator("#morpheus-audit-counts").textContent(),/7,009 \/ 24,576/);
+          await page.locator("#morpheus-audit-environment").selectOption("chanceAudit");
+          assert.match(await page.locator("#morpheus-audit-counts").textContent(),/6,986 \/ 24,576/);
           await page.getByLabel("Memory timeline step").press("End");
           assert.match(await page.locator("#morpheus-step-summary").textContent(),/Step 15/);
           await page.getByLabel("Architecture").selectOption("keyword");
@@ -425,6 +429,9 @@ try {
       assert.match(await page.locator("#academy-audit-result").textContent(),/0\.35.*lower risk/);
       await page.locator("#academy-audit-cost").fill("25");
       assert.match(await page.locator("#academy-audit-result").textContent(),/0\.50.*All three actions tie/);
+      assert.match(await page.locator("#academy-audit-accuracy-result").textContent(),/44\.00%.*6\.160/);
+      await page.locator("#academy-audit-accuracy").fill("50");
+      assert.match(await page.locator("#academy-audit-accuracy-result").textContent(),/50\.00%.*no reliability information/);
       await page.getByLabel("Printed label of the correct answer").selectOption("D");
       assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");

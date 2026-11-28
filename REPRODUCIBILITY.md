@@ -207,3 +207,7 @@ python -B research/axiom-trust-fixture.py verify
 ```
 
 The two development checks regenerate every stress history and decision in memory. The trade fixture compares two exact solution methods and verifies the archive byte for byte.
+
+## MORPHEUS MO2
+
+Run `node research/morpheus-confirmatory/run.mjs verify` and `python -B research/morpheus-confirmatory/reference.py`. The Node replay checks unchanged archive bytes. Python checks 2,304 environment-history realizations, 2,801,664 decisions and all 17 paired contrasts. Its exact fixtures and backward recursion independently check timing, and numerical comparisons use absolute tolerance \(10^{-12}\). Run the schema checks through `python -B scripts/check_schemas.py`. [Protocol](research/morpheus-confirmatory-protocol.md) · [Manifest](research/evidence/morpheus-adaptive-reliability-confirmatory-002/manifest.json)

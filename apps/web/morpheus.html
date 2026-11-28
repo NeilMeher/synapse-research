@@ -53,6 +53,23 @@
       <p>Exact examples show how a faster learner can detect a reliability drop sooner and raise more false alarms. The derivations cover delayed audits, latent reliability regimes and costly verification.</p>
       <div class="actions"><a class="quiet" href="./research/morpheus-adaptive-mathematics.md">Read the derivations</a><a class="quiet" href="./academy.html#adaptive-trust">Try the Academy exercise</a></div>
     </article>
+    <article class="result-panel study-block" id="audit-correction">
+      <h2>When audits are wrong</h2>
+      <p>Registered synthetic study · 384 histories per environment</p>
+      <p>With the same audit correction, exponential memory lowered burst-history decision loss by 5.69 percentage points compared with cumulative memory. It increased loss by 2.62 points when the source stayed reliable.</p>
+      <label for="morpheus-audit-environment">Source and audit environment</label>
+      <select id="morpheus-audit-environment">
+        <option value="burst">Abrupt failure and restoration</option><option value="stationary">Stationary source</option><option value="drift">Gradual drift</option>
+        <option value="lowerAccuracy">60% accurate audits</option><option value="longerDelay">More long delays</option><option value="chanceAudit">Chance audits</option>
+      </select>
+      <p id="morpheus-audit-status" role="status">Loading the registered audit comparison…</p>
+      <div class="table-scroll"><table>
+        <caption>Incorrect decisions in the registered study</caption>
+        <thead><tr><th scope="col">Policy</th><th scope="col">Full history</th><th scope="col">Scheduled failure window</th><th scope="col">Scheduled restoration window</th></tr></thead>
+        <tbody id="morpheus-audit-counts"></tbody>
+      </table></div>
+      <div class="actions"><a class="quiet" href="./research/morpheus-audit-confirmatory-results.md">Read estimates and limits</a><a class="quiet" href="./research/morpheus-confirmatory-protocol.md">Frozen protocol</a><a class="quiet" href="./research/evidence/morpheus-adaptive-reliability-confirmatory-002/manifest.json">Archive manifest</a></div>
+    </article>
     <article class="result-panel study-block" id="evidence">
       <h2>Research evidence</h2>
       <div class="actions">

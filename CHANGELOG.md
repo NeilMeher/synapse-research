@@ -126,3 +126,7 @@ Added a blind English–Hindi alignment audit, empirical coverage and reliabilit
 ## v1.6.0 · Measurement validity and adaptive trust
 
 Replayed 896 archived MIRAGE requests, reconciled reported percentages with scorable forecasts, and recovered the task-level contrasts. Added exact trust, delayed-audit, first-passage and verification calculations with two worked Academy exercises. The Observatory and knowledge graph link the studies, assumptions and checked artifacts.
+
+## v1.6.1 · MORPHEUS confirmatory audit correction
+
+Completed a registered, matched audit-channel and memory comparison. Corrected exponential memory reduced full-history burst loss by 5.69 points versus corrected cumulative memory, with recovery and stationary penalties against fixed trust. Preserved the development and delayed trade evidence, added an archived audit table and Academy exercise, and independently reproduced all new decisions and intervals.

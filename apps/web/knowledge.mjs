@@ -208,6 +208,10 @@ export function buildKnowledge(){
   connect("method/adaptive-trust","study/axiom","connects trust to decision costs",["A"]);
   connect("method/adaptive-trust","method/echo-heterogeneous","checks duplicated evidence",["A"]);
   connect("method/adaptive-trust","lesson/adaptive-trust","has worked example",["A"]);
+  add("study/morpheus-audit","Study","MORPHEUS confirmatory audit correction","morpheus.html#audit-correction",
+    "Separates audit correction, temporal weighting and update timing across matched source histories.",["B"]);
+  connect("study/morpheus-audit","method/adaptive-trust","tests adaptive memory",["B"]);
+  connect("study/morpheus-audit","study/morpheus","extends source reliability research",["B"]);
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   for(const node of nodes){

@@ -234,3 +234,7 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Integrated architecture | [Theory links and verification assumptions](research/morpheus-adaptive-mathematics.md#5-verification-and-transfer) | Mathematical and website connections implemented, joint experimental intervention pending |
 
 The follow-on branch checkpoint completed [adaptive-trust development](research/morpheus-adaptive-development.md) with 80 environment-history pairs and 30,720 independently replayed decisions. It also checked [12 two-round AXIOM policy cases](research/axiom-delayed-trade.md) with exogenous reliability. These are synthetic development and finite mathematical evidence respectively. The held-out adaptive benchmark, strategic counterparty and integrated empirical study remain open.
+
+## MO2 confirmatory cognition milestone
+
+Completed `morpheus-adaptive-reliability-confirmatory-002`. The sole primary burst comparison was −5.69 points [−6.29, −5.09] for corrected EWMA versus corrected cumulative estimation, using 384 paired 64-step histories. The matched memory-by-correction interaction was −0.71 points [−1.14, −0.29]. Stationary degradation and excess restoration loss versus fixed trust remain visible. Corrected EWMA also incurred more burst-history loss than naive EWMA. The exact chance-audit control separates model-based trust changes from information in the observed bits. [Frozen protocol](research/morpheus-confirmatory-protocol.md) · [Results](research/morpheus-audit-confirmatory-results.md)

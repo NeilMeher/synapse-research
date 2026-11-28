@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "evidence",
+    "stage",
+    "historiesPerEnvironment",
+    "policyCount",
+    "contrasts",
+    "totals"
+  ],
+  "properties": {
+    "id": {
+      "const": "morpheus-adaptive-reliability-confirmatory-002"
+    },
+    "evidence": {
+      "const": "B"
+    },
+    "stage": {
+      "const": "confirmatory"
+    },
+    "historiesPerEnvironment": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "policyCount": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "contrasts": {
+      "type": "object",
+      "required": [
+        "correctedMemory"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/contrast"
+      }
+    },
+    "totals": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "minProperties": 2,
+        "additionalProperties": {
+          "type": "object",
+          "required": [
+            "full",
+            "failure",
+            "restoration",
+            "initial"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "full": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failure": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "restoration": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "initial": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "contrast": {
+      "type": "object",
+      "required": [
+        "id",
+        "environment",
+        "window",
+        "coefficients",
+        "n",
+        "steps",
+        "sum",
+        "squares",
+        "estimate",
+        "se",
+        "interval95"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "window": {
+          "enum": [
+            "full",
+            "failure",
+            "restoration",
+            "initial"
+          ]
+        },
+        "coefficients": {
+          "type": "object",
+          "minProperties": 2,
+          "additionalProperties": {
+            "enum": [
+              -1,
+              1
+            ]
+          }
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sum": {
+          "type": "integer"
+        },
+        "squares": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "estimate": {
+          "type": "number"
+        },
+        "se": {
+          "type": "number",
+          "minimum": 0
+        },
+        "interval95": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

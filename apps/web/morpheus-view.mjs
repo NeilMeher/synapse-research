@@ -6,6 +6,41 @@ import { byId, canvasContext, node, palette } from "./view.mjs";
 const pct = x => (x * 100).toFixed(2) + "%";
 const num = x => x.toFixed(4);
 
+async function showAuditComparison() {
+  const select = byId("morpheus-audit-environment");
+  const status = byId("morpheus-audit-status");
+  select.disabled = true;
+  try {
+    const response = await fetch("./research/evidence/morpheus-adaptive-reliability-confirmatory-002/summary.json");
+    if(!response.ok) throw new Error("Audit archive unavailable");
+    const results = await response.json();
+    const labels = {
+      fixed:"Fixed trust","cumulative-known-event":"Cumulative, corrected","exponential-known-event":"Exponential, corrected",
+      "exponential-naive-event":"Exponential, uncorrected","markov-known-event":"Markov, known audit accuracy",
+    };
+    const windows = {full:64,failure:22,restoration:12};
+    function render() {
+      const totals = results.totals[select.value];
+      byId("morpheus-audit-counts").replaceChildren(...Object.entries(labels).map(([id,label]) => {
+        const tr = node("tr");
+        const heading = node("th",label);
+        heading.scope = "row";
+        tr.append(heading,...Object.entries(windows).map(([key,size]) =>
+          node("td",totals[id][key].toLocaleString()+" / "+(results.historiesPerEnvironment*size).toLocaleString())));
+        return tr;
+      }));
+      status.textContent = "Showing "+results.historiesPerEnvironment+" matched histories.";
+    }
+    render();
+    select.disabled = false;
+    select.addEventListener("change",render);
+  } catch {
+    status.textContent = "The registered audit table is unavailable. The report and protocol remain linked below.";
+  }
+}
+
+showAuditComparison();
+
 async function boot() {
   const status = byId("morpheus-status");
   try {

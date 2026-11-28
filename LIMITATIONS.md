@@ -52,3 +52,7 @@ The English–Hindi archive changes prompt language, translations, stop strings 
 M1 covers the original constrained prompts and models. The measured probability is a response field tied to a selected answer. The format manipulation changes coverage and instructions jointly. The archive does not isolate pure prompt length, pure field order, architecture or backend. Missing Brier losses are bounded hypothetically and have no observed numeric value. Model competence remains low on the held-out synthetic tasks.
 
 The dynamic-trust calculations require the declared observation law and sufficient audit provenance. A missed or late audit can itself be informative under selection. The exact examples use finite histories and a simple known audit channel. A posterior from a misspecified regime model may still be overconfident, especially with correlated reports. Human review of both studies is pending.
+
+## Confirmatory audit correction limits
+
+Known audit accuracy and independent symmetric errors are assumptions in MO2. The inversion becomes unstable near chance and the likelihood can require richer verification records outside the simulator. EWMA versus cumulative changes the whole time-weighting rule, including initial trust retention. Markov versus EWMA bundles different dynamics and estimators. The simulation's equal-error loss, known alternative quality and specified source trajectories delimit transfer. [Full scope](research/morpheus-audit-confirmatory-results.md#verification-and-scope)
