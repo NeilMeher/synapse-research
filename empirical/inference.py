@@ -129,6 +129,7 @@ def serve(runtime_dir, weights, protocol, log_path):
                                    stdout=log, stderr=log)
         try:
             adapter = LocalChat(port, protocol)
+            adapter.pid = process.pid
             deadline = time.monotonic() + 45
             while time.monotonic() < deadline:
                 if process.poll() is not None:

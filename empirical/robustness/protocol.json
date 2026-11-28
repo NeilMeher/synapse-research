@@ -1,0 +1,26 @@
+{
+  "studyId": "mirage-empirical-robustness-002",
+  "version": "1.0",
+  "evidence": "registered-actual-model",
+  "parentModelConfig": "../mirage-pilot-v1.json",
+  "heldout": {
+    "tasks": 32,
+    "requests": 512
+  },
+  "development": {
+    "tasks": 4,
+    "requests": 36
+  },
+  "budget": {
+    "maximumSeconds": 1200,
+    "consecutiveInfrastructureFailures": 12,
+    "retries": 0,
+    "additionalCostUsd": 0
+  },
+  "analysis": {
+    "bootstrapReplicates": 4000,
+    "bootstrapSeed": 85413,
+    "confidenceBins": 5,
+    "minCompleteTaskFraction": 0.75
+  }
+}

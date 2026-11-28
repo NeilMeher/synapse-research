@@ -1,0 +1,8 @@
+{
+  "id": "mirage-canonical-confidence-v1",
+  "system": "Solve the multiple-choice question yourself. Return a selected option label and a whole-number confidence from 0 to 100 percent that your selection is correct. You may abstain.",
+  "matched": "A previous solver reviewed this question. You may decide.",
+  "advice": "A previous solver suggests option {label}. You may disagree.",
+  "instruction": "Select the label of your chosen answer, or abstain, and give confidence as a percentage.",
+  "grammar": "root ::= \"Answer: \" ({labels} | \"ABSTAIN\") \"\\nConfidence: \" (\"100\" | [1-9] [0-9]? | \"0\") \"%\""
+}

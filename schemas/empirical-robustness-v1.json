@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MIRAGE 002 raw response record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sequence",
+    "requestSha256",
+    "evidence",
+    "id",
+    "timestamp",
+    "raw",
+    "finishReason",
+    "answer",
+    "confidence",
+    "providerResponseId",
+    "tokens",
+    "error",
+    "latencyMs",
+    "status"
+  ],
+  "properties": {
+    "sequence": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 512
+    },
+    "requestSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "evidence": {
+      "const": "actual-model-request"
+    },
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "raw": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "maxLength": 4096
+    },
+    "finishReason": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "answer": {
+      "enum": [
+        null,
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "providerResponseId": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tokens": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "input",
+        "output"
+      ],
+      "properties": {
+        "input": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "error": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "latencyMs": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "minimum": 0
+    },
+    "status": {
+      "enum": [
+        "scorable",
+        "abstention",
+        "missingConfidence",
+        "missingAnswer",
+        "invalidOutput",
+        "explicitRefusal",
+        "truncated",
+        "timeout",
+        "interrupted",
+        "infrastructureFailure",
+        "notAttempted"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "scorable"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "error": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "confidence": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "timeout",
+              "interrupted",
+              "infrastructureFailure",
+              "notAttempted"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "raw": {
+            "type": "null"
+          },
+          "answer": {
+            "type": "null"
+          },
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "raw": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "error": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}
