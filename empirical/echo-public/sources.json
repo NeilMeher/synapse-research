@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "retrievedDate": "2026-11-28",
+  "maximumDataBytes": 250000000,
+  "retrievedDataBytes": 101539044,
+  "predictionArchive": {
+    "publisher": "gililior",
+    "repository": "gililior/mmlu-prox-eval-predictions",
+    "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+    "license": "CC-BY-4.0",
+    "attributionUrl": "https://huggingface.co/datasets/gililior/mmlu-prox-eval-predictions/tree/7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+    "changeNotice": "Selected English economics and physics archived predictions, independently extracted canonical option identities, and included compact derived data without question text, prompt text, or generated prose."
+  },
+  "benchmark": {
+    "publisher": "li-lab",
+    "repository": "li-lab/MMLU-ProX",
+    "alignmentRevision": "8e6106a6c6ce1c5027e66cc338143cf997b2aa09",
+    "license": "MIT as declared by publisher; original components retain applicable terms",
+    "attributionUrl": "https://huggingface.co/datasets/li-lab/MMLU-ProX/tree/8e6106a6c6ce1c5027e66cc338143cf997b2aa09",
+    "language": "en",
+    "split": "test",
+    "subjects": [
+      "economics",
+      "physics"
+    ]
+  },
+  "models": [
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "family": "Qwen",
+      "label": "Qwen3.5 9B"
+    },
+    {
+      "id": "allenai/Olmo-3-7B-Instruct",
+      "family": "Olmo",
+      "label": "Olmo 3 7B Instruct"
+    },
+    {
+      "id": "google/gemma-3-12b-it",
+      "family": "Gemma",
+      "label": "Gemma 3 12B IT"
+    },
+    {
+      "id": "google/gemma-3-4b-it",
+      "family": "Gemma",
+      "label": "Gemma 3 4B IT"
+    },
+    {
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "family": "Llama",
+      "label": "Llama 3.1 8B Instruct"
+    },
+    {
+      "id": "meta-llama/Llama-3.2-3B-Instruct",
+      "family": "Llama",
+      "label": "Llama 3.2 3B Instruct"
+    },
+    {
+      "id": "microsoft/Phi-4-mini-instruct",
+      "family": "Phi",
+      "label": "Phi 4 Mini Instruct"
+    }
+  ],
+  "files": [
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/Qwen__Qwen3.5-9B/results_2026-03-20T00-26-30.299154.json",
+      "file": "Qwen__Qwen3.5-9B--results_2026-03-20T00-26-30.299154.json",
+      "size": 48823,
+      "sha256": "118172f7c01105405eae5b7ada80c997b6155e13e85e5543e9aa2cd222e64c67",
+      "gitBlob": "ce14cd176eed21ae4ff036b43928b270b73a323a",
+      "model": "Qwen/Qwen3.5-9B"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/Qwen__Qwen3.5-9B/samples_mmlu_prox_en_economics_2026-03-20T00-26-30.299154.jsonl",
+      "file": "Qwen__Qwen3.5-9B--samples_mmlu_prox_en_economics_2026-03-20T00-26-30.299154.jsonl",
+      "size": 5590747,
+      "sha256": "626e34b4e360b4edf8f5d74b096afb563737da1f08b735d2f236333a6937adb7",
+      "gitBlob": "5d95ec60dbd50cc4283883a9aa274b289ac8c651",
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/Qwen__Qwen3.5-9B/samples_mmlu_prox_en_physics_2026-03-20T00-26-30.299154.jsonl",
+      "file": "Qwen__Qwen3.5-9B--samples_mmlu_prox_en_physics_2026-03-20T00-26-30.299154.jsonl",
+      "size": 8036643,
+      "sha256": "0a65810282cc5f1f17e7f7ac6b9fbfa97a54cc2f2fb5b31984922c8e2fa5ceba",
+      "gitBlob": "9aa2893c057919dc7911c057abf93974375c1b95",
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/allenai__Olmo-3-7B-Instruct/results_2026-03-14T08-20-51.073439.json",
+      "file": "allenai__Olmo-3-7B-Instruct--results_2026-03-14T08-20-51.073439.json",
+      "size": 49367,
+      "sha256": "1988ca84cd699ce6d793ac83e344437ec442c45d8bd6bed6e8c53f67360a764d",
+      "gitBlob": "167a01b06368c750d4b9b45a253a50556b6cdf9f",
+      "model": "allenai/Olmo-3-7B-Instruct"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/allenai__Olmo-3-7B-Instruct/samples_mmlu_prox_en_economics_2026-03-14T08-20-51.073439.jsonl",
+      "file": "allenai__Olmo-3-7B-Instruct--samples_mmlu_prox_en_economics_2026-03-14T08-20-51.073439.jsonl",
+      "size": 5756435,
+      "sha256": "111bcac8d552b97cd80af8e7e17b7e932ee61eda7bdf0b6e828befff50d484c2",
+      "gitBlob": "653837deeba292e9657de1b7f37ac4337860bc1c",
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/allenai__Olmo-3-7B-Instruct/samples_mmlu_prox_en_physics_2026-03-14T08-20-51.073439.jsonl",
+      "file": "allenai__Olmo-3-7B-Instruct--samples_mmlu_prox_en_physics_2026-03-14T08-20-51.073439.jsonl",
+      "size": 7879583,
+      "sha256": "fb798c4582f35ab701cc481649e9f78134b11a0e2530667795742a1bca9f2adf",
+      "gitBlob": "87472e40b045fef1b5070472c2fecc1557eaacfc",
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-12b-it/results_2026-03-13T04-02-08.678793.json",
+      "file": "google__gemma-3-12b-it--results_2026-03-13T04-02-08.678793.json",
+      "size": 48922,
+      "sha256": "fae500923636cc8633be60310b87265f4deb5fac0969f50ed2ea3012a7a821d4",
+      "gitBlob": "34f5b8be72f2c5d5c9ad4e5f28d0dc435b88e05d",
+      "model": "google/gemma-3-12b-it"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-12b-it/samples_mmlu_prox_en_economics_2026-03-13T04-02-08.678793.jsonl",
+      "file": "google__gemma-3-12b-it--samples_mmlu_prox_en_economics_2026-03-13T04-02-08.678793.jsonl",
+      "size": 5514192,
+      "sha256": "62bc7e17ad891fe52c146aee149f0ba6a546b2eca5d32bfd1fbb5429b1917147",
+      "gitBlob": "c58851898011ffcf5ede45369e539bdf04872b9a",
+      "model": "google/gemma-3-12b-it",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-12b-it/samples_mmlu_prox_en_physics_2026-03-13T04-02-08.678793.jsonl",
+      "file": "google__gemma-3-12b-it--samples_mmlu_prox_en_physics_2026-03-13T04-02-08.678793.jsonl",
+      "size": 8204880,
+      "sha256": "15433dfa3afde30fa49f15b26d6fdff9f435060aa0ed1ab2ec14782d728f8ea6",
+      "gitBlob": "1683b1f935bf10c9d67e89d5b78be13d7d9e5f3d",
+      "model": "google/gemma-3-12b-it",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-4b-it/results_2026-03-12T22-55-02.954997.json",
+      "file": "google__gemma-3-4b-it--results_2026-03-12T22-55-02.954997.json",
+      "size": 48908,
+      "sha256": "16ac1db596ce5211b5445ffb6b1b665be452f3a64d013976adc8733d8e9d44fb",
+      "gitBlob": "7a10da9ae5588279dd961ffd2e333c4e2ea48e8f",
+      "model": "google/gemma-3-4b-it"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-4b-it/samples_mmlu_prox_en_economics_2026-03-12T22-55-02.954997.jsonl",
+      "file": "google__gemma-3-4b-it--samples_mmlu_prox_en_economics_2026-03-12T22-55-02.954997.jsonl",
+      "size": 5562931,
+      "sha256": "3f3bc04f3d30d855aa9e488a9a30e70e7862cb9b219d3c777cca51069a73d7aa",
+      "gitBlob": "4cf4b4fc94bb3fff023cc688b0a9ed1b0c8130ce",
+      "model": "google/gemma-3-4b-it",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/google__gemma-3-4b-it/samples_mmlu_prox_en_physics_2026-03-12T22-55-02.954997.jsonl",
+      "file": "google__gemma-3-4b-it--samples_mmlu_prox_en_physics_2026-03-12T22-55-02.954997.jsonl",
+      "size": 8344479,
+      "sha256": "b6542ab62378a6d0d0000bc0f2f020b3b4bfe1e94730ded07ddbde047d9430a0",
+      "gitBlob": "f9570c9e2fd7b9ab0569eaebbc9fac647ae2c97e",
+      "model": "google/gemma-3-4b-it",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.1-8B-Instruct/results_2026-03-13T04-48-56.360780.json",
+      "file": "meta-llama__Llama-3.1-8B-Instruct--results_2026-03-13T04-48-56.360780.json",
+      "size": 49153,
+      "sha256": "d1b337151ad7dc3f8f19a3170fb67c4e7256d68b8137d635b9b029d56f47b6bc",
+      "gitBlob": "cfd2e5e48a15c307e952dbf9f298cbe861a15198",
+      "model": "meta-llama/Llama-3.1-8B-Instruct"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.1-8B-Instruct/samples_mmlu_prox_en_economics_2026-03-13T04-48-56.360780.jsonl",
+      "file": "meta-llama__Llama-3.1-8B-Instruct--samples_mmlu_prox_en_economics_2026-03-13T04-48-56.360780.jsonl",
+      "size": 5626169,
+      "sha256": "3b0326a8d2f0ec800cc6b22c08245d38e383f278a5404060f9ab85a5c22084b6",
+      "gitBlob": "a619745ee4eed4ca22dded7675e57d58832aa7b7",
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.1-8B-Instruct/samples_mmlu_prox_en_physics_2026-03-13T04-48-56.360780.jsonl",
+      "file": "meta-llama__Llama-3.1-8B-Instruct--samples_mmlu_prox_en_physics_2026-03-13T04-48-56.360780.jsonl",
+      "size": 8213347,
+      "sha256": "62b56cd115e89baef585036827a7eaddcfbe39a510f14b435df0a78caf13f28e",
+      "gitBlob": "bdc92fe86587a6ced851f2ccee2aec2172bc5fee",
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.2-3B-Instruct/results_2026-03-13T00-52-39.180213.json",
+      "file": "meta-llama__Llama-3.2-3B-Instruct--results_2026-03-13T00-52-39.180213.json",
+      "size": 49151,
+      "sha256": "0c4abe544c063d62471a138ee87d8cd0ccd8472656b5f4f5a67cc43489f4a1b0",
+      "gitBlob": "1490d488ec24b3670d151b814f2edea7d9d24d00",
+      "model": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.2-3B-Instruct/samples_mmlu_prox_en_economics_2026-03-13T00-52-39.180213.jsonl",
+      "file": "meta-llama__Llama-3.2-3B-Instruct--samples_mmlu_prox_en_economics_2026-03-13T00-52-39.180213.jsonl",
+      "size": 5713609,
+      "sha256": "bba10d4f1a136bb534ae9d4800903342feb69fd1b1ef457ca59f822c817d2937",
+      "gitBlob": "473d30f41f5f7daf839ad8c2e5902358e2693ce3",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/meta-llama__Llama-3.2-3B-Instruct/samples_mmlu_prox_en_physics_2026-03-13T00-52-39.180213.jsonl",
+      "file": "meta-llama__Llama-3.2-3B-Instruct--samples_mmlu_prox_en_physics_2026-03-13T00-52-39.180213.jsonl",
+      "size": 8204751,
+      "sha256": "232b0438b4f0bea8ab2c91df7e2c3d70abed2370ec92879fd9b774b76a213909",
+      "gitBlob": "b248847595b207a90afb6c7a8099dbf2572999bb",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "physics"
+    },
+    {
+      "kind": "configuration",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/microsoft__Phi-4-mini-instruct/results_2026-03-13T16-36-40.305008.json",
+      "file": "microsoft__Phi-4-mini-instruct--results_2026-03-13T16-36-40.305008.json",
+      "size": 49105,
+      "sha256": "23252666919e4e4b44f2b20c4ad9ee6c91ab25460f52e8c4eb0df053cdf2f8f2",
+      "gitBlob": "0c6a0afa81369ff894a26876ab923d49417b0de9",
+      "model": "microsoft/Phi-4-mini-instruct"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/microsoft__Phi-4-mini-instruct/samples_mmlu_prox_en_economics_2026-03-13T16-36-40.305008.jsonl",
+      "file": "microsoft__Phi-4-mini-instruct--samples_mmlu_prox_en_economics_2026-03-13T16-36-40.305008.jsonl",
+      "size": 5516096,
+      "sha256": "1e160ff3efda224925856ff858ff07fe0aab06e979e120a86ec4060c9ee6330e",
+      "gitBlob": "1318319d85d227deac5669f561d16278f78a9dee",
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "economics"
+    },
+    {
+      "kind": "prediction",
+      "repo": "gililior/mmlu-prox-eval-predictions",
+      "revision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+      "path": "mmlu_prox_en/microsoft__Phi-4-mini-instruct/samples_mmlu_prox_en_physics_2026-03-13T16-36-40.305008.jsonl",
+      "file": "microsoft__Phi-4-mini-instruct--samples_mmlu_prox_en_physics_2026-03-13T16-36-40.305008.jsonl",
+      "size": 7926393,
+      "sha256": "8efde3b9beca85c78f47d988521d26589d00754b29f34d215043885adc9f18cd",
+      "gitBlob": "46a1c6ec6b1e48b53d6181025cf770a1fb83c19f",
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "physics"
+    },
+    {
+      "kind": "benchmark",
+      "repo": "li-lab/MMLU-ProX",
+      "revision": "8e6106a6c6ce1c5027e66cc338143cf997b2aa09",
+      "path": "en/test-00000-of-00001.parquet",
+      "file": "benchmark-en-test.parquet",
+      "size": 5105360,
+      "sha256": "0b0e1451ca45d44385d936c953336a3a9e68a53af498c699b02c4f960ae24b7f",
+      "publisherLfsSha256": "0b0e1451ca45d44385d936c953336a3a9e68a53af498c699b02c4f960ae24b7f"
+    }
+  ]
+}

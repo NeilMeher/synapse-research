@@ -1,0 +1,1009 @@
+{
+  "benchmarkItems": 2143,
+  "benchmarkSubjects": {
+    "economics": 844,
+    "physics": 1299
+  },
+  "files": [
+    {
+      "path": "mmlu_prox_en/Qwen__Qwen3.5-9B/samples_mmlu_prox_en_economics_2026-03-20T00-26-30.299154.jsonl",
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/Qwen__Qwen3.5-9B/samples_mmlu_prox_en_physics_2026-03-20T00-26-30.299154.jsonl",
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/allenai__Olmo-3-7B-Instruct/samples_mmlu_prox_en_economics_2026-03-14T08-20-51.073439.jsonl",
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/allenai__Olmo-3-7B-Instruct/samples_mmlu_prox_en_physics_2026-03-14T08-20-51.073439.jsonl",
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/google__gemma-3-12b-it/samples_mmlu_prox_en_economics_2026-03-13T04-02-08.678793.jsonl",
+      "model": "google/gemma-3-12b-it",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/google__gemma-3-12b-it/samples_mmlu_prox_en_physics_2026-03-13T04-02-08.678793.jsonl",
+      "model": "google/gemma-3-12b-it",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/google__gemma-3-4b-it/samples_mmlu_prox_en_economics_2026-03-12T22-55-02.954997.jsonl",
+      "model": "google/gemma-3-4b-it",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/google__gemma-3-4b-it/samples_mmlu_prox_en_physics_2026-03-12T22-55-02.954997.jsonl",
+      "model": "google/gemma-3-4b-it",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/meta-llama__Llama-3.1-8B-Instruct/samples_mmlu_prox_en_economics_2026-03-13T04-48-56.360780.jsonl",
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/meta-llama__Llama-3.1-8B-Instruct/samples_mmlu_prox_en_physics_2026-03-13T04-48-56.360780.jsonl",
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/meta-llama__Llama-3.2-3B-Instruct/samples_mmlu_prox_en_economics_2026-03-13T00-52-39.180213.jsonl",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/meta-llama__Llama-3.2-3B-Instruct/samples_mmlu_prox_en_physics_2026-03-13T00-52-39.180213.jsonl",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/microsoft__Phi-4-mini-instruct/samples_mmlu_prox_en_economics_2026-03-13T16-36-40.305008.jsonl",
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "economics",
+      "records": 844,
+      "matched": 844,
+      "excluded": {},
+      "exclusionDetails": [],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    },
+    {
+      "path": "mmlu_prox_en/microsoft__Phi-4-mini-instruct/samples_mmlu_prox_en_physics_2026-03-13T16-36-40.305008.jsonl",
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "physics",
+      "records": 1299,
+      "matched": 1298,
+      "excluded": {
+        "duplicate canonical option content": 1
+      },
+      "exclusionDetails": [
+        [
+          9754,
+          "duplicate canonical option content"
+        ]
+      ],
+      "missingCanonicalIds": [],
+      "unmatchedCanonicalIds": [],
+      "docIdsContiguous": true
+    }
+  ],
+  "configuration": [
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "economics",
+      "runDate": 1773954912.3897684,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "Qwen/Qwen3.5-9B",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "subject": "physics",
+      "runDate": 1773954912.3897684,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "Qwen/Qwen3.5-9B",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "economics",
+      "runDate": 1773465685.0934365,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "allenai/Olmo-3-7B-Instruct",
+        "max_model_len": 65536,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "subject": "physics",
+      "runDate": 1773465685.0934365,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "allenai/Olmo-3-7B-Instruct",
+        "max_model_len": 65536,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "subject": "economics",
+      "runDate": 1773363155.9586124,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-12b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "subject": "physics",
+      "runDate": 1773363155.9586124,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-12b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "subject": "economics",
+      "runDate": 1773347214.8289175,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-4b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "subject": "physics",
+      "runDate": 1773347214.8289175,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-4b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "economics",
+      "runDate": 1773368086.3043115,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.1-8B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "subject": "physics",
+      "runDate": 1773368086.3043115,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.1-8B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "economics",
+      "runDate": 1773354514.495887,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.2-3B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subject": "physics",
+      "runDate": 1773354514.495887,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.2-3B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    },
+    {
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "economics",
+      "runDate": 1773411299.0242112,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "microsoft/Phi-4-mini-instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "e4523c2db3210ef5982f962efc2687dace2e5898b588c112111a1dca7896b03a",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "microsoft/Phi-4-mini-instruct",
+      "subject": "physics",
+      "runDate": 1773411299.0242112,
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "microsoft/Phi-4-mini-instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "transformers": "5.3.0.dev0",
+      "harness": "0.4.11",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "generation": {
+        "until": [
+          "</s>",
+          "Q:",
+          "Question:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "benchmarkRevisionRecorded": null,
+      "modelRevisionRecorded": null,
+      "taskHash": "04586402f0c7509cc41a11231d15136e675babb6d4edcfcc7565ed66a72451bb",
+      "noChatTemplate": true,
+      "fewshot": 5,
+      "fewshotSplit": "validation",
+      "prompt": "five-shot plain-text CoT",
+      "responseExtraction": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "answer is \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publisherCount": {
+        "original": 1299,
+        "effective": 1299
+      }
+    }
+  ],
+  "itemExclusions": [
+    {
+      "id": 9754,
+      "reason": "duplicate canonical option content"
+    }
+  ],
+  "crossModelPromptMismatchIds": [],
+  "matchedItems": 2142,
+  "matchedGroups": 2132,
+  "matchedPredictions": 14994,
+  "totalPredictions": 15001
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "studyIds": [
+    "echo-public-empirical-001",
+    "echo-public-empirical-002"
+  ],
+  "status": "frozen retrospective analysis before opening archived performance",
+  "scope": {
+    "language": "en",
+    "split": "test",
+    "subjects": [
+      "economics",
+      "physics"
+    ],
+    "minimumMatchedItems": 1000,
+    "minimumFamilies": 3
+  },
+  "partitions": [
+    "development",
+    "calibration",
+    "heldout"
+  ],
+  "partition": {
+    "seed": "synapse-echo-public-2026-11-28-v1",
+    "development": 0.2,
+    "calibration": 0.3,
+    "heldout": 0.5,
+    "stratum": "subject",
+    "group": "transitive connected component of publisher source/source question ID or exact normalized question text",
+    "allocation": "floor development and calibration group counts separately, then remainder heldout, ordered by SHA-256 seed|subject|numeric group ID"
+  },
+  "primary": {
+    "policy": "majority",
+    "committee": "all seven panel members",
+    "baseline": "highest full-plan calibration accuracy, ties by fixed source-manifest model order",
+    "estimand": "heldout paired full-plan correctness of fixed all-panel strict majority minus selected single baseline",
+    "abstention": "incorrect for full-plan accuracy; coverage and conditional accuracy reported separately"
+  },
+  "voting": {
+    "majority": "strictly more than half of all selected members",
+    "plurality": "unique highest valid vote count, or seeded tie; no valid votes means abstention",
+    "unanimity": "every selected member must give the same valid canonical option",
+    "tieAbstain": "unique plurality only",
+    "tieSeed": 487291,
+    "tieRule": "indices sorted ascending; use unsigned low 32 bits of (question ID xor seed) times 2654435761, modulo number of tied options"
+  },
+  "selection": {
+    "sizes": [
+      3,
+      5
+    ],
+    "complementarityPenalty": 0.5,
+    "randomSeed": 423381,
+    "objectives": [
+      "topAccuracy",
+      "seededRandom",
+      "distinctFamilies",
+      "complementarity",
+      "directVote"
+    ],
+    "tieRule": "lexicographic source-manifest member indices",
+    "randomRule": "single deterministic uniform enumeration index per committee size using unsigned xorshift32 and rejection sampling",
+    "complementarity": "mean individual calibration accuracy minus 0.5 times mean pairwise joint-error excess over the product of marginal errors",
+    "optimization": "exhaustive all equal-sized subsets; distinctFamilies enforces one checkpoint per family; directVote maximizes strict-majority full-plan calibration correct count"
+  },
+  "bootstrap": {
+    "replicates": 4000,
+    "seed": 17402381,
+    "interval": [
+      0.025,
+      0.975
+    ],
+    "group": "canonical source-question group, sampled with replacement within subject",
+    "quantile": "sorted floor((R-1)*q)",
+    "multipleTesting": "one primary comparison; all secondary estimates and intervals descriptive with no multiplicity-adjusted claims"
+  },
+  "references": {
+    "homogeneous": "exact binomial conditional on mean calibration correctness",
+    "heterogeneous": "exact Poisson-binomial conditional on per-model calibration correctness",
+    "categorical": "independent calibration distributions of correct, ordered wrong rank, or invalid; fixed alpha=1 per eligible category. Condition on subject and actual option count when n>=20; otherwise use subject and pool then renormalize to eligible ranks.",
+    "categoricalPerStratum": 16000,
+    "categoricalSeed": 777019,
+    "repair": "500 independent permutations of each calibration model's relative-to-gold answers within exact subject and eligible option-count strata; target heldout structural weights across strata with calibration coverage; report unsupported target count",
+    "repairReplicates": 500,
+    "repairSeed": 134147,
+    "difficulty": "Pearson error correlation after subtracting model-specific calibration rates by subject and publisher source with n>=15; otherwise subject rates. Descriptive aggregate difficulty proxy."
+  },
+  "higherOrder": {
+    "committeeSize": 3,
+    "marginalTolerance": 0.04,
+    "phiTolerance": 0.08,
+    "matching": "sorted individual calibration accuracies and sorted pairwise phi, required tolerances for every coordinate, rank by sum of absolute discrepancies then fixed enumeration; compare selected pair descriptively on heldout; if none passes, report inadequate matches",
+    "nullCorrelations": "never substituted for zero"
+  },
+  "coverage": {
+    "invalidFilterCode": -1,
+    "outOfRangeLabelCode": -2,
+    "confidence": "no comparable expressed confidence data; withhold confidence weighting"
+  }
+}
