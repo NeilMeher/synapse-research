@@ -212,6 +212,16 @@ export function buildKnowledge(){
     "Separates audit correction, temporal weighting and update timing across matched source histories.",["B"]);
   connect("study/morpheus-audit","method/adaptive-trust","tests adaptive memory",["B"]);
   connect("study/morpheus-audit","study/morpheus","extends source reliability research",["B"]);
+  add("study/axiom-strategic","Mathematical result","AXIOM strategic settlement","axiom.html#strategic-settlement",
+    "Checks effort incentives, verification timing and payment conservation in an exact commitment game.",["A"]);
+  add("study/belief-dynamics","Mathematical result","Integrated belief dynamics","research/belief-dynamics-results.md",
+    "Tests how audit delay and duplicate evidence change forecasts and decision loss.",["A"]);
+  connect("study/axiom-strategic","study/axiom","adds optimizing seller",["A"]);
+  connect("study/axiom-strategic","study/polis2","checks physical settlement",["A"]);
+  connect("study/belief-dynamics","study/morpheus-audit","uses historical audit filtering",["A"]);
+  connect("study/belief-dynamics","study/echo2","uses joint report likelihood",["A"]);
+  connect("study/belief-dynamics","study/axiom","applies decision risks",["A"]);
+  connect("study/belief-dynamics","empirical/mirage-measurement","uses separate forecast and decision outcomes",["A"]);
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   for(const node of nodes){

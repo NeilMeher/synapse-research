@@ -84,3 +84,7 @@ The [development run](research/morpheus-adaptive-development.md) now justifies i
 ## After the MO2 confirmation
 
 The held-out comparison isolates memory weighting and audit correction within policy families. Complete and independently verify an AXIOM fixture with a strategic counterparty, then execute one small registered study connecting report dependence, timely trust, confidence calibration and decision risk. Reach the cognition checkpoint before branching into NOESIS and SCIENTIA. [MO2 boundaries](research/morpheus-audit-confirmatory-results.md#verification-and-scope)
+
+## Phase C entry
+
+The cognition checkpoint supports a finite acquisition and verification programme. Correct NOESIS's observation/prior mismatch first and use disjoint interpolation and extrapolation targets. Test information against decision value before sequential SCIENTIA and a joint discovery workflow. Human study and broad institutional experiments remain outside this checkpoint.

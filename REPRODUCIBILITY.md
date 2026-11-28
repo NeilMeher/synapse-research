@@ -211,3 +211,7 @@ The two development checks regenerate every stress history and decision in memor
 ## MORPHEUS MO2
 
 Run `node research/morpheus-confirmatory/run.mjs verify` and `python -B research/morpheus-confirmatory/reference.py`. The Node replay checks unchanged archive bytes. Python checks 2,304 environment-history realizations, 2,801,664 decisions and all 17 paired contrasts. Its exact fixtures and backward recursion independently check timing, and numerical comparisons use absolute tolerance \(10^{-12}\). Run the schema checks through `python -B scripts/check_schemas.py`. [Protocol](research/morpheus-confirmatory-protocol.md) · [Manifest](research/evidence/morpheus-adaptive-reliability-confirmatory-002/manifest.json)
+
+## Phase B strategic and integrated fixtures
+
+Run `python -B research/axiom-strategic/run.py verify` and `python -B research/belief-dynamics/reference.py verify`. These regenerate exact rational outputs in memory and compare immutable bytes, separate solution methods, the JavaScript belief decisions and the existing POLIS physical ledger. No fresh data, acquisitions or paid inference are required.

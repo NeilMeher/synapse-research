@@ -58,3 +58,7 @@ MIRAGE M1 reconstructs six existing response archives under a common record voca
 ## MO2 confirmatory cognition
 
 The owner specified separation of audit correction, memory and verification timing. Codex assisted the registered synthetic design, independent reimplementation and documentation. The applied contribution is the matched audit-correction factorial with stationary, recovery, timing and chance-audit controls. The audit algebra and filter derive from established misclassification and hidden-state models. Human review and external replication remain pending. [Evidence and precedent](research/morpheus-audit-confirmatory-results.md)
+
+## Integrated cognition checkpoint
+
+The strategic timing fixture changes an optimizing supplier's best response while unconditionally contingent payment remains buyer-optimal in the registered menu. The integrated belief calculation exhibits an interaction opposite the proposed delay amplification and better calibration with identical decision loss in one condition. These are applied examples with exact computational checks. Established game-theoretic and information-value principles retain their attributions. [Dossier](research/belief-dynamics-results.md)

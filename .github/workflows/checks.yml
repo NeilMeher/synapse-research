@@ -99,6 +99,8 @@ jobs:
       - run: python -B research/axiom-trust-fixture.py verify
       - run: node research/morpheus-confirmatory/run.mjs verify
       - run: python -B research/morpheus-confirmatory/reference.py
+      - run: python -B research/axiom-strategic/run.py verify
+      - run: python -B research/belief-dynamics/reference.py verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

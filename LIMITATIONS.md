@@ -56,3 +56,7 @@ The dynamic-trust calculations require the declared observation law and sufficie
 ## Confirmatory audit correction limits
 
 Known audit accuracy and independent symmetric errors are assumptions in MO2. The inversion becomes unstable near chance and the likelihood can require richer verification records outside the simulator. EWMA versus cumulative changes the whole time-weighting rule, including initial trust retention. Markov versus EWMA bundles different dynamics and estimators. The simulation's equal-error loss, known alternative quality and specified source trajectories delimit transfer. [Full scope](research/morpheus-audit-confirmatory-results.md#verification-and-scope)
+
+## Integrated cognition limits
+
+The exact fixtures assume known signal laws, two hidden regimes and the declared payoffs. Strategic verification effects depend on a publicly credible buyer commitment and a restricted menu. Integrated belief estimates use known dependence and audit parameters. Exact finite-state agreement removes sampling noise under those laws and leaves model uncertainty and external applicability open.

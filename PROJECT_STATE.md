@@ -238,3 +238,7 @@ The follow-on branch checkpoint completed [adaptive-trust development](research/
 ## MO2 confirmatory cognition milestone
 
 Completed `morpheus-adaptive-reliability-confirmatory-002`. The sole primary burst comparison was −5.69 points [−6.29, −5.09] for corrected EWMA versus corrected cumulative estimation, using 384 paired 64-step histories. The matched memory-by-correction interaction was −0.71 points [−1.14, −0.29]. Stationary degradation and excess restoration loss versus fixed trust remain visible. Corrected EWMA also incurred more burst-history loss than naive EWMA. The exact chance-audit control separates model-based trust changes from information in the observed bits. [Frozen protocol](research/morpheus-confirmatory-protocol.md) · [Results](research/morpheus-audit-confirmatory-results.md)
+
+## Phase B cognition completion
+
+MO2, the AXIOM strategic commitment fixture and the registered exact belief-dynamics experiment meet the bounded cognition stopping point. The integrated study tested audit delay and dependence, calibration and decision loss as separate outcomes. Later transfers require calibration of source and audit laws, and relaxation of the buyer's commitment assumption. Phase C starts with a finite coherent NOESIS discovery model. [Cognition evidence and owner defence](research/belief-dynamics-results.md)

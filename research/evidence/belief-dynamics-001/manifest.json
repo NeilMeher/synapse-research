@@ -1,0 +1,16 @@
+{
+  "evidence": "A",
+  "id": "belief-dynamics-001",
+  "outputs": {
+    "factorial.json": {
+      "bytes": 23661,
+      "sha256": "b78bbedf29dfc9f1e26c5af7e23a6793ee79dc1efff2425a287fb9e63911b5c9"
+    }
+  },
+  "protocol": {
+    "bytes": 1400,
+    "sha256": "ffd224be2dd5dbcef96d0412ce9a5634a12463722e839915eaebc50120a08269"
+  },
+  "protocolCommit": "3ca54174033d9b5892df8b5b84e0066eae387e3f",
+  "status": "completed"
+}

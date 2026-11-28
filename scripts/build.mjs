@@ -177,6 +177,8 @@ const adaptiveId="morpheus-adaptive-mathematics-001";
 const auditId="morpheus-adaptive-reliability-confirmatory-002";
 const developmentId="morpheus-adaptive-development-001";
 const tradeId="axiom-delayed-trade-fixture-001";
+const strategicId="axiom-strategic-settlement-001";
+const dynamicsId="belief-dynamics-001";
 for(const [id,evidence,directory] of [
   [hindiId,"F","empirical/archives/"+hindiId+"/"],
   [momentsId,"A","research/evidence/"+momentsId+"/"],
@@ -186,6 +188,8 @@ for(const [id,evidence,directory] of [
   [auditId,"B","research/evidence/"+auditId+"/"],
   [developmentId,"B","research/evidence/"+developmentId+"/"],
   [tradeId,"A","research/evidence/"+tradeId+"/"],
+  [strategicId,"A","research/evidence/"+strategicId+"/"],
+  [dynamicsId,"A","research/evidence/"+dynamicsId+"/"],
 ]){
   const manifest=JSON.parse(text(directory+"manifest.json"));
   if(manifest.id!==id||manifest.evidence!==evidence||manifest.status!=="completed"){
@@ -212,6 +216,8 @@ for(const [id,evidence,directory] of [
     [auditId]:"research/morpheus-confirmatory/protocol.json",
     [developmentId]:"research/adaptive-trust/development.json",
     [tradeId]:"research/axiom-trust-fixture.json",
+    [strategicId]:"research/axiom-strategic/protocol.json",
+    [dynamicsId]:"research/belief-dynamics/protocol.json",
   }[id];
   if(protocolPath){
     const data=readFileSync(from(protocolPath));
@@ -230,7 +236,9 @@ for(const [dir,files] of [["echo-moments",["protocol.json","compute.py","referen
   ["morpheus-trust",["protocol.json","run.mjs","reference.py"]],
   ["mirage-measurement",["protocol.json","replay.py"]],
   ["adaptive-trust",["fixtures.json","evaluate.mjs","reference.py","development.json","development.mjs","development-reference.py"]],
-  ["morpheus-confirmatory",["protocol.json","run.mjs","reference.py"]]]){
+  ["morpheus-confirmatory",["protocol.json","run.mjs","reference.py"]],
+  ["axiom-strategic",["protocol.json","run.py","ledger.mjs"]],
+  ["belief-dynamics",["protocol.json","reference.py","engine-check.mjs"]]]){
   for(const name of files){
     const path="research/"+dir+"/"+name;
     copies.push([path,path]);
@@ -239,6 +247,7 @@ for(const [dir,files] of [["echo-moments",["protocol.json","compute.py","referen
 copies.push(["engine/morpheus-trust.mjs","engine/morpheus-trust.mjs"]);
 copies.push(["engine/adaptive-trust.mjs","engine/adaptive-trust.mjs"]);
 copies.push(["engine/morpheus-audit.mjs","engine/morpheus-audit.mjs"]);
+copies.push(["engine/belief-dynamics.mjs","engine/belief-dynamics.mjs"]);
 copies.push(["schemas/morpheus-audit-summary-v1.json","schemas/morpheus-audit-summary-v1.json"]);
 copies.push(["schemas/echo-hindi-paired-v1.json","schemas/echo-hindi-paired-v1.json"]);
 for (const file of readdirSync(from("research/"),{withFileTypes:true})){
@@ -296,7 +305,8 @@ writeFileSync(output("release.json"), JSON.stringify({
   empiricalDevelopment:[qwenDevId],
   secondGenerationStudies:[{id:hindiId,evidence:"F"},{id:momentsId,evidence:"A"},{id:trustId,evidence:"B"}],
   beliefArchitectureStudies:[{id:measurementId,evidence:"F"},{id:adaptiveId,evidence:"A"},
-    {id:developmentId,evidence:"B",stage:"development"},{id:tradeId,evidence:"A"},{id:auditId,evidence:"B",stage:"confirmatory"}],
+    {id:developmentId,evidence:"B",stage:"development"},{id:tradeId,evidence:"A"},{id:auditId,evidence:"B",stage:"confirmatory"},
+    {id:strategicId,evidence:"A"},{id:dynamicsId,evidence:"A"}],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {
