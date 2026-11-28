@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "echo-hindi-economics-001",
+  "evidenceClass": "F",
+  "historicalEnglishArchive": "echo-public-empirical-001",
+  "languageTreatedAs": "archive configuration label",
+  "analysisBase": "same MMLU-ProX source questions, test split, English and Hindi economics",
+  "cohort": "frozen structural audit, same English source-group partitions, excludes option, digit and Roman-statement discrepancies before opening scores",
+  "minimumPairs": 750,
+  "minimumHeldout": 350,
+  "minimumCompatibleModels": 5,
+  "primary": "Hindi minus English strict majority full-plan correctness among compatible configurations",
+  "historicalBaselineModel": "Qwen/Qwen3.5-9B",
+  "strict": "more than half the fixed committee must agree on a valid canonical option",
+  "decisionUtilities": {
+    "correct": 1,
+    "wrongCosts": [
+      0.25,
+      1,
+      2
+    ],
+    "abstain": 0,
+    "calibrationWrongCost": 1
+  },
+  "quorums": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "tieSeed": 487291,
+  "calibrationTies": "prefer larger minimum count when utility is tied",
+  "reliabilityWeight": "integer numerator correct+1 from Laplace-smoothed full-plan accuracy on each language calibration split, with shared denominator calibration n+2",
+  "agreementCalibration": "Laplace correctness prediction conditional on the number of members who support the plurality choice and on a valid plurality",
+  "interval": {
+    "seed": 90813617,
+    "replicates": 4000,
+    "interval": [
+      0.025,
+      0.975
+    ]
+  },
+  "additionalComparisons": "descriptive. Existing English holdout outcomes are retrospective. The Hindi holdout remained unopened before this local registration.",
+  "confidence": "observable agreement only, no expressed model confidence",
+  "unchangedCommittees": [[0, 2, 6], [0, 2, 3, 4, 6]],
+  "sensitivity": "all seven, including Olmo with a known cross-language configuration difference, strict majority only."
+}

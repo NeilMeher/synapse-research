@@ -1,0 +1,832 @@
+{
+  "baselineEnglish": 844,
+  "hindiBenchmark": 844,
+  "pairedIdentities": 844,
+  "eligible": 806,
+  "excluded": {
+    "6457": "different numeric anchors in question or ordered choices",
+    "6476": "different Roman-numbered statement scaffolding",
+    "6504": "different numeric anchors in question or ordered choices",
+    "6539": "different Roman-numbered statement scaffolding",
+    "6589": "option count, unique content or keyed position did not match",
+    "6592": "different numeric anchors in question or ordered choices",
+    "6618": "different Roman-numbered statement scaffolding",
+    "6620": "different Roman-numbered statement scaffolding",
+    "6695": "different Roman-numbered statement scaffolding",
+    "6751": "different Roman-numbered statement scaffolding",
+    "6753": "different Roman-numbered statement scaffolding",
+    "6755": "different numeric anchors in question or ordered choices",
+    "6809": "different Roman-numbered statement scaffolding",
+    "6864": "option count, unique content or keyed position did not match",
+    "6874": "different Roman-numbered statement scaffolding",
+    "6932": "different Roman-numbered statement scaffolding",
+    "6936": "different Roman-numbered statement scaffolding",
+    "6937": "different Roman-numbered statement scaffolding",
+    "6945": "different numeric anchors in question or ordered choices",
+    "6989": "different Roman-numbered statement scaffolding",
+    "6992": "different Roman-numbered statement scaffolding",
+    "6994": "different Roman-numbered statement scaffolding",
+    "6995": "different numeric anchors in question or ordered choices",
+    "6996": "different numeric anchors in question or ordered choices",
+    "6998": "different numeric anchors in question or ordered choices",
+    "7016": "different numeric anchors in question or ordered choices",
+    "7064": "different Roman-numbered statement scaffolding",
+    "7065": "different Roman-numbered statement scaffolding",
+    "7066": "different Roman-numbered statement scaffolding",
+    "7071": "different numeric anchors in question or ordered choices",
+    "7081": "different numeric anchors in question or ordered choices",
+    "7121": "different numeric anchors in question or ordered choices",
+    "7122": "different numeric anchors in question or ordered choices",
+    "7124": "different Roman-numbered statement scaffolding",
+    "7134": "different numeric anchors in question or ordered choices",
+    "7144": "different numeric anchors in question or ordered choices",
+    "7155": "option count, unique content or keyed position did not match",
+    "7273": "different Roman-numbered statement scaffolding"
+  },
+  "numericAnchorDifferences": [
+    {
+      "id": 6457,
+      "fields": [
+        "G"
+      ]
+    },
+    {
+      "id": 6504,
+      "fields": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "id": 6592,
+      "fields": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "id": 6755,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 6945,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 6995,
+      "fields": [
+        "B",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 6996,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 6998,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 7016,
+      "fields": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "id": 7071,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 7081,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 7121,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 7122,
+      "fields": [
+        "F",
+        "I"
+      ]
+    },
+    {
+      "id": 7134,
+      "fields": [
+        "question"
+      ]
+    },
+    {
+      "id": 7144,
+      "fields": [
+        "question"
+      ]
+    }
+  ],
+  "romanStatementDifferences": [
+    {
+      "id": 6476,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6539,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6618,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6620,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6695,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6751,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6753,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6809,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6874,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6932,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6936,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6937,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6989,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6992,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 6994,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 7064,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 7065,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 7066,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 7124,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    },
+    {
+      "id": 7273,
+      "en": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "hi": []
+    }
+  ],
+  "partitions": {
+    "heldout": 402,
+    "calibration": 243,
+    "development": 161
+  },
+  "groupCounts": {
+    "heldout": 399,
+    "calibration": 242,
+    "development": 161
+  },
+  "canonicalSpotIds": [
+    6519,
+    6607,
+    6810,
+    6812,
+    7032,
+    7100,
+    7154,
+    7189
+  ],
+  "compatibleModelIds": [
+    "Qwen/Qwen3.5-9B",
+    "google/gemma-3-12b-it",
+    "google/gemma-3-4b-it",
+    "meta-llama/Llama-3.1-8B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct",
+    "microsoft/Phi-4-mini-instruct"
+  ],
+  "configurations": [
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "Qwen/Qwen3.5-9B",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773969847.1865811,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "allenai/Olmo-3-7B-Instruct",
+        "max_model_len": 32768,
+        "tensor_parallel_size": 2,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "4.57.6",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {
+        "modelArgs": {
+          "en": {
+            "pretrained": "allenai/Olmo-3-7B-Instruct",
+            "max_model_len": 65536,
+            "tensor_parallel_size": 1,
+            "gpu_memory_utilization": 0.9,
+            "dtype": "bfloat16"
+          },
+          "hi": {
+            "pretrained": "allenai/Olmo-3-7B-Instruct",
+            "max_model_len": 32768,
+            "tensor_parallel_size": 2,
+            "gpu_memory_utilization": 0.9,
+            "dtype": "bfloat16"
+          }
+        },
+        "transformers": {
+          "en": "5.3.0.dev0",
+          "hi": "4.57.6"
+        }
+      },
+      "datedRun": 1773615196.2845194,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-12b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0.dev0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773378293.105967,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "google/gemma-3-4b-it",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0.dev0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773352895.398333,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.1-8B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0.dev0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773376326.5227368,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "meta-llama/Llama-3.2-3B-Instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0.dev0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773360542.2290165,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    },
+    {
+      "model": "microsoft/Phi-4-mini-instruct",
+      "backend": "vllm",
+      "modelArgs": {
+        "pretrained": "microsoft/Phi-4-mini-instruct",
+        "max_model_len": 8192,
+        "tensor_parallel_size": 1,
+        "gpu_memory_utilization": 0.9,
+        "dtype": "bfloat16"
+      },
+      "harness": "0.4.11",
+      "transformers": "5.3.0.dev0",
+      "seedSettings": {
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+      },
+      "configDifferences": {},
+      "datedRun": 1773416619.919322,
+      "taskHash": "bf1e7f486f8274000a62612c3d16c7de6f1a571174aed0e17f2abcbd0d1a98de",
+      "fiveShot": true,
+      "rawGeneration": {
+        "until": [
+          "</s>",
+          "Q:",
+          "प्रश्न:",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512
+      },
+      "filter": {
+        "name": "custom-extract",
+        "filter": [
+          {
+            "function": "regex",
+            "regex_pattern": "उत्तर है \\(?([ABCDEFGHIJ])\\)?"
+          },
+          {
+            "function": "take_first"
+          }
+        ]
+      },
+      "publishedSampleCount": {
+        "original": 844,
+        "effective": 844
+      }
+    }
+  ],
+  "archiveEvidence": [
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "file": "mmlu_prox_hi/Qwen__Qwen3.5-9B/samples_mmlu_prox_hi_economics_2026-03-20T05-10-59.051597.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "allenai/Olmo-3-7B-Instruct",
+      "file": "mmlu_prox_hi/allenai__Olmo-3-7B-Instruct/samples_mmlu_prox_hi_economics_2026-03-16T04-34-56.792015.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "file": "mmlu_prox_hi/google__gemma-3-12b-it/samples_mmlu_prox_hi_economics_2026-03-13T08-28-36.979439.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "file": "mmlu_prox_hi/google__gemma-3-4b-it/samples_mmlu_prox_hi_economics_2026-03-13T00-33-27.090479.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "file": "mmlu_prox_hi/meta-llama__Llama-3.1-8B-Instruct/samples_mmlu_prox_hi_economics_2026-03-13T07-53-04.977320.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "file": "mmlu_prox_hi/meta-llama__Llama-3.2-3B-Instruct/samples_mmlu_prox_hi_economics_2026-03-13T03-04-54.193742.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    },
+    {
+      "model": "microsoft/Phi-4-mini-instruct",
+      "file": "mmlu_prox_hi/microsoft__Phi-4-mini-instruct/samples_mmlu_prox_hi_economics_2026-03-13T18-24-49.303398.jsonl",
+      "publisherRecords": 844,
+      "missingIds": [],
+      "extraIds": [],
+      "incompatibleIds": [],
+      "sourceRowsContiguous": true
+    }
+  ],
+  "rawHindiPredictions": 5908
+}
