@@ -50,6 +50,13 @@ test("MIRAGE 004 is searchable and Qwen preparation remains a distinct evidence 
   assert.ok(graph.edges.some(edge=>edge.from==="empirical/mirage-004"&&edge.to==="empirical/mirage-002"));
 });
 
+test("the Qwen capability archive and prepared matched study have separate evidence classes",()=>{
+  const evidence=graph.nodes.find(record=>record.id==="development/mirage-qwen");
+  assert.equal(evidence.type,"Development evidence");
+  assert.equal(graph.nodes.find(record=>record.id==="future/mirage-003").type,"Prepared study");
+  assert.ok(graph.edges.some(edge=>edge.from===evidence.id&&edge.to==="future/mirage-003"));
+});
+
 test("mathematical prerequisites precede the lessons that rely on them",()=>{
   const preceding=new Set();
   for(const lesson of curriculum){

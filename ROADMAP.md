@@ -61,3 +61,8 @@ CHRONOS descriptive work and teaching examples are implemented. Earlier CHRONOS 
 2. If feasible, execute MIRAGE 003 on the exact 512-request matched design. Treat any fresh-item verification as a separate study.
 3. Reassess response competence, canonical diversity and availability of suitable genuinely independent member sources. Freeze ECHO only after its gate is met.
 4. Confidence-weighted aggregation and social-intervention studies remain conditional. [Decoding readiness](research/mirage-decoding-results.md)
+
+
+## After the Qwen instrument check
+
+The tested Vulkan route meets the hardware checks, and the Qwen 0.5B configuration failed the capability gate. The matched replication remains closed. Investigate a bounded, same-split paired DataDecide slice, starting with exact task hashes and declared choice normalization. Treat MT-Bench as a separate open-ended judgment archive. Any new inference requires a distinct registered capability justification. [Public archive feasibility](research/public-response-feasibility.md)

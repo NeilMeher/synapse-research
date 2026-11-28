@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect Qwen's actual capability responses, the Vulkan memory guard, and the registered decision on MIRAGE 003.">
+  <title>MIRAGE 003 · Qwen capability | SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./observatory.css">
+  <script type="module" src="./mirage-qwen-view.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+  <nav aria-label="Qwen evidence navigation"><a href="./observatory.html">Empirical Observatory</a><a href="./mirage-decoding.html">Decoding laboratory</a></nav>
+  <button type="button" class="quiet" id="theme" aria-pressed="false">Light theme</button>
+</div></header>
+<main id="main" class="wrap section study-page observatory">
+  <div class="observatory-hero">
+    <div><p class="eyebrow">Empirical Observatory · MIRAGE 003</p><h1>Can Qwen qualify for replication?</h1>
+    <p>Twelve capability questions tested whether this Qwen configuration was ready for the full matched study. Inspect its replies, scores, and measured memory use.</p></div>
+    <div class="result-panel obs-run"><p class="eyebrow">Actual development evidence</p><h2>Qwen2.5-0.5B-Instruct</h2><p>Q4_K_M · llama.cpp b12823 · Vulkan on GTX 1650</p><a href="./research/mirage-qwen-vulkan-protocol.md">Read the frozen gate</a></div>
+  </div>
+  <p id="qwen-status" role="status">Checking the Qwen capability archive…</p>
+  <div id="qwen-results" hidden>
+    <section class="result-panel study-block obs-primary" aria-labelledby="qwen-gate-heading">
+      <h2 id="qwen-gate-heading">Replication gate</h2>
+      <div class="obs-measures" id="qwen-headline"></div>
+      <p id="qwen-gate-text"></p>
+      <p id="qwen-confidence"></p>
+    </section>
+    <div class="study-pair study-block">
+      <section class="result-panel" aria-labelledby="qwen-families">
+        <h2 id="qwen-families">Scores by capability</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Qwen capability results">
+          <table><caption>Two questions per family</caption><thead><tr><th scope="col">Task family</th><th scope="col">Correct</th><th scope="col">Minimum</th></tr></thead><tbody id="qwen-scores"></tbody></table>
+        </div>
+      </section>
+      <section class="result-panel" aria-labelledby="qwen-resources">
+        <h2 id="qwen-resources">Resource checks</h2>
+        <dl id="qwen-memory"></dl>
+        <p>The watchdog samples free memory and supervises only the inference process. The GPU values are snapshots taken during the run.</p>
+      </section>
+    </div>
+    <section class="result-panel study-block" aria-labelledby="qwen-replay">
+      <h2 id="qwen-replay">Inspect a recorded reply</h2>
+      <label for="qwen-question">Capability question</label><select id="qwen-question"></select>
+      <div id="qwen-answer" class="obs-response" aria-live="polite"></div>
+    </section>
+    <section class="result-panel study-block" aria-labelledby="qwen-comparison">
+      <h2 id="qwen-comparison">Shared development questions</h2>
+      <p id="qwen-shared"></p>
+      <p>These four questions share the same prompt and answer mapping. Qwen used Vulkan. The earlier SmolLM2 run used CPU with its own greedy sampler settings. The 512 matched research questions are a separate benchmark.</p>
+    </section>
+  </div>
+  <section class="result-panel study-block" aria-labelledby="qwen-evidence">
+    <h2 id="qwen-evidence">Evidence and reproduction</h2>
+    <ul>
+      <li><a href="./research/mirage-qwen-capability-results.md">Results and ECHO readiness</a></li>
+      <li><a href="./research/mirage-qwen-vulkan-streamed.md">Non-mapped loader registration</a></li>
+      <li><a href="./empirical/qwen/mmap-startup-stop.json" download>Stopped startup telemetry</a></li>
+      <li><a href="./empirical/archives/mirage-empirical-cross-model-003-development/manifest.json">Run manifest</a></li>
+      <li><a href="./empirical/archives/mirage-empirical-cross-model-003-development/responses.ndjson" download>Raw Qwen responses</a></li>
+      <li><a href="./empirical/archives/mirage-empirical-cross-model-003-development/scores.json" download>Canonical scores</a></li>
+      <li><a href="./empirical/qwen/reference.py" download>Independent reference</a></li>
+      <li><a href="./research/public-response-feasibility.md">Public response archive investigation</a></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

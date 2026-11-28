@@ -181,3 +181,17 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Next | Obtain authorization, freeze Qwen capability route, measure 12 controls and check memory before the matched run. |
 
 [Full results](research/mirage-decoding-results.md)
+
+
+## MIRAGE 003 · Qwen continuation · 2026-11-28
+
+| Checkpoint | Result |
+| --- | --- |
+| Baseline | Clean v1.3.0 `3022959`, tag and public revision independently checked. |
+| Artifact | Pinned official Qwen 491,400,032-byte Q4_K_M, exact SHA-256 and Apache-2.0 verified. |
+| Resource safety | Mapped startup stopped at 648.81 MiB. Non-mapped Vulkan passed unchanged guards and peaked at 343.10 MiB. |
+| Development | 12 genuine scorable outputs. Five correct. Retrieval and remapping both 0/2. |
+| Research gate | Failed prespecified capability thresholds. Zero of 512 matched Qwen requests; ECHO remains unexecuted. |
+| Next | Obtain bounded same-split predictions from two DataDecide checkpoints before a separately registered objective-correctness analysis. |
+
+[Actual development evidence](research/mirage-qwen-capability-results.md)

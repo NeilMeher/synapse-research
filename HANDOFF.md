@@ -155,3 +155,10 @@ Work started on `codex/mirage-empirical-robustness` at v1.2.0 `230e46a59cd254801
 At temperature 0.7, A selection dropped by 26.25 points relative to 0.3 while full-plan accuracy stayed at 23.75%. Canonical diversity increased. Confidence-first abstained in nine of 16 trials. The scientific ECHO capability gate remains unsatisfied.
 
 MIRAGE 003 has an exact 512-request matched plan and 12 separate instrument controls. Its Qwen GGUF requires authorization for the exact 491,400,032-byte download. CPU availability was 0.86 GiB against the 1.1 GiB preflight threshold. The existing Windows Vulkan loader and the checked portable b12823 ZIP supported four SmolLM2 requests. After authorization, freeze a Qwen GPU capability configuration separately or recheck CPU availability. Test capability and memory before matched inference. No Qwen response was collected. [Decoding results](research/mirage-decoding-results.md) · [Access](research/mirage-phase3-access.md) · [Release record](https://github.com/NeilMeher/synapse-research/releases/tag/v1.3.0)
+
+
+## MIRAGE 003 · Qwen capability continuation
+
+Start from branch `codex/mirage-qwen-replication` based on v1.3.0 `3022959cb34f080f31b3358079bb54243ba245d3`. The only downloaded model was the user-authorized Qwen2.5-0.5B Q4_K_M GGUF. Its verified 491,400,032-byte artifact remains outside Git. The original mapped Vulkan startup crossed the host limit and stopped with zero responses. The separately frozen non-mapped Vulkan variant qualified hardware and produced 12 scorable development replies. [Capability report](research/mirage-qwen-capability-results.md)
+
+The archive at `9ddd112402822d0d689ddbcb31119898ebd29cbb` is immutable. Accuracy was 5/12, and retrieval and remapping were 0/2 each. The 512-request study gate remains failed. No additional SmolLM2 calls, Qwen matched study or ECHO ensemble occurred. Start future work with a bounded two-checkpoint public archive sample and freeze its own design. Preserve the separate outcomes on the four shared development controls and the historical 512 SmolLM2 presentations. [Public data feasibility](research/public-response-feasibility.md)

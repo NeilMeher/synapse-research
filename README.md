@@ -12,6 +12,8 @@ The second MIRAGE study separates displayed position, answer letters, grammar or
 
 The registered decoding investigation measures genuine repeated choice and confidence outputs. The cross-model protocol is prepared separately and awaits Qwen access. [Decoding laboratory](https://neilmeher.github.io/synapse-research/mirage-decoding.html) · [Study results](research/mirage-decoding-results.md)
 
+The Qwen continuation qualified the Vulkan loading route and archived the 12 real development replies. The capability gate failed, so the 512 matched requests remain unexecuted. [Qwen evidence workbench](https://neilmeher.github.io/synapse-research/mirage-qwen.html) · [Capability report](research/mirage-qwen-capability-results.md)
+
 ## Research
 
 | Study | Method and evidence |

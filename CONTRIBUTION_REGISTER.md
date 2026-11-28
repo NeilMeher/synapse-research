@@ -39,3 +39,6 @@ Neil Meher directed the empirical Phase II continuation, its scientific question
 
 
 Neil Meher directed the Phase III research questions, access constraints and release gates. Codex assisted with the registered design, matched plan preparation, actual SmolLM2 execution, device measurements, archive reproduction, independent computational scoring and public analysis/replay. Independent human review and external replication remain pending. [MIRAGE 004](research/mirage-decoding-results.md)
+
+
+Neil Meher authorized the exact Qwen artifact and directed the guarded continuation. Codex prepared and executed the capability instrument, recorded the resource stop and non-mapped route, implemented the separate independent scoring reference, investigated public archives, and integrated the evidence into the Observatory. Independent human review remains pending. [Qwen results](research/mirage-qwen-capability-results.md)

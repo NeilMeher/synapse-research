@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.1 · Qwen capability evidence
+
+- Pin the verified Qwen artifact and separately freeze the guarded, non-mapped Vulkan runtime. Preserve the original startup stop and the actual resource measurements.
+- Publish 12 actual development responses and the negative capability gate. The 512-request matched plan remains unexecuted.
+- Add an Observatory evidence view with the four-question archived development comparison and a documented public-response alternative.
+
 ## v1.3.0 · MIRAGE decoding and response-format sensitivity
 
 - Publish 192 registered SmolLM2 generations and separately archived development and Vulkan probes.

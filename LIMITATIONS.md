@@ -35,3 +35,6 @@ MIRAGE 002 used one quantized checkpoint, four fixed task families, a fractional
 
 
 MIRAGE 004 sampled one quantized model on 16 public canonical tasks with fixed matched text and reference presentations. Five draws give a coarse within-task entropy estimate. The confidence-first comparison changes grammar and the instruction together, and substantial abstention changes the analyzed sample. The four-call device probe gives a feasibility observation with a large cold first-request effect. Qwen transfer and ensemble reliability remain unresolved. [Decoding findings](research/mirage-decoding-results.md)
+
+
+The Qwen study reports a fixed 12-control development instrument. Its observed confidence scores and failure to qualify leave the full matched estimand undefined. Four overlapping archived SmolLM2 controls allow a descriptive comparison only, with distinct backends and greedy sampler settings. GPU telemetry samples free memory and cannot establish continuous device peaks. [Qwen scope](research/mirage-qwen-capability-results.md)

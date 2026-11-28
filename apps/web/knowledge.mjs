@@ -141,7 +141,11 @@ export function buildKnowledge(){
   add(decoding+"/protocol","Protocol","MIRAGE 004 decoding protocol","research/mirage-decoding-protocol.md","A matched 16-task subset, disjoint development controls and a prospective ensemble decision.");
   add(decoding+"/archive","Model response archive","MIRAGE 004 genuine sampled outputs","empirical/archives/mirage-empirical-decoding-004/manifest.json","Immutable raw model outputs, fresh greedy controls, settings and derived analyses.");
   add(decoding+"/limits","Limitation","MIRAGE 004 generalization and ECHO readiness","research/mirage-decoding-results.md","Repeated observations from one model under two temperatures and a response-format comparison.");
-  add("future/mirage-003","Prepared study","MIRAGE 003 matched cross-model comparison","research/mirage-cross-model-protocol.md","Qwen access and preflight are pending. The 512 matched requests have a verified plan.");
+  add("future/mirage-003","Prepared study","MIRAGE 003 matched cross-model comparison","research/mirage-cross-model-protocol.md","The 512-request design remains unexecuted after the Qwen capability gate failed.");
+  add("development/mirage-qwen","Development evidence","Qwen capability checks","mirage-qwen.html","Twelve genuine instrument controls, Vulkan resource measurements and the failed capability gate.");
+  add("future/public-responses","Proposed research","Public model response archives","research/public-response-feasibility.md","Public response records and suitability for separate comparative studies.");
+  connect("development/mirage-qwen","future/mirage-003","checks capability for");
+  connect("future/public-responses","development/mirage-qwen","alternative after feasibility gate");
   connect(decoding,robust,"uses frozen task subset");
   connect(decoding,decoding+"/protocol","tested under protocol");
   connect(decoding,decoding+"/archive","produces response archive");

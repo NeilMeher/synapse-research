@@ -139,3 +139,15 @@ python -B -m empirical.phase3.archive build decoding
 ```
 
 The archived analyzer references 16 canonical tasks. Repeated samples per task are a group for uncertainty. The fresh-run output may differ across runtime or machine configurations. Qwen has a separate prepared protocol and needs authorization and runtime preflight before development. [Decoding design](research/mirage-decoding-protocol.md) · [Backend model access](research/mirage-phase3-access.md)
+
+
+## Qwen capability evidence
+
+Run the offline checks to reproduce the archived responses, independent remapping, rational Brier score and readiness criteria. They issue no model requests.
+
+```sh
+python -B -m empirical.qwen.core verify qwen-development
+python -B -m empirical.qwen.reference
+```
+
+The resulting archive identifies the exact official model, GPU backend, guarded resource measurements, frozen original prompts, and stopping rules. To reproduce fresh development legally and safely, use a separate clean checkout at `aa0b0215b8d843d0b7783b03e3f2ebfd82642975` with its original resource envelope. The current gate outcome leaves the matched run unopened. [Frozen configuration](research/mirage-qwen-vulkan-streamed.md) · [Reference and outcomes](research/mirage-qwen-capability-results.md)

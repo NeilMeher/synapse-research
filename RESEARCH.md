@@ -57,3 +57,8 @@ MIRAGE 002 separated physical order, displayed letters and grammar order in 512 
 ## MIRAGE 004 · Registered decoding and format study
 
 Temperature 0.7 reduced choosing A by 26.25 points compared with 0.3 and increased within-task canonical entropy. Both sampled settings achieved 23.75% full-plan accuracy. The confidence-first format abstained in nine of 16 responses. This evidence concerns one fixed checkpoint and task population. MIRAGE 003 is prepared, and no ECHO ensemble inference or confidence-weighted results exist in this milestone. [Study](research/mirage-decoding-results.md)
+
+
+## MIRAGE 003 · Capability evidence
+
+The Qwen non-mapped Vulkan route passed the checks for this machine. The genuine development run returned 12 scorable replies and five correct answers. The prespecified scientific gate failed. No matched 512-response Qwen dataset or new empirical ensemble was collected. [Actual results](research/mirage-qwen-capability-results.md)

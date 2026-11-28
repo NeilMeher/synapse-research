@@ -64,3 +64,8 @@ gpu = json.loads((ROOT / "empirical/phase3/vulkan-development.json").read_bytes(
 for record in gpu["records"]:
     validator.validate(record["response"])
 print(f"empirical-robustness-v1 verified {len(gpu['records'])} Vulkan development records.")
+qwen = ROOT / "empirical/archives/mirage-empirical-cross-model-003-development/responses.ndjson"
+qwen_lines = qwen.read_bytes().splitlines()
+for line in qwen_lines:
+    validator.validate(json.loads(line))
+print(f"empirical-robustness-v1 verified {len(qwen_lines)} real Qwen development records.")

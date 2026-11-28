@@ -541,6 +541,18 @@ try {
         await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
         await page.screenshot({path:fileURLToPath(new URL("mirage-decoding-"+width+".png",screenshots))});
       }
+      assert.equal((await page.goto(new URL("mirage-qwen.html",base).href)).status(),200);
+      await page.getByText(/12 genuine Qwen capability outputs/).waitFor();
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      assert.match(await page.locator("#qwen-headline").textContent(),/5 \/ 12.*12 \/ 12.*0 \/ 512/);
+      assert.equal(await page.locator("#qwen-question option").count(),12);
+      await page.getByLabel("Capability question",{exact:true}).selectOption("p3-control-05");
+      assert.match(await page.locator("#qwen-answer").textContent(),/Verified answer blue box · label C.*Answer: D/s);
+      assert.match(await page.locator("#qwen-shared").textContent(),/Qwen answered 2.*SmolLM2 answered 2/);
+      if(width===390||width===1440){
+        await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+        await page.screenshot({path:fileURLToPath(new URL("mirage-qwen-"+width+".png",screenshots))});
+      }
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);
@@ -614,9 +626,15 @@ try {
     await missingDecoding.getByText(/decoding archive is unavailable/).waitFor();
     assert.equal(await missingDecoding.locator("#decode-outcomes").isVisible(),false);
     console.log("503 MIRAGE 004 archive fallback passed");
+    const missingQwen=await browser.newPage();
+    await missingQwen.route("**/empirical/qwen/capability-review.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingQwen.goto(new URL("mirage-qwen.html",base).href);
+    await missingQwen.getByText(/Qwen capability archive is unavailable/).waitFor();
+    assert.equal(await missingQwen.locator("#qwen-results").isVisible(),false);
+    console.log("503 Qwen capability archive fallback passed");
     if(process.env.AXE_SCRIPT){
       const violations=[];
-      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html"];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html","mirage-qwen.html"];
       for(const width of [390,1440]){
         const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
         for(const path of auditRoutes){
@@ -624,6 +642,7 @@ try {
           if(path==="observatory.html")await page.locator("#obs-data").waitFor();
           if(path==="mirage-robustness.html")await page.locator("#robust-outcomes").waitFor();
           if(path==="mirage-decoding.html")await page.locator("#decode-outcomes").waitFor();
+          if(path==="mirage-qwen.html")await page.locator("#qwen-results").waitFor();
           await page.evaluate(()=>document.fonts.ready);
           await page.addScriptTag({path:process.env.AXE_SCRIPT});
           for(const theme of ["dark","light"]){
@@ -636,7 +655,7 @@ try {
         await page.close();
       }
       assert.deepEqual(violations,[]);
-      console.log("axe accessibility checks passed on nine routes at two widths in both themes");
+      console.log("axe accessibility checks passed on ten routes at two widths in both themes");
     }
   } finally {
     await browser.close();

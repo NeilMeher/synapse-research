@@ -148,16 +148,6 @@ def collect(stage,runtime,weights,package,freeze):
             print("Resource measurements:",json.dumps(guard.summary),flush=True)
 
 
-def artifacts(stage,records):
-    data=payload(stage,records)
-    if stage=="cross-model":
-        from empirical.qwen.comparison import supplemental
-        updated=json.loads(data["analysis.json"])
-        updated.update(supplemental(json.loads(data["scores.json"])["rows"],records))
-        data["analysis.json"]=json_bytes(updated)
-    return data
-
-
 def pack(stage):
     target=path_for(stage)
     if target.exists():
@@ -169,7 +159,7 @@ def pack(stage):
         resources=[json.loads(r) for r, in db.execute("SELECT data FROM resource_runs ORDER BY rowid")]
     if meta!=execution(stage):
         raise ValueError("Original execution checkout and inputs are required for archiving.")
-    data=artifacts(stage,records)
+    data=payload(stage,records)
     manifest={"classification":"development-actual-model" if stage=="qwen-development" else "registered-actual-model",
               "execution":meta,"status":"partial" if any(r["status"]=="notAttempted" for r in records) else "completed",
               "planned":len(records),"actualResponses":sum(r["raw"] is not None for r in records),
@@ -200,7 +190,7 @@ def verify(stage):
     if stage=="qwen-development" and manifest["capabilityGate"]!=gate(rec,manifest["resources"]):
         raise ValueError("Capability gate replay differs.")
     expected={"bytes":0,"sha256":""}
-    for name,contents in artifacts(stage,rec).items():
+    for name,contents in payload(stage,rec).items():
         expected.update(bytes=len(contents),sha256=sha256(contents).hexdigest())
         if manifest["outputs"][name]!=expected or (target/name).read_bytes()!=contents:
             raise ValueError("Archived Qwen result differs: "+name)
