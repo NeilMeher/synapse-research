@@ -1,0 +1,1480 @@
+{
+  "evidence": "F",
+  "study": "echo-hindi-economics-001",
+  "models": [
+    "Qwen/Qwen3.5-9B",
+    "google/gemma-3-12b-it",
+    "google/gemma-3-4b-it",
+    "meta-llama/Llama-3.1-8B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct",
+    "microsoft/Phi-4-mini-instruct"
+  ],
+  "questionCount": 806,
+  "partitions": {
+    "heldout": 402,
+    "calibration": 243,
+    "development": 161
+  },
+  "groupCounts": {
+    "heldout": 399,
+    "calibration": 242,
+    "development": 161
+  },
+  "rawHindiPredictionsChecked": 5908,
+  "pairsPerLanguage": 4836,
+  "primary": {
+    "estimate": -0.29850746268656714,
+    "interval": [
+      -0.3475,
+      -0.25
+    ]
+  },
+  "crossLanguageDependence": [
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "n": 402,
+      "leftErrors": 98,
+      "rightErrors": 153,
+      "jointErrors": 82,
+      "jointErrorRate": 0.20398009950248755,
+      "excess": 0.11119774263013292,
+      "phi": 0.533399812267161,
+      "bothValid": 381,
+      "agree": 277,
+      "bothWrongValid": 68,
+      "wrongAgree": 44,
+      "answerAgreement": 0.7270341207349081,
+      "wrongAgreement": 0.6470588235294118
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "n": 402,
+      "leftErrors": 128,
+      "rightErrors": 169,
+      "jointErrors": 105,
+      "jointErrorRate": 0.26119402985074625,
+      "excess": 0.12733595703076656,
+      "phi": 0.5537345013969202,
+      "bothValid": 393,
+      "agree": 270,
+      "bothWrongValid": 97,
+      "wrongAgree": 60,
+      "answerAgreement": 0.6870229007633588,
+      "wrongAgreement": 0.6185567010309279
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "n": 402,
+      "leftErrors": 208,
+      "rightErrors": 260,
+      "jointErrors": 170,
+      "jointErrorRate": 0.4228855721393035,
+      "excess": 0.08824039008935422,
+      "phi": 0.3694504049266767,
+      "bothValid": 382,
+      "agree": 177,
+      "bothWrongValid": 154,
+      "wrongAgree": 73,
+      "answerAgreement": 0.46335078534031415,
+      "wrongAgreement": 0.474025974025974
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "n": 402,
+      "leftErrors": 187,
+      "rightErrors": 290,
+      "jointErrors": 155,
+      "jointErrorRate": 0.3855721393034826,
+      "excess": 0.049998762406871115,
+      "phi": 0.22359563304238753,
+      "bothValid": 311,
+      "agree": 122,
+      "bothWrongValid": 107,
+      "wrongAgree": 42,
+      "answerAgreement": 0.39228295819935693,
+      "wrongAgreement": 0.3925233644859813
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "n": 402,
+      "leftErrors": 240,
+      "rightErrors": 325,
+      "jointErrors": 211,
+      "jointErrorRate": 0.5248756218905473,
+      "excess": 0.042214301626197374,
+      "phi": 0.2187064261344436,
+      "bothValid": 270,
+      "agree": 85,
+      "bothWrongValid": 120,
+      "wrongAgree": 37,
+      "answerAgreement": 0.3148148148148148,
+      "wrongAgreement": 0.30833333333333335
+    },
+    {
+      "model": "microsoft/Phi-4-mini-instruct",
+      "n": 402,
+      "leftErrors": 146,
+      "rightErrors": 302,
+      "jointErrors": 128,
+      "jointErrorRate": 0.31840796019900497,
+      "excess": 0.04556817900547016,
+      "phi": 0.21918654843444618,
+      "bothValid": 305,
+      "agree": 105,
+      "bothWrongValid": 90,
+      "wrongAgree": 23,
+      "answerAgreement": 0.3442622950819672,
+      "wrongAgreement": 0.25555555555555554
+    }
+  ],
+  "observations": {
+    "en": {
+      "policies": {
+        "individual": {
+          "n": 402,
+          "correct": 304,
+          "wrong": 88,
+          "abstain": 10,
+          "coverage": 0.9751243781094527,
+          "accuracy": 0.7562189054726368,
+          "validAccuracy": 0.7755102040816326,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.5373134328358209,
+            "2": 0.31840796019900497,
+            "0.25": 0.7014925373134329
+          }
+        },
+        "majority": {
+          "n": 402,
+          "correct": 219,
+          "wrong": 43,
+          "abstain": 140,
+          "coverage": 0.6517412935323383,
+          "accuracy": 0.5447761194029851,
+          "validAccuracy": 0.8358778625954199,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.43781094527363185,
+            "2": 0.3308457711442786,
+            "0.25": 0.5180348258706468
+          }
+        },
+        "plurality": {
+          "n": 402,
+          "correct": 286,
+          "wrong": 116,
+          "abstain": 0,
+          "coverage": 1,
+          "accuracy": 0.7114427860696517,
+          "validAccuracy": 0.7114427860696517,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.4228855721393035,
+            "2": 0.13432835820895522,
+            "0.25": 0.6393034825870647
+          }
+        },
+        "unanimity": {
+          "n": 402,
+          "correct": 90,
+          "wrong": 9,
+          "abstain": 303,
+          "coverage": 0.2462686567164179,
+          "accuracy": 0.22388059701492538,
+          "validAccuracy": 0.9090909090909091,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.20149253731343283,
+            "2": 0.1791044776119403,
+            "0.25": 0.21828358208955223
+          }
+        },
+        "majorityFallback": {
+          "n": 402,
+          "correct": 300,
+          "wrong": 93,
+          "abstain": 9,
+          "coverage": 0.9776119402985075,
+          "accuracy": 0.746268656716418,
+          "validAccuracy": 0.7633587786259542,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.5149253731343284,
+            "2": 0.2835820895522388,
+            "0.25": 0.6884328358208955
+          }
+        },
+        "reliability": {
+          "n": 402,
+          "correct": 286,
+          "wrong": 116,
+          "abstain": 0,
+          "coverage": 1,
+          "accuracy": 0.7114427860696517,
+          "validAccuracy": 0.7114427860696517,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.4228855721393035,
+            "2": 0.13432835820895522,
+            "0.25": 0.6393034825870647
+          }
+        },
+        "threshold": {
+          "n": 402,
+          "correct": 264,
+          "wrong": 86,
+          "abstain": 52,
+          "coverage": 0.8706467661691543,
+          "accuracy": 0.6567164179104478,
+          "validAccuracy": 0.7542857142857143,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.4427860696517413,
+            "2": 0.22885572139303484,
+            "0.25": 0.6032338308457711
+          }
+        }
+      },
+      "threshold": 3,
+      "calibrationThresholds": [
+        {
+          "quorum": 3,
+          "correct": 160,
+          "wrong": 55,
+          "value": 105
+        },
+        {
+          "quorum": 2,
+          "correct": 170,
+          "wrong": 67,
+          "value": 103
+        },
+        {
+          "quorum": 4,
+          "correct": 136,
+          "wrong": 36,
+          "value": 100
+        },
+        {
+          "quorum": 1,
+          "correct": 171,
+          "wrong": 72,
+          "value": 99
+        },
+        {
+          "quorum": 5,
+          "correct": 97,
+          "wrong": 13,
+          "value": 84
+        },
+        {
+          "quorum": 6,
+          "correct": 63,
+          "wrong": 5,
+          "value": 58
+        }
+      ],
+      "weight": [
+        183,
+        119,
+        170,
+        131,
+        133,
+        112,
+        143
+      ],
+      "modelRates": [
+        {
+          "model": "Qwen/Qwen3.5-9B",
+          "noFilterMatch": 10,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 304,
+          "wrong": 88,
+          "abstain": 10,
+          "coverage": 0.9751243781094527,
+          "accuracy": 0.7562189054726368,
+          "validAccuracy": 0.7755102040816326,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.5373134328358209,
+            "2": 0.31840796019900497,
+            "0.25": 0.7014925373134329
+          }
+        },
+        {
+          "model": "google/gemma-3-12b-it",
+          "noFilterMatch": 6,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 274,
+          "wrong": 122,
+          "abstain": 6,
+          "coverage": 0.9850746268656716,
+          "accuracy": 0.681592039800995,
+          "validAccuracy": 0.6919191919191919,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.3781094527363184,
+            "2": 0.07462686567164178,
+            "0.25": 0.6057213930348259
+          }
+        },
+        {
+          "model": "google/gemma-3-4b-it",
+          "noFilterMatch": 12,
+          "invalidOption": 1,
+          "n": 402,
+          "correct": 194,
+          "wrong": 195,
+          "abstain": 13,
+          "coverage": 0.9676616915422885,
+          "accuracy": 0.48258706467661694,
+          "validAccuracy": 0.4987146529562982,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.0024875621890547263,
+            "2": -0.48756218905472637,
+            "0.25": 0.361318407960199
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.1-8B-Instruct",
+          "noFilterMatch": 18,
+          "invalidOption": 1,
+          "n": 402,
+          "correct": 215,
+          "wrong": 168,
+          "abstain": 19,
+          "coverage": 0.9527363184079602,
+          "accuracy": 0.5348258706467661,
+          "validAccuracy": 0.5613577023498695,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.11691542288557213,
+            "2": -0.3009950248756219,
+            "0.25": 0.43034825870646765
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.2-3B-Instruct",
+          "noFilterMatch": 32,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 162,
+          "wrong": 208,
+          "abstain": 32,
+          "coverage": 0.9203980099502488,
+          "accuracy": 0.40298507462686567,
+          "validAccuracy": 0.43783783783783786,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.11442786069651742,
+            "2": -0.6318407960199005,
+            "0.25": 0.2736318407960199
+          }
+        },
+        {
+          "model": "microsoft/Phi-4-mini-instruct",
+          "noFilterMatch": 4,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 256,
+          "wrong": 142,
+          "abstain": 4,
+          "coverage": 0.9900497512437811,
+          "accuracy": 0.6368159203980099,
+          "validAccuracy": 0.6432160804020101,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.2835820895522388,
+            "2": -0.06965174129353234,
+            "0.25": 0.5485074626865671
+          }
+        }
+      ],
+      "sameSupport": {
+        "n": 262,
+        "majorityCorrect": 219,
+        "individualCorrect": 223,
+        "individualValid": 261
+      },
+      "dependence": [
+        {
+          "members": [
+            0,
+            2
+          ],
+          "n": 402,
+          "leftErrors": 98,
+          "rightErrors": 128,
+          "jointErrors": 74,
+          "jointErrorRate": 0.18407960199004975,
+          "excess": 0.10645776094651123,
+          "phi": 0.5322299845402391,
+          "bothValid": 390,
+          "agree": 295,
+          "bothWrongValid": 64,
+          "wrongAgree": 45,
+          "answerAgreement": 0.7564102564102564,
+          "wrongAgreement": 0.703125
+        },
+        {
+          "members": [
+            0,
+            3
+          ],
+          "n": 402,
+          "leftErrors": 98,
+          "rightErrors": 208,
+          "jointErrors": 84,
+          "jointErrorRate": 0.208955223880597,
+          "excess": 0.08281973218484691,
+          "phi": 0.38601445317719485,
+          "bothValid": 382,
+          "agree": 210,
+          "bothWrongValid": 73,
+          "wrongAgree": 30,
+          "answerAgreement": 0.5497382198952879,
+          "wrongAgreement": 0.410958904109589
+        },
+        {
+          "members": [
+            0,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 98,
+          "rightErrors": 187,
+          "jointErrors": 85,
+          "jointErrorRate": 0.21144278606965175,
+          "excess": 0.09804212767010717,
+          "phi": 0.4577991382728639,
+          "bothValid": 378,
+          "agree": 239,
+          "bothWrongValid": 72,
+          "wrongAgree": 37,
+          "answerAgreement": 0.6322751322751323,
+          "wrongAgreement": 0.5138888888888888
+        },
+        {
+          "members": [
+            0,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 98,
+          "rightErrors": 240,
+          "jointErrors": 80,
+          "jointErrorRate": 0.19900497512437812,
+          "excess": 0.053464023167743374,
+          "phi": 0.25386380475389675,
+          "bothValid": 363,
+          "agree": 167,
+          "bothWrongValid": 62,
+          "wrongAgree": 23,
+          "answerAgreement": 0.46005509641873277,
+          "wrongAgreement": 0.3709677419354839
+        },
+        {
+          "members": [
+            0,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 98,
+          "rightErrors": 146,
+          "jointErrors": 70,
+          "jointErrorRate": 0.17412935323383086,
+          "excess": 0.08559194079354471,
+          "phi": 0.4145135579520016,
+          "bothValid": 388,
+          "agree": 262,
+          "bothWrongValid": 63,
+          "wrongAgree": 34,
+          "answerAgreement": 0.6752577319587629,
+          "wrongAgreement": 0.5396825396825397
+        },
+        {
+          "members": [
+            2,
+            3
+          ],
+          "n": 402,
+          "leftErrors": 128,
+          "rightErrors": 208,
+          "jointErrors": 112,
+          "jointErrorRate": 0.27860696517412936,
+          "excess": 0.11385856785723125,
+          "phi": 0.48910829055870697,
+          "bothValid": 386,
+          "agree": 226,
+          "bothWrongValid": 101,
+          "wrongAgree": 48,
+          "answerAgreement": 0.5854922279792746,
+          "wrongAgreement": 0.4752475247524752
+        },
+        {
+          "members": [
+            2,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 128,
+          "rightErrors": 187,
+          "jointErrors": 104,
+          "jointErrorRate": 0.25870646766169153,
+          "excess": 0.11059132199698027,
+          "phi": 0.4759407123779685,
+          "bothValid": 381,
+          "agree": 236,
+          "bothWrongValid": 92,
+          "wrongAgree": 45,
+          "answerAgreement": 0.6194225721784777,
+          "wrongAgreement": 0.4891304347826087
+        },
+        {
+          "members": [
+            2,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 128,
+          "rightErrors": 240,
+          "jointErrors": 104,
+          "jointErrorRate": 0.25870646766169153,
+          "excess": 0.06861216306527067,
+          "phi": 0.3002685335064464,
+          "bothValid": 367,
+          "agree": 170,
+          "bothWrongValid": 90,
+          "wrongAgree": 32,
+          "answerAgreement": 0.46321525885558584,
+          "wrongAgreement": 0.35555555555555557
+        },
+        {
+          "members": [
+            2,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 128,
+          "rightErrors": 146,
+          "jointErrors": 87,
+          "jointErrorRate": 0.21641791044776118,
+          "excess": 0.10077720848493849,
+          "phi": 0.44981895642708486,
+          "bothValid": 392,
+          "agree": 256,
+          "bothWrongValid": 82,
+          "wrongAgree": 41,
+          "answerAgreement": 0.6530612244897959,
+          "wrongAgreement": 0.5
+        },
+        {
+          "members": [
+            3,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 208,
+          "rightErrors": 187,
+          "jointErrors": 140,
+          "jointErrorRate": 0.3482587064676617,
+          "excess": 0.10757159476250588,
+          "phi": 0.4315957382563179,
+          "bothValid": 377,
+          "agree": 204,
+          "bothWrongValid": 125,
+          "wrongAgree": 57,
+          "answerAgreement": 0.5411140583554377,
+          "wrongAgreement": 0.456
+        },
+        {
+          "members": [
+            3,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 208,
+          "rightErrors": 240,
+          "jointErrors": 156,
+          "jointErrorRate": 0.3880597014925373,
+          "excess": 0.07915645652335339,
+          "phi": 0.3229555781529393,
+          "bothValid": 361,
+          "agree": 165,
+          "bothWrongValid": 128,
+          "wrongAgree": 55,
+          "answerAgreement": 0.45706371191135736,
+          "wrongAgreement": 0.4296875
+        },
+        {
+          "members": [
+            3,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 208,
+          "rightErrors": 146,
+          "jointErrors": 121,
+          "jointErrorRate": 0.3009950248756219,
+          "excess": 0.113078884186035,
+          "phi": 0.4705488079852554,
+          "bothValid": 385,
+          "agree": 217,
+          "bothWrongValid": 106,
+          "wrongAgree": 48,
+          "answerAgreement": 0.5636363636363636,
+          "wrongAgreement": 0.4528301886792453
+        },
+        {
+          "members": [
+            4,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 187,
+          "rightErrors": 240,
+          "jointErrors": 155,
+          "jointErrorRate": 0.3855721393034826,
+          "excess": 0.10785624118214895,
+          "phi": 0.4408534316712498,
+          "bothValid": 358,
+          "agree": 187,
+          "bothWrongValid": 126,
+          "wrongAgree": 57,
+          "answerAgreement": 0.5223463687150838,
+          "wrongAgreement": 0.4523809523809524
+        },
+        {
+          "members": [
+            4,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 187,
+          "rightErrors": 146,
+          "jointErrors": 111,
+          "jointErrorRate": 0.27611940298507465,
+          "excess": 0.10717556496126333,
+          "phi": 0.4467982299241868,
+          "bothValid": 379,
+          "agree": 222,
+          "bothWrongValid": 95,
+          "wrongAgree": 42,
+          "answerAgreement": 0.5857519788918206,
+          "wrongAgreement": 0.4421052631578947
+        },
+        {
+          "members": [
+            5,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 240,
+          "rightErrors": 146,
+          "jointErrors": 116,
+          "jointErrorRate": 0.2885572139303483,
+          "excess": 0.07173089775005569,
+          "phi": 0.3040876859990482,
+          "bothValid": 366,
+          "agree": 176,
+          "bothWrongValid": 97,
+          "wrongAgree": 44,
+          "answerAgreement": 0.4808743169398907,
+          "wrongAgreement": 0.4536082474226804
+        }
+      ],
+      "failedMembers": [
+        90,
+        69,
+        60,
+        50,
+        44,
+        42,
+        47
+      ],
+      "agreement": {
+        "calibrationBins": [
+          {
+            "n": 0,
+            "correct": 0,
+            "probability": 0.5
+          },
+          {
+            "n": 6,
+            "correct": 1,
+            "probability": 0.25
+          },
+          {
+            "n": 22,
+            "correct": 10,
+            "probability": 0.4583333333333333
+          },
+          {
+            "n": 43,
+            "correct": 24,
+            "probability": 0.5555555555555556
+          },
+          {
+            "n": 62,
+            "correct": 39,
+            "probability": 0.625
+          },
+          {
+            "n": 42,
+            "correct": 34,
+            "probability": 0.7954545454545454
+          },
+          {
+            "n": 68,
+            "correct": 63,
+            "probability": 0.9142857142857143
+          }
+        ],
+        "constant": 0.7020408163265306,
+        "heldout": {
+          "n": 402,
+          "agreement": 0.17140968776533547,
+          "constant": 0.2053803452541541
+        }
+      },
+      "transferred": [
+        {
+          "members": [
+            0,
+            2,
+            6
+          ],
+          "n": 402,
+          "correct": 279,
+          "wrong": 74,
+          "abstain": 49,
+          "coverage": 0.8781094527363185,
+          "accuracy": 0.6940298507462687,
+          "validAccuracy": 0.7903682719546742,
+          "modelCalls": 3,
+          "utility": {
+            "1": 0.5099502487562189,
+            "2": 0.32587064676616917,
+            "0.25": 0.6480099502487562
+          }
+        },
+        {
+          "members": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ],
+          "n": 402,
+          "correct": 251,
+          "wrong": 71,
+          "abstain": 80,
+          "coverage": 0.8009950248756219,
+          "accuracy": 0.6243781094527363,
+          "validAccuracy": 0.7795031055900621,
+          "modelCalls": 5,
+          "utility": {
+            "1": 0.44776119402985076,
+            "2": 0.27114427860696516,
+            "0.25": 0.5802238805970149
+          }
+        }
+      ],
+      "sensitivityWithOlmo": {
+        "n": 402,
+        "correct": 235,
+        "wrong": 61,
+        "abstain": 106,
+        "coverage": 0.736318407960199,
+        "accuracy": 0.5845771144278606,
+        "validAccuracy": 0.793918918918919,
+        "modelCalls": 7,
+        "utility": {
+          "1": 0.43283582089552236,
+          "2": 0.2810945273631841,
+          "0.25": 0.5466417910447762
+        }
+      }
+    },
+    "hi": {
+      "policies": {
+        "individual": {
+          "n": 402,
+          "correct": 249,
+          "wrong": 140,
+          "abstain": 13,
+          "coverage": 0.9676616915422885,
+          "accuracy": 0.6194029850746269,
+          "validAccuracy": 0.6401028277634961,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.27114427860696516,
+            "2": -0.07711442786069651,
+            "0.25": 0.5323383084577115
+          }
+        },
+        "majority": {
+          "n": 402,
+          "correct": 99,
+          "wrong": 28,
+          "abstain": 275,
+          "coverage": 0.31592039800995025,
+          "accuracy": 0.2462686567164179,
+          "validAccuracy": 0.7795275590551181,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.17661691542288557,
+            "2": 0.10696517412935323,
+            "0.25": 0.22885572139303484
+          }
+        },
+        "plurality": {
+          "n": 402,
+          "correct": 210,
+          "wrong": 192,
+          "abstain": 0,
+          "coverage": 1,
+          "accuracy": 0.5223880597014925,
+          "validAccuracy": 0.5223880597014925,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.04477611940298507,
+            "2": -0.43283582089552236,
+            "0.25": 0.40298507462686567
+          }
+        },
+        "unanimity": {
+          "n": 402,
+          "correct": 21,
+          "wrong": 1,
+          "abstain": 380,
+          "coverage": 0.05472636815920398,
+          "accuracy": 0.05223880597014925,
+          "validAccuracy": 0.9545454545454546,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.04975124378109453,
+            "2": 0.0472636815920398,
+            "0.25": 0.05161691542288557
+          }
+        },
+        "majorityFallback": {
+          "n": 402,
+          "correct": 243,
+          "wrong": 146,
+          "abstain": 13,
+          "coverage": 0.9676616915422885,
+          "accuracy": 0.6044776119402985,
+          "validAccuracy": 0.6246786632390745,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.24129353233830847,
+            "2": -0.12189054726368159,
+            "0.25": 0.513681592039801
+          }
+        },
+        "reliability": {
+          "n": 402,
+          "correct": 232,
+          "wrong": 170,
+          "abstain": 0,
+          "coverage": 1,
+          "accuracy": 0.5771144278606966,
+          "validAccuracy": 0.5771144278606966,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.15422885572139303,
+            "2": -0.26865671641791045,
+            "0.25": 0.47139303482587064
+          }
+        },
+        "threshold": {
+          "n": 402,
+          "correct": 164,
+          "wrong": 108,
+          "abstain": 130,
+          "coverage": 0.6766169154228856,
+          "accuracy": 0.4079601990049751,
+          "validAccuracy": 0.6029411764705882,
+          "modelCalls": 6,
+          "utility": {
+            "1": 0.13930348258706468,
+            "2": -0.12935323383084577,
+            "0.25": 0.3407960199004975
+          }
+        }
+      },
+      "threshold": 3,
+      "calibrationThresholds": [
+        {
+          "quorum": 3,
+          "correct": 109,
+          "wrong": 54,
+          "value": 55
+        },
+        {
+          "quorum": 4,
+          "correct": 69,
+          "wrong": 21,
+          "value": 48
+        },
+        {
+          "quorum": 2,
+          "correct": 134,
+          "wrong": 96,
+          "value": 38
+        },
+        {
+          "quorum": 5,
+          "correct": 43,
+          "wrong": 9,
+          "value": 34
+        },
+        {
+          "quorum": 1,
+          "correct": 135,
+          "wrong": 108,
+          "value": 27
+        },
+        {
+          "quorum": 6,
+          "correct": 13,
+          "wrong": 1,
+          "value": 12
+        }
+      ],
+      "weight": [
+        151,
+        34,
+        154,
+        107,
+        79,
+        62,
+        67
+      ],
+      "modelRates": [
+        {
+          "model": "Qwen/Qwen3.5-9B",
+          "noFilterMatch": 13,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 249,
+          "wrong": 140,
+          "abstain": 13,
+          "coverage": 0.9676616915422885,
+          "accuracy": 0.6194029850746269,
+          "validAccuracy": 0.6401028277634961,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.27114427860696516,
+            "2": -0.07711442786069651,
+            "0.25": 0.5323383084577115
+          }
+        },
+        {
+          "model": "google/gemma-3-12b-it",
+          "noFilterMatch": 7,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 233,
+          "wrong": 162,
+          "abstain": 7,
+          "coverage": 0.9825870646766169,
+          "accuracy": 0.5796019900497512,
+          "validAccuracy": 0.589873417721519,
+          "modelCalls": 1,
+          "utility": {
+            "1": 0.17661691542288557,
+            "2": -0.2263681592039801,
+            "0.25": 0.47885572139303484
+          }
+        },
+        {
+          "model": "google/gemma-3-4b-it",
+          "noFilterMatch": 11,
+          "invalidOption": 1,
+          "n": 402,
+          "correct": 142,
+          "wrong": 248,
+          "abstain": 12,
+          "coverage": 0.9701492537313433,
+          "accuracy": 0.35323383084577115,
+          "validAccuracy": 0.3641025641025641,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.263681592039801,
+            "2": -0.8805970149253731,
+            "0.25": 0.19900497512437812
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.1-8B-Instruct",
+          "noFilterMatch": 84,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 112,
+          "wrong": 206,
+          "abstain": 84,
+          "coverage": 0.7910447761194029,
+          "accuracy": 0.27860696517412936,
+          "validAccuracy": 0.3522012578616352,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.23383084577114427,
+            "2": -0.746268656716418,
+            "0.25": 0.15049751243781095
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.2-3B-Instruct",
+          "noFilterMatch": 116,
+          "invalidOption": 0,
+          "n": 402,
+          "correct": 77,
+          "wrong": 209,
+          "abstain": 116,
+          "coverage": 0.7114427860696517,
+          "accuracy": 0.19154228855721392,
+          "validAccuracy": 0.2692307692307692,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.3283582089552239,
+            "2": -0.8482587064676617,
+            "0.25": 0.061567164179104475
+          }
+        },
+        {
+          "model": "microsoft/Phi-4-mini-instruct",
+          "noFilterMatch": 94,
+          "invalidOption": 1,
+          "n": 402,
+          "correct": 100,
+          "wrong": 207,
+          "abstain": 95,
+          "coverage": 0.763681592039801,
+          "accuracy": 0.24875621890547264,
+          "validAccuracy": 0.3257328990228013,
+          "modelCalls": 1,
+          "utility": {
+            "1": -0.26616915422885573,
+            "2": -0.7810945273631841,
+            "0.25": 0.12002487562189054
+          }
+        }
+      ],
+      "sameSupport": {
+        "n": 127,
+        "majorityCorrect": 99,
+        "individualCorrect": 105,
+        "individualValid": 127
+      },
+      "dependence": [
+        {
+          "members": [
+            0,
+            2
+          ],
+          "n": 402,
+          "leftErrors": 153,
+          "rightErrors": 169,
+          "jointErrors": 112,
+          "jointErrorRate": 0.27860696517412936,
+          "excess": 0.11860473750649736,
+          "phi": 0.49486580018770915,
+          "bothValid": 384,
+          "agree": 248,
+          "bothWrongValid": 97,
+          "wrongAgree": 56,
+          "answerAgreement": 0.6458333333333334,
+          "wrongAgreement": 0.5773195876288659
+        },
+        {
+          "members": [
+            0,
+            3
+          ],
+          "n": 402,
+          "leftErrors": 153,
+          "rightErrors": 260,
+          "jointErrors": 129,
+          "jointErrorRate": 0.3208955223880597,
+          "excess": 0.07473824905324125,
+          "phi": 0.3220466531514499,
+          "bothValid": 381,
+          "agree": 155,
+          "bothWrongValid": 111,
+          "wrongAgree": 37,
+          "answerAgreement": 0.4068241469816273,
+          "wrongAgreement": 0.3333333333333333
+        },
+        {
+          "members": [
+            0,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 153,
+          "rightErrors": 290,
+          "jointErrors": 138,
+          "jointErrorRate": 0.34328358208955223,
+          "excess": 0.06872354644687012,
+          "phi": 0.31572158172236303,
+          "bothValid": 312,
+          "agree": 132,
+          "bothWrongValid": 94,
+          "wrongAgree": 35,
+          "answerAgreement": 0.4230769230769231,
+          "wrongAgreement": 0.3723404255319149
+        },
+        {
+          "members": [
+            0,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 153,
+          "rightErrors": 325,
+          "jointErrors": 138,
+          "jointErrorRate": 0.34328358208955223,
+          "excess": 0.03558699042102918,
+          "phi": 0.18625628463099758,
+          "bothValid": 280,
+          "agree": 85,
+          "bothWrongValid": 85,
+          "wrongAgree": 23,
+          "answerAgreement": 0.30357142857142855,
+          "wrongAgreement": 0.27058823529411763
+        },
+        {
+          "members": [
+            0,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 153,
+          "rightErrors": 302,
+          "jointErrors": 134,
+          "jointErrorRate": 0.3333333333333333,
+          "excess": 0.04741219276750575,
+          "phi": 0.22588806605409226,
+          "bothValid": 298,
+          "agree": 95,
+          "bothWrongValid": 82,
+          "wrongAgree": 14,
+          "answerAgreement": 0.3187919463087248,
+          "wrongAgreement": 0.17073170731707318
+        },
+        {
+          "members": [
+            2,
+            3
+          ],
+          "n": 402,
+          "leftErrors": 169,
+          "rightErrors": 260,
+          "jointErrors": 140,
+          "jointErrorRate": 0.3482587064676617,
+          "excess": 0.07635949605207792,
+          "phi": 0.32364060227812574,
+          "bothValid": 385,
+          "agree": 177,
+          "bothWrongValid": 128,
+          "wrongAgree": 64,
+          "answerAgreement": 0.4597402597402597,
+          "wrongAgreement": 0.5
+        },
+        {
+          "members": [
+            2,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 169,
+          "rightErrors": 290,
+          "jointErrors": 142,
+          "jointErrorRate": 0.35323383084577115,
+          "excess": 0.04996163461300463,
+          "phi": 0.22576645929106617,
+          "bothValid": 317,
+          "agree": 131,
+          "bothWrongValid": 99,
+          "wrongAgree": 46,
+          "answerAgreement": 0.41324921135646686,
+          "wrongAgreement": 0.46464646464646464
+        },
+        {
+          "members": [
+            2,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 169,
+          "rightErrors": 325,
+          "jointErrors": 151,
+          "jointErrorRate": 0.3756218905472637,
+          "excess": 0.03574787752778397,
+          "phi": 0.18403228210212574,
+          "bothValid": 285,
+          "agree": 84,
+          "bothWrongValid": 103,
+          "wrongAgree": 25,
+          "answerAgreement": 0.29473684210526313,
+          "wrongAgreement": 0.24271844660194175
+        },
+        {
+          "members": [
+            2,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 169,
+          "rightErrors": 302,
+          "jointErrors": 147,
+          "jointErrorRate": 0.3656716417910448,
+          "excess": 0.049850251231405164,
+          "phi": 0.2336117448857826,
+          "bothValid": 301,
+          "agree": 104,
+          "bothWrongValid": 95,
+          "wrongAgree": 26,
+          "answerAgreement": 0.34551495016611294,
+          "wrongAgreement": 0.2736842105263158
+        },
+        {
+          "members": [
+            3,
+            4
+          ],
+          "n": 402,
+          "leftErrors": 260,
+          "rightErrors": 290,
+          "jointErrors": 212,
+          "jointErrorRate": 0.527363184079602,
+          "excess": 0.06079057449073043,
+          "phi": 0.2836935731636515,
+          "bothValid": 313,
+          "agree": 124,
+          "bothWrongValid": 152,
+          "wrongAgree": 60,
+          "answerAgreement": 0.3961661341853035,
+          "wrongAgreement": 0.39473684210526316
+        },
+        {
+          "members": [
+            3,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 260,
+          "rightErrors": 325,
+          "jointErrors": 231,
+          "jointErrorRate": 0.5746268656716418,
+          "excess": 0.051743768718596074,
+          "phi": 0.27510106644592763,
+          "bothValid": 282,
+          "agree": 91,
+          "bothWrongValid": 151,
+          "wrongAgree": 43,
+          "answerAgreement": 0.32269503546099293,
+          "wrongAgreement": 0.2847682119205298
+        },
+        {
+          "members": [
+            3,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 260,
+          "rightErrors": 302,
+          "jointErrors": 222,
+          "jointErrorRate": 0.5522388059701493,
+          "excess": 0.06635974357070369,
+          "phi": 0.32116076790463605,
+          "bothValid": 296,
+          "agree": 117,
+          "bothWrongValid": 144,
+          "wrongAgree": 55,
+          "answerAgreement": 0.3952702702702703,
+          "wrongAgreement": 0.3819444444444444
+        },
+        {
+          "members": [
+            4,
+            5
+          ],
+          "n": 402,
+          "leftErrors": 290,
+          "rightErrors": 325,
+          "jointErrors": 254,
+          "jointErrorRate": 0.6318407960199005,
+          "excess": 0.04862503403381104,
+          "phi": 0.27562396190722493,
+          "bothValid": 243,
+          "agree": 80,
+          "bothWrongValid": 124,
+          "wrongAgree": 39,
+          "answerAgreement": 0.3292181069958848,
+          "wrongAgreement": 0.31451612903225806
+        },
+        {
+          "members": [
+            4,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 290,
+          "rightErrors": 302,
+          "jointErrors": 240,
+          "jointErrorRate": 0.5970149253731343,
+          "excess": 0.05507289423529121,
+          "phi": 0.2841701947295593,
+          "bothValid": 247,
+          "agree": 89,
+          "bothWrongValid": 120,
+          "wrongAgree": 39,
+          "answerAgreement": 0.3603238866396761,
+          "wrongAgreement": 0.325
+        },
+        {
+          "members": [
+            5,
+            6
+          ],
+          "n": 402,
+          "leftErrors": 325,
+          "rightErrors": 302,
+          "jointErrors": 257,
+          "jointErrorRate": 0.6393034825870647,
+          "excess": 0.03195465458775773,
+          "phi": 0.18784330423529633,
+          "bothValid": 218,
+          "agree": 63,
+          "bothWrongValid": 115,
+          "wrongAgree": 31,
+          "answerAgreement": 0.2889908256880734,
+          "wrongAgreement": 0.26956521739130435
+        }
+      ],
+      "failedMembers": [
+        21,
+        28,
+        50,
+        68,
+        83,
+        77,
+        75
+      ],
+      "agreement": {
+        "calibrationBins": [
+          {
+            "n": 0,
+            "correct": 0,
+            "probability": 0.5
+          },
+          {
+            "n": 13,
+            "correct": 1,
+            "probability": 0.13333333333333333
+          },
+          {
+            "n": 67,
+            "correct": 25,
+            "probability": 0.37681159420289856
+          },
+          {
+            "n": 73,
+            "correct": 40,
+            "probability": 0.5466666666666666
+          },
+          {
+            "n": 38,
+            "correct": 26,
+            "probability": 0.675
+          },
+          {
+            "n": 38,
+            "correct": 30,
+            "probability": 0.775
+          },
+          {
+            "n": 14,
+            "correct": 13,
+            "probability": 0.875
+          }
+        ],
+        "constant": 0.5551020408163265,
+        "heldout": {
+          "n": 402,
+          "agreement": 0.21700750468148675,
+          "constant": 0.25056897934318445
+        }
+      },
+      "transferred": [
+        {
+          "members": [
+            0,
+            2,
+            6
+          ],
+          "n": 402,
+          "correct": 207,
+          "wrong": 80,
+          "abstain": 115,
+          "coverage": 0.7139303482587065,
+          "accuracy": 0.5149253731343284,
+          "validAccuracy": 0.7212543554006968,
+          "modelCalls": 3,
+          "utility": {
+            "1": 0.31592039800995025,
+            "2": 0.11691542288557213,
+            "0.25": 0.4651741293532338
+          }
+        },
+        {
+          "members": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ],
+          "n": 402,
+          "correct": 155,
+          "wrong": 82,
+          "abstain": 165,
+          "coverage": 0.5895522388059702,
+          "accuracy": 0.3855721393034826,
+          "validAccuracy": 0.6540084388185654,
+          "modelCalls": 5,
+          "utility": {
+            "1": 0.18159203980099503,
+            "2": -0.022388059701492536,
+            "0.25": 0.3345771144278607
+          }
+        }
+      ],
+      "sensitivityWithOlmo": {
+        "n": 402,
+        "correct": 109,
+        "wrong": 42,
+        "abstain": 251,
+        "coverage": 0.3756218905472637,
+        "accuracy": 0.27114427860696516,
+        "validAccuracy": 0.7218543046357616,
+        "modelCalls": 7,
+        "utility": {
+          "1": 0.16666666666666666,
+          "2": 0.06218905472636816,
+          "0.25": 0.24502487562189054
+        }
+      }
+    }
+  },
+  "newInferenceRequests": 0,
+  "coverageIdentity": "full-plan correctness = coverage × conditional correctness on any nonempty decision set"
+}

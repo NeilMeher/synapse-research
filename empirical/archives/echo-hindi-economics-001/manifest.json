@@ -1,0 +1,42 @@
+{
+  "id": "echo-hindi-economics-001",
+  "evidence": "F",
+  "protocolCommit": "21ffd681f1206008a561dee48a1d40233f839105",
+  "status": "completed",
+  "inputs": {
+    "sources.json": {
+      "sha256": "7fd223c6c694d8ee4893a336f08ebcda1dbbcade26515ab8042eccc3cb419859",
+      "bytes": 9448
+    },
+    "cohort.json": {
+      "sha256": "cab740e0234cf44c6448050bf1e7ba802314f35604f176b6e482a69ed5ea95e0",
+      "bytes": 211559
+    },
+    "alignment.json": {
+      "sha256": "d7c677e9af4e9f6b9b2b26a60b9deb36b26f686d2ab3f6fc0079d98327d1cd9c",
+      "bytes": 19150
+    },
+    "protocol.json": {
+      "sha256": "d5a6d4bd4e93b5507aa42231833370b447a90f21afea4c63d8e9fa9b179a70cd",
+      "bytes": 1938
+    },
+    "align.py": {
+      "sha256": "5eb4576f0ec9d9844b3d7d7fd98b13fa35a8f1897f33b3827df635a28e0a6229",
+      "bytes": 13731
+    },
+    "run.mjs": {
+      "sha256": "ef78eeb3f8bfa47e513ce4f5aa7fa2a403bed5159bbd6eeb6c359ab396c7c423",
+      "bytes": 9820
+    }
+  },
+  "outputs": {
+    "predictions.json": {
+      "sha256": "bb28ab79b48845c827367620915834044e5ebf57df6616a1929645968c44f148",
+      "bytes": 289370
+    },
+    "results.json": {
+      "sha256": "99a5d30fa49036b20dc2b348b2d194547ff566f45df84e7b5aa0c602b8538cd5",
+      "bytes": 39345
+    }
+  }
+}
