@@ -151,3 +151,18 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Next | Short counterbalanced MIRAGE mechanism study for constant-position response and conditional-probability missingness before ECHO. No ensemble has been evaluated. |
 
 [Pilot report and links to archives](research/mirage-empirical-results.md)
+
+
+## Empirical Phase II · 2026-11-28
+
+| Work | Evidence |
+| --- | --- |
+| Starting point | Clean `codex/v2-empirical-intelligence`, v1.1.0 `64c76d1`, live release and GitHub tag confirmed. |
+| Audit | Reconstructed original answer, position, confidence and family distributions without changing its archive. |
+| Development | 36 genuine responses, all scorable, stored separately. |
+| Frozen study | `mirage-empirical-robustness-002`, protocol `22c5d8b`, archive `813052b`. 512/512 scorable. |
+| Finding | Primary difference −0.02217, 95% interval −0.08851 to +0.04096. Letter bias persisted. Reordering equivalent grammar changed zero of 128 paired raw outputs. |
+| Site | Response-bias matrices, matched cue effects and recorded permutation replay, linked from the Observatory. New experimental design and measurement-bias Academy lesson. |
+| Blocker | Qwen candidate not yet evaluated. Obtain authorization for 491 MB and recheck host memory. ECHO prerequisites remain open. |
+
+[Execution results](research/mirage-robustness-results.md)

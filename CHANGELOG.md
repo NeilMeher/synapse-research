@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 · MIRAGE response-bias robustness
+
+- Preserve and audit the original MIRAGE responses. Add a 32-task registered four-cue follow-up with separate position, label and equivalent-grammar changes.
+- Publish an independently validated canonical task and model response archive, missingness bounds, cue comparisons and an interactive replay.
+- Extend research search, the evidence library and the Academy with experimental-design and measurement-bias material.
+
 ## v1.1.0 · Empirical MIRAGE pilot
 
 - Add a local pinned inference adapter, frozen matched task design, durable response journal, scoring, and independent validation.

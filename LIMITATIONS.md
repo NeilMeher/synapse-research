@@ -29,3 +29,6 @@ CHRONOS uses sparse historical benchmarks and a recent annual national series. D
 
 
 The first empirical MIRAGE pilot used one 135M model, Q4_K_M weights, one greedy constrained format, four fixed task families and two cue conditions. The cue format changed abstention and position preference. Brier comparisons cover only 52 complete pairs, including four conditional-probability items. Prompt length, rendered answer order and grammar order need controlled follow-up. Human review and transfer to other models remain open. [Detailed interpretation](research/mirage-empirical-results.md)
+
+
+MIRAGE 002 used one quantized checkpoint, four fixed task families, a fractional range of presentation permutations, exact grammar constraints and greedy decoding. It identifies isolated factor changes relative to reference arrangements. Interactions among perturbations, instruction-order effects outside development, stochastic sampling and transfer to other models remain open. The no-cue contrast changes length and content together. The primary comparison uses tokenizer-length-matched statements with residual semantic differences. Near-constant labels and accuracy around chance limit ensemble interpretation. [MIRAGE 002 limitations](research/mirage-robustness-results.md)

@@ -5,6 +5,7 @@ from fractions import Fraction as F
 from itertools import permutations
 import json
 from pathlib import Path
+from random import Random
 import re
 
 ROOT=Path(__file__).resolve().parent
@@ -105,8 +106,13 @@ def verify_results(truth,plan):
     valid=defaultdict(list)
     mapping_rows=defaultdict(dict)
     found=Counter()
+    by_request={}
+    family_by_task={}
     for r,p,s in zip(raw,plan,score,strict=True):
         assert p["sequence"]==s["sequence"]==r["sequence"]
+        family_by_task[p["taskId"]]=p["family"]
+        mapping_rows[p["taskId"],p["presentation"]]
+        by_request[p["taskId"],p["presentation"],p["cue"]]=r,s
         if r["status"]!="scorable":
             assert r["status"]==s["status"]
             continue
@@ -150,7 +156,38 @@ def verify_results(truth,plan):
     if per_task:
         expected=sum(sum(ds)/len(ds) for ds in per_task.values())/len(per_task)
         assert abs(analysis["primary"]["difference"]-float(expected))<1e-12
-    print(f"Verified rational losses and canonical mapping for {sum(map(len,valid.values()))} responses.")
+        config=load(ROOT/"protocol.json")["analysis"]
+        strata=defaultdict(list)
+        for task, differences in per_task.items():
+            strata[family_by_task[task]].append(sum(differences)/len(differences))
+        rng=Random(config["bootstrapSeed"])
+        draws=[]
+        for _ in range(config["bootstrapReplicates"]):
+            samples=[group[int(rng.random()*len(group))] for group in strata.values() for _ in group]
+            draws.append(sum(samples)/len(samples))
+        draws.sort()
+        for i, q in enumerate((F(1,40),F(39,40))):
+            offset=q*(len(draws)-1)
+            lower=offset.numerator//offset.denominator
+            expected=draws[lower]+(offset-lower)*(draws[lower+1]-draws[lower])
+            assert abs(analysis["primary"]["interval95"][i]-float(expected)) < 1e-12
+    token_pairs=canonical_agreement=0
+    matched_additions=Counter()
+    for task, version in mapping_rows:
+        group={cue:by_request[task,version,cue] for cue in ARMS}
+        if all(r["tokens"] for r,s in group.values()):
+            token=[group[cue][0]["tokens"]["input"] for cue in ("none","matched","correct","incorrect")]
+            token_pairs+=token[1]==token[2]==token[3]
+            matched_additions[token[1]-token[0]]+=1
+        m,c=(group[cue][1] for cue in ("matched","incorrect"))
+        canonical_agreement+=m["canonical"] is not None and m["canonical"]==c["canonical"]
+    for version in ("physical","labels","grammar"):
+        for cue in ARMS:
+            pairs=[(by_request[task,"reference",cue],by_request[task,version,cue]) for task in truth]
+            count=sum(a["raw"] is not None and a["raw"]==b["raw"] for (a,_),(b,_) in pairs)
+            assert count==analysis["presentations"][version][cue]["sameRaw"]
+    print(f"Verified rational losses, task bootstrap and canonical mapping for {sum(map(len,valid.values()))} responses.")
+    print(f"Matched advisory token counts: {token_pairs}. Added tokens: {dict(matched_additions)}. Matched/incorrect canonical agreement: {canonical_agreement}.")
 
 
 if __name__=="__main__":

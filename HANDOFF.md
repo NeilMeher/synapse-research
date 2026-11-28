@@ -139,3 +139,10 @@ The release candidate integrates the typed study graph and deterministic search,
 - Continue with an independent MIRAGE design that crosses rendered answer order and output-grammar alternative order, and adds length-matched and correct cues. Use a small development split before registering fresh held-out items. Comparable ensemble evidence remains outstanding.
 
 [Pilot report](research/mirage-empirical-results.md) · [Public release verification](https://github.com/NeilMeher/synapse-research/releases/tag/v1.1.0)
+
+
+## Empirical Phase II · MIRAGE 002 checkpoint
+
+The branch is `codex/mirage-empirical-robustness`, based on v1.1.0 `64c76d12ab6999760ae0c599429352a881ef82b0`. The retained retrospective audit recreates MIRAGE 001 directly from its stable archive. The registered 002 design froze at `22c5d8bec4858320e33de6e8715f1eb28243f855` after a separately archived 36-request development study. All 512 held-out outputs were preserved at `813052b273a2dc6dc6bcc8097a302e33af7329c8`.
+
+The primary Brier contrast was −0.02217 with 95% task-level interval [−0.08851, +0.04096]. Grammar reorder generated 128/128 identical outputs. Letter reassignment preserved the letter in 122/128 pairs and the canonical choice in 2/128. Overall 490/512 answers were A, with accuracy near 25%. These outcomes leave the reasoning-ensemble gate closed. Next obtain authorization and verify memory for the exact Qwen 0.5B artifact, freeze a matched replication and measure capability and bias before ECHO. All historical archives remain intact. [Report](research/mirage-robustness-results.md) · [Release record](https://github.com/NeilMeher/synapse-research/releases/tag/v1.2.0)

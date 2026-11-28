@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect the paired cue experiment, response bias and actual answer permutations in MIRAGE 002.">
+  <title>MIRAGE 002 · Empirical Observatory</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
+  <link rel="stylesheet" href="./observatory.css"><link rel="stylesheet" href="./mirage-robustness.css">
+  <script type="module" src="./mirage-robustness-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Robustness navigation"><a href="./observatory.html">Empirical Observatory</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main id="main" class="wrap section study-page observatory">
+    <div class="observatory-hero">
+      <div><p class="eyebrow">Empirical Observatory · MIRAGE 002</p>
+      <h1>What drives the model’s choice?</h1>
+      <p>Compare advice, physical answer order, letter assignments and equivalent output grammars. Track the same underlying answer through each recorded presentation.</p></div>
+      <div class="result-panel obs-run"><p class="eyebrow">Registered actual-model study</p>
+        <h2>SmolLM2-135M-Instruct</h2><p>Q4_K_M · llama.cpp b12823 · local CPU</p>
+        <a href="./research/mirage-robustness-protocol.md">Read the frozen protocol</a>
+      </div>
+    </div>
+    <p id="robust-status" role="status">Checking the MIRAGE 002 archive…</p>
+    <div id="robust-outcomes" hidden>
+      <section class="result-panel study-block obs-primary" aria-labelledby="robust-primary-title">
+        <h2 id="robust-primary-title">Incorrect advice versus length-matched text</h2>
+        <div class="obs-measures" id="robust-headline"></div>
+        <p id="robust-coverage"></p>
+        <p id="robust-bounds"></p>
+        <nav class="actions" aria-label="Study sections"><a href="#cue-effects">Cue effects</a><a href="#response-bias">Response bias</a><a href="#permutation-replay">Permutation replay</a></nav>
+      </section>
+      <section class="result-panel study-block" id="cue-effects" aria-labelledby="robust-cue-title">
+        <div class="obs-title-row"><h2 id="robust-cue-title">Cue effects</h2><div><label for="robust-family">Task family</label><select id="robust-family"><option value="all">All families</option></select></div></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Cue performance">
+          <table><caption>Four conditions and their distinct denominators</caption><thead><tr><th scope="col">Outcome</th><th scope="col">No cue</th><th scope="col">Matched text</th><th scope="col">Correct advice</th><th scope="col">Incorrect advice</th></tr></thead><tbody id="robust-arm-metrics"></tbody></table>
+        </div>
+        <p id="robust-adoption"></p>
+        <div class="study-pair robust-contrasts">
+          <div><h3>Paired Brier effects</h3><p>Differences use the length-matched condition as reference. Intervals resample canonical tasks within families.</p><canvas id="robust-interval-chart" class="study-chart" aria-hidden="true"></canvas></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Paired outcome intervals">
+            <table><caption>Available matched pairs across all families</caption><thead><tr><th scope="col">Comparison</th><th scope="col">Pairs</th><th scope="col">Change</th><th scope="col">95% interval</th></tr></thead><tbody id="robust-contrasts"></tbody></table>
+          </div>
+        </div>
+      </section>
+      <section class="result-panel study-block" id="response-bias" aria-labelledby="robust-bias-title">
+        <h2 id="robust-bias-title">Response bias</h2>
+        <div class="study-controls">
+          <div><label for="robust-bias-cue">Cue condition</label><select id="robust-bias-cue"><option value="none">No cue</option><option value="matched">Matched text</option><option value="correct">Correct advice</option><option value="incorrect">Incorrect advice</option></select></div>
+          <div><label for="robust-bias-grid">Matrix</label><select id="robust-bias-grid"><option value="canonicalByLabel">Canonical answer by label</option><option value="canonicalByPosition">Canonical answer by position</option><option value="labelByGrammarPosition">Selected label by grammar position</option><option value="cueLabelByAnswer">Cue label by selected label</option></select></div>
+        </div>
+        <div class="study-pair robust-contrasts">
+          <div><p id="robust-matrix-scope"></p><div class="table-scroll" tabindex="0" role="region" aria-label="Response count matrix"><table id="robust-matrix"><caption id="robust-matrix-title"></caption><thead></thead><tbody></tbody></table></div></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Presentation agreement">
+            <table><caption>Agreement with the reference presentation</caption><thead><tr><th scope="col">Changed factor</th><th scope="col">Both answered</th><th scope="col">Same content</th><th scope="col">Same label</th><th scope="col">Identical raw output</th></tr></thead><tbody id="robust-agreement"></tbody></table>
+          </div>
+        </div>
+      </section>
+      <section class="result-panel study-block" id="permutation-replay" aria-labelledby="robust-replay-title">
+        <h2 id="robust-replay-title">Permutation replay</h2>
+        <p>Inspect a recorded request alongside its reference presentation. The controls replay the archive.</p>
+        <button id="robust-load-replay" class="quiet" type="button">Load recorded responses</button>
+        <p id="robust-replay-status" role="status"></p>
+        <div id="robust-replay-data" hidden>
+          <div class="study-controls">
+            <div><label for="robust-task">Canonical task</label><select id="robust-task"></select></div>
+            <div><label for="robust-version">Presentation</label><select id="robust-version"><option value="reference">Reference</option><option value="physical">Physical order change</option><option value="labels">Letter reassignment</option><option value="grammar">Grammar reorder</option></select></div>
+            <div><label for="robust-replay-cue">Replay cue</label><select id="robust-replay-cue"><option value="none">No cue</option><option value="matched">Matched text</option><option value="correct">Correct advice</option><option value="incorrect">Incorrect advice</option></select></div>
+            <label class="robust-checkbox"><input id="robust-missing" type="checkbox"> Show tasks with incomplete responses</label>
+          </div>
+          <div id="robust-task-detail" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+    <section class="result-panel study-block" aria-labelledby="robust-evidence-title">
+      <h2 id="robust-evidence-title">Evidence and reproduction</h2>
+      <p>Single-model results with fixed task families and greedy decoding. Independent human review and external replication are pending.</p>
+      <ul class="robust-evidence">
+        <li><a href="./research/mirage-robustness-results.md">Research report</a></li>
+        <li><a href="./research/mirage-robustness-background.md">MIRAGE 001 audit and runtime source review</a></li>
+        <li><a href="./empirical/robustness/inputs/heldout.balance.json">Realized design balance</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-robustness-002/manifest.json">Run manifest</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-robustness-002/responses.ndjson" download>Raw model responses</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-robustness-002/scores.json" download>Canonical scores</a></li>
+        <li><a href="./empirical/archives/mirage-empirical-robustness-002/analysis.json" download>Derived estimates</a></li>
+        <li><a href="./empirical/robustness/inputs/heldout.tasks.json" download>Canonical tasks</a></li>
+        <li><a href="./empirical/robustness/inputs/heldout.keys.json" download>Verified answer key</a></li>
+        <li><a href="./empirical/robustness/inputs/heldout.schedule.json" download>Frozen schedule</a></li>
+        <li><a href="./empirical/robustness/reference.py" download>Independent reference</a></li>
+        <li><a href="./REPRODUCIBILITY.md">Reproduction instructions</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

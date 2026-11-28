@@ -19,3 +19,8 @@ For human studies, obtain appropriate ethics and informed-consent review in a se
 ## First evaluation completed
 
 The first narrow MIRAGE pilot is now archived as exploratory evidence. The next follow-up should counterbalance choice and grammar order, add a length-matched control and validate answer-position behaviour before using the evaluation for ECHO. The higher-order dependence question remains open. [First actual-model results](mirage-empirical-results.md)
+
+
+## Candidate future peer-influence design
+
+After the model/measurement gate, obtain an initial independent canonical response before any peer message. On a fresh task set, randomly assign a matched neutral statement or one inaccurate peer response with confidence wording varied in a second independent factor. Prespecify switching from a correct canonical answer as the main conditional outcome and report the denominator, full-plan correctness and abstention separately. Counterbalance answer labels and use correct-peer and length controls if resources permit. The advice can be an explicit scripted treatment. It should never be presented in reporting as a genuine independent model vote. [MIRAGE protocol](mirage-robustness-protocol.md)

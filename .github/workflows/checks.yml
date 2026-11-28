@@ -73,6 +73,11 @@ jobs:
       - run: python -B -m unittest empirical.test_empirical
       - run: python -B -m empirical.archive verify
       - run: python -B -m empirical.reference
+      - run: python -B -m unittest empirical.robustness.test_robustness
+      - run: python -B -m empirical.robustness.audit
+      - run: python -B -m empirical.robustness.archive verify --split development
+      - run: python -B -m empirical.robustness.archive verify --split heldout
+      - run: python -B -m empirical.robustness.reference
       - run: npm run build
       - name: Install browser QA tooling
         run: |

@@ -93,3 +93,27 @@ python -B -m empirical.archive archive
 ```
 
 Archive generation refuses an existing archive directory. Fresh model generations can differ even with the pinned seed. Keep fresh reproduction evidence apart from the original archive and compare coverage, option distributions and paired effects. [Model access and publisher links](research/empirical-model-access.md) · [Protocol](research/mirage-empirical-protocol.md) · [Pilot result](research/mirage-empirical-results.md)
+
+
+## MIRAGE 002 · Robustness study
+
+The analysis replay uses Python 3.14 and needs no weights or network service. The two evidence sets have distinct directories. Verify the original pilot separately.
+
+```sh
+python -B -m empirical.robustness.audit
+python -B -m unittest empirical.robustness.test_robustness
+python -B -m empirical.robustness.archive verify --split development
+python -B -m empirical.robustness.archive verify --split heldout
+python -B -m empirical.robustness.reference
+```
+
+The independent implementation solves the printed questions and checks each canonical remap, realized balance, observed counts and rational Brier calculations. Archive replay recomputes the task-level bootstrap. The observed request journal is kept apart from scored results and derived summaries. Missing requests and abstentions remain visible in archived denominators.
+
+For fresh inference, use a new clean checkout of `22c5d8bec4858320e33de6e8715f1eb28243f855`, the exact verified Windows CPU executable and SmolLM2 GGUF. Use the pinned weight, runtime and protocol hashes in the released manifest. The collector checks the clean freeze, and it reuses the journal when restarted at that revision. The build command refuses an existing result archive. Keep independent reproduction data apart from the original.
+
+```sh
+python -B -m empirical.robustness.collect --split heldout --runtime PATH_TO_RUNTIME --weights PATH_TO_GGUF --freeze-commit 22c5d8bec4858320e33de6e8715f1eb28243f855
+python -B -m empirical.robustness.archive build --split heldout
+```
+
+The fixed seed, settings and files preserve the design. Hardware, runtime or tokenizer changes can change observed outputs. [Protocol](research/mirage-robustness-protocol.md) · [Study results](research/mirage-robustness-results.md)

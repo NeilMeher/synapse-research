@@ -303,6 +303,20 @@
       <details><summary>Practice and worked solution</summary><p>If two models perfectly reproduce their own simulations and diverge on a new case, which forms of uncertainty matter?</p><p>Check numerical reproducibility first, then compare model structure, parameters and target populations. Matching archived numbers can eliminate one computational explanation while measurement or external validity questions remain open.</p></details>
       <p><a href="./chronos.html#provenance">See the historical discrepancy</a> · <a href="./scientia.html">Inspect SCIENTIA’s validation controls</a></p>
     </article>
+    <article class="result-panel study-block lesson" id="measurement-bias">
+      <h2>Experimental design and measurement bias</h2>
+      <p>A choice has a meaning, a printed label and a location. An experiment can change one while holding the others fixed. If A is always the first option, preference for A and preference for position one are observationally coupled.</p>
+      <div class="lesson-demo"><h3>Move the correct answer</h3><p>This deterministic demonstration uses a four-choice problem with exactly one correct answer and two fixed response rules.</p><div class="study-controls">
+        <div><label for="academy-correct-position">Physical position of the correct answer</label><input id="academy-correct-position" type="range" min="1" max="4" value="1"></div>
+        <div><label for="academy-correct-label">Printed label of the correct answer</label><select id="academy-correct-label"><option>A</option><option>B</option><option>C</option><option>D</option></select></div>
+      </div><p id="academy-bias-result" aria-live="polite"></p></div>
+      <h3>Counterbalance and pair</h3>
+      <p>In a four-row Latin square, each content appears in each position once. An independently balanced letter assignment can make each correct content appear under A, B, C and D. MIRAGE 002 adds a separate grammar ordering and changes one presentation factor at a time relative to its reference. Its cue effects compare multiple presentations of the same canonical task. The uncertainty calculation resamples tasks, so sixteen presentations of one question remain one experimental unit.</p>
+      <h3>Check outcome-dependent missingness</h3>
+      <p>On four paired problems, suppose observed changes in loss are +0.10, +0.20 and −0.10, and the fourth is missing in both arms. The complete-pair mean is +0.067. Because Brier loss is in [0,1], the missing difference is in [−1,1]. The full-plan average therefore ranges from (0.20−1)/4 to (0.20+1)/4, or −0.20 to +0.30.</p>
+      <details><summary>Practice and worked solution</summary><p>Give the correct answer label D in the first position. Which rule is correct? What happens if you keep label D and display the correct answer second?</p><p>The first-position rule succeeds in the original arrangement while always-A fails. Moving the answer to position two makes both rules fail. Changing just the label to A would instead make always-A succeed while leaving the position rule unchanged.</p></details>
+      <p><a href="./mirage-robustness.html#permutation-replay">Replay an actual MIRAGE presentation</a> · <a href="./research/mirage-robustness-protocol.md">Inspect the design and missingness estimands</a></p>
+    </article>
   </main>
 </body>
 </html>

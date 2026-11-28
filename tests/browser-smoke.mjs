@@ -384,7 +384,7 @@ try {
         }
       }
       assert.equal((await page.goto(new URL("academy.html",base).href)).status(),200);
-      assert.equal(await page.locator("article.lesson").count(),16);
+      assert.equal(await page.locator("article.lesson").count(),17);
       assert.match(await page.locator("#academy-io-result").textContent(),/102\.04.*20\.41.*122\.45/);
       assert.match(await page.locator("#academy-energy-result").textContent(),/720\.0 kWh/);
       assert.match(await page.locator("#academy-finance-result").textContent(),/4\.13.*0\.66.*2\.00/);
@@ -408,6 +408,8 @@ try {
       await page.getByLabel("Observation",{exact:true}).selectOption("disagree");
       assert.match(await page.locator("#academy-bayes").textContent(),/33\.33%/);
       assert.match(await page.locator("#academy-market").textContent(),/at 102, 105/);
+      await page.getByLabel("Printed label of the correct answer").selectOption("D");
+      assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");
       assert.match(await page.locator("#academy-market").textContent(),/1 of 1 lots filled/);
       assert.match(await page.locator("#academy-information").textContent(),/0\.2781 bits/);
@@ -495,6 +497,30 @@ try {
         await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
         await page.screenshot({path:fileURLToPath(new URL("observatory-"+width+".png",screenshots))});
       }
+      await page.getByRole("link",{name:/Explore MIRAGE 002/}).click();
+      await page.getByText(/genuine model outputs · mirage-empirical-robustness-002/).waitFor();
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      await page.getByLabel("Task family",{exact:true}).selectOption("wood");
+      assert.deepEqual(await page.locator("#robust-arm-metrics tr").filter({hasText:"Planned requests"}).locator("td").allTextContents(),["32","32","32","32"]);
+      await page.getByLabel("Cue condition",{exact:true}).selectOption("incorrect");
+      await page.getByLabel("Matrix",{exact:true}).selectOption("cueLabelByAnswer");
+      assert.equal(await page.locator("#robust-matrix tbody td").count(),16);
+      assert.match(await page.locator("#robust-matrix-title").textContent(),/Incorrect advice/);
+      await page.getByRole("button",{name:"Load recorded responses"}).click();
+      await page.getByText("Recorded presentations loaded.").waitFor();
+      assert.equal(await page.locator("#robust-task option").count(),32);
+      await page.getByLabel("Presentation",{exact:true}).selectOption("labels");
+      await page.getByLabel("Replay cue",{exact:true}).selectOption("correct");
+      assert.equal(await page.locator(".robust-replay-card").count(),2);
+      assert.match(await page.locator("#robust-task-detail").textContent(),/Verified C0.*Grammar order.*Suggested content C0/s);
+      await page.getByLabel("Show tasks with incomplete responses").check();
+      assert.equal(await page.locator("#robust-task option").count(),0);
+      await page.getByText("No recorded tasks match this filter.").waitFor();
+      await page.getByLabel("Show tasks with incomplete responses").uncheck();
+      if(width===390||width===1440){
+        await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+        await page.screenshot({path:fileURLToPath(new URL("mirage-robustness-"+width+".png",screenshots))});
+      }
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);
@@ -556,14 +582,21 @@ try {
     await missingEmpirical.getByText(/The empirical archive is unavailable/).waitFor();
     assert.equal(await missingEmpirical.locator("#obs-data").isVisible(),false);
     console.log("503 empirical archive fallback passed");
+    const missingRobust=await browser.newPage();
+    await missingRobust.route("**/mirage-empirical-robustness-002/analysis.json",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingRobust.goto(new URL("mirage-robustness.html",base).href);
+    await missingRobust.getByText(/MIRAGE 002 archive is unavailable/).waitFor();
+    assert.equal(await missingRobust.locator("#robust-outcomes").isVisible(),false);
+    console.log("503 MIRAGE 002 archive fallback passed");
     if(process.env.AXE_SCRIPT){
       const violations=[];
-      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html"];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html"];
       for(const width of [390,1440]){
         const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
         for(const path of auditRoutes){
           await page.goto(new URL(path,base).href);
           if(path==="observatory.html")await page.locator("#obs-data").waitFor();
+          if(path==="mirage-robustness.html")await page.locator("#robust-outcomes").waitFor();
           await page.evaluate(()=>document.fonts.ready);
           await page.addScriptTag({path:process.env.AXE_SCRIPT});
           for(const theme of ["dark","light"]){
@@ -576,7 +609,7 @@ try {
         await page.close();
       }
       assert.deepEqual(violations,[]);
-      console.log("axe accessibility checks passed on seven routes at two widths in both themes");
+      console.log("axe accessibility checks passed on eight routes at two widths in both themes");
     }
   } finally {
     await browser.close();

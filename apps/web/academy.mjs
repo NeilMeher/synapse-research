@@ -23,6 +23,12 @@ function updateWhen(ids,update){
   update();
 }
 
+updateWhen(["academy-correct-position","academy-correct-label"],()=>{
+  const location=number("academy-correct-position"), label=byId("academy-correct-label").value;
+  byId("academy-bias-result").textContent="Correct answer appears in position "+location+" with label "+label+
+    ". Always-A is "+(label==="A"?"correct":"incorrect")+". Always-first-position is "+(location===1?"correct":"incorrect")+".";
+});
+
 updateWhen(["academy-agents","academy-rho"],()=>{
   const n=number("academy-agents"), rho=number("academy-rho");
   const shared=countDistribution(n,.65,rho,"shared");

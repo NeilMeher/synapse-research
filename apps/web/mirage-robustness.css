@@ -1,0 +1,13 @@
+.robust-contrasts { align-items:start; margin-top:1rem; }
+.robust-evidence { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:0 .8rem; }
+.robust-evidence a { display:flex; align-items:center; min-height:44px; }
+.robust-checkbox { align-self:end; display:flex; align-items:center; gap:.35rem; min-height:44px; }
+.robust-checkbox input { width:1rem; min-width:1rem; }
+.robust-matrix-cell { background:color-mix(in srgb,var(--bright) var(--shade,0%),var(--panel)); }
+#robust-matrix td,#robust-matrix th { text-align:center; font-variant-numeric:tabular-nums; }
+.robust-mapping { padding-inline-start:1.4rem; }
+.robust-mapping li { padding:.14rem 0; }
+.robust-replay-card h3 { margin:.15rem 0 .4rem; }
+.robust-replay-card pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:.6rem; background:var(--band); }
+#robust-task-detail { margin-top:1rem; }
+#robust-interval-chart { height:175px; }

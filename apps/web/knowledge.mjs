@@ -17,6 +17,7 @@ export const curriculum=[
   ["causal-inference","Causal inference",["historical-measurement","dependence"],"chronos"],
   ["econometrics","Econometric research designs",["causal-inference","testing"],"chronos"],
   ["model-uncertainty","Scientific modelling and uncertainty",["econometrics","optimization"],"scientia"],
+  ["measurement-bias","Experimental design and measurement bias",["calibration","testing"],"mirage"],
 ].map(([id,name,requires,study])=>({id,name,requires,study,route:"academy.html#"+id}));
 
 export const findings={
@@ -120,6 +121,22 @@ export function buildKnowledge(){
   connect(empirical,empirical+"/protocol","tested under protocol");
   connect(empirical,empirical+"/responses","produces response archive");
   connect(empirical,empirical+"/limits","has limitation");
+  const robust="empirical/mirage-002";
+  add(robust,"Empirical study","MIRAGE 002 response-bias robustness","mirage-robustness.html","Controlled actual-model evidence separating answer position, letters, grammar and matched advice.");
+  add(robust+"/design","Protocol","MIRAGE 002 canonical design","research/mirage-robustness-protocol.md","Counterbalancing and task-level paired analysis.");
+  add(robust+"/archive","Model response archive","MIRAGE 002 genuine model responses","empirical/archives/mirage-empirical-robustness-002/manifest.json","Pinned runtime, raw response digest and checked canonical scores.");
+  add(robust+"/limits","Limitation","MIRAGE 002 missingness and scope","research/mirage-robustness-results.md","Fixed tasks, one model, constrained greedy decoding and full-plan sensitivity analysis.");
+  add(robust+"/access","Evaluated model","MIRAGE replication model access","research/mirage-robustness-model-access.md","Pinned CPU runner, peak working set and additional model feasibility.");
+  connect(robust,empirical,"follows empirical pilot");
+  connect(robust,robust+"/design","tested under protocol");
+  connect(robust,robust+"/archive","produces response archive");
+  connect(robust,robust+"/limits","has limitation");
+  connect(robust,robust+"/access","uses model access");
+  connect(robust,"study/axiom","shares permutation mathematics");
+  connect(robust,"study/scientia","shares experimental design");
+  connect(robust,"lesson/measurement-bias","has educational explanation");
+  add("future/echo-empirical","Proposed research","ECHO empirical ensembles","research/mirage-robustness-results.md","Prospective model-error dependence and aggregation after the measurement gate.");
+  connect("future/echo-empirical",robust,"depends on readiness");
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   return {nodes,edges};

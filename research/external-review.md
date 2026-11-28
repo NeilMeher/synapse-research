@@ -26,3 +26,8 @@ Use [the reproduction guide](../REPRODUCIBILITY.md) and [the evidence catalogue]
 ## Optional review of the empirical pilot
 
 Check the registered 64 paired items against the printed-answer reference, replay the scoring without model weights, and inspect the full-planned versus complete-pair denominators. Review the constant A-choice pattern under misleading advice. A fresh inference run should use a separate checkout, preserve its own archive and compare response distributions. [Pilot release report and reproduction links](mirage-empirical-results.md)
+
+
+## MIRAGE 002 review route
+
+Check the pinned [protocol](mirage-robustness-protocol.md) against the task, key and realized balance files. Reproduce the printed-question solver and the 24-permutation fixture checks with the documented commands. The source audit locates the grammar mask and greedy sampler in b12823. Inspect the paired/full-plan denominators and recover the available-pair loss with the public integer-percentage output and canonical score record. A fresh inference replication should use its own result archives and distinguish runtime effects from task-generalization claims. [MIRAGE 002 results](mirage-robustness-results.md)

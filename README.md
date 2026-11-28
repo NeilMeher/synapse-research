@@ -8,6 +8,8 @@ SYNAPSE is an independent computational research programme on cognition, collect
 
 The first exploratory model study compares expressed confidence under neutral and misleading advice. It records 128 genuine local generations from SmolLM2-135M-Instruct Q4_K_M, including abstentions. The pilot also supplies a frozen benchmark, raw responses, an independent scoring check and a static response explorer. [Empirical Observatory](https://neilmeher.github.io/synapse-research/observatory.html) · [MIRAGE pilot findings](research/mirage-empirical-results.md)
 
+The second MIRAGE study separates displayed position, answer letters, grammar order and cue content in a registered 32-task design. The original archive remains available for comparison. [MIRAGE 002 workbench](https://neilmeher.github.io/synapse-research/mirage-robustness.html) · [Research report](research/mirage-robustness-results.md)
+
 ## Research
 
 | Study | Method and evidence |

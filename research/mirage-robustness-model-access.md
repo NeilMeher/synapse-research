@@ -1,0 +1,13 @@
+# MIRAGE 002 · Model and hardware access
+
+The Windows x86-64 host reported four physical cores and eight logical threads, 7.91 GiB usable RAM, 0.89 GiB available at the preflight, and 110.28 GiB free storage. The GeForce GTX 1650 had 4,096 MiB VRAM with 3,365 MiB free. The installed NVIDIA driver was 531.79 and reported CUDA 12.1. CPU load was a point snapshot of 52%. No unrelated processes were stopped.
+
+| Model | Artifact and license | Feasibility |
+| --- | --- | --- |
+| SmolLM2-135M-Instruct | bartowski Q4_K_M GGUF, 105,454,432 bytes, Apache-2.0, verified SHA-256 `2e8040ceae7815abe0dcb3540b9995eaa1fa0d2ca9e797d0a635ae4433c68c2d`. | Already available. llama.cpp b12823 x64 CPU, exact executable hash in the manifest, one slot, two threads, 512 context. Development peaked at about 181 MiB working set. |
+| Qwen2.5-0.5B-Instruct | Official Qwen2 0.49B-parameter Q4_K_M GGUF at revision `9217f5db79a29953eb74d5343926648285ec7e67`, 491,400,032 bytes, Apache-2.0, SHA-256 `74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db`. | Estimated 0.65–0.90 GiB peak host memory at short context, with a 6 MiB FP16 KV cache by architecture. Setup needs at least 0.6 GB free disk and a conservative threshold of 1.1 GiB available RAM before CPU work. Download and matched replication require authorization. |
+| Qwen2.5-1.5B-Instruct | Official Qwen2 1.54B-parameter Q4_K_M GGUF at revision `91cad51170dc346986eccefdc2dd33a9da36ead9`, 1,117,320,736 bytes, Apache-2.0, SHA-256 `6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e`. | Estimates exceed the observed free host RAM, approximately 1.3–1.7 GiB peak plus setup overhead. A CUDA or Vulkan backend and compatible runtime would require separate validation and authorization. No download. |
+
+The current pinned llama.cpp distribution contains CPU backends. No CUDA or Vulkan backend is installed in its runtime directory. GPU hardware and its system driver alone do not establish executable CUDA compatibility or comparable results. An accelerated development benchmark would distinguish working-set/VRAM use, latency and actual output agreement under its own configuration. The frozen SmolLM2 test uses the same pinned CPU backend as MIRAGE 001. No hosted endpoint or purchases are involved.
+
+[SmolLM2 model](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct) · [Pinned CPU runtime](https://github.com/ggml-org/llama.cpp/releases/tag/b12823) · [Qwen 0.5B artifact](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/tree/9217f5db79a29953eb74d5343926648285ec7e67) · [Qwen 1.5B artifact](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/91cad51170dc346986eccefdc2dd33a9da36ead9)

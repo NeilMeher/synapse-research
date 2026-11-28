@@ -47,3 +47,8 @@ CHRONOS reconstructed official railway evidence, documented divergent reporting 
 ## Exploratory actual-model research
 
 MIRAGE empirically evaluated one local quantized language model on 64 paired tasks. Brier loss rose by 0.17830 across 52 complete pairs. Accuracy on those same pairs changed by zero, and the model chose A on all 64 cue tasks. Twelve neutral conditional-probability tasks were abstentions. The synthetic MIRAGE evidence remains a separate computational control. [Empirical pilot](research/mirage-empirical-results.md)
+
+
+## MIRAGE 002 · Registered response sensitivity
+
+MIRAGE 002 separated physical order, displayed letters and grammar order in 512 genuine SmolLM2 responses. The advice-versus-matched-text Brier comparison was inconclusive. Label assignment changed canonical content in 126 of 128 pairs. Reordering the equivalent grammar produced identical 128 paired outputs. The single-model result is bounded by its fixed templates and decoding. [Protocol](research/mirage-robustness-protocol.md) · [Report](research/mirage-robustness-results.md)

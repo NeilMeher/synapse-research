@@ -37,6 +37,13 @@ test("deterministic search recognizes scientific terms and applies an evidence t
   assert.equal(searchEvidence(graph.nodes,"").length,40);
 });
 
+test("MIRAGE 002 exposes verified evidence separately from proposed ensembles",()=>{
+  const robustness=searchEvidence(graph.nodes,"response bias","Empirical study");
+  assert.equal(robustness[0].id,"empirical/mirage-002");
+  assert.ok(graph.edges.some(e=>e.from==="empirical/mirage-002"&&e.to==="study/axiom"));
+  assert.ok(graph.edges.some(e=>e.from==="future/echo-empirical"&&e.type==="depends on readiness"));
+});
+
 test("mathematical prerequisites precede the lessons that rely on them",()=>{
   const preceding=new Set();
   for(const lesson of curriculum){

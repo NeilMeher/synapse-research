@@ -43,3 +43,13 @@ lines = path.read_bytes().splitlines()
 for line in lines:
     validator.validate(json.loads(line))
 print(f"empirical-response-v1 verified {len(lines)} actual observation records.")
+
+schema = json.loads((ROOT / "schemas/empirical-robustness-v1.json").read_bytes())
+Draft202012Validator.check_schema(schema)
+validator = Draft202012Validator(schema, format_checker=FormatChecker())
+for suffix in ("", "-development"):
+    path = ROOT / "empirical/archives" / ("mirage-empirical-robustness-002" + suffix) / "responses.ndjson"
+    lines = path.read_bytes().splitlines()
+    for line in lines:
+        validator.validate(json.loads(line))
+    print(f"empirical-robustness-v1 verified {len(lines)} request records from {path.parent.name}.")

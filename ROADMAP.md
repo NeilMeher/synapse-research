@@ -45,3 +45,11 @@ After validated Phase VI publication, CHRONOS is the next research milestone. Pi
 ## Phase VII/VIII continuation
 
 CHRONOS descriptive work and teaching examples are implemented. Earlier CHRONOS proposals are superseded by the executed study and its identification register. The next milestone is an independent replication of one benchmark and a narrow, authorized MIRAGE empirical pilot only after its data and evaluation protocol pass review. See [the proposed 12-month programme](research/future-empirical-programme.md).
+
+
+## After MIRAGE 002
+
+1. Independently review the pilot and reproduction package.
+2. After authorization and resource preflight, freeze a matched Qwen replication and measure real task competence and presentation effects.
+3. Reassess ECHO readiness using the resulting model diversity, canonical response variation and confidence diagnostics. An actual ensemble study remains conditional on that evidence.
+4. Investigate social update with matched exposure and predeclared switching once individual response measurement transfers. [MIRAGE 002](research/mirage-robustness-results.md)

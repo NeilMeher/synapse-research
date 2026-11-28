@@ -64,6 +64,42 @@ for(const [file,hash] of [
   if(!file.startsWith("research/"))copies.push([file,file]);
 }
 for(const file of [empiricalRoot+"manifest.json","schemas/empirical-response-v1.json"])copies.push([file,file]);
+const robustnessId="mirage-empirical-robustness-002";
+const robustnessRoot="empirical/archives/"+robustnessId+"/";
+const robustnessManifest=JSON.parse(text(robustnessRoot+"manifest.json"));
+if(robustnessManifest.status!=="completed"||robustnessManifest.classification!=="registered-actual-model"||
+  robustnessManifest.execution.studyId!==robustnessId||robustnessManifest.planned!==512){
+  throw new Error("The registered robustness archive is unavailable or incomplete.");
+}
+for(const name of ["responses.ndjson","scores.json","analysis.json"]){
+  const file=robustnessRoot+name, bytes=readFileSync(from(file)), expected=robustnessManifest.outputs[name];
+  if(expected?.bytes!==bytes.length||expected.sha256!==createHash("sha256").update(bytes).digest("hex")){
+    throw new Error("Unverified robustness result "+name);
+  }
+  copies.push([file,file]);
+}
+const robustInputs="empirical/robustness/inputs/";
+for(const file of [robustInputs+"heldout.tasks.json",robustInputs+"heldout.keys.json",robustInputs+"heldout.schedule.json",
+  robustInputs+"heldout.balance.json","empirical/robustness/protocol.json","empirical/robustness/prompt.json",
+  "empirical/mirage-pilot-v1.json","research/mirage-robustness-protocol.md"]){
+  const sha=robustnessManifest.execution.files[posix.basename(file)];
+  if(createHash("sha256").update(readFileSync(from(file))).digest("hex")!==sha){
+    throw new Error("Unverified robustness input "+file);
+  }
+  if(!file.startsWith("research/")&&file!=="empirical/mirage-pilot-v1.json")copies.push([file,file]);
+}
+for(const file of [robustnessRoot+"manifest.json","schemas/empirical-robustness-v1.json","empirical/robustness/reference.py",
+  "empirical/robustness/audit-pilot-001.json"])copies.push([file,file]);
+const developmentRoot="empirical/archives/"+robustnessId+"-development/";
+const devManifest=JSON.parse(text(developmentRoot+"manifest.json"));
+if(devManifest.classification!=="development-actual-model")throw new Error("Wrong development evidence class");
+for(const name of ["responses.ndjson","scores.json","manifest.json"]){
+  const file=developmentRoot+name, bytes=readFileSync(from(file)), expected=devManifest.outputs[name];
+  if(name!=="manifest.json"&&(expected?.bytes!==bytes.length||expected.sha256!==createHash("sha256").update(bytes).digest("hex"))){
+    throw new Error("Unverified development evidence "+name);
+  }
+  copies.push([file,file]);
+}
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
@@ -113,7 +149,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   version:JSON.parse(text("package.json")).version,
   registryVersion,
   studies:researchStudies.map(study=>study.id),
-  empiricalStudies:[empiricalManifest.execution.studyId],
+  empiricalStudies:[empiricalManifest.execution.studyId,robustnessId],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {
