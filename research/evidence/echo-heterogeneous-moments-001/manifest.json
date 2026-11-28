@@ -1,0 +1,13 @@
+{
+  "id": "echo-heterogeneous-moments-001",
+  "evidence": "A",
+  "status": "completed",
+  "protocolCommit": "82b23b2fa0b10de769dc52171ddd04cdd38ce4ea",
+  "protocolHash": "c366909175fd1ee21f8ddec847f71e9bcc9df5f14de47e74e82043542cc4a76b",
+  "outputs": {
+    "bounds.json": {
+      "bytes": 96752,
+      "sha256": "56231a3f90a6c811231dcc2a40b75271f401d4e699e46998fdc367a4ba772e94"
+    }
+  }
+}
