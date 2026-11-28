@@ -1,0 +1,25 @@
+# MIRAGE 004 · Decoding and response format
+
+**Registered actual-model study · mirage-empirical-decoding-004**
+
+Does stochastic decoding change answer-label concentration on the same canonical questions? The study uses the 16 lexically first IDs within the four frozen MIRAGE 002 families, four from each family. This is a fixed matched benchmark subset. The original reference mapping and length-matched neutral text are held fixed. Fresh development controls are separate and carry no evidentiary weight for the primary estimate.
+
+## Conditions and request budget
+
+Each task has one fresh greedy response, five independently seeded draws at temperature 0.3, five at 0.7, and a separate greedy confidence-first format response. This is 192 actual planned requests, with 16 preceding development requests across four capability tasks. The seed for each design row is recorded before deterministic random execution ordering, with a 10,000 offset for development. The same pinned SmolLM2 Q4_K_M weights and b12823 Windows CPU binary, one slot, two threads, 512 context, 32 output tokens, 12-second request timeout and no offload are used. All arms use top-p 1, top-k 0, min-p 0 and repeat penalty 1. The explicit removal of default probability truncation applies to every decoding arm in this study. Comparison with a previous greedy archive is descriptive. Each new request has its own response, with no tools, prompt caching or previous interaction history.
+
+The standard format uses answer first and whole-number confidence second. The confidence-first arm reverses the grammar fields and instructs the model to give the confidence line first. This changes the measurement format and ordering instruction as a package. Both use the same legal labels, abstention and numerical range. The separate greedy comparison does not estimate a format-by-temperature interaction.
+
+Allocation is frozen before inspecting the primary outputs. Collection stops at the 192-call ceiling, eight minutes from the first request, or eight consecutive inference infrastructure errors/timeouts. There are zero retries and zero additional monetary cost. Interrupted and unattempted requests stay in archived denominators. Development latency and measured peak memory inform whether the registered run is feasible. All genuine development results and the primary raw archive are preserved independently.
+
+## Primary estimand and diagnostics
+
+The primary contrast is temperature 0.7 minus 0.3 fraction of answered requests selecting label A. Compute each fraction within each task, then average differences over tasks with at least one eligible draw under both settings. Resample canonical tasks within four fixed families with 4,000 stratified percentile draws and seed 42381. Report the planned denominator, eligible task and response counts, and extreme full-plan bounds if an answer is missing. The task is the unit of inference. Repeated draws are observations of the same model-task response distribution.
+
+Secondary estimates cover accuracy among answers, correct per planned response, Brier loss, mean confidence, calibration gap, log loss, error-positive discrimination, risk coverage and agreement. Shannon plug-in entropy in bits and agreement of two distinct draws are calculated within tasks with at least two answered samples. With five draws, estimated entropy is downward biased and coarse. The single greedy response describes a reference output. It supplies no empirical within-task entropy estimate. The format comparison pairs confidence-first with answer-first greedy on canonical identity, correctness, expressed confidence, status and Brier. All secondary intervals are exploratory. The fixed subset and one model limit generalization. Sample frequencies and token probabilities are distinct quantities.
+
+## Prospective ECHO decision
+
+An eligible same-model reasoning-ensemble candidate must achieve, in the registered temperature 0.7 arm, at least 90% scorable coverage, an observed dominant-label share no greater than 80%, at least eight tasks with more than one canonical answer among the five drawn responses, and at least 35% correct per planned request with a task-level 95% bootstrap lower bound above 25% chance. The ten-point performance margin is a minimum practical improvement over balanced four-choice guessing for this feasibility decision. It is not a definition of intelligence. An interpretable cross-model ensemble also needs at least two independently documented checkpoints on common tasks and a prospective evaluation split. If these gates fail, response diversity can still inform a failure-mode experiment. No ensemble result is computed for this study.
+
+The runtime supports token log-probability diagnostics. Token strings, any mask/filter context and the diagnostic selection must be explicit before interpreting them. The primary study uses sampled response frequencies and expressed confidence. [Pinned runtime sampling documentation](https://github.com/ggml-org/llama.cpp/blob/b12823/tools/server/README.md#post-completion-given-a-prompt-return-the-predicted-completion) · [MIRAGE 002](mirage-robustness-results.md)

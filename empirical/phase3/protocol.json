@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "analysis": {
+    "bootstrapSeed": 42381,
+    "bootstrapReplicates": 4000,
+    "confidenceBins": 5
+  },
+  "decoding": {
+    "id": "mirage-empirical-decoding-004",
+    "temperatures": {
+      "greedy": 0,
+      "low": 0.3,
+      "moderate": 0.7,
+      "format": 0
+    },
+    "replicates": {
+      "greedy": 1,
+      "low": 5,
+      "moderate": 5,
+      "format": 1
+    },
+    "settings": {
+      "top_p": 1,
+      "top_k": 0,
+      "min_p": 0,
+      "repeat_penalty": 1,
+      "max_tokens": 32
+    },
+    "maximumSeconds": 480,
+    "maxInfrastructureFailures": 8,
+    "heldoutRequests": 192,
+    "developmentRequests": 16,
+    "referenceCue": "matched",
+    "selectedPerFamily": 4,
+    "seedStart": 481030,
+    "shuffleSeed": 14124
+  },
+  "qwen": {
+    "id": "mirage-empirical-cross-model-003",
+    "developmentRequests": 12,
+    "minimumFreeRamGiB": 1.1,
+    "maximumSeconds": 1800,
+    "maxInfrastructureFailures": 8,
+    "model": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "servedId": "qwen2.5-0.5b-instruct-q4_k_m",
+      "quantization": "Q4_K_M",
+      "weightSize": 491400032,
+      "weightsRepository": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+      "weightsRevision": "9217f5db79a29953eb74d5343926648285ec7e67",
+      "weightsSha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+      "license": "Apache-2.0",
+      "access": "local-open-weights"
+    }
+  },
+  "ensembleGate": {
+    "minimumScorableCoverage": 0.9,
+    "maximumDominantLabelShare": 0.8,
+    "minimumTasksWithDiversity": 8,
+    "minimumAccuracy": 0.35,
+    "minimumTaskBootstrapLower": 0.25,
+    "registeredSamplingArm": "moderate"
+  }
+}
