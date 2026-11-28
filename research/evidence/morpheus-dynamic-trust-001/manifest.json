@@ -1,0 +1,14 @@
+{
+  "id": "morpheus-dynamic-trust-001",
+  "evidence": "B",
+  "status": "completed",
+  "protocolCommit": "ca71901640e6c78cfbe7590e1ea287225dc1bc27",
+  "configSha256": "a7ebc2d77437de3a444d71db28ac68297a91e2b63889e6155e75ea96e4240290",
+  "engineSha256": "8dd13ea3e3217f6629b3159964b5bcec1d7e9de89bf1b96467e8ebcf3fa3ba4f",
+  "outputs": {
+    "results.json": {
+      "bytes": 1978268,
+      "sha256": "514cf5be886b58ed3b54710ad4194503b9403e68968ff1d9480b2576e5154c96"
+    }
+  }
+}
