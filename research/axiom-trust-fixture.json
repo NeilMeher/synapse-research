@@ -1,0 +1,15 @@
+{
+  "id": "axiom-delayed-trade-fixture-001",
+  "evidence": "A",
+  "horizon": 2,
+  "healthyToFaulty": "3/20",
+  "faultyToHealthy": "1/4",
+  "deliveryGivenHealthy": "17/20",
+  "deliveryGivenFaulty": "3/10",
+  "verificationAccuracy": "3/4",
+  "utilities": {"reject": ["0","0"], "trade": ["-3/2","1"], "escrow": ["-1/5","1/2"]},
+  "priors": ["7/20", "13/20", "17/20"],
+  "verificationCosts": ["1/40", "1/10"],
+  "settlementDelays": [1, 2],
+  "analysis": "Exact expected payoff under an exogenous two-state counterparty and one risk-neutral participant. Compare the full set of optimal first-round action plans and report ties. A verification decision precedes a single terminal action, with the result visible immediately."
+}
