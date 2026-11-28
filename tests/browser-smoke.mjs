@@ -419,6 +419,12 @@ try {
       assert.match(await page.locator("#academy-triple-result").textContent(),/74\.00%.*0\.00%/);
       await page.locator("#academy-trust").fill("2");
       assert.match(await page.locator("#academy-trust-result").textContent(),/46\.67%.*zero weight/);
+      assert.match(await page.locator("#academy-ewma-result").textContent(),/81\.92%.*0\.37%/);
+      await page.locator("#academy-ewma-rate").fill("50");
+      assert.match(await page.locator("#academy-ewma-result").textContent(),/99\.84%.*34\.39%/);
+      assert.match(await page.locator("#academy-audit-result").textContent(),/0\.35.*lower risk/);
+      await page.locator("#academy-audit-cost").fill("25");
+      assert.match(await page.locator("#academy-audit-result").textContent(),/0\.50.*All three actions tie/);
       await page.getByLabel("Printed label of the correct answer").selectOption("D");
       assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");

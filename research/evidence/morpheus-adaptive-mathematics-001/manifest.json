@@ -1,0 +1,16 @@
+{
+  "evidence": "A",
+  "id": "morpheus-adaptive-mathematics-001",
+  "outputs": {
+    "exact-fixtures.json": {
+      "bytes": 5445,
+      "sha256": "ab822787d87b13ff063390d13ce9ca10aeb2d43cff21f21622cb23396dcfba86"
+    }
+  },
+  "protocol": {
+    "bytes": 2068,
+    "sha256": "228e938e9b969b12e54cd472d881a76676011630c56f567fbd2dcf5efc7f3daf"
+  },
+  "protocolCommit": "f21688c9d8b0c64e89166d2488ecb2fc71798fef",
+  "status": "completed"
+}

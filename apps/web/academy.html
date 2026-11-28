@@ -359,6 +359,22 @@
       <details><summary>Practice and worked solution</summary><p>Consider two models with error rates 0.20 and 0.35. What joint failure rate would independence predict? If the observed rate is 0.13, what is the excess?</p><p>Independence gives 0.20×0.35=0.07. The excess is 0.06, so phi is 0.06 / √(0.20×0.80×0.35×0.65) ≈ 0.315. The pair alone leaves the chance of three simultaneous failures undetermined.</p></details>
       <p><a href="./echo-public.html#echo-builder">Replay the empirical committees</a> · <a href="./research/echo-public-protocol.md">Read the held-out protocol</a></p>
     </article>
+    <article class="result-panel" id="academy-adaptive-trust">
+      <h2>Learn from audits and decide when to verify</h2>
+      <div class="lesson-demo">
+        <h3>Compare detection and false alarms</h3>
+        <p>Trust starts at 90%. After each audit, the new estimate places weight α on the outcome and weight 1−α on the previous estimate. An alarm occurs when trust falls to 50% or below. Compare four independent audits of a faulty source with 20% reliability and a healthy source with 90% reliability.</p>
+        <label for="academy-ewma-rate">Weight on the latest audit (%)</label><input id="academy-ewma-rate" type="range" min="5" max="100" step="5" value="25">
+        <p id="academy-ewma-result" aria-live="polite"></p>
+      </div>
+      <div class="lesson-demo">
+        <h3>Pay for an audit only when it improves the decision</h3>
+        <p>A fair claim has equal unit losses for false acceptance and false rejection. The proposed audit is 75% accurate. Compare the risk of verifying with the immediate risk of 0.50.</p>
+        <label for="academy-audit-cost">Audit cost (hundredths of a loss unit)</label><input id="academy-audit-cost" type="range" min="0" max="50" step="5" value="10">
+        <p id="academy-audit-result" aria-live="polite"></p>
+      </div>
+      <p><a href="./research/morpheus-adaptive-mathematics.md">Read the derivations and delayed-audit example</a></p>
+    </article>
   </main>
 </body>
 </html>

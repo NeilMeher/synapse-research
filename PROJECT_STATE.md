@@ -223,3 +223,12 @@ The registry now drives the 12-laboratory atlas, 18-study catalogue, documented 
 | Access | 190,665,205 of 250,000,000 authorized public research bytes used. No new model downloads or inference. |
 
 [Register](research/second-generation-register.md) · [Hindi](research/echo-hindi-results.md) · [Bounds](research/echo-moments-results.md) · [MORPHEUS](research/morpheus-trust-results.md)
+
+## Phase B checkpoint
+
+| Study | Evidence | State |
+| --- | --- | --- |
+| MIRAGE M1 | [Measurement synthesis and estimand register](research/mirage-measurement-synthesis.md) | Completed retrospective archive replay, 896 requests and four separate device probes, zero new inference |
+| MORPHEUS 3.0 foundations | [Adaptive trust mathematics and exact fixtures](research/morpheus-adaptive-mathematics.md) | 31 independently checked finite cases and two exact information examples |
+| AXIOM decision foundations | [Thresholds, utility scale and value of information](research/morpheus-adaptive-mathematics.md#4-trust-evidence-and-decisions) | Exact decision examples and derivations, strategic interaction experiment pending |
+| Integrated architecture | [Theory links and verification assumptions](research/morpheus-adaptive-mathematics.md#5-verification-and-transfer) | Mathematical and website connections implemented, joint experimental intervention pending |

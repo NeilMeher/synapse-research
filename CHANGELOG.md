@@ -122,3 +122,7 @@ Consolidated all initial laboratories into a typed atlas, searchable evidence ca
 ## v1.5.0 · ECHO consolidation and MORPHEUS dynamic trust
 
 Added a blind English–Hindi alignment audit, empirical coverage and reliability analysis, exact heterogeneous moment bounds, and a matched MORPHEUS source-recovery experiment. Updated the twelve-laboratory register, primary-literature comparison, existing Observatory, knowledge graph and worked Academy examples. The historical archives and readiness boundaries remain available.
+
+## v1.6.0 · Measurement validity and adaptive trust
+
+Replayed 896 archived MIRAGE requests, reconciled reported percentages with scorable forecasts, and recovered the task-level contrasts. Added exact trust, delayed-audit, first-passage and verification calculations with two worked Academy exercises. The Observatory and knowledge graph link the studies, assumptions and checked artifacts.

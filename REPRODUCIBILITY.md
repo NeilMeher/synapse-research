@@ -185,3 +185,15 @@ python -B research/morpheus-trust/reference.py
 ```
 
 For raw archive verification, retrieve only the size-bounded files in the Hindi source receipt using each repository, revision and path. Reuse the already retrieved English benchmark. The blind alignment and post-freeze extraction use DuckDB 1.4.4, as in the English study. Run `align.py extract HINDI_DIR ENGLISH_DIR COMPACT_FILE` to reproduce choices while checking the frozen cohort. Run `reference.py HINDI_DIR` to reproduce from raw Hindi completions. For numerical witness discovery, `compute.py` can run in a fresh copy with SciPy 1.17.0 and the original protocol commit. Archived witness verification never needs SciPy and accepts no numerical tolerance on exact constraints. [Hindi receipt](empirical/echo-hindi/sources.json) · [Moment protocol](research/echo-moments-protocol.md)
+
+## Phase B
+
+From the repository root, run:
+
+```sh
+python -B research/mirage-measurement/replay.py verify
+python -B research/adaptive-trust/reference.py verify
+npm run build
+```
+
+MIRAGE reads six local original archives, uses the historical score projections and per-task resampling orders and checks the independent synthesis artifact byte for byte. The trust reference uses Python rational arithmetic and independently enumerates outcome, hidden-state and decision paths to check the shared browser implementation. Declared numerical tolerance is absolute \(10^{-12}\). Both checks run without new data or inference. Recompute in verify mode to preserve archived files. [MIRAGE protocol](research/mirage-measurement-protocol.md) · [Frozen trust fixtures](research/adaptive-trust/fixtures.json)

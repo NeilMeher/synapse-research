@@ -197,6 +197,18 @@ export function buildKnowledge(){
   connect("method/morpheus-trust","study/morpheus","extends provenance policy",["B"]);
   connect("method/echo-heterogeneous","lesson/committee-optimization","has worked example",["A"]);
   connect("method/morpheus-trust","lesson/committee-optimization","has worked example",["B"]);
+  add("empirical/mirage-measurement","Empirical study","MIRAGE measurement validity","observatory.html#measurement-synthesis",
+    "Replays confidence coverage, cue adoption and scoring sensitivity in 896 original requests.",["E"]);
+  add("method/adaptive-trust","Mathematical result","Adaptive trust with delayed feedback","research/morpheus-adaptive-mathematics.md",
+    "Exact exponential memory, first-passage alarms, latent regimes and costly verification.",["A"]);
+  add("lesson/adaptive-trust","Lesson","Audits and adaptive trust","academy.html#academy-adaptive-trust",
+    "Compare the risk of verifying a claim and calculate detection and false alarm probabilities.",["A"]);
+  connect("empirical/mirage-measurement",robust,"replays matched comparisons",["E"]);
+  connect("empirical/mirage-measurement",decoding,"estimates sensitivity to missing forecasts",["E"]);
+  connect("method/adaptive-trust","method/morpheus-trust","extends trust mathematics",["A"]);
+  connect("method/adaptive-trust","study/axiom","connects trust to decision costs",["A"]);
+  connect("method/adaptive-trust","method/echo-heterogeneous","checks duplicated evidence",["A"]);
+  connect("method/adaptive-trust","lesson/adaptive-trust","has worked example",["A"]);
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   for(const node of nodes){

@@ -1,0 +1,236 @@
+{
+  "agreementTolerance": 1e-12,
+  "decisionInformation": {
+    "irrelevant": {
+      "decisionValue": "0",
+      "stateInformationBits": 1,
+      "truthInformationBits": 0.0
+    },
+    "noisyTruth": {
+      "decisionValue": "1/4",
+      "stateInformationBits": 0.18872187554086717,
+      "truthInformationBits": 0.18872187554086717
+    }
+  },
+  "duplicateReports": {
+    "independencePosterior": "16/17",
+    "jointPosterior": "4/5"
+  },
+  "evidence": "A",
+  "exactResults": {
+    "beta": [
+      {
+        "a": "33/5",
+        "b": "27/5",
+        "mean": "11/20",
+        "variance": "99/5200"
+      },
+      {
+        "a": "3",
+        "b": "5",
+        "mean": "3/8",
+        "variance": "5/192"
+      },
+      {
+        "a": "1",
+        "b": "1",
+        "mean": "1/2",
+        "variance": "1/12"
+      }
+    ],
+    "decisions": [
+      {
+        "accept": "1/2",
+        "reject": "1/2",
+        "valueOfInformation": "1/4",
+        "verify": "7/20"
+      },
+      {
+        "accept": "4/5",
+        "reject": "4/5",
+        "valueOfInformation": "0",
+        "verify": "4/5"
+      },
+      {
+        "accept": "0",
+        "reject": "1",
+        "valueOfInformation": "0",
+        "verify": "1/10"
+      },
+      {
+        "accept": "4/3",
+        "reject": "1/3",
+        "valueOfInformation": "1/3",
+        "verify": "0"
+      }
+    ],
+    "moments": [
+      {
+        "mean": "9/10",
+        "stationaryVariance": "4/175",
+        "variance": "0"
+      },
+      {
+        "mean": "27/128",
+        "stationaryVariance": "4/75",
+        "variance": "273/5120"
+      },
+      {
+        "mean": "176999/655360",
+        "stationaryVariance": "4/175",
+        "variance": "24296689/1073741824"
+      },
+      {
+        "mean": "1/5",
+        "stationaryVariance": "4/25",
+        "variance": "4/25"
+      },
+      {
+        "mean": "369/625",
+        "stationaryVariance": "0",
+        "variance": "0"
+      }
+    ],
+    "passage": [
+      {
+        "masses": [
+          "0",
+          "4/5",
+          "4/25",
+          "4/125",
+          "4/625"
+        ],
+        "survival": "1/625"
+      },
+      {
+        "masses": [
+          "0",
+          "1/10",
+          "9/100",
+          "81/1000",
+          "729/10000"
+        ],
+        "survival": "6561/10000"
+      },
+      {
+        "masses": [
+          "0",
+          "0",
+          "0",
+          "64/125",
+          "192/625"
+        ],
+        "survival": "113/625"
+      },
+      {
+        "masses": [
+          "0",
+          "0",
+          "0",
+          "1/1000",
+          "27/10000"
+        ],
+        "survival": "9963/10000"
+      },
+      {
+        "masses": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "survival": "0"
+      }
+    ],
+    "regime": [
+      {
+        "filteredHealthy": "3/4",
+        "nextHealthy": "29/40",
+        "predictedHealthy": "3/4",
+        "reliability": "29/40"
+      },
+      {
+        "filteredHealthy": "377/751",
+        "nextHealthy": "4141/7510",
+        "predictedHealthy": "29/40",
+        "reliability": "4141/7510"
+      },
+      {
+        "filteredHealthy": "4141/7510",
+        "nextHealthy": "44007/75100",
+        "predictedHealthy": "4141/7510",
+        "reliability": "44007/75100"
+      },
+      {
+        "filteredHealthy": "1388733/2152900",
+        "nextHealthy": "14026931/21529000",
+        "predictedHealthy": "1388733/2152900",
+        "reliability": "14026931/21529000"
+      },
+      {
+        "filteredHealthy": "486901433/636097930",
+        "nextHealthy": "4680505891/6360979300",
+        "predictedHealthy": "486901433/636097930",
+        "reliability": "4680505891/6360979300"
+      },
+      {
+        "filteredHealthy": "78126322297/115954677100",
+        "nextHealthy": "778793610279/1159546771000",
+        "predictedHealthy": "78126322297/115954677100",
+        "reliability": "778793610279/1159546771000"
+      },
+      {
+        "filteredHealthy": "778793610279/1159546771000",
+        "nextHealthy": "7770648813953/11595467710000",
+        "predictedHealthy": "778793610279/1159546771000",
+        "reliability": "7770648813953/11595467710000"
+      }
+    ],
+    "uninformative": [
+      {
+        "filteredHealthy": "3/4",
+        "nextHealthy": "29/40",
+        "predictedHealthy": "3/4",
+        "reliability": "29/40"
+      },
+      {
+        "filteredHealthy": "29/40",
+        "nextHealthy": "283/400",
+        "predictedHealthy": "29/40",
+        "reliability": "283/400"
+      },
+      {
+        "filteredHealthy": "283/400",
+        "nextHealthy": "2781/4000",
+        "predictedHealthy": "283/400",
+        "reliability": "2781/4000"
+      },
+      {
+        "filteredHealthy": "2781/4000",
+        "nextHealthy": "27467/40000",
+        "predictedHealthy": "2781/4000",
+        "reliability": "27467/40000"
+      },
+      {
+        "filteredHealthy": "27467/40000",
+        "nextHealthy": "272269/400000",
+        "predictedHealthy": "27467/40000",
+        "reliability": "272269/400000"
+      },
+      {
+        "filteredHealthy": "272269/400000",
+        "nextHealthy": "2705883/4000000",
+        "predictedHealthy": "272269/400000",
+        "reliability": "2705883/4000000"
+      },
+      {
+        "filteredHealthy": "2705883/4000000",
+        "nextHealthy": "26941181/40000000",
+        "predictedHealthy": "2705883/4000000",
+        "reliability": "26941181/40000000"
+      }
+    ]
+  },
+  "id": "morpheus-adaptive-mathematics-001"
+}

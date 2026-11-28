@@ -14,6 +14,7 @@ import {bestResponse,expectedNumerators,logitResponse} from "./engine/game-theor
 import {barter,inventoryTotal,production,useAndStore} from "./engine/resources.mjs";
 import {createWorld,runWorld} from "./engine/civilizations.mjs";
 import {poissonBinomial,tally} from "./engine/echo-public.mjs";
+import {decisionRisks,ewmaMoments,firstPassage} from "./engine/adaptive-trust.mjs";
 
 setupTheme();
 
@@ -61,6 +62,24 @@ updateWhen(["academy-trust"],()=>{
   const posterior=(3.6+number("academy-trust"))/12;
   byId("academy-trust-result").textContent="Estimated reliability "+precise(posterior)+
     (posterior>.5?" · reports get positive weight.":" · reports get zero weight.");
+});
+
+updateWhen(["academy-ewma-rate"],()=>{
+  const settings={alpha:number("academy-ewma-rate")/100,initial:.9,threshold:.5,steps:4};
+  const broken=firstPassage({...settings,rate:.2});
+  const healthy=firstPassage({...settings,rate:.9});
+  const expectation=ewmaMoments({...settings,rate:.2});
+  byId("academy-ewma-result").textContent="Detection "+precise(1-broken.survival)+
+    " · false alarm "+precise(1-healthy.survival)+" · expected faulty-source trust after four audits "+precise(expectation.mean)+".";
+});
+
+updateWhen(["academy-audit-cost"],()=>{
+  const cost=number("academy-audit-cost")/100;
+  const risks=decisionRisks({prior:.5,falseAccept:1,falseReject:1,cost,accuracy:.75});
+  const immediate=Math.min(risks.accept,risks.reject);
+  const action=risks.verify<immediate?"Verification has lower risk.":
+    risks.verify===immediate?"All three actions tie.":"An immediate decision has lower risk.";
+  byId("academy-audit-result").textContent="Verification risk "+risks.verify.toFixed(2)+" · "+action;
 });
 
 updateWhen(["academy-agents","academy-rho"],()=>{

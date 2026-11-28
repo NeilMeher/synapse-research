@@ -46,3 +46,9 @@ This retrospective analysis uses seven checkpoint configurations, two English su
 ## Second-generation ECHO and MORPHEUS
 
 The English–Hindi archive changes prompt language, translations, stop strings and the response filter together. The publisher's expert-rating table omits Hindi. Question structures and numeric anchors were screened blind. The discovered omitted statements and unmatched pairs remain documented. Independent bilingual item review, population claims, and fresh committee-selection confirmation remain open. The moment bounds condition on fixed calibration moments and have separate sampling uncertainty. MORPHEUS trusts independent delayed audit feedback and generates a stylized binary state. Its improvement during a source fault coexists with worse recovery and slower clean adaptation. [Hindi audit](research/echo-hindi-alignment.md) · [Exact bounds](research/echo-moments-results.md) · [Trust report](research/morpheus-trust-results.md)
+
+## Phase B limits
+
+M1 covers the original constrained prompts and models. The measured probability is a response field tied to a selected answer. The format manipulation changes coverage and instructions jointly. The archive does not isolate pure prompt length, pure field order, architecture or backend. Missing Brier losses are bounded hypothetically and have no observed numeric value. Model competence remains low on the held-out synthetic tasks.
+
+The dynamic-trust calculations require the declared observation law and sufficient audit provenance. A missed or late audit can itself be informative under selection. The exact examples use finite histories and a simple known audit channel. A posterior from a misspecified regime model may still be overconfident, especially with correlated reports. Human review of both studies is pending.
