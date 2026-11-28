@@ -209,6 +209,10 @@ try {
             canvas.getContext("2d").getImageData(0,0,canvas.width,canvas.height).data.some((v,i)=>i%4===3&&v>0)));
         }
         if (route==="noesis"){
+          await page.locator("#finite-discovery-counts tr").first().waitFor();
+          assert.match(await page.locator("#finite-discovery-counts").textContent(),/68\.50%.*1\.67130/s);
+          await page.locator("#finite-discovery-world").selectOption("outOfLibrary");
+          assert.match(await page.locator("#finite-discovery-counts").textContent(),/35\.87%/);
           await page.locator("#noesis-arm").selectOption("uniform_grid");
           await page.getByLabel("Archived measurement step").press("End");
           assert.match(await page.locator("#noesis-step-output").textContent(),/7 \/ 7/);
@@ -227,6 +231,10 @@ try {
           assert.equal(await measure.isEnabled(),true);
         }
         if (route==="scientia"){
+          await page.locator("#sequential-counts tr").first().waitFor();
+          assert.match(await page.locator("#sequential-counts").textContent(),/6\.30%/);
+          await page.locator("#sequential-rate").selectOption("3/4");
+          assert.match(await page.locator("#sequential-counts").textContent(),/52\.15%/);
           await page.getByLabel("Archived design").selectOption("1");
           assert.equal(await page.locator("#scientia-study tr").count(),8);
           assert.match(await page.locator("#scientia-contrast").textContent(),/15\.32 pp/);
@@ -241,6 +249,10 @@ try {
           assert.match(await page.locator("#scientia-exact").textContent(),/18\.55%/);
         }
         if (route==="episteme"){
+          await page.locator("#selection-counts tr").first().waitFor();
+          assert.match(await page.locator("#selection-counts").textContent(),/5\.08%/);
+          await page.locator("#selection-world").selectOption("duplicateBoundary");
+          assert.match(await page.locator("#selection-counts").textContent(),/50\.00%/);
           assert.equal(await page.locator("#episteme-observations tr").count(),1);
           assert.equal(await page.locator("#episteme-weights tr").count(),4);
           await page.getByLabel("Inquiry stage").press("End");
@@ -432,6 +444,9 @@ try {
       assert.match(await page.locator("#academy-audit-accuracy-result").textContent(),/44\.00%.*6\.160/);
       await page.locator("#academy-audit-accuracy").fill("50");
       assert.match(await page.locator("#academy-audit-accuracy-result").textContent(),/50\.00%.*no reliability information/);
+      assert.match(await page.locator("#academy-decision-signal-result").textContent(),/0\.1887 bits.*decision value 0\.0000/);
+      await page.locator("#academy-decision-signal").fill("95");
+      assert.match(await page.locator("#academy-decision-signal-result").textContent(),/decision value 0\.3750/);
       await page.getByLabel("Printed label of the correct answer").selectOption("D");
       assert.match(await page.locator("#academy-bias-result").textContent(),/Always-A is incorrect.*Always-first-position is correct/);
       await page.getByLabel("Requested lots").press("Home");
@@ -683,7 +698,7 @@ try {
     console.log("503 ECHO public archive fallback passed");
     if(process.env.AXE_SCRIPT){
       const violations=[];
-      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html","mirage-qwen.html","echo-public.html"];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html","mirage-robustness.html","mirage-decoding.html","mirage-qwen.html","echo-public.html","noesis.html","scientia.html","episteme.html"];
       for(const width of [390,1440]){
         const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
         for(const path of auditRoutes){

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
   <script type="module" src="./noesis-view.mjs"></script>
   <script type="module" src="./noesis-challenge.mjs"></script>
+  <script type="module" src="./phase-c-view.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -104,6 +105,18 @@
         <a class="quiet" href="./research/noesis-audit.md">Limitations and verification</a>
         <a class="quiet" href="./docs/noesis-learning.md">Learning guide</a>
       </div>
+    </article>
+    <article class="result-panel study-block" id="finite-acquisition">
+      <h2>When does a measurement improve a decision?</h2>
+      <p>In the exact finite study, family-information and decision-value acquisition had the same expected focal loss. Both used independent Bernoulli measurements and four observations.</p>
+      <label for="finite-discovery-world">Generating law</label>
+      <select id="finite-discovery-world"><option value="specified">Law in the library</option><option value="outOfLibrary">Cubic law outside the library</option></select>
+      <p id="finite-discovery-counts-status" role="status">Loading finite discovery outcomes…</p>
+      <div class="table-scroll"><table><caption>Exact policy outcomes under the selected law</caption>
+        <thead><tr><th scope="col">Acquisition policy</th><th scope="col">Family recovery</th><th scope="col">Posterior at least 75%</th><th scope="col">Interpolation Brier</th><th scope="col">Extrapolation Brier</th><th scope="col">Decision loss</th></tr></thead>
+        <tbody id="finite-discovery-counts"></tbody>
+      </table></div>
+      <div class="actions"><a class="quiet" href="./research/noesis-finite-results.md">Results and exact objective reversals</a><a class="quiet" href="./research/noesis-finite-protocol.md">Frozen protocol</a></div>
     </article>
   </main>
   <footer class="site-footer"><div class="wrap"><p>SYNAPSE Research Ecosystem · Artificial Scientific Intelligence</p></div></footer>

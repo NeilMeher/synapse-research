@@ -60,3 +60,7 @@ Known audit accuracy and independent symmetric errors are assumptions in MO2. Th
 ## Integrated cognition limits
 
 The exact fixtures assume known signal laws, two hidden regimes and the declared payoffs. Strategic verification effects depend on a publicly credible buyer commitment and a restricted menu. Integrated belief estimates use known dependence and audit parameters. Exact finite-state agreement removes sampling noise under those laws and leaves model uncertainty and external applicability open.
+
+## Phase C exact-model limits
+
+The discrete NOESIS model contains four hypothesis-amplitude pairs and one out-of-library generator. A correct directional claim does not identify a governing law. The finite stopping study permits one reported claim and freezes selection before fresh testing. The time-uniform guarantee assumes valid conditional likelihoods and fails under the duplicated-evidence stress. The integrated results depend on the declared loss and measurement cap. Neither computation supplies evidence from an external laboratory or language model.

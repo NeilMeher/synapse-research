@@ -121,6 +121,13 @@
         <p id="academy-information" aria-live="polite"></p>
       </div>
       <details><summary>Advanced · Integrate over the predictive distribution</summary><p>For continuous observations replace the sum by an integral over the model-weighted predictive density. That density includes measurement noise and parameter uncertainty. NOESIS's archived acquisition rule computes the weighted variance of predictive means. It is a disagreement score with different mathematics. When models share a mean but have different predictive variances, that score can be zero even when a measurement is informative about the model.</p></details>
+      <div class="lesson-demo">
+        <h3>Find when information changes an action</h3>
+        <p>The two hypotheses are equally likely. The loss of a false acceptance is four times the loss of a false rejection, so accepting requires a posterior above .80.</p>
+        <label for="academy-decision-signal">Signal accuracy (%)</label><input id="academy-decision-signal" type="range" min="50" max="100" step="1" value="75">
+        <p id="academy-decision-signal-result" aria-live="polite"></p>
+        <p><a href="./noesis.html#finite-acquisition">Compare acquisition objectives</a> · <a href="./scientia.html#sequential-verification">Follow evidence through a stopping rule</a></p>
+      </div>
       <details><summary>Practice and worked solution</summary><p>If both models predict a positive observation with probability 0.9 and the prior of A is 0.25, what is expected information gain?</p><p>For a positive, P(A|+)=0.25×0.9/0.9=0.25. For a negative the same calculation uses 0.1 and yields 0.25. Neither possible outcome changes the entropy, so information gain is zero.</p></details>
       <p><a href="./noesis.html#challenge">NOESIS hidden-law challenge</a> · <a href="./docs/noesis-learning.md">NOESIS guide</a> · <a href="./episteme.html#checks">EPISTEME validation</a> · <a href="https://doi.org/10.1214/aoms/1177728069">Lindley on experimental information</a></p>
     </article>

@@ -242,3 +242,9 @@ Completed `morpheus-adaptive-reliability-confirmatory-002`. The sole primary bur
 ## Phase B cognition completion
 
 MO2, the AXIOM strategic commitment fixture and the registered exact belief-dynamics experiment meet the bounded cognition stopping point. The integrated study tested audit delay and dependence, calibration and decision loss as separate outcomes. Later transfers require calibration of source and audit laws, and relaxation of the buyer's commitment assumption. Phase C starts with a finite coherent NOESIS discovery model. [Cognition evidence and owner defence](research/belief-dynamics-results.md)
+
+## Phase C finite scientific discovery
+
+- Corrected NOESIS uses coherent Bernoulli observations and disjoint measurement and evaluation domains. Six acquisition policies, 384 traces and 320 potential-outcome cells were independently evaluated. The registered focal loss difference was exactly zero. Its misspecification and ranking reversals are archived. [NOESIS results](research/noesis-finite-results.md)
+- SCIENTIA checked 1,024 browser-side stopping paths and exactly reproduced the matched-budget test. Unadjusted repeated looks raised the null rejection rate. The evidence process controlled it under the declared conditional null with reduced power. [Sequential results](research/scientia-adaptive-results.md)
+- The linked EPISTEME calculation tests fresh sign claims after NOESIS selection and scores gated AXIOM action. The 3+9 duplicate-boundary control yields 50% false reports when the conditional null is violated. Independent human review, multi-claim confirmation, library expansion and external replication remain pending.

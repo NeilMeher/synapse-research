@@ -215,3 +215,7 @@ Run `node research/morpheus-confirmatory/run.mjs verify` and `python -B research
 ## Phase B strategic and integrated fixtures
 
 Run `python -B research/axiom-strategic/run.py verify` and `python -B research/belief-dynamics/reference.py verify`. These regenerate exact rational outputs in memory and compare immutable bytes, separate solution methods, the JavaScript belief decisions and the existing POLIS physical ledger. No fresh data, acquisitions or paid inference are required.
+
+## Phase C exact discovery and verification
+
+Run `python -B research/noesis-finite/study.py verify` and `python -B research/scientia-adaptive/run.py verify`. Finite NOESIS independently checks six objective cases, 384 policy traces and 320 potential-observation cells with absolute tolerance \(10^{-12}\) for real-valued comparisons. The SCIENTIA and EPISTEME reference checks 1,024 browser paths and both finite search and stopping calculations. All probability, risk and loss aggregates are exact rational numbers except logarithmic information terms. The original Gaussian study artifacts are preserved.

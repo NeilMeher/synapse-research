@@ -62,3 +62,7 @@ The owner specified separation of audit correction, memory and verification timi
 ## Integrated cognition checkpoint
 
 The strategic timing fixture changes an optimizing supplier's best response while unconditionally contingent payment remains buyer-optimal in the registered menu. The integrated belief calculation exhibits an interaction opposite the proposed delay amplification and better calibration with identical decision loss in one condition. These are applied examples with exact computational checks. Established game-theoretic and information-value principles retain their attributions. [Dossier](research/belief-dynamics-results.md)
+
+## Phase C finite verification
+
+The comparison connects a coherent, exact discovery likelihood to separated evaluation domains, three verified objective-ranking reversals, a conditional-null stopping check and a discovery-confirmation budget. Established Bayesian design, Blackwell ordering and likelihood-ratio supermartingale theory underlie the tools. The distinctive contribution is their matched application and documented negative findings, including identical decision loss for two objectives and high posterior concentration under misspecification. Human review remains pending. [NOESIS](research/noesis-finite-results.md) · [SCIENTIA](research/scientia-adaptive-results.md)

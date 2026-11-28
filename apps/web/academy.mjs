@@ -16,6 +16,7 @@ import {createWorld,runWorld} from "./engine/civilizations.mjs";
 import {poissonBinomial,tally} from "./engine/echo-public.mjs";
 import {decisionRisks,ewmaMoments,firstPassage} from "./engine/adaptive-trust.mjs";
 import {auditMoments} from "./engine/morpheus-audit.mjs";
+import {acquisitionObjectives} from "./engine/noesis-finite.mjs";
 
 setupTheme();
 
@@ -89,6 +90,13 @@ updateWhen(["academy-audit-accuracy"],()=>{
   byId("academy-audit-accuracy-result").textContent="Positive audits "+precise(observed)+" · "+
     (correctedVariance===null?"Chance audits carry no reliability information.":
       "corrected observation variance "+correctedVariance.toFixed(3)+".");
+});
+
+updateWhen(["academy-decision-signal"],()=>{
+  const accuracy=number("academy-decision-signal")/100;
+  const options=acquisitionObjectives([.5,.5],["false","true"],[1-accuracy,accuracy],[[0,1]],[0,1],[4,1]);
+  byId("academy-decision-signal-result").textContent="Expected information "+options.hypothesisInformation.toFixed(4)+
+    " bits · Brier risk reduction "+options.predictionValue.toFixed(4)+" · decision value "+options.decisionValue.toFixed(4)+".";
 });
 
 updateWhen(["academy-agents","academy-rho"],()=>{

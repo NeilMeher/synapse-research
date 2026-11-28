@@ -222,6 +222,18 @@ export function buildKnowledge(){
   connect("study/belief-dynamics","study/echo2","uses joint report likelihood",["A"]);
   connect("study/belief-dynamics","study/axiom","applies decision risks",["A"]);
   connect("study/belief-dynamics","empirical/mirage-measurement","uses separate forecast and decision outcomes",["A"]);
+  add("study/noesis-finite","Mathematical result","NOESIS finite acquisition objectives","noesis.html#finite-acquisition",
+    "Compares hypothesis information, prediction value and costly decisions under an exact Bernoulli law.",["A"]);
+  add("study/scientia-sequential","Mathematical result","SCIENTIA sequential verification","scientia.html#sequential-verification",
+    "Checks false reporting and power for fixed, repeated and time-uniform tests.",["A"]);
+  add("study/episteme-split","Mathematical result","EPISTEME selected claims","episteme.html#split-discovery",
+    "Tests claims after adaptive acquisition using independent verification and a matched observation budget.",["A"]);
+  connect("study/noesis-finite","study/noesis","corrects finite discovery likelihood",["A"]);
+  connect("study/noesis-finite","study/axiom","compares information with decision value",["A"]);
+  connect("study/scientia-sequential","study/scientia","compares stopping procedures",["A"]);
+  connect("study/episteme-split","study/noesis-finite","uses exact query selection",["A"]);
+  connect("study/episteme-split","study/scientia-sequential","verifies selected claims",["A"]);
+  connect("study/episteme-split","study/belief-dynamics","checks duplicated evidence",["A"]);
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   for(const node of nodes){

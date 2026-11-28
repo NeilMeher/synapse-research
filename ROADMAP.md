@@ -88,3 +88,7 @@ The held-out comparison isolates memory weighting and audit correction within po
 ## Phase C entry
 
 The cognition checkpoint supports a finite acquisition and verification programme. Correct NOESIS's observation/prior mismatch first and use disjoint interpolation and extrapolation targets. Test information against decision value before sequential SCIENTIA and a joint discovery workflow. Human study and broad institutional experiments remain outside this checkpoint.
+
+## After the Phase C finite checkpoint
+
+The exact programme connects acquisition, a fixed scientific claim, fresh verification and downstream decisions. Next extend to multiple candidate claims and held-out stochastic programmes under independent and explicitly dependent measurement laws. Prespecify an adequacy decision for out-of-library generators and calibrate the null under each allowed conditional sampling rule. Begin an institutional research design only after choosing which verified decision and settlement mechanisms transfer and which assumptions need new evidence. [Finite programme results](research/scientia-adaptive-results.md)

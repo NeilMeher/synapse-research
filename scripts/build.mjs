@@ -179,6 +179,8 @@ const developmentId="morpheus-adaptive-development-001";
 const tradeId="axiom-delayed-trade-fixture-001";
 const strategicId="axiom-strategic-settlement-001";
 const dynamicsId="belief-dynamics-001";
+const finiteId="noesis-corrected-discovery-002";
+const sequentialId="scientia-adaptive-verification-002";
 for(const [id,evidence,directory] of [
   [hindiId,"F","empirical/archives/"+hindiId+"/"],
   [momentsId,"A","research/evidence/"+momentsId+"/"],
@@ -190,6 +192,8 @@ for(const [id,evidence,directory] of [
   [tradeId,"A","research/evidence/"+tradeId+"/"],
   [strategicId,"A","research/evidence/"+strategicId+"/"],
   [dynamicsId,"A","research/evidence/"+dynamicsId+"/"],
+  [finiteId,"A","research/evidence/"+finiteId+"/"],
+  [sequentialId,"A","research/evidence/"+sequentialId+"/"],
 ]){
   const manifest=JSON.parse(text(directory+"manifest.json"));
   if(manifest.id!==id||manifest.evidence!==evidence||manifest.status!=="completed"){
@@ -218,12 +222,25 @@ for(const [id,evidence,directory] of [
     [tradeId]:"research/axiom-trust-fixture.json",
     [strategicId]:"research/axiom-strategic/protocol.json",
     [dynamicsId]:"research/belief-dynamics/protocol.json",
+    [finiteId]:"research/noesis-finite/protocol.json",
+    [sequentialId]:"research/scientia-adaptive/protocol.json",
   }[id];
   if(protocolPath){
     const data=readFileSync(from(protocolPath));
     if(!/^[a-f0-9]{40}$/.test(manifest.protocolCommit)||manifest.protocol.bytes!==data.length||
        manifest.protocol.sha256!==createHash("sha256").update(data).digest("hex")){
       throw new Error("Unverified Phase B protocol "+id);
+    }
+  }
+  const extraInputs={
+    [finiteId]:{"fixtures.json":"research/noesis-finite/fixtures.json"},
+    [sequentialId]:{noesisProtocol:"research/noesis-finite/protocol.json"},
+  }[id]??{};
+  for(const [name,path] of Object.entries(extraInputs)){
+    const data=readFileSync(from(path));
+    const entry=manifest.inputs[name];
+    if(entry.bytes!==data.length||entry.sha256!==createHash("sha256").update(data).digest("hex")){
+      throw new Error("Unverified cross-study input "+path);
     }
   }
   copies.push([directory+"manifest.json",directory+"manifest.json"]);
@@ -238,7 +255,9 @@ for(const [dir,files] of [["echo-moments",["protocol.json","compute.py","referen
   ["adaptive-trust",["fixtures.json","evaluate.mjs","reference.py","development.json","development.mjs","development-reference.py"]],
   ["morpheus-confirmatory",["protocol.json","run.mjs","reference.py"]],
   ["axiom-strategic",["protocol.json","run.py","ledger.mjs"]],
-  ["belief-dynamics",["protocol.json","reference.py","engine-check.mjs"]]]){
+  ["belief-dynamics",["protocol.json","reference.py","engine-check.mjs"]],
+  ["noesis-finite",["protocol.json","fixtures.json","reference.py","study.py","engine-check.mjs"]],
+  ["scientia-adaptive",["protocol.json","run.py","engine-check.mjs"]]]){
   for(const name of files){
     const path="research/"+dir+"/"+name;
     copies.push([path,path]);
@@ -248,6 +267,8 @@ copies.push(["engine/morpheus-trust.mjs","engine/morpheus-trust.mjs"]);
 copies.push(["engine/adaptive-trust.mjs","engine/adaptive-trust.mjs"]);
 copies.push(["engine/morpheus-audit.mjs","engine/morpheus-audit.mjs"]);
 copies.push(["engine/belief-dynamics.mjs","engine/belief-dynamics.mjs"]);
+copies.push(["engine/noesis-finite.mjs","engine/noesis-finite.mjs"]);
+copies.push(["engine/scientia-sequential.mjs","engine/scientia-sequential.mjs"]);
 copies.push(["schemas/morpheus-audit-summary-v1.json","schemas/morpheus-audit-summary-v1.json"]);
 copies.push(["schemas/echo-hindi-paired-v1.json","schemas/echo-hindi-paired-v1.json"]);
 for (const file of readdirSync(from("research/"),{withFileTypes:true})){
@@ -307,6 +328,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   beliefArchitectureStudies:[{id:measurementId,evidence:"F"},{id:adaptiveId,evidence:"A"},
     {id:developmentId,evidence:"B",stage:"development"},{id:tradeId,evidence:"A"},{id:auditId,evidence:"B",stage:"confirmatory"},
     {id:strategicId,evidence:"A"},{id:dynamicsId,evidence:"A"}],
+  discoveryStudies:[{id:finiteId,evidence:"A"},{id:sequentialId,evidence:"A",companion:"episteme-split-discovery-001"}],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {

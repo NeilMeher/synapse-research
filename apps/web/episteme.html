@@ -5,6 +5,7 @@
   <title>EPISTEME · SYNAPSE</title>
   <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
   <script type="module" src="./episteme-view.mjs"></script>
+  <script type="module" src="./phase-c-view.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -49,6 +50,20 @@
         <thead><tr><th>Policy</th><th>Correct proposal</th><th>False proposal</th><th>Correct final claim</th><th>False final claim</th><th>No accepted claim</th><th>Prediction RMSE</th></tr></thead><tbody id="episteme-results"></tbody></table></div>
       <p>Candidate probabilities sum to one over the four available families. The residual tests ask whether a fixed predictor matches disjoint observations under known Gaussian noise. Passing both screens leaves the candidate provisionally accepted in this workflow.</p>
       <div class="actions"><a class="quiet" href="./data/episteme-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/episteme-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/episteme-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/episteme.md">Manuscript</a><a class="quiet" href="./docs/episteme-learning.md">Learning guide</a></div>
+    </article>
+    <article class="result-panel study-block" id="split-discovery">
+      <h2>Choose a claim, then verify it on fresh evidence</h2>
+      <p>NOESIS selects a directional claim. SCIENTIA tests it under a shared 12-observation cap. The held-out test addresses the direction of the effect at a new location. AXIOM scores the downstream decision separately.</p>
+      <label for="selection-world">Validation environment</label>
+      <select id="selection-world"><option value="boundary">Independent boundary null</option><option value="specified">Generator in library</option><option value="outOfLibrary">Generator outside library</option><option value="duplicateBoundary">Duplicated boundary evidence</option></select>
+      <label for="selection-budget">Observations reserved for discovery</label>
+      <select id="selection-budget"><option value="3">3 for discovery, up to 9 for verification</option><option value="5">5 for discovery, up to 7 for verification</option></select>
+      <p id="selection-counts-status" role="status">Loading exact programme outcomes…</p>
+      <div class="table-scroll"><table><caption>Probability of true and false report with declared costs</caption>
+        <thead><tr><th scope="col">Verification procedure</th><th scope="col">True report</th><th scope="col">False report</th><th scope="col">Observations used</th><th scope="col">Decision loss</th><th scope="col">Total loss</th></tr></thead>
+        <tbody id="selection-counts"></tbody>
+      </table></div>
+      <div class="actions"><a class="quiet" href="./research/scientia-adaptive-results.md#integrated-discovery-and-confirmation">Results and validity assumptions</a><a class="quiet" href="./research/scientia-adaptive-protocol.md">Frozen protocol</a></div>
     </article>
   </main>
 </body>

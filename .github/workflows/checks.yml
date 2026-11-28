@@ -101,6 +101,8 @@ jobs:
       - run: python -B research/morpheus-confirmatory/reference.py
       - run: python -B research/axiom-strategic/run.py verify
       - run: python -B research/belief-dynamics/reference.py verify
+      - run: python -B research/noesis-finite/study.py verify
+      - run: python -B research/scientia-adaptive/run.py verify
       - run: npm run build
       - name: Install browser QA tooling
         run: |

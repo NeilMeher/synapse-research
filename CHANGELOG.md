@@ -130,3 +130,7 @@ Replayed 896 archived MIRAGE requests, reconciled reported percentages with scor
 ## v1.6.1 · MORPHEUS confirmatory audit correction
 
 Completed a registered, matched audit-channel and memory comparison. Corrected exponential memory reduced full-history burst loss by 5.69 points versus corrected cumulative memory, with recovery and stationary penalties against fixed trust. Preserved the development and delayed trade evidence, added an archived audit table and Academy exercise, and independently reproduced all new decisions and intervals.
+
+## Research checkpoint after v1.6.1
+
+Archived exact strategic settlement and integrated belief dynamics on the Phase B research branch. The Phase C branch adds coherent NOESIS acquisition, exact SCIENTIA sequential outcomes and an integrated EPISTEME selection and confirmation analysis. Existing workbenches display the results and the Academy exercises the difference between information and decision value.

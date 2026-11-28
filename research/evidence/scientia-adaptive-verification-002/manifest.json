@@ -1,0 +1,22 @@
+{
+  "evidence": "A",
+  "id": "scientia-adaptive-verification-002",
+  "inputs": {
+    "noesisProtocol": {
+      "bytes": 1948,
+      "sha256": "f56f66cfee1886a857da4e33538b64f5b4d3880ba4904f4bd560397417924fbd"
+    }
+  },
+  "outputs": {
+    "sequential-and-integrated.json": {
+      "bytes": 17083,
+      "sha256": "3cf94076df8d6aa83bf5b625023920240118fd255103932abb6d015c5f56c62f"
+    }
+  },
+  "protocol": {
+    "bytes": 1736,
+    "sha256": "c9cd8703be5302f7bfd72b4a4533cf194499e560c7c6bebf087802a6b85a3b9f"
+  },
+  "protocolCommit": "f75ac1156641154763236c6d411addc6192beb9c",
+  "status": "completed"
+}

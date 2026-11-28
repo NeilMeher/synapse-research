@@ -5,6 +5,7 @@
   <title>SCIENTIA · SYNAPSE</title>
   <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css">
   <script type="module" src="./scientia-view.mjs"></script>
+  <script type="module" src="./phase-c-view.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -57,6 +58,20 @@
       <div class="actions">
         <a class="quiet" href="./data/scientia-confirmatory.json">Confirmatory results</a><a class="quiet" href="./data/scientia-confirmatory.manifest.json">Run manifest</a><a class="quiet" href="./research/scientia-confirmatory.md">Frozen protocol</a><a class="quiet" href="./papers/scientia.md">Manuscript</a><a class="quiet" href="./research/scientia-audit.md">Assumptions and audit</a><a class="quiet" href="./docs/scientia-learning.md">Learning guide</a>
       </div>
+    </article>
+    <article class="result-panel study-block" id="sequential-verification">
+      <h2>How repeated looks change verification</h2>
+      <p>Under the independent null, applying the fixed-horizon threshold repeatedly raised the chance of a false report from 1.93% to 6.30% at the 12-observation cap. The evidence process reported 0.78% of the time.</p>
+      <label for="sequential-rate">Bernoulli success probability</label>
+      <select id="sequential-rate"><option value="1/2">50% null</option><option value="3/5">60% alternative</option><option value="3/4">75% alternative</option></select>
+      <label for="sequential-horizon">Observation cap</label>
+      <select id="sequential-horizon"><option value="12">12</option><option value="8">8</option></select>
+      <p id="sequential-counts-status" role="status">Loading exact stopping outcomes…</p>
+      <div class="table-scroll"><table><caption>Exact probability of reporting and mean observations</caption>
+        <thead><tr><th scope="col">Procedure</th><th scope="col">Probability of reporting</th><th scope="col">Mean observations used</th></tr></thead>
+        <tbody id="sequential-counts"></tbody>
+      </table></div>
+      <div class="actions"><a class="quiet" href="./research/scientia-adaptive-results.md">Guarantees, power and limits</a><a class="quiet" href="./episteme.html#split-discovery">Explore selected claims</a></div>
     </article>
   </main>
 </body>
