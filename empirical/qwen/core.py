@@ -21,6 +21,9 @@ from empirical.run import git, journal, load, lock
 ROOT=Path(__file__).resolve().parent
 CONFIG=ROOT/"vulkan.json"
 DOC=ROOT.parents[1]/"research/mirage-qwen-vulkan-protocol.md"
+STREAM=ROOT/"vulkan-streamed.json"
+STREAM_DOC=ROOT.parents[1]/"research/mirage-qwen-vulkan-streamed.md"
+ATTEMPT=ROOT/"mmap-startup-stop.json"
 STAGES=("qwen-development","cross-model")
 
 
@@ -31,7 +34,7 @@ def path_for(stage):
 def config():
     spec=load(CONFIG)
     params=model_config("qwen-development")
-    params["runtime"].update(device=spec["device"],gpuLayers=spec["gpuLayers"])
+    params["runtime"].update(device=spec["device"],gpuLayers=spec["gpuLayers"],loadMode=load(STREAM)["loadMode"])
     params["model"].update(runtime=spec["runtime"],runtimeArchiveSha256=spec["packageSha256"],
                            runtimeExecutableSha256=spec["executableSha256"],vulkanBackendSha256=spec["backendSha256"])
     return params
@@ -41,7 +44,7 @@ def execution(stage):
     original=metadata(stage)
     values=config()
     original.update(runtime=values["runtime"],model=values["model"],backend="Vulkan0 · GTX 1650")
-    original["files"].update({p.name:file_hash(p) for p in (CONFIG,DOC)})
+    original["files"].update({p.name:file_hash(p) for p in (CONFIG,DOC,STREAM,STREAM_DOC,ATTEMPT)})
     if stage=="cross-model":
         original["capabilityManifestSha256"]=file_hash(path_for("qwen-development")/"manifest.json")
     return original
@@ -73,7 +76,7 @@ def gate(records, resources):
 
 def check_freeze(freeze):
     paths=("empirical/qwen","empirical/phase3","empirical/inference.py","empirical/run.py",
-           "empirical/robustness","research/mirage-qwen-vulkan-protocol.md","research/mirage-cross-model-protocol.md")
+           "empirical/robustness","research/mirage-qwen-vulkan-protocol.md","research/mirage-qwen-vulkan-streamed.md","research/mirage-cross-model-protocol.md")
     if freeze!=git("rev-parse","HEAD") or git("status","--porcelain","--",*paths):
         raise RuntimeError("The Vulkan launch requires the exact committed protocol and a clean study tree.")
 
@@ -91,7 +94,7 @@ def collect(stage,runtime,weights,package,freeze):
     check_artifacts(runtime,package,weights,constants,model["model"])
     tasks,_,plan=build_plan(stage)
     lookup={r["id"]:r for r in tasks}
-    work=LOCAL_ROOT/"qwen-vulkan"/stage
+    work=LOCAL_ROOT/"qwen-vulkan-streamed"/stage
     work.mkdir(parents=True,exist_ok=True)
     meta=execution(stage)
     budget=constants["replication"]
@@ -113,7 +116,7 @@ def collect(stage,runtime,weights,package,freeze):
         start=monotonic()
         try:
             with serve(runtime,weights,model,log,on_launch=guard.launch) as server:
-                guard.summary["offload"]=verify_offload(log)
+                guard.summary["offload"]=verify_offload(log,model["runtime"]["loadMode"])
                 guard.summary["startupMs"]=round((monotonic()-start)*1000,3)
                 for item in plan:
                     seq=item["sequence"]
@@ -159,7 +162,7 @@ def pack(stage):
     target=path_for(stage)
     if target.exists():
         raise FileExistsError("Existing archives are immutable.")
-    db_path=LOCAL_ROOT/"qwen-vulkan"/stage/"observations.sqlite"
+    db_path=LOCAL_ROOT/"qwen-vulkan-streamed"/stage/"observations.sqlite"
     with closing(sqlite3.connect(db_path.as_uri()+"?mode=ro",uri=True)) as db:
         meta=json.loads(db.execute("SELECT data FROM metadata").fetchone()[0])
         records=[json.loads(r) for r, in db.execute("SELECT data FROM record ORDER BY sequence")]

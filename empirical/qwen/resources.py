@@ -46,10 +46,12 @@ def check_artifacts(runtime, archive, weights, spec, model):
         raise RuntimeError("The pinned executable did not enumerate the registered Vulkan device.")
 
 
-def verify_offload(path):
+def verify_offload(path, load_mode):
     text=Path(path).read_text(encoding="utf-8",errors="replace")
     if not re.search(r"offloaded\s+25/25\s+layers\s+to\s+GPU",text,re.I):
         raise RuntimeError("The server did not confirm offloading all 25 Qwen layers.")
+    if not re.search(r"load_mode\s*=\s*"+re.escape(load_mode)+r"\b",text):
+        raise RuntimeError("The server did not confirm the registered loading mode.")
     return "25/25 layers offloaded to Vulkan0 (GTX 1650)"
 
 

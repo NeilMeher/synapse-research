@@ -125,6 +125,8 @@ def serve(runtime_dir, weights, protocol, log_path, *, on_launch=None):
                "--no-webui", "--no-context-shift", "--no-cache-prompt"]
     if settings.get("device"):
         command.extend(["--device", settings["device"], "--log-verbosity", "4"])
+    if settings.get("loadMode"):
+        command.extend(["--load-mode", settings["loadMode"]])
     env = {key: value for key, value in os.environ.items() if not key.upper().startswith("LLAMA_")}
     with log_path.open("ab") as log:
         process = subprocess.Popen(command, cwd=runtime_dir, env=env, stdin=subprocess.DEVNULL,
