@@ -1,0 +1,31 @@
+{
+  "id": "morpheus-adaptive-development-001",
+  "evidence": "B",
+  "stage": "development",
+  "seed": 671042391,
+  "historiesPerEnvironment": 16,
+  "steps": 64,
+  "failureStart": 20,
+  "restoredAt": 42,
+  "recoveryEnd": 54,
+  "baseRate": 0.86,
+  "controlRate": 0.69,
+  "faultRate": 0.22,
+  "auditProbability": 0.6,
+  "auditDelay": 2,
+  "extraAuditDelay": 4,
+  "priorStrength": 4,
+  "rollingLength": 8,
+  "ewma": [0.15, 0.35],
+  "regime": {"prior": 0.9, "fail": 0.04, "restore": 0.08, "healthyRate": 0.86, "faultyRate": 0.22, "auditAccuracy": 0.8},
+  "environments": [
+    {"id": "stationary", "regime": "clean", "auditAccuracy": 0.8, "lateProbability": 0.3},
+    {"id": "burst", "regime": "burst", "auditAccuracy": 0.8, "lateProbability": 0.3},
+    {"id": "drift", "regime": "drift", "auditAccuracy": 0.8, "lateProbability": 0.3},
+    {"id": "noisier", "regime": "burst", "auditAccuracy": 0.6, "lateProbability": 0.3},
+    {"id": "longerLag", "regime": "burst", "auditAccuracy": 0.8, "lateProbability": 0.8}
+  ],
+  "primary": "Per-history difference in share of incorrect decisions versus the static rule, over all 64 steps",
+  "secondary": "Incorrect decisions in failure and recovery windows, and routing to the control source when simultaneous reports differ",
+  "analysis": "Report integer counts and mean paired loss differences descriptively. No significance test, tuning claim or confirmatory interpretation."
+}
