@@ -479,6 +479,22 @@ try {
         console.log("Reader DOMContentLoaded at 1440px · "+Math.round(navigation)+" ms");
       }
 
+      assert.equal((await page.goto(new URL("observatory.html",base).href)).status(),200);
+      await page.getByText(/128 planned model requests/).waitFor();
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+      assert.match(await page.locator("#obs-headline").textContent(),/\+0\.178.*52 \/ 64/);
+      assert.deepEqual(await page.locator("#obs-metrics tr").filter({hasText:"Scorable confidence"}).locator("td").allTextContents(),["52","64"]);
+      await page.getByLabel("Task family").selectOption("conditional");
+      assert.deepEqual(await page.locator("#obs-metrics tr").filter({hasText:"Scorable confidence"}).locator("td").allTextContents(),["4","16"]);
+      await page.getByLabel("Chart condition").selectOption("incorrectCue");
+      await page.getByLabel("Response filter").selectOption("incomplete");
+      assert.equal(await page.locator("#obs-task option").count(),12);
+      await page.getByLabel("Task",{exact:true}).press("End");
+      assert.match(await page.locator("#obs-detail").textContent(),/Correct option [A-D].*Abstained.*Scorable/s);
+      if(width===390||width===1440){
+        await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+        await page.screenshot({path:fileURLToPath(new URL("observatory-"+width+".png",screenshots))});
+      }
       assert.deepEqual(errors, []);
       const evidence = await page.request.get(new URL("data/confirmatory.manifest.json", base).href);
       assert.equal(evidence.ok(), true);
@@ -534,13 +550,20 @@ try {
     await missingIndex.getByText(/Registry search remains available/).waitFor();
     assert.ok(await missingIndex.locator("#knowledge-results li").count()>0);
     console.log("503 research index fallback passed");
+    const missingEmpirical=await browser.newPage();
+    await missingEmpirical.route("**/empirical/**/responses.ndjson",route=>route.fulfill({status:503,body:"unavailable"}));
+    await missingEmpirical.goto(new URL("observatory.html",base).href);
+    await missingEmpirical.getByText(/The empirical archive is unavailable/).waitFor();
+    assert.equal(await missingEmpirical.locator("#obs-data").isVisible(),false);
+    console.log("503 empirical archive fallback passed");
     if(process.env.AXE_SCRIPT){
       const violations=[];
-      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html"];
+      const auditRoutes=["index.html","chronos.html","knowledge.html?q=electrification","library.html","reader.html?study=chronos","academy.html","observatory.html"];
       for(const width of [390,1440]){
         const page=await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
         for(const path of auditRoutes){
           await page.goto(new URL(path,base).href);
+          if(path==="observatory.html")await page.locator("#obs-data").waitFor();
           await page.evaluate(()=>document.fonts.ready);
           await page.addScriptTag({path:process.env.AXE_SCRIPT});
           for(const theme of ["dark","light"]){
@@ -553,7 +576,7 @@ try {
         await page.close();
       }
       assert.deepEqual(violations,[]);
-      console.log("axe accessibility checks passed on six routes at two widths in both themes");
+      console.log("axe accessibility checks passed on seven routes at two widths in both themes");
     }
   } finally {
     await browser.close();

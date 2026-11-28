@@ -42,3 +42,8 @@ ENERGIA tests illustrative infrastructure finance and utility assumptions. The i
 NEXUS uses a matched factorial design with fixed hardware capacity and prices. It varies hypothetical local procurement shares independently of modeled PUE and WUE. Read the [NEXUS manuscript](papers/nexus.md) and [internal audit](research/nexus-audit.md).
 
 CHRONOS reconstructed official railway evidence, documented divergent reporting scopes, and withheld causal estimation. Statistical interpretation for all studies is collected in the [programme quality register](research/programme-quality-register.md). The original study results and prior caveats remain part of the evidence record.
+
+
+## Exploratory actual-model research
+
+MIRAGE empirically evaluated one local quantized language model on 64 paired tasks. Brier loss rose by 0.17830 across 52 complete pairs. Accuracy on those same pairs changed by zero, and the model chose A on all 64 cue tasks. Twelve neutral conditional-probability tasks were abstentions. The synthetic MIRAGE evidence remains a separate computational control. [Empirical pilot](research/mirage-empirical-results.md)

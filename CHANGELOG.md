@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.0 · Empirical MIRAGE pilot
+
+- Add a local pinned inference adapter, frozen matched task design, durable response journal, scoring, and independent validation.
+- Archive 128 genuine SmolLM2 pilot generations, including 12 abstentions. Publish the exploratory findings and evidence limits.
+- Add the Empirical Observatory and link it to the atlas, evidence library, MIRAGE workbench and Academy.
+
 ## 0.1.0 · Initial ECHO milestone
 
 - Reproducible ECHO pilot, prospectively frozen confirmatory run, exact reference and hashed artifacts.

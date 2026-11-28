@@ -26,3 +26,6 @@ ENERGIA has no project-specific tariff, quotes, funding commitment, taxes, refin
 NEXUS uses stipulated producer-value prices and domestic procurement shares with no measured margins, labor responses, regional estimates, joint cooling feasibility or causal effects. Additional price, commissioning and supplier evidence is needed before an empirical or site-specific study.
 
 CHRONOS uses sparse historical benchmarks and a recent annual national series. Different publisher totals, ambiguous state boundaries, and missing compatible local exposure and outcomes limit causal use. The narrow educational counterfactual and exact synthetic contrasts are separate from historical evidence. See the [central register](research/programme-quality-register.md).
+
+
+The first empirical MIRAGE pilot used one 135M model, Q4_K_M weights, one greedy constrained format, four fixed task families and two cue conditions. The cue format changed abstention and position preference. Brier comparisons cover only 52 complete pairs, including four conditional-probability items. Prompt length, rendered answer order and grammar order need controlled follow-up. Human review and transfer to other models remain open. [Detailed interpretation](research/mirage-empirical-results.md)

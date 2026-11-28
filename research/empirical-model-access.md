@@ -1,6 +1,6 @@
 # Model access register
 
-Verified on 2026-11-28. The evaluation host has Windows 11 x86-64, four logical-core pairs (four physical cores, eight logical threads), 7.91 GiB installed usable memory and about 110 GiB free storage at inspection. Available RAM was about 0.95 GiB at inspection. The 4 GiB discrete GPU had about 3.30 GiB free and was left idle by inference. Python 3.14.0 and Node 24.12.0 were present. No complete locally cached generative model or installed Ollama, LM Studio or llama.cpp executable was found before the study. Several cache directories contained metadata without usable downloaded weights. The backend discovery covered configured environment routes without reading credential values.
+Verified on 2026-11-28. The evaluation host has Windows 11 x86-64, four physical cores and eight logical threads, 7.91 GiB installed usable memory and about 110 GiB free storage at inspection. Available RAM was about 0.95 GiB at inspection. The 4 GiB discrete GPU had about 3.30 GiB free and was left idle by inference. Python 3.14.0 and Node 24.12.0 were present. No complete locally cached generative model or installed Ollama, LM Studio or llama.cpp executable was found before the study. Several cache directories contained metadata without usable downloaded weights. The backend discovery covered configured environment routes without reading credential values.
 
 | Candidate or route | Status and restriction |
 | --- | --- |

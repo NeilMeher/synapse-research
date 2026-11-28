@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect actual language model responses, reported confidence and paired results from a controlled MIRAGE pilot.">
+  <title>Empirical Observatory · SYNAPSE</title>
+  <link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./studies.css"><link rel="stylesheet" href="./observatory.css">
+  <script type="module" src="./observatory-view.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap nav">
+    <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">⟡</span>SYNAPSE</a>
+    <nav aria-label="Observatory navigation"><a href="./index.html#map">Research atlas</a><a href="./mirage.html">Synthetic MIRAGE</a><a href="./library.html">Evidence library</a></nav>
+    <button id="theme" class="quiet" type="button" aria-pressed="false">Light theme</button>
+  </div></header>
+  <main id="main" class="wrap section study-page observatory">
+    <div class="observatory-hero">
+      <div><p class="eyebrow">SYNAPSE · Empirical Observatory</p><h1>Confidence under misleading advice</h1>
+      <p>MIRAGE gives a language model the same questions with and without a plausible wrong suggestion. Inspect what it answered, the confidence it reported, and what changed.</p></div>
+      <div class="result-panel obs-run"><p class="eyebrow">Exploratory actual-model research</p><h2>SmolLM2-135M-Instruct</h2><p>Q4_K_M · Local llama.cpp · 64 paired tasks</p>
+        <a href="./research/mirage-empirical-protocol.md">Read the frozen protocol</a></div>
+    </div>
+    <p id="obs-status" role="status">Checking the empirical archive…</p>
+    <div id="obs-data" hidden>
+      <section class="result-panel study-block obs-primary" aria-labelledby="obs-primary-title">
+        <h2 id="obs-primary-title">Paired change in Brier loss</h2>
+        <p id="obs-conclusion"></p>
+        <div id="obs-headline" class="obs-measures"></div>
+        <p>Positive differences mean worse probability forecasts with the incorrect cue. Paired intervals describe item variation within the four registered task families.</p>
+        <details><summary>Read all paired outcomes</summary>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Paired outcomes">
+            <table><caption>Incorrect cue minus neutral</caption><thead><tr><th scope="col">Outcome</th><th scope="col">Pairs</th><th scope="col">Difference</th><th scope="col">95% interval</th></tr></thead><tbody id="obs-paired"></tbody></table>
+          </div>
+        </details>
+      </section>
+      <section class="result-panel study-block" aria-labelledby="obs-condition-title">
+        <div class="obs-title-row"><h2 id="obs-condition-title">Performance and coverage</h2><label>Task family <select id="obs-family"></select></label></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Condition comparison">
+          <table><caption>Genuine model observations by condition</caption><thead><tr><th scope="col">Metric</th><th scope="col">Neutral</th><th scope="col">Incorrect cue</th></tr></thead><tbody id="obs-metrics"></tbody></table>
+        </div>
+        <p id="obs-pattern"></p><p id="obs-transitions"></p>
+      </section>
+      <section class="study-block" aria-labelledby="obs-calibration">
+        <div class="obs-title-row"><h2 id="obs-calibration">Calibration and selective prediction</h2><label>Chart condition <select id="obs-condition"><option value="neutral">Neutral</option><option value="incorrectCue">Incorrect cue</option></select></label></div>
+        <div class="study-pair">
+          <article class="result-panel"><h3>Reliability</h3><p>Each occupied bin compares mean confidence with the observed share of correct answers.</p><canvas id="obs-reliability" class="study-chart" aria-hidden="true"></canvas>
+          <details><summary>Read confidence bins</summary><div class="table-scroll" tabindex="0" role="region" aria-label="Reliability data"><table><caption>Confidence bins and observed accuracy</caption><thead><tr><th scope="col">Bin</th><th scope="col">Count</th><th scope="col">Confidence</th><th scope="col">Accuracy</th></tr></thead><tbody id="obs-bins"></tbody></table></div></details></article>
+          <article class="result-panel"><h3>Risk and coverage</h3><p>Coverage uses all planned responses. Risk is the error rate among the retained answers at each threshold.</p><canvas id="obs-risk" class="study-chart" aria-hidden="true"></canvas>
+          <details><summary>Read risk by coverage</summary><div class="table-scroll" tabindex="0" role="region" aria-label="Risk and coverage data"><table><caption>Selective risk and coverage</caption><thead><tr><th scope="col">Threshold</th><th scope="col">Coverage</th><th scope="col">Risk</th></tr></thead><tbody id="obs-risk-table"></tbody></table></div></details></article>
+        </div>
+      </section>
+      <section class="result-panel study-block" aria-labelledby="obs-explorer">
+        <h2 id="obs-explorer">Explore paired responses</h2>
+        <div class="study-controls">
+          <label>Response filter <select id="obs-filter"><option value="all">All responses</option><option value="changed">Answer changed</option><option value="wrong">Incorrect under the cue</option><option value="incomplete">Missing or abstained</option></select></label>
+          <div><label for="obs-task">Task</label><select id="obs-task"></select></div>
+        </div>
+        <div id="obs-detail" aria-live="polite"></div>
+      </section>
+    </div>
+    <section class="study-block result-panel" aria-labelledby="obs-evidence">
+      <h2 id="obs-evidence">Evidence and reproduction</h2>
+      <p>Conclusions are limited to one quantized model, a constrained response format, and four generated task families. Independent human review remains pending.</p>
+      <div class="actions">
+        <a href="./research/mirage-empirical-results.md">Pilot report</a><a href="./research/mirage-empirical-literature.md">Prior research</a><a href="./research/empirical-model-access.md">Model access</a>
+        <a href="./empirical/archives/mirage-empirical-pilot-001/manifest.json">Manifest</a>
+        <a href="./empirical/archives/mirage-empirical-pilot-001/responses.ndjson" download>Download raw responses</a>
+        <a href="./empirical/archives/mirage-empirical-pilot-001/scores.json" download>Download scored responses</a>
+        <a href="./empirical/datasets/pilot.tasks.json" download>Download tasks</a>
+        <a href="./empirical/datasets/pilot.key.json" download>Download answer key</a>
+        <a href="./REPRODUCIBILITY.md">Reproduction commands</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

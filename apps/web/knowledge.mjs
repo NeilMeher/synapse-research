@@ -106,6 +106,20 @@ export function buildKnowledge(){
     connect("study/"+lesson.study,"lesson/"+lesson.id,"has educational explanation");
     for(const id of lesson.requires)connect("lesson/"+lesson.id,"lesson/"+id,"requires");
   }
+  const empirical="empirical/mirage";
+  add(empirical,"Empirical pilot","MIRAGE empirical pilot","observatory.html","Exploratory paired language model calibration under misleading advisory cues.");
+  add(empirical+"/model","Evaluated model","SmolLM2-135M-Instruct Q4_K_M","research/empirical-model-access.md","Pinned local CPU inference and model provenance.");
+  add(empirical+"/dataset","Benchmark dataset","MIRAGE paired task dataset","empirical/datasets/pilot.tasks.json","64 generated items in four task families.");
+  add(empirical+"/protocol","Protocol","MIRAGE empirical protocol","research/mirage-empirical-protocol.md","Frozen prompt, paired comparisons and response budget.");
+  add(empirical+"/responses","Model response archive","MIRAGE actual model responses","empirical/archives/mirage-empirical-pilot-001/manifest.json","Hashed journal evidence, parsed scores and derived metrics.");
+  add(empirical+"/limits","Limitation","MIRAGE empirical evidence limits","research/mirage-empirical-results.md","One quantized model, constrained response format, four fixed task families and incomplete pairs.");
+  connect(empirical,"study/mirage","extends synthetic research");
+  connect(empirical,"lesson/calibration","uses mathematics or method");
+  connect(empirical,empirical+"/model","evaluates model");
+  connect(empirical,empirical+"/dataset","uses benchmark dataset");
+  connect(empirical,empirical+"/protocol","tested under protocol");
+  connect(empirical,empirical+"/responses","produces response archive");
+  connect(empirical,empirical+"/limits","has limitation");
   add("future/empirical","Proposed research","Empirical AI evaluations","research/future-empirical-programme.md","Proposed model benchmarks and external replication.");
   connect("lab/echo","future/empirical","proposed follow-up");
   return {nodes,edges};

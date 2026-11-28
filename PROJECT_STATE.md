@@ -1,6 +1,6 @@
 # Development state
 
-Use the latest Phase V checkpoint for the current branch, results and release. Earlier sections preserve the state recorded at each milestone.
+Use the latest empirical checkpoint for the current branch, results and release. Earlier sections preserve the state recorded at each milestone.
 
 Milestones 0 and 1 have working deliverables. Milestone 2 ECHO has an executed, computationally validated first slice with human review pending. Eleven other laboratories were proposed at the v0.1.0 baseline.
 
@@ -136,3 +136,18 @@ The Phase VII/VIII branch started from v0.11.0, `a1c02c48708d09e66200a818cfe78a4
 ## Phase VIII integrated checkpoint
 
 The registry now drives the 12-laboratory atlas, 18-study catalogue, documented finding classifications, deterministic search and 16 Academy lessons. Historical figures and the teaching data have different scope. Further empirical work and external reviewer verification remain pending. The default release branch is `codex/foundation`, restricted by the existing Pages environment. The stable release metadata and shared release notes record exact validated revisions.
+
+
+## First empirical checkpoint · 2026-11-28
+
+| Checkpoint | Evidence and status |
+| --- | --- |
+| Baseline | v1.0.0 `775c78a`, clean local checkout, release and Pages verified, 80 baseline JavaScript tests passed. |
+| Model access | Pinned local SmolLM2-135M-Instruct Q4_K_M and llama.cpp b12823 checksums, development runs and resource estimates recorded. Zero additional expense. |
+| Protocol | MIRAGE frozen at `3221e08` before pilot. 8 development, 8 calibration, 64 pilot items independently validated. |
+| Experiment | `mirage-empirical-pilot-001`, archive at `5aed77e`. 128 genuine responses, 116 scorable, 12 neutral abstentions. 52 Brier pairs. |
+| Independent checks | Task solutions and rational Brier, accuracy, confidence, and calibration checked with separate code. Human review is pending. |
+| Site | Empirical Observatory with paired outcomes, calibration, risk-coverage plots and raw response inspection. Results link from atlas, library, Academy and synthetic MIRAGE. |
+| Next | Short counterbalanced MIRAGE mechanism study for constant-position response and conditional-probability missingness before ECHO. No ensemble has been evaluated. |
+
+[Pilot report and links to archives](research/mirage-empirical-results.md)

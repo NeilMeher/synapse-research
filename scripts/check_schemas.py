@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = {
@@ -34,3 +34,12 @@ for name, paths in FAMILIES.items():
             location = "/".join(map(str, validation_error.absolute_path))
             raise ValueError(f"{path} at /{location}: {validation_error.message}")
         print(f"{name} verified {path}")
+
+schema = json.loads((ROOT / "schemas/empirical-response-v1.json").read_bytes())
+Draft202012Validator.check_schema(schema)
+validator = Draft202012Validator(schema, format_checker=FormatChecker())
+path = ROOT / "empirical/archives/mirage-empirical-pilot-001/responses.ndjson"
+lines = path.read_bytes().splitlines()
+for line in lines:
+    validator.validate(json.loads(line))
+print(f"empirical-response-v1 verified {len(lines)} actual observation records.")

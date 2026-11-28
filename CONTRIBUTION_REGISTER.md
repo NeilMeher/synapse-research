@@ -30,3 +30,6 @@ Codex assisted with the Phase VI ENERGIA model, audit, source review, and indepe
 At the user's direction, Codex assisted with the NEXUS bridge, deterministic experiments, independent computational verification, interactive views and Academy extension. Explicit procurement shares are scenario choices. No human peer review or third-party endorsement is claimed.
 
 The owner directed the CHRONOS and platform consolidation work. Codex assisted source retrieval, cell transcription, software, analysis, scientific audit and presentation. The publishers collected the underlying official observations. Unit, browser and independent reference checks are computational verification. Human scientific review and external replication remain pending.
+
+
+Neil Meher directed the SYNAPSE 2.0 question, resource limits and staged research priorities. Codex assisted with the MIRAGE protocol, data generator, local model adapter, actual execution, score replay, separately implemented reference and Observatory. SmolLM2 pilot responses came from the pinned released weights under the documented constrained setup. Human peer review and outside replication remain pending. [Executed pilot](research/mirage-empirical-results.md)

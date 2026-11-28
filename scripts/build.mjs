@@ -41,6 +41,29 @@ for (const study of researchStudies) {
   copies.push([study.manuscript,study.manuscript],[study.learning,study.learning]);
   for(const path of [study.config,study.pilotConfig,...(study.assets??[])])if(path)copies.push([path,path]);
 }
+const empiricalRoot="empirical/archives/mirage-empirical-pilot-001/";
+const empiricalManifest=JSON.parse(text(empiricalRoot+"manifest.json"));
+if(empiricalManifest.status!=="completed"||empiricalManifest.execution.classification!=="exploratory-actual-model"||
+    empiricalManifest.execution.studyId!=="mirage-empirical-pilot-001")throw new Error("Wrong empirical archive classification");
+for(const name of ["analysis.json","responses.ndjson","scores.json"]){
+  const file=empiricalRoot+name;
+  const bytes=readFileSync(from(file)), recorded=empiricalManifest.outputs[name];
+  if(recorded?.bytes!==bytes.length||recorded.sha256!==createHash("sha256").update(bytes).digest("hex")){
+    throw new Error("Unverified empirical archive "+name);
+  }
+  copies.push([file,file]);
+}
+for(const [file,hash] of [
+  ["empirical/datasets/pilot.tasks.json",empiricalManifest.execution.datasetSha256],
+  ["empirical/datasets/pilot.key.json",empiricalManifest.execution.groundTruthSha256],
+  ["empirical/prompt-v2.json",empiricalManifest.execution.promptSha256],
+  ["empirical/mirage-pilot-v1.json",empiricalManifest.execution.configSha256],
+  ["research/mirage-empirical-protocol.md",empiricalManifest.execution.protocolSha256],
+]){
+  if(createHash("sha256").update(readFileSync(from(file))).digest("hex")!==hash)throw new Error("Unverified empirical input "+file);
+  if(!file.startsWith("research/"))copies.push([file,file]);
+}
+for(const file of [empiricalRoot+"manifest.json","schemas/empirical-response-v1.json"])copies.push([file,file]);
 for (const file of readdirSync(from("research/"))) copies.push(["research/" + file, "research/" + file]);
 for (const file of ["REPRODUCIBILITY.md", "PORTFOLIO_AUDIT.md", "CONTRIBUTION_REGISTER.md", "PHASE2_VERIFICATION.md", "THREAT_MODEL.md", "SECURITY.md", "LIMITATIONS.md", "CONTRIBUTING.md"]) {
   copies.push([file, "docs/" + file], [file, file]);
@@ -78,7 +101,7 @@ const docsByStudy=new Map(researchStudies.map(study=>[study.id,study]));
 const plain=content=>content.replace(/https?:\/\/[^)\s]+/g,"").replace(/[#*|`]/g," ").replace(/\s+/g," ").trim();
 for(const entry of graph.nodes){
   const doc=docsByStudy.get(entry.id.split("/")[1]);
-  const path=entry.type==="Manuscript"?doc.manuscript:entry.type==="Protocol"?doc.protocol:entry.type==="Data source"?entry.route:null;
+  const path=entry.type==="Manuscript"?doc?.manuscript:entry.type==="Protocol"?entry.route:entry.type==="Data source"?entry.route:null;
   if(path)entry.searchText=plain(text(path)).slice(0,6500);
 }
 writeFileSync(output("data/research-index.json"),JSON.stringify(graph)+"\n");
@@ -90,6 +113,7 @@ writeFileSync(output("release.json"), JSON.stringify({
   version:JSON.parse(text("package.json")).version,
   registryVersion,
   studies:researchStudies.map(study=>study.id),
+  empiricalStudies:[empiricalManifest.execution.studyId],
 })+"\n");
 const anchors = new Map();
 for (const [, file] of copies.filter(([, path]) => path.endsWith(".html"))) {

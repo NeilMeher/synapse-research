@@ -33,6 +33,15 @@ ENERGIA's initial engineering and finance study is validated on hypothetical inp
 
 After validated Phase VI publication, CHRONOS is the next research milestone. Pin the source editions for Indian rail operations, electrification, and state route length. Reconcile observations and coverage before testing whether local outcomes can support a design with credible comparison groups. [Initial design](research/chronos-source-checkpoint.md)
 
+## SYNAPSE 2.0 empirical milestones
+
+1. Implement the local evaluation framework and verify the MIRAGE test set. Completed at the registered pilot freeze.
+2. Run and archive a genuine exploratory MIRAGE pilot. Completed with 128 responses from one pinned quantized model.
+3. Verify option-label and grammar-order sensitivity on an independent item set with a length-matched control. This is the next scientific milestone.
+4. Evaluate ECHO only after obtaining comparable, validated matched model sources or a prospectively registered repeated-generation design. Social influence, memory, scientific reasoning and economic extensions follow that dependency.
+
+[Execution report](research/mirage-empirical-results.md) · [Research trajectory](research/future-empirical-programme.md)
+
 ## Phase VII/VIII continuation
 
 CHRONOS descriptive work and teaching examples are implemented. Earlier CHRONOS proposals are superseded by the executed study and its identification register. The next milestone is an independent replication of one benchmark and a narrow, authorized MIRAGE empirical pilot only after its data and evaluation protocol pass review. See [the proposed 12-month programme](research/future-empirical-programme.md).

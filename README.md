@@ -4,6 +4,10 @@ SYNAPSE is an independent computational research programme on cognition, collect
 
 [Live research atlas](https://neilmeher.github.io/synapse-research/#map) · [Latest GitHub release](https://github.com/NeilMeher/synapse-research/releases/latest) · [Evidence library](https://neilmeher.github.io/synapse-research/library.html) · [Mathematical Academy](https://neilmeher.github.io/synapse-research/academy.html)
 
+## Empirical research
+
+The first exploratory model study compares expressed confidence under neutral and misleading advice. It records 128 genuine local generations from SmolLM2-135M-Instruct Q4_K_M, including abstentions. The pilot also supplies a frozen benchmark, raw responses, an independent scoring check and a static response explorer. [Empirical Observatory](https://neilmeher.github.io/synapse-research/observatory.html) · [MIRAGE pilot findings](research/mirage-empirical-results.md)
+
 ## Research
 
 | Study | Method and evidence |

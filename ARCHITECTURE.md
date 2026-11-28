@@ -39,3 +39,8 @@ The ENERGIA ESM kernel exposes annual engineering and project cash ledgers, dete
 NEXUS connects the ENERGIA capital ledger to a versioned ADB sector bridge. Only disjoint domestic component values enter the ARTHA final-demand vector. Direct foreign procurement, embodied imported inputs, and operating cash remain distinct. The atlas registry points to the matched results, sources and four associated Academy modules.
 
 The knowledge graph, catalogue and curriculum reuse shared ESM registries. Static build indexing extracts bounded manuscript and source text from tracked documents. The reader creates DOM nodes from structured text and restricts link protocols. CHRONOS retains fiscal periods, source-cell locators, gaps and state boundary annotations and reuses one engine across the CLI and browser. No runtime backend or telemetry is required.
+
+
+## ADR · Run empirical inference locally and publish immutable evidence
+
+A local standard-library Python collector passes two bounded messages to a pinned llama.cpp process over loopback. The evaluator maintains the answer key apart from inference and archives raw permitted responses, derived scores and analysis as distinct artifacts. SQLite checkpoints prevent duplicate execution after partial failure. GitHub Pages serves only checked input files and results and renders model text as text nodes. The synthetic laboratories retain their native JavaScript engines. [MIRAGE protocol](research/mirage-empirical-protocol.md)

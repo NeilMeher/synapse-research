@@ -26,6 +26,10 @@ test("typed relationship labels distinguish implemented dependencies from resear
 test("deterministic search recognizes scientific terms and applies an evidence type filter",()=>{
   const rail=searchEvidence(graph.nodes,"electrification");
   assert.ok(rail.some(item=>item.id==="study/chronos"));
+  const empirical=searchEvidence(graph.nodes,"misleading","Empirical pilot");
+  assert.deepEqual(empirical.map(record=>record.id),["empirical/mirage"]);
+  assert.equal(searchEvidence(graph.nodes,"MIRAGE","Empirical pilot")[0].id,"empirical/mirage");
+  assert.ok(graph.edges.some(edge=>edge.from==="empirical/mirage"&&edge.to==="study/mirage"&&edge.type==="extends synthetic research"));
   const mind=searchEvidence(graph.nodes,"consciousness");
   assert.ok(mind.some(item=>item.id==="lab/mirage"||item.id==="study/mirage"));
   assert.ok(searchEvidence(graph.nodes,"freight","Result").every(item=>item.type==="Result"));

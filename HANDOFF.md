@@ -3,7 +3,7 @@
 **Updated:** 2026-11-27  
 **Current continuation** · codex/phase5-social-systems
 
-Use the Phase V checkpoints at the end for current execution and deployment. The Phase III handoff below records the state Antigravity left for Codex.
+Use the latest empirical checkpoint at the end for current execution and deployment. The Phase III handoff below records the state Antigravity left for Codex.
 
 ---
 
@@ -128,3 +128,14 @@ The current branch is `codex/phase7-8-chronos-v1`. Start from the completed [CHR
 The release candidate integrates the typed study graph and deterministic search, evidence filters, safe Markdown reader, curriculum graph, 16 worked lessons, and review material. Start future research from [the review package](research/external-review.md) and [the proposed empirical programme](research/future-empirical-programme.md). Earlier roadmap entries describing CHRONOS as a proposal are historical. The live revision and validation status are recorded on the GitHub release. Use the existing default-branch Pages workflow for future reviewed fast-forwards.
 
 [Phase VII and VIII execution register](research/phase7-8-release-report.md)
+
+
+## SYNAPSE 2.0 · First empirical checkpoint
+
+- Baseline `codex/phase7-8-chronos-v1` at v1.0.0 `775c78accdcfc06acbe4170d651d7e37de8a32bd`. Continue on `codex/v2-empirical-intelligence`.
+- MIRAGE protocol and inputs frozen at `3221e089051b338a78194a25f8fe1b77782d2e5d`. The genuine pilot observations and outputs were preserved at `5aed77e263b54d35af565e67008d2685d88538f9`. Previous result archives are preserved.
+- Local CPU route verified with a pinned 105 MB Apache-2.0 SmolLM2 weight. No free hosted route was authorized or configured. Public evidence begins with the pilot, with the two development rounds retained separately in the local journal.
+- Of 128 genuine pilot requests, 116 were scorable and 12 abstained. Every cue-arm answer selected A. The available-pair Brier loss difference was +0.17830 across 52 pairs. See the result report for uncertainty, family-specific missingness and limitations.
+- Continue with an independent MIRAGE design that crosses rendered answer order and output-grammar alternative order, and adds length-matched and correct cues. Use a small development split before registering fresh held-out items. Comparable ensemble evidence remains outstanding.
+
+[Pilot report](research/mirage-empirical-results.md) · [Public release verification](https://github.com/NeilMeher/synapse-research/releases/tag/v1.1.0)

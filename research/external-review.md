@@ -21,3 +21,8 @@ Use [the reproduction guide](../REPRODUCIBILITY.md) and [the evidence catalogue]
 4. Scientific scope or assumption affected.
 5. Severity and proposed correction.
 6. Permission to share your reproduction evidence and any limits on attribution.
+
+
+## Optional review of the empirical pilot
+
+Check the registered 64 paired items against the printed-answer reference, replay the scoring without model weights, and inspect the full-planned versus complete-pair denominators. Review the constant A-choice pattern under misleading advice. A fresh inference run should use a separate checkout, preserve its own archive and compare response distributions. [Pilot release report and reproduction links](mirage-empirical-results.md)
