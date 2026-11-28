@@ -1,0 +1,356 @@
+{
+  "id": "morpheus-adaptive-reliability-confirmatory-002",
+  "evidence": "B",
+  "stage": "confirmatory",
+  "confirmatorySeed": 1718401351,
+  "histories": 384,
+  "steps": 64,
+  "failureStart": 20,
+  "restoredAt": 42,
+  "baseRate": 0.86,
+  "controlRate": 0.69,
+  "faultRate": 0.22,
+  "auditProbability": 0.6,
+  "shortDelay": 2,
+  "extraDelay": 4,
+  "assumedAccuracy": 0.9,
+  "priorStrength": 4,
+  "window": 8,
+  "alpha": 0.35,
+  "tolerance": 1e-12,
+  "critical": 1.959963984540054,
+  "markov": {
+    "prior": 0.9,
+    "fail": 0.04,
+    "restore": 0.08,
+    "healthyRate": 0.86,
+    "faultyRate": 0.22
+  },
+  "windows": {
+    "full": [
+      0,
+      64
+    ],
+    "failure": [
+      20,
+      42
+    ],
+    "restoration": [
+      42,
+      54
+    ],
+    "initial": [
+      0,
+      20
+    ]
+  },
+  "environments": [
+    {
+      "id": "stationary",
+      "shape": "stationary",
+      "accuracy": 0.8,
+      "lateProbability": 0.3
+    },
+    {
+      "id": "burst",
+      "shape": "burst",
+      "accuracy": 0.8,
+      "lateProbability": 0.3
+    },
+    {
+      "id": "drift",
+      "shape": "drift",
+      "accuracy": 0.8,
+      "lateProbability": 0.3
+    },
+    {
+      "id": "lowerAccuracy",
+      "shape": "burst",
+      "accuracy": 0.6,
+      "lateProbability": 0.3
+    },
+    {
+      "id": "longerDelay",
+      "shape": "burst",
+      "accuracy": 0.8,
+      "lateProbability": 0.8
+    },
+    {
+      "id": "chanceAudit",
+      "shape": "burst",
+      "accuracy": 0.5,
+      "lateProbability": 0.3
+    }
+  ],
+  "policies": [
+    {
+      "id": "fixed",
+      "memory": "fixed"
+    },
+    {
+      "id": "cumulative-naive-event",
+      "memory": "cumulative",
+      "correction": "naive",
+      "timing": "event"
+    },
+    {
+      "id": "cumulative-known-event",
+      "memory": "cumulative",
+      "correction": "known",
+      "timing": "event"
+    },
+    {
+      "id": "cumulative-assumed-event",
+      "memory": "cumulative",
+      "correction": "assumed",
+      "timing": "event"
+    },
+    {
+      "id": "rolling-naive-event",
+      "memory": "rolling",
+      "correction": "naive",
+      "timing": "event"
+    },
+    {
+      "id": "rolling-naive-arrival",
+      "memory": "rolling",
+      "correction": "naive",
+      "timing": "arrival"
+    },
+    {
+      "id": "rolling-known-event",
+      "memory": "rolling",
+      "correction": "known",
+      "timing": "event"
+    },
+    {
+      "id": "rolling-known-arrival",
+      "memory": "rolling",
+      "correction": "known",
+      "timing": "arrival"
+    },
+    {
+      "id": "rolling-assumed-event",
+      "memory": "rolling",
+      "correction": "assumed",
+      "timing": "event"
+    },
+    {
+      "id": "rolling-assumed-arrival",
+      "memory": "rolling",
+      "correction": "assumed",
+      "timing": "arrival"
+    },
+    {
+      "id": "exponential-naive-event",
+      "memory": "exponential",
+      "correction": "naive",
+      "timing": "event"
+    },
+    {
+      "id": "exponential-naive-arrival",
+      "memory": "exponential",
+      "correction": "naive",
+      "timing": "arrival"
+    },
+    {
+      "id": "exponential-known-event",
+      "memory": "exponential",
+      "correction": "known",
+      "timing": "event"
+    },
+    {
+      "id": "exponential-known-arrival",
+      "memory": "exponential",
+      "correction": "known",
+      "timing": "arrival"
+    },
+    {
+      "id": "exponential-assumed-event",
+      "memory": "exponential",
+      "correction": "assumed",
+      "timing": "event"
+    },
+    {
+      "id": "exponential-assumed-arrival",
+      "memory": "exponential",
+      "correction": "assumed",
+      "timing": "arrival"
+    },
+    {
+      "id": "markov-naive-event",
+      "memory": "markov",
+      "correction": "naive",
+      "timing": "event"
+    },
+    {
+      "id": "markov-known-event",
+      "memory": "markov",
+      "correction": "known",
+      "timing": "event"
+    },
+    {
+      "id": "markov-assumed-event",
+      "memory": "markov",
+      "correction": "assumed",
+      "timing": "event"
+    }
+  ],
+  "primary": {
+    "id": "correctedMemory",
+    "environment": "burst",
+    "window": "full",
+    "coefficients": {
+      "exponential-known-event": 1,
+      "cumulative-known-event": -1
+    }
+  },
+  "secondary": [
+    {
+      "id": "memoryByCorrection",
+      "environment": "burst",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "exponential-naive-event": -1,
+        "cumulative-known-event": -1,
+        "cumulative-naive-event": 1
+      }
+    },
+    {
+      "id": "correctedMemory-failure",
+      "environment": "burst",
+      "window": "failure",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-restoration",
+      "environment": "burst",
+      "window": "restoration",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-stationary",
+      "environment": "stationary",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-drift",
+      "environment": "drift",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-lowerAccuracy",
+      "environment": "lowerAccuracy",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-longerDelay",
+      "environment": "longerDelay",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "correctedMemory-chanceAudit",
+      "environment": "chanceAudit",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "cumulative-known-event": -1
+      }
+    },
+    {
+      "id": "eventTiming-burst",
+      "environment": "burst",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "exponential-known-arrival": -1
+      }
+    },
+    {
+      "id": "eventTiming-lowerAccuracy",
+      "environment": "lowerAccuracy",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "exponential-known-arrival": -1
+      }
+    },
+    {
+      "id": "eventTiming-longerDelay",
+      "environment": "longerDelay",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "exponential-known-arrival": -1
+      }
+    },
+    {
+      "id": "incorrectChannel-burst",
+      "environment": "burst",
+      "window": "full",
+      "coefficients": {
+        "exponential-assumed-event": 1,
+        "exponential-known-event": -1
+      }
+    },
+    {
+      "id": "incorrectChannel-lowerAccuracy",
+      "environment": "lowerAccuracy",
+      "window": "full",
+      "coefficients": {
+        "exponential-assumed-event": 1,
+        "exponential-known-event": -1
+      }
+    },
+    {
+      "id": "stationaryVersusFixed",
+      "environment": "stationary",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "fixed": -1
+      }
+    },
+    {
+      "id": "burstVersusFixed",
+      "environment": "burst",
+      "window": "full",
+      "coefficients": {
+        "exponential-known-event": 1,
+        "fixed": -1
+      }
+    },
+    {
+      "id": "markovVersusExponential",
+      "environment": "burst",
+      "window": "full",
+      "coefficients": {
+        "markov-known-event": 1,
+        "exponential-known-event": -1
+      }
+    }
+  ]
+}
