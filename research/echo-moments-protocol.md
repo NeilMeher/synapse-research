@@ -1,0 +1,7 @@
+# ECHO heterogeneous moment bounds · Frozen protocol
+
+**Class A mathematical result.** For fixed correctness marginals and selected joint moments, determine the exact range of strict-majority accuracy over unrestricted joint laws on binary model correctness vectors. The primary seven-member audit uses all 128 binary states. The outcome constraints are normalization, one marginal per member, each pair, and a prespecified subset of three triple moments. The three-member fixture also uses its full triple. All-wrong probability is secondary.
+
+The mathematical method follows established sharp probability bounds for Boolean events. The contribution is exact verification and a scoped application to the named SYNAPSE calibration panel. Selected triples and synthetic fixtures are frozen in the linked JSON. The empirical calibration plug-in treats observed moments as exact inputs to a finite LP. Sampling uncertainty and transport to new questions remain separate. [Prékopa, 1990](https://doi.org/10.1287/opre.38.2.227) · [ECHO 2.0](echo2-mathematics.md)
+
+Run a numerical candidate optimizer, reconstruct positive support exactly and archive primal and dual rational witnesses. A separate dependency-free checker must verify equality of primal and dual objectives, signs for every state, exact moments and the closed-form three-model answer. Three nested moment scopes must give nested bounds. Holdout outcomes are unused. The input calibration archive and all synthetic marginals are pinned. [Configuration](echo-moments/protocol.json)

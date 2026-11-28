@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "echo-heterogeneous-moments-001",
+  "evidenceClass": "A",
+  "calibrationArchive": "../../empirical/archives/echo-public-empirical-001/predictions.json",
+  "calibrationSha256": "0358f2786ac501c4ac5e20bf768569df5a34e2bd07f91a8a26d6e67e72ce01da",
+  "calibrationSubset": "calibration",
+  "threeModelProbabilities": [
+    "3/5",
+    "7/10",
+    "4/5"
+  ],
+  "syntheticSevenProbabilities": [
+    "8/25",
+    "41/100",
+    "49/100",
+    "11/20",
+    "63/100",
+    "71/100",
+    "79/100"
+  ],
+  "selectedTriples": [
+    [
+      0,
+      2,
+      6
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      1,
+      5,
+      6
+    ]
+  ],
+  "solver": "scipy==1.17.0, highs-ds",
+  "supportTolerance": 1e-9,
+  "dualMaxDenominator": 1000000,
+  "targets": [
+    "strictMajority",
+    "allWrong"
+  ],
+  "scopes": [
+    "marginals",
+    "pairs",
+    "selectedTriples"
+  ],
+  "interpretation": "finite-state exact identified ranges with moments treated as fixed. Calibration plug-in moments are empirical summaries, not known population moments. No holdout data enters the LP."
+}
