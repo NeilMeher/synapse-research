@@ -1,0 +1,74 @@
+{
+  "id": "axiom-strategic-settlement-001",
+  "evidence": "A",
+  "capacity": 2,
+  "buyerValue": "3",
+  "price": "1",
+  "sellerTypes": [
+    {
+      "id": "low-cost",
+      "prior": "3/4",
+      "cost": "1/4"
+    },
+    {
+      "id": "high-cost",
+      "prior": "1/4",
+      "cost": "6/5"
+    }
+  ],
+  "deliveryIfEffort": "9/10",
+  "auditSettings": [
+    {
+      "eta": "3/5",
+      "delay": 1
+    },
+    {
+      "eta": "9/10",
+      "delay": 1
+    },
+    {
+      "eta": "9/10",
+      "delay": 2
+    }
+  ],
+  "auditCosts": [
+    "1/20",
+    "2/5"
+  ],
+  "secondContract": "delivery",
+  "plans": [
+    [
+      "reject",
+      "never"
+    ],
+    [
+      "reject",
+      "always"
+    ],
+    [
+      "prepay",
+      "never"
+    ],
+    [
+      "prepay",
+      "always"
+    ],
+    [
+      "prepay",
+      "positive"
+    ],
+    [
+      "delivery",
+      "never"
+    ],
+    [
+      "delivery",
+      "always"
+    ],
+    [
+      "delivery",
+      "positive"
+    ]
+  ],
+  "definition": "The buyer commits to a two-offer contract from the listed menu. A privately informed seller best responds. Payoffs settle after the deadline. Only a verified positive first delivery report available by round two triggers a contingent second offer. Decline and shirk differ under prepayment. Report all seller ties and buyer payoff ranges, then optimize the guaranteed buyer payoff within the menu."
+}
