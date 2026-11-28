@@ -1,0 +1,78 @@
+{
+  "id": "echo-public-empirical-001",
+  "companionStudy": "echo-public-empirical-002",
+  "evidence": "genuine archived predictions; no new SYNAPSE inference",
+  "protocolCommit": "fb0c9764c11e060073c6baa601755f0f22809f75",
+  "selectionCommit": "eefce10034c1375f4fc502953865bb6cd7a6a6bd",
+  "sourceArchiveRevision": "7ed529332cc75dfa3700ee35cbfb802d54f779a3",
+  "benchmarkAlignmentRevision": "8e6106a6c6ce1c5027e66cc338143cf997b2aa09",
+  "inputResearchBytes": 101539044,
+  "inputFileCount": 22,
+  "originalModelInferenceRequests": 0,
+  "partitions": {
+    "development": {
+      "items": 426,
+      "groups": 426
+    },
+    "calibration": {
+      "items": 642,
+      "groups": 639
+    },
+    "heldout": {
+      "items": 1074,
+      "groups": 1067
+    }
+  },
+  "inputs": {
+    "sources.json": {
+      "sha256": "bf3dfaa66f7ab452ab282e840e875be4e6e7730f418e7983f6f04f7b844b4fad",
+      "bytes": 15006
+    },
+    "alignment.json": {
+      "sha256": "91bfbc8814af980781bb3a69c1ede288fa2321b0c4ab098194d42f7c8c5d1a5f",
+      "bytes": 27458
+    },
+    "eligible.json": {
+      "sha256": "a62ddefb8cfabb343bf485808875d0a22729aa5b4598cf3586a3bc52534ad83c",
+      "bytes": 403128
+    },
+    "protocol.json": {
+      "sha256": "0f342c5e6c920c95aa33630039606b3be37b7234bb5bc9efa20644bf64f236a6",
+      "bytes": 4622
+    },
+    "splits.json": {
+      "sha256": "8423e5bf5af80da49fb7b5070f6273f4150b01bdab356ba49dcb41c2d0213645",
+      "bytes": 40688
+    },
+    "selection.json": {
+      "sha256": "7c5f34c2b65263ab7f02ff16562b8d645b8f3bdf99443ff023be4c5649a0eee9",
+      "bytes": 14887
+    },
+    "extract.py": {
+      "sha256": "11479e098ab4e27185906edd74c4d8258ef77f4eddef22e47e462aa66cb4aa37",
+      "bytes": 14636
+    },
+    "analysis.mjs": {
+      "sha256": "1d4a859c0a348b21177f989983f3f87cd193175a267b2687e4703f562eb1ac8d",
+      "bytes": 16830
+    },
+    "run.mjs": {
+      "sha256": "b420aa741c8bb9d94e3eb96dc927f650a1e451e1be0e0e53fa4dee6170dc4edf",
+      "bytes": 6218
+    },
+    "../../engine/echo-public.mjs": {
+      "sha256": "46ebf7e630342db13a45a5593eea751f8df72a6de8efdaa05fa538fd40b74bbc",
+      "bytes": 1812
+    }
+  },
+  "outputs": {
+    "predictions.json": {
+      "sha256": "0358f2786ac501c4ac5e20bf768569df5a34e2bd07f91a8a26d6e67e72ce01da",
+      "bytes": 581073
+    },
+    "results.json": {
+      "sha256": "2c5b69c1f9dcd08606c1ef04e60c8add68cf79e4c7dd597775f1eb0643e7d385",
+      "bytes": 27986
+    }
+  }
+}

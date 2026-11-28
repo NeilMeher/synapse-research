@@ -1,0 +1,1199 @@
+{
+  "n": 1074,
+  "groups": 1067,
+  "models": [
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "n": 1074,
+      "correct": 772,
+      "valid": 1028,
+      "abstentions": 46,
+      "accuracy": 0.7188081936685289,
+      "coverage": 0.957169459962756,
+      "validAccuracy": 0.7509727626459144,
+      "filterMissing": 46,
+      "invalidLabel": 0
+    },
+    {
+      "id": "allenai/Olmo-3-7B-Instruct",
+      "n": 1074,
+      "correct": 396,
+      "valid": 829,
+      "abstentions": 245,
+      "accuracy": 0.3687150837988827,
+      "coverage": 0.7718808193668529,
+      "validAccuracy": 0.4776839565741858,
+      "filterMissing": 245,
+      "invalidLabel": 0
+    },
+    {
+      "id": "google/gemma-3-12b-it",
+      "n": 1074,
+      "correct": 619,
+      "valid": 933,
+      "abstentions": 141,
+      "accuracy": 0.5763500931098696,
+      "coverage": 0.8687150837988827,
+      "validAccuracy": 0.6634512325830654,
+      "filterMissing": 141,
+      "invalidLabel": 0
+    },
+    {
+      "id": "google/gemma-3-4b-it",
+      "n": 1074,
+      "correct": 401,
+      "valid": 888,
+      "abstentions": 186,
+      "accuracy": 0.37337057728119183,
+      "coverage": 0.8268156424581006,
+      "validAccuracy": 0.45157657657657657,
+      "filterMissing": 185,
+      "invalidLabel": 1
+    },
+    {
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "n": 1074,
+      "correct": 470,
+      "valid": 958,
+      "abstentions": 116,
+      "accuracy": 0.4376163873370577,
+      "coverage": 0.8919925512104283,
+      "validAccuracy": 0.4906054279749478,
+      "filterMissing": 115,
+      "invalidLabel": 1
+    },
+    {
+      "id": "meta-llama/Llama-3.2-3B-Instruct",
+      "n": 1074,
+      "correct": 338,
+      "valid": 976,
+      "abstentions": 98,
+      "accuracy": 0.31471135940409684,
+      "coverage": 0.9087523277467412,
+      "validAccuracy": 0.3463114754098361,
+      "filterMissing": 98,
+      "invalidLabel": 0
+    },
+    {
+      "id": "microsoft/Phi-4-mini-instruct",
+      "n": 1074,
+      "correct": 520,
+      "valid": 1061,
+      "abstentions": 13,
+      "accuracy": 0.48417132216014896,
+      "coverage": 0.9878957169459963,
+      "validAccuracy": 0.49010367577756836,
+      "filterMissing": 12,
+      "invalidLabel": 1
+    }
+  ],
+  "baseline": {
+    "n": 1074,
+    "correct": 772,
+    "valid": 1028,
+    "abstentions": 46,
+    "accuracy": 0.7188081936685289,
+    "coverage": 0.957169459962756,
+    "validAccuracy": 0.7509727626459144
+  },
+  "selectedBaseline": 0,
+  "policies": {
+    "majority": {
+      "n": 1074,
+      "correct": 475,
+      "valid": 590,
+      "abstentions": 484,
+      "accuracy": 0.44227188081936686,
+      "coverage": 0.5493482309124768,
+      "validAccuracy": 0.8050847457627118
+    },
+    "plurality": {
+      "n": 1074,
+      "correct": 681,
+      "valid": 1073,
+      "abstentions": 1,
+      "accuracy": 0.6340782122905028,
+      "coverage": 0.9990689013035382,
+      "validAccuracy": 0.6346691519105312
+    },
+    "unanimity": {
+      "n": 1074,
+      "correct": 116,
+      "valid": 125,
+      "abstentions": 949,
+      "accuracy": 0.10800744878957169,
+      "coverage": 0.11638733705772812,
+      "validAccuracy": 0.928
+    },
+    "tieAbstain": {
+      "n": 1074,
+      "correct": 628,
+      "valid": 912,
+      "abstentions": 162,
+      "accuracy": 0.5847299813780261,
+      "coverage": 0.8491620111731844,
+      "validAccuracy": 0.6885964912280702
+    }
+  },
+  "primary": {
+    "estimate": -0.276536312849162,
+    "interval": [
+      -0.3045496750232126,
+      -0.24907063197026022
+    ]
+  },
+  "incorrectMemberCounts": [
+    116,
+    125,
+    111,
+    123,
+    151,
+    150,
+    154,
+    144
+  ],
+  "unanimousFailure": 144,
+  "pairs": [
+    {
+      "members": [
+        0,
+        1
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 678,
+      "jointErrors": 263,
+      "jointErrorRate": 0.24487895716945995,
+      "excess": 0.0673668112730564,
+      "phi": 0.3105846531430113,
+      "bothValid": 811,
+      "agree": 403,
+      "bothWrongValid": 141,
+      "wrongAgree": 46,
+      "answerAgreement": 0.4969173859432799,
+      "wrongAgreement": 0.3262411347517731,
+      "residualPhi": 0.28422681067939154
+    },
+    {
+      "members": [
+        0,
+        2
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 455,
+      "jointErrors": 244,
+      "jointErrorRate": 0.2271880819366853,
+      "excess": 0.10806119936608997,
+      "phi": 0.4864242317858734,
+      "bothValid": 920,
+      "agree": 643,
+      "bothWrongValid": 153,
+      "wrongAgree": 82,
+      "answerAgreement": 0.6989130434782609,
+      "wrongAgreement": 0.5359477124183006,
+      "residualPhi": 0.47447378708766696
+    },
+    {
+      "members": [
+        0,
+        3
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 673,
+      "jointErrors": 270,
+      "jointErrorRate": 0.25139664804469275,
+      "excess": 0.07519358876994406,
+      "phi": 0.34577814139877067,
+      "bothValid": 864,
+      "agree": 431,
+      "bothWrongValid": 167,
+      "wrongAgree": 62,
+      "answerAgreement": 0.4988425925925926,
+      "wrongAgreement": 0.3712574850299401,
+      "residualPhi": 0.32162958867217795
+    },
+    {
+      "members": [
+        0,
+        4
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 604,
+      "jointErrors": 252,
+      "jointErrorRate": 0.2346368715083799,
+      "excess": 0.07649920761246874,
+      "phi": 0.34299357077369025,
+      "bothValid": 929,
+      "agree": 488,
+      "bothWrongValid": 179,
+      "wrongAgree": 68,
+      "answerAgreement": 0.5252960172228203,
+      "wrongAgreement": 0.37988826815642457,
+      "residualPhi": 0.3295467147938899
+    },
+    {
+      "members": [
+        0,
+        5
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 736,
+      "jointErrors": 259,
+      "jointErrorRate": 0.24115456238361266,
+      "excess": 0.04845701167601233,
+      "phi": 0.23208967032981606,
+      "bothValid": 944,
+      "agree": 347,
+      "bothWrongValid": 186,
+      "wrongAgree": 52,
+      "answerAgreement": 0.3675847457627119,
+      "wrongAgreement": 0.27956989247311825,
+      "residualPhi": 0.22236369712113724
+    },
+    {
+      "members": [
+        0,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 302,
+      "rightErrors": 554,
+      "jointErrors": 235,
+      "jointErrorRate": 0.21880819366852886,
+      "excess": 0.07376139598916666,
+      "phi": 0.3282985876362572,
+      "bothValid": 1017,
+      "agree": 530,
+      "bothWrongValid": 195,
+      "wrongAgree": 77,
+      "answerAgreement": 0.5211406096361848,
+      "wrongAgreement": 0.39487179487179486,
+      "residualPhi": 0.30464559483885745
+    },
+    {
+      "members": [
+        1,
+        2
+      ],
+      "n": 1074,
+      "leftErrors": 678,
+      "rightErrors": 455,
+      "jointErrors": 387,
+      "jointErrorRate": 0.36033519553072624,
+      "excess": 0.09289139956097917,
+      "phi": 0.389646344547846,
+      "bothValid": 769,
+      "agree": 398,
+      "bothWrongValid": 186,
+      "wrongAgree": 70,
+      "answerAgreement": 0.517555266579974,
+      "wrongAgreement": 0.3763440860215054,
+      "residualPhi": 0.3416157544657527
+    },
+    {
+      "members": [
+        1,
+        3
+      ],
+      "n": 1074,
+      "leftErrors": 678,
+      "rightErrors": 673,
+      "jointErrors": 518,
+      "jointErrorRate": 0.4823091247672253,
+      "excess": 0.08672742215702797,
+      "phi": 0.3716403344480741,
+      "bothValid": 741,
+      "agree": 346,
+      "bothWrongValid": 258,
+      "wrongAgree": 105,
+      "answerAgreement": 0.4669365721997301,
+      "wrongAgreement": 0.4069767441860465,
+      "residualPhi": 0.32818077393728073
+    },
+    {
+      "members": [
+        1,
+        4
+      ],
+      "n": 1074,
+      "leftErrors": 678,
+      "rightErrors": 604,
+      "jointErrors": 468,
+      "jointErrorRate": 0.43575418994413406,
+      "excess": 0.08072989815132695,
+      "phi": 0.33729750532591135,
+      "bothValid": 772,
+      "agree": 352,
+      "bothWrongValid": 257,
+      "wrongAgree": 92,
+      "answerAgreement": 0.45595854922279794,
+      "wrongAgreement": 0.35797665369649806,
+      "residualPhi": 0.2784439880889806
+    },
+    {
+      "members": [
+        1,
+        5
+      ],
+      "n": 1074,
+      "leftErrors": 678,
+      "rightErrors": 736,
+      "jointErrors": 529,
+      "jointErrorRate": 0.4925512104283054,
+      "excess": 0.05993882837614307,
+      "phi": 0.26752052932214565,
+      "bothValid": 778,
+      "agree": 294,
+      "bothWrongValid": 302,
+      "wrongAgree": 105,
+      "answerAgreement": 0.37789203084832906,
+      "wrongAgreement": 0.347682119205298,
+      "residualPhi": 0.22414788596900165
+    },
+    {
+      "members": [
+        1,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 678,
+      "rightErrors": 554,
+      "jointErrors": 440,
+      "jointErrorRate": 0.409683426443203,
+      "excess": 0.08404856277893949,
+      "phi": 0.3485939617443172,
+      "bothValid": 823,
+      "agree": 370,
+      "bothWrongValid": 263,
+      "wrongAgree": 88,
+      "answerAgreement": 0.44957472660996356,
+      "wrongAgreement": 0.33460076045627374,
+      "residualPhi": 0.28888594057844175
+    },
+    {
+      "members": [
+        2,
+        3
+      ],
+      "n": 1074,
+      "leftErrors": 455,
+      "rightErrors": 673,
+      "jointErrors": 404,
+      "jointErrorRate": 0.3761638733705773,
+      "excess": 0.11069237678113805,
+      "phi": 0.46312213019533116,
+      "bothValid": 828,
+      "agree": 446,
+      "bothWrongValid": 219,
+      "wrongAgree": 96,
+      "answerAgreement": 0.538647342995169,
+      "wrongAgreement": 0.4383561643835616,
+      "residualPhi": 0.42510645514147516
+    },
+    {
+      "members": [
+        2,
+        4
+      ],
+      "n": 1074,
+      "leftErrors": 455,
+      "rightErrors": 604,
+      "jointErrors": 362,
+      "jointErrorRate": 0.3370577281191806,
+      "excess": 0.09880396297799,
+      "phi": 0.4030551789571117,
+      "bothValid": 861,
+      "agree": 466,
+      "bothWrongValid": 211,
+      "wrongAgree": 89,
+      "answerAgreement": 0.5412311265969802,
+      "wrongAgreement": 0.4218009478672986,
+      "residualPhi": 0.3632805458105541
+    },
+    {
+      "members": [
+        2,
+        5
+      ],
+      "n": 1074,
+      "leftErrors": 455,
+      "rightErrors": 736,
+      "jointErrors": 390,
+      "jointErrorRate": 0.36312849162011174,
+      "excess": 0.07280602283879335,
+      "phi": 0.3172689637737542,
+      "bothValid": 870,
+      "agree": 359,
+      "bothWrongValid": 248,
+      "wrongAgree": 86,
+      "answerAgreement": 0.4126436781609195,
+      "wrongAgreement": 0.3467741935483871,
+      "residualPhi": 0.28966716432823786
+    },
+    {
+      "members": [
+        2,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 455,
+      "rightErrors": 554,
+      "jointErrors": 341,
+      "jointErrorRate": 0.31750465549348234,
+      "excess": 0.09897388415537038,
+      "phi": 0.40079435850379713,
+      "bothValid": 927,
+      "agree": 493,
+      "bothWrongValid": 229,
+      "wrongAgree": 87,
+      "answerAgreement": 0.5318230852211435,
+      "wrongAgreement": 0.3799126637554585,
+      "residualPhi": 0.3457132048523448
+    },
+    {
+      "members": [
+        3,
+        4
+      ],
+      "n": 1074,
+      "leftErrors": 673,
+      "rightErrors": 604,
+      "jointErrors": 477,
+      "jointErrorRate": 0.4441340782122905,
+      "excess": 0.09172795966279315,
+      "phi": 0.3822638059539265,
+      "bothValid": 824,
+      "agree": 379,
+      "bothWrongValid": 295,
+      "wrongAgree": 105,
+      "answerAgreement": 0.45995145631067963,
+      "wrongAgreement": 0.3559322033898305,
+      "residualPhi": 0.3263068778748576
+    },
+    {
+      "members": [
+        3,
+        5
+      ],
+      "n": 1074,
+      "leftErrors": 673,
+      "rightErrors": 736,
+      "jointErrors": 550,
+      "jointErrorRate": 0.5121042830540037,
+      "excess": 0.0826822578016361,
+      "phi": 0.36808143583194763,
+      "bothValid": 820,
+      "agree": 336,
+      "bothWrongValid": 348,
+      "wrongAgree": 121,
+      "answerAgreement": 0.4097560975609756,
+      "wrongAgreement": 0.34770114942528735,
+      "residualPhi": 0.32812876316028333
+    },
+    {
+      "members": [
+        3,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 673,
+      "rightErrors": 554,
+      "jointErrors": 445,
+      "jointErrorRate": 0.4143389199255121,
+      "excess": 0.09110549330892016,
+      "phi": 0.3768919436390733,
+      "bothValid": 877,
+      "agree": 407,
+      "bothWrongValid": 298,
+      "wrongAgree": 115,
+      "answerAgreement": 0.4640820980615735,
+      "wrongAgreement": 0.3859060402684564,
+      "residualPhi": 0.3073463582644375
+    },
+    {
+      "members": [
+        4,
+        5
+      ],
+      "n": 1074,
+      "leftErrors": 604,
+      "rightErrors": 736,
+      "jointErrors": 499,
+      "jointErrorRate": 0.46461824953445063,
+      "excess": 0.07922314811924999,
+      "phi": 0.3438713576323667,
+      "bothValid": 889,
+      "agree": 361,
+      "bothWrongValid": 363,
+      "wrongAgree": 128,
+      "answerAgreement": 0.40607424071991,
+      "wrongAgreement": 0.3526170798898072,
+      "residualPhi": 0.3053996716195291
+    },
+    {
+      "members": [
+        4,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 604,
+      "rightErrors": 554,
+      "jointErrors": 422,
+      "jointErrorRate": 0.3929236499068901,
+      "excess": 0.10283005454816571,
+      "phi": 0.41476745939172505,
+      "bothValid": 949,
+      "agree": 447,
+      "bothWrongValid": 326,
+      "wrongAgree": 109,
+      "answerAgreement": 0.47102212855637515,
+      "wrongAgreement": 0.3343558282208589,
+      "residualPhi": 0.3570952390102651
+    },
+    {
+      "members": [
+        5,
+        6
+      ],
+      "n": 1074,
+      "leftErrors": 736,
+      "rightErrors": 554,
+      "jointErrors": 465,
+      "jointErrorRate": 0.4329608938547486,
+      "excess": 0.07946936043749502,
+      "phi": 0.3424163307034456,
+      "bothValid": 969,
+      "agree": 372,
+      "bothWrongValid": 394,
+      "wrongAgree": 123,
+      "answerAgreement": 0.38390092879256965,
+      "wrongAgreement": 0.31218274111675126,
+      "residualPhi": 0.28224936506651715
+    }
+  ],
+  "scope": [
+    {
+      "subject": "economics",
+      "n": 423,
+      "groups": 420,
+      "majority": {
+        "n": 423,
+        "correct": 242,
+        "valid": 306,
+        "abstentions": 117,
+        "accuracy": 0.5721040189125296,
+        "coverage": 0.723404255319149,
+        "validAccuracy": 0.7908496732026143
+      },
+      "baseline": {
+        "n": 423,
+        "correct": 314,
+        "valid": 411,
+        "abstentions": 12,
+        "accuracy": 0.7423167848699763,
+        "coverage": 0.9716312056737588,
+        "validAccuracy": 0.7639902676399026
+      }
+    },
+    {
+      "subject": "physics",
+      "n": 651,
+      "groups": 647,
+      "majority": {
+        "n": 651,
+        "correct": 233,
+        "valid": 284,
+        "abstentions": 367,
+        "accuracy": 0.3579109062980031,
+        "coverage": 0.4362519201228879,
+        "validAccuracy": 0.8204225352112676
+      },
+      "baseline": {
+        "n": 651,
+        "correct": 458,
+        "valid": 617,
+        "abstentions": 34,
+        "accuracy": 0.7035330261136713,
+        "coverage": 0.9477726574500768,
+        "validAccuracy": 0.7423014586709886
+      }
+    }
+  ],
+  "optimization": [
+    {
+      "key": "3:topAccuracy",
+      "size": 3,
+      "method": "topAccuracy",
+      "members": [
+        0,
+        2,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 644,
+        "valid": 810,
+        "abstentions": 264,
+        "accuracy": 0.5996275605214153,
+        "coverage": 0.7541899441340782,
+        "validAccuracy": 0.7950617283950617
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 395,
+        "valid": 487,
+        "abstentions": 155,
+        "accuracy": 0.6152647975077882,
+        "coverage": 0.7585669781931464,
+        "validAccuracy": 0.811088295687885
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "3:seededRandom",
+      "size": 3,
+      "method": "seededRandom",
+      "members": [
+        4,
+        5,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 428,
+        "valid": 694,
+        "abstentions": 380,
+        "accuracy": 0.3985102420856611,
+        "coverage": 0.6461824953445066,
+        "validAccuracy": 0.6167146974063401
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 252,
+        "valid": 424,
+        "abstentions": 218,
+        "accuracy": 0.3925233644859813,
+        "coverage": 0.660436137071651,
+        "validAccuracy": 0.5943396226415094
+      },
+      "vsTopAccuracy": {
+        "estimate": -0.2011173184357542,
+        "interval": [
+          -0.23062558356676005,
+          -0.17363045496750232
+        ]
+      }
+    },
+    {
+      "key": "3:distinctFamilies",
+      "size": 3,
+      "method": "distinctFamilies",
+      "members": [
+        0,
+        2,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 644,
+        "valid": 810,
+        "abstentions": 264,
+        "accuracy": 0.5996275605214153,
+        "coverage": 0.7541899441340782,
+        "validAccuracy": 0.7950617283950617
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 395,
+        "valid": 487,
+        "abstentions": 155,
+        "accuracy": 0.6152647975077882,
+        "coverage": 0.7585669781931464,
+        "validAccuracy": 0.811088295687885
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "3:complementarity",
+      "size": 3,
+      "method": "complementarity",
+      "members": [
+        0,
+        2,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 644,
+        "valid": 810,
+        "abstentions": 264,
+        "accuracy": 0.5996275605214153,
+        "coverage": 0.7541899441340782,
+        "validAccuracy": 0.7950617283950617
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 395,
+        "valid": 487,
+        "abstentions": 155,
+        "accuracy": 0.6152647975077882,
+        "coverage": 0.7585669781931464,
+        "validAccuracy": 0.811088295687885
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "3:directVote",
+      "size": 3,
+      "method": "directVote",
+      "members": [
+        0,
+        2,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 644,
+        "valid": 810,
+        "abstentions": 264,
+        "accuracy": 0.5996275605214153,
+        "coverage": 0.7541899441340782,
+        "validAccuracy": 0.7950617283950617
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 395,
+        "valid": 487,
+        "abstentions": 155,
+        "accuracy": 0.6152647975077882,
+        "coverage": 0.7585669781931464,
+        "validAccuracy": 0.811088295687885
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "5:topAccuracy",
+      "size": 5,
+      "method": "topAccuracy",
+      "members": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 541,
+        "valid": 678,
+        "abstentions": 396,
+        "accuracy": 0.5037243947858473,
+        "coverage": 0.6312849162011173,
+        "validAccuracy": 0.7979351032448377
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 331,
+        "valid": 419,
+        "abstentions": 223,
+        "accuracy": 0.5155763239875389,
+        "coverage": 0.6526479750778816,
+        "validAccuracy": 0.7899761336515513
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "5:seededRandom",
+      "size": 5,
+      "method": "seededRandom",
+      "members": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 412,
+        "valid": 569,
+        "abstentions": 505,
+        "accuracy": 0.38361266294227186,
+        "coverage": 0.5297951582867784,
+        "validAccuracy": 0.7240773286467487
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 247,
+        "valid": 343,
+        "abstentions": 299,
+        "accuracy": 0.3847352024922118,
+        "coverage": 0.5342679127725857,
+        "validAccuracy": 0.7201166180758017
+      },
+      "vsTopAccuracy": {
+        "estimate": -0.12011173184357542,
+        "interval": [
+          -0.1421933085501859,
+          -0.09813084112149532
+        ]
+      }
+    },
+    {
+      "key": "5:distinctFamilies",
+      "size": 5,
+      "method": "distinctFamilies",
+      "members": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 547,
+        "valid": 669,
+        "abstentions": 405,
+        "accuracy": 0.5093109869646183,
+        "coverage": 0.6229050279329609,
+        "validAccuracy": 0.8176382660687593
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 330,
+        "valid": 405,
+        "abstentions": 237,
+        "accuracy": 0.514018691588785,
+        "coverage": 0.6308411214953271,
+        "validAccuracy": 0.8148148148148148
+      },
+      "vsTopAccuracy": {
+        "estimate": 0.00558659217877095,
+        "interval": [
+          -0.010242085661080074,
+          0.021455223880597014
+        ]
+      }
+    },
+    {
+      "key": "5:complementarity",
+      "size": 5,
+      "method": "complementarity",
+      "members": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 541,
+        "valid": 678,
+        "abstentions": 396,
+        "accuracy": 0.5037243947858473,
+        "coverage": 0.6312849162011173,
+        "validAccuracy": 0.7979351032448377
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 331,
+        "valid": 419,
+        "abstentions": 223,
+        "accuracy": 0.5155763239875389,
+        "coverage": 0.6526479750778816,
+        "validAccuracy": 0.7899761336515513
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "5:directVote",
+      "size": 5,
+      "method": "directVote",
+      "members": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "heldout": {
+        "n": 1074,
+        "correct": 541,
+        "valid": 678,
+        "abstentions": 396,
+        "accuracy": 0.5037243947858473,
+        "coverage": 0.6312849162011173,
+        "validAccuracy": 0.7979351032448377
+      },
+      "calibration": {
+        "n": 642,
+        "correct": 331,
+        "valid": 419,
+        "abstentions": 223,
+        "accuracy": 0.5155763239875389,
+        "coverage": 0.6526479750778816,
+        "validAccuracy": 0.7899761336515513
+      },
+      "vsTopAccuracy": {
+        "estimate": 0,
+        "interval": [
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "references": {
+    "independence": {
+      "homogeneous": 0.43356120709329654,
+      "heterogeneous": 0.43041110222372586,
+      "correctCountDistribution": [
+        0.009240005835816271,
+        0.06724992730335451,
+        0.19529991388813941,
+        0.29779905074896396,
+        0.26005827063222686,
+        0.13097084026419525,
+        0.03540376909681864,
+        0.0039782222304851145
+      ],
+      "calibrationMarginals": [
+        0.7180685358255452,
+        0.3660436137071651,
+        0.5700934579439252,
+        0.3878504672897196,
+        0.42990654205607476,
+        0.32554517133956384,
+        0.48909657320872274
+      ]
+    },
+    "categorical": {
+      "majority": 0.3956805167597765,
+      "plurality": 0.8252910265363128,
+      "unanimity": 0.005101664338919925,
+      "tieAbstain": 0.7662902118249535
+    },
+    "rePair": {
+      "majority": 0.4345011152836141,
+      "plurality": 0.8340551978558081,
+      "unanimity": 0.009572385122081212,
+      "tieAbstain": 0.7804082305419399
+    },
+    "repairCoverage": 1071,
+    "perStratum": [
+      {
+        "subject": "economics",
+        "options": 10,
+        "heldout": 322,
+        "calibration": 191,
+        "categoricalFit": "subject and options"
+      },
+      {
+        "subject": "economics",
+        "options": 3,
+        "heldout": 2,
+        "calibration": 0,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "economics",
+        "options": 4,
+        "heldout": 45,
+        "calibration": 31,
+        "categoricalFit": "subject and options"
+      },
+      {
+        "subject": "economics",
+        "options": 5,
+        "heldout": 4,
+        "calibration": 1,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "economics",
+        "options": 6,
+        "heldout": 3,
+        "calibration": 1,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "economics",
+        "options": 7,
+        "heldout": 8,
+        "calibration": 4,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "economics",
+        "options": 8,
+        "heldout": 13,
+        "calibration": 13,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "economics",
+        "options": 9,
+        "heldout": 26,
+        "calibration": 12,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 10,
+        "heldout": 618,
+        "calibration": 376,
+        "categoricalFit": "subject and options"
+      },
+      {
+        "subject": "physics",
+        "options": 4,
+        "heldout": 2,
+        "calibration": 3,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 5,
+        "heldout": 1,
+        "calibration": 0,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 6,
+        "heldout": 1,
+        "calibration": 2,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 7,
+        "heldout": 2,
+        "calibration": 2,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 8,
+        "heldout": 8,
+        "calibration": 2,
+        "categoricalFit": "subject fallback"
+      },
+      {
+        "subject": "physics",
+        "options": 9,
+        "heldout": 19,
+        "calibration": 4,
+        "categoricalFit": "subject fallback"
+      }
+    ]
+  },
+  "higherOrder": [
+    {
+      "members": [
+        0,
+        1,
+        5
+      ],
+      "accuracy": [
+        0.7188081936685289,
+        0.3687150837988827,
+        0.31471135940409684
+      ],
+      "pairs": [
+        0.3105846531430113,
+        0.23208967032981606,
+        0.26752052932214565
+      ],
+      "errorCounts": [
+        181,
+        298,
+        367,
+        228
+      ],
+      "majority": {
+        "n": 1074,
+        "correct": 479,
+        "valid": 640,
+        "abstentions": 434,
+        "accuracy": 0.44599627560521415,
+        "coverage": 0.595903165735568,
+        "validAccuracy": 0.7484375
+      }
+    },
+    {
+      "members": [
+        0,
+        3,
+        5
+      ],
+      "accuracy": [
+        0.7188081936685289,
+        0.37337057728119183,
+        0.31471135940409684
+      ],
+      "pairs": [
+        0.34577814139877067,
+        0.23208967032981606,
+        0.36808143583194763
+      ],
+      "errorCounts": [
+        204,
+        267,
+        365,
+        238
+      ],
+      "majority": {
+        "n": 1074,
+        "correct": 471,
+        "valid": 652,
+        "abstentions": 422,
+        "accuracy": 0.43854748603351956,
+        "coverage": 0.6070763500931099,
+        "validAccuracy": 0.7223926380368099
+      }
+    }
+  ]
+}
